@@ -1,0 +1,69 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+.ipynb_checkpoints/
+
+# ===== 大文件：模型权重 / checkpoint =====
+*.safetensors
+*.pth
+*.ckpt
+*.pt
+*.bin
+*.onnx
+*.h5
+*.pdf
+
+# 权重 / checkpoint 目录
+weights/
+WBench-weights/
+checkpoints/
+**/torch_hub_checkpoints/
+
+# ===== 数据集 / 数据 =====
+data/
+dataset/
+*.npy
+*.npz
+*.mp4
+
+# ===== 缓存 / 输出 / 日志 =====
+.cache/
+**/.cache/
+work_dirs/
+outputs/
+output/
+log/
+logs/
+results/
+results_*.json
+_megasam_tmp/
+**/_*_tmp/
+
+# ===== third_party 构建产物（保留源码，排除编译/缓存）=====
+third_party/**/build/
+third_party/**/__pycache__/
+
+# ===== IDE / 编辑器 / 系统 =====
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== Claude 本地配置 =====
+.claude/
+
+# ===== 本地私有，不发布 =====
+AGENT.md
+homepage/
+image.png
+*.incomplete
+
+# ===== 第三方开源库（非本人代码，不入库）=====
+third_party/

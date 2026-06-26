@@ -1,0 +1,74 @@
+block.parameters():
+torch.Size([4096, 1024]) True
+torch.Size([4096]) True
+torch.Size([1024, 4096]) True
+torch.Size([1024]) True
+
+block.state_dict():
+net.0.weight torch.Size([4096, 1024])
+net.0.bias torch.Size([4096])
+net.2.weight torch.Size([1024, 4096])
+net.2.bias torch.Size([1024])
+
+
+
+
+
+-------------------------------------------------------------------------------
+block.named_parameters():
+net.0.weight torch.Size([4096, 1024]) True
+net.0.bias torch.Size([4096]) True
+net.2.weight torch.Size([1024, 4096]) True
+net.2.bias torch.Size([1024]) True
+
+block.buffers():
+
+block.named_buffers():
+
+block.children():
+Sequential(
+  (0): Linear(in_features=1024, out_features=4096, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=4096, out_features=1024, bias=True)
+)
+
+block.modules():
+Block(
+  (net): Sequential(
+    (0): Linear(in_features=1024, out_features=4096, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=4096, out_features=1024, bias=True)
+  )
+)
+Sequential(
+  (0): Linear(in_features=1024, out_features=4096, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=4096, out_features=1024, bias=True)
+)
+Linear(in_features=1024, out_features=4096, bias=True)
+ReLU()
+Linear(in_features=4096, out_features=1024, bias=True)
+
+block.named_children():
+net Sequential(
+  (0): Linear(in_features=1024, out_features=4096, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=4096, out_features=1024, bias=True)
+)
+
+block.named_modules():
+ Block(
+  (net): Sequential(
+    (0): Linear(in_features=1024, out_features=4096, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=4096, out_features=1024, bias=True)
+  )
+)
+net Sequential(
+  (0): Linear(in_features=1024, out_features=4096, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=4096, out_features=1024, bias=True)
+)
+net.0 Linear(in_features=1024, out_features=4096, bias=True)
+net.1 ReLU()
+net.2 Linear(in_features=4096, out_features=1024, bias=True)

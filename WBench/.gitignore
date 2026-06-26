@@ -1,0 +1,43 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# Weights (too large for repo)
+weights/
+weights
+WBench-weights/
+WBench-weights
+
+# Third-party build artifacts
+third_party/**/build/
+third_party/**/__pycache__/
+
+# Data (hosted on HuggingFace)
+data/
+dataset/
+# Work directories
+work_dirs/
+logs/
+results/
+results_*.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local-only (not for publish)
+CLAUDE.md
+AGENT.md
+homepage/
+image.png
+wbench_open_models_for_hf.csv
