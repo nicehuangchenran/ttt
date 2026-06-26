@@ -38,19 +38,19 @@ LOG_DIR="$TTT_ROOT/logs"
 mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/${MODEL}_$(date +%Y-%m-%d_%H-%M-%S).log"
 
-echo "=============================================="
-echo "Infinite-World → WBench  一体化运行+评测"
-echo "=============================================="
-echo "model: $MODEL | GPUs: $NUM_GPUS | num_cases: $NUM_CASES (0=all) | online: $ONLINE"
-echo "gen:   $GEN_SCRIPT"
-echo "logs:  $LOG_FILE"
-echo "=============================================="
+echo "==============================================" | tee "$LOG_FILE"
+echo "Infinite-World → WBench  一体化运行+评测" | tee -a "$LOG_FILE"
+echo "==============================================" | tee -a "$LOG_FILE"
+echo "model: $MODEL | GPUs: $NUM_GPUS | num_cases: $NUM_CASES (0=all) | online: $ONLINE" | tee -a "$LOG_FILE"
+echo "gen:   $GEN_SCRIPT" | tee -a "$LOG_FILE"
+echo "logs:  $LOG_FILE" | tee -a "$LOG_FILE"
+echo "==============================================" | tee -a "$LOG_FILE"
 
 # 准备 conda
 source /root/miniconda3/etc/profile.d/conda.sh
 
 # ======================= 阶段 1: 生成视频 (infworld) ==========================
-echo "" | tee  "$LOG_FILE"
+echo "" | tee -a "$LOG_FILE"
 echo "########## 阶段 1/2: 生成视频 (infworld) ##########" | tee -a "$LOG_FILE"
 
 conda activate infworld
