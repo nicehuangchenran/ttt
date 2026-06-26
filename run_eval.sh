@@ -5,11 +5,12 @@
 # 两个阶段共用同一个模型名 MODEL，保证评测读取的正是刚生成的视频
 # (落盘到 WBench/work_dirs/<MODEL>/videos/)。
 #
-# 用法: bash run_eval.sh [model_name] [num_gpus] [num_cases] [online]
+# 用法: bash run_eval.sh [model_name] [num_gpus] [num_cases] [online] [gen_script]
 #   model_name : 模型名 / 输出目录名，默认 infworld-online-cut21
 #   num_gpus   : GPU 数量，默认 1（=1 直接 python；>1 用 torchrun）
 #   num_cases  : 取 dataset 前 N 个 case，默认 0 表示全部
 #   online     : online (test-time) training 开关 on/off，默认 off
+#   gen_script : 生成阶段运行的 python 文件，默认 generate_video.py
 #
 # 示例:
 #   bash run_eval.sh                              # 默认模型，单 GPU，全部 case
@@ -23,16 +24,16 @@ set -o pipefail
 # ----------------------------- 参数 ------------------------------------------
 MODEL=${1:-infworld-online-cut21}
 NUM_GPUS=${2:-1}
-NUM_CASES=${3:-0}
+NUM_CASES=${3:-6}
 ONLINE=${4:-off}
+# 生成阶段运行的 python 文件
+GEN_SCRIPT=${5:-generate_video.py}
+
 
 TTT_ROOT=/root/autodl-tmp/ttt
 INFWORLD_DIR="$TTT_ROOT/infworld"
 WBENCH_DIR="$TTT_ROOT/WBench"
 LOG_DIR="$TTT_ROOT/logs"
-
-# 生成阶段运行的 python 文件
-GEN_SCRIPT=generate_video.py
 
 mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/${MODEL}_$(date +%Y-%m-%d_%H-%M-%S).log"

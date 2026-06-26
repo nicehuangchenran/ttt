@@ -205,7 +205,10 @@ def _generate_one(prompt, image_path, action_path, models, task_idx):
     for chunk_idx in range(num_chunks):
         print(f"[GenVideo] chunk {chunk_idx + 1}/{num_chunks}")
         with torch.no_grad():
-            current_cond = video_buffer.to(inf.local_rank)
+            # 传入 image_cond 时裁剪为最近 num_frames(81) 像素帧：VAE 时间压缩为 4×+1，
+            # 81 像素帧 -> 21 latent 帧，使历史条件固定为一个 chunk，
+            # 避免 image_cond 随 video_buffer 增长而无限变长（并省去重复编码全量历史）。
+            current_cond = video_buffer[:, :, -num_frames:].to(inf.local_rank)
             current_latent = vae.encode(current_cond)
 
         curr_start = video_buffer.shape[2] - 1
