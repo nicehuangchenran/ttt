@@ -36,7 +36,11 @@ WBENCH_DIR="$TTT_ROOT/WBench"
 LOG_DIR="$TTT_ROOT/logs"
 
 mkdir -p "$LOG_DIR"
-LOG_FILE="$LOG_DIR/${MODEL}_$(date +%Y-%m-%d_%H-%M-%S).log"
+# 时间戳只算一次，保证 log 名与 model 名带的日期完全一致
+TS=$(date +%Y-%m-%d_%H-%M-%S)
+LOG_FILE="$LOG_DIR/${MODEL}_${TS}.log"
+# 带日期的 model 名：生成输出目录与评测读取目录都用它，保持一致
+RUN_MODEL="${MODEL}_${TS}"
 
 echo "==============================================" | tee "$LOG_FILE"
 echo "Infinite-World → WBench  一体化运行+评测" | tee -a "$LOG_FILE"
@@ -57,7 +61,7 @@ conda activate infworld
 cd "$INFWORLD_DIR"
 
 export NUM_CASES
-export OUTPUT_MODEL_NAME="$MODEL"
+export OUTPUT_MODEL_NAME="$RUN_MODEL"
 export ONLINE_TRAINING="$ONLINE"
 
 if [ "$NUM_GPUS" -eq 1 ]; then
@@ -85,13 +89,13 @@ echo "########## 阶段 2/2: 评测 (WBench) ##########" | tee -a "$LOG_FILE"
 conda activate wbench-main
 cd "$WBENCH_DIR"
 
-python main.py --model "$MODEL" --phase precompute --skip_da3 --skip_sam2 2>&1 | tee -a "$LOG_FILE"
+python main.py --model "$RUN_MODEL" --phase precompute --skip_da3 --skip_sam2 2>&1 | tee -a "$LOG_FILE"
 echo "precompute 运行完成" | tee -a "$LOG_FILE"
 
-python main.py --model "$MODEL" --phase gpu --metrics consistency --skip_da3 --skip_sam2 --skip_megasam 2>&1 | tee -a "$LOG_FILE"
+python main.py --model "$RUN_MODEL" --phase gpu --metrics consistency --skip_da3 --skip_sam2 --skip_megasam 2>&1 | tee -a "$LOG_FILE"
 echo "gpu 运行完成" | tee -a "$LOG_FILE"
 
-python main.py --model "$MODEL" --phase report 2>&1 | tee -a "$LOG_FILE"
+python main.py --model "$RUN_MODEL" --phase report 2>&1 | tee -a "$LOG_FILE"
 echo "生成 report.json" | tee -a "$LOG_FILE"
 
 echo "" | tee -a "$LOG_FILE"

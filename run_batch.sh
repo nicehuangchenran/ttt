@@ -10,6 +10,8 @@ set -o pipefail
 cd /root/autodl-tmp/ttt
 unset OMP_NUM_THREADS
 LOG_DIR=/root/autodl-tmp/ttt/logs
+mkdir -p "$LOG_DIR"
+
 # 每行格式: "MODEL NUM_GPUS NUM_CASES ONLINE GEN_SCRIPT"
 #   MODEL      : 模型名 / 输出目录名
 #   NUM_GPUS   : GPU 数量 (1=python, >1=torchrun)
@@ -20,6 +22,22 @@ JOBS=(
     "infworld-online-cut21   3 6 on  generate_video_cut21.py"
     "infworld-offline-cut21  3 6 off generate_video_cut21.py"
 )
+
+# -----------------------------------------------------------------------------
+# 断线续跑: 若当前不在 screen 会话内, 则在后台 detached screen 中重新启动自己,
+# 这样远程 SSH 断开后任务依旧继续运行。会话名取第一个 job 的 MODEL。
+#   实时查看: screen -r <MODEL>
+#   分离会话: Ctrl-A 然后按 D
+# -----------------------------------------------------------------------------
+read -r SESSION _ <<< "${JOBS[0]}"   # 用第一个 job 的 MODEL 作为 screen 会话名
+if [ -z "$STY" ]; then
+    SCREEN_LOG="$LOG_DIR/batch_$(date +%Y%m%d_%H%M%S).log"
+    echo "已在后台 screen 会话 '$SESSION' 中启动任务 (SSH 断开也会继续跑)"
+    echo "  实时查看: screen -r $SESSION"
+    echo "  分离会话: Ctrl-A 然后按 D"
+    echo "  会话日志: $SCREEN_LOG"
+    exec screen -dmS "$SESSION" -L -Logfile "$SCREEN_LOG" bash "$0" "$@"
+fi
 
 TOTAL=${#JOBS[@]}
 i=0
