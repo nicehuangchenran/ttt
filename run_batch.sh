@@ -8,12 +8,13 @@
 set -o pipefail
 
 cd /root/autodl-tmp/ttt
-unset OMP_NUM_THREADS
+# 动态探测当前可用 CPU 核心数（容器/cgroup 限制下 nproc 已是真实可用数，会随机器变化）
+CPUS=$(nproc)
 LOG_DIR=/root/autodl-tmp/ttt/logs
 mkdir -p "$LOG_DIR"
 
 # 每行格式: "MODEL NUM_GPUS NUM_CASES ONLINE GEN_SCRIPT"
-#   MODEL      : 模型名 / 输出目录名
+#   MODEL      : 模型名 , work_dir输出目录名加时间后缀
 #   NUM_GPUS   : GPU 数量 (1=python, >1=torchrun)
 #   NUM_CASES  : 取前 N 个 case，0=全部
 #   ONLINE     : online (test-time) training 开关 on/off
@@ -44,8 +45,11 @@ i=0
 for job in "${JOBS[@]}"; do
     i=$((i + 1))
     read -r MODEL NUM_GPUS NUM_CASES ONLINE GEN_SCRIPT <<< "$job"
+    # 按本 job 的 GPU 数计算最优 OMP_NUM_THREADS = 可用核数 / 进程数(=NUM_GPUS)，至少为 1
+    # torchrun 会启 NUM_GPUS 个进程，避免线程超额订阅 CPU 反而拖慢
+    export OMP_NUM_THREADS=$(( CPUS / NUM_GPUS > 0 ? CPUS / NUM_GPUS : 1 ))
     echo "###################################################"
-    echo "### [$i/$TOTAL] 开始: MODEL=$MODEL GPUS=$NUM_GPUS CASES=$NUM_CASES ONLINE=$ONLINE GEN=$GEN_SCRIPT"
+    echo "### [$i/$TOTAL] 开始: MODEL=$MODEL GPUS=$NUM_GPUS CASES=$NUM_CASES ONLINE=$ONLINE GEN=$GEN_SCRIPT OMP_NUM_THREADS=$OMP_NUM_THREADS"
     echo "###################################################"
     SECONDS=0
     bash run_eval.sh "$MODEL" "$NUM_GPUS" "$NUM_CASES" "$ONLINE" "$GEN_SCRIPT"
