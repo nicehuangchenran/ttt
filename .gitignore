@@ -39,7 +39,6 @@ work_dirs/
 outputs/
 output/
 log/
-logs/
 results/
 results_*.json
 _megasam_tmp/

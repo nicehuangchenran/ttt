@@ -1,0 +1,482 @@
+[InfWorld] local_rank: 0 | global_rank: 0 | num_processes: 1
+[Infworld] online-train:{ENABLE_ONLINE_TRAINING}
+[InfWorld] Loading checkpoint: /root/autodl-tmp/ttt/infworld/checkpoints/infinite_world_model.ckpt
+[InfWorld] Config: /root/autodl-tmp/ttt/infworld/configs/infworld_config.yaml
+[InfWorld] Output directory: /root/autodl-tmp/ttt/infworld/outputs/infworld-ckpt0-step30-cfg5.0
+[InfWorld] Loading VAE...
+[InfWorld] Loading Text Encoder...
+[InfWorld] Loading Scheduler...
+[InfWorld] Loading DiT Model...
+Import transformer_engine failed, may cause bug.
+[InfWorld] Model loaded! Missing: 0, Unexpected: 0
+[OnlineTrain] grad checkpoint: marked 660 submodules inside dit.blocks only
+[OnlineTrain] frozen params (cond entry layers): 53,335,824; trainable: 1,393,322,560
+[OnlineTrain] init_params snapshot kept on pinned CPU (813 tensors)
+[OnlineTrain] bnb AdamW8bit unavailable (No module named 'bitsandbytes'); falling back to fused AdamW
+[InfWorld] Loaded 2 prompts
+[InfWorld] Task 0: A serene campus walkway lined with modern glass bu...
+[InfWorld] Generating chunk 1/10
+[Shape] chunk0 video_buffer_T=1 current_latent=(1, 16, 1, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:03<01:37,  3.35s/it]  7%|▋         | 2/30 [00:07<01:42,  3.68s/it] 10%|█         | 3/30 [00:11<01:42,  3.78s/it] 13%|█▎        | 4/30 [00:15<01:39,  3.84s/it] 17%|█▋        | 5/30 [00:18<01:36,  3.86s/it] 20%|██        | 6/30 [00:22<01:33,  3.88s/it] 23%|██▎       | 7/30 [00:26<01:29,  3.90s/it] 27%|██▋       | 8/30 [00:30<01:25,  3.91s/it] 30%|███       | 9/30 [00:34<01:22,  3.91s/it] 33%|███▎      | 10/30 [00:38<01:18,  3.92s/it] 37%|███▋      | 11/30 [00:42<01:14,  3.92s/it] 40%|████      | 12/30 [00:46<01:10,  3.93s/it] 43%|████▎     | 13/30 [00:50<01:06,  3.93s/it] 47%|████▋     | 14/30 [00:54<01:02,  3.94s/it] 50%|█████     | 15/30 [00:58<00:59,  3.94s/it] 53%|█████▎    | 16/30 [01:02<00:55,  3.94s/it] 57%|█████▋    | 17/30 [01:06<00:51,  3.95s/it] 60%|██████    | 18/30 [01:10<00:47,  3.95s/it] 63%|██████▎   | 19/30 [01:14<00:43,  3.95s/it] 67%|██████▋   | 20/30 [01:18<00:39,  3.95s/it] 70%|███████   | 21/30 [01:22<00:35,  3.96s/it] 73%|███████▎  | 22/30 [01:26<00:31,  3.96s/it] 77%|███████▋  | 23/30 [01:30<00:27,  3.96s/it] 80%|████████  | 24/30 [01:33<00:23,  3.97s/it] 83%|████████▎ | 25/30 [01:37<00:19,  3.97s/it] 87%|████████▋ | 26/30 [01:41<00:15,  3.97s/it] 90%|█████████ | 27/30 [01:45<00:11,  3.97s/it] 93%|█████████▎| 28/30 [01:49<00:07,  3.97s/it] 97%|█████████▋| 29/30 [01:53<00:03,  3.97s/it]100%|██████████| 30/30 [01:57<00:00,  3.97s/it]100%|██████████| 30/30 [01:57<00:00,  3.93s/it]
+Step 0 Forward time: 3.3451 seconds
+Step 1 Forward time: 3.8954 seconds
+Step 2 Forward time: 3.9008 seconds
+Step 3 Forward time: 3.9050 seconds
+Step 4 Forward time: 3.9032 seconds
+Step 5 Forward time: 3.9069 seconds
+Step 6 Forward time: 3.9137 seconds
+Step 7 Forward time: 3.9154 seconds
+Step 8 Forward time: 3.9206 seconds
+Step 9 Forward time: 3.9240 seconds
+Step 10 Forward time: 3.9260 seconds
+Step 11 Forward time: 3.9298 seconds
+Step 12 Forward time: 3.9314 seconds
+Step 13 Forward time: 3.9353 seconds
+Step 14 Forward time: 3.9373 seconds
+Step 15 Forward time: 3.9402 seconds
+Step 16 Forward time: 3.9419 seconds
+Step 17 Forward time: 3.9434 seconds
+Step 18 Forward time: 3.9480 seconds
+Step 19 Forward time: 3.9509 seconds
+Step 20 Forward time: 3.9541 seconds
+Step 21 Forward time: 3.9592 seconds
+Step 22 Forward time: 3.9601 seconds
+Step 23 Forward time: 3.9626 seconds
+Step 24 Forward time: 3.9628 seconds
+Step 25 Forward time: 3.9634 seconds
+Step 26 Forward time: 3.9638 seconds
+Step 27 Forward time: 3.9595 seconds
+Step 28 Forward time: 3.9598 seconds
+Step 29 Forward time: 3.9616 seconds
+[InfWorld] Chunk 1 done. Total frames: 81
+[Mem][after_sample chunk0] current=17.11GB peak=25.33GB reserved=17.37GB peak_reserved=28.07GB
+[Mem][train:after_forward] current=8.49GB peak=25.33GB reserved=11.24GB peak_reserved=28.07GB
+[Mem][train:after_backward] current=12.48GB peak=25.33GB reserved=18.70GB peak_reserved=28.07GB
+[OnlineTrain] task 0 chunk 0 step 1/5 loss=0.04454
+[OnlineTrain] task 0 chunk 0 step 2/5 loss=0.02828
+[OnlineTrain] task 0 chunk 0 step 3/5 loss=0.02861
+[OnlineTrain] task 0 chunk 0 step 4/5 loss=0.07175
+[OnlineTrain] task 0 chunk 0 step 5/5 loss=0.03525
+[Mem][before_teardown chunk0] current=18.05GB peak=25.33GB reserved=18.51GB peak_reserved=28.07GB
+[Mem][before_teardown chunk0] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk0] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk0] current=15.26GB peak=25.33GB reserved=17.15GB peak_reserved=28.07GB
+[Mem][after_train chunk0] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 2/10
+[Shape] chunk1 video_buffer_T=81 current_latent=(1, 16, 21, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]  7%|▋         | 2/30 [00:09<02:15,  4.86s/it] 10%|█         | 3/30 [00:14<02:15,  5.02s/it] 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it] 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it] 20%|██        | 6/30 [00:30<02:03,  5.16s/it] 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it] 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it] 30%|███       | 9/30 [00:46<01:49,  5.20s/it] 33%|███▎      | 10/30 [00:51<01:44,  5.20s/it] 37%|███▋      | 11/30 [00:56<01:38,  5.21s/it] 40%|████      | 12/30 [01:01<01:33,  5.21s/it] 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it] 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it] 50%|█████     | 15/30 [01:17<01:18,  5.21s/it] 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it] 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it] 60%|██████    | 18/30 [01:32<01:02,  5.21s/it] 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it] 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it] 70%|███████   | 21/30 [01:48<00:46,  5.21s/it] 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it] 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it] 80%|████████  | 24/30 [02:04<00:31,  5.21s/it] 83%|████████▎ | 25/30 [02:09<00:26,  5.20s/it] 87%|████████▋ | 26/30 [02:14<00:20,  5.20s/it] 90%|█████████ | 27/30 [02:19<00:15,  5.19s/it] 93%|█████████▎| 28/30 [02:24<00:10,  5.18s/it] 97%|█████████▋| 29/30 [02:30<00:05,  5.18s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+Step 0 Forward time: 4.3405 seconds
+Step 1 Forward time: 5.2005 seconds
+Step 2 Forward time: 5.1994 seconds
+Step 3 Forward time: 5.1984 seconds
+Step 4 Forward time: 5.1994 seconds
+Step 5 Forward time: 5.2001 seconds
+Step 6 Forward time: 5.2022 seconds
+Step 7 Forward time: 5.2035 seconds
+Step 8 Forward time: 5.2033 seconds
+Step 9 Forward time: 5.2026 seconds
+Step 10 Forward time: 5.2033 seconds
+Step 11 Forward time: 5.2072 seconds
+Step 12 Forward time: 5.2034 seconds
+Step 13 Forward time: 5.2028 seconds
+Step 14 Forward time: 5.2016 seconds
+Step 15 Forward time: 5.2030 seconds
+Step 16 Forward time: 5.2028 seconds
+Step 17 Forward time: 5.1998 seconds
+Step 18 Forward time: 5.2021 seconds
+Step 19 Forward time: 5.2032 seconds
+Step 20 Forward time: 5.2031 seconds
+Step 21 Forward time: 5.2046 seconds
+Step 22 Forward time: 5.1979 seconds
+Step 23 Forward time: 5.1890 seconds
+Step 24 Forward time: 5.1805 seconds
+Step 25 Forward time: 5.1726 seconds
+Step 26 Forward time: 5.1669 seconds
+Step 27 Forward time: 5.1586 seconds
+Step 28 Forward time: 5.1565 seconds
+Step 29 Forward time: 5.1544 seconds
+[InfWorld] Chunk 2 done. Total frames: 161
+[Mem][after_sample chunk1] current=28.48GB peak=36.70GB reserved=29.75GB peak_reserved=42.70GB
+[Mem][train:after_forward] current=17.82GB peak=36.70GB reserved=21.49GB peak_reserved=42.70GB
+[Mem][train:after_backward] current=33.68GB peak=40.16GB reserved=40.72GB peak_reserved=42.70GB
+[OnlineTrain] task 0 chunk 1 step 1/5 loss=0.08874
+[OnlineTrain] task 0 chunk 1 step 2/5 loss=0.02417
+[OnlineTrain] task 0 chunk 1 step 3/5 loss=0.01932
+[OnlineTrain] task 0 chunk 1 step 4/5 loss=0.06551
+[OnlineTrain] task 0 chunk 1 step 5/5 loss=0.03866
+[Mem][before_teardown chunk1] current=33.68GB peak=40.16GB reserved=34.19GB peak_reserved=42.70GB
+[Mem][before_teardown chunk1] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk1] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk1] current=30.89GB peak=40.16GB reserved=33.10GB peak_reserved=42.70GB
+[Mem][after_train chunk1] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 3/10
+[Shape] chunk2 video_buffer_T=161 current_latent=(1, 16, 41, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:05<02:42,  5.62s/it]  7%|▋         | 2/30 [00:12<02:54,  6.25s/it] 10%|█         | 3/30 [00:18<02:54,  6.45s/it] 13%|█▎        | 4/30 [00:25<02:50,  6.54s/it] 17%|█▋        | 5/30 [00:32<02:44,  6.60s/it] 20%|██        | 6/30 [00:39<02:39,  6.63s/it] 23%|██▎       | 7/30 [00:45<02:32,  6.65s/it] 27%|██▋       | 8/30 [00:52<02:26,  6.66s/it] 30%|███       | 9/30 [00:59<02:20,  6.67s/it] 33%|███▎      | 10/30 [01:05<02:13,  6.68s/it] 37%|███▋      | 11/30 [01:12<02:06,  6.68s/it] 40%|████      | 12/30 [01:19<02:00,  6.68s/it] 43%|████▎     | 13/30 [01:25<01:53,  6.69s/it] 47%|████▋     | 14/30 [01:32<01:47,  6.69s/it] 50%|█████     | 15/30 [01:39<01:40,  6.69s/it] 53%|█████▎    | 16/30 [01:45<01:33,  6.69s/it] 57%|█████▋    | 17/30 [01:52<01:26,  6.69s/it] 60%|██████    | 18/30 [01:59<01:20,  6.69s/it] 63%|██████▎   | 19/30 [02:06<01:13,  6.69s/it] 67%|██████▋   | 20/30 [02:12<01:06,  6.69s/it] 70%|███████   | 21/30 [02:19<01:00,  6.69s/it] 73%|███████▎  | 22/30 [02:26<00:53,  6.69s/it] 77%|███████▋  | 23/30 [02:32<00:46,  6.69s/it] 80%|████████  | 24/30 [02:39<00:40,  6.69s/it] 83%|████████▎ | 25/30 [02:46<00:33,  6.69s/it] 87%|████████▋ | 26/30 [02:52<00:26,  6.69s/it] 90%|█████████ | 27/30 [02:59<00:20,  6.69s/it] 93%|█████████▎| 28/30 [03:06<00:13,  6.69s/it] 97%|█████████▋| 29/30 [03:12<00:06,  6.69s/it]100%|██████████| 30/30 [03:19<00:00,  6.69s/it]100%|██████████| 30/30 [03:19<00:00,  6.65s/it]
+Step 0 Forward time: 5.6060 seconds
+Step 1 Forward time: 6.6735 seconds
+Step 2 Forward time: 6.6757 seconds
+Step 3 Forward time: 6.6821 seconds
+Step 4 Forward time: 6.6786 seconds
+Step 5 Forward time: 6.6819 seconds
+Step 6 Forward time: 6.6792 seconds
+Step 7 Forward time: 6.6814 seconds
+Step 8 Forward time: 6.6785 seconds
+Step 9 Forward time: 6.6819 seconds
+Step 10 Forward time: 6.6804 seconds
+Step 11 Forward time: 6.6792 seconds
+Step 12 Forward time: 6.6805 seconds
+Step 13 Forward time: 6.6785 seconds
+Step 14 Forward time: 6.6786 seconds
+Step 15 Forward time: 6.6735 seconds
+Step 16 Forward time: 6.6726 seconds
+Step 17 Forward time: 6.6725 seconds
+Step 18 Forward time: 6.6736 seconds
+Step 19 Forward time: 6.6734 seconds
+Step 20 Forward time: 6.6761 seconds
+Step 21 Forward time: 6.6783 seconds
+Step 22 Forward time: 6.6770 seconds
+Step 23 Forward time: 6.6793 seconds
+Step 24 Forward time: 6.6816 seconds
+Step 25 Forward time: 6.6821 seconds
+Step 26 Forward time: 6.6793 seconds
+Step 27 Forward time: 6.6760 seconds
+Step 28 Forward time: 6.6765 seconds
+Step 29 Forward time: 6.6732 seconds
+[InfWorld] Chunk 3 done. Total frames: 241
+[Mem][after_sample chunk2] current=34.27GB peak=49.32GB reserved=35.97GB peak_reserved=53.26GB
+[Mem][train:after_forward] current=17.84GB peak=49.32GB reserved=26.63GB peak_reserved=53.26GB
+[Mem][train:after_backward] current=33.70GB peak=49.32GB reserved=41.05GB peak_reserved=53.26GB
+[OnlineTrain] task 0 chunk 2 step 1/5 loss=0.02243
+[OnlineTrain] task 0 chunk 2 step 2/5 loss=0.03670
+[OnlineTrain] task 0 chunk 2 step 3/5 loss=0.01895
+[OnlineTrain] task 0 chunk 2 step 4/5 loss=0.02692
+[OnlineTrain] task 0 chunk 2 step 5/5 loss=0.39974
+[Mem][before_teardown chunk2] current=33.70GB peak=49.32GB reserved=34.19GB peak_reserved=53.26GB
+[Mem][before_teardown chunk2] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk2] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk2] current=30.89GB peak=49.32GB reserved=32.96GB peak_reserved=53.26GB
+[Mem][after_train chunk2] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 4/10
+[Shape] chunk3 video_buffer_T=241 current_latent=(1, 16, 61, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:07<03:25,  7.10s/it]  7%|▋         | 2/30 [00:15<03:40,  7.87s/it] 10%|█         | 3/30 [00:23<03:39,  8.12s/it] 13%|█▎        | 4/30 [00:32<03:34,  8.24s/it] 17%|█▋        | 5/30 [00:40<03:27,  8.30s/it] 20%|██        | 6/30 [00:49<03:20,  8.34s/it] 23%|██▎       | 7/30 [00:57<03:12,  8.37s/it] 27%|██▋       | 8/30 [01:06<03:04,  8.38s/it] 30%|███       | 9/30 [01:14<02:56,  8.39s/it] 33%|███▎      | 10/30 [01:22<02:47,  8.40s/it] 37%|███▋      | 11/30 [01:31<02:39,  8.40s/it] 40%|████      | 12/30 [01:39<02:31,  8.40s/it] 43%|████▎     | 13/30 [01:48<02:22,  8.40s/it] 47%|████▋     | 14/30 [01:56<02:14,  8.40s/it] 50%|█████     | 15/30 [02:04<02:06,  8.40s/it] 53%|█████▎    | 16/30 [02:13<01:57,  8.41s/it] 57%|█████▋    | 17/30 [02:21<01:49,  8.40s/it] 60%|██████    | 18/30 [02:30<01:40,  8.41s/it] 63%|██████▎   | 19/30 [02:38<01:32,  8.41s/it] 67%|██████▋   | 20/30 [02:46<01:24,  8.41s/it] 70%|███████   | 21/30 [02:55<01:15,  8.41s/it] 73%|███████▎  | 22/30 [03:03<01:07,  8.41s/it] 77%|███████▋  | 23/30 [03:12<00:58,  8.41s/it] 80%|████████  | 24/30 [03:20<00:50,  8.42s/it] 83%|████████▎ | 25/30 [03:29<00:42,  8.42s/it] 87%|████████▋ | 26/30 [03:37<00:33,  8.43s/it] 90%|█████████ | 27/30 [03:45<00:25,  8.43s/it] 93%|█████████▎| 28/30 [03:54<00:16,  8.43s/it] 97%|█████████▋| 29/30 [04:02<00:08,  8.43s/it]100%|██████████| 30/30 [04:11<00:00,  8.43s/it]100%|██████████| 30/30 [04:11<00:00,  8.37s/it]
+Step 0 Forward time: 7.0886 seconds
+Step 1 Forward time: 8.4000 seconds
+Step 2 Forward time: 8.4047 seconds
+Step 3 Forward time: 8.4023 seconds
+Step 4 Forward time: 8.4045 seconds
+Step 5 Forward time: 8.4054 seconds
+Step 6 Forward time: 8.4109 seconds
+Step 7 Forward time: 8.4063 seconds
+Step 8 Forward time: 8.4015 seconds
+Step 9 Forward time: 8.3958 seconds
+Step 10 Forward time: 8.3945 seconds
+Step 11 Forward time: 8.3944 seconds
+Step 12 Forward time: 8.3921 seconds
+Step 13 Forward time: 8.3934 seconds
+Step 14 Forward time: 8.3933 seconds
+Step 15 Forward time: 8.3947 seconds
+Step 16 Forward time: 8.3928 seconds
+Step 17 Forward time: 8.3931 seconds
+Step 18 Forward time: 8.3947 seconds
+Step 19 Forward time: 8.3933 seconds
+Step 20 Forward time: 8.3998 seconds
+Step 21 Forward time: 8.4039 seconds
+Step 22 Forward time: 8.4121 seconds
+Step 23 Forward time: 8.4192 seconds
+Step 24 Forward time: 8.4259 seconds
+Step 25 Forward time: 8.4321 seconds
+Step 26 Forward time: 8.4323 seconds
+Step 27 Forward time: 8.4230 seconds
+Step 28 Forward time: 8.4125 seconds
+Step 29 Forward time: 8.4091 seconds
+[InfWorld] Chunk 4 done. Total frames: 321
+[Mem][after_sample chunk3] current=40.05GB peak=49.73GB reserved=42.24GB peak_reserved=62.49GB
+[Mem][train:after_forward] current=17.84GB peak=49.73GB reserved=32.56GB peak_reserved=62.49GB
+[Mem][train:after_backward] current=33.71GB peak=49.73GB reserved=41.54GB peak_reserved=62.49GB
+[OnlineTrain] task 0 chunk 3 step 1/5 loss=0.01953
+[OnlineTrain] task 0 chunk 3 step 2/5 loss=0.01691
+[OnlineTrain] task 0 chunk 3 step 3/5 loss=0.02117
+[OnlineTrain] task 0 chunk 3 step 4/5 loss=0.08142
+[OnlineTrain] task 0 chunk 3 step 5/5 loss=0.01898
+[Mem][before_teardown chunk3] current=33.71GB peak=49.73GB reserved=34.28GB peak_reserved=62.49GB
+[Mem][before_teardown chunk3] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk3] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk3] current=30.90GB peak=49.73GB reserved=33.02GB peak_reserved=62.49GB
+[Mem][after_train chunk3] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 5/10
+[Shape] chunk4 video_buffer_T=321 current_latent=(1, 16, 81, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:09<04:43,  9.78s/it]  7%|▋         | 2/30 [00:21<04:58, 10.68s/it] 10%|█         | 3/30 [00:32<04:56, 10.97s/it] 13%|█▎        | 4/30 [00:43<04:49, 11.13s/it] 17%|█▋        | 5/30 [00:55<04:40, 11.22s/it] 20%|██        | 6/30 [01:06<04:30, 11.28s/it] 23%|██▎       | 7/30 [01:17<04:20, 11.32s/it] 27%|██▋       | 8/30 [01:29<04:09, 11.33s/it] 30%|███       | 9/30 [01:40<03:57, 11.33s/it] 33%|███▎      | 10/30 [01:51<03:46, 11.32s/it] 37%|███▋      | 11/30 [02:03<03:35, 11.32s/it] 40%|████      | 12/30 [02:14<03:23, 11.32s/it] 43%|████▎     | 13/30 [02:25<03:12, 11.32s/it] 47%|████▋     | 14/30 [02:37<03:01, 11.33s/it] 50%|█████     | 15/30 [02:48<02:50, 11.35s/it] 53%|█████▎    | 16/30 [03:00<02:39, 11.36s/it] 57%|█████▋    | 17/30 [03:11<02:27, 11.38s/it] 60%|██████    | 18/30 [03:22<02:16, 11.38s/it] 63%|██████▎   | 19/30 [03:34<02:04, 11.36s/it] 67%|██████▋   | 20/30 [03:45<01:53, 11.35s/it] 70%|███████   | 21/30 [03:56<01:42, 11.34s/it] 73%|███████▎  | 22/30 [04:08<01:30, 11.33s/it] 77%|███████▋  | 23/30 [04:19<01:19, 11.32s/it] 80%|████████  | 24/30 [04:30<01:07, 11.32s/it] 83%|████████▎ | 25/30 [04:42<00:56, 11.33s/it] 87%|████████▋ | 26/30 [04:53<00:45, 11.35s/it] 90%|█████████ | 27/30 [05:04<00:34, 11.36s/it] 93%|█████████▎| 28/30 [05:16<00:22, 11.38s/it] 97%|█████████▋| 29/30 [05:27<00:11, 11.39s/it]100%|██████████| 30/30 [05:39<00:00, 11.40s/it]100%|██████████| 30/30 [05:39<00:00, 11.30s/it]
+Step 0 Forward time: 9.7719 seconds
+Step 1 Forward time: 11.2883 seconds
+Step 2 Forward time: 11.3126 seconds
+Step 3 Forward time: 11.3473 seconds
+Step 4 Forward time: 11.3738 seconds
+Step 5 Forward time: 11.3893 seconds
+Step 6 Forward time: 11.3831 seconds
+Step 7 Forward time: 11.3367 seconds
+Step 8 Forward time: 11.3099 seconds
+Step 9 Forward time: 11.2984 seconds
+Step 10 Forward time: 11.2956 seconds
+Step 11 Forward time: 11.3054 seconds
+Step 12 Forward time: 11.3217 seconds
+Step 13 Forward time: 11.3372 seconds
+Step 14 Forward time: 11.3652 seconds
+Step 15 Forward time: 11.3823 seconds
+Step 16 Forward time: 11.4020 seconds
+Step 17 Forward time: 11.3649 seconds
+Step 18 Forward time: 11.3159 seconds
+Step 19 Forward time: 11.2996 seconds
+Step 20 Forward time: 11.2948 seconds
+Step 21 Forward time: 11.2913 seconds
+Step 22 Forward time: 11.2978 seconds
+Step 23 Forward time: 11.3160 seconds
+Step 24 Forward time: 11.3419 seconds
+Step 25 Forward time: 11.3655 seconds
+Step 26 Forward time: 11.3818 seconds
+Step 27 Forward time: 11.3977 seconds
+Step 28 Forward time: 11.4040 seconds
+Step 29 Forward time: 11.4027 seconds
+[InfWorld] Chunk 5 done. Total frames: 401
+[Mem][after_sample chunk4] current=44.69GB peak=52.91GB reserved=46.54GB peak_reserved=66.72GB
+[Mem][train:after_forward] current=17.85GB peak=52.91GB reserved=36.44GB peak_reserved=66.72GB
+[Mem][train:after_backward] current=33.71GB peak=52.91GB reserved=41.33GB peak_reserved=66.72GB
+[OnlineTrain] task 0 chunk 4 step 1/5 loss=0.12817
+[OnlineTrain] task 0 chunk 4 step 2/5 loss=0.03673
+[OnlineTrain] task 0 chunk 4 step 3/5 loss=0.03374
+[OnlineTrain] task 0 chunk 4 step 4/5 loss=0.02136
+[OnlineTrain] task 0 chunk 4 step 5/5 loss=0.02414
+[Mem][before_teardown chunk4] current=33.71GB peak=52.91GB reserved=34.24GB peak_reserved=66.72GB
+[Mem][before_teardown chunk4] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk4] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk4] current=30.91GB peak=52.91GB reserved=33.12GB peak_reserved=66.72GB
+[Mem][after_train chunk4] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 6/10
+[Shape] chunk5 video_buffer_T=401 current_latent=(1, 16, 101, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:09<04:45,  9.83s/it]  7%|▋         | 2/30 [00:21<05:00, 10.73s/it] 10%|█         | 3/30 [00:32<04:57, 11.04s/it] 13%|█▎        | 4/30 [00:43<04:50, 11.18s/it] 17%|█▋        | 5/30 [00:55<04:41, 11.26s/it] 20%|██        | 6/30 [01:06<04:31, 11.32s/it] 23%|██▎       | 7/30 [01:18<04:21, 11.35s/it] 27%|██▋       | 8/30 [01:29<04:10, 11.37s/it] 30%|███       | 9/30 [01:41<03:59, 11.38s/it] 33%|███▎      | 10/30 [01:52<03:47, 11.39s/it] 37%|███▋      | 11/30 [02:03<03:36, 11.41s/it] 40%|████      | 12/30 [02:15<03:25, 11.42s/it] 43%|████▎     | 13/30 [02:26<03:14, 11.43s/it] 47%|████▋     | 14/30 [02:38<03:03, 11.44s/it] 50%|█████     | 15/30 [02:49<02:51, 11.45s/it] 53%|█████▎    | 16/30 [03:01<02:40, 11.46s/it] 57%|█████▋    | 17/30 [03:12<02:29, 11.47s/it] 60%|██████    | 18/30 [03:24<02:17, 11.47s/it] 63%|██████▎   | 19/30 [03:35<02:06, 11.47s/it] 67%|██████▋   | 20/30 [03:47<01:54, 11.47s/it] 70%|███████   | 21/30 [03:58<01:43, 11.47s/it] 73%|███████▎  | 22/30 [04:10<01:31, 11.47s/it] 77%|███████▋  | 23/30 [04:21<01:20, 11.47s/it] 80%|████████  | 24/30 [04:33<01:08, 11.47s/it] 83%|████████▎ | 25/30 [04:44<00:57, 11.47s/it] 87%|████████▋ | 26/30 [04:55<00:45, 11.47s/it] 90%|█████████ | 27/30 [05:07<00:34, 11.47s/it] 93%|█████████▎| 28/30 [05:18<00:22, 11.48s/it] 97%|█████████▋| 29/30 [05:30<00:11, 11.47s/it]100%|██████████| 30/30 [05:41<00:00, 11.47s/it]100%|██████████| 30/30 [05:41<00:00, 11.40s/it]
+Step 0 Forward time: 9.8164 seconds
+Step 1 Forward time: 11.3542 seconds
+Step 2 Forward time: 11.3838 seconds
+Step 3 Forward time: 11.3921 seconds
+Step 4 Forward time: 11.3970 seconds
+Step 5 Forward time: 11.4039 seconds
+Step 6 Forward time: 11.4051 seconds
+Step 7 Forward time: 11.4047 seconds
+Step 8 Forward time: 11.4016 seconds
+Step 9 Forward time: 11.4052 seconds
+Step 10 Forward time: 11.4185 seconds
+Step 11 Forward time: 11.4247 seconds
+Step 12 Forward time: 11.4424 seconds
+Step 13 Forward time: 11.4572 seconds
+Step 14 Forward time: 11.4633 seconds
+Step 15 Forward time: 11.4716 seconds
+Step 16 Forward time: 11.4736 seconds
+Step 17 Forward time: 11.4657 seconds
+Step 18 Forward time: 11.4617 seconds
+Step 19 Forward time: 11.4616 seconds
+Step 20 Forward time: 11.4573 seconds
+Step 21 Forward time: 11.4587 seconds
+Step 22 Forward time: 11.4537 seconds
+Step 23 Forward time: 11.4562 seconds
+Step 24 Forward time: 11.4529 seconds
+Step 25 Forward time: 11.4644 seconds
+Step 26 Forward time: 11.4626 seconds
+Step 27 Forward time: 11.4718 seconds
+Step 28 Forward time: 11.4600 seconds
+Step 29 Forward time: 11.4542 seconds
+[InfWorld] Chunk 6 done. Total frames: 481
+[Mem][after_sample chunk5] current=44.69GB peak=52.92GB reserved=46.37GB peak_reserved=67.65GB
+[Mem][train:after_forward] current=17.86GB peak=52.92GB reserved=36.51GB peak_reserved=67.65GB
+[Mem][train:after_backward] current=33.72GB peak=52.92GB reserved=40.99GB peak_reserved=67.65GB
+[OnlineTrain] task 0 chunk 5 step 1/5 loss=0.09354
+[OnlineTrain] task 0 chunk 5 step 2/5 loss=0.07526
+[OnlineTrain] task 0 chunk 5 step 3/5 loss=0.02906
+[OnlineTrain] task 0 chunk 5 step 4/5 loss=0.03193
+[OnlineTrain] task 0 chunk 5 step 5/5 loss=0.03533
+[Mem][before_teardown chunk5] current=33.72GB peak=52.92GB reserved=34.28GB peak_reserved=67.65GB
+[Mem][before_teardown chunk5] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk5] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk5] current=30.92GB peak=52.92GB reserved=33.23GB peak_reserved=67.65GB
+[Mem][after_train chunk5] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 7/10
+[Shape] chunk6 video_buffer_T=481 current_latent=(1, 16, 121, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:09<04:44,  9.82s/it]  7%|▋         | 2/30 [00:21<04:59, 10.71s/it] 10%|█         | 3/30 [00:32<04:56, 10.99s/it] 13%|█▎        | 4/30 [00:43<04:49, 11.12s/it] 17%|█▋        | 5/30 [00:55<04:39, 11.19s/it] 20%|██        | 6/30 [01:06<04:29, 11.25s/it] 23%|██▎       | 7/30 [01:17<04:19, 11.29s/it] 27%|██▋       | 8/30 [01:29<04:09, 11.32s/it] 30%|███       | 9/30 [01:40<03:58, 11.35s/it] 33%|███▎      | 10/30 [01:51<03:47, 11.35s/it] 37%|███▋      | 11/30 [02:03<03:35, 11.34s/it] 40%|████      | 12/30 [02:14<03:23, 11.33s/it] 43%|████▎     | 13/30 [02:25<03:12, 11.32s/it] 47%|████▋     | 14/30 [02:37<03:00, 11.31s/it] 50%|█████     | 15/30 [02:48<02:49, 11.31s/it] 53%|█████▎    | 16/30 [02:59<02:38, 11.31s/it] 57%|█████▋    | 17/30 [03:11<02:27, 11.33s/it] 60%|██████    | 18/30 [03:22<02:16, 11.34s/it] 63%|██████▎   | 19/30 [03:33<02:04, 11.36s/it] 67%|██████▋   | 20/30 [03:45<01:53, 11.37s/it] 70%|███████   | 21/30 [03:56<01:42, 11.39s/it] 73%|███████▎  | 22/30 [04:08<01:31, 11.40s/it] 77%|███████▋  | 23/30 [04:19<01:19, 11.41s/it] 80%|████████  | 24/30 [04:31<01:08, 11.42s/it] 83%|████████▎ | 25/30 [04:42<00:57, 11.44s/it] 87%|████████▋ | 26/30 [04:54<00:45, 11.45s/it] 90%|█████████ | 27/30 [05:05<00:34, 11.45s/it] 93%|█████████▎| 28/30 [05:16<00:22, 11.45s/it] 97%|█████████▋| 29/30 [05:28<00:11, 11.45s/it]100%|██████████| 30/30 [05:39<00:00, 11.44s/it]100%|██████████| 30/30 [05:39<00:00, 11.33s/it]
+Step 0 Forward time: 9.8096 seconds
+Step 1 Forward time: 11.3180 seconds
+Step 2 Forward time: 11.3031 seconds
+Step 3 Forward time: 11.3056 seconds
+Step 4 Forward time: 11.3196 seconds
+Step 5 Forward time: 11.3334 seconds
+Step 6 Forward time: 11.3567 seconds
+Step 7 Forward time: 11.3834 seconds
+Step 8 Forward time: 11.3882 seconds
+Step 9 Forward time: 11.3532 seconds
+Step 10 Forward time: 11.3078 seconds
+Step 11 Forward time: 11.2925 seconds
+Step 12 Forward time: 11.2792 seconds
+Step 13 Forward time: 11.2847 seconds
+Step 14 Forward time: 11.2947 seconds
+Step 15 Forward time: 11.3111 seconds
+Step 16 Forward time: 11.3378 seconds
+Step 17 Forward time: 11.3655 seconds
+Step 18 Forward time: 11.3761 seconds
+Step 19 Forward time: 11.3965 seconds
+Step 20 Forward time: 11.4075 seconds
+Step 21 Forward time: 11.4170 seconds
+Step 22 Forward time: 11.4193 seconds
+Step 23 Forward time: 11.4425 seconds
+Step 24 Forward time: 11.4610 seconds
+Step 25 Forward time: 11.4496 seconds
+Step 26 Forward time: 11.4452 seconds
+Step 27 Forward time: 11.4414 seconds
+Step 28 Forward time: 11.4249 seconds
+Step 29 Forward time: 11.4074 seconds
+[InfWorld] Chunk 7 done. Total frames: 561
+[Mem][after_sample chunk6] current=44.70GB peak=52.93GB reserved=46.31GB peak_reserved=66.95GB
+[Mem][train:after_forward] current=17.87GB peak=52.93GB reserved=36.47GB peak_reserved=66.95GB
+[Mem][train:after_backward] current=33.73GB peak=52.93GB reserved=41.20GB peak_reserved=66.95GB
+[OnlineTrain] task 0 chunk 6 step 1/5 loss=0.02305
+[OnlineTrain] task 0 chunk 6 step 2/5 loss=0.03483
+[OnlineTrain] task 0 chunk 6 step 3/5 loss=0.03578
+[OnlineTrain] task 0 chunk 6 step 4/5 loss=0.03125
+[OnlineTrain] task 0 chunk 6 step 5/5 loss=0.03057
+[Mem][before_teardown chunk6] current=33.73GB peak=52.93GB reserved=34.34GB peak_reserved=66.95GB
+[Mem][before_teardown chunk6] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk6] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk6] current=30.93GB peak=52.93GB reserved=33.04GB peak_reserved=66.95GB
+[Mem][after_train chunk6] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 8/10
+[Shape] chunk7 video_buffer_T=561 current_latent=(1, 16, 141, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:09<04:46,  9.88s/it]  7%|▋         | 2/30 [00:21<05:01, 10.78s/it] 10%|█         | 3/30 [00:32<04:58, 11.06s/it] 13%|█▎        | 4/30 [00:44<04:51, 11.20s/it] 17%|█▋        | 5/30 [00:55<04:41, 11.27s/it] 20%|██        | 6/30 [01:06<04:31, 11.32s/it] 23%|██▎       | 7/30 [01:18<04:21, 11.35s/it] 27%|██▋       | 8/30 [01:29<04:10, 11.37s/it] 30%|███       | 9/30 [01:41<03:58, 11.36s/it] 33%|███▎      | 10/30 [01:52<03:46, 11.35s/it] 37%|███▋      | 11/30 [02:03<03:35, 11.34s/it] 40%|████      | 12/30 [02:15<03:23, 11.33s/it] 43%|████▎     | 13/30 [02:26<03:12, 11.33s/it] 47%|████▋     | 14/30 [02:37<03:01, 11.33s/it] 50%|█████     | 15/30 [02:49<02:50, 11.34s/it] 53%|█████▎    | 16/30 [03:00<02:39, 11.36s/it] 57%|█████▋    | 17/30 [03:11<02:27, 11.38s/it] 60%|██████    | 18/30 [03:23<02:16, 11.39s/it] 63%|██████▎   | 19/30 [03:34<02:05, 11.40s/it] 67%|██████▋   | 20/30 [03:46<01:54, 11.41s/it] 70%|███████   | 21/30 [03:57<01:42, 11.42s/it] 73%|███████▎  | 22/30 [04:09<01:31, 11.43s/it] 77%|███████▋  | 23/30 [04:20<01:20, 11.43s/it] 80%|████████  | 24/30 [04:31<01:08, 11.43s/it] 83%|████████▎ | 25/30 [04:43<00:57, 11.44s/it] 87%|████████▋ | 26/30 [04:54<00:45, 11.44s/it] 90%|█████████ | 27/30 [05:06<00:34, 11.45s/it] 93%|█████████▎| 28/30 [05:17<00:22, 11.45s/it] 97%|█████████▋| 29/30 [05:29<00:11, 11.45s/it]100%|██████████| 30/30 [05:40<00:00, 11.45s/it]100%|██████████| 30/30 [05:40<00:00, 11.35s/it]
+Step 0 Forward time: 9.8684 seconds
+Step 1 Forward time: 11.3927 seconds
+Step 2 Forward time: 11.3889 seconds
+Step 3 Forward time: 11.3874 seconds
+Step 4 Forward time: 11.3969 seconds
+Step 5 Forward time: 11.4019 seconds
+Step 6 Forward time: 11.4017 seconds
+Step 7 Forward time: 11.3828 seconds
+Step 8 Forward time: 11.3419 seconds
+Step 9 Forward time: 11.3096 seconds
+Step 10 Forward time: 11.2917 seconds
+Step 11 Forward time: 11.3018 seconds
+Step 12 Forward time: 11.3096 seconds
+Step 13 Forward time: 11.3321 seconds
+Step 14 Forward time: 11.3574 seconds
+Step 15 Forward time: 11.3862 seconds
+Step 16 Forward time: 11.4088 seconds
+Step 17 Forward time: 11.4010 seconds
+Step 18 Forward time: 11.4135 seconds
+Step 19 Forward time: 11.4265 seconds
+Step 20 Forward time: 11.4312 seconds
+Step 21 Forward time: 11.4321 seconds
+Step 22 Forward time: 11.4226 seconds
+Step 23 Forward time: 11.4280 seconds
+Step 24 Forward time: 11.4388 seconds
+Step 25 Forward time: 11.4409 seconds
+Step 26 Forward time: 11.4515 seconds
+Step 27 Forward time: 11.4469 seconds
+Step 28 Forward time: 11.4455 seconds
+Step 29 Forward time: 11.4313 seconds
+[InfWorld] Chunk 8 done. Total frames: 641
+[Mem][after_sample chunk7] current=44.71GB peak=52.93GB reserved=46.23GB peak_reserved=65.97GB
+[Mem][train:after_forward] current=17.88GB peak=52.93GB reserved=36.49GB peak_reserved=65.97GB
+[Mem][train:after_backward] current=33.74GB peak=52.93GB reserved=41.16GB peak_reserved=65.97GB
+[OnlineTrain] task 0 chunk 7 step 1/5 loss=0.01793
+[OnlineTrain] task 0 chunk 7 step 2/5 loss=0.02961
+[OnlineTrain] task 0 chunk 7 step 3/5 loss=0.01673
+[OnlineTrain] task 0 chunk 7 step 4/5 loss=0.01979
+[OnlineTrain] task 0 chunk 7 step 5/5 loss=0.01895
+[Mem][before_teardown chunk7] current=33.74GB peak=52.93GB reserved=34.24GB peak_reserved=65.97GB
+[Mem][before_teardown chunk7] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk7] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk7] current=30.93GB peak=52.93GB reserved=33.17GB peak_reserved=65.97GB
+[Mem][after_train chunk7] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 9/10
+[Shape] chunk8 video_buffer_T=641 current_latent=(1, 16, 161, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:09<04:44,  9.79s/it]  7%|▋         | 2/30 [00:21<04:58, 10.68s/it] 10%|█         | 3/30 [00:32<04:55, 10.95s/it] 13%|█▎        | 4/30 [00:43<04:48, 11.08s/it] 17%|█▋        | 5/30 [00:54<04:38, 11.15s/it] 20%|██        | 6/30 [01:06<04:28, 11.20s/it] 23%|██▎       | 7/30 [01:17<04:18, 11.24s/it] 27%|██▋       | 8/30 [01:28<04:08, 11.28s/it] 30%|███       | 9/30 [01:40<03:57, 11.31s/it] 33%|███▎      | 10/30 [01:51<03:46, 11.33s/it] 37%|███▋      | 11/30 [02:03<03:35, 11.35s/it] 40%|████      | 12/30 [02:14<03:24, 11.36s/it] 43%|████▎     | 13/30 [02:25<03:13, 11.37s/it] 47%|████▋     | 14/30 [02:37<03:02, 11.38s/it] 50%|█████     | 15/30 [02:48<02:50, 11.38s/it] 53%|█████▎    | 16/30 [03:00<02:39, 11.39s/it] 57%|█████▋    | 17/30 [03:11<02:28, 11.39s/it] 60%|██████    | 18/30 [03:22<02:16, 11.39s/it] 63%|██████▎   | 19/30 [03:34<02:05, 11.39s/it] 67%|██████▋   | 20/30 [03:45<01:53, 11.40s/it] 70%|███████   | 21/30 [03:57<01:42, 11.40s/it] 73%|███████▎  | 22/30 [04:08<01:31, 11.41s/it] 77%|███████▋  | 23/30 [04:19<01:19, 11.42s/it] 80%|████████  | 24/30 [04:31<01:08, 11.43s/it] 83%|████████▎ | 25/30 [04:42<00:57, 11.45s/it] 87%|████████▋ | 26/30 [04:54<00:45, 11.44s/it] 90%|█████████ | 27/30 [05:05<00:34, 11.42s/it] 93%|█████████▎| 28/30 [05:16<00:22, 11.40s/it] 97%|█████████▋| 29/30 [05:28<00:11, 11.37s/it]100%|██████████| 30/30 [05:39<00:00, 11.35s/it]100%|██████████| 30/30 [05:39<00:00, 11.32s/it]
+Step 0 Forward time: 9.7816 seconds
+Step 1 Forward time: 11.2855 seconds
+Step 2 Forward time: 11.2675 seconds
+Step 3 Forward time: 11.2686 seconds
+Step 4 Forward time: 11.2664 seconds
+Step 5 Forward time: 11.2815 seconds
+Step 6 Forward time: 11.3138 seconds
+Step 7 Forward time: 11.3334 seconds
+Step 8 Forward time: 11.3599 seconds
+Step 9 Forward time: 11.3787 seconds
+Step 10 Forward time: 11.3821 seconds
+Step 11 Forward time: 11.3798 seconds
+Step 12 Forward time: 11.3807 seconds
+Step 13 Forward time: 11.3797 seconds
+Step 14 Forward time: 11.3819 seconds
+Step 15 Forward time: 11.3803 seconds
+Step 16 Forward time: 11.3768 seconds
+Step 17 Forward time: 11.3830 seconds
+Step 18 Forward time: 11.3884 seconds
+Step 19 Forward time: 11.3899 seconds
+Step 20 Forward time: 11.4053 seconds
+Step 21 Forward time: 11.4198 seconds
+Step 22 Forward time: 11.4227 seconds
+Step 23 Forward time: 11.4577 seconds
+Step 24 Forward time: 11.4732 seconds
+Step 25 Forward time: 11.4168 seconds
+Step 26 Forward time: 11.3566 seconds
+Step 27 Forward time: 11.3241 seconds
+Step 28 Forward time: 11.3046 seconds
+Step 29 Forward time: 11.2975 seconds
+[InfWorld] Chunk 9 done. Total frames: 721
+[Mem][after_sample chunk8] current=44.72GB peak=52.94GB reserved=46.45GB peak_reserved=67.37GB
+[Mem][train:after_forward] current=17.89GB peak=52.94GB reserved=36.80GB peak_reserved=67.37GB
+[Mem][train:after_backward] current=33.75GB peak=52.94GB reserved=41.41GB peak_reserved=67.37GB
+[OnlineTrain] task 0 chunk 8 step 1/5 loss=0.15171
+[OnlineTrain] task 0 chunk 8 step 2/5 loss=0.01465
+[OnlineTrain] task 0 chunk 8 step 3/5 loss=0.02005
+[OnlineTrain] task 0 chunk 8 step 4/5 loss=0.01494
+[OnlineTrain] task 0 chunk 8 step 5/5 loss=0.01298
+[Mem][before_teardown chunk8] current=33.75GB peak=52.94GB reserved=34.20GB peak_reserved=67.37GB
+[Mem][before_teardown chunk8] grad_buffers=2.79GB across 813 params
+[Mem][before_teardown chunk8] optimizer_state=5.57GB across 2439 tensors
+[Mem][after_train chunk8] current=30.94GB peak=52.94GB reserved=32.94GB peak_reserved=67.37GB
+[Mem][after_train chunk8] grad_buffers=0.00GB across 0 params
+[InfWorld] Generating chunk 10/10
+[Shape] chunk9 video_buffer_T=721 current_latent=(1, 16, 181, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:09<04:46,  9.88s/it]  7%|▋         | 2/30 [00:21<05:01, 10.78s/it] 10%|█         | 3/30 [00:32<04:58, 11.06s/it] 13%|█▎        | 4/30 [00:44<04:51, 11.20s/it] 17%|█▋        | 5/30 [00:55<04:41, 11.28s/it] 20%|██        | 6/30 [01:06<04:31, 11.32s/it] 23%|██▎       | 7/30 [01:18<04:21, 11.35s/it] 27%|██▋       | 8/30 [01:29<04:10, 11.37s/it] 30%|███       | 9/30 [01:41<03:58, 11.38s/it] 33%|███▎      | 10/30 [01:52<03:47, 11.39s/it] 37%|███▋      | 11/30 [02:03<03:36, 11.40s/it] 40%|████      | 12/30 [02:15<03:25, 11.41s/it] 43%|████▎     | 13/30 [02:26<03:13, 11.39s/it] 47%|████▋     | 14/30 [02:38<03:01, 11.37s/it] 50%|█████     | 15/30 [02:49<02:50, 11.35s/it] 53%|█████▎    | 16/30 [03:00<02:38, 11.34s/it] 57%|█████▋    | 17/30 [03:12<02:27, 11.33s/it] 60%|██████    | 18/30 [03:23<02:15, 11.33s/it] 63%|██████▎   | 19/30 [03:34<02:04, 11.34s/it] 67%|██████▋   | 20/30 [03:46<01:53, 11.35s/it] 70%|███████   | 21/30 [03:57<01:42, 11.37s/it] 73%|███████▎  | 22/30 [04:08<01:31, 11.38s/it] 77%|███████▋  | 23/30 [04:20<01:19, 11.39s/it] 80%|████████  | 24/30 [04:31<01:08, 11.40s/it] 83%|████████▎ | 25/30 [04:43<00:57, 11.41s/it] 87%|████████▋ | 26/30 [04:54<00:45, 11.42s/it] 90%|█████████ | 27/30 [05:06<00:34, 11.43s/it] 93%|█████████▎| 28/30 [05:17<00:22, 11.45s/it] 97%|█████████▋| 29/30 [05:29<00:11, 11.46s/it]100%|██████████| 30/30 [05:40<00:00, 11.47s/it]100%|██████████| 30/30 [05:40<00:00, 11.35s/it]
+Step 0 Forward time: 9.8656 seconds
+Step 1 Forward time: 11.3937 seconds
+Step 2 Forward time: 11.3919 seconds
+Step 3 Forward time: 11.3976 seconds
+Step 4 Forward time: 11.4074 seconds
+Step 5 Forward time: 11.3997 seconds
+Step 6 Forward time: 11.3935 seconds
+Step 7 Forward time: 11.3886 seconds
+Step 8 Forward time: 11.3877 seconds
+Step 9 Forward time: 11.4043 seconds
+Step 10 Forward time: 11.4237 seconds
+Step 11 Forward time: 11.4002 seconds
+Step 12 Forward time: 11.3555 seconds
+Step 13 Forward time: 11.3133 seconds
+Step 14 Forward time: 11.2976 seconds
+Step 15 Forward time: 11.2971 seconds
+Step 16 Forward time: 11.3060 seconds
+Step 17 Forward time: 11.3106 seconds
+Step 18 Forward time: 11.3376 seconds
+Step 19 Forward time: 11.3637 seconds
+Step 20 Forward time: 11.3928 seconds
+Step 21 Forward time: 11.4041 seconds
+Step 22 Forward time: 11.4095 seconds
+Step 23 Forward time: 11.4140 seconds
+Step 24 Forward time: 11.4296 seconds
+Step 25 Forward time: 11.4355 seconds
+Step 26 Forward time: 11.4452 seconds
+Step 27 Forward time: 11.4631 seconds
+Step 28 Forward time: 11.4820 seconds
+Step 29 Forward time: 11.4744 seconds
+[InfWorld] Chunk 10 done. Total frames: 801
+[Mem][after_sample chunk9] current=44.73GB peak=52.95GB reserved=46.45GB peak_reserved=68.48GB
+Silent video saved to: /root/autodl-tmp/ttt/infworld/outputs/infworld-ckpt0-step30-cfg5.0/0000_A_serene_campus_walkway_lined__06_24_20:41:09.mp4
+[InfWorld] Saved: /root/autodl-tmp/ttt/infworld/outputs/infworld-ckpt0-step30-cfg5.0/0000_A_serene_campus_walkway_lined__06_24_20:41:09.mp4
+[InfWorld] Task 1: A street in a fantasy city where buildings are car...
+[OnlineTrain] task 1: restored init params from CPU snapshot
+[InfWorld] Generating chunk 1/10
+[Shape] chunk0 video_buffer_T=1 current_latent=(1, 16, 1, 56, 112)
+  0%|          | 0/30 [00:00<?, ?it/s]  3%|▎         | 1/30 [00:03<01:36,  3.34s/it]  7%|▋         | 2/30 [00:07<01:42,  3.67s/it] 10%|█         | 3/30 [00:11<01:42,  3.79s/it] 13%|█▎        | 4/30 [00:15<01:39,  3.84s/it] 17%|█▋        | 5/30 [00:19<01:36,  3.87s/it] 20%|██        | 6/30 [00:22<01:33,  3.89s/it] 23%|██▎       | 7/30 [00:26<01:29,  3.90s/it] 27%|██▋       | 8/30 [00:30<01:26,  3.91s/it]

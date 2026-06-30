@@ -1,0 +1,1561 @@
+###################################################
+### [1/1] 开始: MODEL=infworld-offline-cut21 GPUS=3 CASES=6 ONLINE=off GEN=generate_video_cut21.py OMP_NUM_THREADS=48
+###################################################
+==============================================
+Infinite-World → WBench  一体化运行+评测
+==============================================
+model: infworld-offline-cut21 | GPUs: 3 | num_cases: 6 (0=all) | online: off
+gen:   generate_video_cut21.py
+logs:  /root/autodl-tmp/ttt/logs/infworld-offline-cut21_2026-06-27_01-49-33.log
+==============================================
+
+########## 阶段 1/2: 生成视频 (infworld) ##########
+MASTER_PORT: 29400
+[InfWorld] local_rank: 0 | global_rank: 0 | world_size: 3
+[rank 0] init_device_mesh [dp_size x cp_size]: [3 x 1]
+[rank 0] mesh_2d: DeviceMesh('cuda', [[0], [1], [2]], mesh_dim_names=('dp', 'cp'))
+[rank 0] [dp_rank, cp_rank]: [0, 0],  dp_ranks: [0, 1, 2], cp_ranks: [0]
+[GenVideo] rank 0/3 | total cases: 6 | online_training=False
+[GenVideo] Loading VAE...
+[InfWorld] local_rank: 1 | global_rank: 1 | world_size: 3
+[rank 1] init_device_mesh [dp_size x cp_size]: [3 x 1]
+[rank 1] mesh_2d: DeviceMesh('cuda', [[0], [1], [2]], mesh_dim_names=('dp', 'cp'))
+[rank 1] [dp_rank, cp_rank]: [1, 0],  dp_ranks: [0, 1, 2], cp_ranks: [1]
+[InfWorld] local_rank: 2 | global_rank: 2 | world_size: 3
+[rank 2] init_device_mesh [dp_size x cp_size]: [3 x 1]
+[rank 2] mesh_2d: DeviceMesh('cuda', [[0], [1], [2]], mesh_dim_names=('dp', 'cp'))
+[rank 2] [dp_rank, cp_rank]: [2, 0],  dp_ranks: [0, 1, 2], cp_ranks: [2]
+[GenVideo] rank 1/3 | total cases: 6 | online_training=False
+[GenVideo] Loading VAE...
+[GenVideo] rank 2/3 | total cases: 6 | online_training=False
+[GenVideo] Loading VAE...
+[GenVideo] Loading Text Encoder...
+[GenVideo] Loading Text Encoder...
+[GenVideo] Loading Text Encoder...
+[GenVideo] Loading Scheduler...
+[GenVideo] Loading DiT Model...
+Import transformer_engine failed, may cause bug.
+[GenVideo] Loading Scheduler...
+[GenVideo] Loading DiT Model...
+Import transformer_engine failed, may cause bug.
+[GenVideo] Loading Scheduler...
+[GenVideo] Loading DiT Model...
+Import transformer_engine failed, may cause bug.
+[GenVideo] Model loaded! Missing: 0, Unexpected: 0
+[GenVideo] Model loaded! Missing: 0, Unexpected: 0
+[GenVideo] [rank 0] case 5: A grand neoclassical museum gallery interior. Poli...
+[GenVideo] action frames=480 -> num_chunks=6
+[GenVideo] chunk 1/6
+[GenVideo] Model loaded! Missing: 0, Unexpected: 0
+[GenVideo] [rank 2] case 33: The interior of a grand Gothic cathedral. Rows of ...
+  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] action frames=480 -> num_chunks=6
+[GenVideo] chunk 1/6
+[GenVideo] [rank 1] case 12: A modern supermarket aisle with tall shelving unit...
+  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] action frames=720 -> num_chunks=9
+[GenVideo] chunk 1/9
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 3.2678 seconds
+  3%|▎         | 1/30 [00:03<01:34,  3.27s/it]Step 0 Forward time: 3.2888 seconds
+  3%|▎         | 1/30 [00:03<01:35,  3.29s/it]Step 0 Forward time: 3.2813 seconds
+  3%|▎         | 1/30 [00:03<01:35,  3.29s/it]Step 1 Forward time: 3.8886 seconds
+  7%|▋         | 2/30 [00:07<01:41,  3.64s/it]Step 1 Forward time: 3.9005 seconds
+  7%|▋         | 2/30 [00:07<01:42,  3.66s/it]Step 1 Forward time: 3.9076 seconds
+  7%|▋         | 2/30 [00:07<01:42,  3.66s/it]Step 2 Forward time: 3.8927 seconds
+ 10%|█         | 3/30 [00:11<01:41,  3.76s/it]Step 2 Forward time: 3.9064 seconds
+ 10%|█         | 3/30 [00:11<01:41,  3.78s/it]Step 2 Forward time: 3.9121 seconds
+ 10%|█         | 3/30 [00:11<01:42,  3.78s/it]Step 3 Forward time: 3.8949 seconds
+ 13%|█▎        | 4/30 [00:14<01:39,  3.82s/it]Step 3 Forward time: 3.9107 seconds
+ 13%|█▎        | 4/30 [00:15<01:39,  3.83s/it]Step 3 Forward time: 3.9147 seconds
+ 13%|█▎        | 4/30 [00:15<01:39,  3.84s/it]Step 4 Forward time: 3.8965 seconds
+ 17%|█▋        | 5/30 [00:18<01:36,  3.85s/it]Step 4 Forward time: 3.9144 seconds
+ 17%|█▋        | 5/30 [00:18<01:36,  3.87s/it]Step 4 Forward time: 3.9188 seconds
+ 17%|█▋        | 5/30 [00:18<01:36,  3.87s/it]Step 5 Forward time: 3.8982 seconds
+ 20%|██        | 6/30 [00:22<01:32,  3.87s/it]Step 5 Forward time: 3.9159 seconds
+ 20%|██        | 6/30 [00:22<01:33,  3.89s/it]Step 5 Forward time: 3.9193 seconds
+ 20%|██        | 6/30 [00:22<01:33,  3.89s/it]Step 6 Forward time: 3.9016 seconds
+ 23%|██▎       | 7/30 [00:26<01:29,  3.88s/it]Step 6 Forward time: 3.9208 seconds
+ 23%|██▎       | 7/30 [00:26<01:29,  3.90s/it]Step 6 Forward time: 3.9212 seconds
+ 23%|██▎       | 7/30 [00:26<01:29,  3.90s/it]Step 7 Forward time: 3.9029 seconds
+ 27%|██▋       | 8/30 [00:30<01:25,  3.89s/it]Step 7 Forward time: 3.9234 seconds
+ 27%|██▋       | 8/30 [00:30<01:26,  3.91s/it]Step 7 Forward time: 3.9340 seconds
+ 27%|██▋       | 8/30 [00:30<01:26,  3.92s/it]Step 8 Forward time: 3.9062 seconds
+ 30%|███       | 9/30 [00:34<01:21,  3.90s/it]Step 8 Forward time: 3.9276 seconds
+ 30%|███       | 9/30 [00:34<01:22,  3.92s/it]Step 8 Forward time: 3.9379 seconds
+ 30%|███       | 9/30 [00:34<01:22,  3.93s/it]Step 9 Forward time: 3.9124 seconds
+ 33%|███▎      | 10/30 [00:38<01:18,  3.91s/it]Step 9 Forward time: 3.9306 seconds
+ 33%|███▎      | 10/30 [00:38<01:18,  3.93s/it]Step 9 Forward time: 3.9389 seconds
+ 33%|███▎      | 10/30 [00:38<01:18,  3.93s/it]Step 10 Forward time: 3.9183 seconds
+ 37%|███▋      | 11/30 [00:42<01:14,  3.91s/it]Step 10 Forward time: 3.9390 seconds
+ 37%|███▋      | 11/30 [00:42<01:14,  3.93s/it]Step 10 Forward time: 3.9422 seconds
+ 37%|███▋      | 11/30 [00:42<01:14,  3.94s/it]Step 11 Forward time: 3.9216 seconds
+ 40%|████      | 12/30 [00:46<01:10,  3.92s/it]Step 11 Forward time: 3.9423 seconds
+ 40%|████      | 12/30 [00:46<01:10,  3.94s/it]Step 11 Forward time: 3.9429 seconds
+ 40%|████      | 12/30 [00:46<01:10,  3.94s/it]Step 12 Forward time: 3.9244 seconds
+ 43%|████▎     | 13/30 [00:50<01:06,  3.92s/it]Step 12 Forward time: 3.9427 seconds
+ 43%|████▎     | 13/30 [00:50<01:07,  3.94s/it]Step 12 Forward time: 3.9455 seconds
+ 43%|████▎     | 13/30 [00:50<01:07,  3.95s/it]Step 13 Forward time: 3.9305 seconds
+ 47%|████▋     | 14/30 [00:54<01:02,  3.93s/it]Step 13 Forward time: 3.9476 seconds
+ 47%|████▋     | 14/30 [00:54<01:03,  3.95s/it]Step 13 Forward time: 3.9492 seconds
+ 47%|████▋     | 14/30 [00:54<01:03,  3.95s/it]Step 14 Forward time: 3.9296 seconds
+ 50%|█████     | 15/30 [00:58<00:58,  3.93s/it]Step 14 Forward time: 3.9460 seconds
+ 50%|█████     | 15/30 [00:58<00:59,  3.95s/it]Step 14 Forward time: 3.9440 seconds
+ 50%|█████     | 15/30 [00:58<00:59,  3.95s/it]Step 15 Forward time: 3.9334 seconds
+ 53%|█████▎    | 16/30 [01:02<00:55,  3.94s/it]Step 15 Forward time: 3.9469 seconds
+ 53%|█████▎    | 16/30 [01:02<00:55,  3.95s/it]Step 15 Forward time: 3.9439 seconds
+ 53%|█████▎    | 16/30 [01:02<00:55,  3.95s/it]Step 16 Forward time: 3.9348 seconds
+ 57%|█████▋    | 17/30 [01:06<00:51,  3.94s/it]Step 16 Forward time: 3.9507 seconds
+ 57%|█████▋    | 17/30 [01:06<00:51,  3.95s/it]Step 16 Forward time: 3.9470 seconds
+ 57%|█████▋    | 17/30 [01:06<00:51,  3.95s/it]Step 17 Forward time: 3.9397 seconds
+ 60%|██████    | 18/30 [01:09<00:47,  3.94s/it]Step 17 Forward time: 3.9525 seconds
+ 60%|██████    | 18/30 [01:10<00:47,  3.96s/it]Step 17 Forward time: 3.9485 seconds
+ 60%|██████    | 18/30 [01:10<00:47,  3.96s/it]Step 18 Forward time: 3.9383 seconds
+ 63%|██████▎   | 19/30 [01:13<00:43,  3.94s/it]Step 18 Forward time: 3.9539 seconds
+ 63%|██████▎   | 19/30 [01:14<00:43,  3.96s/it]Step 18 Forward time: 3.9455 seconds
+ 63%|██████▎   | 19/30 [01:14<00:43,  3.96s/it]Step 19 Forward time: 3.9398 seconds
+ 67%|██████▋   | 20/30 [01:17<00:39,  3.95s/it]Step 19 Forward time: 3.9556 seconds
+ 67%|██████▋   | 20/30 [01:18<00:39,  3.96s/it]Step 19 Forward time: 3.9485 seconds
+ 67%|██████▋   | 20/30 [01:18<00:39,  3.96s/it]Step 20 Forward time: 3.9388 seconds
+ 70%|███████   | 21/30 [01:21<00:35,  3.95s/it]Step 20 Forward time: 3.9545 seconds
+ 70%|███████   | 21/30 [01:22<00:35,  3.96s/it]Step 20 Forward time: 3.9515 seconds
+ 70%|███████   | 21/30 [01:22<00:35,  3.96s/it]Step 21 Forward time: 3.9420 seconds
+ 73%|███████▎  | 22/30 [01:25<00:31,  3.95s/it]Step 21 Forward time: 3.9554 seconds
+ 73%|███████▎  | 22/30 [01:26<00:31,  3.96s/it]Step 21 Forward time: 3.9533 seconds
+ 73%|███████▎  | 22/30 [01:26<00:31,  3.96s/it]Step 22 Forward time: 3.9439 seconds
+ 77%|███████▋  | 23/30 [01:29<00:27,  3.95s/it]Step 22 Forward time: 3.9571 seconds
+ 77%|███████▋  | 23/30 [01:30<00:27,  3.96s/it]Step 22 Forward time: 3.9519 seconds
+ 77%|███████▋  | 23/30 [01:30<00:27,  3.96s/it]Step 23 Forward time: 3.9454 seconds
+ 80%|████████  | 24/30 [01:33<00:23,  3.95s/it]Step 23 Forward time: 3.9597 seconds
+ 80%|████████  | 24/30 [01:34<00:23,  3.97s/it]Step 23 Forward time: 3.9538 seconds
+ 80%|████████  | 24/30 [01:34<00:23,  3.96s/it]Step 24 Forward time: 3.9459 seconds
+ 83%|████████▎ | 25/30 [01:37<00:19,  3.95s/it]Step 24 Forward time: 3.9603 seconds
+ 83%|████████▎ | 25/30 [01:38<00:19,  3.97s/it]Step 24 Forward time: 3.9568 seconds
+ 83%|████████▎ | 25/30 [01:38<00:19,  3.96s/it]Step 25 Forward time: 3.9495 seconds
+ 87%|████████▋ | 26/30 [01:41<00:15,  3.95s/it]Step 25 Forward time: 3.9610 seconds
+ 87%|████████▋ | 26/30 [01:42<00:15,  3.97s/it]Step 25 Forward time: 3.9550 seconds
+ 87%|████████▋ | 26/30 [01:42<00:15,  3.96s/it]Step 26 Forward time: 3.9479 seconds
+ 90%|█████████ | 27/30 [01:45<00:11,  3.96s/it]Step 26 Forward time: 3.9630 seconds
+ 90%|█████████ | 27/30 [01:45<00:11,  3.97s/it]Step 26 Forward time: 3.9567 seconds
+ 90%|█████████ | 27/30 [01:45<00:11,  3.96s/it]Step 27 Forward time: 3.9509 seconds
+ 93%|█████████▎| 28/30 [01:49<00:07,  3.96s/it]Step 27 Forward time: 3.9625 seconds
+ 93%|█████████▎| 28/30 [01:49<00:07,  3.97s/it]Step 27 Forward time: 3.9588 seconds
+ 93%|█████████▎| 28/30 [01:49<00:07,  3.97s/it]Step 28 Forward time: 3.9493 seconds
+ 97%|█████████▋| 29/30 [01:53<00:03,  3.96s/it]Step 28 Forward time: 3.9627 seconds
+ 97%|█████████▋| 29/30 [01:53<00:03,  3.97s/it]Step 28 Forward time: 3.9563 seconds
+ 97%|█████████▋| 29/30 [01:53<00:03,  3.97s/it]Step 29 Forward time: 3.9480 seconds
+100%|██████████| 30/30 [01:57<00:00,  3.96s/it]100%|██████████| 30/30 [01:57<00:00,  3.91s/it]
+Step 29 Forward time: 3.9634 seconds
+100%|██████████| 30/30 [01:57<00:00,  3.97s/it]100%|██████████| 30/30 [01:57<00:00,  3.93s/it]
+Step 29 Forward time: 3.9549 seconds
+100%|██████████| 30/30 [01:57<00:00,  3.97s/it]100%|██████████| 30/30 [01:57<00:00,  3.93s/it]
+[GenVideo] chunk 1 done. total frames: 81
+[GenVideo] chunk 2/6
+[GenVideo] chunk 1 done. total frames: 81
+[GenVideo] chunk 2/6
+[GenVideo] chunk 1 done. total frames: 81
+[GenVideo] chunk 2/9
+  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3395 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 0 Forward time: 4.3510 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.36s/it]Step 0 Forward time: 4.3448 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.36s/it]Step 1 Forward time: 5.2074 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 1 Forward time: 5.2197 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Step 1 Forward time: 5.2135 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Step 2 Forward time: 5.2120 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 2 Forward time: 5.2196 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.04s/it]Step 2 Forward time: 5.2143 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 3 Forward time: 5.2101 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 3 Forward time: 5.2207 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 3 Forward time: 5.2147 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 4 Forward time: 5.2099 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 4 Forward time: 5.2212 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.16s/it]Step 4 Forward time: 5.2126 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.2075 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 5 Forward time: 5.2178 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.18s/it]Step 5 Forward time: 5.2106 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 6 Forward time: 5.2092 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 6 Forward time: 5.2194 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.20s/it]Step 6 Forward time: 5.2122 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 7 Forward time: 5.2083 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 7 Forward time: 5.2226 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.21s/it]Step 7 Forward time: 5.2110 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 8 Forward time: 5.2091 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 8 Forward time: 5.2219 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.22s/it]Step 8 Forward time: 5.2102 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.21s/it]Step 9 Forward time: 5.2144 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 9 Forward time: 5.2219 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.22s/it]Step 9 Forward time: 5.2091 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 10 Forward time: 5.2129 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.21s/it]Step 10 Forward time: 5.2213 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.22s/it]Step 10 Forward time: 5.2104 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.21s/it]Step 11 Forward time: 5.2141 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 11 Forward time: 5.2206 seconds
+ 40%|████      | 12/30 [01:01<01:34,  5.23s/it]Step 11 Forward time: 5.2080 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 12 Forward time: 5.2147 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 12 Forward time: 5.2219 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.23s/it]Step 12 Forward time: 5.2090 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 13 Forward time: 5.2108 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 13 Forward time: 5.2201 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.23s/it]Step 13 Forward time: 5.2076 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 14 Forward time: 5.2115 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 14 Forward time: 5.2178 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.23s/it]Step 14 Forward time: 5.2030 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 5.2076 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 15 Forward time: 5.2135 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.23s/it]Step 15 Forward time: 5.2026 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 16 Forward time: 5.2054 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 16 Forward time: 5.2156 seconds
+ 57%|█████▋    | 17/30 [01:28<01:07,  5.23s/it]Step 16 Forward time: 5.2022 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 17 Forward time: 5.2067 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 17 Forward time: 5.2150 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.23s/it]Step 17 Forward time: 5.2006 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.21s/it]Step 18 Forward time: 5.2055 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 18 Forward time: 5.2177 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.23s/it]Step 18 Forward time: 5.2013 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 19 Forward time: 5.2105 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 19 Forward time: 5.2191 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.23s/it]Step 19 Forward time: 5.2024 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 20 Forward time: 5.2087 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 20 Forward time: 5.2173 seconds
+ 70%|███████   | 21/30 [01:48<00:47,  5.23s/it]Step 20 Forward time: 5.2037 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 21 Forward time: 5.2096 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 21 Forward time: 5.2183 seconds
+ 73%|███████▎  | 22/30 [01:54<00:41,  5.23s/it]Step 21 Forward time: 5.2020 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 22 Forward time: 5.2099 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 22 Forward time: 5.2215 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.23s/it]Step 22 Forward time: 5.2042 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it]Step 23 Forward time: 5.2107 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 23 Forward time: 5.2173 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.23s/it]Step 23 Forward time: 5.2073 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.2151 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 24 Forward time: 5.2214 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.23s/it]Step 24 Forward time: 5.2079 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.2140 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 25 Forward time: 5.2195 seconds
+ 87%|████████▋ | 26/30 [02:15<00:20,  5.23s/it]Step 25 Forward time: 5.2027 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.2137 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 26 Forward time: 5.2178 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.23s/it]Step 26 Forward time: 5.2002 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.21s/it]Step 27 Forward time: 5.2111 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 27 Forward time: 5.2163 seconds
+Step 27 Forward time: 5.2033 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.23s/it] 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 28 Forward time: 5.2103 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 28 Forward time: 5.1997 seconds
+Step 28 Forward time: 5.2157 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it] 97%|█████████▋| 29/30 [02:30<00:05,  5.23s/it]Step 29 Forward time: 5.2052 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 29 Forward time: 5.1993 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 29 Forward time: 5.2134 seconds
+100%|██████████| 30/30 [02:36<00:00,  5.23s/it]100%|██████████| 30/30 [02:36<00:00,  5.20s/it]
+[GenVideo] chunk 2 done. total frames: 161
+[GenVideo] chunk 3/6
+[GenVideo] chunk 2 done. total frames: 161
+[GenVideo] chunk 3/9
+[GenVideo] chunk 2 done. total frames: 161
+[GenVideo] chunk 3/6
+  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3483 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.36s/it]Step 0 Forward time: 4.3407 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 0 Forward time: 4.3521 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.36s/it]Step 1 Forward time: 5.2190 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Step 1 Forward time: 5.2072 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 1 Forward time: 5.2238 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.88s/it]Step 2 Forward time: 5.2151 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 2 Forward time: 5.2035 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it]Step 2 Forward time: 5.2196 seconds
+ 10%|█         | 3/30 [00:14<02:16,  5.04s/it]Step 3 Forward time: 5.1972 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 3 Forward time: 5.1880 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 3 Forward time: 5.2023 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 4 Forward time: 5.1854 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 4 Forward time: 5.1788 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 4 Forward time: 5.1967 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 5 Forward time: 5.1790 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 5 Forward time: 5.1750 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 5 Forward time: 5.1914 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 6 Forward time: 5.1747 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.16s/it]Step 6 Forward time: 5.1705 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.16s/it]Step 6 Forward time: 5.1861 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.17s/it]Step 7 Forward time: 5.1674 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.17s/it]Step 7 Forward time: 5.1669 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.16s/it]Step 7 Forward time: 5.1801 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.18s/it]Step 8 Forward time: 5.1667 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.17s/it]Step 8 Forward time: 5.1543 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.16s/it]Step 8 Forward time: 5.1790 seconds
+ 30%|███       | 9/30 [00:46<01:48,  5.18s/it]Step 9 Forward time: 5.1616 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.17s/it]Step 9 Forward time: 5.1507 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.16s/it]Step 9 Forward time: 5.1795 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.18s/it]Step 10 Forward time: 5.1626 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.17s/it]Step 10 Forward time: 5.1492 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.16s/it]Step 10 Forward time: 5.1799 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.19s/it]Step 11 Forward time: 5.1606 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.17s/it]Step 11 Forward time: 5.1483 seconds
+ 40%|████      | 12/30 [01:01<01:32,  5.16s/it]Step 11 Forward time: 5.1784 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.19s/it]Step 12 Forward time: 5.1613 seconds
+ 43%|████▎     | 13/30 [01:06<01:27,  5.17s/it]Step 12 Forward time: 5.1526 seconds
+ 43%|████▎     | 13/30 [01:06<01:27,  5.16s/it]Step 12 Forward time: 5.1819 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.19s/it]Step 13 Forward time: 5.1682 seconds
+ 47%|████▋     | 14/30 [01:11<01:22,  5.17s/it]Step 13 Forward time: 5.1543 seconds
+ 47%|████▋     | 14/30 [01:11<01:22,  5.16s/it]Step 13 Forward time: 5.1830 seconds
+ 47%|████▋     | 14/30 [01:11<01:23,  5.19s/it]Step 14 Forward time: 5.1697 seconds
+ 50%|█████     | 15/30 [01:16<01:17,  5.18s/it]Step 14 Forward time: 5.1566 seconds
+ 50%|█████     | 15/30 [01:16<01:17,  5.16s/it]Step 14 Forward time: 5.1864 seconds
+ 50%|█████     | 15/30 [01:17<01:17,  5.19s/it]Step 15 Forward time: 5.1738 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.18s/it]Step 15 Forward time: 5.1653 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.17s/it]Step 15 Forward time: 5.1910 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.20s/it]Step 16 Forward time: 5.1794 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.18s/it]Step 16 Forward time: 5.1805 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.17s/it]Step 16 Forward time: 5.1990 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.20s/it]Step 17 Forward time: 5.1837 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.19s/it]Step 17 Forward time: 5.1824 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.18s/it]Step 17 Forward time: 5.2016 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.20s/it]Step 18 Forward time: 5.1854 seconds
+ 63%|██████▎   | 19/30 [01:37<00:57,  5.19s/it]Step 18 Forward time: 5.1855 seconds
+ 63%|██████▎   | 19/30 [01:37<00:57,  5.19s/it]Step 18 Forward time: 5.2058 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 19 Forward time: 5.1887 seconds
+ 67%|██████▋   | 20/30 [01:42<00:51,  5.19s/it]Step 19 Forward time: 5.1878 seconds
+ 67%|██████▋   | 20/30 [01:42<00:51,  5.19s/it]Step 19 Forward time: 5.2065 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 20 Forward time: 5.1933 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.20s/it]Step 20 Forward time: 5.1887 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.19s/it]Step 20 Forward time: 5.2105 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 21 Forward time: 5.1953 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.20s/it]Step 21 Forward time: 5.1899 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.19s/it]Step 21 Forward time: 5.2104 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 22 Forward time: 5.2000 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.20s/it]Step 22 Forward time: 5.1892 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.20s/it]Step 22 Forward time: 5.2146 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.22s/it]Step 23 Forward time: 5.2031 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.21s/it]Step 23 Forward time: 5.1918 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.20s/it]Step 23 Forward time: 5.2164 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.2060 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 24 Forward time: 5.1920 seconds
+ 83%|████████▎ | 25/30 [02:08<00:25,  5.20s/it]Step 24 Forward time: 5.2190 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.2071 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 25 Forward time: 5.1946 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.20s/it]Step 25 Forward time: 5.2195 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.23s/it]Step 26 Forward time: 5.2090 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 26 Forward time: 5.1962 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.20s/it]Step 26 Forward time: 5.2183 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.23s/it]Step 27 Forward time: 5.2082 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.22s/it]Step 27 Forward time: 5.1949 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.20s/it]Step 27 Forward time: 5.2194 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.23s/it]Step 28 Forward time: 5.2065 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.22s/it]Step 28 Forward time: 5.1949 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.20s/it]Step 28 Forward time: 5.2179 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.23s/it]Step 29 Forward time: 5.2036 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.17s/it]
+Step 29 Forward time: 5.1935 seconds
+100%|██████████| 30/30 [02:34<00:00,  5.20s/it]100%|██████████| 30/30 [02:34<00:00,  5.16s/it]
+Step 29 Forward time: 5.2160 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.23s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+[GenVideo] chunk 3 done. total frames: 241
+[GenVideo] chunk 4/6
+[GenVideo] chunk 3 done. total frames: 241
+[GenVideo] chunk 4/9
+[GenVideo] chunk 3 done. total frames: 241
+[GenVideo] chunk 4/6
+  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3393 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 0 Forward time: 4.3251 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.34s/it]Step 0 Forward time: 4.3451 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.36s/it]Step 1 Forward time: 5.2029 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 1 Forward time: 5.1874 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.84s/it]Step 1 Forward time: 5.2121 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Step 2 Forward time: 5.2010 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it]Step 2 Forward time: 5.1877 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 2 Forward time: 5.2147 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 3 Forward time: 5.2013 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.10s/it]Step 3 Forward time: 5.1873 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.08s/it]Step 3 Forward time: 5.2119 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 4 Forward time: 5.1987 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 4 Forward time: 5.1859 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.12s/it]Step 4 Forward time: 5.2125 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.1982 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 5 Forward time: 5.1869 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 5 Forward time: 5.2075 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 6 Forward time: 5.1951 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 6 Forward time: 5.1859 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.16s/it]Step 6 Forward time: 5.2078 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 7 Forward time: 5.1955 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 7 Forward time: 5.1850 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.17s/it]Step 7 Forward time: 5.2067 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 8 Forward time: 5.1982 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.19s/it]Step 8 Forward time: 5.1848 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.18s/it]Step 8 Forward time: 5.2143 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.21s/it]Step 9 Forward time: 5.2024 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.20s/it]Step 9 Forward time: 5.1875 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.19s/it]Step 9 Forward time: 5.2158 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 10 Forward time: 5.2048 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 10 Forward time: 5.1893 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.19s/it]Step 10 Forward time: 5.2187 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.22s/it]Step 11 Forward time: 5.2073 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 11 Forward time: 5.1877 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.19s/it]Step 11 Forward time: 5.2185 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 12 Forward time: 5.2086 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 12 Forward time: 5.1892 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.19s/it]Step 12 Forward time: 5.2198 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 13 Forward time: 5.2095 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 13 Forward time: 5.2026 seconds
+ 47%|████▋     | 14/30 [01:11<01:23,  5.20s/it]Step 13 Forward time: 5.2201 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.23s/it]Step 14 Forward time: 5.2157 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 14 Forward time: 5.2075 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.21s/it]Step 14 Forward time: 5.2253 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.23s/it]Step 15 Forward time: 5.2156 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 15 Forward time: 5.2114 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it]Step 15 Forward time: 5.2246 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.23s/it]Step 16 Forward time: 5.2161 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 16 Forward time: 5.2176 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 16 Forward time: 5.2257 seconds
+ 57%|█████▋    | 17/30 [01:27<01:08,  5.23s/it]Step 17 Forward time: 5.2093 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 17 Forward time: 5.2029 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.22s/it]Step 17 Forward time: 5.2108 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.23s/it]Step 18 Forward time: 5.1925 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 18 Forward time: 5.1789 seconds
+ 63%|██████▎   | 19/30 [01:37<00:57,  5.21s/it]Step 18 Forward time: 5.1985 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.1808 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 19 Forward time: 5.1650 seconds
+ 67%|██████▋   | 20/30 [01:43<00:51,  5.20s/it]Step 19 Forward time: 5.1899 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.1682 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.20s/it]Step 20 Forward time: 5.1584 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.19s/it]Step 20 Forward time: 5.1829 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 21 Forward time: 5.1646 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.19s/it]Step 21 Forward time: 5.1528 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.18s/it]Step 21 Forward time: 5.1764 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.20s/it]Step 22 Forward time: 5.1563 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.18s/it]Step 22 Forward time: 5.1459 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.17s/it]Step 22 Forward time: 5.1724 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.20s/it]Step 23 Forward time: 5.1544 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.18s/it]Step 23 Forward time: 5.1422 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.17s/it]Step 23 Forward time: 5.1684 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.19s/it]Step 24 Forward time: 5.1552 seconds
+ 83%|████████▎ | 25/30 [02:09<00:25,  5.17s/it]Step 24 Forward time: 5.1376 seconds
+ 83%|████████▎ | 25/30 [02:08<00:25,  5.16s/it]Step 24 Forward time: 5.1687 seconds
+ 83%|████████▎ | 25/30 [02:09<00:25,  5.19s/it]Step 25 Forward time: 5.1510 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.17s/it]Step 25 Forward time: 5.1352 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.16s/it]Step 25 Forward time: 5.1638 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.18s/it]Step 26 Forward time: 5.1513 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.17s/it]Step 26 Forward time: 5.1351 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.15s/it]Step 26 Forward time: 5.1594 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.18s/it]Step 27 Forward time: 5.1520 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.17s/it]Step 27 Forward time: 5.1353 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.15s/it]Step 27 Forward time: 5.1601 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.18s/it]Step 28 Forward time: 5.1495 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.16s/it]Step 28 Forward time: 5.1322 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.15s/it]Step 28 Forward time: 5.1611 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.18s/it]Step 29 Forward time: 5.1497 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.16s/it]100%|██████████| 30/30 [02:35<00:00,  5.17s/it]
+Step 29 Forward time: 5.1326 seconds
+100%|██████████| 30/30 [02:34<00:00,  5.15s/it]100%|██████████| 30/30 [02:34<00:00,  5.16s/it]
+Step 29 Forward time: 5.1662 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.18s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+[GenVideo] chunk 4 done. total frames: 321
+[GenVideo] chunk 5/6
+[GenVideo] chunk 4 done. total frames: 321
+[GenVideo] chunk 5/9
+[GenVideo] chunk 4 done. total frames: 321
+[GenVideo] chunk 5/6
+  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3098 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.32s/it]Step 0 Forward time: 4.2920 seconds
+  3%|▎         | 1/30 [00:04<02:04,  4.30s/it]Step 0 Forward time: 4.3223 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.33s/it]Step 1 Forward time: 5.1767 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.83s/it]Step 1 Forward time: 5.1523 seconds
+  7%|▋         | 2/30 [00:09<02:14,  4.81s/it]Step 1 Forward time: 5.1945 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.85s/it]Step 2 Forward time: 5.1805 seconds
+ 10%|█         | 3/30 [00:14<02:14,  5.00s/it]Step 2 Forward time: 5.1526 seconds
+ 10%|█         | 3/30 [00:14<02:14,  4.97s/it]Step 2 Forward time: 5.1967 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 3 Forward time: 5.1854 seconds
+ 13%|█▎        | 4/30 [00:19<02:11,  5.07s/it]Step 3 Forward time: 5.1533 seconds
+ 13%|█▎        | 4/30 [00:19<02:11,  5.05s/it]Step 3 Forward time: 5.2003 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 4 Forward time: 5.1881 seconds
+ 17%|█▋        | 5/30 [00:25<02:07,  5.12s/it]Step 4 Forward time: 5.1575 seconds
+ 17%|█▋        | 5/30 [00:24<02:07,  5.09s/it]Step 4 Forward time: 5.1990 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 5 Forward time: 5.1910 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 5 Forward time: 5.1584 seconds
+ 20%|██        | 6/30 [00:30<02:02,  5.12s/it]Step 5 Forward time: 5.2006 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 6 Forward time: 5.1952 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.17s/it]Step 6 Forward time: 5.1619 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.14s/it]Step 6 Forward time: 5.2022 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 7 Forward time: 5.1977 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.18s/it]Step 7 Forward time: 5.1613 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.15s/it]Step 7 Forward time: 5.2054 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 8 Forward time: 5.2003 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.19s/it]Step 8 Forward time: 5.1637 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.16s/it]Step 8 Forward time: 5.2087 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 9 Forward time: 5.2041 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.20s/it]Step 9 Forward time: 5.1659 seconds
+ 33%|███▎      | 10/30 [00:50<01:43,  5.16s/it]Step 9 Forward time: 5.2113 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 10 Forward time: 5.2056 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 10 Forward time: 5.1792 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.17s/it]Step 10 Forward time: 5.2135 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.21s/it]Step 11 Forward time: 5.2091 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 11 Forward time: 5.1855 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.18s/it]Step 11 Forward time: 5.2183 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 12 Forward time: 5.2125 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 12 Forward time: 5.1863 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.18s/it]Step 12 Forward time: 5.2146 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.22s/it]Step 13 Forward time: 5.2114 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 13 Forward time: 5.1856 seconds
+ 47%|████▋     | 14/30 [01:11<01:23,  5.19s/it]Step 13 Forward time: 5.2168 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 14 Forward time: 5.2104 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 14 Forward time: 5.1865 seconds
+ 50%|█████     | 15/30 [01:16<01:17,  5.19s/it]Step 14 Forward time: 5.2151 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 5.2083 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 15 Forward time: 5.1853 seconds
+ 53%|█████▎    | 16/30 [01:21<01:12,  5.19s/it]Step 15 Forward time: 5.2139 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 16 Forward time: 5.2097 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 16 Forward time: 5.1852 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.19s/it]Step 16 Forward time: 5.2092 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 17 Forward time: 5.2064 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.22s/it]Step 17 Forward time: 5.1868 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.19s/it]Step 17 Forward time: 5.2096 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 18 Forward time: 5.2080 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 18 Forward time: 5.1873 seconds
+ 63%|██████▎   | 19/30 [01:37<00:57,  5.20s/it]Step 18 Forward time: 5.2065 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.2041 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 19 Forward time: 5.1877 seconds
+ 67%|██████▋   | 20/30 [01:42<00:51,  5.20s/it]Step 19 Forward time: 5.2062 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.2051 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 20 Forward time: 5.1858 seconds
+ 70%|███████   | 21/30 [01:47<00:46,  5.20s/it]Step 20 Forward time: 5.2064 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 21 Forward time: 5.2066 seconds
+Step 21 Forward time: 5.1861 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it] 73%|███████▎  | 22/30 [01:53<00:41,  5.20s/it]Step 21 Forward time: 5.2094 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 22 Forward time: 5.1918 seconds
+Step 22 Forward time: 5.2085 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.20s/it] 77%|███████▋  | 23/30 [01:58<00:36,  5.22s/it]Step 22 Forward time: 5.2068 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.1902 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.20s/it]Step 23 Forward time: 5.2074 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 23 Forward time: 5.2131 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.1942 seconds
+ 83%|████████▎ | 25/30 [02:08<00:26,  5.20s/it]Step 24 Forward time: 5.2088 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 24 Forward time: 5.2113 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.1933 seconds
+ 87%|████████▋ | 26/30 [02:13<00:20,  5.20s/it]Step 25 Forward time: 5.2073 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 25 Forward time: 5.2095 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.1904 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.20s/it]Step 26 Forward time: 5.2045 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.22s/it]Step 26 Forward time: 5.2049 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 27 Forward time: 5.1929 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.20s/it]Step 27 Forward time: 5.2025 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 27 Forward time: 5.2030 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 28 Forward time: 5.1911 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.20s/it]Step 28 Forward time: 5.2036 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 28 Forward time: 5.2056 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 29 Forward time: 5.1899 seconds
+100%|██████████| 30/30 [02:34<00:00,  5.20s/it]100%|██████████| 30/30 [02:34<00:00,  5.16s/it]
+Step 29 Forward time: 5.2050 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+Step 29 Forward time: 5.2031 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 5 done. total frames: 401
+[GenVideo] chunk 6/9
+[GenVideo] chunk 5 done. total frames: 401
+[GenVideo] chunk 6/6
+[GenVideo] chunk 5 done. total frames: 401
+[GenVideo] chunk 6/6
+  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3316 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.34s/it]Step 0 Forward time: 4.3434 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 0 Forward time: 4.3416 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 1 Forward time: 5.1956 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.85s/it]Step 1 Forward time: 5.2102 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 1 Forward time: 5.2086 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 2 Forward time: 5.1914 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 2 Forward time: 5.2101 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 2 Forward time: 5.2080 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 3 Forward time: 5.1953 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 3 Forward time: 5.2124 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 3 Forward time: 5.2121 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 4 Forward time: 5.1958 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 4 Forward time: 5.2182 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 4 Forward time: 5.2161 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.1967 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 5 Forward time: 5.2290 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.18s/it]Step 5 Forward time: 5.2227 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.18s/it]Step 6 Forward time: 5.1988 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.17s/it]Step 6 Forward time: 5.2293 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.20s/it]Step 6 Forward time: 5.2240 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.20s/it]Step 7 Forward time: 5.1991 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 7 Forward time: 5.2293 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.21s/it]Step 7 Forward time: 5.2144 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.21s/it]Step 8 Forward time: 5.1842 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.19s/it]Step 8 Forward time: 5.2124 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.22s/it]Step 8 Forward time: 5.1931 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 9 Forward time: 5.1811 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.19s/it]Step 9 Forward time: 5.1868 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 9 Forward time: 5.1841 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.20s/it]Step 10 Forward time: 5.1722 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.19s/it]Step 10 Forward time: 5.1791 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 10 Forward time: 5.1843 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 11 Forward time: 5.1649 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.18s/it]Step 11 Forward time: 5.1698 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.20s/it]Step 11 Forward time: 5.1800 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.20s/it]Step 12 Forward time: 5.1512 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.18s/it]Step 12 Forward time: 5.1647 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.19s/it]Step 12 Forward time: 5.1767 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.19s/it]Step 13 Forward time: 5.1475 seconds
+ 47%|████▋     | 14/30 [01:11<01:22,  5.17s/it]Step 13 Forward time: 5.1595 seconds
+ 47%|████▋     | 14/30 [01:12<01:22,  5.18s/it]Step 13 Forward time: 5.1749 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.19s/it]Step 14 Forward time: 5.1466 seconds
+ 50%|█████     | 15/30 [01:17<01:17,  5.17s/it]Step 14 Forward time: 5.1600 seconds
+ 50%|█████     | 15/30 [01:17<01:17,  5.18s/it]Step 14 Forward time: 5.1623 seconds
+ 50%|█████     | 15/30 [01:17<01:17,  5.19s/it]Step 15 Forward time: 5.1407 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.16s/it]Step 15 Forward time: 5.1564 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.18s/it]Step 15 Forward time: 5.1619 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.18s/it]Step 16 Forward time: 5.1438 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.16s/it]Step 16 Forward time: 5.1558 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.17s/it]Step 16 Forward time: 5.1626 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.18s/it]Step 17 Forward time: 5.1431 seconds
+ 60%|██████    | 18/30 [01:32<01:01,  5.16s/it]Step 17 Forward time: 5.1558 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.17s/it]Step 17 Forward time: 5.1646 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.18s/it]Step 18 Forward time: 5.1444 seconds
+ 63%|██████▎   | 19/30 [01:37<00:56,  5.16s/it]Step 18 Forward time: 5.1566 seconds
+ 63%|██████▎   | 19/30 [01:37<00:56,  5.17s/it]Step 18 Forward time: 5.1673 seconds
+ 63%|██████▎   | 19/30 [01:37<00:56,  5.18s/it]Step 19 Forward time: 5.1474 seconds
+ 67%|██████▋   | 20/30 [01:42<00:51,  5.16s/it]Step 19 Forward time: 5.1567 seconds
+ 67%|██████▋   | 20/30 [01:43<00:51,  5.17s/it]Step 19 Forward time: 5.1681 seconds
+ 67%|██████▋   | 20/30 [01:43<00:51,  5.18s/it]Step 20 Forward time: 5.1497 seconds
+ 70%|███████   | 21/30 [01:47<00:46,  5.16s/it]Step 20 Forward time: 5.1627 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.17s/it]Step 20 Forward time: 5.1809 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.18s/it]Step 21 Forward time: 5.1506 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.16s/it]Step 21 Forward time: 5.1650 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.17s/it]Step 21 Forward time: 5.1856 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.19s/it]Step 22 Forward time: 5.1557 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.16s/it]Step 22 Forward time: 5.1739 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.18s/it]Step 22 Forward time: 5.1890 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.19s/it]Step 23 Forward time: 5.1608 seconds
+ 80%|████████  | 24/30 [02:03<00:30,  5.16s/it]Step 23 Forward time: 5.1796 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.18s/it]Step 23 Forward time: 5.1941 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.19s/it]Step 24 Forward time: 5.1699 seconds
+ 83%|████████▎ | 25/30 [02:08<00:25,  5.17s/it]Step 24 Forward time: 5.1840 seconds
+ 83%|████████▎ | 25/30 [02:09<00:25,  5.18s/it]Step 24 Forward time: 5.1848 seconds
+ 83%|████████▎ | 25/30 [02:09<00:25,  5.19s/it]Step 25 Forward time: 5.1803 seconds
+ 87%|████████▋ | 26/30 [02:13<00:20,  5.18s/it]Step 25 Forward time: 5.1869 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.19s/it]Step 25 Forward time: 5.1891 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.20s/it]Step 26 Forward time: 5.1798 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.18s/it]Step 26 Forward time: 5.1901 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.19s/it]Step 26 Forward time: 5.1879 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.20s/it]Step 27 Forward time: 5.1826 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.18s/it]Step 27 Forward time: 5.1917 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.20s/it]Step 27 Forward time: 5.1934 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.20s/it]Step 28 Forward time: 5.1855 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.19s/it]Step 28 Forward time: 5.1938 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.20s/it]Step 28 Forward time: 5.1933 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.20s/it]Step 29 Forward time: 5.1863 seconds
+100%|██████████| 30/30 [02:34<00:00,  5.19s/it]100%|██████████| 30/30 [02:34<00:00,  5.15s/it]
+Step 29 Forward time: 5.1960 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.20s/it]100%|██████████| 30/30 [02:35<00:00,  5.17s/it]
+Step 29 Forward time: 5.1965 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.20s/it]100%|██████████| 30/30 [02:35<00:00,  5.17s/it]
+[GenVideo] chunk 6 done. total frames: 481
+[GenVideo] chunk 7/9
+[GenVideo] chunk 6 done. total frames: 481
+[GenVideo] chunk 6 done. total frames: 481
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3343 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.34s/it]Step 1 Forward time: 5.1990 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.85s/it]Silent video saved to: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_5_combined.mp4
+[GenVideo] saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_5_combined.mp4 (481 frames)
+[GenVideo] [rank 0] case 34: A vast open desert at night. A crackling campfire ...
+Step 2 Forward time: 5.2015 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it][GenVideo] action frames=480 -> num_chunks=6
+[GenVideo] chunk 1/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 3.2740 seconds
+  3%|▎         | 1/30 [00:03<01:35,  3.28s/it]Silent video saved to: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_33_combined.mp4
+[GenVideo] saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_33_combined.mp4 (481 frames)
+[GenVideo] [rank 2] case 36: A modern city skyline viewed from a skyscraper roo...
+[GenVideo] action frames=480 -> num_chunks=6
+[GenVideo] chunk 1/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 3 Forward time: 5.1989 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 1 Forward time: 3.9361 seconds
+  7%|▋         | 2/30 [00:07<01:42,  3.67s/it]Step 0 Forward time: 3.2808 seconds
+  3%|▎         | 1/30 [00:03<01:35,  3.29s/it]Step 4 Forward time: 5.1979 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 2 Forward time: 3.9396 seconds
+ 10%|█         | 3/30 [00:11<01:42,  3.80s/it]Step 1 Forward time: 3.9477 seconds
+  7%|▋         | 2/30 [00:07<01:43,  3.68s/it]Step 3 Forward time: 3.9486 seconds
+ 13%|█▎        | 4/30 [00:15<01:40,  3.86s/it]Step 5 Forward time: 5.2031 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 2 Forward time: 3.9521 seconds
+ 10%|█         | 3/30 [00:11<01:42,  3.81s/it]Step 4 Forward time: 3.9437 seconds
+ 17%|█▋        | 5/30 [00:19<01:37,  3.90s/it]Step 3 Forward time: 3.9520 seconds
+ 13%|█▎        | 4/30 [00:15<01:40,  3.87s/it]Step 6 Forward time: 5.2042 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 5 Forward time: 3.9421 seconds
+ 20%|██        | 6/30 [00:23<01:33,  3.91s/it]Step 4 Forward time: 3.9580 seconds
+ 17%|█▋        | 5/30 [00:19<01:37,  3.91s/it]Step 7 Forward time: 5.2019 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 6 Forward time: 3.9492 seconds
+ 23%|██▎       | 7/30 [00:27<01:30,  3.93s/it]Step 5 Forward time: 3.9601 seconds
+ 20%|██        | 6/30 [00:23<01:34,  3.93s/it]Step 7 Forward time: 3.9503 seconds
+ 27%|██▋       | 8/30 [00:30<01:26,  3.94s/it]Step 8 Forward time: 5.2035 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 6 Forward time: 3.9629 seconds
+ 23%|██▎       | 7/30 [00:27<01:30,  3.94s/it]Step 8 Forward time: 3.9503 seconds
+ 30%|███       | 9/30 [00:34<01:22,  3.95s/it]Step 7 Forward time: 3.9627 seconds
+ 27%|██▋       | 8/30 [00:31<01:26,  3.95s/it]Step 9 Forward time: 5.2053 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.20s/it]Step 9 Forward time: 3.9537 seconds
+ 33%|███▎      | 10/30 [00:38<01:19,  3.95s/it]Step 8 Forward time: 3.9609 seconds
+ 30%|███       | 9/30 [00:35<01:23,  3.96s/it]Step 10 Forward time: 5.2064 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.21s/it]Step 10 Forward time: 3.9536 seconds
+ 37%|███▋      | 11/30 [00:42<01:15,  3.96s/it]Step 9 Forward time: 3.9643 seconds
+ 33%|███▎      | 10/30 [00:39<01:19,  3.96s/it]Step 11 Forward time: 5.2087 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 11 Forward time: 3.9565 seconds
+ 40%|████      | 12/30 [00:46<01:11,  3.96s/it]Step 10 Forward time: 3.9661 seconds
+ 37%|███▋      | 11/30 [00:42<01:15,  3.97s/it]Step 12 Forward time: 3.9539 seconds
+ 43%|████▎     | 13/30 [00:50<01:07,  3.96s/it]Step 11 Forward time: 3.9682 seconds
+ 40%|████      | 12/30 [00:46<01:11,  3.97s/it]Step 12 Forward time: 5.2105 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 13 Forward time: 3.9592 seconds
+ 47%|████▋     | 14/30 [00:54<01:03,  3.96s/it]Step 12 Forward time: 3.9673 seconds
+ 43%|████▎     | 13/30 [00:50<01:07,  3.97s/it]Step 13 Forward time: 5.2091 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 14 Forward time: 3.9559 seconds
+ 50%|█████     | 15/30 [00:58<00:59,  3.96s/it]Step 13 Forward time: 3.9699 seconds
+ 47%|████▋     | 14/30 [00:54<01:03,  3.97s/it]Step 14 Forward time: 5.2098 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 3.9575 seconds
+ 53%|█████▎    | 16/30 [01:02<00:55,  3.97s/it]Step 14 Forward time: 3.9681 seconds
+ 50%|█████     | 15/30 [00:58<00:59,  3.98s/it]Step 16 Forward time: 3.9567 seconds
+ 57%|█████▋    | 17/30 [01:06<00:51,  3.97s/it]Step 15 Forward time: 3.9700 seconds
+ 53%|█████▎    | 16/30 [01:02<00:55,  3.98s/it]Step 15 Forward time: 5.2095 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 17 Forward time: 3.9580 seconds
+ 60%|██████    | 18/30 [01:10<00:47,  3.97s/it]Step 16 Forward time: 3.9681 seconds
+ 57%|█████▋    | 17/30 [01:06<00:51,  3.98s/it]Step 16 Forward time: 5.2102 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 18 Forward time: 3.9580 seconds
+ 63%|██████▎   | 19/30 [01:14<00:43,  3.97s/it]Step 17 Forward time: 3.9701 seconds
+ 60%|██████    | 18/30 [01:10<00:47,  3.98s/it]Step 17 Forward time: 5.2081 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 19 Forward time: 3.9577 seconds
+ 67%|██████▋   | 20/30 [01:18<00:39,  3.97s/it]Step 18 Forward time: 3.9696 seconds
+ 63%|██████▎   | 19/30 [01:14<00:43,  3.98s/it]Step 20 Forward time: 3.9622 seconds
+ 70%|███████   | 21/30 [01:22<00:35,  3.97s/it]Step 19 Forward time: 3.9712 seconds
+ 67%|██████▋   | 20/30 [01:18<00:39,  3.98s/it]Step 18 Forward time: 5.2082 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 21 Forward time: 3.9710 seconds
+ 73%|███████▎  | 22/30 [01:26<00:31,  3.97s/it]Step 20 Forward time: 3.9712 seconds
+ 70%|███████   | 21/30 [01:22<00:35,  3.98s/it]Step 19 Forward time: 5.2046 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 22 Forward time: 3.9675 seconds
+ 77%|███████▋  | 23/30 [01:30<00:27,  3.97s/it]Step 21 Forward time: 3.9662 seconds
+ 73%|███████▎  | 22/30 [01:26<00:31,  3.98s/it]Step 20 Forward time: 5.2047 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 23 Forward time: 3.9673 seconds
+ 80%|████████  | 24/30 [01:34<00:23,  3.98s/it]Step 22 Forward time: 3.9638 seconds
+ 77%|███████▋  | 23/30 [01:30<00:27,  3.98s/it]Step 24 Forward time: 3.9661 seconds
+ 83%|████████▎ | 25/30 [01:38<00:19,  3.98s/it]Step 21 Forward time: 5.2000 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 23 Forward time: 3.9626 seconds
+ 80%|████████  | 24/30 [01:34<00:23,  3.98s/it]Step 25 Forward time: 3.9644 seconds
+ 87%|████████▋ | 26/30 [01:42<00:15,  3.98s/it]Step 24 Forward time: 3.9631 seconds
+ 83%|████████▎ | 25/30 [01:38<00:19,  3.98s/it]Step 22 Forward time: 5.1997 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it]Step 26 Forward time: 3.9642 seconds
+ 90%|█████████ | 27/30 [01:46<00:11,  3.97s/it]Step 25 Forward time: 3.9646 seconds
+ 87%|████████▋ | 26/30 [01:42<00:15,  3.98s/it]Step 23 Forward time: 5.1989 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 27 Forward time: 3.9662 seconds
+ 93%|█████████▎| 28/30 [01:50<00:07,  3.98s/it]Step 26 Forward time: 3.9641 seconds
+ 90%|█████████ | 27/30 [01:46<00:11,  3.97s/it]Step 28 Forward time: 3.9645 seconds
+ 97%|█████████▋| 29/30 [01:54<00:03,  3.98s/it]Step 24 Forward time: 5.1995 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 27 Forward time: 3.9654 seconds
+ 93%|█████████▎| 28/30 [01:50<00:07,  3.98s/it]Step 29 Forward time: 3.9648 seconds
+100%|██████████| 30/30 [01:58<00:00,  3.98s/it]100%|██████████| 30/30 [01:58<00:00,  3.94s/it]
+Step 28 Forward time: 3.9619 seconds
+ 97%|█████████▋| 29/30 [01:54<00:03,  3.97s/it]Step 25 Forward time: 5.1982 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 29 Forward time: 3.9647 seconds
+100%|██████████| 30/30 [01:58<00:00,  3.97s/it]100%|██████████| 30/30 [01:58<00:00,  3.95s/it]
+[GenVideo] chunk 1 done. total frames: 81
+[GenVideo] chunk 2/6
+Step 26 Forward time: 5.1954 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 1 done. total frames: 81
+[GenVideo] chunk 2/6
+Step 27 Forward time: 5.1957 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 0 Forward time: 4.3380 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]  0%|          | 0/30 [00:00<?, ?it/s]Step 28 Forward time: 5.1944 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 0 Forward time: 4.3395 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 1 Forward time: 5.2092 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 29 Forward time: 5.1949 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+Step 1 Forward time: 5.2093 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 2 Forward time: 5.2101 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 2 Forward time: 5.2095 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it][GenVideo] chunk 7 done. total frames: 561
+[GenVideo] chunk 8/9
+Step 3 Forward time: 5.2103 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]  0%|          | 0/30 [00:00<?, ?it/s]Step 3 Forward time: 5.2094 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 4 Forward time: 5.2112 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 0 Forward time: 4.3291 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.34s/it]Step 4 Forward time: 5.2170 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.2107 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 1 Forward time: 5.1935 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.85s/it]Step 5 Forward time: 5.2154 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 6 Forward time: 5.2092 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 2 Forward time: 5.1921 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 6 Forward time: 5.2149 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 7 Forward time: 5.2060 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 3 Forward time: 5.1892 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 7 Forward time: 5.2081 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 8 Forward time: 5.2045 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 4 Forward time: 5.1894 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 8 Forward time: 5.2083 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.21s/it]Step 9 Forward time: 5.2029 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 5 Forward time: 5.1881 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 9 Forward time: 5.1985 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 10 Forward time: 5.1999 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.21s/it]Step 6 Forward time: 5.1866 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.17s/it]Step 10 Forward time: 5.2008 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.21s/it]Step 11 Forward time: 5.1994 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 7 Forward time: 5.1874 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.18s/it]Step 11 Forward time: 5.2006 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 12 Forward time: 5.1995 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 8 Forward time: 5.1877 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.18s/it]Step 12 Forward time: 5.2047 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 13 Forward time: 5.2008 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 9 Forward time: 5.1895 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.19s/it]Step 13 Forward time: 5.2063 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 14 Forward time: 5.2054 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.21s/it]Step 10 Forward time: 5.1921 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.19s/it]Step 14 Forward time: 5.2097 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 5.2070 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it]Step 11 Forward time: 5.1923 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.20s/it]Step 15 Forward time: 5.2086 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 16 Forward time: 5.2046 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 12 Forward time: 5.1922 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.20s/it]Step 16 Forward time: 5.2077 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 17 Forward time: 5.2058 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.21s/it]Step 13 Forward time: 5.1938 seconds
+ 47%|████▋     | 14/30 [01:11<01:23,  5.20s/it]Step 17 Forward time: 5.2066 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 18 Forward time: 5.2052 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 14 Forward time: 5.1917 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.20s/it]Step 18 Forward time: 5.2068 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.2046 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 15 Forward time: 5.1929 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.20s/it]Step 19 Forward time: 5.2097 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.2059 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 16 Forward time: 5.1906 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.20s/it]Step 20 Forward time: 5.2155 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 21 Forward time: 5.2075 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 17 Forward time: 5.1957 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.20s/it]Step 21 Forward time: 5.2191 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 22 Forward time: 5.2096 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 18 Forward time: 5.1951 seconds
+ 63%|██████▎   | 19/30 [01:37<00:57,  5.20s/it]Step 22 Forward time: 5.2176 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.2079 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 19 Forward time: 5.1937 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.20s/it]Step 23 Forward time: 5.2185 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.23s/it]Step 24 Forward time: 5.2046 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 20 Forward time: 5.1909 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.20s/it]Step 24 Forward time: 5.2146 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.23s/it]Step 25 Forward time: 5.2034 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 21 Forward time: 5.1895 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.20s/it]Step 25 Forward time: 5.1999 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.1946 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 22 Forward time: 5.1862 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.20s/it]Step 26 Forward time: 5.1932 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 27 Forward time: 5.1958 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 23 Forward time: 5.1851 seconds
+ 80%|████████  | 24/30 [02:03<00:31,  5.20s/it]Step 27 Forward time: 5.1939 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 28 Forward time: 5.1947 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 24 Forward time: 5.1836 seconds
+ 83%|████████▎ | 25/30 [02:09<00:25,  5.20s/it]Step 28 Forward time: 5.1937 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 29 Forward time: 5.1959 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 25 Forward time: 5.1853 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.20s/it]Step 29 Forward time: 5.1984 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 2 done. total frames: 161
+[GenVideo] chunk 3/6
+Step 26 Forward time: 5.1876 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.20s/it]  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 2 done. total frames: 161
+[GenVideo] chunk 3/6
+Step 27 Forward time: 5.1876 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.20s/it]Step 0 Forward time: 4.3401 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]  0%|          | 0/30 [00:00<?, ?it/s]Step 28 Forward time: 5.1900 seconds
+ 97%|█████████▋| 29/30 [02:29<00:05,  5.20s/it]Step 0 Forward time: 4.3409 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 1 Forward time: 5.2085 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 29 Forward time: 5.1862 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.20s/it]100%|██████████| 30/30 [02:35<00:00,  5.17s/it]
+Step 1 Forward time: 5.2073 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 2 Forward time: 5.2072 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it][GenVideo] chunk 8 done. total frames: 641
+[GenVideo] chunk 9/9
+Step 2 Forward time: 5.2074 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it]Step 3 Forward time: 5.2064 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]  0%|          | 0/30 [00:00<?, ?it/s]Step 3 Forward time: 5.2025 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 4 Forward time: 5.2079 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 0 Forward time: 4.3388 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 4 Forward time: 5.2053 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 5 Forward time: 5.2035 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 1 Forward time: 5.2054 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 5 Forward time: 5.2054 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.17s/it]Step 6 Forward time: 5.2027 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 2 Forward time: 5.2048 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it]Step 6 Forward time: 5.2074 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 7 Forward time: 5.2025 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 3 Forward time: 5.2031 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.10s/it]Step 7 Forward time: 5.2094 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 8 Forward time: 5.2047 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 4 Forward time: 5.2056 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 8 Forward time: 5.2076 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 9 Forward time: 5.2070 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 5 Forward time: 5.2069 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 9 Forward time: 5.2111 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 10 Forward time: 5.2064 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.21s/it]Step 6 Forward time: 5.2093 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 10 Forward time: 5.2107 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.21s/it]Step 11 Forward time: 5.2076 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 7 Forward time: 5.2113 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 11 Forward time: 5.2235 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 12 Forward time: 5.2104 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 8 Forward time: 5.2093 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 12 Forward time: 5.2238 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 13 Forward time: 5.2120 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 9 Forward time: 5.2112 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 13 Forward time: 5.2192 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.23s/it]Step 14 Forward time: 5.2108 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 10 Forward time: 5.2093 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.21s/it]Step 14 Forward time: 5.2199 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.23s/it]Step 15 Forward time: 5.2092 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 11 Forward time: 5.2097 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 15 Forward time: 5.2183 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.23s/it]Step 16 Forward time: 5.2090 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 12 Forward time: 5.2079 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.22s/it]Step 16 Forward time: 5.2208 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.23s/it]Step 17 Forward time: 5.2055 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 13 Forward time: 5.2073 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 17 Forward time: 5.2157 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.23s/it]Step 18 Forward time: 5.2037 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 14 Forward time: 5.2077 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 18 Forward time: 5.2117 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.23s/it]Step 19 Forward time: 5.2028 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 15 Forward time: 5.2043 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 19 Forward time: 5.2167 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.23s/it]Step 20 Forward time: 5.2013 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 16 Forward time: 5.2048 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 20 Forward time: 5.2103 seconds
+ 70%|███████   | 21/30 [01:48<00:47,  5.23s/it]Step 21 Forward time: 5.2035 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 17 Forward time: 5.2051 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 21 Forward time: 5.2157 seconds
+ 73%|███████▎  | 22/30 [01:54<00:41,  5.23s/it]Step 22 Forward time: 5.2035 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it]Step 18 Forward time: 5.2052 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 22 Forward time: 5.2051 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.2026 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 19 Forward time: 5.2034 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 23 Forward time: 5.2047 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.1995 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 20 Forward time: 5.2003 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 24 Forward time: 5.1985 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.1978 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 21 Forward time: 5.2000 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 25 Forward time: 5.1951 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 26 Forward time: 5.1960 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 22 Forward time: 5.1994 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it]Step 26 Forward time: 5.1952 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.21s/it]Step 27 Forward time: 5.1939 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 23 Forward time: 5.1975 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 27 Forward time: 5.1929 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 28 Forward time: 5.1933 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 24 Forward time: 5.2011 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 28 Forward time: 5.1975 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 29 Forward time: 5.1974 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 25 Forward time: 5.2001 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 29 Forward time: 5.1924 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 3 done. total frames: 241
+[GenVideo] chunk 4/6
+Step 26 Forward time: 5.2041 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 3 done. total frames: 241
+[GenVideo] chunk 4/6
+Step 27 Forward time: 5.2086 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 0 Forward time: 4.3421 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]  0%|          | 0/30 [00:00<?, ?it/s]Step 28 Forward time: 5.2094 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 0 Forward time: 4.3546 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.37s/it]Step 1 Forward time: 5.2107 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 29 Forward time: 5.2045 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 1 Forward time: 5.2183 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Step 2 Forward time: 5.2108 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 2 Forward time: 5.2174 seconds
+[GenVideo] chunk 9 done. total frames: 721
+ 10%|█         | 3/30 [00:14<02:15,  5.04s/it]Step 3 Forward time: 5.2111 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 3 Forward time: 5.2159 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 4 Forward time: 5.2060 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 4 Forward time: 5.2076 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.2001 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 5 Forward time: 5.1993 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 6 Forward time: 5.1937 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 6 Forward time: 5.1972 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 7 Forward time: 5.1952 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 7 Forward time: 5.1969 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 8 Forward time: 5.1946 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.19s/it]Silent video saved to: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_12_combined.mp4
+[GenVideo] saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_12_combined.mp4 (721 frames)
+[GenVideo] [rank 1] case 35: A narrow earthen path winding through a dense bamb...
+[GenVideo] action frames=480 -> num_chunks=6
+[GenVideo] chunk 1/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 3.2567 seconds
+  3%|▎         | 1/30 [00:03<01:34,  3.27s/it]Step 8 Forward time: 5.1975 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 9 Forward time: 5.1958 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.20s/it]Step 1 Forward time: 3.9198 seconds
+  7%|▋         | 2/30 [00:07<01:42,  3.66s/it]Step 9 Forward time: 5.1977 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.20s/it]Step 10 Forward time: 5.1965 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 2 Forward time: 3.9232 seconds
+ 10%|█         | 3/30 [00:11<01:42,  3.78s/it]Step 10 Forward time: 5.2042 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 11 Forward time: 5.1965 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.20s/it]Step 3 Forward time: 3.9316 seconds
+ 13%|█▎        | 4/30 [00:15<01:39,  3.85s/it]Step 4 Forward time: 3.9433 seconds
+ 17%|█▋        | 5/30 [00:19<01:37,  3.88s/it]Step 11 Forward time: 5.2036 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 12 Forward time: 5.1998 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.20s/it]Step 5 Forward time: 3.9476 seconds
+ 20%|██        | 6/30 [00:22<01:33,  3.91s/it]Step 12 Forward time: 5.2021 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 13 Forward time: 5.1987 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 6 Forward time: 3.9442 seconds
+ 23%|██▎       | 7/30 [00:26<01:30,  3.92s/it]Step 13 Forward time: 5.2044 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 14 Forward time: 5.1975 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.21s/it]Step 7 Forward time: 3.9457 seconds
+ 27%|██▋       | 8/30 [00:30<01:26,  3.93s/it]Step 8 Forward time: 3.9481 seconds
+ 30%|███       | 9/30 [00:34<01:22,  3.94s/it]Step 14 Forward time: 5.2029 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.21s/it]Step 15 Forward time: 5.1987 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it]Step 9 Forward time: 3.9489 seconds
+ 33%|███▎      | 10/30 [00:38<01:18,  3.95s/it]Step 15 Forward time: 5.1985 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it]Step 16 Forward time: 5.1962 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 10 Forward time: 3.9472 seconds
+ 37%|███▋      | 11/30 [00:42<01:15,  3.95s/it]Step 16 Forward time: 5.1981 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 17 Forward time: 5.1966 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.21s/it]Step 11 Forward time: 3.9497 seconds
+ 40%|████      | 12/30 [00:46<01:11,  3.95s/it]Step 12 Forward time: 3.9502 seconds
+ 43%|████▎     | 13/30 [00:50<01:07,  3.96s/it]Step 17 Forward time: 5.1999 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.21s/it]Step 18 Forward time: 5.1962 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 13 Forward time: 3.9515 seconds
+ 47%|████▋     | 14/30 [00:54<01:03,  3.96s/it]Step 18 Forward time: 5.2026 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 19 Forward time: 5.1992 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 14 Forward time: 3.9514 seconds
+ 50%|█████     | 15/30 [00:58<00:59,  3.96s/it]Step 19 Forward time: 5.2000 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 20 Forward time: 5.1979 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 15 Forward time: 3.9508 seconds
+ 53%|█████▎    | 16/30 [01:02<00:55,  3.96s/it]Step 20 Forward time: 5.2035 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 16 Forward time: 3.9519 seconds
+ 57%|█████▋    | 17/30 [01:06<00:51,  3.96s/it]Step 21 Forward time: 5.1987 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 17 Forward time: 3.9529 seconds
+ 60%|██████    | 18/30 [01:10<00:47,  3.96s/it]Step 21 Forward time: 5.2042 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 22 Forward time: 5.2029 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.21s/it]Step 18 Forward time: 3.9533 seconds
+ 63%|██████▎   | 19/30 [01:14<00:43,  3.96s/it]Step 22 Forward time: 5.2085 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it]Step 23 Forward time: 5.2032 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 19 Forward time: 3.9475 seconds
+ 67%|██████▋   | 20/30 [01:18<00:39,  3.96s/it]Step 23 Forward time: 5.2172 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.2037 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 20 Forward time: 3.9476 seconds
+ 70%|███████   | 21/30 [01:22<00:35,  3.96s/it]Step 21 Forward time: 3.9462 seconds
+ 73%|███████▎  | 22/30 [01:26<00:31,  3.96s/it]Step 24 Forward time: 5.2092 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.2016 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 22 Forward time: 3.9478 seconds
+ 77%|███████▋  | 23/30 [01:30<00:27,  3.96s/it]Step 25 Forward time: 5.2127 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.2019 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 23 Forward time: 3.9497 seconds
+ 80%|████████  | 24/30 [01:34<00:23,  3.96s/it]Step 26 Forward time: 5.2166 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.22s/it]Step 27 Forward time: 5.2034 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 24 Forward time: 3.9505 seconds
+ 83%|████████▎ | 25/30 [01:38<00:19,  3.96s/it]Step 25 Forward time: 3.9493 seconds
+ 87%|████████▋ | 26/30 [01:42<00:15,  3.96s/it]Step 27 Forward time: 5.2188 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 28 Forward time: 5.2067 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 26 Forward time: 3.9472 seconds
+ 90%|█████████ | 27/30 [01:46<00:11,  3.96s/it]Step 28 Forward time: 5.2177 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.23s/it]Step 29 Forward time: 5.2064 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+Step 27 Forward time: 3.9484 seconds
+ 93%|█████████▎| 28/30 [01:50<00:07,  3.96s/it]Step 29 Forward time: 5.2113 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 28 Forward time: 3.9454 seconds
+ 97%|█████████▋| 29/30 [01:54<00:03,  3.96s/it][GenVideo] chunk 4 done. total frames: 321
+[GenVideo] chunk 5/6
+Step 29 Forward time: 3.9504 seconds
+100%|██████████| 30/30 [01:58<00:00,  3.96s/it]100%|██████████| 30/30 [01:58<00:00,  3.93s/it]
+  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 4 done. total frames: 321
+[GenVideo] chunk 5/6
+Step 0 Forward time: 4.3371 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 1 done. total frames: 81
+[GenVideo] chunk 2/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3423 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 1 Forward time: 5.2033 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 0 Forward time: 4.3237 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.33s/it]Step 1 Forward time: 5.2050 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 2 Forward time: 5.2035 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.02s/it]Step 1 Forward time: 5.1881 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.84s/it]Step 2 Forward time: 5.2117 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 3 Forward time: 5.2014 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.10s/it]Step 2 Forward time: 5.1904 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 3 Forward time: 5.2095 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.10s/it]Step 4 Forward time: 5.2033 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 3 Forward time: 5.1892 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.08s/it]Step 4 Forward time: 5.2163 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.2061 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.17s/it]Step 4 Forward time: 5.1912 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 5 Forward time: 5.2177 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.18s/it]Step 6 Forward time: 5.2031 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 5 Forward time: 5.1911 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 6 Forward time: 5.2179 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 7 Forward time: 5.2032 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 6 Forward time: 5.1914 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.17s/it]Step 7 Forward time: 5.2109 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 8 Forward time: 5.2027 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 7 Forward time: 5.1921 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.18s/it]Step 8 Forward time: 5.2146 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.21s/it]Step 9 Forward time: 5.2054 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.20s/it]Step 8 Forward time: 5.1921 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.19s/it]Step 9 Forward time: 5.2185 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.22s/it]Step 10 Forward time: 5.2061 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.21s/it]Step 9 Forward time: 5.1970 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.19s/it]Step 10 Forward time: 5.2176 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.22s/it]Step 11 Forward time: 5.2170 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 10 Forward time: 5.2135 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 11 Forward time: 5.2148 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 12 Forward time: 5.2228 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.22s/it]Step 11 Forward time: 5.2117 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 12 Forward time: 5.2172 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 13 Forward time: 5.2252 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 12 Forward time: 5.2106 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 13 Forward time: 5.2105 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 14 Forward time: 5.2205 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.23s/it]Step 13 Forward time: 5.2066 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 14 Forward time: 5.2062 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 5.2136 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.23s/it]Step 14 Forward time: 5.2036 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.21s/it]Step 15 Forward time: 5.2090 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 16 Forward time: 5.2033 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 15 Forward time: 5.2016 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it]Step 16 Forward time: 5.2053 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 17 Forward time: 5.1971 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 16 Forward time: 5.2046 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 17 Forward time: 5.2094 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 18 Forward time: 5.1971 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 17 Forward time: 5.2067 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.22s/it]Step 18 Forward time: 5.2111 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.1994 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 18 Forward time: 5.2091 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.2164 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.2050 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 19 Forward time: 5.2114 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.2140 seconds
+ 70%|███████   | 21/30 [01:48<00:47,  5.22s/it]Step 21 Forward time: 5.2037 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 20 Forward time: 5.2096 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 21 Forward time: 5.2163 seconds
+ 73%|███████▎  | 22/30 [01:54<00:41,  5.22s/it]Step 22 Forward time: 5.2046 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.21s/it]Step 21 Forward time: 5.2112 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.22s/it]Step 22 Forward time: 5.2089 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.2023 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 22 Forward time: 5.2070 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.2131 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.1999 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 23 Forward time: 5.2062 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.2062 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.1969 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 24 Forward time: 5.2084 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.2054 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.1992 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 25 Forward time: 5.2049 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.2085 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 27 Forward time: 5.1963 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 26 Forward time: 5.2010 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.22s/it]Step 27 Forward time: 5.2015 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 28 Forward time: 5.1937 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 27 Forward time: 5.2018 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 28 Forward time: 5.2017 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 29 Forward time: 5.1922 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+Step 28 Forward time: 5.2009 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 29 Forward time: 5.2009 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 5 done. total frames: 401
+[GenVideo] chunk 6/6
+Step 29 Forward time: 5.2018 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 5 done. total frames: 401
+[GenVideo] chunk 6/6
+Step 0 Forward time: 4.3369 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]  0%|          | 0/30 [00:00<?, ?it/s][GenVideo] chunk 2 done. total frames: 161
+[GenVideo] chunk 3/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3471 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.36s/it]Step 1 Forward time: 5.2041 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.86s/it]Step 0 Forward time: 4.3332 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.34s/it]Step 1 Forward time: 5.2125 seconds
+Step 2 Forward time: 5.2039 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it] 10%|█         | 3/30 [00:14<02:15,  5.02s/it]Step 1 Forward time: 5.1958 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.85s/it]Step 2 Forward time: 5.2071 seconds
+Step 3 Forward time: 5.2019 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it] 13%|█▎        | 4/30 [00:19<02:12,  5.10s/it]Step 2 Forward time: 5.1950 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 4 Forward time: 5.2020 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.14s/it]Step 3 Forward time: 5.2148 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 3 Forward time: 5.1939 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 5 Forward time: 5.2011 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 4 Forward time: 5.2104 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 4 Forward time: 5.1937 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 6 Forward time: 5.2002 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.18s/it]Step 5 Forward time: 5.2104 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.17s/it]Step 5 Forward time: 5.1900 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.15s/it]Step 7 Forward time: 5.1991 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.19s/it]Step 6 Forward time: 5.2093 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 6 Forward time: 5.1896 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.17s/it]Step 8 Forward time: 5.1987 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 7 Forward time: 5.2042 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 7 Forward time: 5.1889 seconds
+ 27%|██▋       | 8/30 [00:40<01:53,  5.18s/it]Step 9 Forward time: 5.1983 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.20s/it]Step 8 Forward time: 5.2075 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.20s/it]Step 8 Forward time: 5.1886 seconds
+ 30%|███       | 9/30 [00:45<01:48,  5.19s/it]Step 10 Forward time: 5.2004 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 9 Forward time: 5.2106 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.21s/it]Step 9 Forward time: 5.1890 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.19s/it]Step 11 Forward time: 5.2027 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.21s/it]Step 10 Forward time: 5.2152 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.21s/it]Step 10 Forward time: 5.1936 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.19s/it]Step 12 Forward time: 5.1993 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.21s/it]Step 11 Forward time: 5.2114 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 11 Forward time: 5.1906 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.20s/it]Step 13 Forward time: 5.1981 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.21s/it]Step 12 Forward time: 5.2118 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 12 Forward time: 5.1896 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.20s/it]Step 14 Forward time: 5.1982 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.21s/it]Step 13 Forward time: 5.2087 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 13 Forward time: 5.1894 seconds
+ 47%|████▋     | 14/30 [01:11<01:23,  5.20s/it]Step 15 Forward time: 5.1983 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.21s/it]Step 14 Forward time: 5.2104 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 14 Forward time: 5.1923 seconds
+ 50%|█████     | 15/30 [01:17<01:17,  5.20s/it]Step 16 Forward time: 5.1970 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 15 Forward time: 5.2134 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 15 Forward time: 5.1914 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.20s/it]Step 17 Forward time: 5.1996 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.21s/it]Step 16 Forward time: 5.2080 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 16 Forward time: 5.1929 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.20s/it]Step 18 Forward time: 5.2008 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 17 Forward time: 5.2113 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 17 Forward time: 5.1913 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.20s/it]Step 19 Forward time: 5.2019 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 18 Forward time: 5.2138 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 18 Forward time: 5.1959 seconds
+ 63%|██████▎   | 19/30 [01:37<00:57,  5.20s/it]Step 20 Forward time: 5.2049 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 19 Forward time: 5.2146 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 19 Forward time: 5.1964 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.20s/it]Step 21 Forward time: 5.2015 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 20 Forward time: 5.2159 seconds
+ 70%|███████   | 21/30 [01:48<00:47,  5.22s/it]Step 20 Forward time: 5.1965 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 22 Forward time: 5.2020 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.21s/it]Step 21 Forward time: 5.2110 seconds
+ 73%|███████▎  | 22/30 [01:54<00:41,  5.22s/it]Step 21 Forward time: 5.1959 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 23 Forward time: 5.1990 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 22 Forward time: 5.2121 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 22 Forward time: 5.1939 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.21s/it]Step 24 Forward time: 5.1981 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 23 Forward time: 5.2091 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 23 Forward time: 5.1944 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 25 Forward time: 5.2004 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 24 Forward time: 5.2079 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 24 Forward time: 5.1912 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.20s/it]Step 26 Forward time: 5.1996 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 25 Forward time: 5.2072 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 25 Forward time: 5.1931 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.20s/it]Step 27 Forward time: 5.1977 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.21s/it]Step 26 Forward time: 5.2125 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 26 Forward time: 5.1930 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.20s/it]Step 28 Forward time: 5.1969 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 27 Forward time: 5.2119 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 27 Forward time: 5.1952 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.20s/it]Step 29 Forward time: 5.1975 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+Step 28 Forward time: 5.2101 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 28 Forward time: 5.1937 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.20s/it]Step 29 Forward time: 5.2114 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 6 done. total frames: 481
+Step 29 Forward time: 5.1946 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.20s/it]100%|██████████| 30/30 [02:35<00:00,  5.17s/it]
+[GenVideo] chunk 6 done. total frames: 481
+[GenVideo] chunk 3 done. total frames: 241
+[GenVideo] chunk 4/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3439 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Silent video saved to: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_34_combined.mp4
+[GenVideo] saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_34_combined.mp4 (481 frames)
+[GenVideo] rank 0 done, wrote 2 videos
+[rank0]:[W627 02:22:20.867793991 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Step 1 Forward time: 5.2144 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Silent video saved to: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_36_combined.mp4
+[GenVideo] saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_36_combined.mp4 (481 frames)
+[GenVideo] rank 2 done, wrote 2 videos
+[rank2]:[W627 02:22:26.909848066 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Step 2 Forward time: 5.2163 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 3 Forward time: 5.2180 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 4 Forward time: 5.2177 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.2230 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.18s/it]Step 6 Forward time: 5.2222 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.20s/it]Step 7 Forward time: 5.2202 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.21s/it]Step 8 Forward time: 5.2190 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.21s/it]Step 9 Forward time: 5.2152 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.22s/it]Step 10 Forward time: 5.2131 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.22s/it]Step 11 Forward time: 5.2112 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.22s/it]Step 12 Forward time: 5.2107 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 13 Forward time: 5.2091 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 14 Forward time: 5.2125 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 5.2096 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 16 Forward time: 5.2117 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 17 Forward time: 5.2134 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 18 Forward time: 5.2100 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.2149 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.2117 seconds
+ 70%|███████   | 21/30 [01:48<00:47,  5.22s/it]Step 21 Forward time: 5.2130 seconds
+ 73%|███████▎  | 22/30 [01:54<00:41,  5.22s/it]Step 22 Forward time: 5.2110 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.2059 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.2052 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.2050 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.2041 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 27 Forward time: 5.2075 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 28 Forward time: 5.2054 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 29 Forward time: 5.2030 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 4 done. total frames: 321
+[GenVideo] chunk 5/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3334 seconds
+  3%|▎         | 1/30 [00:04<02:05,  4.34s/it]Step 1 Forward time: 5.1974 seconds
+  7%|▋         | 2/30 [00:09<02:15,  4.85s/it]Step 2 Forward time: 5.1956 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.01s/it]Step 3 Forward time: 5.1955 seconds
+ 13%|█▎        | 4/30 [00:19<02:12,  5.09s/it]Step 4 Forward time: 5.1945 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.13s/it]Step 5 Forward time: 5.1961 seconds
+ 20%|██        | 6/30 [00:30<02:03,  5.16s/it]Step 6 Forward time: 5.1959 seconds
+ 23%|██▎       | 7/30 [00:35<01:58,  5.17s/it]Step 7 Forward time: 5.1954 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.18s/it]Step 8 Forward time: 5.1967 seconds
+ 30%|███       | 9/30 [00:45<01:49,  5.19s/it]Step 9 Forward time: 5.1938 seconds
+ 33%|███▎      | 10/30 [00:51<01:43,  5.20s/it]Step 10 Forward time: 5.1959 seconds
+ 37%|███▋      | 11/30 [00:56<01:38,  5.20s/it]Step 11 Forward time: 5.1946 seconds
+ 40%|████      | 12/30 [01:01<01:33,  5.20s/it]Step 12 Forward time: 5.1943 seconds
+ 43%|████▎     | 13/30 [01:06<01:28,  5.20s/it]Step 13 Forward time: 5.1944 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.20s/it]Step 14 Forward time: 5.1961 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.20s/it]Step 15 Forward time: 5.1947 seconds
+ 53%|█████▎    | 16/30 [01:22<01:12,  5.20s/it]Step 16 Forward time: 5.1959 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.21s/it]Step 17 Forward time: 5.1949 seconds
+ 60%|██████    | 18/30 [01:32<01:02,  5.21s/it]Step 18 Forward time: 5.1996 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.21s/it]Step 19 Forward time: 5.1977 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.21s/it]Step 20 Forward time: 5.1982 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.21s/it]Step 21 Forward time: 5.1986 seconds
+ 73%|███████▎  | 22/30 [01:53<00:41,  5.21s/it]Step 22 Forward time: 5.2007 seconds
+ 77%|███████▋  | 23/30 [01:58<00:36,  5.21s/it]Step 23 Forward time: 5.1994 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.21s/it]Step 24 Forward time: 5.1971 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.21s/it]Step 25 Forward time: 5.1947 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.21s/it]Step 26 Forward time: 5.1988 seconds
+ 90%|█████████ | 27/30 [02:19<00:15,  5.21s/it]Step 27 Forward time: 5.2000 seconds
+ 93%|█████████▎| 28/30 [02:24<00:10,  5.21s/it]Step 28 Forward time: 5.2002 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.21s/it]Step 29 Forward time: 5.1971 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.21s/it]100%|██████████| 30/30 [02:35<00:00,  5.18s/it]
+[GenVideo] chunk 5 done. total frames: 401
+[GenVideo] chunk 6/6
+  0%|          | 0/30 [00:00<?, ?it/s]Step 0 Forward time: 4.3367 seconds
+  3%|▎         | 1/30 [00:04<02:06,  4.35s/it]Step 1 Forward time: 5.2180 seconds
+  7%|▋         | 2/30 [00:09<02:16,  4.87s/it]Step 2 Forward time: 5.2169 seconds
+ 10%|█         | 3/30 [00:14<02:15,  5.03s/it]Step 3 Forward time: 5.2154 seconds
+ 13%|█▎        | 4/30 [00:20<02:12,  5.11s/it]Step 4 Forward time: 5.2174 seconds
+ 17%|█▋        | 5/30 [00:25<02:08,  5.15s/it]Step 5 Forward time: 5.2153 seconds
+ 20%|██        | 6/30 [00:30<02:04,  5.18s/it]Step 6 Forward time: 5.2182 seconds
+ 23%|██▎       | 7/30 [00:35<01:59,  5.19s/it]Step 7 Forward time: 5.2150 seconds
+ 27%|██▋       | 8/30 [00:40<01:54,  5.20s/it]Step 8 Forward time: 5.2162 seconds
+ 30%|███       | 9/30 [00:46<01:49,  5.21s/it]Step 9 Forward time: 5.2178 seconds
+ 33%|███▎      | 10/30 [00:51<01:44,  5.22s/it]Step 10 Forward time: 5.2179 seconds
+ 37%|███▋      | 11/30 [00:56<01:39,  5.22s/it]Step 11 Forward time: 5.2172 seconds
+ 40%|████      | 12/30 [01:01<01:34,  5.22s/it]Step 12 Forward time: 5.2139 seconds
+ 43%|████▎     | 13/30 [01:07<01:28,  5.22s/it]Step 13 Forward time: 5.2128 seconds
+ 47%|████▋     | 14/30 [01:12<01:23,  5.22s/it]Step 14 Forward time: 5.2119 seconds
+ 50%|█████     | 15/30 [01:17<01:18,  5.22s/it]Step 15 Forward time: 5.2099 seconds
+ 53%|█████▎    | 16/30 [01:22<01:13,  5.22s/it]Step 16 Forward time: 5.2070 seconds
+ 57%|█████▋    | 17/30 [01:27<01:07,  5.22s/it]Step 17 Forward time: 5.2075 seconds
+ 60%|██████    | 18/30 [01:33<01:02,  5.22s/it]Step 18 Forward time: 5.2065 seconds
+ 63%|██████▎   | 19/30 [01:38<00:57,  5.22s/it]Step 19 Forward time: 5.2078 seconds
+ 67%|██████▋   | 20/30 [01:43<00:52,  5.22s/it]Step 20 Forward time: 5.2081 seconds
+ 70%|███████   | 21/30 [01:48<00:46,  5.22s/it]Step 21 Forward time: 5.2109 seconds
+ 73%|███████▎  | 22/30 [01:54<00:41,  5.22s/it]Step 22 Forward time: 5.2127 seconds
+ 77%|███████▋  | 23/30 [01:59<00:36,  5.22s/it]Step 23 Forward time: 5.2118 seconds
+ 80%|████████  | 24/30 [02:04<00:31,  5.22s/it]Step 24 Forward time: 5.2128 seconds
+ 83%|████████▎ | 25/30 [02:09<00:26,  5.22s/it]Step 25 Forward time: 5.2140 seconds
+ 87%|████████▋ | 26/30 [02:14<00:20,  5.22s/it]Step 26 Forward time: 5.2152 seconds
+ 90%|█████████ | 27/30 [02:20<00:15,  5.22s/it]Step 27 Forward time: 5.2150 seconds
+ 93%|█████████▎| 28/30 [02:25<00:10,  5.22s/it]Step 28 Forward time: 5.2104 seconds
+ 97%|█████████▋| 29/30 [02:30<00:05,  5.22s/it]Step 29 Forward time: 5.2061 seconds
+100%|██████████| 30/30 [02:35<00:00,  5.22s/it]100%|██████████| 30/30 [02:35<00:00,  5.19s/it]
+[GenVideo] chunk 6 done. total frames: 481
+Silent video saved to: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_35_combined.mp4
+[GenVideo] saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/videos/case_35_combined.mp4 (481 frames)
+[GenVideo] rank 1 done, wrote 2 videos
+[rank1]:[W627 02:30:50.314476955 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+视频生成完成
+
+########## 阶段 2/2: 评测 (WBench) ##########
+Found 6 videos, 6 to process, 3 GPUs
+  [GPU1] Worker started: 2 videos, cpus=48-95, threads=24
+  [GPU1] [1/2] case_33_combined.mp4
+  [GPU2] Worker started: 2 videos, cpus=96-143, threads=24
+  [GPU2] [1/2] case_34_combined.mp4
+  [GPU0] Worker started: 2 videos, cpus=0-47, threads=24
+  [GPU0] [1/2] case_12_combined.mp4
+[INFO] case_34_combined: 30fps → stride=2 → 15.0fps
+[TIME] extract: 0.9s (241 frames)
+[DONE] /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam/case_34_combined.npz (241 poses, 200.4s)
+  [GPU2] [2/2] case_5_combined.mp4
+[INFO] case_33_combined: 30fps → stride=2 → 15.0fps
+[TIME] extract: 0.9s (241 frames)
+[DONE] /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam/case_33_combined.npz (241 poses, 206.7s)
+  [GPU1] [2/2] case_36_combined.mp4
+[INFO] case_12_combined: 30fps → stride=2 → 15.0fps
+[TIME] extract: 1.4s (361 frames)
+[DONE] /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam/case_12_combined.npz (361 poses, 295.3s)
+  [GPU0] [2/2] case_35_combined.mp4
+[INFO] case_36_combined: 30fps → stride=2 → 15.0fps
+[TIME] extract: 2.1s (241 frames)
+[DONE] /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam/case_36_combined.npz (241 poses, 209.7s)
+  [GPU1] Done: 2/2 ok, 0 fail
+[INFO] case_5_combined: 30fps → stride=2 → 15.0fps
+[TIME] extract: 1.1s (241 frames)
+[DONE] /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam/case_5_combined.npz (241 poses, 231.9s)
+  [GPU2] Done: 2/2 ok, 0 fail
+[INFO] case_35_combined: 30fps → stride=2 → 15.0fps
+[TIME] extract: 2.1s (241 frames)
+[DONE] /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam/case_35_combined.npz (241 poses, 206.5s)
+  [GPU0] Done: 2/2 ok, 0 fail
+Done: all workers finished
+
+============================================================
+  WBench Pipeline
+  Model:  infworld-offline-cut21_2026-06-27_01-49-33
+  Videos: 6
+  GPUs:   [0, 1, 2]
+  Phase:  precompute
+============================================================
+
+============================================================
+  Phase 1c: MegaSAM Camera Poses → /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/megasam
+============================================================
+  MegaSAM done in 503s
+
+  Total: 503s (8.4min)
+
+precompute 运行完成
+
+============================================================
+  WBench Pipeline
+  Model:  infworld-offline-cut21_2026-06-27_01-49-33
+  Videos: 6
+  GPUs:   [0, 1, 2]
+  Phase:  gpu
+============================================================
+
+============================================================
+  Phase 2: GPU Metrics (per-metric mode)
+  Videos: 6 | GPUs: [0, 1, 2]
+  Compute units: ['background_consistency', 'segment_continuity', 'perspective_consistency', 'subject_consistency', 'reconstruction_consistency', 'spatial_consistency']
+============================================================
+
+  ── background_consistency ── (6 applicable, 0 done, 6 pending)
+  [GPU0] Model loaded for 'background_consistency'. Processing 2 cases.
+  [GPU2] Model loaded for 'background_consistency'. Processing 2 cases.
+  [GPU1] Model loaded for 'background_consistency'. Processing 2 cases.
+  [GPU2] [1/2] case_34: 1.4s
+  [GPU1] [1/2] case_33: 1.3s
+  [GPU0] [1/2] case_12: 2.3s
+  [GPU2] [2/2] case_5: 1.0s
+  [GPU2] Finished 'background_consistency': 2 ok, 0 fail
+  [GPU1] [2/2] case_36: 1.6s
+  [GPU1] Finished 'background_consistency': 2 ok, 0 fail
+  [GPU0] [2/2] case_35: 2.6s
+  [GPU0] Finished 'background_consistency': 2 ok, 0 fail
+     background_consistency done in 11s (0.2min)
+     ┌─ background_consistency: 6 ok, 0 fail, 6 total
+     │  Full:     0.8922 (n=6)
+     │  Navi:     0.8922 (n=6)
+     └
+
+  ── segment_continuity ── (6 applicable, 0 done, 6 pending)
+  [GPU2] Model loaded for 'segment_continuity'. Processing 2 cases.
+  [GPU0] Model loaded for 'segment_continuity'. Processing 2 cases.
+  [GPU1] Model loaded for 'segment_continuity'. Processing 2 cases.
+  [GPU1] [1/2] case_33: 2.7s
+  [GPU2] [1/2] case_34: 2.8s
+  [GPU0] [1/2] case_12: 3.3s
+  [GPU2] [2/2] case_5: 0.8s
+  [GPU2] Finished 'segment_continuity': 2 ok, 0 fail
+  [GPU1] [2/2] case_36: 2.5s
+  [GPU1] Finished 'segment_continuity': 2 ok, 0 fail
+  [GPU0] [2/2] case_35: 2.6s
+  [GPU0] Finished 'segment_continuity': 2 ok, 0 fail
+     segment_continuity done in 8s (0.1min)
+     ┌─ segment_continuity: 6 ok, 0 fail, 6 total
+     │  Full:     1.0000 (n=6)
+     │  Navi:     1.0000 (n=6)
+     └
+
+  ── perspective_consistency ── (0 applicable, 0 done, 0 pending)
+     All done, skipping.
+
+  ── subject_consistency ── (0 applicable, 0 done, 0 pending)
+     All done, skipping.
+
+  ── reconstruction_consistency ── (0 applicable, 0 done, 0 pending)
+     All done, skipping.
+
+  ── spatial_consistency ── (4 applicable, 0 done, 4 pending)
+Using cache found in /root/autodl-tmp/ttt/WBench/weights/dreamsim/facebookresearch_dino_main
+Using cache found in /root/autodl-tmp/ttt/WBench/weights/dreamsim/facebookresearch_dino_main
+Using cache found in /root/autodl-tmp/ttt/WBench/weights/dreamsim/facebookresearch_dino_main
+Using cached /root/autodl-tmp/ttt/WBench/weights/dreamsim
+  [GPU0] Model loaded for 'spatial_consistency'. Processing 2 cases.
+Using cached /root/autodl-tmp/ttt/WBench/weights/dreamsim
+  [GPU2] Model loaded for 'spatial_consistency'. Processing 1 cases.
+Using cached /root/autodl-tmp/ttt/WBench/weights/dreamsim
+  [GPU1] Model loaded for 'spatial_consistency'. Processing 1 cases.
+  [GPU2] [1/1] case_36: 4.9s
+  [GPU2] Finished 'spatial_consistency': 1 ok, 0 fail
+  [GPU0] [1/2] case_12: 5.1s
+  [GPU1] [1/1] case_33: 5.3s
+  [GPU1] Finished 'spatial_consistency': 1 ok, 0 fail
+  [GPU0] [2/2] case_5: 7.1s
+  [GPU0] Finished 'spatial_consistency': 2 ok, 0 fail
+     spatial_consistency done in 23s (0.4min)
+     ┌─ spatial_consistency: 4 ok, 0 fail, 4 total
+     │  spatial_consistency (ungated):  0.7254 (n=4)
+     │  gated_spatial_consistency:      0.7254 (n=4)
+     └
+
+  Total: 41s (0.7min)
+
+gpu 运行完成
+
+============================================================
+  WBench Pipeline
+  Model:  infworld-offline-cut21_2026-06-27_01-49-33
+  Videos: 6
+  GPUs:   [0, 1, 2]
+  Phase:  report
+============================================================
+
+  Report saved: /root/autodl-tmp/ttt/WBench/work_dirs/infworld-offline-cut21_2026-06-27_01-49-33/evaluation/report.json
+
+======================================================================
+  Report: infworld-offline-cut21_2026-06-27_01-49-33 | 6 cases | 6 navi
+======================================================================
+
+  Metric                             Full               Navi              
+  ---------------------------------- ------------------ ------------------
+
+  [Quality]  (0/6)
+    aesthetic_quality                -                  -                 
+    imaging_quality                  -                  -                 
+    temporal_flickering              -                  -                 
+    dynamic_degree                   -                  -                 
+    motion_smoothness                -                  -                 
+    hpsv3_quality                    -                  -                 
+
+  [Consistency]  (4/8)
+    background_consistency           0.8922 (n=6)       0.8922 (n=6)      
+    segment_continuity               1.0000 (n=6)       1.0000 (n=6)      
+    perspective_consistency          -                  -                 
+    subject_consistency              -                  -                 
+    geometric_consistency            -                  -                 
+    photometric_consistency          -                  -                 
+    spatial_consistency              0.7254 (n=4)       0.7254 (n=4)      
+    gated_spatial_consistency        0.7254 (n=4)       0.7254 (n=4)      
+
+  [Interaction]  (0/4)
+    navigation_trajectory            -                  -                 
+    event_edit_adherence             -                  -                 
+    subject_action_adherence         -                  -                 
+    perspective_switch_adherence     -                  -                 
+
+  [Setting]  (0/2)
+    scene_adherence                  -                  -                 
+    subject_adherence                -                  -                 
+
+  [Physical]  (0/2)
+    visual_plausibility              -                  -                 
+    causal_fidelity                  -                  -                 
+
+  Total: 0s (0.0min)
+
+生成 report.json
+
+全部完成: infworld-offline-cut21
+### [1/1] 完成: infworld-offline-cut21 (exit=0, 用时=00:50:27)
+
+全部任务完成 (1 个)
