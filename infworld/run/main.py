@@ -4,17 +4,16 @@
 
 可选 online (test-time) training：完全复用 infworld_inference 的实现
 （inf.online_train_step / inf.set_grad_checkpoint 与同名训练超参），
-由环境变量 ONLINE_TRAINING=on 开启（默认 off）。
+由 CLI 参数 --online-training on 开启（默认 off）。
 
-运行（在 Infinite-World 目录下）：
-    单 GPU： python generate_video.py
-    多 GPU： torchrun --nproc_per_node=8 generate_video.py
-或经 generate.sh：
-    bash generate.sh 1                  # 单 GPU，全部 case
-    bash generate.sh 8                  # 8 GPU
-    bash generate.sh 8 10 infworld on   # 8 GPU，前 10 个 case，开启 online training
+运行（需在项目根目录 /root/autodl-tmp/ttt/infworld 下，使 scripts.infworld_inference 可导入）：
+    单 GPU： python run/main.py [args]
+    多 GPU： torchrun --nproc_per_node=8 run/main.py [args]
+或经 run/run.sh（在 JOBS 数组里配置每个 job，自动选择 python / torchrun）：
+    bash run/run.sh
 
-可用 CLI 参数覆盖：--input-dataset / --outdir / --num-cases / --online-training / --max-num-chunks。
+CLI 参数：--input-dataset / --outdir / --num-cases / --online-training / --max-num-chunks
+（详见 parse_args；torchrun 会把这些参数透传给每个进程）。
 """
 
 import os
@@ -62,9 +61,17 @@ FREEZE_PREFIXES = (
 # 数据读取（仅此部分替换原脚本的 prompts/demo.yaml）
 # ============================================================================
 def list_cases(input_dataset_path, n):
-    """列出 case<id> 目录，按 int(id) 升序，取前 n 个（n<=0 取全部）。
+    """列出 dataset 下的 case<id> 目录，按 int(id) 升序，取前 n 个。
 
-    返回 [(prompt, image_path, action_path, case_id), ...]
+    每个 case 目录需含 prompts.json（{"prompt": ...}）、image.jpg、move_view.json。
+
+    Args:
+        input_dataset_path (str): dataset 根目录，内含若干 case<id>/ 子目录。
+        n (int): 取前 N 个 case；<=0 表示全部。
+
+    Returns:
+        list[tuple[str, str, str, str]]: [(prompt, image_path, action_path, case_id), ...]，
+            其中 case_id 为字符串形式的原始 id。
     """
     case_dirs = []
     for d in glob.glob(os.path.join(input_dataset_path, "case*")):
@@ -95,6 +102,24 @@ def list_cases(input_dataset_path, n):
 # 含 online training 的冻结/快照设置（与原脚本一致）
 # ============================================================================
 def load_models():
+    """加载并初始化整条推理所需的全部模型组件（照搬 infworld_inference.main 的建模流程）。
+
+    依次完成：解析配置中权重的相对路径 -> 加载 VAE / Text Encoder / Scheduler / DiT，
+    并从 checkpoint 载入 DiT 权重（剔除 pos_embed*，运行时重算）。若开启 online
+    training，则冻结条件输入层（FREEZE_PREFIXES）、收集可训练参数，并按需快照初始权重
+    用于 video 之间恢复。
+
+    依赖模块级全局 ENABLE_ONLINE_TRAINING 及 inf.* 的常量/工具函数。
+
+    Returns:
+        tuple: (args, vae, text_encoder, scheduler, dit, bucket_config,
+                trainable_params, init_params)
+            - args (OmegaConf): 解析后的配置。
+            - bucket_config: 由 inf.BUCKET_CONFIG_NAME 选出的分桶表。
+            - trainable_params (list[Tensor] | None): 仅 online training 时非 None。
+            - init_params (dict[str, Tensor] | None): 初始可训练参数快照，
+              仅 online training 且 RESET_BETWEEN_VIDEOS 时非 None。
+    """
     inf.torch_gc()
 
     args = OmegaConf.load(inf.CONFIG_PATH)
@@ -170,6 +195,25 @@ def load_models():
 # 含 chunk 间 online training（与原脚本一致）
 # ============================================================================
 def _generate_one(prompt, image_path, action_path, models, task_idx, max_num_chunks=0):
+    """对单个 case 做分块自回归生成，返回完整视频帧缓冲。
+
+    流程：编码条件图 -> 按 action 长度算出 num_chunks（可被 max_num_chunks 封顶）->
+    逐 chunk 重编码已生成尾帧作 image_cond、切片 move/view 动作（不足则补零）、
+    调 scheduler.sample 采样并 VAE 解码，追加 decoded_chunk[:, :, 1:]（丢弃重叠帧）到
+    video_buffer。若开启 online training，则在每个 chunk 生成后于刚生成的 chunk 上微调，
+    再生成下一个；video 起始时按 RESET_BETWEEN_VIDEOS 恢复初始权重。
+
+    Args:
+        prompt (str): 文本提示。
+        image_path (str): 条件图路径。
+        action_path (str): move/view 动作序列 JSON 路径。
+        models (tuple): load_models() 的返回值。
+        task_idx (int): case 在全局列表中的序号（用于 online training 的 video 间恢复）。
+        max_num_chunks (int): 生成 chunk 数上限；<=0 表示不限制（跑完整 action 序列）。
+
+    Returns:
+        torch.Tensor: 视频帧缓冲，形状 [B, C, T, H, W]（CPU），T 为累积像素帧数。
+    """
     args, vae, text_encoder, scheduler, dit, bucket_config, trainable_params, init_params = models
 
     cond_video = inf.load_condition_image(image_path, bucket_config).to(inf.local_rank)
@@ -272,9 +316,20 @@ def _generate_one(prompt, image_path, action_path, models, task_idx, max_num_chu
 # 主函数
 # ============================================================================
 def generate_video(input_dataset_path, output_video_path, n, max_num_chunks=0):
-    """为 infworld dataset 前 n 个 case（按 case id 升序）生成视频，按 WBench 布局落盘：
-        <WBENCH_WORK_DIRS>/<output_video_path>/videos/case_{id}_combined.mp4
-    支持多 GPU：每个 rank 仅处理 task_idx % dp_size == dp_rank 的 case。
+    """为 dataset 前 n 个 case 生成视频并按 WBench 布局落盘。
+
+    输出路径：<WBENCH_WORK_DIRS>/<output_video_path>/videos/case_{id}_combined.mp4。
+    支持多 GPU：每个 rank 仅处理 task_idx % dp_size == dp_rank 的 case；缺失
+    image/action 的 case 跳过；已存在的输出文件会先删除以避免重复拼接。
+
+    Args:
+        input_dataset_path (str): dataset 根目录（见 list_cases）。
+        output_video_path (str): 输出子目录名（落在 WBENCH_WORK_DIRS 下）。
+        n (int): 取前 N 个 case；<=0 表示全部。
+        max_num_chunks (int): 每个 case 的生成 chunk 数上限；<=0 表示不限制。
+
+    Returns:
+        list[str]: 本 rank 实际写出的 mp4 文件路径列表。
     """
     cases = list_cases(input_dataset_path, n)
     print(f"[GenVideo] rank {inf.dp_rank}/{inf.dp_size} | total cases: {len(cases)} | "
@@ -312,6 +367,12 @@ def generate_video(input_dataset_path, output_video_path, n, max_num_chunks=0):
 
 
 def parse_args():
+    """解析命令行参数（单/多 GPU 共用；torchrun 会把这些参数透传给每个进程）。
+
+    Returns:
+        argparse.Namespace: 含 input_dataset / outdir / num_cases /
+            online_training / max_num_chunks 五个字段。
+    """
     p = argparse.ArgumentParser(
         description="为 WBench 评测产出 Infinite-World 视频（单/多 GPU）"
     )
