@@ -55,9 +55,6 @@ third_party/**/__pycache__/
 .DS_Store
 Thumbs.db
 
-# ===== Claude 本地配置 =====
-.claude/
-
 # ===== 本地私有，不发布 =====
 AGENT.md
 homepage/
