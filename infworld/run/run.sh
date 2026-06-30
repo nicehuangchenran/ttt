@@ -17,6 +17,7 @@ mkdir -p logs
 # OUTDIR    : 视频输出的文件夹名称，在 wbench/work_dir里面
 # NUM_GPUS  
 # INPUT_DATASET NUM_CASES MAX_NUM_CHUNKS ONLINE OUTDIR NUM_GPUS
+TS=$(date +%m-%d_%H-%M)
 JOBS=(
     "dataset/long_case 1 20 off online-long_${TS} 1"
     # "dataset/wbench 10 5 on infworld-on 8"
@@ -36,7 +37,6 @@ for job in "${JOBS[@]}"; do
     echo "=============================================="
     echo "GPUs: $NUM_GPUS | num_cases: $NUM_CASES (0=all) | outdir: $OUTDIR | online: $ONLINE"
 
-    TS=$(date +%m-%d_%H-%M)
     if [ "$NUM_GPUS" -eq 1 ]; then
         python run/main.py $PY_ARGS 2>&1 | tee "logs/${OUTDIR}_${TS}.log"
     else
