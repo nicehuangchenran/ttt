@@ -38,13 +38,13 @@ for job in "${JOBS[@]}"; do
     echo "GPUs: $NUM_GPUS | num_cases: $NUM_CASES (0=all) | outdir: $OUTDIR | online: $ONLINE"
 
     if [ "$NUM_GPUS" -eq 1 ]; then
-        python run/main.py $PY_ARGS 2>&1 | tee "logs/${OUTDIR}_${TS}.log"
+        python -m run.main $PY_ARGS 2>&1 | tee "logs/${OUTDIR}_${TS}.log"
     else
         MASTER_PORT=${MASTER_PORT:-29400}
         echo "MASTER_PORT: $MASTER_PORT"
-        torchrun --nnodes=1 --nproc_per_node=$NUM_GPUS \
+        torchrun -m --nnodes=1 --nproc_per_node=$NUM_GPUS \
             --rdzv_id=100 --rdzv_backend=c10d \
             --rdzv_endpoint=localhost:$MASTER_PORT \
-            run/main.py $PY_ARGS 2>&1 | tee "logs/${OUTDIR}_${TS}.log"
+            run.main $PY_ARGS 2>&1 | tee "logs/${OUTDIR}_${TS}.log"
     fi
 done

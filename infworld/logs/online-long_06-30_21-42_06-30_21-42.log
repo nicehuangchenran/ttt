@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/ttt/infworld/run/main.py", line 28, in <module>
+    import scripts.infworld_inference as inf
+ModuleNotFoundError: No module named 'scripts'
