@@ -20,7 +20,6 @@ mkdir -p "$LOG_DIR"
 #   ONLINE     : online (test-time) training 开关 on/off
 #   GEN_SCRIPT : 生成阶段运行的 python 文件
 JOBS=(
-    "infworld-online-cut21   3 6 on  generate_video_cut21.py"
     "infworld-offline-cut21  3 6 off generate_video_cut21.py"
 )
 
