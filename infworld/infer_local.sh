@@ -1,4 +1,5 @@
 #!/bin/bash
+# 项目原本的运行脚本
 # Infinite World - Local Inference Script (Single/Multi GPU)
 # Usage: bash infer_local.sh [num_gpus]
 # Example: bash infer_local.sh 1   (single GPU, no torchrun, avoids port conflict)

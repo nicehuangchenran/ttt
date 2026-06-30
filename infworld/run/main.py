@@ -14,13 +14,14 @@
     bash generate.sh 8                  # 8 GPU
     bash generate.sh 8 10 infworld on   # 8 GPU，前 10 个 case，开启 online training
 
-可用环境变量覆盖：INPUT_DATASET / OUTPUT_MODEL_NAME / NUM_CASES / ONLINE_TRAINING。
+可用 CLI 参数覆盖：--input-dataset / --outdir / --num-cases / --online-training / --max-num-chunks。
 """
 
 import os
 import json
 import math
 import glob
+import argparse
 import torch
 
 # 导入即触发其模块级 setup_distributed()/CP 初始化（单 GPU 或 torchrun 多 GPU 均可），
@@ -36,13 +37,13 @@ from infworld.configs import bucket_config as bucket_config_module
 # ============================================================================
 WBENCH_WORK_DIRS = "/root/autodl-tmp/ttt/WBench/work_dirs"
 
-# 入口默认值（可被环境变量覆盖）
-INPUT_DATASET = os.environ.get("INPUT_DATASET", os.path.join(inf.PROJECT_ROOT, "dataset/wbench"))
-OUTPUT_MODEL_NAME = os.environ.get("OUTPUT_MODEL_NAME", "infworld")
-NUM_CASES = int(os.environ.get("NUM_CASES", "0"))  # <=0 表示全部
+# 入口参数默认值（由 __main__ 中的 CLI 覆盖）
+INPUT_DATASET = os.path.join(inf.PROJECT_ROOT, "dataset")
+OUTPUT_MODEL_NAME = "infworld"
+NUM_CASES = 0  # <=0 表示全部
 
-# online (test-time) training 开关（复用 infworld_inference 的实现）；off / on
-ENABLE_ONLINE_TRAINING = os.environ.get("ONLINE_TRAINING", "off").strip().lower() in ("on", "true", "1", "yes")
+# online (test-time) training 开关（复用 infworld_inference 的实现）；由 --online-training 覆盖
+ENABLE_ONLINE_TRAINING = False
 
 # 冻结的条件输入层前缀（与 infworld_inference.main 完全一致）：online training 时不漂移这些
 # 承载历史(image_cond)/动作/文本/时间步接口的层，保证 chunk 间连续性。
@@ -168,7 +169,7 @@ def load_models():
 # 单 case 生成（照搬分块自回归生成核心；chunk 数自动覆盖完整 action 序列）
 # 含 chunk 间 online training（与原脚本一致）
 # ============================================================================
-def _generate_one(prompt, image_path, action_path, models, task_idx):
+def _generate_one(prompt, image_path, action_path, models, task_idx, max_num_chunks=0):
     args, vae, text_encoder, scheduler, dit, bucket_config, trainable_params, init_params = models
 
     cond_video = inf.load_condition_image(image_path, bucket_config).to(inf.local_rank)
@@ -187,6 +188,10 @@ def _generate_one(prompt, image_path, action_path, models, task_idx):
     num_frames = args.validation_data.num_frames  # 81
     step = num_frames - 1                          # 每 chunk 推进 80 像素帧
     num_chunks = max(1, math.ceil(len(move_indices) / step))
+    # max_num_chunks <= 0 表示不限制；否则封顶到 max_num_chunks
+    if max_num_chunks and max_num_chunks > 0 and num_chunks > max_num_chunks:
+        print(f"[GenVideo] num_chunks {num_chunks} > max_num_chunks {max_num_chunks}, capped to {max_num_chunks}")
+        num_chunks = max_num_chunks
     print(f"[GenVideo] action frames={len(move_indices)} -> num_chunks={num_chunks}")
 
     # ---- 本 video 的 online training 准备（与 infworld_inference.main 一致）----
@@ -266,7 +271,7 @@ def _generate_one(prompt, image_path, action_path, models, task_idx):
 # ============================================================================
 # 主函数
 # ============================================================================
-def generate_video(input_dataset_path, output_video_path, n):
+def generate_video(input_dataset_path, output_video_path, n, max_num_chunks=0):
     """为 infworld dataset 前 n 个 case（按 case id 升序）生成视频，按 WBench 布局落盘：
         <WBENCH_WORK_DIRS>/<output_video_path>/videos/case_{id}_combined.mp4
     支持多 GPU：每个 rank 仅处理 task_idx % dp_size == dp_rank 的 case。
@@ -290,7 +295,7 @@ def generate_video(input_dataset_path, output_video_path, n):
             continue
 
         print(f"[GenVideo] [rank {inf.dp_rank}] case {case_id}: {prompt[:50]}...")
-        video_buffer = _generate_one(prompt, image_path, action_path, models, task_idx)
+        video_buffer = _generate_one(prompt, image_path, action_path, models, task_idx, max_num_chunks)
 
         save_path = os.path.join(save_dir, f"case_{case_id}_combined")  # 不含扩展名
         final_path = f"{save_path}.mp4"
@@ -306,5 +311,27 @@ def generate_video(input_dataset_path, output_video_path, n):
     return written
 
 
+def parse_args():
+    p = argparse.ArgumentParser(
+        description="为 WBench 评测产出 Infinite-World 视频（单/多 GPU）"
+    )
+    p.add_argument("--input-dataset", default=os.path.join(inf.PROJECT_ROOT, "dataset"),
+                   help="infworld dataset 根目录（含 case<id>/ 子目录）")
+    p.add_argument("--outdir", default="infworld",
+                   help="输出模型名，落盘到 WBench/work_dirs/<outdir>/videos/")
+    p.add_argument("--num-cases", type=int, default=0,
+                   help="取前 N 个 case（按 case id 升序），<=0 表示全部")
+    p.add_argument("--online-training",
+                   type=lambda s: s.strip().lower() in ("on", "true", "1", "yes"),
+                   default=False, metavar="on/off",
+                   help="chunk 间 online（test-time）training 开关")
+    p.add_argument("--max-num-chunks", type=int, default=0,
+                   help="每个 case 最多生成的 chunk 数，<=0 表示不限制")
+    return p.parse_args()
+
+
 if __name__ == "__main__":
-    generate_video(INPUT_DATASET, OUTPUT_MODEL_NAME, NUM_CASES)
+    args = parse_args()
+    # 在模块顶层作用域重新绑定全局，供 load_models/_generate_one/generate_video 引用
+    ENABLE_ONLINE_TRAINING = args.online_training
+    generate_video(args.input_dataset, args.outdir, args.num_cases, args.max_num_chunks)

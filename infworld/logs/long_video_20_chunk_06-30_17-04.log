@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/ttt/infworld/scripts/infworld_inference.py", line 154, in <module>
+    local_rank, global_rank, num_processes, use_dist = setup_distributed()
+  File "/root/autodl-tmp/ttt/infworld/scripts/infworld_inference.py", line 151, in setup_distributed
+    torch.cuda.set_device(local_rank)
+  File "/root/miniconda3/envs/infworld/lib/python3.10/site-packages/torch/cuda/__init__.py", line 476, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/root/miniconda3/envs/infworld/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx

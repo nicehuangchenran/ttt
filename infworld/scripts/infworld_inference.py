@@ -182,7 +182,7 @@ setup_seed(GLOBAL_SEED + global_rank)
 TEXT_CFG_SCALE = 5.0
 NUM_SAMPLING_STEPS = 30
 SHIFT = 7  # PX256: 3, PX627: 7, PX960: 11
-NUM_CHUNKS = 3  # Number of video chunks to generate
+NUM_CHUNKS = 20  # Number of video chunks to generate
 HIGH_QUALITY_SAVE = True
 
 # Online (test-time) training between chunks (overridable via --online-training/--no-online-training)

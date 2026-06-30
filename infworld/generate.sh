@@ -1,4 +1,5 @@
 #!/bin/bash
+# 自己写的，当时想批量读取 wbench 形成的dataset 中的数据
 # 为 WBench 评测产出 Infinite-World 视频 (单/多 GPU)
 # 用法: bash generate.sh [num_gpus] [num_cases] [model_name] [online]
 #   num_gpus   : GPU 数量，默认 1（=1 时直接 python，避免 torchrun 端口冲突；>1 用 torchrun）
@@ -17,10 +18,12 @@ NUM_GPUS=${1:-1}
 NUM_CASES=${2:-0}
 MODEL_NAME=${3:-infworld-online06-26}
 ONLINE=${4:-off}
+INPUT_DATASET=${5:-dataset/long_case}
 
 export NUM_CASES
 export OUTPUT_MODEL_NAME="$MODEL_NAME"
 export ONLINE_TRAINING="$ONLINE"
+export INPUT_DATASET
 
 echo "=============================================="
 echo "Infinite World - Generate for WBench"
