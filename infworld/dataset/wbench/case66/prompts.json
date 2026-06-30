@@ -1,0 +1,68 @@
+{
+  "prompt": "A museum gallery hall with a massive oil painting in an ornate golden frame mounted on the wall, depicting a dramatic naval battle with tall sailing ships, cannon smoke, and stormy dark seas. Dim gallery lighting from above, polished wooden floor. Behind the viewer, a padded bench for gallery visitors sits in the center of the room, and additional framed paintings of maritime scenes and pastoral landscapes hang on the opposite wall. A doorway with a velvet rope leads into the adjacent exhibition hall. First-person viewer. First-person view at eye level, standing very close to the large painting so that it fills most of the frame.",
+  "id": "66",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "museum_painting",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "massive oil painting depicting a naval battle on the museum wall",
+      "point": null
+    },
+    "initial_image": "images/case_66.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "A museum gallery hall contains a massive oil painting in an ornate golden frame. The painting depicts a dramatic naval battle with tall sailing ships, cannon smoke, and stormy dark seas. The gallery has a polished wooden floor.",
+    "offscreen_part": "Dim gallery lighting comes from above the hall. The oil painting is mounted on the wall. Behind the viewer, a padded bench for gallery visitors sits in the center of the room. Additional framed paintings of maritime scenes and pastoral landscapes hang on the opposite wall. A doorway with a velvet rope leads into the adjacent exhibition hall.",
+    "visible_count": 7,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "prompt": "An underground subway platform with white tiled walls, yellow safety lines along the platform edge, train tracks in the foreground, overhead fluorescent lights, and directional signage. A few commuters stand on the platform. To the left, the platform extends toward a staircase entrance with turnstiles and a digital route map on the wall. To the right, more vending machines line the wall near a bench and a pillar with a platform number sign. First-person viewer. First-person view at eye level, looking down the length of the subway platform.",
+  "id": "51",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "subway_platform",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "brightly lit vending machine with colorful drink labels against the tiled wall",
+      "point": null
+    },
+    "initial_image": "images/case_51.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "An underground subway platform has white tiled walls, yellow safety lines along the platform edge, train tracks in the foreground, overhead fluorescent lights, and directional signage. A few commuters stand on the platform.",
+    "offscreen_part": "To the left, the platform extends toward a staircase entrance with turnstiles and a digital route map on the wall. To the right, more vending machines line the wall near a bench and a pillar with a platform number sign.",
+    "visible_count": 6,
+    "offscreen_count": 6
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

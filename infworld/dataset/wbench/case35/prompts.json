@@ -1,0 +1,65 @@
+{
+  "prompt": "A narrow earthen path winding through a dense bamboo forest. Tall green bamboo stalks are closely packed on both sides, forming a natural corridor. Dried bamboo leaves and debris cover the brown dirt path. Dappled sunlight filters through the bamboo canopy above, creating patches of light on the ground. The atmosphere is lush, green, and peaceful. High above, the bamboo stalks converge into a dense interlocking canopy of slender green leaves with bright patches of blue sky visible through the gaps. Below foot level, exposed bamboo root knots and shallow puddles of rainwater mark the uneven ground. A weathered wooden signpost with faded kanji characters leans beside the path further ahead. First-person viewer. First-person view at eye level, walking forward along the narrow bamboo forest path.",
+  "id": "35",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "bamboo_forest",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_35.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W+up"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W+down"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "W"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A narrow earthen path winds through a dense bamboo forest. Tall green bamboo stalks are closely packed on both sides, forming a natural corridor. Dried bamboo leaves and debris cover the brown dirt path. Dappled sunlight filters through the bamboo canopy above, creating patches of light on the ground. The scene is lush and green.",
+    "offscreen_part": "The atmosphere is peaceful. High above, the bamboo stalks converge into a dense interlocking canopy of slender green leaves with bright patches of blue sky visible through the gaps. Below foot level, exposed bamboo root knots and shallow puddles of rainwater mark the uneven ground. A weathered wooden signpost with faded kanji characters leans beside the path further ahead.",
+    "visible_count": 5,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

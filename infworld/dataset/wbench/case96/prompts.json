@@ -1,0 +1,65 @@
+{
+  "prompt": "A misty mountain path with worn stone steps ascending through dense fog. Ancient gnarled pine trees with twisted branches emerge from white clouds on the left side. A distant monastery with a traditional curved roof is barely visible through the mountain mist in the background. Rocky outcroppings and sparse grass line the path edges. Monochrome black-and-white ink-wash atmosphere. To the right, a steep cliff drops away revealing layered mountain ridges dissolving into white mist, with a waterfall cascading down a distant rock face. Further right, a weathered stone stele with carved calligraphy stands beside a gnarled pine. Behind the viewer to the right, a small stone pavilion with a curved roof offers a resting point overlooking the cloud-filled valley below. First-person viewer. First-person view looking upward along the stone steps toward the misty monastery. No held objects.",
+  "id": "96",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "misty_mountain",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_96.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "A misty mountain path with worn stone steps ascends through dense fog. Ancient gnarled pine trees with twisted branches emerge from white clouds on the left side. A distant monastery with a traditional curved roof is barely visible through the mountain mist in the background. Rocky outcroppings and sparse grass line the path edges. The scene has a monochrome black-and-white ink-wash atmosphere.",
+    "offscreen_part": "To the right, a steep cliff drops away revealing layered mountain ridges dissolving into white mist, with a waterfall cascading down a distant rock face. Further right, a weathered stone stele with carved calligraphy stands beside a gnarled pine. Behind the viewer to the right, a small stone pavilion with a curved roof offers a resting point overlooking the cloud-filled valley below.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

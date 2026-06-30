@@ -1,0 +1,70 @@
+{
+  "prompt": "A modern city skyline viewed from a skyscraper rooftop at golden hour. Dense clusters of glass and steel high-rise buildings reflect warm orange sunset light. The buildings extend to the horizon in all directions. A river or waterway is faintly visible in the distance. The sky glows with golden and orange hues, scattered clouds catching the sunset. A metal safety railing runs along the rooftop edge in the foreground. Far below the rooftop edge, a multi-lane boulevard is visible with streams of tiny vehicle headlights and taillights, miniature pedestrians on sidewalks, and rows of street trees lining the road. The building's own glass facade drops vertically beneath the railing, with lit office windows receding downward floor by floor. First-person viewer. First-person view from the edge of a skyscraper rooftop, looking outward at the city skyline at roughly eye level, with the metal railing visible at the bottom of the frame.",
+  "id": "36",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "skyscraper_rooftop",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "metal safety railing at the rooftop edge",
+      "point": null
+    },
+    "initial_image": "images/case_36.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "up"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A modern city skyline is viewed from a skyscraper rooftop at golden hour. Dense clusters of glass and steel high-rise buildings reflect warm orange sunset light. A river or waterway is faintly visible in the distance. The sky glows with golden and orange hues, scattered clouds catching the sunset. A metal safety railing runs along the rooftop edge in the foreground. Far below the rooftop edge, a multi-lane boulevard is visible with streams of tiny vehicle headlights and taillights, and rows of street trees lining the road. The building's own glass facade drops vertically beneath the railing, with lit office windows receding downward floor by floor.",
+    "offscreen_part": "The buildings extend to the horizon in all directions. Miniature pedestrians are on the sidewalks of the multi-lane boulevard far below the rooftop edge.",
+    "visible_count": 7,
+    "offscreen_count": 2
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

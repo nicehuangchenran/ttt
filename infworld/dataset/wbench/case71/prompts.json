@@ -1,0 +1,65 @@
+{
+  "prompt": "A high-rise apartment balcony at sunset overlooking a sprawling modern city skyline with glass skyscrapers reflecting golden light, a river winding through the urban landscape, an orange and purple sunset sky, and a potted plant on the balcony floor beside the sleek metal railing. Beyond the current view to the right, neighboring high-rise towers with lit windows stand close by, and a rooftop swimming pool on a lower building is visible below. Behind the viewer through the sliding glass door, a modern living room with a grey sectional sofa, a floor lamp, and a wall-mounted television is dimly lit by warm interior light. First-person viewer. First-person view at eye level from the balcony, looking out over the city skyline with the metal railing in the foreground.",
+  "id": "71",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "highrise_balcony",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_71.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "S"
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A high-rise apartment balcony at sunset overlooks a sprawling modern city skyline with glass skyscrapers reflecting golden light, a river winding through the urban landscape, an orange and purple sunset sky, and a potted plant on the balcony floor beside the sleek metal railing.",
+    "offscreen_part": "Beyond the current view to the right, neighboring high-rise towers with lit windows stand close by, and a rooftop swimming pool on a lower building is visible below. Behind the viewer through the sliding glass door, a modern living room with a grey sectional sofa, a floor lamp, and a wall-mounted television is dimly lit by warm interior light.",
+    "visible_count": 6,
+    "offscreen_count": 8
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

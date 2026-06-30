@@ -1,0 +1,80 @@
+{
+  "prompt": "A misty lakeside at dawn. A calm lake surface reflects the golden-pink dawn sky. Reeds and cattails grow along the rocky shoreline on both sides. Pine-covered mountains rise in the distance through layers of morning fog. Soft diffused light with warm golden tones breaking through the mist. To the left along the shore, a weathered wooden dock extends into the lake beside a small rowboat tied to a post. To the right, a cluster of birch trees stands near a flat rocky outcrop where a tackle box and thermos rest. Behind the viewer, a gravel trail leads up to a log cabin with smoke drifting from its chimney. First-person viewer. First-person view with both hands gripping a bamboo fishing rod at the bottom center of the frame, the rod extending straight forward over the lake. The rod rotates together with the viewer's perspective when turning.",
+  "id": "78",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "misty_lake",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "movement": "The fishing rod must rotate together with the viewer's perspective. When turning left/right, the rod should swing accordingly, always staying in the viewer's hands.",
+    "initial_image": "images/case_78.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_78_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A misty lakeside at dawn. A calm lake surface reflects the golden-pink dawn sky. Reeds and cattails grow along the rocky shoreline on both sides. Pine-covered mountains rise in the distance through layers of morning fog. Soft diffused light with warm golden tones breaks through the mist.",
+    "offscreen_part": "To the left along the shore, a weathered wooden dock extends into the lake beside a small rowboat tied to a post. To the right, a cluster of birch trees stands near a flat rocky outcrop where a tackle box and thermos rest. Behind the viewer, a gravel trail leads up to a log cabin with smoke drifting from its chimney.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "causal_fidelity": {
+    "dims": [
+      "fluid_dynamics",
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

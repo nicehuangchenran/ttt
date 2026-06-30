@@ -1,0 +1,70 @@
+{
+  "prompt": "A traditional Japanese zen rock garden (karesansui). Carefully raked white gravel forms concentric circle patterns, with asymmetric groups of moss-covered stones placed outside the circles. A bamboo water feature (shishi-odoshi) sits to the right. A bamboo fence and the edge of a wooden veranda form the boundary. Soft overcast light with muted monochrome grey tones. To the left, a stone basin (tsukubai) with a bamboo dipper sits beneath a low-hanging maple branch with green leaves. Further left along the veranda, sliding shoji screens open into a tatami room with a low table. To the right beyond the shishi-odoshi, a stone path of stepping stones leads around the corner of the building toward a hidden garden gate. First-person viewer. First-person view from the veranda edge looking out across the raked gravel patterns toward the stones and bamboo fence. No held objects.",
+  "id": "91",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "zen_garden",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "bamboo water feature (shishi-odoshi)",
+      "point": null
+    },
+    "initial_image": "images/case_91.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "This is a traditional Japanese zen rock garden (karesansui). Carefully raked white gravel forms concentric circle patterns, with asymmetric groups of moss-covered stones placed outside the circles. A bamboo water feature (shishi-odoshi) sits to the right. A bamboo fence and the edge of a wooden veranda form the boundary. The scene has soft overcast light with muted monochrome grey tones.",
+    "offscreen_part": "To the left, a stone basin (tsukubai) with a bamboo dipper sits beneath a low-hanging maple branch with green leaves. Further left along the veranda, sliding shoji screens open into a tatami room with a low table. To the right beyond the shishi-odoshi, a stone path of stepping stones leads around the corner of the building toward a hidden garden gate.",
+    "visible_count": 7,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

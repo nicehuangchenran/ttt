@@ -1,0 +1,70 @@
+{
+  "prompt": "A long hospital corridor with beige walls, multiple patient room doors on both sides, overhead fluorescent panel lights, medical equipment and supply carts along the walls, and a nurses' station visible in the distance. Ahead past the nurses' station, the corridor opens into a T-junction with elevator doors and a green emergency exit sign. Behind, the corridor leads back toward a waiting area with plastic chairs and a water cooler near the entrance lobby. First-person viewer. First-person view at eye level, looking straight down the hospital corridor.",
+  "id": "54",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "hospital_corridor",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "red fire extinguisher in a glass case mounted on the wall",
+      "point": null
+    },
+    "initial_image": "images/case_54.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "S"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "There is a long hospital corridor with beige walls. Multiple patient room doors are set on both sides of the corridor. Overhead fluorescent panel lights are installed on the corridor ceiling. A nurses' station is visible in the distance at the end of the corridor.",
+    "offscreen_part": "Medical equipment and supply carts are arranged along the corridor walls. Ahead past the nurses' station, the corridor opens into a T-junction with elevator doors and a green emergency exit sign. Behind the current viewing perspective, the corridor leads back toward a waiting area with plastic chairs and a water cooler near the entrance lobby.",
+    "visible_count": 5,
+    "offscreen_count": 7
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

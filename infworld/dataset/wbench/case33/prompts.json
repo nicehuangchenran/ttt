@@ -1,0 +1,71 @@
+{
+  "prompt": "The interior of a grand Gothic cathedral. Rows of dark wooden pews line both sides of a central stone-paved aisle. Tall stone columns with pointed arches rise along the nave. Stained glass windows on the side walls filter colorful light into the space. At the far end, an ornate golden altar with tall candles and a golden crucifix gleams under warm ambient light. Ribbed vaulting stretches overhead. The atmosphere is solemn and reverent. High above, the ceiling features intricate cross-ribbed vaulting with carved stone bosses at each intersection. First-person viewer. First-person view at eye level, standing in the central nave of the cathedral and facing the main altar.",
+  "id": "33",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "shape-sorting puzzle overhead workspace",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "robot",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "golden crucifix on the main altar",
+      "point": null
+    },
+    "initial_image": "images/case_33.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "down"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "The interior of a grand Gothic cathedral. Rows of dark wooden pews line both sides of a central stone-paved aisle. Tall stone columns with pointed arches rise along the nave. Stained glass windows on the side walls filter colorful light into the space. At the far end, an ornate golden altar with tall candles and a golden crucifix gleams under warm ambient light. Ribbed vaulting stretches overhead.",
+    "offscreen_part": "The atmosphere is solemn and reverent. High above, the ceiling features intricate cross-ribbed vaulting with carved stone bosses at each intersection.",
+    "visible_count": 6,
+    "offscreen_count": 2
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "prompt": "A narrow urban alley at dusk with tall brick walls covered in graffiti on both sides, a dead-end wall ahead, dumpsters and scattered litter on the wet concrete ground, a dim orange streetlight overhead, fire escapes on the building walls, and a moody foggy atmosphere. Behind the viewer, the alley widens toward a cross street with passing car headlights and a convenience store with a lit sign. To the left, a narrow side passage branches off with flickering neon signs from a bar entrance, a metal staircase leading to upper floors, and steam venting from a kitchen exhaust duct. First-person viewer. First-person view at eye level, looking toward the dead end of the narrow alley.",
+  "id": "70",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "urban_alley",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_70.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "left"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "left"
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A narrow urban alley at dusk has tall brick walls covered in graffiti on both sides, a dead-end wall ahead, dumpsters and scattered litter on the wet concrete ground, a dim orange streetlight overhead, fire escapes on the building walls, and a moody foggy atmosphere.",
+    "offscreen_part": "Behind the viewer, the alley widens toward a cross street with passing car headlights and a convenience store with a lit sign. To the left, a narrow side passage branches off with flickering neon signs from a bar entrance, a metal staircase leading to upper floors, and steam venting from a kitchen exhaust duct.",
+    "visible_count": 9,
+    "offscreen_count": 7
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

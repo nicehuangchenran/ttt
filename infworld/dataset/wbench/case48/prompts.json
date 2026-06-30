@@ -1,0 +1,70 @@
+{
+  "prompt": "A modern kitchen interior with warm natural light. A white-and-grey marble or granite countertop stretches across the foreground. Light wood cabinets with simple hardware hang above. A stainless steel faucet and sink area sits to the left near a large window framed in black that looks out onto greenery. White subway tile backsplash. A white coffee cup and other kitchen items are visible on the counter. Beyond the countertop, a black gas range with black iron grates and a stainless steel range hood are mounted against the far wall. A wooden knife block and a glass olive oil bottle sit along the back counter. Two small potted plants sit on the windowsill. Behind the viewer's starting position, a kitchen island with bar stools and a fruit bowl occupies the center of the room. First-person viewer. First-person view at eye level, standing in the kitchen and facing the countertop with the red enamel teapot prominently centered.",
+  "id": "48",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "kitchen",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "red enamel teapot on the marble countertop",
+      "point": null
+    },
+    "initial_image": "images/case_48.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "S"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A modern kitchen interior with warm natural light. A white-and-grey marble or granite countertop stretches across the foreground. Light wood cabinets with simple hardware hang above. A stainless steel faucet and sink area sits to the left near a large window framed in black that looks out onto greenery. White subway tile backsplash. A white coffee cup and other kitchen items are visible on the counter. Beyond the countertop, a black gas range with black iron grates and a stainless steel range hood are mounted against the far wall. A wooden knife block and a glass olive oil bottle sit along the back counter. Two small potted plants sit on the windowsill.",
+    "offscreen_part": "Behind the viewer's starting position, a kitchen island with bar stools and a fruit bowl occupies the center of the room.",
+    "visible_count": 9,
+    "offscreen_count": 1
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "prompt": "A sleek sci-fi laboratory corridor with polished white floors and blue guide lines. Glass walls on both sides reveal lab equipment including robotic arms and glowing vials. Holographic data displays emit blue light along the corridor. CG rendered style with high-tech metallic and glass surfaces. Off-screen behind: a sealed airlock door with a red warning light and a biohazard symbol. Off-screen to the left: a decontamination chamber with UV light panels. Off-screen to the right: a server room with rows of blinking data racks behind glass. First-person viewer. First-person perspective, eye-level, looking down the corridor.",
+  "id": "100",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "scifi",
+      "name": "lab_corridor",
+      "category": "Workspace"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_100.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A sleek sci-fi laboratory corridor has polished white floors and blue guide lines. Glass walls on both sides reveal lab equipment including robotic arms and glowing vials. Holographic data displays emit blue light along the corridor. The scene is in CG rendered style with high-tech metallic and glass surfaces.",
+    "offscreen_part": "Off-screen behind the visible area, there is a sealed airlock door with a red warning light and a biohazard symbol. Off-screen to the left of the visible area, there is a decontamination chamber with UV light panels. Off-screen to the right of the visible area, there is a server room with rows of blinking data racks behind glass.",
+    "visible_count": 4,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

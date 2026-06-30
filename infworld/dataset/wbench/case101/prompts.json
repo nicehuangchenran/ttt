@@ -1,0 +1,65 @@
+{
+  "prompt": "A Japanese summer fireworks festival along a riverbank at night. Wooden railing along the river in the foreground. Colorful food stalls selling takoyaki and yakisoba with red paper lanterns strung above. People in yukata browse the stalls. The dark river reflects warm lantern lights. Fireworks burst in the night sky. Anime style with warm lantern glow and vibrant festival atmosphere. Off-screen to the left: a goldfish scooping game stall (kingyo-sukui) and a cotton candy vendor with children queuing. Off-screen to the right: a shaved ice (kakigori) stall and a traditional shooting gallery booth with stuffed animal prizes. First-person viewer. First-person perspective, eye-level, standing at the riverbank festival area looking across the stalls.",
+  "id": "101",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "fireworks_festival",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_101.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A Japanese summer fireworks festival is held along a riverbank at night. There is a wooden railing along the river in the foreground. Colorful food stalls selling takoyaki and yakisoba have red paper lanterns strung above. People in yukata browse the stalls. The dark river reflects warm lantern lights. Fireworks burst in the night sky. The scene is in anime style with warm lantern glow and vibrant festival atmosphere.",
+    "offscreen_part": "Off-screen to the left, there is a goldfish scooping game stall (kingyo-sukui) and a cotton candy vendor with children queuing. Off-screen to the right, there is a shaved ice (kakigori) stall and a traditional shooting gallery booth with stuffed animal prizes.",
+    "visible_count": 7,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

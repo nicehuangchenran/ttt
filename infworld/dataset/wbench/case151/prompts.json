@@ -1,0 +1,71 @@
+{
+  "prompt": "The interior of a crowded anime-style subway car. Standing passengers in muted winter clothing pack the aisle, swaying gently with the train's motion. Metal poles, overhead hanging straps, and sliding doors define the carriage layout. Windows along both sides show blurred lights and structures rushing past outside, conveying rapid transit movement. The color palette is cool and subdued with warm interior lighting. Ahead down the aisle, more standing passengers crowd near the far sliding doors. To the left, a row of occupied bench seats lines the wall beneath the windows. The sliding doors on both sides lead to the adjacent car or the platform at the next station stop. First-person viewer. First-person POV at chest height inside the subway car. The viewer's hands are visible in the lower foreground holding a cup of dark coffee filled to the brim. The camera looks straight ahead down the crowded aisle. No visible character body beyond the hands.",
+  "id": "151",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "subway",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "initial_image": "images/case_151.jpg",
+    "tracking_object": null,
+    "style_new": "styled",
+    "subject_mask": "masks/case_151_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "left"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "The interior of a crowded anime-style subway car is shown. Standing passengers in muted winter clothing pack the aisle. Metal poles, overhead hanging straps, and sliding doors define the carriage layout. Windows along the visible side show blurred lights and structures rushing past outside, conveying rapid transit movement. The color palette is cool and subdued with warm interior lighting. Ahead down the aisle, more standing passengers crowd near the far sliding doors.",
+    "offscreen_part": "Standing passengers in the aisle sway gently with the train's motion. Windows are present along the left side of the subway car outside the visible frame. To the left, a row of occupied bench seats lines the wall beneath the windows. The sliding doors on both sides of the subway car lead to the adjacent car or the platform at the next station stop.",
+    "visible_count": 8,
+    "offscreen_count": 4
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

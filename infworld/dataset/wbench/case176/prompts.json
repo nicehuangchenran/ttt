@@ -1,0 +1,73 @@
+{
+  "prompt": "A snow-covered mountain trail at high altitude. The narrow, uneven path is carved into the side of a steep slope with thick fresh white snow covering every surface. To the left, dark rock faces rise sharply with patches of ice. To the right, the terrain drops away into a deep valley obscured by clouds and mist. Faint footprints from previous hikers are partially filled by fresh snowfall. Snowflakes drift across the frame. The sky is pale overcast grey with flat diffused light. The trail ahead winds upward around a rocky outcrop before curving left along the ridgeline. Behind the viewer, the path descends steeply back toward a snow-covered tree line and a distant base camp shelter. Turning left toward the rock face reveals an icy crevice and exposed granite ledges. First-person viewer. First-person perspective, head-height camera looking up and forward along the snowy trail. A gloved hand gripping a hiking ice axe is visible at the lower right of the frame.",
+  "id": "176",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "snow_trail",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "initial_image": "images/case_176.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_176_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 4
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 5
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A snow-covered mountain trail at high altitude. The narrow, uneven path is carved into the side of a steep slope with thick fresh white snow covering every surface. To the left, dark rock faces rise sharply with patches of ice. To the right, the terrain drops away into a deep valley obscured by clouds and mist. Faint footprints from previous hikers are partially filled by fresh snowfall. Snowflakes drift across the frame. The sky is pale overcast grey with flat diffused light. The trail ahead winds upward around a rocky outcrop.",
+    "offscreen_part": "The trail ahead curves left along the ridgeline after winding around the rocky outcrop. Behind the viewer, the path descends steeply back toward a snow-covered tree line and a distant base camp shelter. Turning left toward the rock face reveals an icy crevice and exposed granite ledges.",
+    "visible_count": 8,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

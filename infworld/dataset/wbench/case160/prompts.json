@@ -1,0 +1,67 @@
+{
+  "prompt": "A bright supermarket aisle stretching straight ahead with tall metal shelving units on both sides, densely stocked with colorful packaged goods including cereals, canned foods, and snacks. Price tags line the shelf edges in neat rows. Fluorescent strip lights on the ceiling cast even white illumination across the polished tile floor, which reflects faint highlights. A shopping cart is visible further down the aisle. The strong linear perspective creates depth cues converging toward the far end of the aisle. At the far end, the aisle opens into a cross-aisle connecting to the fresh produce and refrigerated sections. To the right, a perpendicular aisle branches off toward household and cleaning products. To the left, another perpendicular aisle leads to the bakery counter. Behind the viewer, the entrance and checkout lanes are located near the store front. First-person viewer. First-person POV at standing eye level, centered in the middle of the supermarket aisle. The camera faces straight ahead down the length of the aisle. No visible character body; the viewer walks naturally through the space.",
+  "id": "160",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "supermarket_aisle",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "initial_image": "images/case_160.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "left"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "S"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A bright supermarket aisle stretches straight ahead with tall metal shelving units on both sides, densely stocked with colorful packaged goods including cereals, canned foods, and snacks. Price tags line the shelf edges in neat rows. Fluorescent strip lights on the ceiling cast even white illumination across the polished tile floor, which reflects faint highlights. Shopping carts are visible in the aisle. The strong linear perspective creates depth cues converging toward the far end of the aisle.",
+    "offscreen_part": "At the far end, the aisle opens into a cross-aisle connecting to the fresh produce and refrigerated sections. To the right, a perpendicular aisle branches off toward household and cleaning products. To the left, another perpendicular aisle leads to the bakery counter. Behind the viewer, the entrance and checkout lanes are located near the store front.",
+    "visible_count": 6,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

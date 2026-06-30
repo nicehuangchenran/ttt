@@ -1,0 +1,70 @@
+{
+  "prompt": "A tropical sandy beach with golden sand, turquoise ocean waves, palm trees lining the shore, and a distant green hillside under a bright blue sky with scattered clouds. Ahead toward the ocean, shallow surf breaks over a sandbar. Beyond the current view, a few swimmers wade in the water. Behind the current view, a row of thatched beach huts and rental umbrellas line the upper beach near a paved promenade. First-person viewer. First-person view at eye level, looking toward the ocean along the beach.",
+  "id": "52",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "beach",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "bright yellow surfboard standing upright in the sand",
+      "point": null
+    },
+    "initial_image": "images/case_52.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A tropical sandy beach with golden sand, turquoise ocean waves, palm trees lining the shore, and a distant green hillside under a bright blue sky with scattered clouds. Ahead toward the ocean, shallow surf breaks over a sandbar.",
+    "offscreen_part": "Beyond the current view, a few swimmers wade in the water. Behind the current view, a row of thatched beach huts and rental umbrellas line the upper beach near a paved promenade.",
+    "visible_count": 6,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

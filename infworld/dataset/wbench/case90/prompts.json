@@ -1,0 +1,73 @@
+{
+  "prompt": "A whimsical mushroom forest with giant mushrooms in red, purple, and blue with white spots towering overhead. A winding stone path with moss runs through the forest. Glowing fireflies drift among the mushrooms. A tiny wooden fairy door is set into one mushroom trunk. Soft green mist fades into the background. Lush grass and small stones border the path. Beyond the current view to the left, a hollow tree stump serves as a tiny fairy house with glowing windows and a miniature garden. Beyond the current view, a crystal-clear stream trickles past smooth pebbles. Beyond the current view to the right, a cluster of bioluminescent toadstools surrounds a mossy rock shaped like a sleeping frog, and a spider web glistening with dew stretches between two mushroom caps. First-person viewer. First-person view at low eye level with both hands visible reaching forward, looking down the stone path through the mushroom forest. No held objects.",
+  "id": "90",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "fantasy",
+      "name": "mushroom_forest",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "tiny wooden fairy door in a mushroom trunk",
+      "point": null
+    },
+    "initial_image": "images/case_90.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_90_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A whimsical mushroom forest with giant mushrooms in red, purple, and blue with white spots towering overhead. A winding stone path with moss runs through the forest. Glowing fireflies drift among the mushrooms. A tiny wooden fairy door is set into one mushroom trunk. Soft green mist fades into the background. Lush grass and small stones border the path.",
+    "offscreen_part": "Beyond the current view to the left, a hollow tree stump serves as a tiny fairy house with glowing windows and a miniature garden. Beyond the current view, a crystal-clear stream trickles past smooth pebbles. Beyond the current view to the right, a cluster of bioluminescent toadstools surrounds a mossy rock shaped like a sleeping frog, and a spider web glistening with dew stretches between two mushroom caps.",
+    "visible_count": 6,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

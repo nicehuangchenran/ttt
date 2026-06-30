@@ -1,0 +1,65 @@
+{
+  "prompt": "A small harbor during golden sunset. Wooden dock planks with coiled rope and a red buoy in the foreground. Colorful fishing boats moored to the dock with reflections in calm water. A lighthouse at the harbor entrance. Dramatic sunset sky with clouds in orange, pink, and purple. Oil painting style with thick impasto brushstrokes and warm golden-orange palette. Off-screen ahead: stacked lobster traps and a fisherman's shack with drying nets. Off-screen above: seagulls circling and the lighthouse lamp beginning to glow. Off-screen to the left: a weathered boathouse with a slipway and an old anchor propped against the wall. First-person viewer. First-person perspective, eye-level, standing on the dock looking toward the harbor and sunset.",
+  "id": "103",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "harbor_sunset",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_103.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "up",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "down",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A small harbor during golden sunset. Wooden dock planks with coiled rope and a red buoy are in the foreground. Colorful fishing boats are moored to the dock with reflections in the calm water. A lighthouse stands at the harbor entrance. There is a dramatic sunset sky with clouds in orange, pink, and purple. The scene is rendered in an oil painting style with thick impasto brushstrokes and a warm golden-orange palette.",
+    "offscreen_part": "Off-screen ahead, there are stacked lobster traps and a fisherman's shack with drying nets. Off-screen above, seagulls are circling and the lighthouse lamp is beginning to glow. Off-screen to the left, there is a weathered boathouse with a slipway and an old anchor propped against the wall.",
+    "visible_count": 10,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

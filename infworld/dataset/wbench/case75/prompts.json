@@ -1,0 +1,79 @@
+{
+  "prompt": "A cherry blossom garden in full spring bloom. A stone path winds between rows of sakura trees with dense pink blossoms. Pink petals drift through the air. A large red torii gate stands ahead framing the path. A stone lantern sits on the left edge. People stroll in the background. Warm afternoon sunlight filters through the canopy. Beyond the torii gate, a small wooden shrine with a sloped roof and offering box is nestled among the cherry trees. A second stone lantern stands on the right side further along the path, and a wooden bench sits beneath a particularly large sakura tree past the gate. First-person viewer. First-person view with both hands holding a digital camera with a large rear LCD screen showing the live viewfinder image of the scene ahead.",
+  "id": "75",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "cherry_blossom_garden",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "stone lantern on the left side of the path",
+      "point": null
+    },
+    "initial_image": "images/case_75.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_75_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "W"
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "A cherry blossom garden is in full spring bloom. A stone path winds between rows of sakura trees with dense pink blossoms. Pink petals drift through the air. A large red torii gate stands ahead framing the path. A stone lantern sits on the left edge. People stroll in the background. Warm afternoon sunlight filters through the canopy. Beyond the torii gate, a small wooden shrine with a sloped roof is nestled among the cherry trees.",
+    "offscreen_part": "The small wooden shrine nestled among the cherry trees beyond the torii gate has an offering box. A second stone lantern stands on the right side further along the path. A wooden bench sits beneath a particularly large sakura tree past the gate.",
+    "visible_count": 8,
+    "offscreen_count": 3
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "wind_weather",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

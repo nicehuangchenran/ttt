@@ -1,0 +1,68 @@
+{
+  "prompt": "A large outdoor construction site under a partly cloudy sky. Multiple yellow tower cranes rise above partially built concrete structures and steel framework. Scaffolding and temporary structures surround the work area. Stacks of lumber, metal beams, and building materials are scattered across the site. Construction workers in hard hats and safety vests move around carrying materials. The ground is a mix of concrete and dirt. Ahead, a steel framework skeleton of a multi-story building rises with workers visible on upper scaffolding levels. To the left, a concrete mixer truck is parked beside a pile of gravel. To the right, a portable office trailer and tool storage containers sit beyond a chain-link fence. Stacked metal beams and rebar bundles line the walking path in every direction. First-person viewer. First-person POV at standing height on the construction site. The viewer's work-gloved hands are visible in the lower-center of the frame, gripping and carrying two parallel metal pipes or beams extending forward. The camera looks straight ahead across the construction site while walking. Workers and cranes are visible in the background.",
+  "id": "168",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "construction",
+      "category": "Workspace"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "initial_image": "images/case_168.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_168_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "A"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "left"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A large outdoor construction site is under a partly cloudy sky. Multiple yellow tower cranes rise above partially built concrete structures and steel framework. Scaffolding and temporary structures surround the work area. Stacks of lumber, metal beams, and building materials are scattered across the site. Construction workers in hard hats and safety vests move around carrying materials. Ahead, a steel framework skeleton of a multi-story building rises. To the left, a concrete mixer truck is parked on the site. Stacked metal beams and rebar bundles are visible in sections of the site.",
+    "offscreen_part": "The ground is a mix of concrete and dirt. Workers are visible on the upper scaffolding levels of the multi-story building. The concrete mixer truck is parked beside a pile of gravel. To the right, a portable office trailer and tool storage containers sit beyond a chain-link fence. Stacked metal beams and rebar bundles line the walking path in every direction.",
+    "visible_count": 8,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "prompt": "A dimly lit underground limestone cave passage. Rough textured cave walls with layered rock formations, stalactites, and flowstone line both sides. The rocky ground is uneven with small puddles reflecting warm amber light from an unseen headlamp or light source. The passage narrows ahead into darkness with a faint opening visible in the distance. Greenish moss patches cling to some rock surfaces. The atmosphere is mysterious and subterranean. Directly overhead, the cave ceiling is densely packed with long pointed stalactites, soda straw formations, and glistening wet flowstone curtains that drape down from the rock. Further into the cave, beyond the current view, small bats cling to the upper recesses between the formations. First-person viewer. First-person view at eye level, standing inside the cave passage and looking forward into the tunnel.",
+  "id": "37",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "limestone_cave",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_37.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "up"
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A dimly lit underground limestone cave passage is shown. Rough textured cave walls with layered rock formations, stalactites, and flowstone line both sides. The rocky ground is uneven with small puddles reflecting warm amber light. The passage narrows ahead into darkness with a faint opening visible in the distance. Greenish moss patches cling to some rock surfaces. Directly overhead, the cave ceiling is densely packed with long pointed stalactites, soda straw formations, and glistening wet flowstone curtains that drape down from the rock.",
+    "offscreen_part": "The warm amber light comes from an unseen headlamp or light source. The atmosphere of the space is mysterious and subterranean. Further into the cave beyond the current view, small bats cling to the upper recesses between the formations.",
+    "visible_count": 6,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

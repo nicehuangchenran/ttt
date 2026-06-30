@@ -1,0 +1,65 @@
+{
+  "prompt": "A narrow coastal cliff trail with a weathered wooden safety fence along the edge, deep blue ocean far below with white waves crashing against rocky cliffs, green shrubs and vegetation clinging to the rocky cliff face, and a bright sunny sky. To the right along the trail, the path curves around a rocky headland where a small stone lookout platform with a coin-operated telescope overlooks the sea. Further right, a natural sea arch formation juts out from the cliffside. First-person viewer. First-person view at eye level, looking along the cliff trail with the ocean to the left and the cliff face to the right.",
+  "id": "67",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "cliff_trail",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_67.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "D"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "D"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "D"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "D"
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "A narrow coastal cliff trail with a weathered wooden safety fence runs along the edge. Deep blue ocean lies far below with white waves crashing against rocky cliffs. Green shrubs and vegetation cling to the rocky cliff face. A bright sunny sky is overhead.",
+    "offscreen_part": "To the right along the trail, the path curves around a rocky headland where a small stone lookout platform with a coin-operated telescope overlooks the sea. Further right, a natural sea arch formation juts out from the cliffside.",
+    "visible_count": 4,
+    "offscreen_count": 2
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

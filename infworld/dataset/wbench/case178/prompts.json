@@ -1,0 +1,70 @@
+{
+  "prompt": "The interior corridor of a futuristic space station in zero gravity. A cylindrical tunnel with smooth white paneling and circular structural rings. Glowing cyan-blue strip lights run along the edges where walls meet ceiling and floor. Transparent holographic display panels embedded in the walls show scrolling data and star maps. A pen and crumpled paper float weightlessly in the air. Through a large observation window on the left, the curved edge of Earth is visible against the black void of space with a thin blue atmospheric line. Behind the viewer, the corridor bends toward a docking module with airlock hatches and yellow warning markings. To the right, a sealed bulkhead door with a circular porthole leads to a crew quarters module. Ahead, the corridor extends into a junction where branching tunnels connect to the command bridge and the research lab. First-person viewer. First-person perspective, floating at corridor center height, looking forward down the cylindrical corridor. No character body visible. Zero-gravity viewpoint.",
+  "id": "178",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "scifi",
+      "name": "space_station",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "initial_image": "images/case_178.jpg",
+    "tracking_object": null,
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "left"
+    },
+    {
+      "turn": 5,
+      "type": "navigation",
+      "action": "left"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "The interior corridor of a futuristic space station is in zero gravity. It is a cylindrical tunnel with smooth white paneling and circular structural rings. Glowing cyan-blue strip lights run along the edges where walls meet ceiling and floor. Transparent holographic display panels embedded in the walls show scrolling data and star maps. A pen and crumpled paper float weightlessly in the air. Through a large observation window on the left, the curved edge of Earth is visible against the black void of space with a thin blue atmospheric line.",
+    "offscreen_part": "Behind the viewer, the corridor bends toward a docking module with airlock hatches and yellow warning markings. To the right, a sealed bulkhead door with a circular porthole leads to a crew quarters module. Ahead, the corridor extends into a junction where branching tunnels connect to the command bridge and the research lab.",
+    "visible_count": 15,
+    "offscreen_count": 11
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

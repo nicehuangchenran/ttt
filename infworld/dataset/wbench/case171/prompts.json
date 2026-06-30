@@ -1,0 +1,68 @@
+{
+  "prompt": "A grand ancient library hall with towering dark wooden bookshelves on both sides, ladders leaning against them. A vaulted Gothic stone ceiling arches overhead. Tall arched windows at the far end let golden sunlight stream through, illuminating floating dust particles. The floor is stone, and the atmosphere is dim and scholarly. Beyond the visible aisle, additional rows of bookshelves extend to the left and right, forming a grid of narrow corridors. Turning left reveals a reading alcove with a heavy oak table and brass candelabra tucked between shelf rows. First-person viewer. First-person perspective, head-height camera, looking forward down the aisle between bookshelves. A hand holding a lantern is visible at the lower right of the frame.",
+  "id": "171",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "ancient_library",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "initial_image": "images/case_171.jpg",
+    "tracking_object": null,
+    "style_new": "styled",
+    "subject_mask": "masks/case_171_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "zigzag",
+  "scene_adherence": {
+    "visible_part": "A grand ancient library hall features towering dark wooden bookshelves on both sides, with ladders leaning against the bookshelves. A vaulted Gothic stone ceiling arches overhead. Tall arched windows at the far end let golden sunlight stream through, illuminating floating dust particles. The floor is made of stone, and the atmosphere in the hall is dim and scholarly.",
+    "offscreen_part": "Beyond the visible aisle, additional rows of bookshelves extend to the left and right, forming a grid of narrow corridors. Turning left reveals a reading alcove with a heavy oak table and brass candelabra tucked between shelf rows.",
+    "visible_count": 9,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

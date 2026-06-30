@@ -1,0 +1,70 @@
+{
+  "prompt": "A spacious underground concrete parking garage with grey columns marked with alphanumeric bay numbers, painted directional arrows on the floor, fluorescent tube lights on the ceiling, a green illuminated exit sign in the distance, and a few parked vehicles including a motorcycle. To the right, additional parking bays hold a white SUV and a silver minivan beside a concrete wall with a fire hose cabinet. To the left, an open lane leads to the ramp exit with speed bumps and a height-limit bar. First-person viewer. First-person view at eye level, looking down the main driving lane of the parking garage.",
+  "id": "55",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "parking_garage",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "red sedan parked in the nearest spot to the right",
+      "point": null
+    },
+    "initial_image": "images/case_55.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "D"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "D"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "A"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "A"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "This is a spacious underground concrete parking garage with grey columns marked with alphanumeric bay numbers, painted directional arrows on the floor, fluorescent tube lights on the ceiling, a green illuminated exit sign in the distance, and a few parked vehicles including a motorcycle.",
+    "offscreen_part": "To the right, additional parking bays hold a white SUV and a silver minivan beside a concrete wall with a fire hose cabinet. To the left, an open lane leads to the ramp exit with speed bumps and a height-limit bar.",
+    "visible_count": 6,
+    "offscreen_count": 8
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

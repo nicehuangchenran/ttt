@@ -1,0 +1,67 @@
+{
+  "prompt": "A grand neoclassical museum gallery interior. Polished marble floor with subtle veining stretches down a long hall. Tall grey marble columns with Corinthian capitals line both sides. Large oil paintings in ornate gold frames hang on the walls. White marble sculptures on pedestals — including a prominent Venus figure — stand along the centre aisle, protected by brass stanchion ropes. The gallery recedes through a series of arches toward a doorway with a classical pediment. An arched glass skylight ceiling floods the hall with warm diffused natural light. A dark wooden balustrade railing runs along one side. A few visitors stroll quietly in the distance. Behind the viewer, a wide marble staircase with ornate iron balusters descends to a lower-floor lobby, and a broad archway opens into an adjacent exhibition hall displaying medieval tapestries. To the left, a side alcove set into the wall houses a glass display case with small bronze figurines. To the right, beyond the nearest column, a wooden bench for visitors sits against the wall beneath a large landscape painting. First-person viewer. First-person eye-level view facing down the length of the museum gallery, with the balustrade railing visible at the lower-right edge of the frame.",
+  "id": "5",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "museum_gallery",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "initial_image": "images/case_5.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A grand neoclassical museum gallery interior. Polished marble floor with subtle veining stretches down a long hall. Tall grey marble columns with Corinthian capitals line both sides. Large oil paintings in ornate gold frames hang on the walls. White marble sculptures on pedestals — including a prominent Venus figure — stand along the centre aisle, protected by brass stanchion ropes. The gallery recedes through a series of arches toward a doorway with a classical pediment. An arched glass skylight ceiling floods the hall with warm diffused natural light. A dark wooden balustrade railing runs along one side. A few visitors stroll quietly in the distance.",
+    "offscreen_part": "Behind the viewer, a wide marble staircase with ornate iron balusters descends to a lower-floor lobby, and a broad archway opens into an adjacent exhibition hall displaying medieval tapestries. To the left, a side alcove set into the wall houses a glass display case with small bronze figurines. To the right, beyond the nearest column, a wooden bench for visitors sits against the wall beneath a large landscape painting.",
+    "visible_count": 10,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

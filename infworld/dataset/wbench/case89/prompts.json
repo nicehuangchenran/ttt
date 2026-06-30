@@ -1,0 +1,70 @@
+{
+  "prompt": "A space station docking platform with metallic grid floor panels, some sections transparent revealing Earth's blue glow below. A large silver spacecraft is docked on the right side. Robotic loading arms extend from the platform structure. The curved edge of the station frames a starfield and Earth in the background. Industrial sci-fi lighting with orange guide strips on the floor. Further ahead, a cargo airlock with a heavy reinforced door and warning stripes connects to the main station hub. Behind the viewer, a control tower with panoramic windows rises above the platform, and an automated supply shuttle is docked at a secondary bay with fuel hoses attached. First-person viewer. First-person view standing on the docking platform looking forward across the transparent floor panels toward the docked spacecraft and Earth below. No held objects.",
+  "id": "89",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "scifi",
+      "name": "space_station_dock",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "robotic loading arm on the right side",
+      "point": null
+    },
+    "initial_image": "images/case_89.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A space station docking platform has metallic grid floor panels, some sections of which are transparent revealing Earth's blue glow below. A large silver spacecraft is docked on the right side. Robotic loading arms extend from the platform structure. The curved edge of the station frames a starfield and Earth in the background. Industrial sci-fi lighting with orange guide strips on the floor is present in the scene.",
+    "offscreen_part": "Further ahead, a cargo airlock with a heavy reinforced door and warning stripes connects to the main station hub. Behind the viewer, a control tower with panoramic windows rises above the platform, and an automated supply shuttle is docked at a secondary bay with fuel hoses attached.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

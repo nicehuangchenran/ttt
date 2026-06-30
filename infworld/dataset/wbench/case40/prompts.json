@@ -1,0 +1,68 @@
+{
+  "prompt": "A traditional Japanese temple courtyard. A large red wooden torii gate stands prominently ahead, framing a stone path lined with cherry blossom trees in full bloom. Pink petals scatter on the ground. A raked white gravel garden with stepping stones extends in the foreground. A moss-covered stone lantern sits to the left of the gate. A wooden temple building with a curved dark tile roof stands to the right of the gate. Misty green mountains rise in the background. Soft overcast light creates a serene atmosphere. To the right of the courtyard, a weathered wooden bell tower with a bronze temple bell stands beside a stone basin with a bamboo water dipper. Behind the viewer, a low wooden fence and a gravel path lead back toward a covered walkway with paper lanterns. First-person viewer. First-person view at eye level, standing in the courtyard and facing the red torii gate ahead.",
+  "id": "40",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "japanese_temple",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "stone lantern to the left of the torii gate",
+      "point": null
+    },
+    "initial_image": "images/case_40.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "left"
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "A traditional Japanese temple courtyard. A large red wooden torii gate stands prominently ahead, framing a stone path lined with cherry blossom trees in full bloom. Pink petals scatter on the ground. A raked white gravel garden with stepping stones extends in the foreground. A moss-covered stone lantern sits to the left of the gate. A wooden temple building with a curved dark tile roof stands to the right of the gate. Misty green mountains rise in the background. Soft overcast light creates a serene atmosphere.",
+    "offscreen_part": "To the right of the courtyard, a weathered wooden bell tower with a bronze temple bell stands beside a stone basin with a bamboo water dipper. Behind the viewer, a low wooden fence and a gravel path lead back toward a covered walkway with paper lanterns.",
+    "visible_count": 8,
+    "offscreen_count": 2
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

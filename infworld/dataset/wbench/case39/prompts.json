@@ -1,0 +1,66 @@
+{
+  "prompt": "A transparent glass-bottomed bridge spanning a deep red-rock canyon. Sturdy metal mesh railings and cable supports line both sides of the narrow walkway. The bridge extends straight forward. Red-brown canyon walls with layered rock strata drop steeply on both sides. Green vegetation covers the canyon rim above. Bright blue sky overhead with midday sunlight. The glass floor surface shows subtle reflections. Far below the glass floor, a narrow turquoise river winds along the canyon bottom between tumbled boulders and sandy banks, its surface glinting in the sunlight. Patches of green shrubs and a narrow gravel trail cling to the base of the canyon walls hundreds of meters down. First-person viewer. First-person view at eye level, walking forward along the center of the glass-bottomed bridge, looking ahead along the span.",
+  "id": "39",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "glass_bridge",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_39.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "down"
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A transparent glass-bottomed bridge spanning a deep red-rock canyon. Sturdy metal mesh railings and cable supports line both sides of the narrow walkway. The bridge extends straight forward. Red-brown canyon walls with layered rock strata drop steeply on both sides. Green vegetation covers the canyon rim above. Bright blue sky overhead with midday sunlight. The glass floor surface shows subtle reflections.",
+    "offscreen_part": "Far below the glass floor, a narrow turquoise river winds along the canyon bottom between tumbled boulders and sandy banks, its surface glinting in the sunlight. Patches of green shrubs and a narrow gravel trail cling to the base of the canyon walls hundreds of meters down.",
+    "visible_count": 7,
+    "offscreen_count": 2
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

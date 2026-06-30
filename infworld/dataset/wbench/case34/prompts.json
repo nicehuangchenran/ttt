@@ -1,0 +1,68 @@
+{
+  "prompt": "A vast open desert at night. A crackling campfire burns in a ring of dark stones on the sandy ground, casting warm orange light on the surrounding sand. Dark sand dunes are silhouetted against a deep blue-black sky with scattered stars. The atmosphere is quiet and expansive, with warm firelight contrasting against the cool dark sky. Directly overhead, the Milky Way stretches in a luminous band across the sky, dense with stars and faint nebulae. Constellations are clearly visible in the unpolluted desert sky. A canvas camping tent and a folded sleeping bag sit on the sand just beyond the firelight ring to the right. First-person viewer. First-person view at eye level, sitting beside the campfire with a lit cigarette extending from the bottom of the frame toward the fire.",
+  "id": "34",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "desert_campfire",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_34.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_34_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "up"
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "A vast open desert at night. A crackling campfire burns in a ring of dark stones on the sandy ground, casting warm orange light on the surrounding sand. Dark sand dunes are silhouetted against a deep blue-black sky with scattered stars. The atmosphere is quiet and expansive, with warm firelight contrasting against the cool dark sky.",
+    "offscreen_part": "Directly overhead, the Milky Way stretches in a luminous band across the sky, dense with stars and faint nebulae. Constellations are clearly visible in the unpolluted desert sky. A canvas camping tent and a folded sleeping bag sit on the sand just beyond the firelight ring to the right.",
+    "visible_count": 6,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

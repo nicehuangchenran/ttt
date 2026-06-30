@@ -1,0 +1,68 @@
+{
+  "prompt": "A high-altitude alpine panorama with snow-capped mountain peaks, green valleys, a turquoise glacial lake in the distance, and a bright blue sky with scattered white clouds. Strong sunlight illuminates the mountain range. Below at lower altitude, alpine meadows with wildflowers, scattered chalets with wooden roofs, and a winding mountain road with hairpin turns become visible. To the left, a steep rocky ridgeline with patches of snow leads down to a forested valley with a small village. To the right, a glacier tongue extends between two peaks above a moraine field. First-person viewer as a paraglider pilot, with the colorful red-orange-blue striped paraglider canopy and suspension lines visible above, and the pilot's legs and harness visible at the bottom of the frame. First-person view from the paraglider harness, looking forward and slightly downward over the alpine landscape, with the canopy edge framing the top of the view.",
+  "id": "59",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "alpine_paraglide",
+      "category": "Sports/Game"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_59.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_59_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W+down"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W+left"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W+down"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "W+right"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A high-altitude alpine panorama with snow-capped mountain peaks, green valleys, a turquoise glacial lake in the distance, and a bright blue sky with scattered white clouds. Strong sunlight illuminates the mountain range.",
+    "offscreen_part": "Below at lower altitude, there are alpine meadows with wildflowers, scattered chalets with wooden roofs, and a winding mountain road with hairpin turns. To the left, a steep rocky ridgeline with patches of snow leads down to a forested valley with a small village. To the right, a glacier tongue extends between two peaks above a moraine field.",
+    "visible_count": 5,
+    "offscreen_count": 7
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

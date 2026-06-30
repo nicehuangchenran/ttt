@@ -1,0 +1,79 @@
+{
+  "prompt": "A sunlit artist's studio with exposed brick walls and wooden shelves holding art supplies. A canvas sits on a wooden easel showing a half-finished landscape painting. Paint tubes, brushes, and palettes are scattered on a worktable. A tall arched window lets in bright natural light, with potted plants and ferns on the sill. Framed sketches hang on the walls. Above, exposed wooden ceiling beams support a hanging pendant lamp and a dried flower wreath. Below the worktable, paint-stained rags, a jar of turpentine, and stacked canvases lean against the wall. Behind the viewer, a cluttered bookshelf holds art reference books, a ceramic coffee mug, and a small plaster bust. First-person viewer. First-person view with the right hand holding a wooden paintbrush tipped with blue paint, extending toward the canvas.",
+  "id": "81",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "artist_studio",
+      "category": "Workspace"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "potted fern plant on the windowsill",
+      "point": null
+    },
+    "initial_image": "images/case_81.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_81_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "down",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "up",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A sunlit artist's studio has exposed brick walls and wooden shelves holding art supplies. A canvas sits on a wooden easel showing a half-finished landscape painting. Paint tubes, brushes, and palettes are scattered on a worktable. A tall arched window lets in bright natural light, with potted plants and ferns on its sill. Framed sketches hang on the walls.",
+    "offscreen_part": "Above the studio, exposed wooden ceiling beams support a hanging pendant lamp and a dried flower wreath. Below the worktable, paint-stained rags, a jar of turpentine, and stacked canvases lean against the wall. Behind the viewer, a cluttered bookshelf holds art reference books, a ceramic coffee mug, and a small plaster bust.",
+    "visible_count": 12,
+    "offscreen_count": 10
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

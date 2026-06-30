@@ -1,0 +1,58 @@
+{
+  "prompt": "A narrow paved mountain road winding downhill through a forested hillside. Tall coniferous and deciduous trees line both sides, with exposed rocks, low grass, and dappled sunlight filtering through the canopy. The road surface is smooth asphalt, curving gently to the right, with a steep drop revealing a distant valley and mountain range under a partly cloudy sky. The setting conveys high elevation and continuous descent. Ahead around the bend, the road continues with a series of switchbacks descending toward a river valley. To the right beyond the tree line, a steep rocky slope drops off toward the valley floor with scattered wildflowers and loose gravel at the road shoulder. First-person viewer. First-person cycling POV at handlebar height. The rider's hands and the bicycle handlebars are partially visible at the bottom edge of the frame. The camera faces forward along the road, capturing the approaching terrain and the sense of speed from the downhill descent.",
+  "id": "149",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "mount",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "vehicle",
+      "desc": "",
+      "movement": ""
+    },
+    "initial_image": "images/case_149.jpg",
+    "tracking_object": null,
+    "style_new": "styled",
+    "subject_mask": "masks/case_149_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 2
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A narrow paved mountain road winds downhill through a forested hillside. Tall coniferous trees line both sides, with exposed rocks, low grass, and dappled sunlight filtering through the canopy. The road surface is smooth asphalt, curving gently to the right, with a steep drop revealing a distant valley and mountain range under a partly cloudy sky. The setting conveys high elevation and continuous descent.",
+    "offscreen_part": "Deciduous trees line the sides of the road alongside coniferous trees. Ahead around the bend, the road continues with a series of switchbacks descending toward a river valley. To the right beyond the tree line, a steep rocky slope drops off toward the valley floor with scattered wildflowers, and loose gravel is present at the road shoulder.",
+    "visible_count": 14,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

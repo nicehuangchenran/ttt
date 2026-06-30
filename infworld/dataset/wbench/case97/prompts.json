@@ -1,0 +1,65 @@
+{
+  "prompt": "A subway station platform with clean geometric design. Blue-and-white patterned tiles with chevron motifs cover the walls. A yellow safety line marks the platform edge. A train with open doors sits on the left track. A digital departure board with orange text displays schedule information overhead. A dark tunnel entrance is visible ahead. Flat, well-lit underground atmosphere. Behind the viewer, the platform extends past a row of metal benches and a vending machine cluster toward a staircase leading up to the exit with a green directional sign. To the left inside the train, rows of orange seats and overhead grab handles are visible through the open doors. To the right, a tiled wall map of the transit system is mounted next to an emergency intercom box. First-person viewer. First-person view standing on the platform behind the yellow safety line, looking toward the tunnel entrance and departure board. No held objects.",
+  "id": "97",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "subway_platform",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_97.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A subway station platform with clean geometric design. Blue-and-white patterned tiles with chevron motifs cover the walls. A yellow safety line marks the platform edge. A train with open doors sits on the left track. A digital departure board with orange text displays schedule information overhead. A dark tunnel entrance is visible ahead. The station has a flat, well-lit underground atmosphere. To the left inside the train, rows of orange seats and overhead grab handles are visible through the open doors.",
+    "offscreen_part": "Behind the viewer, the platform extends past a row of metal benches and a vending machine cluster toward a staircase leading up to the exit with a green directional sign. To the right, a tiled wall map of the transit system is mounted next to an emergency intercom box.",
+    "visible_count": 9,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

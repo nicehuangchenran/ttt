@@ -1,0 +1,78 @@
+{
+  "prompt": "A cozy antique bookstore interior with towering dark wooden bookshelves crammed with old books on both sides, warm lamplight, framed vintage maps and artwork on the upper walls, and a narrow aisle leading deeper into the shop. To the left, a reading nook with a worn leather armchair and a small side table stacked with hardcovers sits beneath a wall-mounted antique clock. To the right, a glass display cabinet holds rare first editions and collectible maps, next to the front door with a brass bell. First-person viewer. First-person view at eye level, looking down the narrow aisle between bookshelves toward the center display table.",
+  "id": "53",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "antique_bookstore",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "large brass globe on a wooden stand on the display table",
+      "point": null
+    },
+    "initial_image": "images/case_53.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A cozy antique bookstore interior has towering dark wooden bookshelves crammed with old books on both sides, warm lamplight, framed vintage maps and artwork on the upper walls, and a narrow aisle leading deeper into the shop.",
+    "offscreen_part": "To the left, a reading nook with a worn leather armchair and a small side table stacked with hardcovers sits beneath a wall-mounted antique clock. To the right, a glass display cabinet holds rare first editions and collectible maps, next to the front door with a brass bell.",
+    "visible_count": 7,
+    "offscreen_count": 10
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "prompt": "An abstract crystal ice palace interior. Tall hexagonal ice columns refract light into rainbow prismatic spectra. Geometric ice formations cover the translucent floor and ceiling. A grand ice throne shimmers with aurora colors at the far end. The entire space glows with cool blues, pinks, and iridescent hues. Dreamlike crystalline atmosphere. To the right, an ice archway leads to a gallery of frozen sculptures depicting mythical creatures, with frost-veiled stained-glass windows casting colored light patterns on the floor. To the left, a spiral ice staircase ascends to an upper balcony, and a frozen fountain with suspended icicle jets stands in an alcove. First-person viewer. First-person view at eye level looking down the icy hall toward the ice throne. No held objects.",
+  "id": "88",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "fantasy",
+      "name": "crystal_palace",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "ice throne at the far end",
+      "point": null
+    },
+    "initial_image": "images/case_88.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "An abstract crystal ice palace interior is shown. Tall hexagonal ice columns refract light into rainbow prismatic spectra. Geometric ice formations cover the translucent floor. A grand ice throne shimmers with aurora colors at the far end. The entire space glows with cool blues, pinks, and iridescent hues. A dreamlike crystalline atmosphere fills the area.",
+    "offscreen_part": "Geometric ice formations cover the ceiling. To the right, an ice archway leads to a gallery of frozen sculptures depicting mythical creatures, with frost-veiled stained-glass windows casting colored light patterns on the floor. To the left, a spiral ice staircase ascends to an upper balcony, and a frozen fountain with suspended icicle jets stands in an alcove.",
+    "visible_count": 6,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

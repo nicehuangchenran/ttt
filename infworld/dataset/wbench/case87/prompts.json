@@ -1,0 +1,70 @@
+{
+  "prompt": "A retro 1980s arcade with rows of colorful game cabinets including Pac-Man and Space Invaders machines with glowing screens. Neon strip lights in pink and blue glow on the dark ceiling. Black-and-white checkered floor tiles. A prize counter with illuminated shelves sits in the back. Vivid neon-lit atmosphere. To the left, a row of pinball machines with flashing bumper lights stands along the wall, next to a claw crane machine filled with plush toys. To the right, an air hockey table glows under overhead blue neon, and a change machine with a coin slot is mounted on the wall near the restroom entrance. First-person viewer. First-person view at standing eye level looking across the arcade floor toward the game cabinets and prize counter. No held objects.",
+  "id": "87",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "retro_arcade",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "Pac-Man arcade cabinet on the left",
+      "point": null
+    },
+    "initial_image": "images/case_87.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "This is a retro 1980s arcade with rows of colorful game cabinets including Pac-Man and Space Invaders machines with glowing screens. Neon strip lights in pink and blue glow on the dark ceiling. The floor is covered with black-and-white checkered tiles. A prize counter with illuminated shelves sits in the back of the arcade. The space has a vivid neon-lit atmosphere.",
+    "offscreen_part": "To the left of the visible area, a row of pinball machines with flashing bumper lights stands along the wall, next to a claw crane machine filled with plush toys. To the right of the visible area, an air hockey table glows under overhead blue neon, and a change machine with a coin slot is mounted on the wall near the restroom entrance.",
+    "visible_count": 5,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

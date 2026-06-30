@@ -1,0 +1,68 @@
+{
+  "prompt": "An autumn park with golden and red maple trees lining a gravel path. Scattered maple leaves cover the ground in warm orange and red. A wooden bench sits under a large maple tree on the right side. A small pond reflecting autumn colors and a footbridge are visible in the background. Soft warm afternoon light. Ahead past the footbridge, a gazebo with a copper weathervane stands on the far bank of the pond. To the right beyond the bench, a stone drinking fountain and a wrought-iron lamp post mark a path junction. To the left, a garden bed of chrysanthemums in yellow and burgundy borders a low stone wall, and a squirrel perches on a gnarled tree root. First-person viewer. First-person view at eye level looking down the leaf-strewn gravel path toward the pond and footbridge. No held objects.",
+  "id": "92",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "autumn_park",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "wooden bench under the maple tree on the right",
+      "point": null
+    },
+    "initial_image": "images/case_92.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "An autumn park with golden and red maple trees lining a gravel path. Scattered maple leaves cover the ground in warm orange and red. A wooden bench sits under a large maple tree on the right side. A small pond reflecting autumn colors and a footbridge are visible in the background. Soft warm afternoon light covers the scene.",
+    "offscreen_part": "Ahead past the footbridge, a gazebo with a copper weathervane stands on the far bank of the pond. To the right beyond the bench, a stone drinking fountain and a wrought-iron lamp post mark a path junction. To the left, a garden bed of chrysanthemums in yellow and burgundy borders a low stone wall, and a squirrel perches on a gnarled tree root.",
+    "visible_count": 6,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

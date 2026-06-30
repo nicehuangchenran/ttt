@@ -1,0 +1,70 @@
+{
+  "prompt": "A minimalist modern art gallery with tall white walls and a polished grey concrete floor. Directional spotlights illuminate the artworks from above. The space is open and spacious with high ceilings. Additional artworks and sculptures are visible further along the gallery walls. Clean, quiet museum atmosphere. Beyond the current view to the left along the adjacent wall, a large-scale black-and-white photograph in a thin black frame and a freestanding white pedestal displaying a bronze abstract sculpture are lit by overhead spots. To the right, a long dark bench for visitors faces the main wall, and beyond the current view, a glass doorway leads into the next exhibition hall. First-person viewer. First-person view at eye level, standing in the gallery and facing the large abstract painting with bold red and blue splashes on the white wall ahead.",
+  "id": "49",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "art_gallery",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "large colorful abstract painting with red and blue splashes on the white wall",
+      "point": null
+    },
+    "initial_image": "images/case_49.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A minimalist modern art gallery has tall white walls and a polished grey concrete floor. Directional spotlights illuminate the artworks from above. The space is open and spacious with high ceilings. Additional artworks and sculptures are visible further along the gallery walls. To the right, a long dark bench for visitors faces the main wall.",
+    "offscreen_part": "The gallery has a clean, quiet museum atmosphere. Beyond the current view to the left along the adjacent wall, a large-scale black-and-white photograph in a thin black frame and a freestanding white pedestal displaying a bronze abstract sculpture are lit by overhead spots. Beyond the current view, a glass doorway leads into the next exhibition hall.",
+    "visible_count": 5,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

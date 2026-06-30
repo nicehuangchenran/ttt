@@ -1,0 +1,79 @@
+{
+  "prompt": "A bustling Asian night market alley at dusk with rows of food stalls on both sides, bright neon signs in Chinese characters, strings of red paper lanterns overhead, steam rising from cooking stations, and a crowd of shoppers filling the narrow lane. Warm colorful artificial lighting. Ahead deeper into the market, a T-shaped intersection opens into a wider square with a small stage, larger restaurant tents, and more crowds. Behind, the alley entrance connects to a main street with parked scooters, a bus stop, and modern storefronts. First-person viewer. First-person view at eye level, looking straight down the crowded night market alley.",
+  "id": "56",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "night_market",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "string of red paper lanterns hanging across the alley",
+      "point": null
+    },
+    "initial_image": "images/case_56.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A bustling Asian night market alley at dusk with rows of food stalls on both sides, bright neon signs in Chinese characters, strings of red paper lanterns overhead, steam rising from cooking stations, and a crowd of shoppers filling the narrow lane. Warm colorful artificial lighting illuminates the whole scene.",
+    "offscreen_part": "Ahead deeper into the market, a T-shaped intersection opens into a wider square with a small stage, larger restaurant tents, and more crowds. Behind, the alley entrance connects to a main street with parked scooters, a bus stop, and modern storefronts.",
+    "visible_count": 7,
+    "offscreen_count": 9
+  },
+  "causal_fidelity": {
+    "dims": [
+      "fluid_dynamics",
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

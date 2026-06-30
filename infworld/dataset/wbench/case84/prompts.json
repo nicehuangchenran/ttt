@@ -1,0 +1,70 @@
+{
+  "prompt": "A Japanese shrine pathway lined with blooming cherry blossom trees in full bloom. Pink and white petals drift through warm golden afternoon air. A large red torii gate frames the path ahead. Stone lanterns stand on both sides of the stone-paved walkway. The shrine building is partially visible through the blossoms in the background. To the left, a chozuya (hand-washing fountain) with a bamboo ladle sits beneath a small wooden roof. To the right, a row of ema (wooden prayer plaques) hangs on a wooden rack beside a red vending machine selling omamori charms. Behind the torii gate, stone komainu guardian lion statues flank the entrance to the shrine hall. First-person viewer. First-person view at eye level looking straight down the shrine pathway toward the torii gate. No held objects.",
+  "id": "84",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "fantasy",
+      "name": "sakura_shrine",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "stone lantern on the left side of the path",
+      "point": null
+    },
+    "initial_image": "images/case_84.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A Japanese shrine pathway is lined with blooming cherry blossom trees in full bloom. Pink and white petals drift through warm golden afternoon air. A large red torii gate frames the path ahead. Stone lanterns stand on both sides of the stone-paved walkway. The shrine building is partially visible through the blossoms in the background.",
+    "offscreen_part": "To the left, a chozuya (hand-washing fountain) with a bamboo ladle sits beneath a small wooden roof. To the right, a row of ema (wooden prayer plaques) hangs on a wooden rack beside a red vending machine selling omamori charms. Behind the torii gate, stone komainu guardian lion statues flank the entrance to the shrine hall.",
+    "visible_count": 6,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

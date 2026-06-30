@@ -1,0 +1,60 @@
+{
+  "prompt": "A traditional Japanese garden rendered in delicate watercolor style. A stone stepping-path of flat grey stones leads forward across a tranquil koi pond with clear shallow water. Orange and white koi fish glide beneath the surface. On both sides, meticulously trimmed bonsai pines and moss-covered rocks form balanced compositions. A red wooden torii gate stands in the middle distance. Drooping cherry blossom branches frame the scene with pink petals drifting downward. The color palette is soft and translucent: pale greens, warm pinks, and watery blues, with visible brushstroke textures. To the left, beyond the bonsai pines, a bamboo grove and a stone lantern sit beside a small arched wooden bridge. To the right, a raked gravel zen garden extends past the moss-covered rocks toward a low wooden teahouse with sliding paper screens. First-person viewer. First-person perspective, elevated eye-height camera looking forward along the stepping-stone path toward the torii gate. No character body visible.",
+  "id": "177",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "garden",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "initial_image": "images/case_177.jpg",
+    "tracking_object": null,
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "A"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "D"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "This is a traditional Japanese garden rendered in delicate watercolor style. A stone stepping-path of flat grey stones leads forward across a tranquil koi pond with clear shallow water. Orange and white koi fish glide beneath the water surface. On both sides of the pond, meticulously trimmed bonsai pines and moss-covered rocks form balanced compositions. A red wooden torii gate stands in the middle distance. Drooping cherry blossom branches frame the scene with pink petals drifting downward. The color palette is soft and translucent: pale greens, warm pinks, and watery blues, with visible brushstroke textures.",
+    "offscreen_part": "To the left, beyond the bonsai pines, a bamboo grove and a stone lantern sit beside a small arched wooden bridge. To the right, a raked gravel zen garden extends past the moss-covered rocks toward a low wooden teahouse with sliding paper screens.",
+    "visible_count": 7,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

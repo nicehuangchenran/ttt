@@ -1,0 +1,73 @@
+{
+  "prompt": "A bamboo forest with tall dense bamboo stalks rising on both sides of a narrow stone-paved path. Misty light filters through the bamboo canopy. A stone lantern stands on the right side of the path. The path disappears ahead into bamboo-veiled mist. Monochrome ink-wash atmosphere in pure black and white tones. Further ahead, the path crosses a small arched stone bridge over a narrow stream trickling through mossy rocks. Behind the viewer, the path leads back to a wooden gate with a thatched roof marking the forest entrance, flanked by two more stone lanterns. First-person viewer. First-person view with both hands holding a katana in a forward guard stance, the polished blade extending ahead and reflecting bamboo shadows.",
+  "id": "82",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "bamboo_forest",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "stone lantern on the right side of the path",
+      "point": null
+    },
+    "initial_image": "images/case_82.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_82_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "S"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "S"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A bamboo forest with tall dense bamboo stalks rising on both sides of a narrow stone-paved path. Misty light filters through the bamboo canopy. A stone lantern stands on the right side of the path. The path disappears ahead into bamboo-veiled mist. Monochrome ink-wash atmosphere in pure black and white tones.",
+    "offscreen_part": "Further ahead, the path crosses a small arched stone bridge over a narrow stream trickling through mossy rocks. Behind the viewer, the path leads back to a wooden gate with a thatched roof marking the forest entrance, flanked by two more stone lanterns.",
+    "visible_count": 5,
+    "offscreen_count": 2
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

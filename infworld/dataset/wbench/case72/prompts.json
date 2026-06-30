@@ -1,0 +1,78 @@
+{
+  "prompt": "A brightly lit supermarket aisle between tall white shelving units densely stocked with colorful beverages and snack packages on both sides, overhead fluorescent lighting, a polished tile floor, and shoppers visible in the distance. Yellow price tags line the shelf edges. To the left, the adjacent aisle holds household cleaning products and detergent bottles in various colors. Behind, a promotional end-cap display of discounted chips stands at the aisle entrance near the main cross-aisle leading to checkout counters. Ahead, a refrigerated section with glass doors containing dairy products and juice cartons extends across the back wall. First-person viewer. First-person view at eye level, looking straight down the supermarket aisle between the shelving units.",
+  "id": "72",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "supermarket_aisle",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "distinctive display of stacked red Coca-Cola cans on the left shelf",
+      "point": null
+    },
+    "initial_image": "images/case_72.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "There is a brightly lit supermarket aisle between tall white shelving units densely stocked with colorful beverages and snack packages on both sides. Overhead fluorescent lighting runs along the ceiling. A polished tile floor covers the aisle ground. Shoppers are visible in the distance down the aisle. Yellow price tags line the shelf edges.",
+    "offscreen_part": "To the left, the adjacent aisle holds household cleaning products and detergent bottles in various colors. Behind the viewer, a promotional end-cap display of discounted chips stands at the aisle entrance near the main cross-aisle leading to checkout counters. Ahead, a refrigerated section with glass doors containing dairy products and juice cartons extends across the back wall.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

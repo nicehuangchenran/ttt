@@ -1,0 +1,68 @@
+{
+  "prompt": "A tropical coral reef underwater. Vibrant coral formations including brain coral, staghorn coral, and orange-purple sea fans cover the seabed. Tropical fish such as clownfish and parrotfish swim among the coral. Crystal clear turquoise water with golden sunlight rays penetrating from the surface above. More coral structures fade into the blue distance. Directly above, the rippling ocean surface forms a shimmering silver ceiling with bright sun rays streaming down through the water column. Below and closer to the seabed, white sand patches are visible between the coral heads, with a resting sea turtle and scattered sea urchins on the sandy bottom. A dark reef wall drops off steeply to the right into deeper blue water. First-person viewer. First-person view through a diving mask, with the dark rubber mask frame visible around the periphery of the image. Looking forward at the coral reef underwater.",
+  "id": "42",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "coral_reef",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_42.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_42_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W+down"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "W+up"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A tropical coral reef is underwater. Vibrant coral formations including brain coral, staghorn coral, and orange-purple sea fans cover the seabed. Tropical fish such as clownfish and parrotfish swim among the coral. The water is crystal clear turquoise with golden sunlight rays penetrating from the surface above. More coral structures fade into the blue distance. Directly above, the rippling ocean surface forms a shimmering silver ceiling with bright sun rays streaming down through the water column. Below and closer to the seabed, white sand patches are visible between the coral heads.",
+    "offscreen_part": "A resting sea turtle and scattered sea urchins are on the sandy bottom. A dark reef wall drops off steeply to the right into deeper blue water.",
+    "visible_count": 7,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

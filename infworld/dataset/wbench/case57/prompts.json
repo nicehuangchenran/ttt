@@ -1,0 +1,78 @@
+{
+  "prompt": "A science classroom interior with a large green chalkboard at the front displaying biology diagrams, lab tables with microscopes and glass beakers, overhead fluorescent lights, and educational posters on the walls. Students are seated at desks in the background. Beyond the current view to the left, a tall storage cabinet with glass doors holds preserved specimen jars and chemistry supplies, next to a sink station. To the right, a window wall looks out onto a schoolyard with trees. Beyond the current view, a projector screen is partially rolled up above a whiteboard. First-person viewer. First-person view at eye level, facing the front chalkboard of the classroom.",
+  "id": "57",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "science_classroom",
+      "category": "Workspace"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "full-size human skeleton model on a metal stand near the blackboard",
+      "point": null
+    },
+    "initial_image": "images/case_57.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A science classroom interior features a large green chalkboard at the front displaying biology diagrams, lab tables with microscopes and glass beakers, overhead fluorescent lights, and educational posters on the walls. Students are seated at desks in the background. A window wall is present on the right side of the classroom.",
+    "offscreen_part": "Beyond the current view to the left, a tall storage cabinet with glass doors holds preserved specimen jars and chemistry supplies next to a sink station. The window wall looks out onto a schoolyard with trees. Beyond the current view, a projector screen is partially rolled up above a whiteboard.",
+    "visible_count": 7,
+    "offscreen_count": 4
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "reflection",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

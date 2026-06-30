@@ -1,0 +1,70 @@
+{
+  "prompt": "A grand old library with towering floor-to-ceiling bookshelves filled with leather-bound volumes. A wooden rolling ladder leans against the shelves. A wooden desk in the foreground holds an open book and a brass reading lamp. An ornate arched ceiling with coffers rises above. Warm ambient light from the lamp and overhead fixtures. Above, the coffered ceiling features a painted fresco at its center, partially obscured by the upper shelves, and a heavy iron chandelier with candle-shaped bulbs hangs from the vault. Below desk level, a Persian rug covers the dark wood floor, and a leather armchair with a folded blanket sits beside a side table with a teacup. First-person viewer. First-person view at desk level looking across the open book and lamp toward the bookshelves and arched ceiling. No held objects.",
+  "id": "86",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "old_library",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "brass reading lamp on the desk",
+      "point": null
+    },
+    "initial_image": "images/case_86.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "up",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "up",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "down",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "down",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A grand old library has towering floor-to-ceiling bookshelves filled with volumes. A wooden rolling ladder leans against the bookshelves. A wooden desk sits in the foreground, holding an open book and a reading lamp. An ornate arched ceiling with coffers rises above the library space.",
+    "offscreen_part": "The volumes filling the bookshelves are leather-bound. The reading lamp on the foreground desk is made of brass. The space is filled with warm ambient light from the lamp and overhead fixtures. The coffered ceiling features a painted fresco at its center, which is partially obscured by the upper shelves. A heavy iron chandelier with candle-shaped bulbs hangs from the ceiling vault. Below desk level, a Persian rug covers the dark wood floor. A leather armchair with a folded blanket sits beside a side table that holds a teacup.",
+    "visible_count": 8,
+    "offscreen_count": 8
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

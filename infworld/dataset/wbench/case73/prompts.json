@@ -1,0 +1,67 @@
+{
+  "prompt": "The central nave of a grand Gothic cathedral with soaring ribbed vaulted ceilings, tall stained glass windows on both sides casting colorful light beams, rows of dark wooden pews, stone columns and arches, and an ornate golden altar with candlesticks at the far end. Atmospheric reverent lighting. To the left, a side chapel with a small altar, votive candles in a wrought-iron rack, and a painted triptych on the wall is set between the stone columns. To the right, a baptismal font in carved stone stands near a confessional booth with dark wooden doors. Behind the viewer, the great west entrance features a massive rose window with intricate tracery and heavy oak double doors. First-person viewer. First-person view at eye level, looking straight down the central nave toward the main altar of the cathedral.",
+  "id": "73",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "gothic_cathedral",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_73.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "The central nave of a grand Gothic cathedral has soaring ribbed vaulted ceilings, tall stained glass windows on both sides casting colorful light beams, rows of dark wooden pews, stone columns and arches, and an ornate golden altar with candlesticks at the far end. The space has atmospheric reverent lighting.",
+    "offscreen_part": "To the left, a side chapel with a small altar, votive candles in a wrought-iron rack, and a painted triptych on the wall is set between the stone columns. To the right, a baptismal font in carved stone stands near a confessional booth with dark wooden doors. Behind the viewer, the great west entrance features a massive rose window with intricate tracery and heavy oak double doors.",
+    "visible_count": 6,
+    "offscreen_count": 9
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

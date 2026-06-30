@@ -1,0 +1,67 @@
+{
+  "prompt": "A Parisian cobblestone street with classic Haussmann buildings. A corner cafe with iron bistro tables and chairs under a striped awning, potted flowers at the entrance. The Eiffel Tower faintly visible in the far background. Pencil sketch style with elegant detailed line work and crosshatching. Off-screen to the left: a boulangerie with a bread display window and a green Art Nouveau Metro entrance. Off-screen to the right: a bookshop with outdoor shelves (bouquiniste) and a vintage lamp post with a flower basket. First-person viewer. First-person perspective, eye-level, looking straight ahead down the cobblestone street.",
+  "id": "98",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "paris_cafe",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_98.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "left",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "zigzag",
+  "scene_adherence": {
+    "visible_part": "A Parisian cobblestone street is lined with classic Haussmann buildings. A corner cafe with iron bistro tables and chairs sits under a striped awning, with potted flowers at its entrance. The Eiffel Tower is faintly visible in the far background. The scene is rendered in a pencil sketch style with elegant detailed line work and crosshatching.",
+    "offscreen_part": "Off-screen to the left, there is a boulangerie with a bread display window and a green Art Nouveau Metro entrance. Off-screen to the right, there is a bookshop with outdoor shelves (bouquiniste) and a vintage lamp post with a flower basket.",
+    "visible_count": 9,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

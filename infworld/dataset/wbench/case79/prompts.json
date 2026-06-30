@@ -1,0 +1,69 @@
+{
+  "prompt": "An enchanted crystal cave with massive prismatic crystal formations in purple, teal, and pink. Bioluminescent fungi glow on the cave floor and walls. Floating light motes drift through the air. The crystals refract light into rainbow spectra. To the right, a large crystalline cave monster with glowing purple eyes lurks behind tall crystal clusters. Deep cavern atmosphere with ethereal luminescence. Further to the right beyond the monster, a subterranean crystal pool glows with turquoise light, fed by a thin waterfall dripping from a stalactite cluster. The cave opens into a wider chamber with an ancient stone altar covered in glowing runes. First-person viewer. First-person view with the right hand holding a twisted wooden magic wand topped with a bright blue-white crystal orb that radiates light. The wand rotates together with the viewer's perspective when turning.",
+  "id": "79",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "fantasy",
+      "name": "misty_lake",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "movement": "The magic wand must rotate together with the viewer's perspective. When turning right, the wand should swing accordingly, always staying in the viewer's hand.",
+    "initial_image": "images/case_79.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_79_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "right"
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "An enchanted crystal cave has massive prismatic crystal formations in purple, teal, and pink. Bioluminescent fungi glow on the cave floor and walls. Floating light motes drift through the air. The crystals refract light into rainbow spectra. The cave has a deep cavern atmosphere with ethereal luminescence.",
+    "offscreen_part": "To the right, a large crystalline cave monster with glowing purple eyes lurks behind tall crystal clusters. Further to the right beyond the monster, a subterranean crystal pool glows with turquoise light, fed by a thin waterfall dripping from a stalactite cluster. The cave opens into a wider chamber with an ancient stone altar covered in glowing runes.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

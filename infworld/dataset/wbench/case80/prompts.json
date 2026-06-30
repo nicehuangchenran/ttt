@@ -1,0 +1,72 @@
+{
+  "prompt": "A sleek spaceship corridor with curved white paneled walls and dark metallic flooring. Control panels and status displays line the walls. Blue and red accent lighting illuminates recessed panels. Automatic doors are visible at the far end. Beyond the current view, a red fire extinguisher is mounted on the right wall. The corridor curves gently with a futuristic sci-fi atmosphere. Ahead through the automatic doors, a cross-junction connects to other corridors with directional holographic signs. To the right, a maintenance bay with exposed conduits and a repair droid is accessible through a side hatch. Behind and to the left, the corridor loops back past an escape pod alcove with a sealed round hatch and a viewport overlooking the starfield outside. First-person viewer. First-person view with the right hand holding a green lightsaber, the glowing blade casting green light on the surrounding walls. The lightsaber moves together with the viewer during navigation.",
+  "id": "80",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "scifi",
+      "name": "spaceship_corridor",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "red fire extinguisher mounted on the right wall",
+      "point": null
+    },
+    "movement": "The lightsaber must move together with the viewer. When moving or turning, the lightsaber should stay in the viewer's hand and follow the perspective change.",
+    "initial_image": "images/case_80.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_80_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "A sleek spaceship corridor with curved white paneled walls and dark metallic flooring is shown. Control panels and status displays line the walls of the corridor. Blue and red accent lighting illuminates recessed panels in the corridor. Automatic doors are visible at the far end of the corridor. The corridor curves gently with a futuristic sci-fi atmosphere.",
+    "offscreen_part": "Beyond the current view, a red fire extinguisher is mounted on the right wall of the corridor. Ahead through the automatic doors, a cross-junction connects to other corridors with directional holographic signs. To the right of the current view, a maintenance bay with exposed conduits and a repair droid is accessible through a side hatch. Behind and to the left of the current view, the corridor loops back past an escape pod alcove with a sealed round hatch and a viewport overlooking the starfield outside.",
+    "visible_count": 5,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

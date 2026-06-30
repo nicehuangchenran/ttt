@@ -1,0 +1,67 @@
+{
+  "prompt": "A bustling Southeast Asian night market at dusk. A narrow lane flanked by food stalls on both sides, draped with colorful tarpaulins and strings of warm yellow light bulbs. Clouds of white steam and smoke rise from sizzling woks, charcoal grills, and boiling pots. Vendors lean over counters serving customers. Locals and tourists squeeze through the crowded aisle. The ground is wet from recent rain, reflecting the warm glow of the lights. On the left, a stall with skewered satay over glowing coals. On the right, a fruit stall with neatly arranged tropical fruits on crushed ice. Ahead, the lane continues deeper into the market where more stalls sell noodle soup and grilled seafood, with hanging Chinese lanterns overhead. To the left, side alleys branch off toward textile vendors and trinket shops. To the right, a narrow gap between stalls reveals parked motorbikes and stacked plastic crates. Behind the viewer, the market entrance opens onto a main road with passing tuk-tuks and neon signage. First-person viewer. First-person perspective, standing head-height camera in the middle of the crowded market aisle, looking forward through the bustling crowd. No character body visible.",
+  "id": "179",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "night_market",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "initial_image": "images/case_179.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "A bustling Southeast Asian night market at dusk. A narrow lane is flanked by food stalls on both sides, which are draped with colorful tarpaulins and strings of warm yellow light bulbs. Clouds of white steam and smoke rise from charcoal grills and boiling pots. Vendors lean over counters serving customers. Locals and tourists squeeze through the crowded aisle. The ground is wet from recent rain, reflecting the warm glow of the lights. On the left, there is a stall with skewered satay placed over glowing coals. On the right, there is a fruit stall with neatly arranged tropical fruits placed on crushed ice.",
+    "offscreen_part": "Clouds of white steam and smoke also rise from sizzling woks. Ahead, the lane continues deeper into the market where more stalls sell noodle soup and grilled seafood, with hanging Chinese lanterns overhead. To the left, side alleys branch off toward textile vendors and trinket shops. To the right, a narrow gap between stalls reveals parked motorbikes and stacked plastic crates. Behind the viewer, the market entrance opens onto a main road with passing tuk-tuks and neon signage.",
+    "visible_count": 11,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

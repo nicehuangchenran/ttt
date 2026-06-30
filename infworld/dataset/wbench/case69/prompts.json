@@ -1,0 +1,65 @@
+{
+  "prompt": "The outdoor observation deck of a tall coastal lighthouse with a metal safety railing, rocky coastline below with white waves crashing against dark rocks, vast deep blue ocean stretching to the horizon, seabirds in the distance, and a bright sunny sky with scattered clouds. Turning right, the coastline curves into a sandy cove with a small fishing village, colorful boats pulled up on the beach, and green hills rising behind the houses. Further around, the mainland coast features wooded cliffs, a long pier, and a distant harbor with larger vessels. Behind, the lighthouse tower itself rises with its red-and-white striped paint and the glass lantern room at the top. First-person viewer. First-person view at eye level from the lighthouse observation deck, looking out over the ocean with the metal railing in the foreground.",
+  "id": "69",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "lighthouse_top",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_69.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "right"
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "The outdoor observation deck is fitted with a metal safety railing. A rocky coastline lies below, with white waves crashing against dark rocks. A vast deep blue ocean stretches to the horizon. Seabirds are visible in the distance above the water. A bright sunny sky with scattered clouds is overhead.",
+    "offscreen_part": "This observation deck belongs to a tall coastal lighthouse. Turning right, the coastline curves into a sandy cove with a small fishing village, colorful boats pulled up on the beach, and green hills rising behind the houses. Further around, the mainland coast features wooded cliffs, a long pier, and a distant harbor with larger vessels. Behind the observation deck, the lighthouse tower itself rises with its red-and-white striped paint and the glass lantern room at the top.",
+    "visible_count": 6,
+    "offscreen_count": 9
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

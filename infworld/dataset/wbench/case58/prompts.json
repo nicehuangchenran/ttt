@@ -1,0 +1,75 @@
+{
+  "prompt": "A coastal European city viewed from above with dense buildings featuring orange-red tile roofs, a curved sandy beach along the shore, turquoise ocean water, surrounding green hillsides, and small islands in the distance under a bright blue sky with scattered white clouds. Higher up, only open sky and thin cloud layers are visible. Below and ahead at lower altitude, a marina with docked sailboats, a stone breakwater, and a coastal road winding along the hillside become prominent. Beyond the current view to the right, terraced vineyards cover a hillside descending to a rocky cove. A seabird with a yellowish beak visible at the bottom center of the frame, flying at moderate altitude above the city. First-person view through the seabird's eyes, looking forward and slightly downward over the coastal cityscape.",
+  "id": "58",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "coastal_city_aerial",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "animal",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_58.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_58_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W+up",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W+right",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "W+down",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "W+left",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "A coastal European city is viewed from above with dense buildings featuring orange-red tile roofs, a curved sandy beach along the shore, turquoise ocean water, surrounding green hillsides, and small islands in the distance under a bright blue sky with scattered white clouds. A marina with docked sailboats, a stone breakwater, and a coastal road running alongside the beach are visible.",
+    "offscreen_part": "Higher up, only open sky and thin cloud layers are visible. The coastal road winds along the hillside at lower altitude below and ahead of the current view. Beyond the current view to the right, terraced vineyards cover a hillside descending to a rocky cove.",
+    "visible_count": 9,
+    "offscreen_count": 4
+  },
+  "causal_fidelity": {
+    "dims": [
+      "fluid_dynamics",
+      "collision"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

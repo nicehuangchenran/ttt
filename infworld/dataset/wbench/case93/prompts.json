@@ -1,0 +1,68 @@
+{
+  "prompt": "A candy castle great hall with walls made of chocolate bricks topped with white icing snow. Giant lollipop pillars in red-white and blue-white spiral patterns support candy cane arches. The floor is checkered pink-and-white candy tiles. Colorful gumdrop decorations line the base of the walls. A gingerbread throne with white icing details sits at the far end of the hall. To the right, a licorice-framed doorway opens into a side chamber filled with a chocolate fountain cascading into a wafer-cone basin. To the left, a stained-sugar window casts rainbow light across a display of candy jars on marshmallow shelves. Behind the viewer, a grand candy-cane staircase spirals upward past a banner of jelly beans strung on cotton-candy thread. First-person viewer. First-person view at eye level looking down the candy hall toward the gingerbread throne. No held objects.",
+  "id": "93",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "fantasy",
+      "name": "candy_castle",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "gingerbread throne with white icing",
+      "point": null
+    },
+    "initial_image": "images/case_93.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "A candy castle great hall has walls made of chocolate bricks topped with white icing snow. Giant lollipop pillars in red-white and blue-white spiral patterns support candy cane arches. The floor is checkered pink-and-white candy tiles. Colorful gumdrop decorations line the base of the walls. A gingerbread throne with white icing details sits at the far end of the hall.",
+    "offscreen_part": "To the right, a licorice-framed doorway opens into a side chamber filled with a chocolate fountain cascading into a wafer-cone basin. To the left, a stained-sugar window casts rainbow light across a display of candy jars on marshmallow shelves. Behind the viewer, a grand candy-cane staircase spirals upward past a banner of jelly beans strung on cotton-candy thread.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

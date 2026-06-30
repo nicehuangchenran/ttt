@@ -1,0 +1,68 @@
+{
+  "prompt": "A dim military base corridor with concrete block walls painted olive-green. Metal doors labeled 'RESTRICTED ACCESS' line both sides. Overhead fluorescent lights cast harsh yellowish light, leaving deep shadows. The corridor extends straight ahead into darkness. Scuffed linoleum flooring. Further ahead, the corridor opens into a guard checkpoint with sandbags and a metal turnstile. Military supply crates are stacked against the far walls, and another corridor branches off to the right near a fire exit sign. First-person viewer. First-person view with an M4-style assault rifle held in gloved hands, barrel pointing forward down the corridor.",
+  "id": "74",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "military_corridor",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_74.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_74_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "repeat",
+  "scene_adherence": {
+    "visible_part": "A dim military base corridor has concrete block walls painted olive-green. Metal doors labeled 'RESTRICTED ACCESS' line both sides of the corridor. Overhead fluorescent lights cast harsh yellowish light, leaving deep shadows. The corridor extends straight ahead into darkness. The corridor has scuffed linoleum flooring.",
+    "offscreen_part": "Further ahead, the corridor opens into a guard checkpoint with sandbags and a metal turnstile. Military supply crates are stacked against the far walls, and another corridor branches off to the right near a fire exit sign.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

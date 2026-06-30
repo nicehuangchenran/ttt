@@ -1,0 +1,71 @@
+{
+  "prompt": "An autumn Tuscan vineyard with orderly rows of grapevines bearing golden leaves and ripe purple grape clusters. A stone wine cellar entrance with a wooden arched door sits on the left side. Rolling hills dotted with cypress trees stretch into the distance under a warm sunset sky. Rich golden-hour light bathes the entire scene. To the right, a wooden grape-pressing cart with large wooden wheels sits beside a stack of harvesting crates at the end of a vine row. Ahead past the cellar, a stone farmhouse with terracotta roof tiles and green shutters overlooks the vineyard. Behind the viewer, a gravel road lined with lavender bushes leads to a wrought-iron gate at the property entrance. First-person viewer. First-person view walking between vineyard rows, with a hand subtly visible reaching forward among the vines, looking toward the cellar entrance and Tuscan hills. No prominently held objects.",
+  "id": "95",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "autumn_vineyard",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "stone wine cellar entrance with wooden door on the left",
+      "point": null
+    },
+    "initial_image": "images/case_95.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_95_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "An autumn Tuscan vineyard with orderly rows of grapevines bearing golden leaves and ripe purple grape clusters is present. A stone wine cellar entrance with a wooden arched door sits on the left side. Rolling hills dotted with cypress trees stretch into the distance under a warm sunset sky. Rich golden-hour light bathes the entire scene.",
+    "offscreen_part": "To the right, a wooden grape-pressing cart with large wooden wheels sits beside a stack of harvesting crates at the end of a vine row. Ahead past the cellar, a stone farmhouse with terracotta roof tiles and green shutters overlooks the vineyard. Behind the viewer, a gravel road lined with lavender bushes leads to a wrought-iron gate at the property entrance.",
+    "visible_count": 9,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

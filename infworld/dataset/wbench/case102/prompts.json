@@ -1,0 +1,67 @@
+{
+  "prompt": "Interior of a magical toy factory. A wooden workbench in the foreground with springs, gears, and button eyes. Conveyor belts in the mid-ground carrying teddy bears and toy trains. Giant candy-colored gears in red, blue, and yellow turn on the walls and ceiling. Shelves stacked with wrapped presents, steam pipes overhead. Cartoon style with vivid saturated colors and whimsical design. Off-screen above: an overhead rail system carrying dangling marionettes and a skylight with colored glass panels. Off-screen below: a trapdoor with a chute leading to a gift-wrapping station and scattered toy parts on the lower level. First-person viewer. First-person perspective, eye-level, looking forward into the factory floor.",
+  "id": "102",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "fantasy",
+      "name": "toy_factory",
+      "category": "Workspace"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_102.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "up",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "up",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "down",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "down",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "This is the interior of a magical toy factory. A wooden workbench in the foreground has springs, gears, and button eyes placed on its surface. Conveyor belts in the mid-ground carry teddy bears and toy trains. Giant candy-colored gears in red, blue, and yellow are positioned on the walls and ceiling area. Shelves stacked with wrapped presents and overhead steam pipes are visible. The scene is presented in a cartoon style with vivid saturated colors and whimsical design.",
+    "offscreen_part": "The giant candy-colored gears on the walls and ceiling are turning. Off-screen above, there is an overhead rail system carrying dangling marionettes and a skylight with colored glass panels. Off-screen below, there is a trapdoor with a chute leading to a gift-wrapping station and scattered toy parts on the lower level.",
+    "visible_count": 12,
+    "offscreen_count": 5
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

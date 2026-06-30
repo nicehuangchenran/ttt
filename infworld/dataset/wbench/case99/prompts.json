@@ -1,0 +1,73 @@
+{
+  "prompt": "A snowy arctic tundra at night. Pristine white snow with bluish shadows, snow-dusted boulders, and sparse frost-covered shrubs in the mid-ground. Dramatic aurora borealis in vivid green, purple, and cyan swirling across a dark starry sky. Abstract artistic style with luminous swirling colors and painterly brushwork. Off-screen to the right: a frozen lake with cracked blue ice reflecting the aurora, and a lone ice-covered dead tree. Off-screen to the left: a cluster of snow-capped rock formations and a distant wolf silhouette on a ridge. First-person viewer. First-person perspective, eye-level, looking forward across the open tundra.",
+  "id": "99",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "fantasy",
+      "name": "aurora_tundra",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_99.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "right",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A snowy arctic tundra at night. Pristine white snow with bluish shadows, snow-dusted boulders, and sparse frost-covered shrubs in the mid-ground. Dramatic aurora borealis in vivid green, purple, and cyan swirling across a dark starry sky. Abstract artistic style with luminous swirling colors and painterly brushwork.",
+    "offscreen_part": "Off-screen to the right: a frozen lake with cracked blue ice reflecting the aurora, and a lone ice-covered dead tree. Off-screen to the left: a cluster of snow-capped rock formations and a distant wolf silhouette on a ridge.",
+    "visible_count": 7,
+    "offscreen_count": 4
+  },
+  "causal_fidelity": {
+    "dims": [
+      "collision",
+      "surface_interaction",
+      "reflection"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

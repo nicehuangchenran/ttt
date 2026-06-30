@@ -1,0 +1,68 @@
+{
+  "prompt": "A futuristic sci-fi laboratory interior with floor-to-ceiling mirror panels covering the walls and ceiling, creating infinite layered reflections that recede in all directions. The space is brightly lit with cool white and soft blue-green LED strip lighting along the edges. Equipment consoles, transparent glass surfaces, and sleek white panels are reflected endlessly in the mirrors. The overall aesthetic is sterile, high-tech, and symmetrical. To the right and left, the mirror panels continue around corners, creating recursive reflections that multiply as the camera rotates. Behind the viewer, additional mirror-covered corridors branch off, with holographic display panels and sealed lab doors faintly visible within the layered reflections. Every rotational direction reveals the same sterile interior reflected infinitely. First-person viewer. First-person POV at chest height. The viewer's white robotic or mechanical hands are visible in the lower portion of the frame, extending forward with fingers slightly spread. The mirror reflections show these same hands from multiple angles, creating recursive visual depth. No other character body is visible.",
+  "id": "167",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "scifi",
+      "name": "lab",
+      "category": "Workspace"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "robot",
+      "desc": "",
+      "movement": ""
+    },
+    "initial_image": "images/case_167.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_167_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "right"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "left"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A futuristic sci-fi laboratory interior has floor-to-ceiling mirror panels covering the walls and ceiling, creating infinite layered reflections that recede in all directions. The space is brightly lit with cool white and soft blue-green LED strip lighting along the edges. Equipment consoles, transparent glass surfaces, and sleek white panels are reflected endlessly in the mirrors. The overall aesthetic is sterile, high-tech, and symmetrical.",
+    "offscreen_part": "To the right and left, the mirror panels continue around corners, creating recursive reflections that multiply as the camera rotates. Behind the viewer, additional mirror-covered corridors branch off, with holographic display panels and sealed lab doors faintly visible within the layered reflections. Every rotational direction reveals the same sterile interior reflected infinitely.",
+    "visible_count": 4,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

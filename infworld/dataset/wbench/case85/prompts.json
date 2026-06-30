@@ -1,0 +1,73 @@
+{
+  "prompt": "A narrow Venice canal lined with colorful old buildings featuring arched windows and weathered facades. Calm green water reflects the warm golden-hour sunlight and building colors. A stone bridge arches over the canal ahead. Shuttered windows and ornate architectural details on both sides. Beyond the stone bridge, the canal widens at an intersection where another gondola is moored beside a striped wooden mooring pole. Flower boxes with red geraniums hang from balconies on the right. Behind the viewer, the canal extends back past a covered wooden water gate and a laundry line strung between buildings overhead. First-person viewer. First-person view seated in a black gondola, looking forward past the curved prow and its golden seahorse ornament toward the canal ahead.",
+  "id": "85",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "venice_canal",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "vehicle",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": {
+      "desc": "golden ornament on the gondola prow",
+      "point": null
+    },
+    "initial_image": "images/case_85.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_85_mask.png"
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A narrow Venice canal is lined with colorful old buildings featuring arched windows and weathered facades. Calm green water reflects the warm golden-hour sunlight and building colors. A stone bridge arches over the canal ahead. Shuttered windows and ornate architectural details are present on both sides of the canal.",
+    "offscreen_part": "Beyond the stone bridge, the canal widens at an intersection where another gondola is moored beside a striped wooden mooring pole. Flower boxes with red geraniums hang from balconies on the right. Behind the viewer, the canal extends back past a covered wooden water gate and a laundry line strung between buildings overhead.",
+    "visible_count": 4,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

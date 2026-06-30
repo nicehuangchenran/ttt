@@ -1,0 +1,78 @@
+{
+  "prompt": "A war-torn city street littered with rubble and debris. Destroyed multi-story concrete apartment buildings line both sides, their facades crumbled and scarred. Cracked asphalt road scattered with bricks, concrete chunks, and twisted metal. Overcast grey sky filled with smoke and dust haze. Gritty, desolate urban battlefield atmosphere. Further ahead, a collapsed overpass blocks part of the road with dangling rebar and concrete slabs. To the left, a bombed-out side alley leads past an overturned military truck and a cratered intersection with a toppled traffic light and burnt-out civilian cars. First-person viewer. First-person view with the right gloved hand holding an olive-drab fragmentation grenade with its pin ring visible, centered in the lower foreground.",
+  "id": "77",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "war_ruins",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_77.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_77_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "A"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "A"
+    }
+  ],
+  "nav_cate": "l_shape",
+  "scene_adherence": {
+    "visible_part": "A war-torn city street is littered with rubble and debris. Destroyed multi-story concrete apartment buildings line both sides, their facades crumbled and scarred. The cracked asphalt road is scattered with bricks and concrete chunks. The overcast grey sky is filled with smoke and dust haze, and the scene has a gritty, desolate urban battlefield atmosphere.",
+    "offscreen_part": "Twisted metal is scattered on the cracked asphalt road. Further ahead, a collapsed overpass blocks part of the road with dangling rebar and concrete slabs. To the left, a bombed-out side alley leads past an overturned military truck and a cratered intersection with a toppled traffic light and burnt-out civilian cars.",
+    "visible_count": 5,
+    "offscreen_count": 7
+  },
+  "causal_fidelity": {
+    "dims": [
+      "fluid_dynamics",
+      "collision",
+      "deformation",
+      "wind_weather",
+      "human_physics"
+    ]
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence",
+    "causal_fidelity"
+  ]
+}

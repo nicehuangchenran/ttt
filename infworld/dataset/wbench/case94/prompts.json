@@ -1,0 +1,68 @@
+{
+  "prompt": "An alien marketplace on a distant planet. Vendor stalls display exotic alien fruits and artifacts under holographic signs in unknown script. Glowing stones are embedded in the dusty alien ground. A tall glowing blue crystal fountain stands on the right side. Towering organic alien architecture rises in the background against a purple sky with two visible moons. Bioluminescent colors throughout. To the left, a narrow alley between coral-like alien structures leads to a docking pad where a small hovering cargo pod is being unloaded by insectoid alien workers. Behind the viewer, a large archway of interlocking bone-white ribs marks the marketplace entrance, flanked by pulsing amber lantern pods. Further ahead, a raised platform with a holographic auctioneer projects rotating 3D images of rare off-world relics. First-person viewer. First-person view at eye level looking down the marketplace lane past the vendor stalls and crystal fountain. No held objects.",
+  "id": "94",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "scifi",
+      "name": "alien_marketplace",
+      "category": "Fantasy"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": {
+      "desc": "glowing blue crystal fountain on the right",
+      "point": null
+    },
+    "initial_image": "images/case_94.jpg",
+    "style_new": "styled",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "A",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "S",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "D",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "loop",
+  "scene_adherence": {
+    "visible_part": "An alien marketplace is on a distant planet. Vendor stalls display exotic alien fruits and artifacts under holographic signs in unknown script. Glowing stones are embedded in the dusty alien ground. A tall glowing blue crystal fountain stands on the right side. Towering organic alien architecture rises in the background against a purple sky with two visible moons. Bioluminescent colors are present throughout the scene.",
+    "offscreen_part": "To the left, a narrow alley between coral-like alien structures leads to a docking pad where a small hovering cargo pod is being unloaded by insectoid alien workers. Behind the viewer, a large archway of interlocking bone-white ribs marks the marketplace entrance, flanked by pulsing amber lantern pods. Further ahead, a raised platform with a holographic auctioneer projects rotating 3D images of rare off-world relics.",
+    "visible_count": 6,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

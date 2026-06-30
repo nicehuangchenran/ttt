@@ -1,0 +1,68 @@
+{
+  "prompt": "An endless tropical rainforest canopy stretching to the horizon, a winding muddy brown river cutting through the dense green jungle, misty tropical atmosphere, and bright sunlight filtering through scattered clouds. Higher up, the canopy recedes and the river network becomes a branching pattern among unbroken green expanse. Lower down closer to the treetops, individual emergent trees with large crowns, colorful macaws in flight, and a thin column of smoke from a riverside settlement become visible. First-person viewer as a helicopter pilot, with the cockpit instrument panel and windshield frame visible at the bottom and sides of the frame. First-person view from the helicopter cockpit, looking forward and slightly downward through the windshield over the jungle canopy.",
+  "id": "60",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "jungle_helicopter",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "vehicle",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_60.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": "masks/case_60_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W+up"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W+up"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W+down"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "W+down"
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "An endless tropical rainforest canopy stretches to the horizon. A winding muddy brown river cuts through the dense green jungle. Bright sunlight filters through scattered clouds.",
+    "offscreen_part": "There is a misty tropical atmosphere. Higher up, the canopy recedes and the river network becomes a branching pattern among the unbroken green expanse. Lower down closer to the treetops, individual emergent trees with large crowns, colorful macaws in flight, and a thin column of smoke from a riverside settlement become visible.",
+    "visible_count": 3,
+    "offscreen_count": 6
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

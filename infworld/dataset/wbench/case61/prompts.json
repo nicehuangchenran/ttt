@@ -1,0 +1,65 @@
+{
+  "prompt": "A dramatic red sandstone canyon with tall layered rock walls displaying natural erosion textures on both sides, a winding blue-green river at the canyon floor far below, clear blue sky above with wispy clouds, and warm natural sunlight illuminating the rock formations. Lower down near the river, sandy banks with driftwood, small rapids over boulders, and narrow side slot canyons branching off become visible. Higher up, the canyon rim plateaus reveal sparse desert scrub, scattered juniper trees, and distant flat-topped mesas on the horizon. First-person viewer. First-person aerial view from above the canyon, looking forward and slightly downward along the river corridor between the canyon walls.",
+  "id": "61",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "canyon_aerial",
+      "category": "Nature"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_61.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "type": "navigation",
+      "action": "W+down",
+      "turn": 1
+    },
+    {
+      "type": "navigation",
+      "action": "W+down",
+      "turn": 2
+    },
+    {
+      "type": "navigation",
+      "action": "W+up",
+      "turn": 3
+    },
+    {
+      "type": "navigation",
+      "action": "W+up",
+      "turn": 4
+    }
+  ],
+  "nav_cate": "roundtrip",
+  "scene_adherence": {
+    "visible_part": "A dramatic red sandstone canyon with tall layered rock walls displaying natural erosion textures sits on both sides of the scene. A winding blue-green river lies at the canyon floor far below. Clear blue sky with wispy clouds stretches above the canyon. Warm natural sunlight illuminates the rock formations. The canyon rim plateaus have sparse desert scrub. Distant flat-topped mesas are visible on the horizon.",
+    "offscreen_part": "Lower down near the river, sandy banks with driftwood are present. Small rapids over boulders exist in the river. Narrow side slot canyons branch off the main canyon. Scattered juniper trees grow on the higher canyon rim plateaus.",
+    "visible_count": 6,
+    "offscreen_count": 4
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

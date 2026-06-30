@@ -1,0 +1,67 @@
+{
+  "prompt": "An aisle between two tall dark mahogany bookshelves in a grand old library. The shelves are packed with leather-bound books with gold-lettered spines. A wooden rolling ladder leans against the left shelf. At the far end of the aisle, a reading desk with a green banker's lamp emits warm light. The overall lighting is dim and warm, creating a scholarly, intimate atmosphere. Above the tops of the bookshelves, ornate brass chandeliers with frosted glass shades hang from a richly coffered ceiling with dark wood panels and gilded trim. A second-story gallery balcony with a carved wooden balustrade runs along the upper walls. First-person viewer. First-person view at eye level, standing in the narrow aisle between the tall bookshelves and looking forward along the corridor.",
+  "id": "38",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "grand_library",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_38.jpg",
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "down"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "up"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "down"
+    }
+  ],
+  "nav_cate": "zigzag",
+  "scene_adherence": {
+    "visible_part": "An aisle between two tall dark mahogany bookshelves in a grand old library. The shelves are packed with leather-bound books with gold-lettered spines. A wooden rolling ladder leans against the left shelf. At the far end of the aisle, a reading desk with a green banker's lamp emits warm light. The overall lighting is dim and warm, creating a scholarly, intimate atmosphere.",
+    "offscreen_part": "Above the tops of the bookshelves, ornate brass chandeliers with frosted glass shades hang from a richly coffered ceiling with dark wood panels and gilded trim. A second-story gallery balcony with a carved wooden balustrade runs along the upper walls.",
+    "visible_count": 5,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}

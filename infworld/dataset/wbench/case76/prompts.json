@@ -1,0 +1,68 @@
+{
+  "prompt": "A vibrant outdoor carnival on a sunny day. Colorful game booths with striped awnings display stuffed animal prizes. A large Ferris wheel and a roller coaster dominate the background. Bunting and pennants string between booths. Crowds of visitors walk between attractions. Bright blue sky with scattered clouds. To the right, a cotton candy cart stands near the booths. Beyond the current view to the left, a balloon vendor stands near a ring-toss booth. To the right, a popcorn stand with a pink-and-yellow canopy sits near the booths, with a carousel visible further in the mid-ground with painted horses. Further ahead, a funnel cake truck and a dunk tank are set up near the entrance to the roller coaster. First-person viewer. First-person view with the right hand holding a large rainbow swirl lollipop on a white stick in the lower-right foreground.",
+  "id": "76",
+  "settings": {
+    "scene": {
+      "environment": "outdoor",
+      "attribute": "realistic",
+      "name": "carnival",
+      "category": "Urban"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "human",
+      "desc": "",
+      "movement": ""
+    },
+    "tracking_object": null,
+    "initial_image": "images/case_76.jpg",
+    "style_new": "styled",
+    "subject_mask": "masks/case_76_mask.png"
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "A"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 4,
+      "type": "navigation",
+      "action": "D"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A vibrant outdoor carnival takes place on a sunny day. Colorful game booths with striped awnings display stuffed animal prizes. A large Ferris wheel and a roller coaster dominate the background. Bunting and pennants are strung between booths. Crowds of visitors walk between attractions. There is a bright blue sky with scattered clouds. To the right, a cotton candy cart stands near the booths. To the right, a popcorn stand with a pink-and-yellow canopy sits near the booths, and a carousel with painted horses is visible further in the mid-ground.",
+    "offscreen_part": "Beyond the current view to the left, a balloon vendor stands near a ring-toss booth. Further ahead, a funnel cake truck and a dunk tank are set up near the entrance to the roller coaster.",
+    "visible_count": 10,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "perspective_consistency",
+    "subject_consistency",
+    "navigation_trajectory",
+    "scene_adherence"
+  ]
+}

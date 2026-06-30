@@ -1,0 +1,62 @@
+{
+  "prompt": "A tidy medium-sized bedroom in warm modern realistic style with soft lighting. A neatly made bed with patterned blue-grey bedding against the wall, a dark wooden desk with a laptop and desk lamp beside it, a dark bookshelf filled with books, an armchair with a throw blanket, a guitar leaning against the bookshelf, and a potted plant on the windowsill. A doorway on the left leads to the dining area. Clean, organized, warm atmosphere of a young adult male's living space. Behind the current viewpoint, the door to the dining area opens into a hallway with a coat rack and shoes by the entrance. Through the window, the rooftops of neighboring buildings and a tree canopy are visible outside. To the right of the desk, a small closet with a sliding door is built into the wall. First-person viewer. First-person point of view standing inside the bedroom, looking forward across the room toward the bed, desk, and bookshelf. No visible character body.",
+  "id": "146",
+  "settings": {
+    "scene": {
+      "environment": "indoor",
+      "attribute": "realistic",
+      "name": "bedroom",
+      "category": "Indoor"
+    },
+    "perspective": "first_person",
+    "subject": {
+      "type": "unknown",
+      "desc": ""
+    },
+    "initial_image": "images/case_146.jpg",
+    "tracking_object": null,
+    "style_new": "photorealistic",
+    "subject_mask": null
+  },
+  "interactions": [
+    {
+      "turn": 1,
+      "type": "navigation",
+      "action": "left"
+    },
+    {
+      "turn": 2,
+      "type": "navigation",
+      "action": "W"
+    },
+    {
+      "turn": 3,
+      "type": "navigation",
+      "action": "right"
+    }
+  ],
+  "nav_cate": "progressive",
+  "scene_adherence": {
+    "visible_part": "A tidy medium-sized bedroom in warm modern realistic style has soft lighting. A neatly made bed with patterned blue-grey bedding is placed against the wall, a dark wooden desk with a laptop and desk lamp is situated beside the bed, a dark bookshelf filled with books stands in the corner near the window, an armchair with a throw blanket is positioned near the bookshelf, a guitar leans against the bookshelf, and a potted plant is placed near the windowsill. A doorway on the left leads to the dining area. The space has a clean, organized, warm atmosphere of a young adult male's living space.",
+    "offscreen_part": "Behind the current viewpoint, the door to the dining area opens into a hallway with a coat rack and shoes by the entrance. Through the window, the rooftops of neighboring buildings and a tree canopy are visible outside. To the right of the desk, a small closet with a sliding door is built into the wall.",
+    "visible_count": 9,
+    "offscreen_count": 3
+  },
+  "metric_list": [
+    "aesthetic_quality",
+    "imaging_quality",
+    "temporal_flickering",
+    "dynamic_degree",
+    "motion_smoothness",
+    "hpsv3_quality",
+    "background_consistency",
+    "segment_continuity",
+    "geometric_consistency",
+    "photometric_consistency",
+    "visual_plausibility",
+    "navigation_trajectory",
+    "spatial_consistency",
+    "gated_spatial_consistency",
+    "scene_adherence"
+  ]
+}
