@@ -28,7 +28,7 @@ checkpoints/
 # ===== 数据集 / 数据 =====
 data/
 # 只排除 wbench 数据(88M)，dataset 下其余内容(如 long_case)正常上传
-dataset/wbench/
+**/dataset/wbench/
 *.npy
 *.npz
 *.mp4
