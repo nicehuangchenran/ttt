@@ -22,6 +22,14 @@ JOBS=(
     "dataset/long_case 1 20 off online-long_${TS} 1"
     # "dataset/wbench 10 5 on infworld-on 8"
 )
+
+# 用 screen 后台运行，断开 SSH 也不中断；重新连接: screen -r <name>，列出: screen -ls
+# 已在 screen 内($STY 非空)或显式传 --no-screen 时跳过，避免无限重启
+if [ -z "$STY" ] && [ "$1" != "--no-screen" ]; then
+    SCREEN_NAME="infworld_${TS}"
+    echo "在 screen 会话 [$SCREEN_NAME] 中后台启动，查看: screen -r $SCREEN_NAME"
+    exec screen -dmS "$SCREEN_NAME" bash "$0" --no-screen
+fi
 for job in "${JOBS[@]}"; do
     read -r INPUT_DATASET NUM_CASES MAX_NUM_CHUNKS ONLINE OUTDIR NUM_GPUS <<< "$job"
 
