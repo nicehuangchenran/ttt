@@ -160,7 +160,9 @@ def load_models():
             init_params = {nm: p.detach().clone()
                            for nm, p in dit.named_parameters() if p.requires_grad}
 
-    bucket_config = getattr(bucket_config_module, inf.BUCKET_CONFIG_NAME)
+    bucket_config = get
+    
+    attr(bucket_config_module, inf.BUCKET_CONFIG_NAME)
     return args, vae, text_encoder, scheduler, dit, bucket_config, trainable_params, init_params
 
 
