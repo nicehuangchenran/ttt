@@ -76,6 +76,7 @@ if __name__=="__main__":
 
     # 与 configs/infworld_config.yaml 的 model_cfg 保持一致（1.3B 配置），
     # 否则结构 / 通道数与 checkpoint 不符
+    num_layers=1
     model=WanModel(
         model_type="t2v",
         dim=1536,
@@ -83,7 +84,7 @@ if __name__=="__main__":
         ffn_dim=8960,
         freq_dim=256,
         num_heads=12,
-        num_layers=30,
+        num_layers=num_layers,
     ).cuda().to(torch.bfloat16)
 
     if METHOD=="summary":
@@ -109,15 +110,16 @@ if __name__=="__main__":
     elif METHOD=="draw_graph":
         from torchview import draw_graph
         inputs=make_input2()
+        depth_seted=3
         graph = draw_graph(
             model,
             input_data=inputs,  # 按你的输入改
-            depth=2,
+            depth=depth_seted,
             # expand_nested=True,             # 展开子模块
             graph_name="WanModel"
         )
 
-        graph.visual_graph.render(filename="figure/wan_model_graph_small", format="svg",cleanup=True) # cleanup删除wan_model_graph2中间产物
+        graph.visual_graph.render(filename=f"figure/wan_model_graph_small_layer_{num_layers}_depth_{depth_seted}", format="svg",cleanup=True) # cleanup删除wan_model_graph2中间产物
         print("完成")
 
     elif METHOD=="tensor_board":
