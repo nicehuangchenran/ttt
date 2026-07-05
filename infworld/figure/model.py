@@ -5,7 +5,7 @@ import torch
 
 
 def make_input():
-    num="small"
+    num="large"
     
     device = "cuda"
     dtype = torch.bfloat16
@@ -22,13 +22,13 @@ def make_input():
         # 画图专用：结构与 large 一致，只把张量尺寸调小，
         # 让 torchview 的 forward / 抓图 / 建图都快很多
         T = 5                 # 输出 latent 帧数（缩小）
-        H_lat, W_lat = 16, 16 # 空间尺寸（缩小）
-        T_in = 5              # 历史条件 latent 时间长度（缩小）
+        H_lat, W_lat = 16, 16 # 空间尺寸（缩小）480*832 
+        T_in = 10              # 历史条件 latent 时间长度（缩小）
     elif num=="large":
         # 真实推理尺寸（summary / 真跑用）
         T = 21                # 每 chunk 输出 latent 帧数 (latent_size[2])
-        H_lat, W_lat = 80, 80 # 640x640 像素 / 8
-        T_in = 21             # 历史条件的 latent 时间长度（示例值，随历史长度变化）
+        H_lat, W_lat = 60, 104 # 640x640 像素 / 8
+        T_in = 41             # 历史条件的 latent 时间长度（示例值，随历史长度变化）
     else:
         print("check num in make_input()")
         return None
@@ -76,7 +76,7 @@ if __name__=="__main__":
 
     # 与 configs/infworld_config.yaml 的 model_cfg 保持一致（1.3B 配置），
     # 否则结构 / 通道数与 checkpoint 不符
-    num_layers=1
+    num_layers=2
     model=WanModel(
         model_type="t2v",
         dim=1536,
@@ -110,7 +110,7 @@ if __name__=="__main__":
     elif METHOD=="draw_graph":
         from torchview import draw_graph
         inputs=make_input2()
-        depth_seted=3
+        depth_seted=2
         graph = draw_graph(
             model,
             input_data=inputs,  # 按你的输入改
