@@ -21,6 +21,7 @@ echo "Working directory: $WORK_DIR"
 
 if [ "$NUM_GPUS" -eq 1 ]; then
     # Single GPU: run directly to avoid torchrun port (EADDRINUSE)
+    # python scripts/infworld_inference_input_oom.py --online-training=on
     python scripts/infworld_inference.py --online-training=on
 else
     MASTER_PORT=${MASTER_PORT:-29400}

@@ -36,13 +36,8 @@ from infworld.configs import bucket_config as bucket_config_module
 # ============================================================================
 WBENCH_WORK_DIRS = "/root/autodl-tmp/ttt/WBench/work_dirs"
 
-# 入口默认值（可被环境变量覆盖）
-INPUT_DATASET = os.environ.get("INPUT_DATASET", os.path.join(inf.PROJECT_ROOT, "dataset"))
-OUTPUT_MODEL_NAME = os.environ.get("OUTPUT_MODEL_NAME", "infworld")
-NUM_CASES = int(os.environ.get("NUM_CASES", "0"))  # <=0 表示全部
-
-# online (test-time) training 开关（复用 infworld_inference 的实现）；off / on
-ENABLE_ONLINE_TRAINING = os.environ.get("ONLINE_TRAINING", "off").strip().lower() in ("on", "true", "1", "yes")
+# 入口参数：INPUT_DATASET / OUTPUT_MODEL_NAME / NUM_CASES / ENABLE_ONLINE_TRAINING
+# 全部由命令行读入（见 __main__），此处不设默认值。
 
 # 冻结的条件输入层前缀（与 infworld_inference.main 完全一致）：online training 时不漂移这些
 # 承载历史(image_cond)/动作/文本/时间步接口的层，保证 chunk 间连续性。
@@ -308,5 +303,26 @@ def generate_video(input_dataset_path, output_video_path, n):
     return written
 
 
+def parse_args():
+    """从命令行读取入口参数：
+    INPUT_DATASET / OUTPUT_MODEL_NAME / NUM_CASES / ENABLE_ONLINE_TRAINING。"""
+    import argparse
+
+    parser = argparse.ArgumentParser(description="为 WBench 评测产出 infworld 视频")
+    parser.add_argument("--input_dataset", required=True,
+                        help="infworld dataset 目录")
+    parser.add_argument("--output_model_name", required=True,
+                        help="输出目录名（WBench work_dirs/<name>/videos）")
+    parser.add_argument("--num_cases", type=int, required=True,
+                        help="取 dataset 前 N 个 case，<=0 表示全部")
+    parser.add_argument("--online", dest="enable_online_training", required=True,
+                        choices=["on", "off"],
+                        help="online (test-time) training 开关 on/off")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    generate_video(INPUT_DATASET, OUTPUT_MODEL_NAME, NUM_CASES)
+    args = parse_args()
+    # 覆盖模块级全局，供 generate_video 及其调用的函数读取
+    ENABLE_ONLINE_TRAINING = args.enable_online_training == "on"
+    generate_video(args.input_dataset, args.output_model_name, args.num_cases)
