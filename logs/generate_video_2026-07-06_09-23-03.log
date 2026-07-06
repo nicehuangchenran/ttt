@@ -1,0 +1,32 @@
+==============================================
+阶段 1/2: 生成视频 (infworld)
+==============================================
+input_dataset: /root/autodl-tmp/ttt/infworld/dataset/wbench | out_dir: generate_video_2026-07-06_09-23-03
+gen:   generate_video.py | GPUs: 1 | num_cases: 1 (0=all) | online: on
+==============================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+[InfWorld] local_rank: 0 | global_rank: 0 | world_size: 1
+[GenVideo] rank 0/1 | total cases: 1 | online_training=True
+[GenVideo] Loading VAE...
+Traceback (most recent call last):
+  File "/root/autodl-tmp/ttt/infworld/generate_video.py", line 328, in <module>
+    generate_video(args.input_dataset, args.output_model_name, args.num_cases)
+  File "/root/autodl-tmp/ttt/infworld/generate_video.py", line 275, in generate_video
+    models = load_models()
+  File "/root/autodl-tmp/ttt/infworld/generate_video.py", line 106, in load_models
+    vae = get_obj_from_str(args.vae_target)(**args.vae_cfg).to(inf.local_rank)
+  File "/root/autodl-tmp/ttt/infworld/infworld/vae/__init__.py", line 12, in __init__
+    self.module = WanVAE(
+  File "/root/autodl-tmp/ttt/infworld/infworld/vae/vae.py", line 642, in __init__
+    self.model = _video_vae(
+  File "/root/autodl-tmp/ttt/infworld/infworld/vae/vae.py", line 614, in _video_vae
+    torch.load(pretrained_path, map_location=device), assign=True)
+  File "/root/miniconda3/envs/infworld/lib/python3.10/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+  File "/root/miniconda3/envs/infworld/lib/python3.10/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/root/miniconda3/envs/infworld/lib/python3.10/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/ttt/infworld/checkpoints/models/Wan2.1_VAE.pth'
+生成阶段失败 (exit 1)
