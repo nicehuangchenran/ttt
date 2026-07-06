@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o pipefail
 # =============================================================================
 # 一体化脚本: 生成 Infinite-World 视频 → WBench 评测
 #
@@ -20,14 +21,14 @@
 #   bash run_eval.sh generate_video.py 1 2 on     # 单 GPU，前 2 个 case，开 online
 # 多 GPU 端口冲突(EADDRINUSE)时: export MASTER_PORT=29500
 # =============================================================================
-
-set -o pipefail
-
 # ----------------------------- 参数 ------------------------------------------
 GEN_SCRIPT=${1:-generate_video.py}
 NUM_GPUS=${2:-1}
 NUM_CASES=${3:-6}
 ONLINE=${4:-off}
+
+
+# ======================= 变量准备 ====================================
 # 模型名 / 输出目录名：取 gen_script 去掉 .py 的基名
 MODEL=$(basename "$GEN_SCRIPT" .py)
 
