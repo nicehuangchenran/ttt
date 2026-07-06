@@ -14,6 +14,26 @@ Structure (top to bottom):
   §8 Online training         - online_train_on_chunk
   §9 Batch loop              - run
   §10 main                   - orchestration only
+  
+    parser.add_argument(
+        "--online-training",
+        type=lambda s: s.strip().lower() in ("on", "true", "1", "yes"),
+        default=None,
+        help="Enable online (test-time) training between chunks: on/off",
+    )
+    parser.add_argument("--train-steps", type=int, default=None)
+    parser.add_argument("--max-chunks", type=int, default=None,
+                        help="Max autoregressive chunks allowed per video")
+    parser.add_argument("--steps", type=int, default=None, help="num_sampling_steps")
+    parser.add_argument("--cfg-scale", type=float, default=None, help="text_cfg_scale")
+    parser.add_argument("--seed", type=int, default=None)
+    parser.add_argument("--shift", type=int, default=None)
+    parser.add_argument("--dataset-dir", type=str, default=None)
+    parser.add_argument("--output-dir", type=str, default=None)
+    parser.add_argument("--begin-idx", type=int, default=None,
+                        help="Start at first case whose number > begin_idx (-1 -> first case)")
+    parser.add_argument("--num", type=int, default=None,
+                        help="Number of cases to run from begin_idx (-1 -> all remaining)")
 """
 
 import sys
@@ -88,7 +108,7 @@ class ExpConfig:
     text_cfg_scale: float = 5.0
     num_sampling_steps: int = 30
     shift: int = 7                       # PX256: 3, PX627: 7, PX960: 11
-    num_chunks: int = 20                 # number of autoregressive chunks per video
+    max_chunks: int = 20                 # max autoregressive chunks allowed per video
     num_frames: Optional[int] = None     # None -> read model_args.validation_data.num_frames
     bucket_config_name: str = "ASPECT_RATIO_627_F64"
     negative_prompt: str = (
@@ -126,9 +146,9 @@ class OnlineTrainConfig:
     grad_clip_norm: Optional[float] = 1.0
     # Whitelist of layers to train; everything else is frozen. Entries are
     # parameter-name paths with the per-block index omitted ("blocks.norm3"
-    # covers blocks.0.norm3 ... blocks.29.norm3). Scheme A (~0.5M params):
-    # per-block AdaLN modulation + norm3 affine + output head — adapts global
-    # activation/output statistics (the usual long-horizon drift:
+    # covers blocks.<i>.norm3 for every whitelisted block). Scheme A (~0.5M
+    # params): per-block AdaLN modulation + norm3 affine + output head — adapts
+    # global activation/output statistics (the usual long-horizon drift:
     # exposure/color/contrast) with minimal collapse risk from self-distilling
     # the model's own chunks.
     trainable_layers: tuple = (
@@ -136,6 +156,11 @@ class OnlineTrainConfig:
         "blocks.modulation", # per-block AdaLN shift/scale (bare nn.Parameter)
         "blocks.norm3",      # per-block cross-attn LayerNorm affine
     )
+    # Only blocks.<i>.* with i >= trainable_block_start train (0 -> all blocks;
+    # non-block entries like "head" are unaffected). With 30 blocks, 18 keeps
+    # the last 12. Backprop then stops at the first trainable block, so the
+    # earlier blocks retain no activations and are skipped during backward.
+    trainable_block_start: int = 18
 
 
 # ============================================================================
@@ -152,7 +177,8 @@ def parse_cli():
         help="Enable online (test-time) training between chunks: on/off",
     )
     parser.add_argument("--train-steps", type=int, default=None)
-    parser.add_argument("--num-chunks", type=int, default=None)
+    parser.add_argument("--max-chunks", type=int, default=None,
+                        help="Max autoregressive chunks allowed per video")
     parser.add_argument("--steps", type=int, default=None, help="num_sampling_steps")
     parser.add_argument("--cfg-scale", type=float, default=None, help="text_cfg_scale")
     parser.add_argument("--seed", type=int, default=None)
@@ -161,7 +187,7 @@ def parse_cli():
     parser.add_argument("--output-dir", type=str, default=None)
     parser.add_argument("--begin-idx", type=int, default=None,
                         help="Start at first case whose number > begin_idx (-1 -> first case)")
-    parser.add_argument("--n", type=int, default=None,
+    parser.add_argument("--num", dest="n", type=int, default=None,
                         help="Number of cases to run from begin_idx (-1 -> all remaining)")
     args, _ = parser.parse_known_args()
     return args
@@ -173,8 +199,8 @@ def build_configs(cli):
     exp_config = ExpConfig()
     online_train_config = OnlineTrainConfig()
 
-    if cli.num_chunks is not None:
-        exp_config.num_chunks = cli.num_chunks
+    if cli.max_chunks is not None:
+        exp_config.max_chunks = cli.max_chunks
     if cli.steps is not None:
         exp_config.num_sampling_steps = cli.steps
     if cli.cfg_scale is not None:
@@ -348,28 +374,35 @@ def _load_model_config(config_path):
     return args
 
 
-def _select_trainable_params(dit, trainable_layers):
+def _select_trainable_params(dit, trainable_layers, trainable_block_start):
     """Whitelist selection: params under the listed layers train, everything
     else is frozen. Layer entries omit the per-block index ("blocks.norm3"
-    matches blocks.<i>.norm3.*). Returns the trainable params."""
+    matches blocks.<i>.norm3.*); block params additionally require their block
+    index >= trainable_block_start. Returns the trainable params."""
     def canonical(name):
         parts = name.split(".")
         if parts[0] == "blocks":
             parts = ["blocks"] + parts[2:]  # drop the block index
         return ".".join(parts)
 
+    def block_idx(name):
+        parts = name.split(".")
+        return int(parts[1]) if parts[0] == "blocks" else None
+
     trainable_params = []
     frozen_n = 0
     for n, p in dit.named_parameters():
         key = canonical(n)
-        if any(key == l or key.startswith(l + ".") for l in trainable_layers):
+        idx = block_idx(n)
+        whitelisted = any(key == l or key.startswith(l + ".") for l in trainable_layers)
+        if whitelisted and (idx is None or idx >= trainable_block_start):
             p.requires_grad_(True)
             trainable_params.append(p)
         else:
             p.requires_grad_(False)
             frozen_n += p.numel()
     print(f"[OnlineTrain] frozen params: {frozen_n:,}; "
-          f"trainable {trainable_layers}: "
+          f"trainable {trainable_layers} (blocks >= {trainable_block_start}): "
           f"{sum(p.numel() for p in trainable_params):,}")
     return trainable_params
 
@@ -377,7 +410,7 @@ def _select_trainable_params(dit, trainable_layers):
 def load_models(config_path, device, enable_context_parallel,
                 num_sampling_steps, shift,
                 online_train_open, use_grad_checkpoint,
-                trainable_layers, reset_between_videos):
+                trainable_layers, trainable_block_start, reset_between_videos):
     """Load VAE, text encoder, scheduler, and DiT, then apply online-training setup.
 
     Only scalar members are passed in (not whole config/runtime objects). When
@@ -429,7 +462,8 @@ def load_models(config_path, device, enable_context_parallel,
     if online_train_open:
         if use_grad_checkpoint:
             set_grad_checkpoint(dit)
-        trainable_params = _select_trainable_params(dit, trainable_layers)
+        trainable_params = _select_trainable_params(dit, trainable_layers,
+                                                    trainable_block_start)
         if reset_between_videos:
             # Only trainable params can drift, so only they need snapshotting.
             init_params = {n: p.detach().clone()
@@ -599,8 +633,12 @@ def prepare_output_dir(output_dir):
 def _prepare_output_file(output_dir, name):
     """Build the (extension-less) save path; save_silent_video appends .mp4.
 
-    e.g. name='case5' -> '<output_dir>/case5_combined' -> case5_combined.mp4
+    WBench only picks up videos matching case_*_combined.mp4, so the dataset
+    dir name 'case5' becomes 'case_5' here.
+
+    e.g. name='case5' -> '<output_dir>/case_5_combined' -> case_5_combined.mp4
     """
+    name = re.sub(r"^case(\d+)$", r"case_\1", name)
     return os.path.join(output_dir, f"{name}_combined")
 
 
@@ -683,6 +721,11 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
     num_frames = exp_config.num_frames
     video_buffer = input.input_image.clone().cpu()
 
+    # Per-video chunk count: floor(move_view.json frame count / 80), capped by max_chunks.
+    num_chunks = min(input.move.shape[0] // 80, exp_config.max_chunks)
+    print(f"[InfWorld] {input.name}: {input.move.shape[0]} action frames -> "
+          f"num_chunks={num_chunks} (max_chunks={exp_config.max_chunks})")
+
     with torch.no_grad():
         cond_latent = models.vae.encode(input.input_image.to(device))
     # Latent size is [B, C, T, H, W]; T=21 => 1 condition frame + 20 generated.
@@ -697,8 +740,8 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
             text_kwargs = models.text_encoder.encode([input.prompt])
         cached_y, cached_y_mask = text_kwargs["y"], text_kwargs["y_mask"]
 
-    for chunk_idx in range(exp_config.num_chunks):
-        print(f"[InfWorld] Generating chunk {chunk_idx + 1}/{exp_config.num_chunks}")
+    for chunk_idx in range(num_chunks):
+        print(f"[InfWorld] Generating chunk {chunk_idx + 1}/{num_chunks}")
         result = _generate_chunk(
             models, device, input.prompt, exp_config.negative_prompt,
             exp_config.text_cfg_scale, video_buffer, latent_size,
@@ -708,7 +751,7 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
         print(f"[InfWorld] Chunk {chunk_idx + 1} done. Total frames: {video_buffer.shape[2]}")
         _torch_gc()
 
-        if online_train_config.open and chunk_idx < exp_config.num_chunks - 1:
+        if online_train_config.open and chunk_idx < num_chunks - 1:
             losses = online_train_on_chunk(
                 models, online_train_config, result, cached_y, cached_y_mask)
             for step, loss_val in enumerate(losses):
@@ -831,7 +874,8 @@ def main():
         exp_config.model_config_path, runtime.device, runtime.enable_context_parallel,
         exp_config.num_sampling_steps, exp_config.shift,
         online_train_config.open, online_train_config.use_grad_checkpoint,
-        online_train_config.trainable_layers, online_train_config.reset_between_videos,
+        online_train_config.trainable_layers, online_train_config.trainable_block_start,
+        online_train_config.reset_between_videos,
     )
 
     # Fill num_frames from the model config when not overridden.

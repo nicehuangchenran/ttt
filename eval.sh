@@ -40,13 +40,9 @@ conda activate wbench-main
 cd "$WBENCH_DIR"
 
 python main.py --model "$OUT_DIR" --phase precompute --skip_da3 --skip_sam2 2>&1 | tee -a "$LOG_FILE"
-echo "precompute 运行完成" | tee -a "$LOG_FILE"
 
 python main.py --model "$OUT_DIR" --phase gpu --metrics consistency --skip_da3 --skip_sam2 --skip_megasam 2>&1 | tee -a "$LOG_FILE"
-echo "gpu 运行完成" | tee -a "$LOG_FILE"
 
 python main.py --model "$OUT_DIR" --phase report 2>&1 | tee -a "$LOG_FILE"
-echo "生成 report.json" | tee -a "$LOG_FILE"
 
-echo "" | tee -a "$LOG_FILE"
 echo "评测完成: $OUT_DIR" | tee -a "$LOG_FILE"
