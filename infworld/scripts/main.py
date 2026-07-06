@@ -105,6 +105,10 @@ class ExpConfig:
     dataset_dir: str = "dataset/wbench"
     output_dir: str = "../WBench/work_dirs/test/videos"  # parent dir of PROJECT_ROOT
 
+    # Case subset selection (by case number, e.g. case5 -> 5)
+    begin_idx: int = -1                  # start at first case with number > begin_idx (-1 -> first case)
+    n: int = -1                          # number of cases to run from that point (-1 -> all remaining)
+
     # Save
     high_quality_save: bool = True
     fps: int = 30
@@ -120,16 +124,17 @@ class OnlineTrainConfig:
     reset_between_videos: bool = True    # restore init weights per video (train affects only current video)
     use_grad_checkpoint: bool = True     # use_reentrant=False set in infworld/models/checkpoint.py
     grad_clip_norm: Optional[float] = 1.0
-    # Condition-entry layers frozen so online training cannot drift the model's
-    # interface to history (image_cond), actions, text, or timestep.
-    freeze_prefixes: tuple = (
-        "patch_embedding",   # raw latent -> token conv
-        "latent_encoder",    # image_cond (history) temporal encoder
-        "action_encoder",    # move / view embeddings
-        "text_embedding",    # T5 -> token projection
-        "time_embedding",    # timestep MLP
-        "time_projection",   # timestep -> per-block modulation
-        "y_embedder",        # null caption embedding
+    # Whitelist of layers to train; everything else is frozen. Entries are
+    # parameter-name paths with the per-block index omitted ("blocks.norm3"
+    # covers blocks.0.norm3 ... blocks.29.norm3). Scheme A (~0.5M params):
+    # per-block AdaLN modulation + norm3 affine + output head — adapts global
+    # activation/output statistics (the usual long-horizon drift:
+    # exposure/color/contrast) with minimal collapse risk from self-distilling
+    # the model's own chunks.
+    trainable_layers: tuple = (
+        "head",              # output head (head.head linear + head.modulation)
+        "blocks.modulation", # per-block AdaLN shift/scale (bare nn.Parameter)
+        "blocks.norm3",      # per-block cross-attn LayerNorm affine
     )
 
 
@@ -146,6 +151,7 @@ def parse_cli():
         default=None,
         help="Enable online (test-time) training between chunks: on/off",
     )
+    parser.add_argument("--train-steps", type=int, default=None)
     parser.add_argument("--num-chunks", type=int, default=None)
     parser.add_argument("--steps", type=int, default=None, help="num_sampling_steps")
     parser.add_argument("--cfg-scale", type=float, default=None, help="text_cfg_scale")
@@ -153,6 +159,10 @@ def parse_cli():
     parser.add_argument("--shift", type=int, default=None)
     parser.add_argument("--dataset-dir", type=str, default=None)
     parser.add_argument("--output-dir", type=str, default=None)
+    parser.add_argument("--begin-idx", type=int, default=None,
+                        help="Start at first case whose number > begin_idx (-1 -> first case)")
+    parser.add_argument("--n", type=int, default=None,
+                        help="Number of cases to run from begin_idx (-1 -> all remaining)")
     args, _ = parser.parse_known_args()
     return args
 
@@ -177,9 +187,15 @@ def build_configs(cli):
         exp_config.dataset_dir = cli.dataset_dir
     if cli.output_dir is not None:
         exp_config.output_dir = cli.output_dir
+    if cli.begin_idx is not None:
+        exp_config.begin_idx = cli.begin_idx
+    if cli.n is not None:
+        exp_config.n = cli.n
 
     if cli.online_training is not None:
         online_train_config.open = cli.online_training
+    if cli.train_steps is not None:
+        online_train_config.n_train_steps=cli.train_steps
 
     return exp_config, online_train_config
 
@@ -249,7 +265,7 @@ def setup_runtime(seed, context_parallel_size=1):
         torch.cuda.set_device(local_rank)
         use_dist = False
 
-    print(f"[InfWorld] local_rank: {local_rank} | global_rank: {global_rank} | world_size: {num_processes}")
+    print(f"[InfWorld] local_rank(在当前机器上的进程编号): {local_rank} | global_rank(在所有机器上): {global_rank} | world_size: {num_processes}")
 
     import infworld.context_parallel.context_parallel_util as cp_util
     if use_dist:
@@ -332,33 +348,43 @@ def _load_model_config(config_path):
     return args
 
 
-def _freeze_condition_layers(dit, prefixes):
-    """Freeze condition-entry layers so online training cannot drift the model's
-    interface to history/actions/text/timestep. Returns the trainable params."""
+def _select_trainable_params(dit, trainable_layers):
+    """Whitelist selection: params under the listed layers train, everything
+    else is frozen. Layer entries omit the per-block index ("blocks.norm3"
+    matches blocks.<i>.norm3.*). Returns the trainable params."""
+    def canonical(name):
+        parts = name.split(".")
+        if parts[0] == "blocks":
+            parts = ["blocks"] + parts[2:]  # drop the block index
+        return ".".join(parts)
+
     trainable_params = []
     frozen_n = 0
     for n, p in dit.named_parameters():
-        if n.startswith(prefixes):
-            p.requires_grad_(False)
-            frozen_n += p.numel()
-        else:
+        key = canonical(n)
+        if any(key == l or key.startswith(l + ".") for l in trainable_layers):
             p.requires_grad_(True)
             trainable_params.append(p)
-    print(f"[OnlineTrain] frozen params (cond entry layers): {frozen_n:,}; "
-          f"trainable: {sum(p.numel() for p in trainable_params):,}")
+        else:
+            p.requires_grad_(False)
+            frozen_n += p.numel()
+    print(f"[OnlineTrain] frozen params: {frozen_n:,}; "
+          f"trainable {trainable_layers}: "
+          f"{sum(p.numel() for p in trainable_params):,}")
     return trainable_params
 
 
 def load_models(config_path, device, enable_context_parallel,
                 num_sampling_steps, shift,
                 online_train_open, use_grad_checkpoint,
-                freeze_prefixes, reset_between_videos):
+                trainable_layers, reset_between_videos):
     """Load VAE, text encoder, scheduler, and DiT, then apply online-training setup.
 
     Only scalar members are passed in (not whole config/runtime objects). When
-    online_train_open is True the condition-entry layers are frozen; when
-    reset_between_videos is also True a snapshot of the trainable params is kept
-    in Models.init_params for per-video weight restoration.
+    online_train_open is True only params under the trainable_layers whitelist
+    train (all else frozen); when reset_between_videos is also True a snapshot
+    of the trainable params is kept in Models.init_params for per-video weight
+    restoration.
     """
     config_path = _resolve_path(config_path)
     model_args = _load_model_config(config_path)
@@ -403,7 +429,7 @@ def load_models(config_path, device, enable_context_parallel,
     if online_train_open:
         if use_grad_checkpoint:
             set_grad_checkpoint(dit)
-        trainable_params = _freeze_condition_layers(dit, freeze_prefixes)
+        trainable_params = _select_trainable_params(dit, trainable_layers)
         if reset_between_videos:
             # Only trainable params can drift, so only they need snapshotting.
             init_params = {n: p.detach().clone()
@@ -517,13 +543,16 @@ def _load_input(dp_idx, name, case_dir, bucket_config):
     )
 
 
-def load_inputs(dataset_dir, bucket_config_name, dp_rank, dp_size):
+def load_inputs(dataset_dir, bucket_config_name, dp_rank, dp_size, begin_idx=-1, n=-1):
     """Scan a WBench dataset dir for case{n} sub-dirs and load this rank's shard.
 
-    Cases are sorted numerically and enumerated to assign dp_idx. Directories
-    missing any of image.jpg / move_view.json / prompts.json are skipped with a
-    message. Only cases where dp_idx % dp_size == dp_rank are actually read, so
-    each rank loads just the cases it will run.
+    Cases are sorted numerically. The subset selection keeps the first n cases
+    whose case number is > begin_idx (begin_idx=-1 -> start at the first case;
+    n=-1 -> all remaining). Selection happens before DP sharding, so n counts
+    global cases, not per-rank. Directories missing any of image.jpg /
+    move_view.json / prompts.json are skipped with a message. Only cases where
+    dp_idx % dp_size == dp_rank are actually read, so each rank loads just the
+    cases it will run. dp_idx is a contiguous index over the selected subset.
     """
     dataset_dir = _resolve_path(dataset_dir)
     bucket_config = _get_bucket_config(bucket_config_name)
@@ -536,6 +565,12 @@ def load_inputs(dataset_dir, bucket_config_name, dp_rank, dp_size):
     )
     print(f"[InfWorld] Found {len(case_names)} case dirs under {dataset_dir}")
 
+    # Subset: first n cases whose case number > begin_idx.
+    case_names = [name for name in case_names if _case_sort_key(name) > begin_idx]
+    if n >= 0:
+        case_names = case_names[:n]
+    print(f"[InfWorld] Selected {len(case_names)} cases (begin_idx={begin_idx}, n={n})")
+
     inputs = []
     for dp_idx, name in enumerate(case_names):
         case_dir = os.path.join(dataset_dir, name)
@@ -546,7 +581,7 @@ def load_inputs(dataset_dir, bucket_config_name, dp_rank, dp_size):
             continue
         inputs.append(_load_input(dp_idx, name, case_dir, bucket_config))
 
-    print(f"[InfWorld] rank {dp_rank}/{dp_size}: {len(inputs)} cases to run")
+    print(f"[InfWorld] rank {dp_rank}/{dp_size}(dp_rank/dp_size):total has {len(inputs)} cases to run")
     return inputs
 
 
@@ -796,7 +831,7 @@ def main():
         exp_config.model_config_path, runtime.device, runtime.enable_context_parallel,
         exp_config.num_sampling_steps, exp_config.shift,
         online_train_config.open, online_train_config.use_grad_checkpoint,
-        online_train_config.freeze_prefixes, online_train_config.reset_between_videos,
+        online_train_config.trainable_layers, online_train_config.reset_between_videos,
     )
 
     # Fill num_frames from the model config when not overridden.
@@ -806,6 +841,7 @@ def main():
     inputs = load_inputs(
         exp_config.dataset_dir, exp_config.bucket_config_name,
         runtime.dp_rank, runtime.dp_size,
+        exp_config.begin_idx, exp_config.n,
     )
     output_dir = prepare_output_dir(exp_config.output_dir)
 

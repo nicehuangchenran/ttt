@@ -13,8 +13,8 @@ set -o pipefail
 #   NUM_CASES  : 取前 N 个 case，0=全部
 #   ONLINE     : online (test-time) training 开关 on/off
 JOBS=(
-    "generate_video_cut21.py 3 20 off"
-    "generate_video_cut21.py 3 20 on"
+    "scripts/infworld_inference_re_0706.py 3 20 off"
+    "scripts/infworld_inference_re_0706.py 3 20 on"
 )
 
 
