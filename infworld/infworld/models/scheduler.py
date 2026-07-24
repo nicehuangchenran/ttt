@@ -292,7 +292,7 @@ class RFlowScheduler:
             pred = pred[:, :, -z_in.shape[2]:]
             end = time.time()
 
-            print(f"Step {i} Forward time: {end - start:.4f} seconds")
+            tqdm.write(f"Step {i} Forward time: {end - start:.4f} seconds")
             pred_cond, pred_uncond = pred.chunk(2, dim=0)
             v_pred = pred_uncond + guidance_scale * (pred_cond - pred_uncond)
 

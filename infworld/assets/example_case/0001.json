@@ -324,2104 +324,328 @@
     "view": "no-op"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
-  },
-  {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
-  {
-    "move": "go forward",
-    "view": "no-op"
+  {
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
     "move": "go forward",
@@ -2748,456 +972,456 @@
     "view": "no-op"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
-    "move": "go forward",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn left"
   },
   {
     "move": "no-op",
@@ -3681,3682 +1905,3682 @@
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
     "move": "no-op",
-    "view": "turn right"
+    "view": "turn left"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "no-op",
-    "view": "turn right"
+    "move": "go forward",
+    "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
+    "move": "go forward",
     "view": "no-op"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   },
   {
-    "move": "go back",
-    "view": "no-op"
+    "move": "no-op",
+    "view": "turn right"
   }
 ]

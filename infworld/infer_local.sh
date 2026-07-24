@@ -22,12 +22,15 @@ echo "Working directory: $WORK_DIR"
 if [ "$NUM_GPUS" -eq 1 ]; then
     # Single GPU: run directly to avoid torchrun port (EADDRINUSE)
     # python scripts/infworld_inference_input_oom.py --online-training=on
-    python scripts/infworld_inference.py --online-training=on
+    python scripts/infworld_inference_origin.py
 else
     MASTER_PORT=${MASTER_PORT:-29400}
     echo "MASTER_PORT: $MASTER_PORT"
-    torchrun --nnodes=1 --nproc_per_node=$NUM_GPUS \
+    CUDA_VISIBLE_DEVICES=4,5 torchrun --nnodes=1 --nproc_per_node=$NUM_GPUS \
         --rdzv_id=100 --rdzv_backend=c10d \
         --rdzv_endpoint=localhost:$MASTER_PORT \
-        scripts/infworld_inference.py
+        scripts/main.py \
+        --dataset-dir dataset/sekai-game-walking-854_480_30fps \
+        --output-dir video/sekai-game-walking-256 --num 2 \
+        --bucket-config-name ASPECT_RATIO_256 --shift 3 --steps 20
 fi

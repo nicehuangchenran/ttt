@@ -19,21 +19,35 @@ Structure (top to bottom):
         "--online-training",
         type=lambda s: s.strip().lower() in ("on", "true", "1", "yes"),
         default=None,
-        help="Enable online (test-time) training between chunks: on/off",
+        help="是否在 chunk 之间做在线(test-time)训练: on/off (默认 OnlineTrainConfig.open=False, 即关闭)",
     )
-    parser.add_argument("--train-steps", type=int, default=None)
+    parser.add_argument("--train-steps", type=int, default=None,
+                        help="每个 chunk 的在线训练步数 (默认 OnlineTrainConfig.n_train_steps=5)")
     parser.add_argument("--max-chunks", type=int, default=None,
-                        help="Max autoregressive chunks allowed per video")
-    parser.add_argument("--steps", type=int, default=None, help="num_sampling_steps")
-    parser.add_argument("--cfg-scale", type=float, default=None, help="text_cfg_scale")
-    parser.add_argument("--seed", type=int, default=None)
-    parser.add_argument("--shift", type=int, default=None)
-    parser.add_argument("--dataset-dir", type=str, default=None)
-    parser.add_argument("--output-dir", type=str, default=None)
+                        help="每个视频最多生成的自回归 chunk 数 (默认 ExpConfig.max_chunks=20)")
+    parser.add_argument("--steps", type=int, default=None,
+                        help="采样去噪步数 num_sampling_steps (默认 ExpConfig.num_sampling_steps=30)")
+    parser.add_argument("--cfg-scale", type=float, default=None,
+                        help="文本 CFG 强度 text_cfg_scale (默认 ExpConfig.text_cfg_scale=5.0)")
+    parser.add_argument("--seed", type=int, default=None,
+                        help="随机种子 (默认 ExpConfig.seed=42)")
+    parser.add_argument("--shift", type=int, default=None,
+                        help="Scheduler shift, 与分辨率配套 (PX256: 3, PX627: 7, PX960: 11; 默认 ExpConfig.shift=7)")
+    parser.add_argument("--bucket-config-name", type=str, default=None,
+                        help="宽高比 bucket 表名, 如 ASPECT_RATIO_960_F64, 注意同时更改 shift "
+                             "(默认 ExpConfig.bucket_config_name='ASPECT_RATIO_627_F64')")
+    parser.add_argument("--dataset-dir", type=str, default=None,
+                        help="输入数据集目录 (默认 ExpConfig.dataset_dir='dataset/wbench')")
+    parser.add_argument("--output-dir", type=str, default=None,
+                        help="视频输出目录 (默认 ExpConfig.output_dir='../WBench/work_dirs/test/videos'), 目录下每个视频命名为case_n_combined.mp4")
     parser.add_argument("--begin-idx", type=int, default=None,
-                        help="Start at first case whose number > begin_idx (-1 -> first case)")
+                        help="从编号 > begin_idx 的第一个 case 开始 (-1 表示从第一个开始; 默认 ExpConfig.begin_idx=-1)")
     parser.add_argument("--num", type=int, default=None,
-                        help="Number of cases to run from begin_idx (-1 -> all remaining)")
+                        help="从 begin_idx 起运行的 case 数量 (-1 表示全部剩余; 默认 ExpConfig.n=-1)")
+
+运行命令:  CUDA_VISIBLE_DEVICES=5 \
+python scripts/main.py --dataset-dir dataset/sekai-game-walking-854_480_30fps --output-dir video/sekai-game-walking-854_480_30fps --num 1 --max-chunks 3
+读取的 dataset-dir 目录结构在 memory proposed.md 中
 """
 
 import sys
@@ -182,7 +196,11 @@ def parse_cli():
     parser.add_argument("--steps", type=int, default=None, help="num_sampling_steps")
     parser.add_argument("--cfg-scale", type=float, default=None, help="text_cfg_scale")
     parser.add_argument("--seed", type=int, default=None)
-    parser.add_argument("--shift", type=int, default=None)
+    parser.add_argument("--shift", type=int, default=None,
+                        help="Scheduler shift (PX256: 3, PX627: 7, PX960: 11); keep in sync with --bucket-config-name")
+    parser.add_argument("--bucket-config-name", type=str, default=None,
+                        help="Aspect-ratio bucket table in infworld/configs/bucket_config.py, "
+                             "e.g. ASPECT_RATIO_627_F64 (shift=7) or ASPECT_RATIO_960_F64 (shift=11)")
     parser.add_argument("--dataset-dir", type=str, default=None)
     parser.add_argument("--output-dir", type=str, default=None)
     parser.add_argument("--begin-idx", type=int, default=None,
@@ -209,6 +227,8 @@ def build_configs(cli):
         exp_config.seed = cli.seed
     if cli.shift is not None:
         exp_config.shift = cli.shift
+    if cli.bucket_config_name is not None:
+        exp_config.bucket_config_name = cli.bucket_config_name
     if cli.dataset_dir is not None:
         exp_config.dataset_dir = cli.dataset_dir
     if cli.output_dir is not None:
