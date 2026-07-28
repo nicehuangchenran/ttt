@@ -1,0 +1,20 @@
+{
+  "name": "case788",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow, steady movement through a dense, fog-laden forest at night in Yamadera, Yamagata Prefecture, Japan. The camera pans slightly to the left, revealing a narrow path bordered by tall trees whose trunks are barely visible through the thick mist. As the viewer progresses, the ground is covered with fallen leaves and patches of grass, illuminated faintly by an unseen light source that casts soft shadows. The camera then tilts downward, showing a set of stone steps leading upwards, flanked by metal railings that appear weathered and moss-covered. The steps ascend gradually into the fog, disappearing into the obscured distance. The surrounding environment remains quiet and empty, with no signs of human presence. The camera continues to move forward, maintaining a consistent pace up the stairs, capturing the eerie stillness of the night. The fog intensifies as the ascent continues, enveloping the scene in a hazy, monochromatic palette dominated by shades of dark green and gray. The camera angle shifts subtly, providing a closer view of the steps and the railings, emphasizing the texture of the wet stones and the intricate details of the metalwork. The atmosphere remains unchanged, with the fog persistently obscuring the surroundings, creating a sense of isolation and mystery.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

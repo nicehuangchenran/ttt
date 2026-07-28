@@ -1,0 +1,20 @@
+{
+  "name": "case449",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow stone path bordered by dense foliage and an ancient wall, leading deeper into the misty forest of Shengshan Island at night. The camera moves forward, capturing the textured ground covered with moss and scattered leaves, while the surrounding trees loom large, their branches intertwining overhead. As the path curves gently, the viewer's gaze follows the dimly lit trail, revealing more of the fog-laden environment that envelops the scene in a soft, grayish hue. The camera angle shifts slightly upward, showcasing the thick canopy above and the faint outlines of distant hills shrouded in mist. The atmosphere remains quiet and solitary, with no signs of human presence, enhancing the sense of isolation. The path continues to wind through the forest, passing by weathered stone structures partially hidden by vegetation, and the camera pans slowly to highlight these architectural remnants. The lighting remains consistently low, casting long shadows and creating a serene yet eerie ambiance. As the journey progresses, the viewer encounters more natural obstacles, such as rocks and roots, which the camera navigates with subtle adjustments, maintaining a smooth and immersive experience throughout the nocturnal exploration.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

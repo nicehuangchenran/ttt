@@ -1,0 +1,20 @@
+{
+  "name": "case322",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a stone pathway flanked by traditional wooden structures, leading towards a temple nestled within a forested area. As the camera advances steadily, it captures the intricate details of the temple's architecture, featuring ornate roofs and wooden beams, set against a backdrop of bare trees and patches of snow on the ground. The camera then pans to the right, revealing a fenced area with a small gate, beyond which lies a dense forest. The viewer continues to move forward, passing through the gate and onto a narrow dirt path that winds through the woods. The camera angle shifts slightly upward, showcasing the towering trees and the rocky terrain, with sunlight filtering through the branches, casting dappled shadows on the path. The scene transitions smoothly as the viewer ascends a set of wooden stairs, the camera tilting downward to follow the ascent. The surrounding environment remains serene and untouched, with no signs of human presence, emphasizing the quiet solitude of the forest. The cloudy sky above adds a soft, diffused light to the scene, enhancing the natural beauty of the location. As the viewer reaches the top of the stairs, the camera pans out to reveal an expansive view of the forest, with the path continuing into the distance, inviting further exploration.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

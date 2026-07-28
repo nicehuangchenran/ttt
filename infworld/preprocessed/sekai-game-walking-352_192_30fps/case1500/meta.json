@@ -1,0 +1,20 @@
+{
+  "name": "case1500",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, winding stone path through a lush forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera steadily advances, capturing the detailed texture of the rocky trail flanked by vibrant green grass and dense foliage. As the journey progresses, the path meanders gently, revealing a variety of trees with broad leaves and slender trunks, their branches swaying slightly in the breeze. The surrounding environment is bathed in bright sunlight, casting dynamic shadows that dance across the ground. The sky above is a clear blue dotted with fluffy white clouds, enhancing the serene atmosphere. The camera maintains a consistent eye-level perspective, offering an immersive first-person view of the tranquil setting. Occasionally, the path splits into smaller trails, inviting exploration, but the main route continues straight ahead, bordered by wooden posts and natural barriers. The scene remains empty of people, emphasizing the peaceful solitude of this outdoor-natural landscape. The overall ambiance is one of calm and natural beauty, with the gentle rustling of leaves and the soft crunch of stones underfoot providing a soothing soundtrack to the visual journey.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

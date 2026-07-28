@@ -1,0 +1,20 @@
+{
+  "name": "case1332",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow dirt path at night in Le Prarion, Chamonix-Mont-Blanc, France. The camera advances forward, capturing the silhouette of a utility pole and its cables stretching across the dimly lit sky. As the viewer progresses, the path winds gently uphill, flanked by dense clusters of tall pine trees that stand out starkly against the dark, cloudy sky. The camera angle remains steady, focusing on the path ahead while subtly panning to reveal more of the surrounding forest. The lighting is minimal, casting deep shadows and creating a serene yet mysterious atmosphere. The path continues to ascend, leading towards a small building partially obscured by the trees. The camera moves closer to the structure, revealing its simple design and the faint outline of a roof. The environment remains quiet and empty, with no signs of human presence, emphasizing the solitude of the nighttime setting. The overall scene maintains a consistent pace, with the camera smoothly following the path's contours and gradually unveiling the tranquil, natural surroundings.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

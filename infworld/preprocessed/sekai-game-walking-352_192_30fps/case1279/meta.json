@@ -1,0 +1,20 @@
+{
+  "name": "case1279",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a steady forward movement along a winding road flanked by dense vegetation under a cloudy sky at sunset. The camera captures the road's smooth surface, marked with white lines, as it curves gently through the natural landscape. As the viewer progresses, the surrounding trees and shrubs create a tunnel-like effect, their silhouettes dark against the dimming light. The camera angle remains consistent, providing a first-person perspective that immerses the viewer in the journey. The sky transitions from a deep blue to soft hues of orange and pink near the horizon, casting a serene glow over the scene. The road continues to ascend slightly, revealing more of the expansive view ahead. The camera then pans to the right, showcasing a vast expanse of water bordered by distant landforms, all bathed in the warm tones of the setting sun. The tranquil atmosphere is unbroken by any human presence, emphasizing the solitude and beauty of the natural surroundings. The camera returns to the road, capturing its gentle curves and the occasional road sign, before continuing its steady advance into the distance, where the road eventually disappears into the fading light.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

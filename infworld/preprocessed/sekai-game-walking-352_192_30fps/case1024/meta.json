@@ -1,0 +1,20 @@
+{
+  "name": "case1024",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily forward through a traditional Japanese torii gate at Fushimi Inari Taisha in Kyoto, Japan, under a heavy downpour at night. The camera advances along a stone pathway flanked by dense foliage and mist-shrouded trees, capturing the serene yet somber ambiance created by the rain. As the viewer progresses, the path leads into a narrow street lined with traditional wooden buildings, their dark silhouettes barely illuminated by the dim glow of lanterns. The camera pans slightly to reveal more of the street, showing wet cobblestones reflecting the sparse light, enhancing the sense of isolation. The scene transitions to a set of stone steps leading up towards another torii gate, with the camera continuing its steady ascent. The surrounding area remains empty, emphasizing the quiet solitude of the rainy night. The camera angle shifts subtly to capture the towering red pillars of the torii gate, partially obscured by the falling rain, while the muted colors of the environment\u2014shades of gray and dark brown\u2014are punctuated by the occasional flicker of lantern light. The entire sequence maintains a consistent forward motion, immersing the viewer in the tranquil yet eerie atmosphere of the shrine during a rainy night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

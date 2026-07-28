@@ -1,0 +1,20 @@
+{
+  "name": "case438",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dirt path bordered by a wooden railing, leading towards a serene forested area. The camera smoothly transitions from this initial pathway onto a rocky terrain, where the viewer continues their journey, navigating over uneven surfaces covered with patches of green moss. As the movement progresses, the scene opens up to reveal a breathtaking view of Lago di Braies, its calm turquoise waters reflecting the surrounding landscape under a cloudy sky. The camera pans slightly to capture the dense forest of tall evergreen trees that encircle the lake, creating a natural frame. The viewer then proceeds deeper into the forest, following a narrow dirt trail that winds through the trees, casting dappled shadows on the ground due to the filtered sunlight. The environment remains tranquil and untouched, with no signs of human presence, enhancing the sense of solitude. The camera maintains a steady first-person perspective throughout, providing an immersive experience as it captures the rich textures of the forest floor, the varying shades of green foliage, and the subtle interplay of light and shadow, all contributing to the peaceful ambiance of this remote natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

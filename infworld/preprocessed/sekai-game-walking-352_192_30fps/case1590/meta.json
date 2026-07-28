@@ -1,0 +1,20 @@
+{
+  "name": "case1590",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along Castle Rock Beach in Meelup, Australia, during a cloudy sunset. The camera smoothly pans across the sandy shoreline, revealing a blue canopy tent set up near the water's edge, accompanied by a white chair and a small table. As the movement continues, the camera captures the gentle waves lapping against the shore, their soft ripples reflecting the dim, warm hues of the setting sun. The sandy beach transitions into a rocky area, where large reddish-brown boulders are scattered, leading the eye towards a dense line of green foliage that borders the beach. The camera then shifts its focus upwards, showcasing the thick canopy of trees, their branches intertwining overhead, creating a natural tunnel effect. The lighting gradually dims as the viewer moves deeper into the forested area, with the sky above transitioning from a soft orange to a darker shade, indicating the approaching nightfall. The camera maintains a steady, forward motion throughout, providing a continuous and immersive perspective of the serene and untouched natural environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

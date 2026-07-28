@@ -1,0 +1,20 @@
+{
+  "name": "case150",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a gravel path bordered by wooden railings, leading into a lush forested area. As the camera advances, it pans slightly to the left, revealing a dense cluster of tall birch trees with their distinctive white bark and green foliage. The path curves gently, and the camera follows this movement, offering a broader view of the surrounding landscape. The terrain transitions from the initial forested area to an open meadow, where the ground is covered with vibrant green grass and scattered wildflowers. In the distance, majestic snow-capped mountains rise against a clear blue sky dotted with fluffy white clouds. The camera continues its steady forward motion, capturing the serene beauty of the natural environment. The sunlight filters through the trees, casting dappled shadows on the ground, and illuminates the scene with warm, golden hues. As the viewer progresses further, the path leads into a denser section of the forest, characterized by tall evergreen trees that form a thick canopy overhead. The camera angle shifts slightly upward, emphasizing the towering height of these conifers. The scene remains tranquil and untouched, with no signs of human presence, allowing the viewer to fully immerse in the peaceful ambiance of Le Prarion, Chamonix-Mont-Blanc, France.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

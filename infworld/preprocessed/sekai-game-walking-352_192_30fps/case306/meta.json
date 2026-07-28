@@ -1,0 +1,20 @@
+{
+  "name": "case306",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow, rocky path winding through a lush, green hillside. The camera moves forward, revealing an old, weathered stone building with a sloped roof partially obscured by tall grasses and wildflowers. As the viewer continues along the path, the camera pans slightly to the right, showcasing the building's side and a small wooden fence that borders the property. The scene transitions smoothly as the path leads into a dense forest of tall, evergreen trees, their branches swaying gently in the breeze. The camera maintains a consistent eye-level angle, capturing the rich textures of the forest floor covered in fallen leaves and patches of moss. The sky above is overcast, casting a soft, diffused light that filters through the tree canopy, creating a serene and tranquil atmosphere. The path curves gently, guiding the viewer deeper into the forest, where the air feels cooler and the sounds of nature become more pronounced. The entire journey is uninterrupted, offering a continuous and immersive experience of the natural surroundings in Le Prarion, Chamonix-Mont-Blanc, France, during a cloudy day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

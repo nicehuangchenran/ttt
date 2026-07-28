@@ -1,0 +1,20 @@
+{
+  "name": "case135",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer approaching a wooden signpost near the edge of a serene lake, capturing the tranquil beauty of Lago di Braies under sunny daylight. The camera smoothly transitions from focusing on the signpost to panning across the rocky shoreline, revealing the clear blue waters of the lake bordered by dense evergreen forests. As the camera moves forward, it captures the gentle slope of the terrain leading into the forest, with sunlight filtering through the tall trees, casting dynamic shadows on the ground. The path continues deeper into the woods, where the camera angle shifts slightly upward to showcase the towering trees and the lush greenery enveloping the area. The journey progresses towards a wooden bridge spanning a small river, with the camera moving steadily along the bridge's length, offering a view of the flowing water beneath and the surrounding forest. After crossing the bridge, the camera navigates through a narrow, winding trail within the forest, highlighting the rich textures of the underbrush and the dappled light filtering through the canopy. The entire sequence maintains a consistent pace, emphasizing the natural beauty and peaceful solitude of this outdoor setting, with no other individuals present, enhancing the sense of tranquility and immersion in nature.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

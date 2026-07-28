@@ -1,0 +1,20 @@
+{
+  "name": "case515",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone path surrounded by dense foliage under a cloudy night sky. The camera smoothly advances, capturing the texture of the stones and the surrounding greenery illuminated by a faint light source, possibly a flashlight. As the path ascends, the camera tilts slightly upward, revealing more of the overhanging branches and the dimly lit sky above. The movement continues up a set of stone steps, where the camera pans briefly to the right, showing a small clearing with scattered rocks and more vegetation. The path then curves gently to the left, leading into a rustic village setting with old stone buildings partially obscured by shadows. The camera maintains a steady pace, focusing on the dirt road that winds through the village, flanked by dense bushes and trees. The lighting remains consistent, casting long shadows and creating a moody atmosphere. The camera occasionally shifts angles to capture different perspectives of the path and its surroundings, emphasizing the quiet solitude of the scene. The entire journey is uninterrupted, with no other characters or sudden events, maintaining a serene and immersive experience of a solitary walk through Shengshan Island's natural and historical landscape at night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

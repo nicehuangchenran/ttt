@@ -1,0 +1,20 @@
+{
+  "name": "case790",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow dirt path surrounded by dense evergreen trees, leading towards a serene lake nestled at the base of towering mountains. The camera moves steadily forward, capturing the lush greenery and the rugged terrain underfoot. As the path curves gently, the viewer's gaze is drawn to the expansive view of Lago di Braies, its deep blue waters reflecting the cloudy sky above. The surrounding mountains, partially shrouded in mist, create a dramatic backdrop, their rocky surfaces interspersed with patches of snow. The camera angle shifts slightly to the right, revealing more of the lake's shoreline, which is lined with a mix of rocks and sparse vegetation. The lighting is soft and diffused, typical of an overcast day, casting gentle shadows that enhance the natural textures of the landscape. The scene remains tranquil and untouched, with no signs of human presence, emphasizing the pristine beauty of this remote alpine setting. As the walk continues, the path becomes slightly steeper, and the camera pans to capture the interplay of light and shadow on the forest floor, highlighting the rich greens of the foliage and the earthy tones of the trail. The overall atmosphere is one of peaceful solitude, inviting the viewer to immerse themselves in the natural splendor of Lago di Braies.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

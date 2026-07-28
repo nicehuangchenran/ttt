@@ -1,0 +1,20 @@
+{
+  "name": "case846",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone path winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly glides over the moss-covered stones, capturing the intricate textures and the surrounding tall trees with bare branches, indicating a cloudy or foggy day. As the path ascends, the camera pans slightly to reveal a wooden railing on the right, guiding the viewer's ascent up a series of stone steps. The environment is rich with natural details, such as scattered leaves and patches of greenery, while the muted light filters through the canopy, casting soft shadows on the ground. The camera continues to move upward, offering glimpses of the expansive forest and the misty horizon beyond. Eventually, the path leads to an elevated wooden structure perched on the hillside, with the camera tilting upwards to showcase its intricate design and the panoramic view it offers. The scene remains empty, emphasizing the serene and untouched beauty of the natural surroundings, with the camera maintaining a steady focus on the path and the structures encountered along the way.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

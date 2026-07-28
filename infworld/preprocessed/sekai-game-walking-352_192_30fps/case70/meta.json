@@ -1,0 +1,20 @@
+{
+  "name": "case70",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a forward-moving perspective along a winding road at Castle Rock Beach, Meelup, Australia, during sunset under cloudy and foggy conditions. The camera steadily advances, capturing the road's gentle curves flanked by dense vegetation on both sides. As the vehicle progresses, the dimming light casts a soft, muted glow over the scene, enhancing the earthy tones of the foliage and the dark asphalt. The camera angle remains fixed, providing a consistent view of the road ahead, which features intermittent white dashed lines marking the lanes. The surrounding environment is serene and devoid of any human presence, emphasizing the solitude of the setting. The sky transitions from a deep twilight hue near the horizon to a darker shade above, creating a gradient effect that adds depth to the visual composition. The camera continues its steady advance, revealing subtle changes in the landscape, such as variations in the density of the trees and the occasional appearance of reflective road signs. The overall atmosphere is tranquil, with the natural elements and the quiet road contributing to a sense of peaceful isolation.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

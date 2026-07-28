@@ -1,0 +1,20 @@
+{
+  "name": "case1045",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, gravelly path that winds through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera steadily advances, capturing the subtle undulations of the trail as it meanders between tall trees with leaves tinged in autumnal hues of orange and red. As the walk progresses, the surrounding environment reveals a mix of coniferous and deciduous trees, their branches occasionally brushing against the camera's field of view. The sky above is overcast with a soft, diffused light filtering through the clouds, casting a muted palette of purples and pinks across the landscape, indicative of the approaching sunset. The camera angle remains at eye level, providing an immersive perspective of the journey. The path gradually opens up, revealing a small clearing with scattered rocks and patches of grass, before curving gently to the right. In the distance, the faint outlines of mountains loom under the cloudy sky, adding depth to the serene, empty scene. The overall atmosphere is tranquil, with no other individuals present, emphasizing the solitude of the natural setting. The camera continues its steady movement, maintaining a consistent pace as it navigates the quiet, picturesque environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

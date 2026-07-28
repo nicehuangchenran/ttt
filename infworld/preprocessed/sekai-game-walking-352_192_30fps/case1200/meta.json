@@ -1,0 +1,20 @@
+{
+  "name": "case1200",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit path surrounded by dense fog, creating an eerie atmosphere. The camera smoothly transitions from a grassy area into a paved street lined with traditional Japanese lanterns and wooden buildings, their silhouettes barely visible through the mist. As the movement continues, the scene shifts to a stone-paved pathway leading towards a large torii gate, its red pillars standing out against the dark surroundings. The camera angle remains steady, focusing straight ahead as it ascends a flight of stairs flanked by more torii gates, each progressively smaller as they recede into the distance. The ambient lighting is minimal, with only a few lanterns casting a soft glow that barely penetrates the thick fog. The environment is completely devoid of people, enhancing the sense of solitude. The camera then pans slightly to the right, revealing a small fenced area with additional lanterns before continuing straight through a tunnel-like passage formed by closely spaced torii gates. The entire sequence maintains a slow, deliberate pace, emphasizing the quiet, mysterious ambiance of the night-time setting at Fushimi Inari Taisha in Kyoto, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

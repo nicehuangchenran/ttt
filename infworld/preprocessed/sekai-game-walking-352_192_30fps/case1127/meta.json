@@ -1,0 +1,20 @@
+{
+  "name": "case1127",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path surrounded by lush greenery and towering evergreen trees. As the camera advances steadily, it captures the intricate details of the terrain, including patches of grass, small rocks, and vibrant wildflowers dotting the landscape. The surrounding forest is dense, with tall pine trees stretching upwards towards a cloudy sky, their dark green needles contrasting sharply against the lighter hues of the undergrowth. In the distance, majestic snow-capped mountains rise prominently, their peaks partially obscured by a layer of fog that adds a sense of depth and mystery to the scene. The camera maintains a first-person perspective throughout, providing an immersive experience as if the viewer is walking through this serene natural setting. The lighting is soft and diffused, typical of a cloudy day, casting gentle shadows and enhancing the rich colors of the environment. As the path continues, the camera angle shifts slightly to reveal more of the expansive landscape, showcasing the vastness of the mountainous region. The scene remains tranquil and untouched, with no signs of human presence, emphasizing the pristine beauty of Le Prarion, Chamonix-Mont-Blanc, France. The overall atmosphere is peaceful, with the gentle rustling of leaves and the distant sound of nature creating a calming soundtrack to the visual journey.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

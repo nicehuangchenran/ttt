@@ -1,0 +1,20 @@
+{
+  "name": "case516",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, dirt path winding through dense vegetation on Shengshan Island, Zhoushan, China. The camera smoothly advances, capturing the intricate details of the surrounding foliage, with low-hanging branches and lush undergrowth flanking the trail. As the viewer progresses, the cloudy, foggy weather casts a soft, diffused light over the scene, muting the colors to earthy tones of brown and green. The path meanders gently, revealing subtle changes in elevation and texture, from compacted soil to scattered rocks and patches of grass. The camera angle remains consistent, maintaining a level view that emphasizes the immersive experience of walking through this natural setting. In the distance, the path opens up slightly, offering glimpses of a clearing where a rustic wooden structure becomes visible, partially obscured by the trees. The environment remains empty, with no signs of human presence, enhancing the sense of solitude and tranquility. The overall atmosphere is serene, with the muted lighting and quiet surroundings creating a peaceful ambiance as the journey continues along the secluded trail.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

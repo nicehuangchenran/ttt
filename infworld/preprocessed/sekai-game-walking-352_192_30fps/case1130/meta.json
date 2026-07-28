@@ -1,0 +1,20 @@
+{
+  "name": "case1130",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a stone-paved path that winds through a dense, overgrown area on Shengshan Island, Zhoushan, China. The camera smoothly transitions from a view of a water body bordered by lush vegetation to a narrow pathway flanked by trees and shrubs under a cloudy, foggy night sky. As the person progresses, they navigate through the natural terrain, their movement steady and deliberate. The path curves gently, revealing more of the surrounding greenery and occasional glimpses of a rustic wooden fence on the right side. The camera angle remains at eye level, providing an immersive experience of the journey. The lighting is dim, casting soft shadows and creating a serene yet mysterious atmosphere. The colors are muted due to the low light conditions, with shades of dark green and brown dominating the scene. The person continues along the path, ascending a set of stone steps that lead upwards into a more elevated section of the island. The environment remains empty, with no other individuals in sight, enhancing the sense of solitude and tranquility. The camera captures the intricate details of the foliage and the texture of the stone path, emphasizing the natural beauty of the location. As the journey progresses, the path becomes slightly narrower, bordered by dense bushes and leading towards a partially obscured building in the distance. The overall ambiance is calm and peaceful, with the gentle rustling of leaves adding to the auditory backdrop of this nocturnal exploration.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

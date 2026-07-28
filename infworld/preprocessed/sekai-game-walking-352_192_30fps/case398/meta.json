@@ -1,0 +1,20 @@
+{
+  "name": "case398",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved road flanked by tall, slender trees in a dense forest setting. The camera smoothly advances, capturing the misty atmosphere as sunlight filters through the canopy, casting soft shadows on the ground. As the path continues, the surrounding vegetation becomes more lush, with ferns and underbrush lining the sides. The road gently curves, revealing an old wooden structure partially obscured by the trees. The camera approaches this building, showcasing its weathered exterior and moss-covered steps leading up to a closed door. After a brief pause at the entrance, the perspective shifts back into the forest, following a narrow dirt trail that meanders deeper into the woods. The camera pans slowly, highlighting the towering trees and the interplay of light and shadow. The environment remains serene and untouched, with no signs of human presence, emphasizing the natural beauty and tranquility of the location. Throughout the sequence, the camera maintains a steady, first-person viewpoint, providing an immersive experience of exploring the forest's hidden paths and structures.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

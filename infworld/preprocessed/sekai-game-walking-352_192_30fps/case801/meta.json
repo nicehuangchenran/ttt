@@ -1,0 +1,20 @@
+{
+  "name": "case801",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow path flanked by tall bamboo stalks, their green leaves rustling gently in the breeze. The camera smoothly advances, capturing the dense bamboo forest from a first-person perspective, with the path winding slightly as it leads deeper into the serene natural setting. As the viewer progresses, the path transitions from dirt to a paved walkway, bordered by traditional wooden railings that guide the way. The surrounding bamboo creates a canopy overhead, filtering the bright sunlight into dappled patterns on the ground. The scene then shifts to an open area where traditional Japanese buildings come into view, their dark wooden facades and tiled roofs contrasting with the lush greenery. The camera continues to move forward, passing through a small gate and onto a stone-paved path that ascends gently into a wooded area. The path is lined with stone lanterns, casting soft shadows as the viewer climbs the steps. The forest becomes denser, with large trees providing shade and a sense of tranquility. The camera maintains a steady pace, capturing the rich textures of the forest floor and the interplay of light and shadow among the trees. The overall atmosphere is peaceful and immersive, with the natural beauty of Fushimi Inari Taisha in Kyoto, Japan, unfolding seamlessly before the viewer's eyes.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

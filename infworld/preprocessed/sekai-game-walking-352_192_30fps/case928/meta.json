@@ -1,0 +1,20 @@
+{
+  "name": "case928",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, winding path through dense forest vegetation at Castle Rock Beach, Meelup, Australia. The camera smoothly pans to reveal a stunning view of the ocean, framed by rocky outcrops and lush greenery under a bright, sunny sky. As the journey continues, the camera navigates through the forest, capturing the intricate details of the surrounding foliage, including ferns and shrubs, while the sunlight filters through the canopy, casting dappled shadows on the ground. The path meanders uphill, offering glimpses of the expansive blue sea and distant cliffs. The camera angle shifts slightly to highlight the rugged terrain, with rocks and uneven ground adding texture to the scene. The vibrant greens of the trees contrast sharply with the deep blue of the ocean, creating a visually striking landscape. As the viewer progresses, the camera captures the serene beauty of the untouched natural environment, emphasizing the tranquility and isolation of the location. The absence of people enhances the sense of solitude, allowing the viewer to fully immerse in the peaceful ambiance of Castle Rock Beach. The video concludes with a final panoramic view of the coastline, showcasing the harmonious blend of land and sea under the clear daylight.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

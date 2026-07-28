@@ -1,0 +1,20 @@
+{
+  "name": "case1294",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The camera begins its journey along a narrow dirt path cutting through a rugged, rocky terrain in M\u00fdrdalssandur, Southern Region, Iceland. As it moves forward, the path winds gently between large boulders and scattered stones, revealing a vast expanse of barren land stretching towards distant mountains shrouded in a thick layer of fog. The camera pans slightly to the right, capturing the undulating landscape under a cloudy sky tinged with the warm hues of sunset. The soft, diffused light casts long shadows across the ground, enhancing the textures of the rocks and the sparse vegetation. The camera continues its steady advance, occasionally tilting upward to emphasize the towering silhouettes of the mountains against the orange and gray backdrop. The scene remains empty, devoid of any human presence, emphasizing the solitude and raw beauty of the natural environment. As the camera progresses, the path becomes less defined, merging seamlessly into the surrounding terrain, while the distant mountains loom ever closer, their outlines gradually becoming more distinct through the mist. The overall atmosphere is serene and tranquil, with the muted colors and soft lighting creating a sense of calm and isolation in this remote Icelandic landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

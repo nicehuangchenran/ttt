@@ -1,0 +1,20 @@
+{
+  "name": "case163",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a forward-moving perspective along a two-lane road flanked by lush greenery under a clear blue sky. The camera steadily advances, capturing the smooth asphalt surface marked with white dashed lines that guide the path ahead. As the journey progresses, the road gently curves through a serene landscape dotted with tall trees casting dappled shadows on the pavement. The surrounding environment transitions from open fields bordered by sparse vegetation to denser wooded areas, where the sunlight filters through the canopy, creating a play of light and shadow. The camera maintains a consistent eye-level angle, offering an immersive view of the natural surroundings. The vibrant greens of the foliage contrast sharply with the deep blue of the sky, enhancing the visual appeal. The road continues its winding course, revealing occasional glimpses of rocky outcrops and more dense clusters of trees. The scene remains tranquil and undisturbed, with no signs of human presence or activity, emphasizing the peaceful solitude of the outdoor setting. The camera's steady movement and the harmonious blend of colors and textures create a continuous and cohesive narrative of a solitary journey through a picturesque natural landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

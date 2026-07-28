@@ -1,0 +1,20 @@
+{
+  "name": "case1177",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow, steady walk along a narrow, stone-paved path surrounded by dense foliage under a cloudy, foggy night sky. The camera moves forward, capturing the dimly lit path illuminated sporadically by faint moonlight filtering through the thick canopy above. As the viewer progresses, the path winds gently uphill, revealing more of the lush greenery and occasional patches of wildflowers glowing subtly in the low light. The camera angle remains at eye level, providing an immersive view of the natural surroundings. The environment is quiet and empty, with no signs of human presence except for the well-trodden path. The fog intensifies as the path curves, obscuring distant views and creating a sense of mystery. The camera continues its steady advance, navigating through the misty forest, where the visibility diminishes further, and the path becomes less defined. The surrounding trees loom closer, their dark silhouettes blending into the fog. The viewer's journey takes a slight descent, leading to a small clearing where the path forks, offering a choice of directions. The camera pauses briefly, surveying the options before continuing along the left fork, which leads deeper into the shadowy woods. The atmosphere remains serene yet enigmatic, with the muted colors of the night and the soft glow of the moonlight enhancing the tranquil yet isolated setting of Shengshan Island, Zhoushan, China.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

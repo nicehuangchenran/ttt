@@ -1,0 +1,20 @@
+{
+  "name": "case459",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer's perspective moving steadily along a rugged, rocky path on the Mardi Himal Trail in Kaski, Nepal. The camera pans slightly to reveal colorful prayer flags fluttering in the breeze, adding vibrant splashes of red, blue, yellow, green, and white against the earthy tones of the trail. As the journey progresses, the camera angle shifts upward, showcasing the expansive view of snow-capped mountains under a clear, sunny sky. The sun, positioned high in the sky, casts sharp shadows and illuminates the pristine white snow, enhancing the contrast with the rocky terrain. The camera continues to move forward, transitioning from the rocky path onto a snow-covered slope. The smooth, untouched snow glistens under the sunlight, creating a serene and tranquil atmosphere. The camera maintains a steady pace, capturing the gentle undulations of the snowy landscape as it stretches into the distance. The surrounding environment remains empty, emphasizing the solitude and vastness of the natural setting. The camera's movement is fluid, providing a continuous and immersive experience of the breathtaking mountain scenery.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

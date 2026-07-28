@@ -1,0 +1,20 @@
+{
+  "name": "case851",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a snow-covered path flanked by tall evergreen trees, their branches heavy with fresh snow. The camera steadily advances, capturing the serene, untouched landscape as it pans slightly to reveal a misty, expansive lake ahead. As the movement continues, the path curves gently towards the water's edge, where the snow blankets the rocky shore. The camera angle shifts subtly, offering a broader view of the lake, its surface calm and reflecting the muted light of a snowy day. In the distance, snow-laden mountains rise, their peaks shrouded in fog. The scene transitions as the viewer approaches a small wooden pier extending into the lake, with a quaint, snow-covered cabin nestled beside it. The camera then pans back, following the shoreline as it winds through the forested area, the dense trees creating a natural corridor. The lighting remains soft and diffused, casting gentle shadows across the snow. The entire sequence captures the tranquil beauty of Lago di Braies, with no other figures present, emphasizing the solitude and pristine nature of the environment. The camera's smooth, continuous motion enhances the immersive experience, allowing viewers to feel as if they are walking through this peaceful winter wonderland.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

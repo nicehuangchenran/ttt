@@ -1,0 +1,20 @@
+{
+  "name": "case277",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a stationary view of Castle Rock Beach in Meelup, Australia, under a clear sunny sky. The camera captures a tranquil outdoor scene, focusing on a dirt path that meanders through a cluster of tall trees with dense green foliage. The sunlight filters through the leaves, casting dappled shadows on the ground, creating a serene and natural ambiance. As the video progresses, there is no apparent movement from the camera, maintaining a steady angle that showcases the lush vegetation and the natural beauty of the area. In the background, a glimpse of the ocean can be seen beyond the trees, adding depth to the scene. A wooden bench is partially visible on the left side of the frame, suggesting a spot for rest or contemplation. On the right, a metal railing leads down towards the beach, indicating a pathway for visitors. The overall lighting is bright and consistent, highlighting the vibrant greens of the trees and the earthy tones of the path. The scene remains empty, with no people or animals present, emphasizing the peaceful solitude of the location. The camera's fixed position allows viewers to fully absorb the details of this picturesque setting, from the intricate textures of the tree bark to the subtle variations in the shadows cast by the sunlight.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

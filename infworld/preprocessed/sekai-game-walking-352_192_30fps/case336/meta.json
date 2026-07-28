@@ -1,0 +1,20 @@
+{
+  "name": "case336",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement across a vast expanse of snow-covered terrain under a clear blue sky. The camera glides smoothly over undulating mounds of pristine white snow, capturing the expansive and untouched landscape. As the viewer progresses, a tall metal tower comes into view on the right, standing stark against the horizon. The camera continues its advance, revealing a small cluster of buildings nestled among the snowy hills. These structures, with their dark roofs and weathered walls, stand out against the bright white surroundings. The camera pans slightly to the left, offering a closer look at the buildings, which appear to be part of a remote outpost or research station. The sun casts sharp shadows, enhancing the textures of the snow and the rugged surfaces of the buildings. The camera then moves inside one of the structures, revealing a dimly lit interior with wooden beams and scattered debris. Emerging back outside, the camera follows a narrow path bordered by a metal railing, leading towards a rocky outcrop. The surrounding mountains loom in the distance, their peaks shrouded in mist, adding depth to the serene and isolated setting. The entire sequence maintains a consistent eye-level angle, emphasizing the vastness and quiet beauty of the snowy landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

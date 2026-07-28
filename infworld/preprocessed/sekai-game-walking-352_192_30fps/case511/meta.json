@@ -1,0 +1,20 @@
+{
+  "name": "case511",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest in Yamadera, Yamagata Prefecture, Japan, under sunny daylight conditions. The camera smoothly pans across the rugged terrain, capturing the intricate details of moss-covered rocks and the rich texture of the forest floor blanketed with fallen leaves. As the perspective advances, the camera tilts slightly upward, revealing a set of stone stairs flanked by sturdy metal railings, leading upwards into the thick canopy of trees. The sunlight filters through the foliage, casting dynamic shadows that dance across the path. The camera continues its steady ascent, navigating the natural obstacles and winding paths, offering glimpses of towering trees with their rough bark and sprawling branches. The surrounding environment is serene and untouched, with no signs of human presence except for the man-made stairs. The camera angle shifts subtly, providing a panoramic view of the forest's vast expanse, highlighting the interplay of light and shadow among the trees. The vibrant greens of the moss and the earthy tones of the forest floor create a harmonious palette, enhancing the visual richness of this tranquil outdoor setting. As the journey progresses, the camera captures the subtle undulations of the landscape, emphasizing the natural beauty and quiet solitude of Yamadera's woodland.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

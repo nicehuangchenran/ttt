@@ -1,0 +1,20 @@
+{
+  "name": "case202",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving slowly through a dense forest at night, illuminated only by faint ambient light filtering through the trees. The camera advances steadily along a narrow, winding path, capturing the intricate textures of the underbrush and the towering silhouettes of the trees against the cloudy sky. As the viewer progresses, the camera angle shifts subtly, revealing more of the surrounding foliage and the occasional glimpse of the foggy horizon. The dim lighting casts deep shadows, creating an eerie atmosphere that enhances the sense of isolation. Gradually, the path opens up, leading towards a beach where the sound of waves becomes audible. The camera continues its forward motion, transitioning from the forested area to the sandy shore. The beach is empty, with scattered rocks and a few small plants dotting the landscape. Two blue umbrellas stand out against the muted colors of the night, their bright hues contrasting sharply with the dark surroundings. The camera pans slightly to the right, offering a broader view of the ocean, its surface shimmering under the cloudy night sky. The entire scene is enveloped in a serene yet mysterious ambiance, with the natural elements of Castle Rock Beach, Meelup, Australia, presented in a tranquil and untouched state.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

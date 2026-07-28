@@ -1,0 +1,20 @@
+{
+  "name": "case546",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving through a dimly lit forest at night, the camera slowly advancing along a narrow path bordered by dense trees. The viewer's gaze is directed forward as they navigate the terrain, their movement steady and deliberate. The surrounding environment is shrouded in darkness, with only faint ambient light filtering through the canopy above, casting long shadows and creating an eerie atmosphere. As the journey continues, the camera pans slightly to the right, revealing a clearing ahead where the sky is partially visible, tinged with the soft hues of twilight. The path leads towards a rocky shoreline, the camera tilting downward to show the rugged terrain underfoot. The scene transitions smoothly as the viewer approaches the beach, the camera now capturing the gentle waves lapping against the shore. The rocks and shrubs lining the beach are silhouetted against the cloudy, foggy sky, adding depth and texture to the landscape. The overall lighting remains subdued, with the muted colors of the night sky blending seamlessly into the dark outlines of the natural surroundings. The camera maintains a consistent pace, providing a continuous and immersive experience as it explores this serene, empty outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

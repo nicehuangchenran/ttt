@@ -1,0 +1,20 @@
+{
+  "name": "case494",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a narrow, dimly lit forest path, surrounded by dense foliage and underbrush. The camera steadily advances forward, capturing the intricate details of the surrounding trees and shrubs, their leaves rustling gently in the breeze. As the path curves slightly, the camera pans upward, revealing a cloudy sky that filters soft, diffused light through the canopy. The journey continues, leading to an opening where the path meets a sandy beach at Castle Rock Beach, Meelup, Australia. The camera smoothly transitions from the forest to the shoreline, showcasing the tranquil waters of the ocean gently lapping against the rocks and sand. The sunset casts a warm, golden hue over the scene, creating a serene atmosphere. The camera then pans across the beach, highlighting the scattered rocks and the gentle waves rolling in. A blue umbrella stands out against the natural backdrop, adding a pop of color to the otherwise muted tones. The camera continues to move, capturing the expansive view of the ocean stretching into the horizon, with the fading light painting the sky in shades of orange and pink. The entire sequence is captured from a first-person perspective, providing an immersive experience of the walk from the forest to the beach during a peaceful, empty sunset.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

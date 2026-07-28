@@ -1,0 +1,20 @@
+{
+  "name": "case1308",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through East Maddon Park in London, United Kingdom, under a bright sunny sky. The camera smoothly glides along a path bordered by lush green grass and scattered trees, capturing the serene and empty park atmosphere. As the movement progresses, the camera pans slightly to the left, revealing a chain-link fence that separates the park from an adjacent area featuring a large building with multiple windows. The sunlight filters through the leaves, casting dynamic shadows on the ground, enhancing the vivid greens and earthy tones of the natural setting. The camera continues its steady advance, occasionally tilting upward to showcase the expansive blue sky dotted with fluffy white clouds. The scene remains tranquil and devoid of people, emphasizing the peaceful solitude of the park. The camera then shifts focus to the right, highlighting more dense clusters of trees and a small clearing, before returning to the central path. Throughout the sequence, the consistent daylight and clear weather conditions maintain a warm and inviting ambiance, while the camera's fluid motion provides a comprehensive view of the park's natural beauty and architectural elements.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case775",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a rugged, rocky terrain under a cloudy night sky, capturing the desolate beauty of Castle Rock Beach in Meelup, Australia. The camera pans slowly, revealing large, jagged rocks scattered across the landscape, their reddish hues barely illuminated by the dim ambient light. As the movement continues, the scene transitions to a dense forest area where a fierce wildfire rages, casting an eerie orange glow that contrasts sharply with the surrounding darkness. The camera angle shifts slightly, showing the fire consuming trees and underbrush, with thick smoke billowing upwards. The viewer then moves closer to the ocean, the camera tilting downward to reveal the calm waters meeting the rocky shore. The horizon is faintly visible, marked by a thin line of light piercing through the heavy clouds. The scene returns to the forest, where the fire's intensity increases, illuminating the path ahead with flickering flames. The camera follows this path, navigating through the smoky, fiery environment before emerging into a clearing where the fire's glow fades, leaving behind a dark, smoldering landscape. The entire sequence captures the stark contrast between the serene beach and the chaotic energy of the wildfire, all under the cover of a cloudy night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

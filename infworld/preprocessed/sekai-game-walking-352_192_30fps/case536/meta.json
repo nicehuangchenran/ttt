@@ -1,0 +1,20 @@
+{
+  "name": "case536",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, winding path through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera smoothly glides over the uneven terrain, capturing the lush greenery and thick underbrush that flanks the trail. As the viewer progresses, the path meanders gently, revealing a variety of trees with broad leaves and slender trunks, their branches intertwining overhead. The weather is cloudy and foggy, casting a soft, diffused light that filters through the canopy, creating a serene and misty atmosphere. The camera angle remains at eye level, providing an immersive experience as if the viewer is walking through the forest themselves. The surrounding environment is rich with natural details, from the vibrant green foliage to the earthy tones of the forest floor, dotted with fallen leaves and small plants. The lighting is subdued, with occasional beams of sunlight piercing through the fog, adding a warm glow to the scene. The path continues to wind deeper into the forest, with no other people or animals in sight, emphasizing the solitude and tranquility of this outdoor-natural setting. The overall ambiance is peaceful, with the gentle rustling of leaves and the distant sounds of nature enhancing the immersive experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

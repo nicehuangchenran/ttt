@@ -1,0 +1,20 @@
+{
+  "name": "case1533",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a gently curving road lined with lush green trees under a bright, sunny sky. The camera smoothly pans to the right, revealing a continuation of the tree-lined street that leads into a more urban setting. As the movement progresses, the road narrows slightly, bordered by a black metal fence on the left and a stone wall on the right, leading towards a large, multi-story building with a classical architectural style. The camera then shifts to a pedestrian pathway, where the viewer continues walking through a serene park area filled with dense foliage and dappled sunlight filtering through the leaves. The path winds through the greenery, with occasional glimpses of open grassy areas and distant trees. The camera maintains a steady forward motion, capturing the tranquil ambiance of East Maddon Park, London, with its vibrant natural surroundings and clear daylight enhancing the vivid greens and earthy tones of the environment. The scene remains consistently empty, emphasizing the peaceful solitude of the outdoor-urban landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case557",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a stone pathway bordered by wooden railings, leading towards a traditional Japanese pagoda partially obscured by dense fog. The camera smoothly pans upward, revealing the multi-tiered roof of the pagoda, its dark silhouette standing out against the muted, cloudy sky. As the viewer continues along the path, the camera angle shifts slightly to the right, showcasing a small stone lantern and a weathered wooden fence that lines the edge of the pathway. The surrounding environment is rich with natural elements; moss-covered rocks and leafless trees create a serene yet somber atmosphere. The viewer then ascends a set of stone steps, the camera tilting downward to follow the movement, before reaching a flat area where a large torii gate stands as a gateway into a more secluded part of the forest. The camera moves through the torii, capturing the intricate details of its wooden structure, and continues along a paved path flanked by bare trees and scattered foliage. The light remains consistently soft and diffused due to the overcast conditions, casting gentle shadows and enhancing the tranquil mood of the scene. As the viewer progresses further, the camera pans to reveal a cluster of traditional Japanese buildings nestled among the trees, their dark roofs blending harmoniously with the natural surroundings. The entire journey is marked by a sense of peaceful solitude, with no other individuals present, emphasizing the quiet beauty of this outdoor setting in Yamadera, Yamagata Prefecture, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

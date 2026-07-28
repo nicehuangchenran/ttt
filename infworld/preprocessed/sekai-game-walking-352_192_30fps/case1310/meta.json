@@ -1,0 +1,20 @@
+{
+  "name": "case1310",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rugged, rocky terrain under a cloudy sky during sunset. The camera smoothly glides over uneven ground, capturing the intricate textures of the dark volcanic rocks and patches of moss scattered across the landscape. As the movement continues, the perspective shifts slightly upward, revealing a wooden boardwalk that stretches into the distance, bordered by simple railings. The camera then pans to the left, showcasing an expansive view of the surrounding area, where rolling hills and distant mountains fade into the horizon under the warm hues of the setting sun. The lighting casts long shadows, enhancing the contours of the terrain and creating a serene atmosphere. The camera maintains a steady pace, occasionally adjusting its angle to emphasize the vastness of the open space. The sky above is a blend of orange and yellow tones, with thick clouds partially obscuring the sun, adding depth and drama to the scene. Throughout the video, there are no other people or animals in sight, emphasizing the solitude and untouched nature of this remote location in M\u00fdrdalssandur, Southern Region, Iceland. The overall ambiance is peaceful and contemplative, inviting the viewer to immerse themselves in the natural beauty of the environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

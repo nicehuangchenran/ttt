@@ -1,0 +1,20 @@
+{
+  "name": "case473",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path bordered by tall bamboo stalks, creating a serene and enclosed atmosphere. As the camera progresses, it smoothly transitions from the bamboo grove into a denser forest area, where the path becomes slightly more rugged and uneven. The movement is steady, suggesting a first-person perspective, with the camera occasionally tilting slightly to capture the surrounding environment. The forest is rich with tall trees, their trunks thick and textured, and the ground is covered with fallen leaves and patches of moss, indicating a moist, shaded habitat. The lighting is soft and diffused, with a cloudy sky casting an even, muted light that enhances the natural colors of the forest. The camera pans upward at times, revealing the towering tree canopies that filter the light, creating dappled shadows on the forest floor. As the path continues, the terrain becomes more varied, with rocks and small inclines adding to the natural landscape. The overall scene remains tranquil and untouched, with no signs of human presence, emphasizing the solitude and beauty of this outdoor natural setting in Yamadera, Yamagata Prefecture, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

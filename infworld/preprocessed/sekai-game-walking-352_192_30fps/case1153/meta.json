@@ -1,0 +1,20 @@
+{
+  "name": "case1153",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a wooden bridge that winds through a dense forest, leading towards an open area. As the camera progresses, it captures the intricate details of the bridge's construction and the surrounding tall trees with lush green foliage. The path transitions from the forest into a cobblestone courtyard, where the camera pans slightly to reveal a quaint stone building with a pointed roof, nestled amidst more trees. The scene then shifts to a panoramic view of Lago di Braies, with the camera panning across the serene lake bordered by rocky shores and dense pine forests. The camera continues to move forward, offering a closer look at the tranquil water reflecting the cloudy sky above. The majestic mountains in the background dominate the horizon, their rugged peaks partially shrouded in mist. The camera angle remains steady, capturing the expansive view of the lake and its surroundings, emphasizing the natural beauty and peaceful atmosphere of the location. The lighting is soft and diffused due to the overcast weather, casting gentle shadows and enhancing the rich greens of the trees and the deep blue of the lake. The entire sequence is devoid of any human presence, highlighting the untouched and serene nature of this outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

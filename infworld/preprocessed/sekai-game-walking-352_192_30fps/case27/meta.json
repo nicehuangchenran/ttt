@@ -1,0 +1,20 @@
+{
+  "name": "case27",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path surrounded by lush greenery. The camera steadily advances, capturing the intricate details of the trail as it winds through dense bushes and small trees. As the journey continues, the path opens up to reveal a breathtaking view of towering mountains in the distance, their peaks partially shrouded in mist under a bright, sunny sky. The camera pans slightly to the right, showcasing the expansive forest with tall pine trees casting long shadows on the ground. The sunlight filters through the foliage, creating a dappled effect on the path. The viewer then approaches a serene lake, its calm waters reflecting the surrounding landscape. The camera angle shifts to provide a closer look at the tranquil water, bordered by more trees and rocks. The scene remains empty, with no signs of human presence, emphasizing the natural beauty and tranquility of Lago di Braies in Braies, South Tyrol, Italy. The entire sequence maintains a steady pace, allowing the viewer to fully absorb the vivid colors and textures of this picturesque outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

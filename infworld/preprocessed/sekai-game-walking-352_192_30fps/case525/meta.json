@@ -1,0 +1,20 @@
+{
+  "name": "case525",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer's perspective moving forward along a stone staircase winding through a dense, foggy forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly ascends the steps, capturing the moss-covered stones and the sturdy metal railing on the right side. As the ascent continues, the surrounding trees loom large, their trunks thick and dark, partially obscured by the thick mist that hangs in the air, creating a muted, grayish-green palette. The ground is littered with fallen leaves and small rocks, adding texture to the scene. The camera angle shifts slightly to the left, revealing more of the forest path ahead, which curves gently out of sight. The atmosphere remains quiet and still, with no other characters or movement apart from the steady climb up the stairs. The light is diffused by the overcast sky, casting soft shadows and enhancing the serene yet mysterious ambiance of the natural setting. As the viewer reaches the top of the stairs, the camera pans to show a small wooden structure partially hidden by the fog, completing the tranquil and isolated journey through this outdoor-natural scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

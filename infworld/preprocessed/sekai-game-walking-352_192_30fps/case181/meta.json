@@ -1,0 +1,20 @@
+{
+  "name": "case181",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady ascent up a moss-covered stone staircase winding through a dense, foggy forest in Yamadera, Yamagata Prefecture, Japan. The camera moves forward, capturing the gradual climb as the steps curve gently, flanked by tall trees whose trunks are partially obscured by the thick mist. As the ascent continues, the camera pans slightly to reveal more of the surrounding woodland, where the ground is littered with fallen leaves and scattered rocks, all shrouded in a soft, diffused light that filters through the cloudy sky. The path levels out briefly, leading to a small clearing where the camera turns right, following a narrow dirt trail that meanders deeper into the forest. The environment remains consistently empty, with no signs of human presence, enhancing the sense of solitude. The camera maintains a steady pace, its angle occasionally adjusting to navigate the uneven terrain, while the muted colors of the forest\u2014shades of green, brown, and gray\u2014dominate the visual palette, creating an immersive and tranquil atmosphere. As the journey progresses, the fog persists, enveloping the scene in a serene, almost ethereal quality, with the camera's smooth movement providing a continuous and unbroken view of this natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

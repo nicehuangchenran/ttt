@@ -1,0 +1,20 @@
+{
+  "name": "case1327",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, paved path flanked by tall evergreen trees, their dense foliage casting dappled shadows on the ground. As the camera progresses, it pans slightly to the right, revealing a rustic wooden railing that guides the path through the forest. The movement continues, and the path gently curves, leading the viewer deeper into the serene woodland. The camera then shifts focus to the left, showcasing a small clearing where a quaint wooden cabin nestles among the trees, partially obscured by the surrounding greenery. The scene transitions smoothly as the viewer approaches a rocky shoreline, where the path ends at the edge of Lago di Braies. The camera pans across the tranquil lake, capturing its deep blue waters reflecting the cloudy sky above. The surrounding landscape features a mix of lush forests and rugged mountains, creating a picturesque backdrop. The camera angle remains steady, offering a panoramic view of the lake and its natural surroundings. The lighting is soft and diffused due to the overcast weather, enhancing the calm and peaceful atmosphere of this remote outdoor setting. Throughout the video, there are no other people present, emphasizing the solitude and untouched beauty of the location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case496",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow, winding path through a dense forest at night. The camera pans slightly from side to side, capturing the silhouettes of tall trees flanking the trail, their branches occasionally brushing against the viewer's path. The ground is uneven, covered with patches of grass, rocks, and scattered leaves, illuminated faintly by an unseen light source that casts soft shadows. As the person progresses, the camera tilts upward, revealing a canopy of trees overhead, their leaves forming a dark, intricate network against the cloudy sky. The night sky is a deep blue, dotted with a few faint stars peeking through the gaps in the foliage. The atmosphere is quiet and serene, with no other individuals present, emphasizing the solitude of the nocturnal walk. The camera continues its smooth forward motion, maintaining a consistent pace, while the surrounding environment remains largely unchanged, creating a continuous and immersive experience of navigating through the natural landscape under the cover of darkness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

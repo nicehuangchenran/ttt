@@ -1,0 +1,20 @@
+{
+  "name": "case1106",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the first-person perspective of a hiker ascending a rugged, rocky trail along the Mardi Himal Trail in Kaski, Nepal. The hiker's steady pace is captured as they navigate the uneven terrain, their feet carefully stepping over loose stones and patches of dry grass. The camera angle remains low, focusing on the path ahead, while colorful prayer flags flutter in the breeze on the left side of the trail, adding vibrant splashes of red, blue, yellow, green, and white against the earthy tones of the rocks. As the hiker progresses, the trail gradually transitions from rocky ground to a snow-covered slope, marked by a distinct line of footprints leading upwards. The surrounding landscape unfolds in panoramic views of distant snow-capped mountains under a clear, sunny sky, with soft shadows cast by the midday sun enhancing the textures of the snow and rocks. The camera smoothly pans upward, following the hiker's ascent towards the peak, where the horizon stretches endlessly, revealing the vastness of the mountainous terrain. The serene and empty trail, devoid of other hikers, emphasizes the solitude and tranquility of the natural setting, with the gentle rustling of the wind and the crunching of snow underfoot providing a peaceful soundtrack to the journey.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

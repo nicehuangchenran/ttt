@@ -1,0 +1,20 @@
+{
+  "name": "case296",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path flanked by dense greenery and traditional wooden structures, suggesting an entrance to Fushimi Inari Taisha in Kyoto, Japan. As the camera advances, it captures the intricate details of the surrounding environment, including the rustic wooden fences and stone walls that line the path. The sunlight filters through the canopy of trees, casting dappled shadows on the ground, enhancing the serene and natural ambiance. The camera then pans slightly to the right, revealing a small stone bridge over a shallow stream, followed by a series of steps leading upwards into the forested area. The viewer continues their ascent, navigating through the lush foliage and passing by vibrant red torii gates that stand out against the green backdrop. The camera angle shifts subtly to provide a broader view of the path ahead, which is bordered by more torii gates and stone lanterns, all bathed in the warm glow of the sunny day. The scene remains empty, with no other individuals present, emphasizing the tranquil and secluded atmosphere of this outdoor setting. As the journey progresses, the camera captures the harmonious blend of natural and man-made elements, from the towering trees to the carefully constructed pathways, creating a cohesive and immersive visual experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case537",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily forward through a snowy landscape in M\u00fdrdalssandur, Southern Region, Iceland. The viewer's gaze is directed along a narrow, snow-covered path bordered by dark, jagged rocks on either side. As the movement progresses, the camera pans slightly upward, revealing a vast expanse of snow-laden mountains under a pale, overcast sky. The terrain is uneven, with patches of exposed rock peeking through the thick blanket of snow. The camera continues to advance, navigating through a series of rocky outcrops and small crevices, providing a dynamic view of the rugged terrain. The lighting is soft and diffused, casting gentle shadows that accentuate the contours of the landscape. The scene remains empty, devoid of any human presence or wildlife, emphasizing the solitude and untouched nature of the environment. As the journey continues, the camera angle shifts subtly, offering different perspectives of the surrounding peaks and valleys, capturing the serene yet imposing beauty of this remote, wintry setting. The overall atmosphere is one of quiet stillness, with the steady forward motion of the camera creating a sense of exploration and discovery within this pristine, natural landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

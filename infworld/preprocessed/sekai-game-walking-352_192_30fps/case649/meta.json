@@ -1,0 +1,20 @@
+{
+  "name": "case649",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, gravelly path winding through a dense forest shrouded in thick fog. The camera smoothly glides over the uneven terrain, capturing the subtle undulations of the ground as it progresses. Tall trees with lush green foliage flank both sides of the path, their trunks occasionally visible through the mist. As the viewer advances, the fog gradually thins, revealing more of the surrounding landscape. The camera angle remains at eye level, providing an immersive experience of navigating the natural environment. The muted light filtering through the clouds casts a soft, diffused glow over the scene, enhancing the earthy tones of the path and the vibrant greens of the vegetation. The path curves gently to the right, leading the viewer uphill towards a more open area where the fog continues to obscure distant views. The atmosphere remains serene and untouched, with no signs of human presence, emphasizing the solitude and tranquility of the setting. The camera's steady pace and consistent focus on the path ahead create a continuous and cohesive visual narrative, inviting the viewer to explore further into the misty wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

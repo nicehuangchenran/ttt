@@ -1,0 +1,20 @@
+{
+  "name": "case930",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey along a narrow dirt path winding through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France, under a cloudy, foggy sky during the day. The camera moves steadily forward, capturing the lush greenery of tall pine trees and scattered deciduous trees lining the path, their leaves gently swaying in the breeze. As the path curves slightly to the right, the camera pans to reveal a broader view of the forest, showcasing the mist that hangs low among the trees, creating a serene and hazy atmosphere. The viewer continues along the path, which gradually ascends a gentle hill, revealing more of the surrounding landscape. The camera angle shifts upward, highlighting the thick grass and wildflowers dotting the hillside. As the path levels out, a series of power lines come into view, stretching across the horizon. The camera follows the lines, panning to the right to show a sturdy wooden utility pole standing prominently against the foggy backdrop. The muted colors of the scene, dominated by shades of green and gray, enhance the tranquil and isolated feel of this empty outdoor natural setting. The viewer's perspective remains at eye level throughout, providing an immersive experience of this peaceful, untouched environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

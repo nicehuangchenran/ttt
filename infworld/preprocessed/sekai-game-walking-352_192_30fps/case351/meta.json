@@ -1,0 +1,20 @@
+{
+  "name": "case351",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a steep stone staircase flanked by metal railings, leading into a dense forest. The camera moves steadily forward, capturing the rugged texture of the steps and the surrounding moss-covered rocks. As the ascent continues, the path levels out onto a narrow dirt trail winding through towering trees, their trunks thick and gnarled, casting dappled shadows on the ground. The camera pans slightly to reveal the misty atmosphere enveloping the forest, with soft light filtering through the canopy above. The viewer navigates along the trail, passing by lush undergrowth and large boulders, with the camera occasionally tilting upward to emphasize the height of the trees. The environment remains serene and untouched, with no signs of human presence except for the man-made path. The camera maintains a consistent eye-level perspective, allowing the viewer to fully immerse in the tranquil setting. The muted colors of the forest\u2014greens, browns, and grays\u2014are accentuated by the diffused light, creating a calm and immersive experience as the journey through the forest continues uninterrupted.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case743",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a cobblestone path that winds through a serene, forested area in Yamadera, Yamagata Prefecture, Japan. The camera smoothly follows the path as it curves gently, revealing a traditional Japanese temple structure nestled among bare trees under a cloudy sky. As the movement continues, the path leads upwards, ascending a hillside lined with more cobblestones and bordered by natural rock formations. The camera angle shifts slightly to capture the surrounding dense forest, with sunlight filtering through the branches, casting dappled shadows on the ground. The viewer then approaches a small cluster of wooden buildings with tiled roofs, typical of traditional Japanese architecture, situated amidst the trees. The camera pans to show a stone lantern and a gate leading into a courtyard, where the path continues to ascend. The scene transitions to a set of wooden stairs flanked by railings, leading up towards another temple structure partially obscured by mist. The camera captures the upward climb, emphasizing the steepness of the stairs and the interplay of light and shadow created by the sun breaking through the clouds. The final frames reveal a panoramic view of the temple complex, with multiple buildings connected by pathways, all enveloped in the tranquil atmosphere of the cloudy day. Throughout the video, the environment remains empty, enhancing the sense of solitude and peacefulness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case1421",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rocky shoreline at M\u00fdrdalssandur in the Southern Region of Iceland, under a cloudy and foggy sky during the day. The camera smoothly glides over the uneven terrain, capturing the scattered black pebbles and larger rocks that dominate the foreground. As the movement progresses, the camera pans slightly to reveal rolling hills in the background, their slopes partially obscured by mist, creating a serene yet desolate atmosphere. The muted colors of the landscape, dominated by shades of gray and dark green, enhance the sense of isolation. The camera continues its steady advance, occasionally tilting upward to emphasize the vastness of the open sky and the expansive view of the distant mountains. The absence of any human presence or wildlife underscores the emptiness of the scene. The camera's fluid motion and subtle shifts in angle provide a comprehensive view of the rugged coastline, highlighting the natural beauty and untouched wilderness of this remote Icelandic location. The overall ambiance remains consistent throughout, with the overcast weather casting a soft, diffused light that further accentuates the textures and contours of the landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

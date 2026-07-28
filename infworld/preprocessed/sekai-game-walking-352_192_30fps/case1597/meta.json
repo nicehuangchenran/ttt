@@ -1,0 +1,20 @@
+{
+  "name": "case1597",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving forward along a snow-covered wooden path that winds through a serene winter landscape. The camera smoothly glides past a rustic wooden cabin nestled among dense evergreen trees, its roof blanketed in fresh snow. As the viewer progresses, the path curves gently, revealing more of the tranquil forest setting, with each step crunching softly underfoot. The surrounding trees stand tall and still, their branches heavy with snow, creating a canopy that filters the diffused daylight. The camera angle remains steady, offering a continuous view of the path ahead, which is bordered by low wooden railings. The light is soft and muted, casting gentle shadows across the snowy terrain. As the journey continues deeper into the forest, the path narrows slightly, flanked by thickets of underbrush and towering pines. The air is crisp and quiet, with no other movement or presence disrupting the peaceful solitude. The scene maintains its calm and undisturbed atmosphere throughout, capturing the pristine beauty of Lago di Braies in a snowy day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

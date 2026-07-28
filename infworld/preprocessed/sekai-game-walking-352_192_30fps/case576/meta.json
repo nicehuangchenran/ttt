@@ -1,0 +1,20 @@
+{
+  "name": "case576",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving steadily forward through a rugged, moss-covered landscape in M\u00fdrdalssandur, Southern Region, Iceland. The camera pans smoothly from left to right, capturing the uneven terrain composed of dark volcanic rocks interspersed with patches of vibrant green moss. As the movement continues, the perspective shifts slightly upward, revealing a vast expanse of rolling hills shrouded in a thick layer of fog that obscures the distant horizon. The cloudy sky casts a soft, diffused light over the scene, muting the colors to a palette of muted greens, grays, and blacks. The camera maintains a steady pace, occasionally tilting downward to focus on the intricate textures of the rocks and moss beneath. The environment remains entirely empty, devoid of any human presence or wildlife, emphasizing the solitude and raw natural beauty of the location. Throughout the sequence, the fog subtly thickens, creating an ethereal atmosphere that envelops the landscape in a serene, almost otherworldly stillness. The overall effect is a continuous, immersive journey through this remote and untouched Icelandic wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

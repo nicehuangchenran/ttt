@@ -1,0 +1,20 @@
+{
+  "name": "case876",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a rocky path in Le Prarion, Chamonix-Mont-Blanc, France, under sunny daytime conditions. The camera moves steadily forward, capturing the rugged texture of the path as it winds through a lush green landscape. As the viewer progresses, the camera angle shifts slightly upward, revealing a breathtaking view of snow-capped mountains in the distance, their peaks glistening under the bright sunlight. Overhead, power lines stretch across the sky, supported by tall poles that intermittently appear in the frame. The surrounding environment is rich with vibrant greenery, featuring dense clusters of pine trees and patches of wildflowers. The camera continues its forward motion, panning gently to the right to showcase more of the expansive valley below, where additional forested areas and distant hills come into view. The lighting remains consistent throughout, casting soft shadows that enhance the natural textures of the terrain. The scene remains empty of people, emphasizing the serene and untouched beauty of this outdoor natural setting. As the walk continues, the camera occasionally tilts downward, focusing briefly on the path before returning to the broader landscape, maintaining a harmonious balance between the foreground and the majestic backdrop.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

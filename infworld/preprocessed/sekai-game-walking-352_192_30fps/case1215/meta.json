@@ -1,0 +1,20 @@
+{
+  "name": "case1215",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, fenced pathway surrounded by dense bamboo groves under a heavy rain shower at night. The camera steadily advances, capturing the wet ground glistening with reflections from the dim ambient light filtering through the misty atmosphere. As the path curves gently, the camera pans slightly to reveal more of the towering bamboo stalks on either side, their leaves rustling softly in the rain. The scene transitions as the viewer approaches an open gate leading into a traditional Japanese village. The camera continues its forward motion, now navigating through cobblestone streets lined with wooden buildings featuring classic architectural designs. The rain-soaked streets reflect the soft glow of lanterns hanging from the eaves, casting a warm yet subdued light that contrasts with the cool, gray tones of the night. The camera angle shifts subtly to capture the intricate details of the buildings' facades, including sliding doors and paper windows. As the viewer moves deeper into the village, the camera pans to show empty alleyways and quiet intersections, emphasizing the serene and deserted ambiance. The overall mood is one of tranquil solitude, with the persistent sound of rain adding to the immersive experience of this nocturnal exploration.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

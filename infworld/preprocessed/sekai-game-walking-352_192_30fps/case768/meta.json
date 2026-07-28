@@ -1,0 +1,20 @@
+{
+  "name": "case768",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone pathway flanked by weathered walls and dense foliage under a cloudy night sky. The camera steadily advances, capturing the uneven texture of the stones and the occasional patches of grass sprouting between them. As the path curves gently, the surrounding vegetation becomes denser, with trees and bushes partially obscuring the view ahead. The dim lighting casts long shadows, creating a moody atmosphere that enhances the sense of solitude. The camera angle remains at eye level, providing an immersive first-person perspective. The path continues to wind through the natural landscape, revealing a rustic wooden fence on one side and more overgrown greenery on the other. The muted colors of the night, combined with the soft ambient light filtering through the clouds, give the scene a serene yet mysterious quality. As the journey progresses, the path leads to a small clearing where a dilapidated building comes into view, its silhouette barely discernible against the dark backdrop. The camera's steady movement and the absence of any other characters or sounds emphasize the quiet isolation of this outdoor setting on Shengshan Island, Zhoushan, China.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

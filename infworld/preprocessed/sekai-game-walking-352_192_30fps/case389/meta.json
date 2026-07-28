@@ -1,0 +1,20 @@
+{
+  "name": "case389",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey through East Maddon Park, London, by moving forward along a dirt path surrounded by lush greenery under a bright, sunny sky. The camera smoothly pans to the right, revealing a wooden gazebo nestled among the trees, its roof partially obscured by overhanging branches. As the viewer continues along the path, the camera angle shifts slightly upward, capturing the dense canopy of leaves filtering the sunlight into dappled patterns on the ground. The path curves gently to the left, leading past a sturdy wooden fence that borders a small clearing. The camera then tilts downward, focusing on the texture of the dirt path as it winds through the park. The surrounding trees vary in size and shape, creating a rich tapestry of foliage. The viewer's perspective remains at eye level, providing an immersive experience of the serene, empty park. The lighting is warm and natural, casting long shadows from the trees onto the path. As the journey progresses, the camera occasionally pans to highlight different aspects of the park, such as a lamppost standing alone amidst the trees and a small stream bordered by rocks and plants. The overall atmosphere is tranquil, with no other people in sight, emphasizing the peaceful solitude of the outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

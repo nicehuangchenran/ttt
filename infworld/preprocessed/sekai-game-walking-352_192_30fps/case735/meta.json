@@ -1,0 +1,20 @@
+{
+  "name": "case735",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France, where the camera smoothly glides forward, capturing the intricate details of the surrounding foliage. The movement is steady, revealing a path that winds through the underbrush, with sunlight filtering through the thick canopy above, casting dappled shadows on the ground. The environment is rich with various shades of green, from the vibrant leaves of the trees to the lush grass and shrubs lining the trail. As the camera continues its journey, it pans slightly to the right, showcasing the rugged terrain and the misty atmosphere created by the cloudy, foggy weather. The light is soft and diffused, enhancing the natural beauty of the scene. The camera then transitions to a rocky incline, where the perspective shifts upward, highlighting the texture of the stones and the sparse vegetation clinging to the slope. In the distance, the faint outlines of mountains emerge through the haze, adding depth to the landscape. The camera maintains a first-person viewpoint throughout, providing an immersive experience as it navigates the natural terrain, capturing the serene and untouched essence of this outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case477",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective of someone walking along a rugged, rocky path through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves steadily forward, capturing the uneven terrain covered with small stones and patches of grass. Tall evergreen trees line both sides of the path, their dark green needles contrasting sharply against the cloudy sky above. As the person progresses, the camera angle shifts slightly upward, revealing more of the expansive landscape. In the distance, majestic snow-capped mountains emerge from the fog, their peaks partially obscured by the clouds. The sky is overcast, casting a soft, diffused light that enhances the natural colors of the environment. The path continues to wind through the forest, with occasional glimpses of open meadows filled with tall grasses swaying gently in the breeze. The camera maintains a consistent forward motion, providing an immersive experience of the serene and untouched wilderness. The scene remains empty, with no other individuals or animals in sight, emphasizing the solitude and tranquility of the setting. The overall atmosphere is calm and peaceful, with the natural beauty of the location taking center stage.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

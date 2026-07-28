@@ -1,0 +1,20 @@
+{
+  "name": "case290",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, dirt path winding through a dense forest on Shengshan Island, Zhoushan, China. The camera smoothly glides over the uneven terrain, capturing the intricate details of the path's surface, scattered with small rocks and patches of grass. As the viewer progresses, the surrounding foliage becomes increasingly prominent, with thick bushes and towering trees partially obscured by a heavy fog that blankets the area, creating a muted, grayish atmosphere. The camera angle remains at eye level, providing an immersive experience as it navigates through the misty environment. The light is diffused, casting soft shadows and giving the scene a serene yet mysterious quality. The path leads to a wooden structure partially hidden by the vegetation, which the camera briefly pans towards before continuing its journey deeper into the forest. The environment remains consistently empty, with no signs of human presence, enhancing the sense of solitude. The camera continues to move forward, revealing more of the forest's natural beauty, with the fog subtly shifting and altering the visibility of distant trees and undergrowth. The overall ambiance is tranquil, with the gentle rustling of leaves and the occasional sound of footsteps on the path adding to the realism of the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

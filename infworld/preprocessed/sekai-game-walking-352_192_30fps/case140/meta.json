@@ -1,0 +1,20 @@
+{
+  "name": "case140",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a cobblestone path bordered by a moss-covered stone wall on the left and a small wooden structure on the right. The camera steadily advances, capturing the intricate textures of the stones underfoot and the surrounding dry, leafless vegetation. As the path curves gently to the right, the viewer approaches a set of weathered stone steps leading up to a paved courtyard. The camera ascends the steps, revealing a traditional Japanese building with dark wooden beams and sliding doors, situated against a backdrop of dense bamboo groves. The viewer continues across the courtyard, passing by a simple wooden bench and a low fence that separates the building from the forest. The camera then pans to the right, showing a narrow dirt path winding through the woods, flanked by bare trees and patches of green moss. The viewer follows this path, the camera tilting slightly upward to capture the canopy of branches overhead. The scene is enveloped in a soft, diffused light due to the cloudy sky, casting gentle shadows on the ground. The entire sequence is devoid of people, emphasizing the serene and tranquil atmosphere of the outdoor setting in Yamadera, Yamagata Prefecture, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

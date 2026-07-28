@@ -1,0 +1,20 @@
+{
+  "name": "case1495",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest at night, illuminated by sporadic flames from a wildfire that casts an eerie glow on the surrounding trees and underbrush. The camera pans slowly, capturing the flickering light and shadows as the fire crackles in the distance. As the scene progresses, the viewer transitions from the forest into a rugged, rocky terrain, where the ground is uneven and scattered with large boulders. The camera continues its steady movement, revealing a vast expanse of Castle Rock Beach under a cloudy, foggy sky. The atmosphere is dark and moody, with muted colors dominated by shades of gray and brown. The viewer then approaches the shoreline, where waves gently lap against the rocks, creating a soothing yet somber ambiance. The camera angle shifts slightly, offering a panoramic view of the beach and the distant horizon, where the faint outline of more rocks can be seen. Throughout the video, there are no other people present, emphasizing the solitude and quietness of the natural setting. The overall scene is a continuous, immersive journey through a serene yet dramatic landscape, captured with smooth camera movements and a focus on the interplay of light, shadow, and texture.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

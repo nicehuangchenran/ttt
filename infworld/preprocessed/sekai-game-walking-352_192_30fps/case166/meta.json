@@ -1,0 +1,20 @@
+{
+  "name": "case166",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow, winding path through a dense forest on Shengshan Island, Zhoushan, China. The camera moves forward, capturing the lush greenery on either side, with trees and bushes partially shrouded in a thick fog that diffuses the light, creating a muted, grayish atmosphere. As the path curves gently, the camera pans slightly to the right, revealing more of the surrounding foliage and the misty air that hangs heavy between the branches. The viewer's gaze follows the path as it ascends a slight incline, leading to an open area where the forest thins out, and a traditional stone structure comes into view on the left. The camera continues to move forward, panning upwards to show the expansive sky, which is overcast with clouds, casting a soft, diffuse light over the landscape. The path then leads to a stone wall on the right, and the camera turns to follow the wall as it winds along the edge of a cliff, offering a breathtaking view of the distant mountains and valleys, all enveloped in the same foggy haze. The camera remains steady, capturing the serene and isolated beauty of the natural surroundings, with no other people or movement visible, emphasizing the quiet solitude of the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

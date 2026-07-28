@@ -1,0 +1,20 @@
+{
+  "name": "case1104",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a snow-covered trail in the Mardi Himal Trail, Kaski, Nepal, under the dim light of night. The camera smoothly glides over the uneven terrain, capturing the crunch of snow underfoot as it navigates through a dense forest of dark, shadowy trees. The path is illuminated intermittently by faint, golden beams of light filtering through the branches above, casting long shadows and creating a stark contrast between light and dark areas. As the journey progresses, the camera angle shifts slightly upward, revealing more of the towering trees and the misty atmosphere that envelops the scene. The snowy landscape is dotted with rocks and patches of exposed earth, adding texture to the otherwise smooth surface. The environment remains empty and serene, with no signs of human presence, enhancing the sense of solitude. The camera continues its steady advance, the light gradually intensifying as it approaches an open area where the trees thin out, allowing more light to penetrate the scene. The final moments show the camera moving into a clearing, where the ground transitions from snow to bare earth, and the surrounding vegetation becomes sparser, indicating a change in the terrain. The overall ambiance is one of quiet exploration, with the interplay of light and shadow creating a visually captivating experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "night"
+}

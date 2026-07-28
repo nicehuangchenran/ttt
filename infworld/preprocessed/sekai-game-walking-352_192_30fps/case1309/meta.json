@@ -1,0 +1,20 @@
+{
+  "name": "case1309",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, winding dirt path that cuts through dense vegetation on Shengshan Island, Zhoushan, China. The camera steadily advances, capturing the texture of the uneven ground covered with small stones and patches of grass. As the path curves gently, the surrounding foliage, consisting of various shrubs and trees, frames the scene, creating a natural corridor. The cloudy sky above casts a soft, diffused light, muting the colors of the environment into earthy tones of brown and green. The camera angle remains at eye level, providing an immersive first-person perspective. The path continues to wind through the forested area, revealing occasional glimpses of the open sky between the tree canopies. The atmosphere is serene and quiet, with no other individuals present, emphasizing the solitude of the setting. As the journey progresses, the path narrows slightly, and the density of the vegetation increases, enhancing the sense of being enveloped by nature. The consistent forward movement of the camera maintains a steady pace, allowing viewers to fully absorb the tranquil and untouched beauty of the outdoor environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

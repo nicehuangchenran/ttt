@@ -1,0 +1,20 @@
+{
+  "name": "case1255",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a narrow, rocky path surrounded by dense vegetation under a cloudy night sky. The camera steadily advances forward, capturing the uneven terrain and scattered rocks illuminated by a faint, ambient light that casts soft shadows. As the path curves gently, a small wooden cabin appears on the right, partially obscured by trees, its windows reflecting the dim light. The camera continues to move forward, revealing more of the surrounding forest, with tall pine trees silhouetted against the dark sky. The path leads to an open area where several colorful flags flutter in the breeze, attached to poles that stand out against the muted tones of the night. The camera then pans slightly to the left, showing a distant view of the forested hills and a faint outline of a ski lift structure in the background. The scene transitions back into the dense forest, with the camera navigating through the trees, the ground covered in fallen leaves and patches of grass. The lighting remains consistent, creating a serene yet mysterious atmosphere as the viewer progresses deeper into the natural landscape. The camera's smooth movement and steady pace provide a continuous and immersive experience of the nocturnal outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

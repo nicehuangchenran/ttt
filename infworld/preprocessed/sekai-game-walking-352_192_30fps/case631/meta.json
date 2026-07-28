@@ -1,0 +1,20 @@
+{
+  "name": "case631",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer crossing a wooden bridge over a rocky stream, moving steadily forward into a rugged landscape. The camera maintains a first-person perspective, capturing the smooth motion of walking along the bridge's planks, which are bordered by simple wooden railings. As the viewer steps off the bridge, they traverse a barren terrain covered in dark volcanic soil and scattered rocks, with sparse patches of green moss adding contrast to the otherwise monochromatic scene. The camera pans slightly to reveal rolling hills and distant mountains shrouded in a thick layer of fog, creating a muted and overcast atmosphere. The sky is a uniform gray, casting a soft, diffused light that enhances the earthy tones of the landscape. The viewer continues their journey, navigating through the uneven ground, occasionally passing by small pools of stagnant water reflecting the cloudy sky. The camera angle shifts subtly, offering glimpses of the expansive horizon where the fog blends seamlessly with the low-hanging clouds, emphasizing the vastness and isolation of the area. The entire scene remains devoid of any human presence, reinforcing the sense of solitude and untouched natural beauty.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

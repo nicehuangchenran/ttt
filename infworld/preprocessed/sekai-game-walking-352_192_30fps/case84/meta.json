@@ -1,0 +1,20 @@
+{
+  "name": "case84",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone pathway flanked by overgrown vegetation and ancient walls, suggesting an exploration through Shengshan Island's historic ruins. The camera steadily advances, capturing the intricate textures of moss-covered stones and the dense foliage creeping up the walls. As the path ascends into a series of stone steps, the surrounding environment becomes increasingly enveloped in a thick fog, diffusing the light and creating a muted palette of grays and greens. The camera angle remains at eye level, providing a first-person perspective that immerses the viewer in the journey. The atmosphere grows more mysterious as the steps lead deeper into the forest, where towering trees loom overhead, their branches intertwining to form a natural canopy. The light filters through the mist, casting soft shadows and highlighting the dampness of the ground. The path continues to wind through the dense undergrowth, with the camera occasionally panning slightly to reveal more of the lush surroundings. The scene remains empty of people, emphasizing the solitude and quietude of the location. As the journey progresses, the viewer is drawn further into this serene yet enigmatic landscape, where the interplay of light, shadow, and fog creates a captivating visual experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

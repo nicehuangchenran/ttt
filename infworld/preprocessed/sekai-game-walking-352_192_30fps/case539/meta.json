@@ -1,0 +1,20 @@
+{
+  "name": "case539",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow, rocky path through a lush green meadow in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves steadily forward, capturing the vibrant grass swaying gently in the breeze and the scattered wildflowers dotting the landscape. As the path winds through the meadow, tall evergreen trees line both sides, their dark green needles contrasting sharply with the bright sky above. The weather is cloudy, with thick white clouds casting soft shadows over the terrain, creating a serene and tranquil atmosphere. The camera angle remains at eye level, providing an immersive view of the surroundings. In the distance, majestic snow-capped mountains rise against the horizon, their peaks partially obscured by mist. The path continues uphill, leading to a small wooden bench perched on a rocky outcrop, offering a perfect vantage point to admire the breathtaking panorama. The camera pans slightly to the right, revealing more of the expansive mountain range and the dense forest below. The lighting is natural daylight, with the diffused sunlight enhancing the vivid colors of the landscape. The scene remains empty, with no other people or animals in sight, emphasizing the peaceful solitude of this outdoor natural setting. As the walk progresses, the camera captures the subtle changes in elevation and the varying textures of the terrain, from the soft grass underfoot to the rough stones of the path. The overall ambiance is one of calm and tranquility, inviting viewers to fully immerse themselves in the beauty of nature.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

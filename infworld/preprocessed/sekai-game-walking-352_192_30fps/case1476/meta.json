@@ -1,0 +1,20 @@
+{
+  "name": "case1476",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer's perspective begins with a close-up view of snow-laden evergreen branches, their needles heavy with fresh powder. The camera remains steady, capturing the intricate details of the snow-covered foliage, which dominates the foreground. As the scene progresses, there is no discernible movement from the viewer, suggesting a moment of stillness amidst the wintry landscape. In the background, a serene expanse of water, likely Lago di Braies, stretches out, its surface calm and partially obscured by the misty atmosphere. The distant shoreline is faintly visible, lined with more snow-covered trees that blend into the hazy horizon. The camera angle is slightly tilted upward, emphasizing the height of the evergreens and the vastness of the surrounding environment. The lighting is soft and diffused, typical of a snowy day, casting a muted palette of whites and grays across the scene. The overall ambiance is quiet and untouched, with no signs of human presence or activity, reinforcing the sense of isolation and natural beauty in this remote location. The subtle interplay of light and shadow on the snow highlights the texture of the branches, adding depth and dimension to the visual composition.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

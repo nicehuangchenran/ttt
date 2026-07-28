@@ -1,0 +1,20 @@
+{
+  "name": "case22",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, stone-paved path winding through a misty forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly glides forward, capturing the damp, moss-covered stones underfoot and the dense fog that envelops the surrounding trees, creating a hazy, ethereal atmosphere. As the path curves gently to the right, the viewer's gaze follows the movement, revealing a steep, rocky hillside on one side and leafless trees shrouded in mist on the other. The muted daylight filters through the clouds, casting a soft, diffused light over the scene, enhancing the serene yet somber mood. The camera continues its steady advance, passing by traditional Japanese lanterns placed sporadically along the path, their weathered surfaces blending seamlessly with the natural surroundings. In the distance, the faint outline of a pagoda-like structure emerges from the fog, perched atop a rocky outcrop. The camera angle shifts slightly upward as the path inclines, offering a closer view of the ancient building, its layered roofs and intricate wooden details becoming more discernible. The journey progresses deeper into the forest, where the path narrows further, flanked by towering trees whose bare branches reach out into the fog. The camera maintains its forward momentum, capturing the tranquil solitude of this outdoor-natural setting, devoid of any human presence, as it navigates the winding trail through the misty woodland.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

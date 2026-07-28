@@ -1,0 +1,20 @@
+{
+  "name": "case1162",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone path winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly advances, capturing the towering pine trees that line both sides of the trail, their trunks thick and moss-covered, reaching high into the cloudy sky. As the path curves gently, the camera pans slightly to the right, revealing a sturdy metal railing on the left side, guiding the way down a steep incline. The surrounding environment is rich with natural details; large rocks covered in green moss and patches of sunlight filtering through the dense canopy create a dappled effect on the forest floor. The camera continues its steady movement, occasionally tilting upward to showcase the towering trees and the misty atmosphere, emphasizing the serene yet mysterious ambiance. The path narrows further, leading deeper into the forest, where the ground is carpeted with fallen leaves and small plants. The camera angle shifts subtly, providing a closer view of the rugged terrain and the intricate textures of the forest undergrowth. The overall scene remains tranquil and untouched, with no signs of human presence, enhancing the sense of solitude and immersion in nature's beauty. The muted colors of the cloudy day add to the calm and peaceful mood, as the viewer is drawn deeper into the heart of this enchanting woodland setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case31",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, mist-covered path winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly glides forward, capturing the fog that thickens the air and obscures distant views, creating an ethereal atmosphere. As the path curves gently, the viewer's gaze follows the metal railing on the left, which guides the way through the lush undergrowth and towering trees. The surrounding environment is rich with greenery, featuring tall conifers and various shrubs that line the path, their details softened by the fog. The camera maintains a consistent eye-level angle, emphasizing the immersive experience of walking through this serene natural setting. The muted daylight filters through the canopy, casting a soft, diffused light that enhances the tranquil mood. Gradually, the path leads towards a faintly visible structure in the distance, its outline barely discernible through the mist. The scene remains empty, devoid of any human presence, amplifying the sense of solitude and quietude. As the camera continues its steady advance, the path subtly shifts, revealing more of the forest's intricate details while maintaining the overall calm and mysterious ambiance of the setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

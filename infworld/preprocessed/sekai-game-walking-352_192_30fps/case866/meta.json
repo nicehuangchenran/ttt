@@ -1,0 +1,20 @@
+{
+  "name": "case866",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow dirt path winding through a dense forest of tall evergreen trees. The camera moves forward smoothly, capturing the lush greenery and the occasional patches of sunlight filtering through the canopy. As the path curves gently to the right, the surrounding trees thin out, revealing a broader view of the landscape. The camera continues its forward motion, gradually panning slightly upward to showcase the expansive horizon. The terrain transitions from a forested area to an open meadow, where the path becomes less defined but still discernible. The sun, positioned high in the clear blue sky, casts a warm glow over the scene, highlighting the vibrant greens of the grass and the earthy tones of the soil. In the distance, majestic snow-capped mountains rise against the horizon, their peaks partially shrouded in mist. The camera maintains a steady pace, offering a continuous and immersive view of the serene natural environment, devoid of any human presence or structures, emphasizing the untouched beauty of Le Prarion, Chamonix-Mont-Blanc, France. The overall ambiance is peaceful, with the gentle rustling of leaves and the distant chirping of birds adding to the tranquil atmosphere.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

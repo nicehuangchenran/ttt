@@ -1,0 +1,20 @@
+{
+  "name": "case487",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, gravelly path winding through a dense forest. The camera smoothly glides over the uneven terrain, capturing the lush greenery of tall pine trees and underbrush on either side. As the path curves gently, the camera angle shifts slightly upward, revealing a stunning view of Lago di Braies nestled among towering mountains. The lake's vibrant turquoise waters contrast sharply with the surrounding verdant landscape. The sky above is overcast, casting a soft, diffused light that enhances the rich colors of the scene. The camera then pans back down to the path, continuing its steady advance. The gravel crunches softly underfoot as the viewer navigates slight inclines and declines, passing by patches of snow clinging to the ground. The forest gradually opens up, leading to a clearing where the path becomes more defined, bordered by rocks and sparse vegetation. The camera maintains a consistent eye-level perspective, immersing the viewer in the serene and untouched natural beauty of this remote location. The tranquil atmosphere is unbroken, with no signs of human presence, allowing the viewer to fully appreciate the peaceful solitude of the setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

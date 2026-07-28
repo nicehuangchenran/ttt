@@ -1,0 +1,20 @@
+{
+  "name": "case439",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit pedestrian crossing at night in East Maddon Park, London, United Kingdom, under a steady rainfall. The camera smoothly transitions from the crosswalk onto a narrow, winding path lined with tall lampposts that cast a soft, yellowish glow, illuminating the wet pavement and the surrounding foliage. As the movement continues, the path curves gently to the right, revealing more of the park's dense trees shrouded in mist, their dark silhouettes barely visible against the night sky. The camera angle remains at eye level, providing a first-person perspective that enhances the immersive experience. The raindrops create a consistent pattern on the camera lens, adding to the atmospheric effect. The scene is devoid of people, emphasizing the solitude and quietness of the environment. The lampposts gradually become less frequent as the path leads deeper into the park, where the darkness thickens and the light becomes fainter, creating an eerie yet serene ambiance. The overall color palette is dominated by deep blues and blacks, punctuated by the warm, artificial light from the lampposts, which contrasts sharply with the cool tones of the rainy night. The video concludes with the path disappearing into the shadows, leaving the viewer with a sense of mystery and anticipation.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

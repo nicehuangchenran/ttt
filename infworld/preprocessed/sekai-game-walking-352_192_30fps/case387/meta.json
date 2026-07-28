@@ -1,0 +1,20 @@
+{
+  "name": "case387",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow dirt path through a dense forest at night. The camera pans slightly to the right, revealing a rustic wooden cabin partially obscured by the surrounding trees. As the viewer progresses, the path winds gently uphill, flanked by tall evergreen trees that stand as dark silhouettes against the dimly lit sky. The camera continues forward, capturing the subtle swaying of branches and the uneven terrain underfoot. The environment is enveloped in a deep blue hue, with the faint glow of moonlight filtering through the clouds, casting soft shadows across the landscape. In the distance, majestic mountain peaks loom, their outlines barely discernible in the foggy atmosphere. The camera angle shifts subtly, offering glimpses of the expansive forest and the rugged terrain ahead. The scene remains serene and untouched, with no signs of human presence apart from the solitary cabin. As the journey continues, the path levels out, leading towards an open clearing where the forest thins, and the mountains become more prominent in the backdrop. The overall ambiance is quiet and tranquil, with the natural elements dominating the visual narrative.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

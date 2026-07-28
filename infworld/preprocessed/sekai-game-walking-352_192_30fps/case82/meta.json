@@ -1,0 +1,20 @@
+{
+  "name": "case82",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path winding through a dense forest of tall evergreen trees. The camera smoothly glides forward, capturing the intricate details of the forest floor covered with fallen leaves and patches of sunlight filtering through the canopy. As the path curves gently to the right, the camera angle shifts slightly upward, revealing a serene lake nestled among the trees. The water's surface is calm, reflecting the surrounding greenery and the cloudy sky above. The camera continues its steady advance, approaching the lake's edge where the terrain transitions from forest to a rocky shoreline. The viewer then pans to the left, showcasing a rustic wooden hut situated near the water's edge, partially obscured by the trees. The camera moves closer to the hut, highlighting its weathered exterior and the small dock extending into the lake. The scene is enveloped in a soft, diffused light due to the overcast sky, casting gentle shadows across the landscape. The camera then pans back to the right, offering a panoramic view of the lake and the majestic mountains in the distance, their peaks shrouded in mist. The entire sequence captures the tranquil beauty of Lago di Braies, with no other people or distractions present, emphasizing the peaceful solitude of the natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

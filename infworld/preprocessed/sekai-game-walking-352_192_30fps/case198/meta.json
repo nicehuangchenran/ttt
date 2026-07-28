@@ -1,0 +1,20 @@
+{
+  "name": "case198",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow, steady walk along a dimly lit forest path at night in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves forward, capturing the faint outlines of tall pine trees silhouetted against a cloudy, star-speckled sky. As the person progresses, their steps are deliberate and cautious, navigating the uneven terrain that is barely illuminated by ambient light. The surrounding environment is shrouded in darkness, with only the occasional flicker of moonlight breaking through the dense canopy above. The camera angle remains consistent, focused straight ahead, providing a clear view of the path and the encroaching trees on either side. The air is still, and there is no sign of other people, emphasizing the solitude of the scene. The muted colors of the night blend seamlessly, creating a serene yet mysterious atmosphere. The path gently curves, and the camera follows this subtle shift, revealing more of the forest's intricate details. Despite the limited visibility, the texture of the ground beneath the feet is discernible, adding a tactile element to the visual experience. The overall ambiance is quiet and tranquil, with the only sounds being the soft crunch of leaves underfoot and the distant rustling of the wind through the branches.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

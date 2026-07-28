@@ -1,0 +1,20 @@
+{
+  "name": "case366",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a wooden bridge that spans a serene, snow-covered forest path. The camera smoothly glides over the bridge's railing, capturing the intricate details of the snow-laden trees and the misty atmosphere enveloping the area. As the movement continues, the perspective shifts slightly downward, revealing a tranquil lake bordered by steep, snow-dusted cliffs. The camera then pans upward, showcasing the towering pine trees that dominate the landscape, their branches heavy with fresh snow. The scene transitions to a narrow, winding path through the forest, where the camera follows the trail, highlighting the soft crunch of snow underfoot. The surrounding trees create a natural canopy, filtering the diffused daylight and casting gentle shadows on the ground. As the journey progresses, the viewer approaches a rustic wooden cabin nestled among the trees, its roof blanketed in snow. The camera circles the cabin, offering a comprehensive view of its quaint architecture and the adjacent dock extending into the lake. The entire sequence captures the quiet beauty of Lago di Braies on a snowy day, with no other individuals present, emphasizing the solitude and peacefulness of the natural setting. The muted color palette of whites, grays, and greens enhances the serene and untouched quality of the environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

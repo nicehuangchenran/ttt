@@ -1,0 +1,20 @@
+{
+  "name": "case446",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow path bordered by a wooden fence on the left and dense bamboo groves on the right. The camera steadily advances, capturing the tall, slender bamboo stalks that cast dappled shadows on the ground under the bright sunlight. As the path curves gently to the right, the scene transitions from the natural bamboo forest into a traditional Japanese village setting. The camera continues its forward motion, revealing wooden houses with dark tiled roofs and stone pathways. The environment is bathed in warm, golden light, emphasizing the rustic textures of the wood and stone. The camera pans slightly to the left, showcasing a small courtyard surrounded by buildings with sliding doors and paper windows. The viewer then moves through an open gate into a bustling village square, where red umbrellas provide shade over outdoor seating areas. The camera angle shifts upward, capturing the clear blue sky above the village, before panning back down to follow a narrow alleyway lined with more traditional structures. The scene remains empty, with no people in sight, creating a serene and tranquil atmosphere throughout the journey.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

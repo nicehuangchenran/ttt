@@ -1,0 +1,20 @@
+{
+  "name": "case772",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest at night, where vivid flames engulf the trees and underbrush, casting an eerie orange glow that contrasts sharply with the surrounding darkness. The camera advances steadily along a narrow path, capturing the intense fire from various angles as it illuminates the silhouettes of the trees. As the scene progresses, the camera pans to reveal a rocky coastline, where the fire continues to rage near the edge of the cliff. The sky above is overcast with thick clouds, diffusing the light and creating a somber atmosphere. The camera then shifts its focus to the rugged terrain, showcasing large boulders and patches of vegetation that have yet to be consumed by the flames. The movement is smooth, providing a comprehensive view of the landscape as the viewer approaches the water's edge. The ocean is calm, with gentle waves lapping against the rocks, and the horizon is barely visible through the haze. The overall ambiance is one of isolation and urgency, with the relentless spread of the fire dominating the scene. The camera continues to pan across the area, highlighting the stark contrast between the fiery destruction and the serene, untouched parts of the beach, all under the dim, cloudy night sky.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

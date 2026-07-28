@@ -1,0 +1,20 @@
+{
+  "name": "case918",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a tunnel-like path lined with red torii gates at Fushimi Inari Taisha in Kyoto, Japan. The camera advances steadily, capturing the rhythmic repetition of the gates as they recede into the distance, illuminated by warm, glowing lanterns that cast an eerie, reddish hue over the scene. The path is flanked by tall, cylindrical pillars supporting the torii gates, creating a corridor effect. As the camera continues its forward motion, the surrounding environment becomes more visible, revealing a misty, foggy atmosphere that adds a layer of mystery and depth to the setting. The ground beneath is paved with stone tiles, and scattered leaves can be seen along the edges. The camera angle remains consistent, maintaining a first-person perspective that immerses the viewer in the experience. The lighting gradually shifts as the path opens up, transitioning from the enclosed, lantern-lit corridor to a wider area where the ambient light reveals more of the natural surroundings. The scene is devoid of people, emphasizing the solitude and tranquility of the location. The overall ambiance is serene yet slightly haunting, with the interplay of shadows and light enhancing the visual impact of this nighttime exploration.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

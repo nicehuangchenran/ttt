@@ -1,0 +1,20 @@
+{
+  "name": "case833",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path bordered by wooden railings, set amidst a lush forest in Le Prarion, Chamonix-Mont-Blanc, France. As the camera advances steadily, it captures the dense greenery of birch trees and conifers lining both sides of the trail, their leaves rustling gently in the breeze under a bright, sunny sky. The camera angle remains at eye level, providing an immersive first-person perspective that emphasizes the natural beauty of the surroundings. The path meanders through the forest, revealing patches of vibrant grass and wildflowers that dot the landscape. As the viewer continues along the trail, the camera pans slightly to the right, showcasing a vast expanse of evergreen trees stretching into the distance, their dark green hues contrasting sharply with the clear blue sky above. The sunlight filters through the canopy, casting dappled shadows on the ground and highlighting the rich textures of the foliage. The scene remains tranquil and empty, with no other individuals present, allowing the viewer to fully appreciate the serene and untouched wilderness. The camera movement is smooth and deliberate, maintaining a consistent pace that enhances the sense of exploration and discovery within this picturesque outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

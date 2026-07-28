@@ -1,0 +1,20 @@
+{
+  "name": "case143",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a stone pathway bordered by lush greenery and weathered walls, leading into a misty forest setting. As the camera advances steadily, it captures the intricate textures of the moss-covered stones and the dense foliage that frames the path. The surrounding environment is enveloped in a thick fog, creating a hazy atmosphere that diffuses the soft daylight filtering through the canopy above. The camera angle remains at eye level, providing an immersive perspective as it navigates the winding path. The viewer ascends a set of stone steps, revealing more of the forest ahead, where the trees grow taller and closer together, their branches intertwining overhead. The light becomes dimmer as the path narrows, and the camera continues to move forward, capturing the subtle interplay of shadows and light on the ground. The scene transitions smoothly from the structured pathway to a more natural, untamed forest trail, with the camera panning slightly to showcase the dense underbrush and the towering trees that dominate the landscape. The overall ambiance is serene and quiet, with no signs of human presence, emphasizing the solitude and tranquility of the natural surroundings.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

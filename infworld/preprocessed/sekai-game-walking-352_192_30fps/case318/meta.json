@@ -1,0 +1,20 @@
+{
+  "name": "case318",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through an empty skate park at East Maddon Park, London, United Kingdom, under a cloudy sky during the day. The camera smoothly transitions from the skate park's ramps and rails, capturing their metallic sheen against the muted tones of the overcast weather, to a paved pathway lined with lush green trees that cast dappled shadows on the ground. As the movement continues, the path leads towards a children's playground featuring vibrant red and blue structures, swings, and slides, all devoid of people. The camera pans slightly to reveal more of the park's serene environment, showcasing benches nestled among the foliage and a tranquil pond surrounded by dense vegetation. The perspective shifts gently as the viewer approaches the water's edge, where the still surface reflects the surrounding greenery and the cloudy sky above. Throughout the sequence, the camera maintains a steady, forward-moving angle, emphasizing the park's peaceful and deserted atmosphere, with soft natural light filtering through the clouds, enhancing the vivid greens and subtle earth tones of the landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

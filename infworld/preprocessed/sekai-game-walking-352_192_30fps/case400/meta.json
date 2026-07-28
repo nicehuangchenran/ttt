@@ -1,0 +1,20 @@
+{
+  "name": "case400",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, winding dirt path flanked by dense vegetation under a cloudy night sky. The camera smoothly advances, capturing the subtle undulations of the terrain as it navigates through the shadowy undergrowth. The surrounding foliage, consisting of various shrubs and trees, appears dark and silhouetted against the dimly lit sky, creating a sense of depth and enclosure. As the path progresses, the camera angle remains consistent, maintaining a straight-ahead view that emphasizes the continuous journey. The lighting is minimal, with faint ambient light filtering through the clouds, casting soft shadows and highlighting the textures of the ground and plants. The environment is quiet and devoid of any visible wildlife or human presence, enhancing the solitude of the scene. The path occasionally curves gently, revealing new sections of the trail and the natural landscape beyond. The overall atmosphere is serene yet mysterious, with the muted colors and limited visibility adding to the immersive experience of a solitary nighttime walk through Shengshan Island's natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

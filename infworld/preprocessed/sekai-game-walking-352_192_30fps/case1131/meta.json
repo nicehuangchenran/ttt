@@ -1,0 +1,20 @@
+{
+  "name": "case1131",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow dirt path bordered by wooden posts, winding through a dense forest of tall evergreen trees. The camera advances forward, capturing the gentle sway of branches and the soft crunch of leaves underfoot. As the path curves gently to the right, the surrounding trees create a canopy overhead, filtering the soft, diffused light of sunrise that casts long shadows across the ground. The environment is enveloped in a light fog, adding a hazy, ethereal quality to the scene. The camera angle remains at eye level, providing an immersive view of the natural surroundings. The path continues to meander, revealing more of the forest's serene beauty, with occasional glimpses of wildflowers and patches of grass breaking through the underbrush. As the journey progresses, the path opens up slightly, offering a broader view of the landscape ahead, where distant mountains loom faintly through the mist. The overall atmosphere is tranquil and untouched, with no signs of human presence, emphasizing the solitude and peacefulness of this early morning walk in Le Prarion, Chamonix-Mont-Blanc, France. The muted colors of the dawn light enhance the natural hues of the forest, creating a harmonious and calming visual experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunrise"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case107",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a serene pathway lined with vibrant red torii gates at Fushimi Inari Taisha in Kyoto, Japan. The camera smoothly transitions from a grassy area into a tunnel-like formation created by the closely spaced torii gates, casting dynamic shadows under the bright sunlight. As the movement continues, the perspective shifts slightly upward, revealing more of the towering trees that surround the path, their lush green foliage contrasting sharply with the vivid red of the gates. The camera then pans to the right, showcasing a traditional Japanese shrine building with its distinctive red walls and black accents, situated amidst the dense forest. The viewer proceeds along a gravel path, passing by smaller torii gates and stone lanterns, with the sunlight filtering through the leaves, creating a dappled effect on the ground. The camera angle occasionally lowers, emphasizing the texture of the gravel and the intricate details of the surrounding vegetation. The scene remains tranquil and empty, with no other individuals present, allowing the viewer to fully immerse in the natural beauty and cultural significance of the location. The journey continues deeper into the forest, with the camera capturing the interplay of light and shadow, the rich colors of the environment, and the peaceful ambiance of this iconic shrine.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

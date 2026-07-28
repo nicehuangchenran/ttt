@@ -1,0 +1,20 @@
+{
+  "name": "case426",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving through a dark, forested area under a starry night sky. The camera slowly pans across the landscape, revealing silhouettes of tall trees and distant hills shrouded in darkness. As the viewer progresses, the camera tilts downward, focusing on the ground covered with leaves and twigs, barely illuminated by the faint light from above. The scene transitions to a brighter area where a wooden cabin becomes visible, surrounded by dense trees. The camera then shifts to show a narrow path leading away from the cabin, with the viewer's feet occasionally coming into view as they walk forward. The surrounding environment remains dimly lit, with only the stars providing sparse illumination. The camera continues to move steadily along the path, capturing the subtle movements of branches swaying gently in the breeze. The overall atmosphere is quiet and serene, with no other characters or movement in sight, emphasizing the solitude of the nighttime setting in Le Prarion, Chamonix-Mont-Blanc, France. The camera maintains a consistent angle, keeping the viewer immersed in the natural surroundings, while the cloudy and foggy weather adds an additional layer of mystery to the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

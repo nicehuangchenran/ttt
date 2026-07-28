@@ -1,0 +1,20 @@
+{
+  "name": "case1118",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective standing at the edge of a cliff overlooking a vast, foggy sea under a cloudy sky. The camera slowly pans across the horizon, capturing the misty expanse of water and the faint outlines of distant landmasses shrouded in fog. The viewer's gaze then shifts slightly downward, revealing a rugged cliff face adorned with patches of greenery and rocks. As the scene transitions, the camera moves inland, navigating through a dense forest path lined with tall trees and underbrush. The dim light filters through the canopy, casting dappled shadows on the ground. The path winds gently, leading deeper into the forest, where the air grows cooler and the sounds of nature become more pronounced. The camera continues along the trail, passing by moss-covered stones and fallen branches, until it reaches a clearing where the forest opens up to reveal a partially obscured building nestled among the trees. The overall atmosphere remains serene and isolated, with no signs of human presence, emphasizing the natural beauty and tranquility of Shengshan Island, Zhoushan, China. Throughout the sequence, the camera maintains a steady, forward-moving angle, enhancing the immersive experience of exploring this remote and untouched landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

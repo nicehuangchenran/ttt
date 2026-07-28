@@ -1,0 +1,20 @@
+{
+  "name": "case10",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone path winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly glides over the uneven terrain, capturing the tall, slender trees that line both sides of the path, their trunks varying in shades of brown and gray. As the movement continues, the camera pans slightly upward, revealing the cloudy sky above, which casts a soft, diffused light through the canopy, creating a serene and misty atmosphere. The path curves gently, leading the viewer past large moss-covered rocks and patches of undergrowth. The camera then shifts focus to an old wooden structure nestled among the trees, its traditional architecture blending seamlessly with the natural surroundings. The viewer approaches the building, passing by more trees and rocks, before the camera pans out to reveal a larger temple complex perched on a rocky outcrop. The temple's dark roof tiles contrast sharply with the lighter stone walls, and the intricate details of the wooden beams and railings are clearly visible. The camera continues to move forward, offering a panoramic view of the temple and the surrounding forest, emphasizing the peaceful solitude of this outdoor setting. Throughout the sequence, the environment remains empty, enhancing the sense of tranquility and isolation. The overall color palette is dominated by earthy tones, with the muted greens of the moss and foliage complementing the browns and grays of the trees and stones. The camera's steady, fluid motion provides a continuous and immersive perspective, allowing the viewer to fully appreciate the natural beauty and architectural elegance of Yamadera.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

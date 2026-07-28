@@ -1,0 +1,20 @@
+{
+  "name": "case215",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the camera moving steadily forward along a narrow stone pathway flanked by lush greenery and weathered walls covered in ivy. The camera angle remains at eye level, providing a first-person perspective as it ascends a series of stone steps leading upwards through the dense foliage. The pathway is uneven, with large stones and patches of moss adding texture to the surface. As the camera continues its ascent, the surrounding environment reveals more details: the walls on either side show signs of age and decay, with broken sections and exposed brickwork. The sky above is overcast, casting a soft, diffused light that enhances the muted greens and browns of the natural setting. The camera then turns slightly to the right, revealing a broader view of the landscape, which includes more stone structures partially obscured by trees and bushes. The path curves gently, leading the viewer deeper into the scene, where the vegetation becomes denser and the atmosphere more secluded. The camera movement is smooth and deliberate, maintaining a consistent pace as it navigates the winding path, eventually reaching a clearing where the stone steps give way to a more open area surrounded by trees and undergrowth. The overall ambiance is serene and quiet, with no other people or animals in sight, emphasizing the solitude and natural beauty of Shengshan Island, Zhoushan, China.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

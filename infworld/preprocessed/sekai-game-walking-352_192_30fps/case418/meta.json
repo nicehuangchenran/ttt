@@ -1,0 +1,20 @@
+{
+  "name": "case418",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest at night, illuminated by a faint, ambient light that casts long shadows among the towering trees. The camera pans slowly, revealing a narrow dirt path winding through the underbrush, bordered by rocks and patches of grass. As the movement continues, the perspective shifts slightly upward, capturing the silhouettes of the trees against a cloudy sky. The scene transitions to an open area where a large brick building comes into view, its windows dark and unlit. The camera then pans to the right, showing a series of red chairs and tables scattered across a gravel courtyard, with a French flag fluttering in the breeze on a pole nearby. The flag's colors stand out vividly against the muted tones of the night. The camera continues to move forward, offering a broader view of the surrounding landscape, which includes distant mountains partially obscured by fog. The lighting remains dim throughout, creating a serene yet mysterious atmosphere. The camera angle occasionally shifts to provide different perspectives of the environment, emphasizing the quiet solitude of the location. Finally, the viewer is left with a panoramic view of the mountainous terrain, with the flag still waving gently in the wind, completing the tranquil nighttime scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

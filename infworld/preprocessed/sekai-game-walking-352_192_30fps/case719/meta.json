@@ -1,0 +1,20 @@
+{
+  "name": "case719",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a set of moss-covered stone steps leading up to an ancient wooden pavilion nestled amidst a dense forest. The camera smoothly pans upward, revealing the intricate architecture of the pavilion's open structure, framed by sturdy wooden beams and railings. As the perspective shifts, the viewer is drawn into the pavilion, where the camera slowly pans outward, capturing the misty, fog-laden landscape stretching out before it. The surrounding trees, shrouded in a thick layer of fog, create a serene yet mysterious atmosphere. The camera then transitions to a narrow, winding path that cuts through the forest, flanked by towering evergreen trees whose branches are heavy with moisture. The path meanders gently uphill, with the camera following its contours, occasionally panning to highlight the rugged terrain and the interplay of light filtering through the dense canopy. The muted colors of the forest\u2014shades of green, brown, and gray\u2014are accentuated by the diffused light, enhancing the sense of solitude and tranquility. As the journey continues deeper into the woods, the camera maintains a steady pace, capturing the subtle details of the natural environment, from the texture of the moss-covered rocks to the gentle rustling of leaves in the breeze. The overall scene remains empty of human presence, emphasizing the untouched beauty of this secluded outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

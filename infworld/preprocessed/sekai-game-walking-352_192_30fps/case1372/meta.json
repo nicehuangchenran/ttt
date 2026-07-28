@@ -1,0 +1,20 @@
+{
+  "name": "case1372",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path bordered by a wooden fence on the left and dense bamboo forest on the right. As the camera progresses steadily, it captures the natural light filtering through the tall bamboo stalks, casting dynamic shadows on the ground. The path curves gently to the right, revealing a wider clearing filled with lush greenery and a variety of trees. The camera continues its forward motion, approaching a set of stone steps leading up to a traditional Japanese torii gate painted in vibrant red. The torii stands prominently against the backdrop of the forest, with smaller torii gates flanking the sides. The camera angle shifts slightly upward as it ascends the steps, emphasizing the height and grandeur of the torii. The sunlight enhances the rich red color of the torii and illuminates the surrounding foliage, creating a serene and picturesque scene. The environment remains tranquil and empty, with no visible people, allowing the viewer to fully immerse in the natural beauty and cultural significance of the location. The camera maintains a steady pace, providing a continuous and immersive experience as it moves through this outdoor setting at Fushimi Inari Taisha in Kyoto, Japan, during a sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

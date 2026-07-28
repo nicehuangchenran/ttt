@@ -1,0 +1,20 @@
+{
+  "name": "case645",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path winding through a dense forest in Lago di Braies, Braies, South Tyrol, Italy. The camera smoothly glides over the uneven terrain, capturing the intricate details of the forest floor covered with fallen leaves, twigs, and patches of sunlight filtering through the tall pine trees. As the journey progresses, the path leads to a wooden bridge spanning a serene stream, where the camera angle shifts slightly upward to reveal the tranquil water flowing beneath. Crossing the bridge, the viewer continues along a rocky trail that ascends gently, offering glimpses of the lush greenery and distant mountains bathed in bright sunlight. The camera then pans to the right, showcasing a quaint white building nestled among the trees, surrounded by a well-maintained garden. The viewer proceeds further into the forest, navigating through a series of turns and dips in the path, with the camera maintaining a steady forward motion. The vibrant greens of the foliage contrast beautifully with the earthy tones of the trail, while the dappled sunlight creates dynamic patterns on the ground. The scene remains peaceful and empty, with no signs of human presence, allowing the viewer to fully immerse in the natural beauty of this outdoor setting. The camera's fluid movement and wide-angle shots capture the expansive landscape, emphasizing the serene and untouched nature of the environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

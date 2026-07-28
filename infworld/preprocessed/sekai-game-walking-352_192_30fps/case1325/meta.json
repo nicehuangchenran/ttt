@@ -1,0 +1,20 @@
+{
+  "name": "case1325",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey along a paved pathway in East Maddon Park, London, United Kingdom, moving steadily forward under a clear sunny sky. The camera captures the smooth, hexagonal stone tiles beneath, flanked by wooden benches and lush green trees that cast dappled shadows across the path. As the movement continues, the camera pans slightly to the right, revealing more of the park's serene environment, with additional pathways branching off into the distance. The surrounding area is rich with natural beauty, featuring well-maintained grassy patches, scattered shrubs, and mature trees that create a canopy overhead. The camera angle remains at eye level, providing an immersive perspective as it navigates through the park. The sunlight filters through the leaves, casting a warm golden hue over the scene, enhancing the vibrant greens and earthy tones of the landscape. The path curves gently to the left, leading the viewer deeper into the park, where the scenery opens up to reveal open fields and distant tree lines. The environment remains tranquil and empty, with no visible crowds, allowing the viewer to fully appreciate the peaceful ambiance of this outdoor setting. The camera continues its steady progression, maintaining a consistent pace and direction, capturing the harmonious blend of nature and man-made structures within the park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

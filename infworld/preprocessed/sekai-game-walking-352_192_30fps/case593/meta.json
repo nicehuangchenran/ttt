@@ -1,0 +1,20 @@
+{
+  "name": "case593",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a snow-covered wooden bridge that stretches over a serene, icy lake, flanked by steep, snow-laden cliffs. The camera maintains a steady first-person perspective, capturing the intricate details of the bridge's railing and the textured snow beneath. As the movement progresses, the path transitions from the bridge onto a narrow, winding trail that cuts through a dense forest blanketed in snow. The camera pans slightly to reveal towering evergreen trees, their branches heavy with fresh snow, creating a tunnel-like effect. The surrounding landscape is enveloped in a soft, diffused light, casting a muted palette of whites and grays across the scene. The air appears crisp and still, with no signs of wildlife or human presence, emphasizing the solitude of the environment. The camera continues to move smoothly, navigating the undulating terrain, with occasional shifts in angle to highlight the rugged beauty of the snow-covered rocks and the tranquil expanse of the lake in the distance. The entire sequence captures the quiet majesty of Lago di Braies on a snowy day, offering an immersive journey through this pristine natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

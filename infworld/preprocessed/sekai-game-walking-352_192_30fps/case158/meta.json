@@ -1,0 +1,20 @@
+{
+  "name": "case158",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a rugged, rocky terrain under a cloudy sky during sunset. The camera pans slowly, revealing dilapidated wooden structures scattered across the landscape, their weathered surfaces blending into the earthy tones of the surroundings. As the movement continues, the camera angle shifts slightly upward, capturing the distant silhouette of a mountain range shrouded in mist. The scene transitions into a dense forest, where the camera navigates through narrow paths lined with tall trees, their branches casting intricate shadows on the ground. The lighting becomes dimmer, emphasizing the golden hues of the setting sun filtering through the canopy. The camera moves steadily, following the uneven terrain as it descends into a small valley, where patches of snow are visible among the rocks and fallen leaves. The environment remains empty, with no signs of human presence, creating a serene and isolated atmosphere. The camera continues its journey, capturing the intricate details of the forest floor, from the rough bark of the trees to the delicate layers of moss covering the stones. The overall ambiance is one of quiet solitude, with the natural elements dominating the scene, and the camera's smooth, continuous motion enhancing the immersive experience of exploring this remote trail.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

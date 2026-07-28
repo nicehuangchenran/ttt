@@ -1,0 +1,20 @@
+{
+  "name": "case72",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer's perspective moving forward from a wooden porch into a dense, foggy forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly transitions from the porch, which features a traditional Japanese architectural style with a tiled roof and wooden railings, into the misty woodland. As the first-person view progresses along a narrow dirt path, the surrounding trees, mostly leafless and shrouded in thick fog, create an eerie yet serene atmosphere. The path winds gently through the forest, bordered occasionally by low stone walls and natural rock formations. The camera angle remains steady, focusing straight ahead but subtly panning slightly to capture the dense foliage and the occasional patches of moss-covered rocks. The lighting is dim due to the overcast sky and heavy fog, casting a muted grayish hue over the entire scene. The environment is completely empty, with no signs of wildlife or human presence, enhancing the sense of solitude. As the journey continues deeper into the forest, the path becomes slightly steeper, leading the viewer up a small incline, where the fog thickens further, obscuring distant views and adding to the mysterious ambiance of this outdoor-natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

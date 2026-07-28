@@ -1,0 +1,20 @@
+{
+  "name": "case739",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement across a rugged, moss-covered landscape under a cloudy sky at sunset. The camera pans slightly to the left, revealing jagged rocks and uneven terrain as the viewer progresses through the desolate area. The surrounding environment is characterized by dark, muted tones with patches of green moss clinging to the rocks, creating a stark contrast against the earthy browns. As the camera continues its forward motion, it captures the expansive view of distant mountains shrouded in mist, their silhouettes faintly visible against the dimming light. The camera angle shifts subtly, offering a broader perspective of the vast, open space, emphasizing the isolation and emptiness of the location. The lighting gradually dims as the sun sets, casting long shadows and bathing the scene in a warm, orange hue that enhances the dramatic atmosphere. The camera then descends slightly, focusing on the rough ground beneath, before rising again to reveal a winding path leading deeper into the wilderness. The entire sequence maintains a smooth, continuous flow, capturing the serene yet imposing beauty of M\u00fdrdalssandur's natural landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

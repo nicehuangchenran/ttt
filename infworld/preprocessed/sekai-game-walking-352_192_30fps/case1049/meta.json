@@ -1,0 +1,20 @@
+{
+  "name": "case1049",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a railway track enveloped in dense fog, creating an ethereal atmosphere. The camera smoothly glides over the gravelly path, flanked by tall pine trees that gradually give way to a mix of deciduous trees as the journey progresses. The fog thickens intermittently, obscuring distant views and casting a soft, diffused light that mutes the colors of the surrounding foliage. As the path veers off the railway, the camera pans slightly to the right, revealing a narrow dirt trail bordered by wooden posts and a wire fence. The ground is uneven, covered with fallen leaves and patches of grass, adding texture to the scene. The camera continues its steady advance, capturing the subtle sway of branches and the gentle rustling of leaves in the breeze. The environment remains quiet and empty, with no signs of human presence, enhancing the sense of solitude. The lighting remains consistent throughout, with the fog filtering the daylight into a soft, golden hue, casting long shadows and highlighting the intricate details of the forest floor. The camera's movement is fluid, maintaining a first-person perspective that immerses the viewer in this serene, misty woodland setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

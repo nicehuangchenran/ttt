@@ -1,0 +1,20 @@
+{
+  "name": "case1030",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a serene view of Castle Rock Beach at sunset, capturing the tranquil beauty of the natural landscape. The camera slowly pans across the sandy shore, revealing gentle waves lapping against the beach under a cloudy sky that transitions from deep orange to soft purple hues. As the camera moves forward, it captures the reflection of the setting sun on the water's surface, creating a shimmering path of light. The horizon is dotted with a few distant birds flying overhead, adding a sense of calmness to the scene. The camera then shifts its focus to the left, showcasing a dense line of lush green vegetation bordering the beach, which gradually fades into shadow as the sun sets further. The camera continues to pan right, offering a broader perspective of the expansive ocean and the rocky formations in the distance, all bathed in the warm glow of the fading sunlight. Throughout the sequence, the camera maintains a steady, smooth movement, emphasizing the peaceful and untouched nature of the beach, with no signs of human presence, allowing viewers to fully immerse themselves in the tranquil ambiance of Castle Rock Beach during this magical time of day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

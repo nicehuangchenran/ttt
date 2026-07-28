@@ -1,0 +1,20 @@
+{
+  "name": "case814",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved path in East Maddon Park, London, United Kingdom, under a cloudy sky during the day. The camera smoothly glides past a series of trees lining both sides of the path, their leaves casting dappled shadows on the ground. As the movement continues, the path leads towards a fenced basketball court, where two hoops stand prominently against the backdrop of a brick building partially obscured by foliage. The camera pans slightly to the right, revealing more of the court's vibrant green and red markings before turning left onto another path that winds deeper into the park. The surroundings become denser with trees, creating a canopy overhead that filters the soft daylight. The camera maintains a steady pace, capturing the serene atmosphere of the empty park. The path curves gently, passing by benches and lampposts, and eventually opens up into a larger clearing surrounded by more trees. The camera angle shifts subtly to provide a panoramic view of this open space, emphasizing the tranquil and expansive nature of the park. The overall lighting remains consistent, with the cloudy sky diffusing the sunlight, casting a gentle glow over the entire scene. No sudden events or changes disrupt the continuous flow of the video, maintaining a calm and steady visual narrative throughout.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

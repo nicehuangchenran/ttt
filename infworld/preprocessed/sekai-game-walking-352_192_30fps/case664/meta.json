@@ -1,0 +1,20 @@
+{
+  "name": "case664",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow stone path surrounded by dense vegetation under a cloudy night sky. The camera advances forward, revealing an old, ivy-covered building on the left, its windows dark and unlit, blending into the shadowy surroundings. As the movement continues, the path curves gently to the right, leading past more overgrown foliage and a small wooden fence partially obscured by bushes. The camera angle remains at eye level, providing a consistent view of the path ahead, which is uneven and strewn with small rocks and patches of grass. The dim lighting casts long shadows, enhancing the eerie atmosphere of the scene. The environment is quiet and devoid of any human presence, with the only sounds being the soft crunch of footsteps on the stones. The path eventually leads to a wider area with larger rocks and more open space, where the camera briefly pans slightly to the left, showing a glimpse of a distant hillside shrouded in mist. The overall ambiance is one of solitude and mystery, with the natural elements dominating the visual landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

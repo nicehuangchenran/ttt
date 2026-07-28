@@ -1,0 +1,20 @@
+{
+  "name": "case666",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily forward along a narrow, cobblestone street lined with traditional Japanese buildings under a cloudy, foggy night sky. The camera glides smoothly, capturing the intricate details of wooden structures adorned with lanterns that cast a soft, warm glow against the cool, muted tones of the surroundings. As the viewer progresses, the street ascends gently, revealing more of the atmospheric setting with each step. The camera angle remains at eye level, providing an immersive experience as it navigates through the empty alleyway. The dim lighting accentuates the textures of the stone path and the weathered facades of the buildings, while the fog creates a sense of depth and mystery. The environment is devoid of people, enhancing the serene yet eerie ambiance. The camera continues its steady advance, passing by various architectural features such as small gates, decorative railings, and hanging lanterns, all contributing to the rich cultural context of Fushimi Inari Taisha in Kyoto, Japan. The overall scene maintains a consistent, tranquil pace, with no sudden movements or changes, allowing the viewer to fully absorb the quiet beauty of this historic urban landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

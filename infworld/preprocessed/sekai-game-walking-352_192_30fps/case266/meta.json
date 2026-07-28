@@ -1,0 +1,20 @@
+{
+  "name": "case266",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a dimly lit forest path, framed by a large red torii gate illuminated by a warm lantern on the right side. As the camera advances, it captures the dense foliage and misty atmosphere, with the path gradually narrowing and the surrounding trees becoming more prominent. The camera pans slightly to the left, revealing more of the forest's intricate details, such as the gnarled tree trunks and underbrush. The scene transitions into deeper darkness as the viewer continues along the path, with only faint light filtering through the canopy above. The camera then shifts focus to a series of smaller red torii gates, each glowing softly from lanterns placed within them, creating a striking contrast against the dark surroundings. The viewer moves steadily forward, passing through these gates, which line a stone pathway leading upwards. The camera angle remains at eye level throughout, maintaining a consistent perspective that immerses the viewer in the serene yet mysterious ambiance of Fushimi Inari Taisha at night. The overall lighting is subdued, with the red hues of the torii gates and lanterns providing the primary source of illumination, casting long shadows and enhancing the ethereal quality of the environment. The scene remains empty of people, emphasizing the solitude and tranquility of the location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

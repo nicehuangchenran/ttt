@@ -1,0 +1,20 @@
+{
+  "name": "case907",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a snow-covered path flanked by dense evergreen trees, their branches heavy with fresh snow. The camera moves forward, capturing the crunch of snow underfoot as it navigates through the serene, wintry landscape. As the path curves gently, the viewer's gaze is drawn to a rocky outcrop ahead, where the snow has settled unevenly among the stones. The camera continues its advance, tilting slightly upward to reveal a broader view of the surrounding terrain\u2014a mix of snow-dusted rocks and patches of exposed earth. The movement becomes more deliberate as the path narrows, leading the viewer over a small wooden bridge that spans a shallow, frozen stream. The camera pans briefly to the right, showcasing the intricate textures of the rocks and the sparse vegetation clinging to the slopes. The scene remains tranquil and undisturbed, with no other figures in sight. The daylight filters softly through the trees, casting gentle shadows across the snow, enhancing the crisp whites and muted greens of the natural setting. The camera maintains a steady pace, offering a continuous and immersive experience of this peaceful, snowy wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

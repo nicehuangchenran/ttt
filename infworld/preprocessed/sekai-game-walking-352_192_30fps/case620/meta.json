@@ -1,0 +1,20 @@
+{
+  "name": "case620",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest, the camera gliding smoothly between tall trees with sunlight filtering through the canopy, casting dappled shadows on the forest floor. As the path winds upward, the camera pans to reveal a traditional Japanese temple nestled among the trees, its dark wooden structure contrasting sharply with the surrounding greenery. The viewer approaches the temple, passing under a stone torii gate that marks the entrance, the camera tilting slightly to capture the intricate details of the gate's weathered surface. Inside the temple grounds, the camera continues forward, showcasing the open veranda and the serene view beyond. The scene transitions as the viewer exits the temple, descending a stone staircase flanked by moss-covered rocks and bare trees, the cloudy sky above lending a soft, diffused light to the landscape. The camera then shifts focus to a distant pagoda perched atop a hill, its multiple tiers standing out against the misty backdrop. The viewer's journey continues along a winding path, the camera panning to highlight the rugged terrain and the sparse vegetation clinging to the rocky slopes. Finally, the camera captures a sweeping view of the entire temple complex, the various buildings and structures blending harmoniously with the natural surroundings, creating a tranquil and immersive atmosphere. Throughout the video, the camera maintains a steady pace, allowing viewers to fully absorb the beauty and serenity of this outdoor setting in Yamadera, Yamagata Prefecture, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

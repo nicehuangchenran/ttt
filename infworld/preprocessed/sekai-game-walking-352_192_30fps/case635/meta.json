@@ -1,0 +1,20 @@
+{
+  "name": "case635",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along Castle Rock Beach in Meelup, Australia, under a cloudy, foggy night sky. The camera moves steadily forward, capturing the sandy beach scattered with large rocks and bordered by rugged cliffs on one side and calm waters on the other. As the viewer progresses, the scene transitions from the serene beach to a forested area where intense flames engulf the trees, casting an eerie orange glow that contrasts sharply with the dark surroundings. The camera pans slightly to reveal more of the fiery landscape, highlighting the dense smoke rising into the night sky. The path through the forest is narrow and winding, with the fire illuminating the way ahead. The camera continues to move forward, navigating through the thick underbrush and over uneven terrain, with the fire's light flickering and casting dynamic shadows. The overall atmosphere is tense and dramatic, with the fire's roar and crackling sounds filling the air. The camera occasionally shifts angles to provide a broader view of the burning forest, emphasizing the scale of the blaze. The scene remains devoid of people, adding to the sense of isolation and urgency as the viewer moves deeper into the fiery chaos. The lighting fluctuates between the dim, natural moonlight and the intense, artificial glow of the fire, creating a stark visual contrast throughout the journey.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

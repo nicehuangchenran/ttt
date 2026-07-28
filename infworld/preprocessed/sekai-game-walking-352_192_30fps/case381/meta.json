@@ -1,0 +1,20 @@
+{
+  "name": "case381",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving steadily forward through a rugged, rocky terrain in M\u00fdrdalssandur, Southern Region, Iceland. The camera glides smoothly over uneven surfaces, capturing the intricate textures of moss-covered rocks and scattered boulders. As the movement continues, the perspective shifts slightly, revealing a vast expanse of similar rocky formations stretching into the distance. The background showcases rolling hills and distant mountains shrouded in a thick layer of clouds, creating a moody and atmospheric setting. The sky above is painted in hues of orange and pink, indicating the time of sunset, while the overall lighting remains soft and diffused due to the cloudy weather. The camera maintains a consistent eye-level angle, providing an immersive first-person view of the landscape. Throughout the sequence, there are no sudden changes or events, allowing the viewer to fully absorb the serene and untouched natural environment. The absence of any human presence or structures emphasizes the remote and isolated nature of the location, enhancing the sense of solitude and tranquility.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

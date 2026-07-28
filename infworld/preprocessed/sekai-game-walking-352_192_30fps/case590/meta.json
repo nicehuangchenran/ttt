@@ -1,0 +1,20 @@
+{
+  "name": "case590",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, overgrown path flanked by dense vegetation under a cloudy, foggy sky. The camera pans slightly to the right, revealing an ancient stone structure partially obscured by trees, its weathered columns standing solemnly amidst the greenery. As the viewer continues along the path, the camera angle shifts subtly, capturing the intricate details of the surrounding foliage and the mist that hangs low, diffusing the daylight into a soft, muted glow. The path curves gently, leading past more ruins covered in moss and ivy, hinting at a long-abandoned settlement. The camera then tilts upward, showcasing the towering trees that dominate the landscape, their branches swaying gently in the breeze. Moving further, the viewer approaches a cluster of old stone buildings, their walls crumbling and windows empty, enveloped by the encroaching forest. The camera pans across these structures, highlighting the textures of the aged stones and the creeping vines that have claimed them. The scene remains devoid of any human presence, emphasizing the eerie silence and solitude of Shengshan Island. The final moments capture a broader view of the island's rugged terrain, with the camera slowly panning to reveal distant hills shrouded in fog, completing the immersive journey through this desolate yet hauntingly beautiful outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

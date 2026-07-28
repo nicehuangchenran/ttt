@@ -1,0 +1,20 @@
+{
+  "name": "case203",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a wooden bridge adorned with intricate metal railings, spanning a serene lake under a bright, sunny sky. The camera smoothly transitions from the bridge onto a paved pathway flanked by lush green trees, casting dappled shadows on the ground. As the movement continues, the path curves gently through the park, revealing more of the verdant surroundings and the clear blue sky above. The camera angle remains steady, offering a first-person perspective that immerses the viewer in the tranquil environment. The sunlight filters through the leaves, creating a warm, golden hue that enhances the natural beauty of East Maddon Park. The path leads towards an open area where a colorful playground comes into view, featuring slides, climbing frames, and swings, all set against the backdrop of neatly trimmed grass and scattered benches. The camera pans slightly to capture the entire playground before continuing along the path, which eventually approaches a gated entrance marked by ornate metalwork. Throughout the journey, the park remains empty, emphasizing the peaceful solitude of the setting. The overall ambiance is one of calm and serenity, with the natural elements and well-maintained structures harmoniously blending together under the clear daylight.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

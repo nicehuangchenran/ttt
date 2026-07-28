@@ -1,0 +1,20 @@
+{
+  "name": "case680",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a dense, snowy forest in Lago di Braies, Braies, South Tyrol, Italy, during the daytime. The camera smoothly glides between tall evergreen trees blanketed in snow, capturing the serene and untouched landscape. As the movement continues, the path becomes slightly more defined, revealing a wooden railing that guides the viewer along a gently curving trail. The camera angle shifts subtly to showcase the surrounding trees, their branches heavy with snow, creating a tranquil and immersive atmosphere. The light filters softly through the trees, casting gentle shadows on the snow-covered ground. The viewer then approaches a small wooden bridge spanning a narrow stream, the water partially frozen and reflecting the muted daylight. Continuing along the path, the camera pans to reveal a vast, snow-laden lake bordered by steep, forested hills. The scene transitions to a rustic wooden structure perched on stilts near the lake's edge, adding a touch of human presence to the otherwise empty and natural setting. The camera maintains a steady pace, capturing the expansive view of the lake and the surrounding mountains, all enveloped in a blanket of snow, emphasizing the quiet beauty of this remote location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

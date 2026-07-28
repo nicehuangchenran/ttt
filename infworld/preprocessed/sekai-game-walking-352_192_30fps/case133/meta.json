@@ -1,0 +1,20 @@
+{
+  "name": "case133",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a narrow, dirt path surrounded by dense vegetation under a cloudy sky at sunset. The camera smoothly transitions from the path onto a paved road that winds through a forested area, capturing the subtle shift from natural terrain to a structured roadway. As the movement continues, the camera angle remains steady, focusing forward while subtly panning to reveal the surrounding trees and underbrush bathed in the dim, warm hues of the fading light. The road curves gently, and the camera follows these turns, maintaining a consistent pace. The environment is quiet and devoid of people, emphasizing the solitude of the setting. The lighting gradually darkens as the sun sets further, casting long shadows and creating a serene, almost somber atmosphere. The camera captures the texture of the road surface and the occasional road signs, enhancing the sense of travel through this tranquil, empty landscape. The overall scene is a continuous, immersive journey through Castle Rock Beach, Meelup, Australia, highlighting the natural beauty and peacefulness of the area during a cloudy, foggy sunset.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

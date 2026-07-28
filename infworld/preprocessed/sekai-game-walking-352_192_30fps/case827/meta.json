@@ -1,0 +1,20 @@
+{
+  "name": "case827",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a dimly lit forest path at night during a rainy evening. The camera advances steadily along a narrow dirt trail flanked by dense trees and underbrush, their silhouettes barely discernible against the dark, misty backdrop. As the journey progresses, the path leads to a traditional wooden torii gate illuminated by two glowing orange lanterns, casting a warm glow that contrasts sharply with the surrounding darkness. The camera continues to move forward, passing through the gate and into a deeper section of the forest where the rain intensifies, creating a soft, rhythmic patter on the leaves and ground. The path curves gently, revealing more of the forest's intricate details, such as weathered wooden fences and small stone structures partially obscured by fog. The camera angle remains at eye level, providing an immersive perspective as it navigates the winding trail. The lighting is minimal, primarily coming from the occasional lanterns and the faint moonlight filtering through the canopy, casting long shadows and creating a serene yet mysterious atmosphere. The scene remains empty of people, emphasizing the solitude and tranquility of the nocturnal forest setting. As the video progresses, the path leads to a small clearing with a rustic wooden building nestled among the trees, its presence adding a touch of human habitation to the otherwise untouched natural landscape. The camera continues to move forward, capturing the quiet beauty of Fushimi Inari Taisha in Kyoto, Japan, under the cover of a rainy night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

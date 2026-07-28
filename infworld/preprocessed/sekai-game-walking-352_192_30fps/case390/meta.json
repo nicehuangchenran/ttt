@@ -1,0 +1,20 @@
+{
+  "name": "case390",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "Ascending a stone staircase amidst a dense forest, the viewer's perspective moves steadily upward, revealing the intricate textures of moss-covered steps and sturdy metal railings. The camera pans slightly to the right, showcasing a narrow path that winds through the underbrush, flanked by towering trees whose branches intertwine overhead, casting dappled shadows on the forest floor. As the ascent continues, the camera angle shifts to capture a small clearing with remnants of ancient structures, hinting at a historical site enveloped by nature. The journey progresses along a rugged trail, where the camera tilts downward to follow the uneven terrain, highlighting the earthy tones of fallen leaves and the vibrant green of resilient ferns. The surrounding forest is thick with tall, slender trees, their trunks rising majestically towards a cloudy sky, which diffuses soft, muted light throughout the scene. The camera then pans upward, emphasizing the verticality of the trees and the serene, untouched beauty of the natural environment. Throughout this tranquil exploration, no other figures are present, enhancing the sense of solitude and immersion in the quiet wilderness of Yamadera, Yamagata Prefecture, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

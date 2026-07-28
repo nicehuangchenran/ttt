@@ -1,0 +1,20 @@
+{
+  "name": "case491",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, winding path surrounded by dense foliage and towering trees, enveloped in a thick fog that diffuses the soft daylight. As the viewer progresses, the camera pans slightly to the right, revealing an old stone wall partially covered in moss and ivy, hinting at a historical or abandoned structure nearby. The path continues through the misty forest, with the camera occasionally tilting upward to capture the interplay of light filtering through the canopy, casting dappled shadows on the ground. The environment is rich with natural textures, from the rough bark of the trees to the smooth, wet stones underfoot. The camera then shifts focus to a small clearing where the remnants of a stone bridge are visible, its arches partially collapsed and overgrown with vegetation. The viewer's journey takes them further into the forest, where the fog thickens, obscuring distant views and creating an atmosphere of isolation. The camera angle remains mostly level, maintaining a consistent eye-level view that immerses the viewer in the serene yet mysterious landscape. The muted colors of the scene\u2014greens, grays, and browns\u2014are softened by the cloudy sky, enhancing the tranquil and untouched quality of Shengshan Island. As the path winds deeper into the woods, the camera captures the subtle sounds of nature, adding to the immersive experience of this empty, outdoor-natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

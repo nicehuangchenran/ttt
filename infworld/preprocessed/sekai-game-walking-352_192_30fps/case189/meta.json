@@ -1,0 +1,20 @@
+{
+  "name": "case189",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow, winding dirt path through dense vegetation on Shengshan Island, Zhoushan, China. The camera advances forward, capturing the textured ground covered with small rocks and patches of grass, flanked by thick bushes and trees that gradually thicken as the path progresses. The sky above is overcast with a layer of clouds, casting a soft, diffused light that creates a muted palette of earthy tones. As the viewer moves deeper into the forest, the sunlight filters through the canopy, creating dynamic patterns of light and shadow on the path. The camera angle remains at eye level, providing an immersive experience of walking through this natural setting. The time of day appears to be sunset, as indicated by the warm, golden hues that occasionally break through the cloud cover, adding a serene glow to the scene. The environment is entirely empty, with no signs of human presence, enhancing the sense of solitude and tranquility. The camera continues its steady advance, navigating slight turns and undulations in the terrain, maintaining a consistent pace that allows the viewer to fully absorb the peaceful, untouched beauty of the island's natural landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

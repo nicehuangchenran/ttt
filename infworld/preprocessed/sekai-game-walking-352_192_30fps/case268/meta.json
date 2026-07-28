@@ -1,0 +1,20 @@
+{
+  "name": "case268",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer approaching a vibrant red torii gate at the base of a stone staircase, leading into a serene shrine complex. The camera smoothly ascends the steps, revealing traditional wooden structures nestled among lush greenery under a bright, sunny sky. As the perspective moves forward, it pans slightly to showcase a quiet courtyard bordered by weathered wooden buildings with dark tiled roofs, their surfaces marked by time and nature. The camera then transitions through a narrow pathway flanked by dense foliage, capturing the interplay of sunlight filtering through the leaves, casting dappled shadows on the ground. Continuing along this path, the viewer encounters another torii gate partially obscured by trees, before emerging into an open area where a small shrine building stands prominently, its red accents contrasting sharply with the surrounding earthy tones. The camera angle shifts to highlight the architectural details of the shrine, including its ornate roof and supporting pillars, while the ambient light enhances the rich colors and textures of the scene. Finally, the viewer approaches a set of stone steps leading up to a larger, more elaborate shrine structure, completing the journey through this tranquil and historically rich environment. Throughout the sequence, the absence of people adds to the peaceful atmosphere, allowing the natural and architectural beauty to take center stage.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case1047",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a smooth forward movement along a winding asphalt road flanked by dense greenery under a clear blue sky. The camera maintains a steady, first-person perspective, capturing the road's gentle curves as it navigates through the lush forested area. As the journey progresses, the road dips slightly, revealing more of the surrounding landscape, which includes rocky outcrops and patches of sunlight filtering through the trees. The camera angle remains consistent, providing a continuous view of the road ahead, marked by white dashed lines that guide the path. The environment is bathed in natural daylight, enhancing the vibrant greens of the foliage and the rich browns of the earthy terrain. The scene transitions smoothly as the road narrows, leading into a denser section of the forest where shadows cast by the trees create a play of light and dark on the pavement. The camera continues its forward motion, capturing the serene and untouched beauty of Castle Rock Beach, Meelup, Australia, with no other vehicles or pedestrians in sight, emphasizing the solitude and tranquility of the setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

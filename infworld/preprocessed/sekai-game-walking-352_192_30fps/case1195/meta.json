@@ -1,0 +1,20 @@
+{
+  "name": "case1195",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement through a dense forest on Shengshan Island, Zhoushan, China, under a cloudy and foggy sky during the day. The camera smoothly navigates along a narrow dirt path, flanked by lush greenery and towering trees that partially obscure the overcast light, casting soft shadows across the scene. As the viewer progresses, the path gently curves, revealing a stone staircase leading up to an old, ivy-covered building partially hidden by vegetation. The camera ascends the stairs, offering a closer view of the weathered stone structure and its surrounding foliage. After reaching the top, the perspective shifts slightly to the right, showcasing more of the forested area and a distant view of the island's landscape shrouded in mist. The camera continues moving forward, descending another set of stone steps into a clearing where the path splits, with one route leading deeper into the woods and the other veering off to the left. The environment remains serene and empty, with no signs of human presence, and the muted colors of the foliage blend harmoniously with the gray tones of the sky and stone structures. The camera maintains a consistent eye-level angle throughout, providing an immersive experience of exploring this tranquil, natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

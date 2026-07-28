@@ -1,0 +1,20 @@
+{
+  "name": "case1254",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer approaching an old, weathered building situated on a rocky hillside, its wooden structure and barred windows hinting at abandonment. The camera pans smoothly from right to left, revealing the building's side and back, showcasing its rustic charm against the backdrop of a clear sky. As the perspective shifts, the camera moves forward along a narrow dirt path that winds through a dense forest of tall, evergreen trees. The sunlight filters through the foliage, casting dappled shadows on the ground, enhancing the vibrant greens and earthy browns of the natural surroundings. The camera continues along the path, maintaining a steady pace, with subtle movements that follow the terrain's gentle undulations. The scene transitions seamlessly from the forested area to an open vista, where distant snow-capped mountains come into view under the bright daylight. The camera angle remains at eye level throughout, providing an immersive first-person perspective that captures the serene beauty of Le Prarion, Chamonix-Mont-Blanc, France, on a sunny day. The environment remains empty, emphasizing the tranquility and isolation of the location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

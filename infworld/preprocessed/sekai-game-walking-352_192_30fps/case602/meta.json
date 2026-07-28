@@ -1,0 +1,20 @@
+{
+  "name": "case602",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with the viewer moving forward along a paved path bordered by a metal fence on the left, leading into East Maddon Park in London under sunny conditions during the day. The camera smoothly advances, capturing the lush greenery of dense trees and shrubs that line both sides of the path, their leaves rustling gently in the breeze. As the movement continues, the camera pans slightly to the right, revealing more of the park's serene environment, including a wooden bench nestled among the foliage. The sunlight filters through the canopy, casting dappled shadows on the ground and creating a warm, inviting atmosphere. The camera maintains a steady forward motion, occasionally adjusting its angle to showcase the natural beauty of the park, such as the intricate details of the tree trunks and the vibrant green grass. The path curves gently, leading the viewer deeper into the park, where the sounds of nature blend harmoniously with the tranquil setting. The entire scene remains empty of people, emphasizing the peaceful solitude of this outdoor-natural environment. The camera's fluid movement and the vivid colors of the surroundings create an immersive experience, drawing the viewer further into the heart of East Maddon Park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

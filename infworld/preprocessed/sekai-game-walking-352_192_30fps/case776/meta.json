@@ -1,0 +1,20 @@
+{
+  "name": "case776",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a moss-covered stone pathway flanked by dense, foggy woods. The camera steadily advances, capturing the worn texture of the stones and the surrounding mist that blurs the distant trees. As the path ascends into a series of stone steps, the camera angle tilts slightly upward, emphasizing the climb. The steps lead to a wooden gate partially obscured by fog, which the viewer approaches and passes through. Beyond the gate, the path continues into a clearing bordered by leafless trees and a traditional wooden fence. The camera pans slightly to the right, revealing more of the foggy forest and the rugged terrain. The viewer then descends a set of wooden stairs, the camera tilting downward to follow the descent. The path winds through the forest, with the camera capturing the damp earth and scattered leaves underfoot. The dense fog persists, creating a muted, grayish atmosphere that envelops the scene. The viewer's movement remains steady and deliberate, providing a continuous, immersive perspective of the tranquil, empty woodland setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

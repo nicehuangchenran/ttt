@@ -1,0 +1,20 @@
+{
+  "name": "case492",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a series of illuminated red torii gates at Fushimi Inari Taisha in Kyoto, Japan, under a cloudy, foggy night sky. The camera advances steadily forward, capturing the warm glow of lanterns that cast an orange hue on the wooden structures, creating a serene yet mysterious atmosphere. As the path progresses, the camera angle shifts slightly upward, revealing more of the towering trees that line the walkway, their branches partially obscured by the dense fog. The environment is quiet and devoid of people, enhancing the sense of solitude. The camera continues along the winding stone path, passing through smaller torii gates that gradually become less frequent. The surrounding forest becomes denser, with thick underbrush and gnarled tree trunks enveloping the trail. The dim lighting from the lanterns fades into the darkness, leaving only faint glimmers of light in the distance. The camera maintains a steady pace, capturing the subtle interplay of shadows and light as it navigates the misty, enigmatic landscape. The overall ambiance is one of tranquil isolation, with the natural elements and architectural features blending seamlessly into the night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

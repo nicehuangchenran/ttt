@@ -1,0 +1,20 @@
+{
+  "name": "case371",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective standing on a rocky outcrop overlooking a misty coastal landscape. The camera remains steady, capturing the serene view of the fog-covered sea and dense forested cliffs under a cloudy sky. As the scene progresses, the viewer's gaze shifts slightly, revealing more of the rugged terrain and the gentle waves lapping against the shore. The atmosphere is calm, with muted colors dominated by shades of gray and green. Suddenly, the camera pans downward, transitioning from the coastal vista to a narrow stone path winding through lush vegetation. The movement is smooth, following the path as it curves gently through the undergrowth. The surrounding foliage is dense, with sunlight filtering through the leaves, casting dappled shadows on the ground. The path is uneven, with patches of moss and small stones scattered along its surface. The camera continues forward, navigating the path as it leads deeper into the forest, the sounds of nature providing a tranquil backdrop. The transition from the open coastal view to the enclosed forest setting is seamless, maintaining a consistent pace and focus on the natural surroundings. The overall ambiance is peaceful and immersive, capturing the essence of a solitary walk through Shengshan Island's untouched wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

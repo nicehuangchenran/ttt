@@ -1,0 +1,20 @@
+{
+  "name": "case783",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a serene view of East Maddon Park in London, United Kingdom, where the camera slowly pans across a tranquil pond surrounded by lush greenery under a cloudy sky. The camera then transitions forward along a paved path lined with trees and lampposts, capturing the gentle sway of leaves in the breeze. As the viewer progresses, the path curves gently, revealing more of the park's natural beauty, with sunlight filtering through the dense foliage, casting dappled shadows on the ground. The camera continues its steady movement, approaching a wooden bridge adorned with ornate railings that spans a calm river. Crossing the bridge, the camera captures the expansive waterway reflecting the overcast sky above. The scene shifts again as the path winds through a densely wooded area, with the camera tilting slightly to showcase the intricate details of the surrounding vegetation. The journey continues along a winding dirt trail, leading to an open clearing where the camera pauses briefly, offering a panoramic view of the park's expansive landscape. Throughout the video, the muted tones of the cloudy day enhance the peaceful ambiance, with no other individuals present, emphasizing the solitude and tranquility of the setting. The camera's smooth, continuous motion provides a seamless exploration of this picturesque outdoor environment, highlighting the harmonious blend of nature and man-made structures within East Maddon Park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

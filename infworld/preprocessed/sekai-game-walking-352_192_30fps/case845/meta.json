@@ -1,0 +1,20 @@
+{
+  "name": "case845",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a serene view of Castle Rock Beach at sunset, where the camera slowly pans across the tranquil waters reflecting the soft hues of the fading light. The camera then moves forward along the sandy shore, capturing the gentle waves lapping against the beach. As it progresses, the camera angle shifts slightly upward, revealing a rocky outcrop on the right side of the frame, silhouetted against the dusky sky. The scene transitions smoothly as the camera continues its journey, now focusing on the dense foliage of trees lining the beach, their dark forms contrasting sharply with the dimly lit surroundings. The camera pans left, showcasing more of the beach's expanse, with the distant hills faintly visible through the foggy atmosphere. The lighting gradually dims as the camera moves further inland, emphasizing the quiet solitude of the empty beach. The overall ambiance is calm and peaceful, with the muted colors of the sunset blending seamlessly into the encroaching twilight, creating a tranquil and immersive experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

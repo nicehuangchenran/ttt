@@ -1,0 +1,20 @@
+{
+  "name": "case1087",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest, the camera gliding smoothly over lush green undergrowth and towering pine trees. As the perspective advances, the camera pans upward, revealing a ski lift cable stretching across the scene, supported by sturdy metal poles. The movement continues along the path, gradually transitioning from the shadowed forest into an open meadow bathed in soft, diffused light. The camera angle shifts slightly, offering a panoramic view of the surrounding landscape, where distant mountains shrouded in mist dominate the horizon. The terrain becomes more rugged, with patches of grass giving way to rocky paths. The fog thickens as the viewer approaches the mountainous backdrop, creating a hazy atmosphere that obscures finer details. Throughout the sequence, the natural environment remains untouched and serene, with no signs of human presence apart from the ski lift infrastructure. The overall ambiance is tranquil, with muted colors and a cloudy sky contributing to the peaceful, isolated setting of Le Prarion, Chamonix-Mont-Blanc, France.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

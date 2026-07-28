@@ -1,0 +1,20 @@
+{
+  "name": "case1429",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a forward-moving perspective along a wide, empty road lined with lush green trees under a bright, sunny sky. The camera steadily advances, capturing the smooth asphalt and white lane markings that guide the path ahead. As the journey continues, the road curves gently to the right, revealing more of the surrounding urban park setting, complete with neatly trimmed grass and scattered lampposts. The camera angle remains at eye level, providing a clear view of the road's surface and the horizon. The sunlight filters through the leaves, casting dappled shadows on the pavement, enhancing the vibrant greens and warm tones of the environment. The scene transitions smoothly as the road approaches a pedestrian crossing marked by white stripes, followed by another curve leading into a slightly more enclosed area with dense foliage on both sides. The camera maintains its steady pace, eventually approaching a section of the road blocked off by orange traffic barrels and a metal barrier, indicating a restricted area. Throughout the sequence, the environment remains serene and devoid of any pedestrians or vehicles, emphasizing the tranquil and open atmosphere of East Maddon Park on a sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

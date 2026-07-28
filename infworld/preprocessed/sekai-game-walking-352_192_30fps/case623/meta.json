@@ -1,0 +1,20 @@
+{
+  "name": "case623",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a rugged, moss-covered path in M\u00fdrdalssandur, Southern Region, Iceland. The camera smoothly glides over dark volcanic soil and scattered rocks, capturing the texture of the terrain as it progresses. To the left, a simple wooden fence lines the path, guiding the viewer's gaze towards the expansive landscape ahead. The surrounding environment is shrouded in a thick layer of fog, creating a muted, grayish atmosphere that softens the distant hills and valleys. As the camera continues its advance, it pans slightly to the right, revealing more of the rocky, uneven ground covered in patches of vibrant green moss. The overcast sky casts a diffused light, enhancing the earthy tones of the landscape. The camera then shifts focus to a broader view of the area, showcasing the vast expanse of the terrain with rolling hills and sparse vegetation. The absence of any human presence or wildlife emphasizes the solitude and untouched nature of the setting. Throughout the sequence, the camera maintains a consistent eye-level angle, providing an immersive experience of navigating through this remote and serene Icelandic landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

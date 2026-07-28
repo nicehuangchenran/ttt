@@ -1,0 +1,27 @@
+[2026-07-28 04:19:18] [rank0] ======================================================================
+[2026-07-28 04:19:18] [rank0] Infinite World - Training - [sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks3-07_28-04:19:17
+[2026-07-28 04:19:18] [rank0] ======================================================================
+[2026-07-28 04:19:18] [rank0] Data: preprocessed/sekai-game-walking-352_192_30fps
+[2026-07-28 04:19:18] [rank0] Device: cuda:0, World Size: 4
+[2026-07-28 04:19:18] [rank0] ======================================================================
+[2026-07-28 04:19:24] [rank0] Config saved: logs/train_log/[sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks3-07_28-04:19:17/config.json
+[2026-07-28 04:19:49] [rank0] Starting training loop...
+[2026-07-28 04:19:49] [rank0] === Epoch 1/1 ===
+[2026-07-28 04:19:54] [rank0] step 1: loss=0.025912, grad_norm=0.834656, lr=0.000010, video=case430, num_chunks=3, step_second=4.102130
+[2026-07-28 04:19:57] [rank0] step 2: loss=0.077923, grad_norm=0.530081, lr=0.000010, video=case9, num_chunks=3, step_second=2.743939
+[2026-07-28 04:20:00] [rank0] step 3: loss=0.116162, grad_norm=0.431482, lr=0.000010, video=case1365, num_chunks=3, step_second=2.747998
+[2026-07-28 04:20:03] [rank0] step 4: loss=0.106257, grad_norm=0.694440, lr=0.000010, video=case478, num_chunks=3, step_second=2.743982
+[2026-07-28 04:20:05] [rank0] step 5: loss=0.084659, grad_norm=0.455864, lr=0.000010, video=case1261, num_chunks=3, step_second=2.702347
+[2026-07-28 04:20:08] [rank0] step 6: loss=0.063768, grad_norm=0.404074, lr=0.000010, video=case476, num_chunks=3, step_second=2.773809
+[2026-07-28 04:20:11] [rank0] step 7: loss=0.103103, grad_norm=0.653373, lr=0.000010, video=case1613, num_chunks=3, step_second=2.803774
+[2026-07-28 04:20:14] [rank0] step 8: loss=0.108549, grad_norm=0.724055, lr=0.000010, video=case567, num_chunks=3, step_second=2.755517
+[2026-07-28 04:20:17] [rank0] step 9: loss=0.227212, grad_norm=0.767502, lr=0.000010, video=case122, num_chunks=3, step_second=2.747229
+[2026-07-28 04:20:19] [rank0] step 10: loss=0.111174, grad_norm=0.408692, lr=0.000010, video=case944, num_chunks=3, step_second=2.844820
+[2026-07-28 04:20:22] [rank0] step 11: loss=0.097224, grad_norm=0.640266, lr=0.000010, video=case880, num_chunks=3, step_second=2.839979
+[2026-07-28 04:20:25] [rank0] step 12: loss=0.067017, grad_norm=0.295715, lr=0.000010, video=case41, num_chunks=3, step_second=2.826109
+[2026-07-28 04:20:28] [rank0] step 13: loss=0.114400, grad_norm=0.264584, lr=0.000010, video=case909, num_chunks=3, step_second=2.727648
+[2026-07-28 04:20:31] [rank0] step 14: loss=0.121268, grad_norm=0.584209, lr=0.000010, video=case18, num_chunks=3, step_second=2.810400
+[2026-07-28 04:20:34] [rank0] step 15: loss=0.372606, grad_norm=0.300631, lr=0.000010, video=case679, num_chunks=3, step_second=2.847829
+[2026-07-28 04:20:36] [rank0] step 16: loss=0.107194, grad_norm=0.392135, lr=0.000010, video=case270, num_chunks=3, step_second=2.844822
+[2026-07-28 04:20:36] [rank0] Training complete, saving final checkpoint...
+[2026-07-28 04:21:20] [rank0] Training finished!

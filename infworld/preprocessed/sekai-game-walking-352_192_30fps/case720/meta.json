@@ -1,0 +1,20 @@
+{
+  "name": "case720",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a series of vibrant red torii gates at Fushimi Inari Taisha in Kyoto, Japan. The camera smoothly glides along the path, capturing the intricate details of each gate as it passes under them. The surrounding environment is lush with greenery, with trees and foliage framing the path on both sides, creating a serene and natural atmosphere. As the camera continues its journey, the sunlight filters through the leaves, casting dappled shadows on the ground and highlighting the rich red color of the torii gates. The perspective shifts slightly as the viewer ascends a set of stone steps, revealing more gates ahead and emphasizing the depth and length of the pathway. The camera angle occasionally pans upwards, showcasing the towering height of the gates against the clear blue sky. The scene remains empty, with no other individuals present, allowing for an uninterrupted view of the tranquil and picturesque setting. The overall ambiance is peaceful, with the gentle rustling of leaves and the soft crunch of footsteps on the path adding to the sensory experience. The video concludes with the viewer approaching a larger, more prominent torii gate, marking a significant point along the path.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

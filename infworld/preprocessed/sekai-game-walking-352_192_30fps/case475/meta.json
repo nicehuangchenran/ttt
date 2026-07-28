@@ -1,0 +1,20 @@
+{
+  "name": "case475",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving forward through a misty, dimly lit pathway leading towards a traditional Japanese torii gate at Fushimi Inari Taisha in Kyoto, Japan. The camera advances steadily, capturing the foggy atmosphere that envelops the scene, with the red torii gate illuminated faintly by ambient light. As the viewer approaches, the camera pans slightly to the right, revealing a blue vending machine beside the path, before returning its focus to the torii gate. The camera then transitions through the gate, entering a forested area where the path is lined with more torii gates, creating a tunnel-like effect. The movement continues along this path, with the camera occasionally tilting upwards to capture the towering trees shrouded in fog. The red lanterns hanging from the torii gates emit a warm glow, casting an eerie yet serene ambiance over the scene. The camera maintains a steady pace, navigating through the winding path surrounded by dense foliage and the occasional stone lantern, all under the cloudy night sky. The entire sequence is captured from a low angle, emphasizing the towering presence of the torii gates and the enveloping mist, enhancing the mysterious and tranquil atmosphere of the shrine.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case421",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a dirt path bordered by a wooden railing, surrounded by dense evergreen trees under a cloudy sky. As the camera progresses forward, it transitions smoothly from the forested area onto a rocky shoreline beside a serene lake, revealing the expansive Lago di Braies. The camera pans gently to the right, showcasing the tranquil turquoise waters reflecting the surrounding mountains partially covered in snow. The movement continues along the lakeshore, passing by a rustic wooden hut perched on stilts over the water, connected by a small pier. The camera angle shifts slightly upward, capturing the towering peaks and the lush greenery that descends towards the lake. The scene remains empty of people, emphasizing the solitude and natural beauty. The lighting is soft and diffused due to the overcast weather, casting gentle shadows and enhancing the vivid colors of the landscape. The camera then moves further along the shore, navigating through patches of rocks and moss-covered stones, providing an immersive experience of the untouched wilderness. The entire sequence maintains a steady pace, offering a continuous and detailed exploration of this picturesque outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

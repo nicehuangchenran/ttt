@@ -1,0 +1,20 @@
+{
+  "name": "case54",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer's perspective moving steadily forward along a rugged, rocky path on Shengshan Island, Zhoushan, China. Initially, the camera focuses on a red flag fluttering atop a pole, set against a backdrop of cloudy skies and distant mountains. As the movement continues, the camera pans slightly to the right, revealing an expansive view of the ocean stretching into the horizon under a thick layer of clouds. The sun, partially obscured by the clouds, casts a soft, diffused light over the landscape, creating a serene and tranquil atmosphere. The path winds through sparse vegetation, with small bushes and patches of grass dotting the rocky terrain. The camera maintains a steady, forward-moving angle, providing a continuous and immersive experience of the natural surroundings. As the viewer progresses, the camera occasionally shifts to capture different angles of the path and the surrounding environment, highlighting the textures of the rocks and the subtle variations in the vegetation. The overall scene remains empty, with no other individuals present, emphasizing the solitude and peacefulness of the location. The muted colors of the landscape, combined with the gentle movement of the camera, create a calm and contemplative visual journey through this remote and untouched natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

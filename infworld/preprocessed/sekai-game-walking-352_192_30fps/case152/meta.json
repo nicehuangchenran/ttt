@@ -1,0 +1,20 @@
+{
+  "name": "case152",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path surrounded by dense pine trees, capturing the essence of a serene forest walk in Le Prarion, Chamonix-Mont-Blanc, France. The camera smoothly glides over the uneven terrain, revealing patches of dirt and scattered stones underfoot, while the surrounding trees cast dappled shadows across the path due to the cloudy, diffused light. As the journey progresses, the path gently curves, offering glimpses of a broader landscape through breaks in the foliage. The camera angle remains at eye level, providing an immersive first-person perspective that enhances the sense of movement. Midway through the sequence, the path intersects with a set of railway tracks, which run parallel to the trail, adding a new element to the natural setting. The viewer continues along the path, passing by more trees and eventually emerging into a slightly more open area where the sky becomes more visible, though still overcast. The environment remains tranquil and empty, with no signs of human presence apart from the railway infrastructure. The muted colors of the forest\u2014greens, browns, and grays\u2014are consistent throughout, creating a cohesive and peaceful outdoor experience. The video concludes with the viewer approaching another curve in the path, hinting at further exploration ahead.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

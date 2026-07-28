@@ -1,0 +1,20 @@
+{
+  "name": "case1614",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow stone path winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera moves forward, capturing the lush greenery and towering trees that line the path, their trunks thick and moss-covered, while the ground is dotted with patches of snow and vibrant undergrowth. As the path curves gently, the camera pans slightly to reveal a rustic wooden railing on the left, guiding the viewer's gaze deeper into the misty woods. The atmosphere is serene, with soft, diffused light filtering through the canopy, casting gentle shadows on the ground. The path leads to an open clearing where a traditional wooden building comes into view, its dark silhouette standing out against the foggy backdrop. The camera continues straight, approaching the building and passing through its open doorway, revealing a dimly lit interior with a small window at the far end. Emerging from the building, the camera turns right, showcasing a broader courtyard surrounded by more trees and another wooden structure in the distance. The scene remains tranquil and empty, with no signs of human presence, emphasizing the natural beauty and peaceful solitude of the location. The camera's smooth, continuous movement enhances the immersive experience, allowing viewers to feel as if they are exploring the forest themselves.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

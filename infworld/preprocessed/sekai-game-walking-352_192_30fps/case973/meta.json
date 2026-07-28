@@ -1,0 +1,20 @@
+{
+  "name": "case973",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved path under a large, arched bridge, surrounded by lush greenery. As the camera progresses, it transitions from the shaded area under the bridge into an open park setting, revealing a winding road lined with tall trees and lampposts. The camera continues to move steadily forward, capturing the serene environment bathed in bright sunlight, casting soft shadows on the ground. The path curves gently, leading past a small wooden structure on the right, and then opens up into a wider area with more trees and a clear view of the sky above. The camera pans slightly to the left, showing a paved plaza with benches and a central fountain, where water cascades down into a pool. The surrounding area is empty, emphasizing the tranquil atmosphere. The camera then shifts its focus back to the path ahead, continuing its smooth movement through the park, with the sun filtering through the leaves, creating a dappled light effect on the ground. The entire scene is captured from a first-person perspective, maintaining a consistent eye-level angle that immerses the viewer in the peaceful surroundings of East Maddon Park, London, United Kingdom, on a sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

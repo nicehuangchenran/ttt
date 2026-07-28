@@ -1,0 +1,20 @@
+{
+  "name": "case766",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a winding asphalt road flanked by dense vegetation under a cloudy sky at sunset. The camera steadily advances forward, capturing the road's gentle curves and the faint white dashed lines marking its center. As the movement continues, the surrounding trees and shrubs blur slightly due to the pace, while the dim light casts long shadows across the path. The camera angle remains level, providing a consistent view of the road ahead. Gradually, the road narrows and transitions into a dirt path, leading through a more open area where the horizon becomes visible. The sky displays a gradient of warm hues, transitioning from deep orange near the setting sun to darker shades higher up. The camera pans slightly to the right, revealing a serene beach with scattered rocks and sparse vegetation. The final frames show the path ending near the shoreline, with the tranquil ocean stretching out into the distance, completing the journey through this empty, natural landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

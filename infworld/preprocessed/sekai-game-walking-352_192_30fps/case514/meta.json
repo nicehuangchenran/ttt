@@ -1,0 +1,20 @@
+{
+  "name": "case514",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, dirt path winding through a dense forest on Shengshan Island, Zhoushan, China. The camera smoothly pans slightly from side to side, capturing the surrounding trees and underbrush that line the trail, their silhouettes stark against the dimly lit night sky. The cloudy, foggy weather casts a muted glow, creating an eerie ambiance with soft shadows and limited visibility. As the viewer progresses, the path curves gently, revealing more of the natural terrain, which includes patches of grass and scattered rocks. The camera angle remains at eye level, providing a consistent view of the path ahead and the occasional glimpses of the forest canopy above. The lighting is predominantly dark, with faint light filtering through the clouds, highlighting the textures of the foliage and the uneven ground. The scene remains empty, devoid of any human presence or wildlife, emphasizing the solitude and quietness of the nocturnal setting. The continuous forward motion suggests a deliberate exploration of this secluded outdoor environment, with no abrupt changes or sudden events disrupting the serene atmosphere.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

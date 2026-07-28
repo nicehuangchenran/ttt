@@ -1,0 +1,20 @@
+{
+  "name": "case684",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer's perspective moving forward along a cobblestone path, the uneven stones casting subtle shadows under the dim, cloudy night sky. The camera angle remains steady, focused on the ground as it captures the texture and arrangement of the stones, which are wet, reflecting faint light. As the movement continues, the path leads towards a small wooden structure partially obscured by dense foliage, its weathered planks and rustic appearance blending into the surrounding greenery. The camera then pans slightly upwards, revealing more of the overgrown vegetation and the rocky terrain that flanks the path. The environment is shrouded in darkness, with only faint ambient light illuminating the scene, creating an atmosphere of quiet solitude. The viewer's perspective shifts as they navigate through the narrow, winding trail, the camera tilting to follow the natural contours of the landscape. The path becomes increasingly rugged, with loose soil and scattered rocks underfoot, and the camera captures the intricate details of the terrain, from the rough surfaces of the boulders to the delicate leaves of the underbrush. The overall scene is devoid of human presence, emphasizing the serene and untouched nature of Shengshan Island, Zhoushan, China, at this late hour. The muted colors and soft lighting enhance the sense of isolation, as the viewer moves deeper into the natural setting, surrounded by the sounds of the night and the gentle rustling of the wind through the trees.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

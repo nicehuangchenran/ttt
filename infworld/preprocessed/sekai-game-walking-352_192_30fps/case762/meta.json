@@ -1,0 +1,20 @@
+{
+  "name": "case762",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer crossing a wooden bridge over a clear, turquoise river, moving steadily forward towards a dense forest. The camera angle remains at eye level, capturing the intricate details of the bridge's wooden planks and railings. As the person steps off the bridge onto a rocky path, the camera pans slightly to reveal the surrounding landscape of towering evergreen trees and distant mountains shrouded in mist. The ground is covered with a mix of white pebbles and patches of green moss, reflecting the cloudy, diffused light that filters through the canopy. The viewer continues along the winding path, navigating through the forest where sunlight occasionally breaks through the dense foliage, casting dappled shadows on the ground. The camera smoothly transitions from the riverbank into the heart of the forest, showcasing the lush undergrowth and the varying shades of green among the trees. As the journey progresses, the camera angle shifts subtly to highlight the serene beauty of Lago di Braies, with its calm waters and the majestic mountains in the background, all enveloped in a tranquil, foggy atmosphere. The entire scene remains devoid of any human presence, emphasizing the untouched natural environment and the peaceful solitude of the location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

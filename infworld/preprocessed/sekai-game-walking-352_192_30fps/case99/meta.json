@@ -1,0 +1,20 @@
+{
+  "name": "case99",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a smooth forward movement along a paved road flanked by dense greenery under a clear blue sky. The camera steadily advances, capturing the road's gentle curves and the lush trees casting dappled shadows on the asphalt. As the journey continues, the road narrows slightly, leading deeper into the forested area where sunlight filters through the leaves, creating a play of light and shadow. The camera maintains a consistent eye-level angle, providing an immersive perspective of the natural surroundings. Gradually, the path transitions from the shaded forest to an open sandy area, revealing a picturesque beach scene. The camera pans slightly to the right, showcasing the expansive white sand dotted with large reddish-brown rocks. The ocean stretches out into the horizon, its deep blue waters contrasting sharply with the bright sky. The camera then focuses on the rocky shoreline, highlighting the textures and colors of the stones against the pristine sand. The entire sequence captures the serene beauty of Castle Rock Beach, Meelup, Australia, on a sunny day, with no other individuals present, emphasizing the tranquil and untouched nature of the environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

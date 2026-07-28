@@ -1,0 +1,20 @@
+{
+  "name": "case960",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow dirt path winding through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves forward, capturing the misty atmosphere as it glides past tall trees with lush green foliage, their trunks occasionally illuminated by soft, diffused sunlight filtering through the cloudy sky. As the path ascends gently, the camera angle shifts slightly upward, revealing more of the foggy horizon and the faint outlines of distant mountains. The terrain becomes rocky and uneven, with patches of grass and small shrubs dotting the landscape. The camera continues its ascent, passing under a series of power lines supported by sturdy poles, which stand out against the muted tones of the foggy backdrop. The light remains consistent, casting a pale yellow hue over the scene, enhancing the serene yet isolated ambiance. The path curves subtly, leading the viewer's gaze toward an open hillside where the forest thins out, offering a broader view of the expansive, empty natural setting. The camera maintains a smooth, continuous motion throughout, emphasizing the quiet solitude of the environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

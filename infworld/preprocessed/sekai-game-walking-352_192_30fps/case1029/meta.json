@@ -1,0 +1,20 @@
+{
+  "name": "case1029",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a stationary view of a starry night sky framed by silhouetted tree branches, setting an immersive nocturnal scene. The camera then pans upwards, revealing more of the dark, cloud-dotted sky, before tilting down to show a narrow, rocky path flanked by dense forest. As the viewer progresses along this path, the camera moves forward steadily, capturing the intricate details of the surrounding trees and underbrush. The dim ambient light casts soft shadows, enhancing the texture of the foliage and the rough terrain. The camera continues its journey, occasionally panning slightly to the left and right, offering glimpses of the forest's depth and the subtle variations in the landscape. The scene remains consistently quiet and empty, with no signs of human presence or wildlife. The overall atmosphere is serene and isolated, with the natural elements dominating the visual narrative. The camera's smooth movement and the consistent focus on the path and surrounding vegetation create a continuous and cohesive exploration of the nighttime forest environment in Le Prarion, Chamonix-Mont-Blanc, France.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

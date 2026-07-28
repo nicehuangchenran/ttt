@@ -1,0 +1,20 @@
+{
+  "name": "case1086",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement through a dense, snowy forest in Lago di Braies, Braies, South Tyrol, Italy. The camera glides smoothly between tall, snow-laden trees, capturing the intricate details of their branches and the thick layer of snow covering the ground. As the viewer progresses, the camera pans slightly to the left, revealing more of the forest's depth and the interplay of light filtering through the bare branches. The environment is serene and untouched, with no signs of human presence, emphasizing the isolation and quietude of the scene. The camera continues its forward motion, occasionally tilting upward to showcase the towering trees reaching towards the overcast sky. The muted colors of the winter landscape dominate the view, with shades of white and gray creating a monochromatic palette. The subtle shift in the camera angle provides a dynamic perspective, enhancing the immersive experience of navigating through this tranquil, snow-covered woodland. The consistent forward movement maintains a sense of exploration, inviting the viewer deeper into the natural beauty of the forest.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case1604",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer navigates through a dense forest on Shengshan Island, Zhoushan, China, under a cloudy and foggy sky during the day. The journey begins with the camera moving steadily forward along a narrow path flanked by tall trees and lush undergrowth, capturing the intricate details of the foliage and the damp ground. As the camera progresses, it pans slightly to the right, revealing more of the forest's depth and complexity, with sunlight faintly filtering through the thick canopy above. The environment is serene and untouched, with no signs of human presence, emphasizing the natural beauty and isolation of the location. The camera then shifts its angle upward, showcasing the towering trees that dominate the landscape, their branches intertwining against the overcast sky. The viewer continues to move forward, approaching a clearing where the terrain becomes more rugged, with rocks and uneven ground becoming more prominent. The camera captures this transition smoothly, maintaining a steady pace as it explores the varied textures and contours of the landscape. The lighting remains soft and diffused throughout, casting gentle shadows and highlighting the rich greens and earthy tones of the forest. As the journey progresses, the camera occasionally tilts to provide a broader view of the surroundings, reinforcing the expansive and tranquil atmosphere of this outdoor natural setting. The final moments reveal a distant horizon shrouded in mist, adding a sense of mystery and depth to the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

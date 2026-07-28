@@ -1,0 +1,20 @@
+{
+  "name": "case902",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer's perspective moving forward along a rugged, rocky terrain at Castle Rock Beach in Meelup, Australia. The camera pans smoothly from left to right, capturing the expansive view of the deep blue ocean under a clear sunny sky. As the movement continues, the camera angle shifts slightly downward, revealing a sandy beach interspersed with large reddish-brown rocks. The surrounding landscape features dense green vegetation that contrasts sharply with the arid, rocky ground. The camera then moves closer to the ground, highlighting the texture and color variations of the rocks and sparse grasses. The viewer's path leads towards a small, secluded cove where the waves gently lap against the shore. Throughout the sequence, the lighting remains consistent, casting sharp shadows and emphasizing the vivid colors of the natural environment. The scene remains empty, with no signs of human presence, creating a serene and untouched atmosphere. The camera's steady, forward motion provides an immersive experience, allowing viewers to feel as if they are exploring the picturesque coastal landscape themselves.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

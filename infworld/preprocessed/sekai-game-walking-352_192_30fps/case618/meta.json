@@ -1,0 +1,20 @@
+{
+  "name": "case618",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved pathway lined with lush green trees and wooden benches, creating a serene atmosphere in East Maddon Park, London. The camera smoothly transitions from the initial straight path to a gentle curve, revealing more of the park's expansive layout. As the movement continues, the viewer approaches a set of wide stone steps leading upwards, flanked by railings and additional greenery. The ascent up the stairs is captured with a steady upward tilt of the camera, showcasing the surrounding foliage and the clear blue sky dotted with fluffy white clouds. Upon reaching the top, the path levels out into a broader walkway, bordered by more trees and benches, inviting further exploration. The camera maintains a consistent eye-level perspective throughout, emphasizing the tranquil and sunny day, with the warm light casting soft shadows across the pavement and grassy areas. The entire scene remains empty, enhancing the peaceful ambiance of this outdoor natural setting, with no sudden events or interruptions, allowing for an uninterrupted visual journey through the park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

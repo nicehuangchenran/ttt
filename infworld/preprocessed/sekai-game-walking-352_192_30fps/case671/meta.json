@@ -1,0 +1,20 @@
+{
+  "name": "case671",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey by moving forward along a narrow, dimly lit path in Le Prarion, Chamonix-Mont-Blanc, France, under a night sky. The camera steadily advances, capturing the subtle swaying of the surrounding trees and bushes as it navigates through the dense foliage. The path is barely illuminated, revealing only faint outlines of the terrain ahead, while the starry sky above provides a soft, natural light that casts gentle shadows across the landscape. As the camera continues its forward motion, the viewer's perspective shifts slightly, offering glimpses of the surrounding environment, including the silhouettes of distant trees and the occasional flicker of light from an unseen source. The camera angle remains relatively low, maintaining a close proximity to the ground and emphasizing the texture of the path beneath. The overall atmosphere is serene and quiet, with no other individuals present, and the cloudy, foggy weather adds a layer of mystery to the scene. The viewer's movement is smooth and deliberate, allowing for a detailed observation of the natural surroundings and the interplay between the darkness of the night and the faint glow of the stars above.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

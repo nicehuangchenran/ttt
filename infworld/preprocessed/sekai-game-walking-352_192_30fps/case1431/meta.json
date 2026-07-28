@@ -1,0 +1,20 @@
+{
+  "name": "case1431",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, overgrown path surrounded by dense vegetation under a cloudy sky at sunset. The camera smoothly advances, capturing the intricate details of the surrounding foliage and the uneven terrain, which is littered with rocks and patches of grass. As the journey continues, the path leads into a small village with rustic stone houses partially covered in ivy, their weathered walls and thatched roofs adding to the scene's aged charm. The camera pans slightly to the right, revealing more of the quaint village structures, emphasizing the quiet solitude of the area. The dim, golden light of the setting sun casts long shadows across the cobblestone streets, enhancing the serene atmosphere. The viewer then ascends a set of stone steps, the camera tilting upward to follow the ascent, before leveling out as it reaches the top. The path now winds through a more open area, bordered by lush greenery and leading towards a rocky cliffside. The camera captures the expansive view of a river flowing below, its surface reflecting the muted colors of the twilight sky. Throughout the sequence, the environment remains empty, with no signs of human presence, creating a tranquil and isolated ambiance. The camera maintains a steady pace, providing a continuous and immersive perspective of this picturesque outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case926",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a steady forward movement along a paved path in East Maddon Park, London, United Kingdom, under a bright sunny sky. The camera maintains a first-person perspective, smoothly gliding along the path lined with evenly spaced benches and lush green trees casting dappled shadows on the ground. As the viewer progresses, the path curves gently to the right, revealing more of the park's serene environment. The camera angle remains at eye level, providing a clear view of the surrounding foliage and the occasional lamppost that punctuates the landscape. The vibrant greens of the grass and leaves contrast beautifully with the soft beige tones of the path, enhanced by the natural daylight. The scene transitions from a straight path to a more winding route, leading the viewer deeper into the park. The camera then pans slightly to the left, showcasing a tranquil pond bordered by dense vegetation. The water reflects the sunlight, adding a shimmering effect to the scene. As the journey continues, the path opens up to a wider area with fewer trees, offering a broader view of the park's expansive layout. The entire sequence captures the peaceful ambiance of an empty park on a sunny day, with no other individuals present, emphasizing the solitude and natural beauty of the setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

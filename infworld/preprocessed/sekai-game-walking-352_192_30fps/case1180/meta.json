@@ -1,0 +1,20 @@
+{
+  "name": "case1180",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit path in East Maddon Park, London, under a heavy downpour at night. The camera steadily advances, capturing the raindrops falling vertically against the dark backdrop of the park's trees and lampposts. As the movement continues, the path curves gently, revealing more of the park's features, such as additional lampposts casting a soft, yellowish glow that contrasts with the deep blue and black hues of the night sky. The camera angle remains at eye level, providing a first-person perspective that immerses the viewer in the scene. The environment is entirely devoid of people, emphasizing the solitude and quietness of the setting. The path eventually leads to a crosswalk, where the camera briefly pauses before continuing onto a wider road lined with trees and faint streetlights in the distance. The overall atmosphere is serene yet somber, with the persistent rain adding a layer of texture and sound to the visual experience. The camera maintains its steady pace throughout, ensuring a smooth and continuous flow of the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

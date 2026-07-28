@@ -1,0 +1,20 @@
+{
+  "name": "case972",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a set of stone steps flanked by wooden railings, leading towards a traditional Japanese pavilion nestled amidst dense, foggy woods. The camera moves steadily forward, capturing the mist that envelops the area, creating an ethereal atmosphere. As the ascent continues, the path curves gently, revealing more of the forested landscape, with bare trees and moss-covered rocks adding texture to the scene. The camera then pans slightly to the right, showing a small, elevated platform supported by wooden beams, partially obscured by the fog. Moving further along, the viewer approaches a traditional torii gate, marking the entrance to a sacred space. The camera passes through the gate, entering a courtyard with several small buildings and a central pathway leading deeper into the forest. The lighting remains soft and diffused due to the overcast sky, casting a uniform gray hue over the entire scene. The camera continues its journey, passing through a dimly lit corridor with wooden walls and a small window at the end, offering a glimpse of the foggy forest beyond. Emerging from the corridor, the viewer finds themselves on another set of stone steps, leading upwards into the dense, misty woods, where the path eventually disappears into the fog, leaving the destination unknown. Throughout the sequence, the environment remains empty and serene, with no signs of human presence, enhancing the sense of solitude and tranquility.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

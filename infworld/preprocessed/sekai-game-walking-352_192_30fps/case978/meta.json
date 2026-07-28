@@ -1,0 +1,20 @@
+{
+  "name": "case978",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along Castle Rock Beach in Meelup, Australia, under a cloudy, foggy night sky. The camera moves steadily forward, capturing the sandy terrain interspersed with patches of grass and scattered rocks. As the viewer progresses, the camera angle shifts slightly to reveal more of the beach's expanse, bordered by dense vegetation on one side and the calm sea on the other. The dim lighting casts long shadows, creating a serene yet mysterious atmosphere. The camera continues its journey, panning to the right to showcase the rugged cliffs that loom in the distance, their silhouettes barely visible against the dark horizon. The movement is smooth, maintaining a consistent pace as it navigates through the natural landscape. The surrounding environment remains empty, emphasizing the solitude of the scene. The camera then focuses on the interplay between the sand and the sparse grass, highlighting the textures and contours of the ground. As the walk continues, the camera occasionally tilts upward, capturing the vastness of the night sky, which is partially obscured by clouds but still allows glimpses of faint starlight. The overall ambiance is tranquil, with the muted colors and soft lighting enhancing the quiet beauty of this secluded beach at night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

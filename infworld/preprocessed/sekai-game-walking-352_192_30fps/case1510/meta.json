@@ -1,0 +1,20 @@
+{
+  "name": "case1510",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement through a dense forest on Shengshan Island, Zhoushan, China, under a cloudy and foggy sky during the day. The camera smoothly glides along a narrow, winding path covered with fallen leaves and patches of green moss, flanked by tall trees with slender trunks and sparse foliage. As the viewer progresses, the surrounding environment gradually darkens due to the thickening fog, creating an eerie atmosphere. The camera angle remains at eye level, providing a consistent view of the path ahead, which occasionally curves and dips slightly, revealing more of the forest's intricate details. The muted colors of the scene\u2014shades of gray, brown, and green\u2014are accentuated by the diffused light filtering through the mist, casting soft shadows and enhancing the sense of depth. The forest appears empty, with no signs of wildlife or human presence, emphasizing the solitude and quietness of the setting. The camera continues its steady advance, capturing the subtle changes in the terrain and the increasing density of the fog, which eventually envelops the entire scene, obscuring distant objects and adding a layer of mystery to the tranquil yet somber woodland landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

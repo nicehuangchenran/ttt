@@ -1,0 +1,20 @@
+{
+  "name": "case924",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow, steady movement through a dense, fog-laden forest at night in Yamadera, Yamagata Prefecture, Japan. The camera advances cautiously along a narrow, moss-covered stone path bordered by leafless trees and thick underbrush, their silhouettes barely discernible in the dim, cloudy light. As the viewer progresses, the path gently curves, revealing a set of weathered stone steps flanked by a rusty metal railing that guides the ascent. The camera angle shifts slightly upward, capturing the misty atmosphere that envelops the scene, muting colors to shades of gray and muted green. The surrounding environment remains eerily quiet and empty, with no signs of human presence. The path continues to wind through the forest, passing by more steps and railings, each step illuminated faintly by the ambient light filtering through the fog. The camera maintains a consistent forward motion, occasionally panning slightly to the left or right to emphasize the desolate, natural surroundings. The overall ambiance is one of solitude and mystery, enhanced by the interplay of shadows and the soft glow of the night sky.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

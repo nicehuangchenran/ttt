@@ -1,0 +1,20 @@
+{
+  "name": "case1436",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey by moving forward along a dimly lit path in East Maddon Park, London, under a heavy downpour at night. The camera steadily advances, capturing the rhythmic motion of footsteps on the wet pavement, flanked by tall lampposts casting a soft, yellowish glow that pierces through the dense fog. As the perspective shifts slightly to the left, the surrounding trees loom large, their dark silhouettes barely discernible against the murky backdrop. The camera continues its forward trajectory, revealing more of the park's intricate layout, with winding pathways and scattered benches shrouded in mist. The ambient light from the lampposts creates a haunting interplay of shadows and highlights, enhancing the eerie atmosphere. The camera angle occasionally tilts upward, showcasing the raindrops cascading from the sky, adding a dynamic element to the scene. The viewer's movement remains uninterrupted, offering a continuous exploration of this desolate urban landscape, where the absence of people amplifies the sense of solitude. The overall ambiance is characterized by muted tones and a pervasive sense of quiet, with the persistent rainfall and fog enveloping the entire setting in a serene yet somber mood.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

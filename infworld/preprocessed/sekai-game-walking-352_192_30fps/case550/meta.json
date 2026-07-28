@@ -1,0 +1,20 @@
+{
+  "name": "case550",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow, rocky path in Le Prarion, Chamonix-Mont-Blanc, France, during a snowy sunset. The camera moves steadily forward, capturing the rugged terrain underfoot, which is a mix of loose stones and patches of snow. As the viewer progresses, the surrounding landscape unfolds, revealing majestic snow-capped mountains in the distance, their peaks bathed in the soft, warm hues of the setting sun. The camera angle remains at eye level, providing an immersive experience of the walk. On either side of the path, dense clusters of evergreen trees stand tall, their branches dusted with snow, while some deciduous trees display vibrant autumnal colors, adding contrast to the predominantly white and green scenery. Overhead, a network of ski lift cables stretches across the sky, hinting at nearby recreational facilities. The lighting gradually shifts as the sun descends, casting long shadows and enriching the colors of the environment. The scene remains empty of people, emphasizing the serene and untouched nature of the location. The camera continues its steady advance, offering a continuous and unobstructed view of this breathtaking alpine setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "sunset"
+}

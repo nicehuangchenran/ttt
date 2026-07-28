@@ -1,0 +1,20 @@
+{
+  "name": "case585",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit road at night under a steady rain, the wet pavement reflecting the sparse streetlights. The camera advances steadily, capturing the rhythmic motion of the raindrops as they fall, creating a serene yet somber atmosphere. As the path progresses, the surroundings transition from an outdoor setting into an ancient indoor space characterized by grand arches and intricate ceiling designs. The camera pans slightly upward, revealing the ornate patterns and the soft glow that filters through the arches, casting long shadows across the red-tiled floor. The movement continues deeper into this vast hall, where the camera angle shifts subtly to emphasize the scale and symmetry of the architecture. The scene then transitions back outdoors, where the viewer ascends a set of stone steps leading into a park. The camera captures the gentle slope of the steps and the surrounding trees, their silhouettes faintly illuminated by scattered lampposts. The rain persists, adding a reflective sheen to the cobblestone paths as the viewer moves forward, the camera maintaining a steady pace and angle, immersing the viewer in the quiet, rainy night of East Maddon Park. The overall ambiance is one of solitude and tranquility, with the muted colors and soft lighting enhancing the sense of an empty, timeless space.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "indoor-ancient",
+  "crowdDensity": "empty",
+  "weather": "unknown",
+  "timeOfDay": "unknown"
+}

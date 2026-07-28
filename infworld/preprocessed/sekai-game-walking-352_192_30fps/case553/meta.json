@@ -1,0 +1,20 @@
+{
+  "name": "case553",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path through a lush, mountainous landscape. The camera smoothly advances, capturing the rugged terrain and dense greenery that surrounds the trail. As the journey progresses, the path winds gently uphill, revealing tall evergreen trees that line both sides, their dark green needles contrasting sharply against the cloudy sky above. The camera angle remains steady, offering a first-person perspective that immerses the viewer in the natural setting. The overcast weather casts a soft, diffused light across the scene, enhancing the rich greens of the grass and the earthy tones of the rocks. In the distance, the faint outline of a ski lift structure becomes visible, its cables stretching across the sky, adding a subtle human element to the otherwise untouched wilderness. The path continues to meander through the forest, with occasional patches of wildflowers dotting the landscape, adding splashes of color to the predominantly green and brown palette. The entire sequence maintains a serene and tranquil atmosphere, with no other people or animals in sight, emphasizing the solitude and beauty of this remote outdoor location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

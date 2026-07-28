@@ -1,0 +1,20 @@
+{
+  "name": "case270",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved path bordered by lush greenery and ornate metal railings, capturing the serene ambiance of East Maddon Park in London under sunny daylight. As the camera progresses, it pans slightly to reveal a tranquil pond reflecting the clear sky, surrounded by dense trees that cast dappled shadows on the ground. The path curves gently, leading the viewer through a series of well-maintained gardens and open spaces, each framed by neatly trimmed hedges and vibrant foliage. The camera continues its steady advance, transitioning from the shaded areas into sunlit sections where the warm light enhances the vivid greens and earthy tones of the park. The scene remains empty, emphasizing the peaceful solitude of the space. The camera then shifts focus to a wide, cobblestone plaza adorned with large, mature trees and benches, offering a panoramic view of the park's expansive layout. The movement is smooth, maintaining a consistent eye-level perspective that allows for an immersive experience of the park's intricate design and natural beauty. The bright sunlight filters through the leaves, creating a dynamic interplay of light and shadow across the entire scene, enhancing the visual richness of this outdoor urban setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

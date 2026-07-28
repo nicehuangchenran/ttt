@@ -1,0 +1,20 @@
+{
+  "name": "case656",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along Castle Rock Beach in Meelup, Australia, under a cloudy, foggy night sky. The camera pans slowly from left to right, capturing the gentle waves lapping against the shore, their white foam contrasting subtly with the dark sand and scattered rocks. As the movement continues, the camera angle shifts slightly downward, revealing more of the sandy beach interspersed with large, smooth stones that glisten faintly in the dim light. The surrounding environment is shrouded in darkness, but the faint glow of the moonlight filters through the clouds, casting soft shadows over the landscape. Sparse vegetation, including low-lying shrubs and trees, lines the edge of the beach, their silhouettes barely discernible against the night sky. The camera then moves further inland, transitioning from the shoreline to a drier area with patches of grass and small bushes. The lighting remains consistently low throughout, emphasizing the serene and isolated atmosphere of the empty beach at night. The overall scene maintains a tranquil and undisturbed ambiance, with no signs of human presence or activity, allowing the natural elements to dominate the visual narrative.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

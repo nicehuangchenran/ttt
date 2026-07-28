@@ -1,0 +1,20 @@
+{
+  "name": "case433",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, rocky trail winding through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera smoothly glides over uneven terrain, capturing the intricate details of the path's surface, which is scattered with small stones and patches of dirt. As the viewer progresses, the surrounding trees, predominantly tall and slender conifers, create a canopy overhead, filtering the diffused light from the cloudy sky above. The camera angle remains low, emphasizing the rugged texture of the ground and the occasional large rocks that protrude from the earth. The environment is serene and untouched, with no signs of human presence, enhancing the sense of solitude. The muted colors of the forest floor, ranging from dark browns to dull greens, contrast subtly with the brighter, yet soft, light filtering through the trees. The camera continues its steady advance, navigating slight inclines and declines, providing an immersive experience of a tranquil hike through this natural setting. The atmosphere remains consistently calm, with the only sounds being the faint rustling of leaves and the subtle crunch of footsteps on the trail.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

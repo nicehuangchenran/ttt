@@ -1,0 +1,20 @@
+{
+  "name": "case245",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved path in East Maddon Park, London, United Kingdom, under a cloudy sky. The camera smoothly transitions from a small, circular water feature surrounded by trees and benches to a wider pathway lined with lush greenery. As the movement continues, the path curves gently to the right, revealing more of the park's serene landscape. The camera angle remains at eye level, providing a clear view of the surroundings, which include various trees, shrubs, and occasional lampposts. The lighting is soft and diffused due to the overcast weather, casting gentle shadows and giving the scene a calm, muted color palette. The path is empty, emphasizing the tranquility of the setting. The camera then pans slightly to the left, showing a set of stairs leading up to an elevated area, before continuing straight ahead into denser foliage. The movement is steady and continuous, capturing the natural beauty and peaceful atmosphere of the park during the daytime.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

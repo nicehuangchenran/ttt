@@ -1,0 +1,20 @@
+{
+  "name": "case1246",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow railway track embedded in a bed of gravel, flanked by lush greenery and tall pine trees under a bright, sunny sky. As the camera progresses, it smoothly transitions from the railway onto a dirt path that meanders through a dense forest. The movement is steady, with the camera maintaining a first-person perspective, capturing the rich textures of the forest floor covered in fallen leaves and patches of grass. The surrounding trees, varying in shades of green, create a natural canopy overhead, filtering the sunlight into dappled patterns on the ground. The camera continues its journey, navigating slight curves and inclines along the path, revealing more of the serene woodland environment. The scene shifts subtly as the path opens up into a clearing, where the terrain becomes slightly more open, with fewer trees and more visible patches of grass and wildflowers. The camera angle remains consistent, providing a continuous view of the landscape ahead, emphasizing the tranquil and untouched beauty of Le Prarion, Chamonix-Mont-Blanc, France, during a clear day. The lighting remains bright and natural throughout, enhancing the vivid colors of the greenery and the earthy tones of the path. No other individuals or objects disrupt the peaceful solitude of this outdoor-natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

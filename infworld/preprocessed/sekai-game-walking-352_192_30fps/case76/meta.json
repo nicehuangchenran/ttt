@@ -1,0 +1,20 @@
+{
+  "name": "case76",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective of someone walking along a snowy path near Lago di Braies in Braies, South Tyrol, Italy. The individual moves steadily forward, their steps leaving faint imprints in the soft snow. As they progress, the camera captures the surrounding landscape, revealing a dense forest of tall evergreen trees blanketed in white, their branches heavy with snow. The path winds gently through the terrain, bordered by large rocks and patches of exposed earth. In the distance, majestic snow-capped mountains rise against the pale sky, their peaks shrouded in mist. The camera occasionally pans slightly to the left and right, offering glimpses of the serene lake's deep blue waters, which contrast sharply with the white surroundings. The lighting is diffused, typical of a snowy day, casting a soft glow over the entire scene. The environment remains quiet and empty, with no other people in sight, emphasizing the solitude and tranquility of the setting. As the person continues their journey, the camera maintains a steady focus on the path ahead, capturing the subtle shifts in elevation and texture of the ground beneath their feet. The overall atmosphere is peaceful and immersive, inviting viewers into the pristine winter wonderland of the Italian Alps.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

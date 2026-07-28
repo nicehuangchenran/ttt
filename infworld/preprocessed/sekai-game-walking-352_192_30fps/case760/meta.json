@@ -1,0 +1,20 @@
+{
+  "name": "case760",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a series of vibrant red torii gates at Fushimi Inari Taisha in Kyoto, Japan. The camera smoothly glides along a stone pathway, capturing the intricate details of each gate as they line both sides of the path. The sunlight filters through the dense green foliage overhead, casting dynamic shadows that dance across the red pillars and the ground. As the camera continues its steady advance, the perspective shifts slightly, revealing more of the surrounding forested area, emphasizing the serene and untouched natural environment. The scene transitions to an open area where a traditional Japanese building with a tiled roof comes into view, situated amidst neatly trimmed hedges and a well-maintained lawn. The camera pans to show a modern vending machine placed incongruously near the ancient architecture, highlighting the blend of tradition and contemporary life. The video concludes with the camera focusing on another set of torii gates, this time bathed in golden light from the setting sun, creating a warm and inviting atmosphere. Throughout the sequence, the camera maintains a consistent eye-level angle, ensuring a clear and immersive experience of the tranquil and picturesque setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

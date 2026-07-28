@@ -1,0 +1,20 @@
+{
+  "name": "case404",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a set of stone steps leading up a hillside towards a traditional wooden structure nestled among bare trees and patches of snow. The camera moves steadily forward, capturing the texture of the stone steps and the surrounding moss-covered rocks. As the ascent continues, the camera pans slightly to reveal more of the forested area, with tall, leafless trees casting long shadows across the snowy ground. Upon reaching the top, the viewer enters a wooden pavilion, offering a brief respite from the outdoor elements. The camera then transitions to a descending path, winding through the dense forest. The path is uneven, with large rocks and roots partially covered by snow, requiring careful navigation. The camera angle shifts subtly to emphasize the rugged terrain and the natural beauty of the winter landscape. The light is soft and diffused, creating a serene atmosphere as the viewer continues along the trail, surrounded by the quiet stillness of the snowy woods. The journey progresses deeper into the forest, with the camera capturing the intricate details of the trees and the interplay of light and shadow on the snowy ground. The scene remains empty and tranquil, with no signs of human presence, enhancing the sense of solitude and immersion in nature.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

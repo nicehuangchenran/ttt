@@ -1,0 +1,20 @@
+{
+  "name": "case180",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path flanked by dense vegetation under a dimly lit sky, indicating the onset of sunset. As the camera progresses, it captures the subtle swaying of branches and leaves, suggesting a gentle breeze. The path meanders through a natural landscape, with the camera occasionally panning slightly to reveal more of the surrounding greenery and rocky outcrops. The sky transitions from a deep twilight blue to warmer hues of orange and pink near the horizon, casting long shadows across the terrain. The camera continues its steady advance, revealing a broader view of the area, including scattered trees and shrubs that dot the landscape. The terrain becomes slightly more rugged, with patches of exposed soil and rocks becoming more prominent. The camera angle shifts subtly, offering glimpses of distant hills and the silhouettes of larger rock formations against the fading light. The overall atmosphere remains serene and untouched, with no signs of human presence, emphasizing the solitude and natural beauty of Castle Rock Beach at sunset. The final moments of the video show the camera approaching a cluster of rocks, where the last rays of sunlight create a striking contrast between light and shadow, enhancing the tranquil and picturesque setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

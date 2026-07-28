@@ -1,0 +1,20 @@
+{
+  "name": "case971",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a snow-covered path beside a rustic building adorned with colorful prayer flags fluttering in the wind. The camera pans slightly to reveal a vast expanse of snowy mountains under a clear blue sky, emphasizing the serene and untouched landscape. As the movement continues, the perspective shifts to a rocky, misty trail where the ground is partially covered with patches of snow and sparse vegetation. The camera angle lowers, focusing on the uneven terrain as the viewer navigates through the foggy atmosphere, which gradually thickens, obscuring distant views. The surrounding trees appear bare and ghostly, their branches swaying gently in the cold air. The lighting becomes dimmer as the fog intensifies, casting a muted palette over the scene. The viewer's journey progresses along this narrow, winding path, with the camera occasionally tilting to capture the steep inclines and declines of the rugged terrain. The environment remains quiet and devoid of any human presence, enhancing the sense of isolation amidst the natural beauty of the Mardi Himal Trail.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

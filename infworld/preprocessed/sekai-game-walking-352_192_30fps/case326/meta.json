@@ -1,0 +1,20 @@
+{
+  "name": "case326",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a narrow, rocky path surrounded by dense vegetation under a cloudy night sky. The camera steadily advances forward, capturing the uneven terrain and scattered foliage illuminated by a faint light source, possibly a flashlight. As the viewer progresses, the path curves gently to the right, revealing more of the surrounding natural environment, which includes various shrubs and trees silhouetted against the dimly lit sky. The camera angle remains at eye level, providing an immersive experience of navigating through the dark, outdoor setting. The atmosphere is quiet and isolated, with no other individuals present. The path continues to wind through the landscape, leading towards a small wooden structure partially obscured by the dense greenery. The structure appears weathered, with a sloped roof and a few windows, blending into the natural surroundings. The camera then pans slightly to the left, showing a fenced area adjacent to the building, before continuing its forward movement. The lighting remains consistent throughout, casting long shadows and highlighting the textures of the rocks and plants. The overall scene maintains a sense of solitude and exploration within the natural environment of Shengshan Island, Zhoushan, China, during a foggy night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

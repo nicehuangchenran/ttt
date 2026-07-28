@@ -1,0 +1,20 @@
+{
+  "name": "case1025",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer approaching a traditional wooden torii gate, marking the entrance to a serene temple complex nestled within a snowy forest. The camera moves steadily forward, passing through the gate and revealing a paved courtyard surrounded by wooden structures with tiled roofs, their golden accents gleaming under the soft daylight. The camera pans slightly to the right, showcasing a small, fenced area with a stone lantern and a pathway leading into the dense woods. As the viewer progresses along the path, the camera angle shifts downward, capturing the snow-dusted ground and the intricate details of the surrounding trees, their branches bare against the winter sky. The path winds gently uphill, with the camera tilting upward to reveal more of the forest canopy and the occasional glimpse of distant temple buildings partially obscured by the trees. The lighting remains consistent, with diffused sunlight filtering through the branches, casting subtle shadows on the snow-covered terrain. The scene transitions smoothly as the viewer continues deeper into the forest, the camera maintaining a steady pace and providing a continuous, immersive view of the tranquil, snow-laden landscape. The environment remains empty, emphasizing the peaceful solitude of the location, with no signs of human presence apart from the well-maintained paths and structures. The overall atmosphere is one of quiet contemplation, with the natural beauty of Yamadera's winter setting captured in vivid detail.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

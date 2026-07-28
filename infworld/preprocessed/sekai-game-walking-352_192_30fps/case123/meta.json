@@ -1,0 +1,20 @@
+{
+  "name": "case123",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a narrow, rocky path bordered by a simple wooden fence on the left side. The camera advances steadily forward, capturing the uneven terrain and dense foliage that flanks the path. As the movement continues, the surrounding environment reveals a mix of shrubs and trees, their silhouettes faintly illuminated by the dim, ambient light of a cloudy night. The camera angle remains at eye level, providing a first-person perspective that immerses the viewer in the scene. Gradually, the path leads to an open area where a rustic stone building comes into view on the right, its weathered walls and sloped roof blending seamlessly with the natural surroundings. The camera then shifts focus downward, showcasing the cobblestone ground beneath, composed of large, irregular stones arranged in a haphazard pattern. The muted colors of the stones and the surrounding vegetation create a serene, almost monochromatic palette, enhancing the tranquil and isolated atmosphere of Shengshan Island, Zhoushan, China, under the cover of a foggy night. Throughout the sequence, there are no other characters or movements, emphasizing the solitude and quietude of the setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

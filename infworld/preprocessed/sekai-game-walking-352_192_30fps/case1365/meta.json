@@ -1,0 +1,20 @@
+{
+  "name": "case1365",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey by moving forward through a dense forest in East Maddon Park, London, United Kingdom, under a bright sunny sky. The camera smoothly glides between tall trees with lush green foliage, capturing the intricate details of the leaves and branches from various angles. As the movement progresses, the sunlight filters through the canopy, casting dynamic shadows on the forest floor covered with patches of grass and scattered debris. The camera pans slightly to the right, revealing a rustic wooden structure partially hidden among the trees, its weathered planks blending seamlessly with the natural surroundings. The viewer continues along a narrow dirt path that winds through the park, with the camera occasionally tilting upward to showcase the expansive blue sky dotted with fluffy white clouds. The serene environment remains empty, emphasizing the tranquil solitude of the outdoor setting. The vibrant greens of the trees contrast beautifully with the earthy tones of the path and the structure, creating a harmonious color palette that enhances the visual experience. The camera's steady motion and subtle shifts in angle provide a comprehensive view of the park's natural beauty, capturing every detail of this peaceful daytime scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

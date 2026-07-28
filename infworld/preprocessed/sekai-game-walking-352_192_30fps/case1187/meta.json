@@ -1,0 +1,20 @@
+{
+  "name": "case1187",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving through a dense forest at night under cloudy, foggy conditions. The camera slowly pans upward, revealing towering trees silhouetted against a dimly lit sky, their branches swaying gently in the breeze. As the viewer progresses, the path leads to a rocky outcrop, where the camera tilts slightly to showcase the rugged terrain and sparse vegetation clinging to the slopes. The scene transitions to an expansive view of a mountainous landscape, with distant peaks shrouded in mist and faint outlines of valleys below. The camera continues to pan across this breathtaking vista, capturing the subtle interplay of shadows and muted colors under the night sky. Moving forward, the perspective shifts back into the forest, navigating through clusters of tall pine trees and over uneven ground. The camera angle remains steady, focusing on the natural surroundings, while the ambient light casts long shadows and highlights the texture of the rocks and foliage. The journey continues along a narrow trail, with the camera occasionally adjusting to maintain balance and direction, providing an immersive experience of exploring Le Prarion, Chamonix-Mont-Blanc, France, in the serene and isolated quiet of the night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

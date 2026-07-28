@@ -1,0 +1,20 @@
+{
+  "name": "case782",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow, rocky path flanked by dense vegetation under a cloudy, foggy night sky. The camera moves steadily forward, revealing a serene beach with gentle waves lapping against the shore. As the viewer progresses, the camera pans slightly to the right, showcasing the expansive ocean stretching into the horizon, its surface reflecting the muted light from the overcast sky. The path continues, leading through a forested area where the ground is covered with dry leaves and scattered rocks. The camera angle shifts subtly, capturing the dense foliage and the occasional glimpse of the dark, cloudy sky above. Suddenly, the scene transitions to a more intense setting as the camera captures a raging wildfire in the distance. Flames and smoke rise dramatically, illuminating the surrounding trees and casting an eerie glow on the path ahead. The camera continues to move forward, providing a closer view of the fire's destructive force as it consumes the vegetation. The lighting intensifies, highlighting the vivid orange and yellow hues of the flames against the dark backdrop of the night. The overall atmosphere remains tense and foreboding, with the sound of crackling fire and rustling leaves adding to the sense of urgency and danger.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

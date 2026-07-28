@@ -1,0 +1,20 @@
+{
+  "name": "case292",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rocky shoreline beside Lago di Braies, capturing the serene beauty of the lake under a cloudy sky. The camera pans smoothly from left to right, revealing the tranquil water reflecting the surrounding mountains and dense forest. As the movement continues, the perspective shifts slightly upward, showcasing a small wooden cabin nestled among the trees on the far side of the lake. The camera then transitions into the forest, where the path becomes narrower and more defined, winding through tall pine trees that filter the diffused daylight. The viewer's journey progresses along this forest trail, passing by a rustic wooden bridge that spans a small stream. The camera angle remains steady, maintaining a first-person view that immerses the audience in the natural surroundings. The muted colors of the overcast day enhance the peaceful ambiance, with the green of the trees and the blue of the lake creating a harmonious palette. The scene remains empty of people, emphasizing the solitude and untouched nature of the location. As the video concludes, the viewer approaches another section of the forest, hinting at further exploration ahead.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

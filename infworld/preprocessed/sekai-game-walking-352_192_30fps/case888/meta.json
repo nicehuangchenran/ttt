@@ -1,0 +1,20 @@
+{
+  "name": "case888",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone path flanked by dense vegetation under a cloudy sky. The camera advances steadily, revealing an old stone archway that frames the path ahead, leading into a more open area with scattered trees and shrubs. As the movement continues, the path curves gently to the right, bordered by low stone walls and lush greenery. The camera angle remains at eye level, providing a clear view of the textured stone ground and the surrounding natural environment. The lighting is soft and diffused due to the overcast weather, casting gentle shadows and giving the scene a muted color palette dominated by greens and grays. The path gradually ascends, offering glimpses of the distant horizon through breaks in the foliage. The viewer's perspective shifts slightly as they navigate the terrain, maintaining a consistent pace and direction. The environment remains empty and serene, with no signs of human presence, enhancing the sense of solitude and immersion in the natural landscape of Shengshan Island, Zhoushan, China. The journey continues along the winding path, with the camera capturing the intricate details of the stone structures and the vibrant plant life, creating a tranquil and immersive outdoor experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

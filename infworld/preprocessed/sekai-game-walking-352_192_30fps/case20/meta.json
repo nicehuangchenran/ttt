@@ -1,0 +1,20 @@
+{
+  "name": "case20",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a sandy path bordered by lush greenery and scattered trees under a clear blue sky. As the camera advances, it captures the vibrant natural surroundings, with sunlight filtering through the leaves, casting dynamic shadows on the ground. The path leads towards Castle Rock Beach in Meelup, Australia, where the scene transitions from dense vegetation to an expansive view of the beach. The camera pans slightly to reveal white sand interspersed with patches of grass and large reddish-brown rocks near the shoreline. The ocean stretches out into the horizon, its deep blue waters contrasting sharply with the bright sky. The camera continues to move forward, offering a closer look at the rocky formations and the gentle waves lapping against the shore. As the viewer approaches the beach, the camera angle shifts to provide a broader perspective of the serene coastal landscape, emphasizing the untouched beauty of the area. The scene remains empty, with no signs of human presence, enhancing the sense of tranquility and isolation. The lighting remains consistent throughout, with the sun high in the sky, illuminating every detail of the natural environment. Finally, the camera moves deeper into the forested area, capturing the dense canopy of trees and the winding dirt path that cuts through the undergrowth, leading further into the wilderness. The entire sequence showcases the diverse and pristine nature of Castle Rock Beach, from its sandy shores to its lush forests.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

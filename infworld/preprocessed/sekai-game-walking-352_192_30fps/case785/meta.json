@@ -1,0 +1,20 @@
+{
+  "name": "case785",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The camera begins its journey across the rugged terrain of M\u00fdrdalssandur, Southern Region, Iceland, capturing the desolate landscape under a cloudy, foggy sky during sunset. The viewer's perspective moves steadily forward, revealing a series of large, jagged rocks scattered across the uneven ground. As the camera advances, it pans slightly to the left, showcasing more of the rocky formations and the sparse patches of moss clinging to their surfaces. The background features distant mountains shrouded in mist, adding depth to the scene. The camera continues its forward motion, maintaining a low angle that emphasizes the rough texture of the terrain. The lighting is dim, with an orange hue cast by the setting sun, creating long shadows and highlighting the contours of the rocks. The environment remains empty, devoid of any human presence or wildlife, enhancing the sense of isolation. The camera occasionally shifts its focus between the foreground rocks and the expansive horizon, capturing the vastness of the natural setting. The overall atmosphere is serene yet somber, with the muted colors and overcast conditions contributing to a tranquil yet melancholic mood.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case1102",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer approaching a traditional red torii gate at Fushimi Inari Taisha in Kyoto, Japan, under a rainy night sky. The camera moves steadily forward, capturing the wet stone steps leading up to the gate, flanked by dense foliage and misty air that diffuses the dim ambient light. As the viewer passes through the torii, the path continues into a narrow alleyway lined with wooden structures and more torii gates, their vibrant red color standing out against the dark surroundings. The camera pans slightly to the right, revealing a small fenced area with a lantern casting a warm glow, before turning left towards a traditional Japanese building with glowing windows, partially obscured by raindrops on the camera lens. The scene transitions to a forested path, where the camera navigates through thick underbrush and towering trees, the ground covered in fallen leaves and the air heavy with the scent of rain. The viewer then approaches another torii gate, this time situated at the edge of a wooden fence overlooking a distant landscape shrouded in fog. The camera continues along the path, passing through a series of torii gates, each one illuminated by soft lanterns, creating a serene and mystical atmosphere. The final segment shows the viewer emerging from the forest onto an open area, where the camera captures the vast expanse of the night sky, dotted with rain clouds, and the faint outline of distant mountains, all bathed in the gentle light of the moon. Throughout the video, the camera maintains a smooth, first-person perspective, emphasizing the quiet solitude and natural beauty of the location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

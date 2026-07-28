@@ -1,0 +1,20 @@
+{
+  "name": "case394",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, gravel-covered path bordered by wooden posts and wire fencing, set amidst a dense fog that obscures distant views. The camera moves smoothly, capturing the texture of the ground and the surrounding vegetation, which includes patches of grass and scattered white flowers. As the path curves gently, the camera pans slightly to the right, revealing more of the foggy forest environment, with trees partially shrouded in mist. The light is diffused, creating a soft, muted palette dominated by earthy tones and shades of gray. The camera continues its advance, passing by a larger tree on the left, its trunk thick and covered in moss, while the path ahead remains faintly visible through the fog. The atmosphere is quiet and still, with no other characters or movement in sight. The camera angle occasionally shifts upward, capturing the interplay of light filtering through the trees, casting subtle shadows on the ground. The journey progresses along the winding path, with the fog persistently enveloping the surroundings, maintaining an air of mystery and solitude throughout the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

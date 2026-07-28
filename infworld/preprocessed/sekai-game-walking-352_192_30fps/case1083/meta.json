@@ -1,0 +1,20 @@
+{
+  "name": "case1083",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a narrow, winding road surrounded by dense foliage under a cloudy night sky. The camera steadily advances, capturing the dark asphalt path flanked by lush greenery on both sides, with occasional patches of dry grass and earth visible at the edges. As the movement continues, the road curves gently, revealing a split in the path marked by two directional signs, which the viewer approaches and passes. The camera then navigates through another curve, maintaining a forward trajectory that reveals more of the road stretching ahead, bordered by white lines and intermittent reflective markers. The surrounding environment remains consistently dimly lit, with the overcast conditions casting a muted glow that barely illuminates the scene. The camera angle remains steady throughout, focusing on the road's surface and the immediate surroundings, emphasizing the solitude and quietness of the empty outdoor setting. The journey progresses smoothly, with no abrupt changes or interruptions, offering a continuous view of the serene, natural landscape enveloped in the stillness of the night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

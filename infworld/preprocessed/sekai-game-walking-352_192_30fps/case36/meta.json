@@ -1,0 +1,20 @@
+{
+  "name": "case36",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a sweeping view of a rugged, rocky landscape under a vast, cloudy sky at sunset. The camera pans slowly from left to right, capturing the undulating terrain of M\u00fdrdalssandur in the Southern Region of Iceland. As the camera moves, it reveals large, jagged rocks scattered across the barren ground, their dark silhouettes contrasting sharply against the warm hues of the setting sun. The sky is a dramatic canvas of orange and yellow tones, with thick clouds drifting lazily across the horizon. The camera continues its steady pan, showcasing the expansive, empty expanse of the natural environment, devoid of any human presence. The angle shifts slightly, offering a closer look at the rough texture of the rocks and the sparse vegetation clinging to the slopes. The lighting intensifies as the sun dips lower, casting long shadows and bathing the scene in a golden glow. The overall atmosphere is serene and untouched, with the camera's smooth movement enhancing the sense of isolation and natural beauty. The video concludes with a final, lingering shot of the distant mountains, their outlines softened by the fading light, completing the tranquil and immersive experience of this outdoor-natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

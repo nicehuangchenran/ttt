@@ -1,0 +1,20 @@
+{
+  "name": "case1160",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a stone-paved path that leads towards an expansive view of the sea under a cloudy night sky. The camera smoothly transitions from this open vista to a narrow, winding pathway bordered by dense vegetation and ancient stone walls, suggesting a historical or rural setting. As the movement continues, the path becomes increasingly overgrown, with the camera tilting slightly to capture the uneven terrain and the encroaching foliage. The surrounding environment is dimly lit, with the muted colors of the night blending the earthy tones of the path and the dark silhouettes of trees. The camera then shifts focus to a more natural trail, where the ground is covered with dirt and scattered leaves, indicating less human intervention. The path meanders through a forested area, with the camera panning gently to reveal the dense canopy above and the occasional glimpse of a rustic building partially hidden by the trees. The overall atmosphere remains quiet and solitary, with no signs of other people, emphasizing the serene and isolated nature of Shengshan Island at night. The camera's steady progression and subtle movements provide a continuous and immersive experience of exploring this tranquil outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

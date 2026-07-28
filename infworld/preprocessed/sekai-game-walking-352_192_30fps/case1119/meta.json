@@ -1,0 +1,20 @@
+{
+  "name": "case1119",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a narrow, rocky path that winds through a lush, green landscape. As the camera progresses forward, it pans slightly to reveal an expansive view of Le Prarion in Chamonix-Mont-Blanc, France, under a bright, sunny sky. The path leads into a verdant meadow dotted with wildflowers and bordered by dense clusters of tall, vibrant green trees. In the distance, majestic snow-capped mountains dominate the horizon, their peaks gleaming under the sunlight. The camera continues its steady advance, capturing the gentle undulations of the terrain and the occasional fluttering of birds in the air. Overhead, a series of ski lift cables stretch across the scene, supported by sturdy poles that stand out against the natural backdrop. The lighting is warm and natural, casting soft shadows that enhance the vivid greens and whites of the environment. As the viewer moves deeper into the meadow, the camera angle shifts subtly, offering a panoramic view of the serene, untouched wilderness. The entire scene remains empty of people, emphasizing the tranquil and pristine nature of this outdoor setting. The video concludes with the camera lingering on the breathtaking vista, encapsulating the harmony between the rugged mountainous terrain and the peaceful valley below.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case505",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective of someone walking through a dark forest at night in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves steadily forward, capturing the silhouettes of tall pine trees against a starry sky, which is intermittently obscured by clouds. As the person progresses, the camera angle remains at eye level, providing a consistent view of the path ahead, which is barely illuminated by the faint light from the stars. The surrounding environment is shrouded in darkness, with only the outlines of the trees and the ground faintly visible. The camera occasionally pans slightly to the left and right, revealing more of the dense forest and the uneven terrain underfoot. The atmosphere is quiet and serene, with no other people or animals in sight. The lighting conditions remain constant throughout, with the starlight casting a soft glow that highlights the texture of the tree bark and the roughness of the ground. As the walk continues, the camera captures the subtle movement of the trees swaying gently in the breeze, adding a dynamic element to the otherwise still night scene. The overall effect is a peaceful and immersive experience of a solitary nighttime stroll through a natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case530",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, sun-dappled forest path, flanked by dense greenery and scattered rocks. The camera smoothly advances, capturing the interplay of light and shadow cast by the trees overhead. As the path curves gently, the surrounding foliage thickens, creating a natural tunnel effect that frames the view ahead. The camera continues its steady progression, revealing glimpses of the ocean through breaks in the vegetation. Suddenly, the path opens up to a stunning beach scene, where the pristine white sand meets the turquoise waters of Castle Rock Beach. The camera pans across the beach, showcasing the smooth expanse of sand dotted with large reddish-brown rocks. A blue canopy tent stands prominently on the right side of the beach, providing shade over a few chairs. The camera then focuses on the tent, highlighting its sturdy structure and the inviting setup beneath it. Throughout the sequence, the bright sunlight enhances the vivid colors of the natural surroundings, casting sharp shadows and illuminating the serene beauty of this secluded coastal spot. The entire journey from the forested trail to the tranquil beach unfolds seamlessly, offering a captivating visual exploration of Castle Rock Beach's untouched charm.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case1398",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a rugged mountain trail on the Mardi Himal Trail in Kaski, Nepal. The camera smoothly glides over uneven terrain, capturing the intricate details of rocks, sparse vegetation, and patches of snow under bright sunlight. As the viewer progresses, the camera angle shifts slightly upward, revealing a distant snow-capped peak shrouded in mist against a clear blue sky. The sun casts sharp shadows, enhancing the textures of the rocky path. The surrounding landscape is vast and open, with no other people in sight, emphasizing the solitude of the trail. Midway through the journey, colorful prayer flags flutter gently in the breeze, adding vibrant splashes of red, blue, yellow, green, and white to the otherwise earthy tones of the environment. The camera continues its steady advance, occasionally panning to highlight the steep inclines and rocky outcrops that line the path. The natural light remains consistent throughout, maintaining a warm and inviting ambiance as the viewer navigates this serene and untouched wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

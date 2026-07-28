@@ -1,0 +1,20 @@
+{
+  "name": "case1105",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rugged, rocky path amidst dense greenery at Castle Rock Beach, Meelup, Australia. The camera smoothly advances, capturing the uneven terrain composed of large rocks and patches of dirt, surrounded by lush vegetation including ferns and various shrubs. As the movement continues, the path transitions from rocky sections to a more defined trail covered with fallen leaves and soil, winding through a forested area with tall trees casting dappled shadows under the bright sunlight. The camera angle remains steady, providing a first-person perspective that immerses the viewer in the natural surroundings. The vibrant greens of the foliage contrast sharply with the earthy tones of the path and rocks, while the clear blue sky above adds depth to the scene. The environment is serene and untouched, with no signs of human presence, enhancing the sense of solitude and connection with nature. As the journey progresses, the path becomes slightly steeper, leading upwards through the forest, with the camera subtly adjusting to maintain focus on the trail ahead. The lighting remains consistent, with sunlight filtering through the canopy, creating a dynamic interplay of light and shadow throughout the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

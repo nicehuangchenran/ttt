@@ -1,0 +1,20 @@
+{
+  "name": "case501",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a sweeping view of a misty volcanic landscape, where a plume of steam rises steadily from a body of water nestled between rugged cliffs. The camera pans slowly across the scene, capturing the dense fog that blankets the area, obscuring distant mountains and creating an ethereal atmosphere. As the camera continues its movement, it tilts upward, revealing a vast expanse of overcast sky filled with thick, gray clouds that dominate the horizon. The camera then shifts focus to the ground, showcasing a rugged terrain covered in dark volcanic rocks interspersed with patches of vibrant green moss. The perspective changes again, offering a panoramic view of the surrounding hills and valleys, all shrouded in the same heavy fog. Throughout the sequence, the camera maintains a steady pace, emphasizing the desolate yet striking beauty of the natural environment. The muted colors and diffused light enhance the sense of isolation, while the absence of any human presence underscores the untouched nature of this remote Icelandic location. The overall effect is a serene and immersive exploration of M\u00fdrdalssandur's unique geological features under cloudy, foggy conditions during the day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

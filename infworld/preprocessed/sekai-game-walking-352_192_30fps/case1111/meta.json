@@ -1,0 +1,20 @@
+{
+  "name": "case1111",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the camera slowly panning across a rugged, rocky landscape under a thick blanket of cloudy skies. The viewer's perspective moves steadily forward, revealing a desolate terrain covered in dark, jagged rocks and patches of sparse vegetation. As the camera continues its advance, it captures the expansive view of rolling hills and distant mountains shrouded in mist, emphasizing the vastness and isolation of the area. The camera then shifts slightly downward, focusing on a narrow stream that meanders through the rocky ground, its surface reflecting the overcast light. The water flows gently, creating small ripples and pooling in shallow depressions between the stones. The surrounding environment remains empty, with no signs of human presence, enhancing the sense of solitude. Throughout the sequence, the camera maintains a steady, level angle, providing a continuous and immersive experience of the natural setting. The muted colors and diffused lighting contribute to the serene yet somber atmosphere, capturing the raw beauty of M\u00fdrdalssandur in Southern Iceland during a cloudy day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

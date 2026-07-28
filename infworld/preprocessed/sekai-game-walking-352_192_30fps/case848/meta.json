@@ -1,0 +1,20 @@
+{
+  "name": "case848",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow, steady walk along a narrow, stone-paved path flanked by dense vegetation under a heavy cloak of fog. The camera moves forward, capturing the misty atmosphere that obscures distant views, with occasional beams of light piercing through the trees, creating a soft, ethereal glow. As the path winds gently uphill, the surrounding foliage becomes thicker, with branches occasionally brushing against the camera's field of view. The terrain shifts from the stone path to a more natural, uneven ground covered with moss and scattered leaves, indicating a less maintained trail. The camera continues its ascent, revealing a broader landscape shrouded in fog, where faint outlines of distant hills and trees emerge intermittently. The lighting remains dim, with the fog diffusing any direct light sources, casting an overall grayish hue over the scene. The camera then pans slightly to the right, showcasing a rocky outcrop with sparse vegetation, before returning to the path, which now descends into a denser forest area. The movement is smooth and deliberate, maintaining a consistent pace as it navigates through the quiet, empty natural setting of Shengshan Island, Zhoushan, China, under the cloudy, foggy night sky.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

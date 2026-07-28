@@ -1,0 +1,20 @@
+{
+  "name": "case985",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow dirt path bordered by wooden posts, enveloped in a dense fog that obscures distant views. The camera moves forward, capturing the misty atmosphere as it gently pans to reveal a clearing with scattered trees and patches of grass, their forms softened by the fog. The path continues, winding through the forest, with the camera tilting slightly to show the uneven terrain covered in fallen leaves and small rocks. As the journey progresses, the path ascends a gentle slope, the camera angle adjusting to emphasize the incline. The surrounding vegetation becomes denser, with tall grasses and shrubs lining the trail. The light remains diffused due to the overcast sky, casting a muted yellowish hue over the landscape. The camera continues its steady ascent, navigating the rocky terrain, with occasional shifts in angle to highlight the rugged path ahead. The scene remains serene and untouched, with no signs of human presence, emphasizing the solitude of the natural environment. The fog persists, creating an ethereal ambiance as the path winds further into the distance, the camera maintaining a consistent forward motion throughout the journey.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

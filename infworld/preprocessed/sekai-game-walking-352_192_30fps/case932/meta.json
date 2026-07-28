@@ -1,0 +1,20 @@
+{
+  "name": "case932",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow dirt path bordered by wooden fences, flanked by dense bamboo groves under a cloudy, foggy sky. The camera smoothly advances, capturing the misty atmosphere that envelops the scene, with muted greens and browns dominating the color palette. As the path curves gently, the camera pans slightly to reveal more of the surrounding forest, showcasing tall trees with slender trunks and a ground covered in fallen leaves and moss. The journey continues uphill, transitioning from the fenced path to a set of weathered stone steps leading into the heart of the forest. The camera angle shifts subtly to emphasize the ascent, highlighting the texture of the moss-covered stones and the rustic wooden railings on either side. The environment remains serene and untouched, with no signs of human presence except for the man-made structures. The fog thickens as the steps wind through the trees, creating an ethereal ambiance. The camera maintains a consistent pace, offering a continuous view of the natural surroundings, until it reaches a clearing where the path levels out, surrounded by large rocks and more dense foliage, completing the immersive walk through this tranquil, secluded woodland setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

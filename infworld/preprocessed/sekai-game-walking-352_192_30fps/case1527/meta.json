@@ -1,0 +1,20 @@
+{
+  "name": "case1527",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey by moving forward along a narrow, dimly lit path through a dense forest at night in Le Prarion, Chamonix-Mont-Blanc, France. The camera steadily advances, capturing the subtle swaying of the surrounding trees as they loom over the trail, their dark silhouettes barely discernible against the cloudy, foggy sky. As the person progresses, the camera angle remains fixed, offering a first-person perspective that immerses the viewer in the serene yet mysterious ambiance of the nocturnal woodland. The faint starlight occasionally pierces through the thick canopy, casting a soft, ethereal glow that highlights the rugged terrain beneath. The path, uneven and covered with patches of grass and scattered leaves, guides the viewer deeper into the forest. The atmosphere is quiet and still, with no other individuals present, emphasizing the solitude of the setting. The camera's smooth movement continues, revealing more of the forest's intricate details, such as the varying heights and shapes of the trees, which create a textured backdrop. The overall scene is enveloped in darkness, punctuated only by the occasional flicker of light from the stars above, adding a sense of depth and vastness to the nighttime landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

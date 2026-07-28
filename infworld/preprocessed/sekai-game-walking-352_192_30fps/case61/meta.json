@@ -1,0 +1,20 @@
+{
+  "name": "case61",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit road at night, the rain steadily falling and creating a reflective sheen on the wet asphalt. The camera maintains a steady first-person perspective, capturing the yellow dividing lines and the occasional road markings as they pass by. The surrounding environment is shrouded in darkness, with only the faint glow of streetlights illuminating the path ahead. Sparse trees line the sides of the road, their silhouettes barely visible against the dark sky. As the journey continues, the road curves gently, revealing more of the urban landscape, including a pedestrian crossing marked by white stripes. The camera angle remains consistent, providing a continuous view of the road's progression. The rain continues to fall, adding a layer of moisture to the scene and enhancing the reflective quality of the surfaces. The overall atmosphere is quiet and desolate, with no other vehicles or pedestrians in sight, emphasizing the emptiness of East Maddon Park at this late hour. The lighting is minimal, with the primary sources being the streetlights that cast a soft, diffused glow over the area, creating a serene yet somber ambiance. The video captures the essence of a solitary walk through an empty, rainy urban setting, with the camera smoothly gliding forward, following the contours of the road as it winds through the park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

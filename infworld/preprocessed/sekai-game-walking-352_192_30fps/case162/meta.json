@@ -1,0 +1,20 @@
+{
+  "name": "case162",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow stone path bordered by dense vegetation under a cloudy night sky. The camera smoothly advances, capturing the dimly lit surroundings as it navigates through the overgrown foliage and uneven terrain. As the journey continues, the path winds through a natural landscape, flanked by trees and shrubs that cast long shadows in the faint moonlight. The camera angle remains steady, offering a first-person perspective that immerses the viewer in the serene yet mysterious environment. The muted colors of the night\u2014shades of dark green, brown, and gray\u2014dominate the scene, enhancing the sense of solitude. The path occasionally narrows, requiring careful navigation around obstacles such as rocks and fallen branches. The atmosphere is quiet and undisturbed, with no signs of human presence, emphasizing the emptiness of the location. As the viewer progresses, the path leads deeper into the forested area, with the camera subtly panning to reveal more of the surrounding wilderness, maintaining a consistent focus on the path ahead while occasionally glancing at the dense undergrowth on either side. The overall ambiance is one of peaceful isolation, with the gentle rustling of leaves and the distant murmur of nature providing a subtle soundtrack to the nocturnal exploration.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

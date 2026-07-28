@@ -1,0 +1,20 @@
+{
+  "name": "case691",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily through a snowy forest in Yamadera, Yamagata Prefecture, Japan. The camera glides forward along a narrow path bordered by tall, snow-dusted trees, their bare branches reaching into the overcast sky. As the viewer progresses, the camera pans slightly to the right, revealing more of the dense woodland and the gentle slope of the terrain covered in patches of white snow. The movement continues, and the camera angle shifts upward, capturing the interplay of light filtering through the canopy, casting soft shadows on the ground. The scene transitions as the path leads to a set of moss-covered stone steps leading up to an old wooden structure. The camera ascends the steps, entering the dimly lit interior, then exits onto a wooden platform overlooking the forest. The camera pans across the surrounding landscape, showcasing the expansive view of the snow-covered trees and distant hills under the diffused daylight. The entire sequence maintains a serene and tranquil atmosphere, with no other individuals present, emphasizing the solitude and natural beauty of the location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

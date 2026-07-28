@@ -1,0 +1,20 @@
+{
+  "name": "case675",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path flanked by tall evergreen trees, their dense foliage casting dappled shadows on the ground. As the camera progresses steadily, it reveals a breathtaking panorama of snow-capped mountains under a bright, sunny sky dotted with fluffy white clouds. The path curves gently, leading past a rustic wooden cabin nestled among the greenery, its weathered walls and sloped roof blending seamlessly into the natural surroundings. The camera continues to pan right, showcasing an expansive view of the mountainous landscape, where patches of snow cling to the slopes and lush green valleys stretch out below. A cable car line comes into view, its wires stretching across the frame, connecting distant points on the mountain. The camera maintains a steady, forward-moving angle, capturing the vibrant greens of the grass and shrubs, the deep blues of the sky, and the pristine whites of the snow. The scene remains serene and untouched, with no signs of human presence apart from the cabin and the cable car infrastructure, emphasizing the tranquil beauty of Le Prarion, Chamonix-Mont-Blanc, France, during a clear day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

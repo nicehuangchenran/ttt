@@ -1,0 +1,20 @@
+{
+  "name": "case1072",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit road at night in East Maddon Park, London, United Kingdom, under a steady rainfall. The camera smoothly glides over the wet asphalt, capturing the reflective sheen of the road marked by white and yellow lines. As the journey progresses, the surrounding environment reveals leafless trees and street lamps casting a soft, diffused glow through the misty air, enhancing the eerie ambiance. The camera angle remains steady, offering a first-person perspective that immerses the viewer in the scene. The path curves gently, leading to a set of stairs flanked by railings and illuminated by vintage-style lampposts, which cast long shadows on the wet pavement. The viewer ascends the stairs, transitioning from the road to a pedestrian pathway lined with more trees and lampposts, their light piercing the darkness and rain. The atmosphere is quiet and desolate, with no other individuals present, emphasizing the solitude of the setting. The camera continues to move forward, capturing the intricate details of the park's layout, including the interplay of light and shadow, the texture of the wet surfaces, and the gentle rustling of raindrops against the leaves. The overall scene is a serene yet somber nocturnal exploration of an urban park enveloped in rain and shadow.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

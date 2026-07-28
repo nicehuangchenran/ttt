@@ -1,0 +1,20 @@
+{
+  "name": "case940",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The camera moves steadily forward along a cobblestone path in East Maddon Park, London, under a heavy downpour at night. The viewer's perspective glides smoothly, capturing the rhythmic motion of each step as the path winds gently through the park. On either side, rows of lampposts cast a soft, diffused glow that illuminates the wet stones and the dark silhouettes of trees lining the walkway. The rain falls continuously, creating a misty atmosphere that blurs distant objects and adds a layer of depth to the scene. The camera angle remains at eye level, providing an immersive first-person view that emphasizes the solitude of the empty park. The dim lighting casts long shadows from the lampposts, and the occasional flicker of light adds a dynamic element to the otherwise still environment. As the camera progresses, the path curves slightly, revealing more of the park's layout, with the sound of raindrops hitting the ground and the gentle rustling of leaves adding to the serene yet somber ambiance. The overall color palette is dominated by cool blues and grays, enhancing the nocturnal and rainy setting. No other individuals are present, reinforcing the sense of isolation within this urban outdoor space.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case864",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved path bordered by lush greenery and a brick wall on the left side. As the camera advances, it reveals an open area with scattered picnic tables shaded by large green umbrellas, set amidst dense trees and underbrush. The camera continues its steady forward motion, transitioning into a forested pathway where sunlight filters through the canopy, casting dappled shadows on the ground. The path curves gently, leading deeper into the wooded area, with the camera maintaining a consistent eye-level perspective that captures the serene natural surroundings. The vibrant greens of the foliage contrast sharply with the earthy tones of the path, while the bright daylight enhances the vividness of the scene. As the viewer progresses, the path narrows and leads onto a wooden bridge that spans a small waterway, flanked by railings and surrounded by more dense vegetation. The camera smoothly crosses the bridge, then descends back onto a dirt path that winds through the forest, passing by lampposts and eventually opening up to a clearing with a distant view of a building partially obscured by trees. Throughout the journey, the environment remains tranquil and undisturbed, with no other individuals present, emphasizing the peaceful solitude of East Maddon Park on a sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

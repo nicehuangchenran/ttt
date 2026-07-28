@@ -1,0 +1,20 @@
+{
+  "name": "case1375",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with the viewer ascending a set of moss-covered stone steps amidst a dense, foggy forest at night. The camera moves steadily forward, capturing the texture of the wet stones and the surrounding undergrowth illuminated by a faint, eerie light. As the ascent continues, the camera pans slightly to reveal more of the misty surroundings, where thick fog obscures distant trees and creates an atmosphere of isolation. The path curves gently, bordered by metal railings that show signs of rust and age. The viewer's movement is smooth, suggesting a deliberate pace, as they navigate through the natural terrain. The environment is rich with detail, from the gnarled tree trunks to the scattered leaves and patches of grass that line the steps. The camera occasionally tilts upward, emphasizing the height of the trees and the depth of the fog, which casts everything in a monochromatic palette of greens and grays. The scene remains empty and silent, with no other characters or movement apart from the steady progress up the stairs, enhancing the sense of solitude and mystery within this nocturnal setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

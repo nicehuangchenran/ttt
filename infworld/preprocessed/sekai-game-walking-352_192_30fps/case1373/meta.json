@@ -1,0 +1,20 @@
+{
+  "name": "case1373",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a dirt path that winds through a lush, green hillside. The camera advances forward, capturing the gentle slope of the terrain dotted with patches of grass and small rocks. As the viewer progresses, an old wooden cabin comes into view, situated slightly off the path amidst the natural surroundings. The camera continues its forward motion, passing by the cabin and revealing more of the expansive landscape. Tall pine trees line the path, their dense foliage creating a serene forest atmosphere. The sky above is overcast with a layer of clouds, casting a soft, diffused light over the scene. The camera angle remains steady, providing a clear and continuous view of the path ahead. The environment is tranquil and untouched, with no signs of human activity apart from the solitary cabin. As the journey continues deeper into the forest, the path becomes slightly more rugged, with the camera navigating through the trees and underbrush. The overall ambiance is peaceful, with the muted colors of the cloudy day enhancing the natural beauty of Le Prarion, Chamonix-Mont-Blanc, France. The camera's smooth movement and consistent focus on the path create an immersive experience, allowing the viewer to feel as if they are walking through this picturesque outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

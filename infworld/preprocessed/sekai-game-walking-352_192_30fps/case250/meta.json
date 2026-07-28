@@ -1,0 +1,20 @@
+{
+  "name": "case250",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow forward movement along a dimly lit path in East Maddon Park, London, under a heavy downpour at night. The camera steadily advances, capturing the rhythmic pattering of raindrops on the ground and the surrounding foliage. Tall lampposts intermittently illuminate the path, casting soft pools of light that contrast sharply with the deep shadows enveloping the park. As the viewer progresses, the camera pans slightly to the left and right, revealing dense clusters of trees and shrubs lining the pathway, their silhouettes blurred by the mist and rain. The atmosphere is quiet and desolate, with no other individuals present. The camera then ascends a set of wooden stairs, the wet steps glistening under the sparse light. Continuing forward, the path curves gently, leading deeper into the park's interior. The ambient lighting fluctuates as the viewer moves closer to and farther from the lampposts, creating a dynamic interplay of light and shadow. The camera maintains a steady pace, offering a continuous and immersive experience of navigating through the rain-soaked, nocturnal landscape of East Maddon Park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

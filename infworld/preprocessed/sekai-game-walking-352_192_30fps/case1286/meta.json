@@ -1,0 +1,20 @@
+{
+  "name": "case1286",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The camera begins its journey through the rugged terrain of M\u00fdrdalssandur, Southern Region, Iceland, moving steadily forward along a narrow path flanked by large, jagged rocks. As it progresses, the camera pans slightly to the left, revealing more of the rocky landscape and the expansive sky above, which is filled with thick, cloudy formations that cast a warm, golden hue over the scene, indicating the time of sunset. The camera continues its forward motion, occasionally tilting upward to capture the towering rock formations that dominate the horizon. The path ahead is uneven and strewn with smaller stones and debris, adding texture to the scene. The camera then shifts its focus to the right, showcasing a vast expanse of rolling hills and distant mountains shrouded in a light mist, enhancing the sense of depth and isolation. The lighting remains consistent throughout, with the soft, diffused sunlight filtering through the clouds, casting long shadows and highlighting the intricate details of the rocks and terrain. As the camera moves further into the landscape, the atmosphere becomes increasingly serene and untouched, emphasizing the natural beauty and solitude of this remote Icelandic location. The entire sequence is captured from a first-person perspective, providing an immersive experience of navigating through this dramatic and picturesque outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

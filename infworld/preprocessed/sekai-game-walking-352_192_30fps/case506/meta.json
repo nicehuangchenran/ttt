@@ -1,0 +1,20 @@
+{
+  "name": "case506",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a cobblestone path that winds through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly follows the path as it ascends, revealing the intricate texture of the stones underfoot and the surrounding trees, which stand tall and bare against a cloudy sky. As the ascent continues, the path curves gently, offering glimpses of traditional Japanese structures nestled among the foliage. The camera pans slightly to capture the rustic charm of these buildings, their dark roofs contrasting sharply with the muted tones of the forest. The movement is steady, maintaining a consistent pace as the viewer approaches a wooden bridge spanning a small stream. Crossing the bridge, the path leads into a cluster of more buildings, their weathered facades and tiled roofs adding to the serene atmosphere. The camera angle shifts subtly to highlight the architectural details and the interplay of light and shadow cast by the overcast sky. The scene remains tranquil and empty, with no signs of human presence, emphasizing the natural beauty and peaceful solitude of this outdoor setting. The final frames show the path continuing uphill, inviting the viewer deeper into the forested landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

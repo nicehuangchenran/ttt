@@ -1,0 +1,20 @@
+{
+  "name": "case269",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily forward through a tunnel-like path lined with traditional red torii gates at Fushimi Inari Taisha in Kyoto, Japan. The camera advances smoothly, capturing the rhythmic repetition of the torii gates as they recede into the distance, creating a vanishing point effect. The surrounding environment is shrouded in a dense fog, which diffuses the soft, ambient light emanating from lanterns placed intermittently along the path. The ground beneath is a mix of dirt and stone, barely illuminated by the dim glow. As the camera continues its forward motion, it occasionally pans slightly to the left and right, revealing more of the torii gates and the misty forest that envelops them. The atmosphere is serene yet mysterious, with the cloudy night sky adding to the overall sense of isolation. The camera's steady movement and the consistent alignment of the torii gates create a hypnotic visual rhythm, while the muted colors and shadows enhance the tranquil and enigmatic ambiance of this outdoor natural setting. No other individuals are present, emphasizing the solitude of the experience. The scene remains uninterrupted, maintaining a continuous flow as the viewer is drawn deeper into the sacred pathway.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

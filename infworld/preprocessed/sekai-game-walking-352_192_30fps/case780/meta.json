@@ -1,0 +1,20 @@
+{
+  "name": "case780",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, snow-dusted trail in the Mardi Himal Trail, Kaski, Nepal, under a cloudy and foggy night sky. The camera smoothly glides over the uneven terrain, capturing the subtle crunch of snow underfoot as it pans slightly to reveal the dense forest surrounding the path. Bare trees loom on either side, their branches reaching out into the mist, creating an eerie yet serene atmosphere. The dim light filters through the fog, casting soft shadows and giving the scene a muted palette of grays and whites. As the journey continues, the camera angle shifts subtly to highlight the rocky edges of the trail, emphasizing the rugged natural landscape. The viewer's gaze follows the winding path as it ascends gently, with occasional glimpses of distant, shadowy figures of trees emerging from the fog. The environment remains empty and quiet, with no signs of other people, enhancing the sense of solitude. The camera maintains a consistent forward motion, occasionally tilting upward to capture the dense canopy above, which appears as dark silhouettes against the faintly illuminated sky. The overall ambiance is one of peaceful isolation, with the natural elements of the trail and the enveloping fog creating a tranquil, immersive experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

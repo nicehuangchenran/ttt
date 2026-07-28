@@ -1,0 +1,20 @@
+{
+  "name": "case113",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving along a narrow, winding road flanked by dense trees under a cloudy night sky. The camera steadily advances forward, capturing the subtle undulations of the road as it curves gently through the forested area. The surrounding trees form a natural canopy overhead, their silhouettes stark against the dimly lit sky. The camera angle remains at eye level, providing a consistent view of the path ahead. As the journey continues, the road narrows slightly, and the camera pans slightly to the right, revealing more of the dense foliage on either side. The lighting is minimal, casting deep shadows that enhance the texture of the tree trunks and the rough surface of the road. The atmosphere is quiet and serene, with no other individuals or vehicles in sight. The camera then approaches a junction where the road splits into two directions, and the camera briefly pauses, offering a clear view of the intersection before continuing along the chosen path. The overall ambiance is one of solitude and tranquility, with the natural surroundings enveloping the viewer in a peaceful nighttime setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

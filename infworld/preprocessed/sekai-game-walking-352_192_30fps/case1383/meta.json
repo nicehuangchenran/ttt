@@ -1,0 +1,20 @@
+{
+  "name": "case1383",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path bordered by dense shrubs under a cloudy sky at sunset. The camera smoothly pans to the right, revealing a serene beach scene with gentle waves lapping against the shore. As the movement continues, the camera angle shifts slightly upward, capturing the silhouette of Castle Rock Beach's iconic rocky formations against the dimming light. The path leads closer to the water, where scattered red rocks contrast sharply with the soft sand. The camera then pans left, showcasing more of the rugged coastline and the lush greenery that lines the beach. The sky transitions from deep orange near the horizon to a darker shade above, casting long shadows across the landscape. The camera maintains a steady pace, offering a continuous view of the tranquil, empty beach and its natural beauty. The final frames capture a broader perspective of the area, emphasizing the vastness of the beach and the surrounding vegetation, all bathed in the soft, fading light of the setting sun.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

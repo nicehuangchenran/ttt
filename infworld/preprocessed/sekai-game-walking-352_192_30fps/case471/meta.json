@@ -1,0 +1,20 @@
+{
+  "name": "case471",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow railway track that cuts through a dense forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera maintains a steady first-person perspective, smoothly gliding along the tracks as it captures the surrounding environment. The railway is flanked by tall, evergreen trees whose branches occasionally sway gently in the breeze, creating a serene and immersive atmosphere. The weather is cloudy and foggy, casting a soft, diffused light over the scene, which enhances the misty ambiance. As the camera progresses, the fog thickens slightly, partially obscuring distant trees and adding depth to the landscape. The ground is covered with a mix of gravel and fallen leaves, and the railway ties are evenly spaced, guiding the viewer's path. Overhead, power lines supported by wooden poles stretch across the scene, their wires faintly visible against the muted sky. The camera angle remains consistent, focusing straight ahead but occasionally panning slightly to the left or right to capture the full breadth of the forest. The overall color palette is dominated by earthy tones\u2014greens, browns, and grays\u2014reflecting the natural setting. There are no other people or animals in sight, emphasizing the solitude and tranquility of this outdoor-natural scene. The movement is continuous and unhurried, allowing viewers to fully absorb the peaceful surroundings.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

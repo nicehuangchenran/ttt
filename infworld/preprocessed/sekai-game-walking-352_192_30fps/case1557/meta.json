@@ -1,0 +1,20 @@
+{
+  "name": "case1557",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow, rocky path that winds through a lush, green landscape. The camera moves steadily forward, capturing the undulating terrain and the surrounding dense forest of tall, dark green coniferous trees. As the viewer progresses, the path curves gently, revealing a breathtaking view of snow-capped mountains in the distance under a bright, sunny sky. The camera angle shifts slightly upward, emphasizing the towering peaks and the expansive, clear blue sky dotted with fluffy white clouds. Overhead, a series of ski lift cables stretch across the scene, supported by tall metal poles that stand out against the natural backdrop. The sunlight bathes the entire landscape in warm, vibrant hues, highlighting the rich greens of the grass and trees and the pristine whites of the distant snow. The path continues to meander through the serene, empty wilderness, with no other people or animals in sight, creating a sense of peaceful solitude amidst the majestic natural beauty of Le Prarion, Chamonix-Mont-Blanc, France. The camera maintains a consistent forward motion, providing an immersive experience of this tranquil outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

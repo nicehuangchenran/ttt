@@ -1,0 +1,20 @@
+{
+  "name": "case126",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow advance through a misty, stone-paved pathway flanked by tall, weathered walls, leading towards an open gate. As the figure moves forward, the camera pans slightly to reveal a dense forest enveloped in thick fog, with visibility limited to a few meters ahead. The path transitions from stone to a dirt road bordered by a wooden fence on the left and sparse vegetation on the right. The camera continues its steady progression, capturing the eerie stillness of the empty surroundings. The trees, mostly bare and shrouded in mist, create a somber atmosphere, their silhouettes barely discernible against the gray sky. The light is diffused, casting a uniform, muted tone over the entire scene, enhancing the sense of isolation. As the journey progresses, the camera angle remains at eye level, maintaining a consistent view of the path ahead, which curves gently to the right, disappearing into the fog. The environment remains unchanged, with no signs of life or movement, emphasizing the quiet solitude of the setting. The overall ambiance is one of serene desolation, with the fog and dim lighting contributing to a tranquil yet mysterious outdoor experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

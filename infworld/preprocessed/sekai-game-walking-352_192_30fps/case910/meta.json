@@ -1,0 +1,20 @@
+{
+  "name": "case910",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady ascent up a stone staircase flanked by dense foliage under a cloudy sky. The camera moves forward, capturing the intricate textures of the moss-covered steps and the surrounding greenery. As the viewer progresses, the path opens into a clearing where a traditional wooden structure partially obscured by trees comes into view. The camera pans slightly to the right, revealing more of the rustic building and the lush vegetation enveloping it. The scene transitions smoothly as the viewer continues along a dirt path winding through the forest. The camera angle shifts subtly, emphasizing the natural beauty of the overcast day, with soft light filtering through the canopy. The path meanders gently, bordered by thick bushes and towering trees, creating a serene and secluded atmosphere. The viewer's journey continues deeper into the forest, with the camera maintaining a steady pace, capturing the tranquil ambiance of Shengshan Island, Zhoushan, China, devoid of any human presence, enhancing the sense of solitude and immersion in nature. The muted colors of the cloudy day blend harmoniously with the rich greens of the forest, while the camera's smooth movement enhances the immersive experience of this outdoor-natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

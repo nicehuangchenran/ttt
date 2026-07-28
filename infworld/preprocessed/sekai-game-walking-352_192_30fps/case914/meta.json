@@ -1,0 +1,20 @@
+{
+  "name": "case914",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily forward through a narrow, fog-laden pathway flanked by dense vegetation. The camera advances slowly, revealing a misty atmosphere that obscures distant details, creating an eerie ambiance under the cloudy night sky. As the viewer progresses, the path transitions from a stone-paved walkway into a rugged, rocky terrain, with the camera tilting slightly to capture the uneven ground. The surrounding foliage, consisting of various shrubs and trees, appears dark and shadowy due to the limited light, enhancing the sense of isolation. The camera then pans upward, showcasing a dilapidated building partially covered in ivy, its windows dark and lifeless. After a brief pause, the perspective shifts back to the path, continuing through a forested area where the trees loom large, their branches intertwining overhead. The camera maintains a steady forward motion, occasionally panning to the right to reveal a weathered wooden fence running alongside the path. The dim lighting casts long shadows, adding depth and texture to the scene, while the fog persists, enveloping the surroundings in a thick, white haze. The entire sequence captures a solitary journey through a desolate, natural landscape, emphasizing the quiet solitude and mysterious atmosphere of Shengshan Island at night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case159",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a serene, snowy forest in Lago di Braies, Braies, South Tyrol, Italy. The camera glides smoothly along a narrow path blanketed in fresh snow, capturing the intricate details of the surrounding trees and underbrush. As the movement progresses, the viewer approaches a wooden bridge that spans a small, icy stream, its railing and planks clearly visible against the white landscape. The camera angle shifts slightly upward, revealing the dense canopy of tall pine trees shrouded in mist, their branches heavy with snow. The light is soft and diffused, casting a gentle glow through the foggy atmosphere. The viewer continues along the path, navigating through patches of shrubs and rocks, each step leaving faint imprints in the untouched snow. The environment remains tranquil and empty, with no signs of human presence, emphasizing the natural beauty and isolation of the location. The camera maintains a steady pace, providing a continuous and immersive perspective of this picturesque winter scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

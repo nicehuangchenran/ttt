@@ -1,0 +1,20 @@
+{
+  "name": "case1461",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a narrow railway track that winds through a lush, green forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera advances forward, capturing the gravel-covered path flanked by wooden sleepers and bordered by dense foliage. As the movement continues, the surrounding trees, primarily coniferous, sway gently in the breeze under a bright, sunny sky dotted with scattered clouds. The camera angle remains at eye level, providing a clear view of the track ahead, which curves slightly to the right and then left, revealing more of the verdant landscape. The sunlight filters through the canopy, casting dynamic shadows on the ground and highlighting the vibrant greens of the grass and leaves. The scene transitions smoothly as the path leads deeper into the forest, where the density of the trees increases, creating a natural tunnel effect. The camera maintains its steady pace, offering an immersive experience of the tranquil, empty outdoor setting, with no other individuals or animals in sight. The overall ambiance is serene, with the natural sounds of rustling leaves and distant birds adding to the peaceful atmosphere.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

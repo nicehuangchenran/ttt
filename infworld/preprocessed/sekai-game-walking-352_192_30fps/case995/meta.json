@@ -1,0 +1,20 @@
+{
+  "name": "case995",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow stone path flanked by dense trees, their branches intertwining overhead in a dimly lit forest setting at night. The camera moves steadily forward, capturing the misty atmosphere as fog gently envelops the surroundings, creating an ethereal ambiance. As the path progresses, the viewer approaches a series of red torii gates, their vibrant color standing out starkly against the dark backdrop. The camera angle shifts slightly upward, revealing the intricate details of the gates, including their weathered wooden surfaces and traditional design. The lighting is minimal, casting long shadows and highlighting the texture of the wood and the ground covered with fallen leaves. The scene transitions smoothly as the person continues walking through the torii gates, each gate appearing closer together, forming a tunnel-like passage. The camera remains focused on the path ahead, maintaining a consistent pace and direction, while the surrounding environment remains quiet and devoid of any other presence, emphasizing the solitude and serene atmosphere of Fushimi Inari Taisha at night. The overall mood is tranquil yet mysterious, enhanced by the interplay of light and shadow in this outdoor natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

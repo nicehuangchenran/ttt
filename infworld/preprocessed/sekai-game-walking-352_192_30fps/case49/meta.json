@@ -1,0 +1,20 @@
+{
+  "name": "case49",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer emerging from a dark cave into a vast, snowy landscape under a bright daytime sky. The camera smoothly transitions from the shadowed interior to an expansive outdoor scene, revealing a serene, snow-covered terrain. As the first-person perspective moves forward, the camera pans slightly to showcase a frozen lake bordered by rugged, snow-laden hills. The ground is uneven, covered with patches of white snow and exposed rocks, creating a textured surface that the viewer navigates carefully. The camera angle remains steady, offering a clear view of the horizon where distant mountains rise against the pale sky. The light is diffused, casting soft shadows and giving the snow a pristine, untouched appearance. As the viewer continues their journey, the camera occasionally tilts upward, capturing the towering peaks and the gentle descent towards the lake. The environment is completely empty, devoid of any human presence or wildlife, emphasizing the solitude and tranquility of the natural setting. The overall atmosphere is calm and quiet, with the only movement being the steady progression of the viewer through this breathtaking winter wonderland.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

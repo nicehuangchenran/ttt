@@ -1,0 +1,20 @@
+{
+  "name": "case85",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow forward movement through East Maddon Park at night under a heavy rainstorm. The camera glides steadily along a dimly lit path, flanked by tall trees whose branches sway gently in the wind, their silhouettes barely visible against the dark sky. As the viewer progresses, the faint glow of vintage street lamps casts an eerie blue light, illuminating patches of wet pavement and creating reflective surfaces that shimmer with each step. The camera angle remains level, offering a consistent view of the park's serene yet desolate atmosphere. The surrounding environment is shrouded in mist, with droplets of rain continuously falling, adding a layer of texture to the scene. The path curves slightly, revealing more of the park's layout, including a small brick wall on the left and dense foliage on the right. The camera continues its steady advance, capturing the rhythmic patter of raindrops and the occasional flicker of distant lights, enhancing the sense of isolation in this empty urban outdoor setting. The overall ambiance is one of quiet solitude, with the interplay of shadow and light creating a hauntingly beautiful nocturnal landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

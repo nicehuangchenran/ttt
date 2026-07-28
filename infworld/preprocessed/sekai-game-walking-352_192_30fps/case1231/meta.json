@@ -1,0 +1,20 @@
+{
+  "name": "case1231",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the camera moving steadily forward across a rugged, rocky terrain under a vast, cloudy sky at sunset. The camera pans slowly from left to right, revealing a series of jagged rocks and boulders scattered across the landscape, their surfaces rough and uneven. As the camera continues its forward motion, it captures the expansive view of distant mountains shrouded in mist, their silhouettes faint against the dimly lit sky. The camera angle shifts slightly upward, emphasizing the towering peaks and the dense cloud cover above. The lighting is warm and golden, casting long shadows across the ground and highlighting the textures of the rocks. The sky transitions from deep orange near the horizon to a darker hue higher up, creating a dramatic contrast. The camera then pans back to the left, showcasing more of the rocky foreground and the winding path ahead. The scene remains empty, with no visible signs of human presence, adding to the sense of solitude and tranquility. The overall atmosphere is serene yet imposing, with the natural elements dominating the frame. The camera's smooth movement and the gradual changes in perspective provide a comprehensive view of this remote and untouched Icelandic landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

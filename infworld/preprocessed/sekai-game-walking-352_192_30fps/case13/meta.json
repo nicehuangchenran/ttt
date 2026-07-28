@@ -1,0 +1,20 @@
+{
+  "name": "case13",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The vehicle smoothly navigates a winding road through a lush forested area under a clear blue sky. As it progresses, the camera captures the road curving gently to the left, bordered by dense greenery on both sides, with occasional patches of reddish-brown earth visible along the edges. The vehicle maintains a steady pace, following the road's natural contours, which gradually reveal more of the surrounding landscape. The camera angle remains fixed, providing a consistent forward-facing view that emphasizes the road's smooth asphalt surface marked with white dashed lines. The sunlight filters through the trees, casting dynamic shadows across the road and highlighting the vibrant greens of the foliage. As the journey continues, the road ascends slightly, offering glimpses of distant hills through breaks in the tree canopy. The environment remains serene and untouched, with no other vehicles or pedestrians in sight, enhancing the sense of solitude and tranquility. The overall scene is bathed in warm, natural light, creating a vivid contrast between the dark asphalt and the bright, sunlit surroundings.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

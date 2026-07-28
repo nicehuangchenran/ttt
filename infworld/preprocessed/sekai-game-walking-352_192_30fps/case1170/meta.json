@@ -1,0 +1,20 @@
+{
+  "name": "case1170",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey along a narrow dirt path winding through a lush forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves steadily forward, capturing the dense foliage of tall trees and vibrant green underbrush that line both sides of the trail. As the path progresses, the camera angle shifts slightly upward, revealing a cloudy sky that filters soft, diffused light through the canopy, casting gentle shadows on the ground. The terrain gradually transitions from a flat, earthy path to a rocky incline, with the camera tilting to follow the ascent. The surrounding environment becomes more open, exposing distant snow-capped mountains under the overcast sky. The camera continues its steady climb, panning to showcase the expansive view of the rugged landscape, dotted with sparse evergreen trees. The natural scenery remains serene and untouched, with no signs of human presence, emphasizing the solitude and tranquility of this outdoor setting. The muted colors of the rocks and vegetation contrast subtly with the bright white peaks in the distance, creating a harmonious visual experience as the viewer reaches the summit and surveys the breathtaking vista.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

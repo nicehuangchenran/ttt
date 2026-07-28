@@ -1,0 +1,20 @@
+{
+  "name": "case651",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a snow-covered path beside Lago di Braies, capturing the serene winter landscape. The camera smoothly glides over the icy terrain, revealing a small wooden pier extending into the calm, dark waters of the lake. As the perspective continues to advance, the surrounding forest comes into view, with tall evergreen trees blanketed in snow, their branches heavy with frost. The camera pans slightly to the right, showcasing a rustic wooden fence that guides the path deeper into the woods. The dense forest creates a tunnel-like effect, with sunlight filtering through the trees, casting soft shadows on the snow. The atmosphere remains tranquil and untouched, with no signs of human presence. The camera maintains a steady, level angle, emphasizing the vastness of the natural setting. The muted colors of the snowy landscape contrast subtly with the deep greens of the coniferous trees, while the overcast sky diffuses the light, creating a uniform, soft illumination throughout the scene. As the journey progresses, the path curves gently, leading the viewer further into the heart of this pristine, wintry wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

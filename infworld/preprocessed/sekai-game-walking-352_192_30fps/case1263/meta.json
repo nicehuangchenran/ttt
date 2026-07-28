@@ -1,0 +1,20 @@
+{
+  "name": "case1263",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a tunnel-like path lined with red torii gates, each illuminated by warm, glowing lanterns that cast an eerie, reddish hue over the scene. As the camera advances steadily, the perspective shifts slightly upward, revealing the dense forest surrounding the path, shrouded in thick fog that diffuses the light and creates a mysterious atmosphere. The camera continues along the path, passing under more torii gates, their vertical beams towering above and casting long shadows on the ground. The environment is quiet and devoid of people, enhancing the sense of solitude. The camera then pans to the right, showing a wider view of the forest, where the trees stand tall and silent, their branches barely visible in the dim light. The camera returns to the path, moving through another series of torii gates, each one slightly different in size and design, but all uniformly red. The camera angle remains at eye level, providing a first-person perspective as it navigates the winding path. The lighting gradually dims as the camera moves deeper into the forest, the fog becoming denser and the lanterns less frequent, creating a darker and more enigmatic setting. The final frames show the camera approaching a large, prominent torii gate, its imposing structure standing out against the backdrop of the foggy night, marking the end of the path.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

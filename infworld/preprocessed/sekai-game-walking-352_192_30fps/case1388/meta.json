@@ -1,0 +1,20 @@
+{
+  "name": "case1388",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a narrow dirt path bordered by dense greenery and a wooden fence on the left side. The camera moves forward, capturing the uneven terrain and the surrounding foliage under a cloudy sky that casts a soft, diffused light over the scene. As the path progresses, it leads to a set of wooden stairs ascending into the forested area. The camera ascends the stairs, revealing more of the natural surroundings, including trees and shrubs that frame the pathway. Upon reaching the top, the path continues uphill, winding through the forest with occasional glimpses of rocky outcrops on the left. The camera maintains a consistent forward motion, navigating the gentle incline and the natural obstacles. Eventually, the path opens up to a clearing where a rustic stone wall and a wooden gate come into view, marking the end of this segment of the journey. Throughout the sequence, the environment remains serene and untouched, with no other individuals present, emphasizing the solitude and tranquility of Shengshan Island's natural landscape. The camera angle remains at eye level, providing an immersive experience of the walk, while the muted colors and soft lighting enhance the peaceful atmosphere of the day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

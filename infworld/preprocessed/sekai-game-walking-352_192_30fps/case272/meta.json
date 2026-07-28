@@ -1,0 +1,20 @@
+{
+  "name": "case272",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow forward movement along a dimly lit path in East Maddon Park, London, under a heavy rain shower at night. The camera steadily advances, capturing the wet pavement reflecting the soft glow of scattered street lamps that intermittently illuminate the surrounding foliage. As the viewer progresses, the camera pans slightly to the right, revealing more of the park's dense vegetation and the misty atmosphere created by the rain. The path curves gently, and the camera follows this curve, maintaining a consistent eye-level angle that emphasizes the solitude of the empty park. The ambient light from the lamps casts long shadows of the trees onto the ground, enhancing the eerie yet serene ambiance. The camera continues its steady advance, passing by more lampposts and occasionally focusing on the intricate details of the rain-soaked leaves and branches. The environment remains consistently dark and quiet, with no other individuals present, reinforcing the sense of isolation. The camera's smooth motion and the persistent rainfall create a continuous, immersive experience of a solitary nighttime walk through an urban park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case867",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a dimly lit road at night in East Maddon Park, London, United Kingdom. The camera glides forward, capturing the wet pavement reflecting the sparse streetlights as rain continues to fall, creating a shimmering effect on the surface. The road is marked with white lines that guide the viewer's path, curving gently through the park. On either side, trees and bushes loom in the darkness, their silhouettes barely visible against the night sky. As the camera progresses, it passes under an arched stone bridge, the structure illuminated faintly by the ambient light. The camera angle remains steady, maintaining a forward-facing view that emphasizes the sense of movement. The surrounding environment is quiet and empty, with no other individuals present. The lighting is predominantly cool and blue, enhancing the rainy, nocturnal atmosphere. After passing under the bridge, the road continues to wind through the park, flanked by more vegetation and occasional lampposts that cast pools of light on the ground. The entire scene is enveloped in a serene yet somber mood, with the continuous rain adding to the tranquil ambiance. The camera maintains its smooth, uninterrupted motion throughout, providing a consistent and immersive experience of a solitary walk through the park at night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

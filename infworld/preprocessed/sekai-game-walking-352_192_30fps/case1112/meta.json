@@ -1,0 +1,20 @@
+{
+  "name": "case1112",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective of someone walking through a dark, forested area at night in Le Prarion, Chamonix-Mont-Blanc, France. The camera moves steadily forward, capturing the faint outlines of trees silhouetted against a starry sky, with occasional glimpses of the Milky Way peeking through the cloudy and foggy conditions. As the person progresses along the path, their movement is smooth and deliberate, suggesting a careful navigation through the dimly lit terrain. The camera angle remains consistent, focused straight ahead, providing a continuous view of the narrow trail that winds through the dense forest. The surrounding environment is shrouded in darkness, with only the faint light from the stars and the occasional moonlight breaking through the clouds illuminating the scene. The ground beneath is barely visible, but the texture suggests a mix of dirt and scattered leaves. There are no other people or animals in sight, emphasizing the solitude and quietness of the setting. The overall atmosphere is serene yet mysterious, with the interplay of shadows and light creating a captivating visual experience. The video captures the essence of a solitary night walk in a natural, untouched landscape, highlighting the beauty and tranquility of the outdoors under a starlit sky.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

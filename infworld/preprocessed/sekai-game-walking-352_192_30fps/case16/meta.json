@@ -1,0 +1,20 @@
+{
+  "name": "case16",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rocky path surrounded by towering mountains and dense evergreen forests under a cloudy sky. The camera smoothly glides over the uneven terrain, capturing the intricate textures of the white and gray rocks scattered across the trail. As the journey progresses, the perspective shifts slightly to reveal a small stream flowing through the forest, its dark water contrasting sharply with the light-colored stones. The camera continues to pan, offering a broader view of the lush greenery and the rugged landscape. The movement is steady, maintaining a consistent pace as it navigates through the natural setting. The surrounding trees, with their vibrant green needles, stand tall against the backdrop of the misty mountains, creating a serene and untouched atmosphere. The lighting is soft and diffused, typical of an overcast day, which enhances the rich colors of the environment. The camera occasionally tilts upward, showcasing the towering peaks that loom in the distance, adding depth and scale to the scene. Throughout the video, there are no other people or animals in sight, emphasizing the solitude and tranquility of this remote location. The entire sequence is a continuous exploration of the natural beauty of Lago di Braies, capturing every detail with precision and clarity.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

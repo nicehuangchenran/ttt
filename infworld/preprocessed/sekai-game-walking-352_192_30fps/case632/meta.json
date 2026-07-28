@@ -1,0 +1,20 @@
+{
+  "name": "case632",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving forward along a dimly lit pedestrian crossing at night in East Maddon Park, London. The camera steadily advances, capturing the wet pavement reflecting the soft glow of street lamps as rain gently falls, creating a serene yet somber atmosphere. As the viewer progresses, the surroundings reveal a quiet urban park setting with trees lining both sides of the path, their dark silhouettes swaying slightly in the breeze. The camera angle remains level, offering a clear view of the road ahead, marked by white lines that guide the movement through the park. The ambient light from the street lamps casts a soft, diffused illumination, enhancing the visibility of the path while maintaining the overall darkness of the night. The scene transitions smoothly as the viewer approaches and crosses another pedestrian crossing, continuing along the road that curves gently to the right. The environment remains consistently empty, with no other individuals or vehicles in sight, emphasizing the solitude of the nighttime walk. The camera continues its steady advance, capturing the rhythmic pattern of the wet pavement and the occasional street lamp that punctuates the otherwise dark landscape, until it reaches a point where the road bends further into the distance, disappearing into the misty night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

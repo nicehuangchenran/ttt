@@ -1,0 +1,20 @@
+{
+  "name": "case715",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a stone staircase embedded within a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly ascends the steps, revealing a path that winds through the woodland under a cloudy sky. As the movement continues, the surrounding trees, mostly bare with some patches of green foliage, stand tall and create a canopy overhead, filtering the diffused daylight. The ground is covered with a mix of fallen leaves, small rocks, and patches of snow, indicating a cold season. The camera pans slightly to the right, showcasing more of the forest's intricate details, such as the textured bark of the trees and the uneven terrain. The perspective shifts as the viewer approaches a wooden bridge crossing a narrow stream, with the camera tilting downward briefly to capture the flowing water beneath. The environment remains serene and empty, with no signs of human presence, enhancing the sense of solitude. The muted colors of the landscape\u2014browns, grays, and whites\u2014are accentuated by the overcast lighting, creating a tranquil and immersive natural setting. The camera continues its steady progression, maintaining a consistent eye-level angle, as it navigates through the quiet, misty forest, capturing the subtle beauty of this remote location.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

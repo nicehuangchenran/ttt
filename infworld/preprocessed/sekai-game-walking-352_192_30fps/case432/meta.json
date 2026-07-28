@@ -1,0 +1,20 @@
+{
+  "name": "case432",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow, rocky path that winds through a lush, green landscape. The camera moves steadily forward, capturing the vibrant details of the surrounding environment. Initially, the path is bordered by dense clusters of tall, dark green coniferous trees and patches of wildflowers, with majestic snow-capped mountains looming in the distance under a bright blue sky dotted with fluffy white clouds. As the walk continues, the path curves gently to the right, revealing more of the expansive forested area. The camera angle remains at eye level, providing an immersive view of the natural scenery. The sunlight filters through the leaves, casting dappled shadows on the ground, enhancing the vivid greens and earthy browns of the terrain. The path transitions from a rocky surface to a smoother dirt trail, flanked by wooden fences and more varied vegetation, including deciduous trees with broader leaves. The environment remains serene and untouched, with no signs of human presence, emphasizing the tranquility of this outdoor setting. The camera continues its steady progression, maintaining a consistent pace and direction, offering a continuous and cohesive visual narrative of the journey through Le Prarion, Chamonix-Mont-Blanc, France, on a sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

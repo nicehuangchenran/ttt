@@ -1,0 +1,20 @@
+{
+  "name": "case148",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving forward through a misty, rain-drenched courtyard at Fushimi Inari Taisha in Kyoto, Japan, under the cover of night. The camera advances steadily towards a series of illuminated red torii gates, their warm glow cutting through the dense fog that envelops the scene. As the viewer progresses, the camera angle remains level, capturing the wet stone path reflecting the soft light from the lanterns hanging between the gates. The surrounding environment is shrouded in darkness, with faint silhouettes of trees and shrubs barely visible through the haze. The atmosphere is serene yet mysterious, amplified by the rhythmic sound of raindrops hitting the ground. The camera continues its forward motion, passing through each torii gate, which gradually narrows the pathway, intensifying the sense of depth and immersion. The red hue of the lanterns casts long shadows, creating a striking contrast against the dark surroundings. As the journey deepens into the shrine, the camera subtly pans slightly to the right, revealing more of the intricate wooden structures and the dense forest that borders the path. The entire scene is devoid of people, enhancing the solitude and tranquility of the nocturnal exploration. The final moments show the camera approaching a cluster of torii gates, their glowing lanterns leading the way deeper into the enigmatic and atmospheric setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

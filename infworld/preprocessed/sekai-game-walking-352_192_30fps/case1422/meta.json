@@ -1,0 +1,20 @@
+{
+  "name": "case1422",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective of someone walking along a rugged, rocky path in Lago di Braies, Braies, South Tyrol, Italy. The individual steps carefully over uneven terrain, navigating through patches of gravel and small stones, with the camera angle providing a clear view of the feet and immediate surroundings. As they progress, the path gradually transitions from rocky ground to a dirt trail flanked by dense greenery. The surrounding forest is lush, with tall trees casting dappled shadows on the ground under the bright, sunny weather. The camera smoothly pans forward, capturing the natural beauty of the area, with sunlight filtering through the foliage and illuminating the vibrant greens and earthy browns of the landscape. The scene remains empty of people, emphasizing the serene and untouched nature of the location. The camera continues to move steadily, following the winding path deeper into the forest, with occasional shifts in angle to highlight the texture of the trail and the intricate details of the surrounding vegetation. The overall atmosphere is tranquil, with the natural sounds of the environment adding to the immersive experience of this outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

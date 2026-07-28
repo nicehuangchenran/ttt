@@ -1,0 +1,20 @@
+{
+  "name": "case217",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving steadily forward across the rugged terrain of M\u00fdrdalssandur in Southern Iceland during sunset. The camera pans smoothly from left to right, capturing the expansive landscape of dark volcanic sand interspersed with patches of green moss and scattered rocks. As the movement continues, the camera angle shifts slightly upward, revealing distant mountains shrouded in a thick layer of clouds and fog, creating a hazy horizon. The sky above is painted in warm hues of orange and yellow, gradually transitioning into darker shades near the cloud cover, indicating the approaching nightfall. The lighting casts long shadows across the ground, enhancing the texture of the uneven surface. The scene remains empty, devoid of any human presence or wildlife, emphasizing the solitude and vastness of the natural environment. Throughout the sequence, the camera maintains a steady pace, providing a continuous and immersive view of this serene and untouched Icelandic landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

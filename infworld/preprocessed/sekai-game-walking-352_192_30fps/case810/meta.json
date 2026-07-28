@@ -1,0 +1,20 @@
+{
+  "name": "case810",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a set of moss-covered stone steps winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera moves steadily forward, capturing the intricate details of the rugged terrain and the sturdy black metal railing that guides the path. As the ascent continues, the surrounding trees, mostly bare with hints of green foliage, create a canopy overhead, filtering the soft, diffused light of a cloudy day. The camera pans slightly to reveal more of the forest floor, littered with fallen leaves and scattered rocks, enhancing the natural, untamed atmosphere. The path then transitions from the steps to a rocky trail, where the camera tilts downward to show the uneven ground covered in patches of snow and moss. The journey proceeds along this trail, with the camera occasionally shifting angles to highlight the dense arrangement of trees and the subtle interplay of shadows cast by the overcast sky. As the path curves gently, the camera captures a brief glimpse of a wooden bridge ahead, partially obscured by the thick underbrush. The entire scene remains serene and devoid of human presence, emphasizing the quiet solitude of the forest. The muted colors of the landscape\u2014browns, grays, and greens\u2014are accentuated by the soft, natural light, creating a tranquil and immersive outdoor experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case110",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a dimly lit staircase surrounded by dense foliage under a rainy night sky. The camera moves steadily upward, capturing the wet steps and the wooden railing on the left side, while the surrounding vegetation appears dark and shadowy due to the low light conditions. As the ascent concludes, the scene transitions to a narrow path flanked by overgrown plants and trees, leading towards an old, weathered house partially obscured by the darkness. The camera pans slightly to the right, revealing more of the house's rustic exterior and the rain-soaked ground. The viewer then continues along the path, which curves gently through the forest, with the camera maintaining a forward-facing angle that captures the misty atmosphere and the sound of raindrops hitting the leaves. The path becomes increasingly rugged, with rocks and uneven terrain becoming more prominent as the viewer navigates deeper into the woods. The lighting remains consistently dim, with occasional glimpses of the moonlight filtering through the dense canopy above, casting faint shadows on the ground. The journey progresses along a cobblestone trail, bordered by lush greenery and large boulders, until it reaches another section of the forest where the path narrows further, surrounded by tall trees and thick underbrush. The entire sequence maintains a serene yet eerie ambiance, emphasizing the solitude and natural beauty of Shengshan Island at night during a rainy evening.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

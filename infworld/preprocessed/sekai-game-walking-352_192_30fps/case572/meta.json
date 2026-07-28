@@ -1,0 +1,20 @@
+{
+  "name": "case572",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow path bordered by lush greenery and a wooden railing, leading towards a distant red torii gate. As the camera advances, it captures the intricate details of the surrounding foliage, with sunlight filtering through the leaves, casting dappled shadows on the ground. The path gently curves, revealing more of the dense forest and the towering trees that line the route. The camera then pans slightly to the right, showcasing a broader view of the landscape, where a majestic mountain range stretches across the horizon under a clear blue sky. The scene transitions back to the path, where the viewer continues walking past another torii gate, indicating a sacred passage. The camera angle shifts to focus on a small stone structure beside the path, before moving through a rustic wooden gate into a courtyard enclosed by traditional Japanese architecture. The final frames capture the serene beauty of the garden, with neatly trimmed hedges and a stone lantern, all bathed in the warm glow of the sun. Throughout the video, the environment remains tranquil and untouched, with no signs of human presence, emphasizing the natural and spiritual essence of Fushimi Inari Taisha in Kyoto, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

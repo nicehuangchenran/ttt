@@ -1,0 +1,20 @@
+{
+  "name": "case230",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest at night, illuminated by the flickering light of a raging wildfire in the distance. The camera pans slowly forward, capturing the silhouettes of trees and underbrush against the backdrop of intense orange flames and thick smoke. As the movement continues, the path becomes more defined, winding through the forest floor covered with dry leaves and scattered rocks. The camera angle shifts slightly upward, revealing the towering trees and the dark, cloudy sky above. Suddenly, the scene transitions to an open beach area, where the camera moves along the shoreline, showcasing the gentle waves lapping against the sandy shore. The beach is dotted with large rocks and sparse vegetation, and the ocean stretches out into the horizon under the cloudy night sky. The camera then turns back towards the forest, capturing the ongoing fire from a different perspective, with the flames casting an eerie glow over the surrounding area. The final frames show the camera moving deeper into the forest, the path becoming narrower and the fire's light creating stark contrasts between shadow and light, emphasizing the chaotic beauty of the natural disaster unfolding in the darkness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

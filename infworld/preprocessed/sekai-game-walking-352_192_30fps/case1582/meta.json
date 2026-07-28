@@ -1,0 +1,20 @@
+{
+  "name": "case1582",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a wooden walkway that cuts through a rugged, volcanic landscape. The camera smoothly transitions from this structured path onto a barren expanse of dark, rocky terrain, capturing the uneven ground and scattered boulders under a cloudy sky. As the movement continues, the camera pans across the desolate area, revealing a vast, open vista of rolling hills and distant mountains shrouded in mist. The overcast weather casts a muted light over the scene, emphasizing the grayish tones of the rocks and the sparse patches of green vegetation clinging to the slopes. The camera then shifts its focus upward, showcasing the imposing cliffs and jagged rock formations that dominate the horizon. Throughout the sequence, the camera maintains a steady pace, offering a comprehensive view of the expansive, empty landscape. The absence of any human presence or wildlife underscores the isolation and raw beauty of M\u00fdrdalssandur's natural environment. The final frames capture a sweeping panorama of the region, highlighting the interplay between the rugged terrain and the enveloping fog, creating a serene yet somber atmosphere.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

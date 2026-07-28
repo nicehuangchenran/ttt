@@ -1,0 +1,20 @@
+{
+  "name": "case1165",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a stone staircase flanked by traditional wooden structures, leading into a serene forest setting. The camera moves steadily forward, capturing the intricate details of the weathered steps and the rustic architecture on either side. As the ascent continues, the path opens up to reveal a traditional Japanese torii gate at the top, marking the entrance to a sacred area. The camera then transitions smoothly into the dense forest, where tall trees with bare branches create a canopy overhead, filtering the soft, diffused light of a cloudy day. The path winds through the forest, with the camera panning gently to showcase the natural beauty of moss-covered rocks and the rich earth tones of the forest floor. The movement is fluid, maintaining a consistent eye-level perspective that immerses the viewer in the tranquil environment. The muted colors of the trees and undergrowth blend harmoniously, enhancing the peaceful atmosphere. As the journey progresses deeper into the woods, the camera captures the subtle interplay of light and shadow, emphasizing the quiet solitude of this untouched natural landscape. The entire sequence is devoid of human presence, reinforcing the sense of isolation and serenity within this remote location in Yamadera, Yamagata Prefecture, Japan.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

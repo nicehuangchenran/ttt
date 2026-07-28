@@ -1,0 +1,20 @@
+{
+  "name": "case1573",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer ascending a moss-covered stone staircase winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera moves steadily forward, capturing the intricate details of the weathered steps and the sturdy metal railing on the left side. Tall, slender trees with thick trunks surround the path, their branches partially obscuring the cloudy sky above, casting a soft, diffused light that filters through the foliage. As the ascent continues, the camera angle shifts slightly to reveal more of the forest's lush undergrowth and the rugged terrain on either side of the stairs. The atmosphere remains serene and untouched, with no signs of human presence except for the well-trodden path. The journey progresses upward, transitioning from the forested area into a more open space where the steps lead towards a large wooden gate. The gate, showing signs of age with peeling paint and weathered wood, stands at the entrance of another section of the forest. The camera continues its steady advance, passing through the gate and revealing a continuation of the stone staircase, now leading deeper into the misty woodland. The overall ambiance is one of quiet solitude, with the muted colors of the forest and the overcast sky enhancing the sense of peaceful isolation.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case648",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rocky shoreline beside Lago di Braies, framed by towering evergreen trees and a majestic mountain backdrop. The camera smoothly pans to the right, revealing a rustic wooden cabin nestled among the dense forest, its weathered exterior blending seamlessly with the natural surroundings. As the perspective shifts, the viewer approaches a sturdy wooden pier extending into the calm, turquoise waters of the lake, with a chain barrier marking its end. The camera continues to move forward, capturing the serene beauty of the lake's edge, where the water gently laps against the shore. The path then leads through a narrow, tree-lined trail, the camera tilting slightly upward to showcase the towering pines that dominate the landscape. The overcast sky casts a soft, diffused light, enhancing the rich greens of the foliage and the deep blues of the water. The scene remains tranquil and untouched, with no signs of human presence, emphasizing the pristine wilderness of this picturesque location. The camera maintains a steady pace, offering a continuous and immersive view of the natural splendor, from the rugged shoreline to the dense forest and the expansive lake, all under the cloudy, daylight conditions.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

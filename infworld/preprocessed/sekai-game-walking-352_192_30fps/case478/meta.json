@@ -1,0 +1,20 @@
+{
+  "name": "case478",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a wooden bridge that spans over a serene body of water, surrounded by lush greenery. As the camera progresses steadily, it captures the intricate details of the bridge's wooden planks and railings, while the sunlight filters through the dense canopy above, casting dappled shadows on the path. The camera then pans slightly to the right, revealing a dirt path winding through the park, flanked by tall trees with vibrant foliage. The movement continues along this path, passing by a series of vintage-style lampposts that stand at regular intervals. The surrounding environment is bathed in warm, golden light, indicating a sunny day, with the sky dotted with fluffy white clouds. The camera angle shifts subtly, offering a panoramic view of the expansive park, showcasing patches of grass interspersed with rocks and clusters of trees. As the viewer moves further into the park, the path curves gently, leading towards a clearing where a few tents are pitched, suggesting a camping area. The entire scene remains tranquil and devoid of people, emphasizing the peaceful solitude of East Maddon Park in London, United Kingdom. The camera maintains a steady pace throughout, capturing the natural beauty and serene atmosphere of the outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

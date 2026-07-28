@@ -1,0 +1,20 @@
+{
+  "name": "case837",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a lush, verdant forest path, framed by dense foliage and dappled sunlight filtering through the leaves. As the camera advances, it captures the serene beauty of the natural surroundings, with the path winding gently uphill. The scene transitions to a striking red torii gate standing prominently amidst the greenery, marking an entrance. The camera pans upwards, revealing a distant mountain range under a clear blue sky, emphasizing the expansive view. Moving forward, the perspective shifts to another torii gate, this time leading into a more structured area with traditional Japanese architecture. The camera navigates through a wooden fence and stone pathways, approaching a two-story building with a balcony and sliding doors, surrounded by well-maintained gardens. The viewer then focuses on a smaller shrine with intricate wooden carvings and a thatched roof, situated beside a stone lantern. The journey continues past vibrant red torii gates, leading to a cluster of colorful vending machines nestled among the trees, creating a stark contrast between modern convenience and ancient tradition. Throughout the sequence, the camera maintains a steady, forward-moving angle, capturing the harmonious blend of nature and cultural landmarks under bright, sunny conditions.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

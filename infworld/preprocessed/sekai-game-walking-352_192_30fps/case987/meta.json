@@ -1,0 +1,20 @@
+{
+  "name": "case987",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow path flanked by dense greenery and towering trees, leading towards a traditional Japanese torii gate. As the camera advances steadily, it captures the intricate details of the red torii gate standing prominently amidst the lush foliage. The path continues, revealing more torii gates at regular intervals, each framed by the vibrant green leaves that filter the bright sunlight, casting dappled shadows on the ground. The camera pans slightly to the right, showcasing a rustic wooden building with a dark roof nestled among the trees, surrounded by a low stone wall. The scene transitions smoothly as the viewer approaches another torii gate, this time leading up a set of stone steps bordered by a sturdy metal railing. The camera ascends the steps, offering a broader view of the forested area, with sunlight streaming through the canopy and illuminating patches of the path. The final segment of the video shows the viewer moving through a serene bamboo grove, where tall, slender bamboo stalks create a natural tunnel effect, their green hues contrasting sharply with the earthy tones of the path and the metal railing on one side. Throughout the sequence, the camera maintains a steady, forward-moving perspective, capturing the tranquil beauty of Fushimi Inari Taisha under a clear, sunny sky.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

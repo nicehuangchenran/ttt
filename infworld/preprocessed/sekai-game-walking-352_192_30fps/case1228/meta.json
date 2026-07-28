@@ -1,0 +1,20 @@
+{
+  "name": "case1228",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest in Yamadera, Yamagata Prefecture, Japan, under a cloudy sky during the day. The camera smoothly pans across the lush greenery, capturing the intricate details of moss-covered rocks and towering trees that dominate the landscape. As the movement progresses, the viewer approaches a set of stone steps flanked by metal railings, leading upwards into the forest. The camera angle shifts slightly to follow the ascent, revealing more of the surrounding woodland, where sunlight filters through the canopy, casting dappled shadows on the ground. The path continues upward, winding through the trees, until it reaches a traditional Japanese torii gate adorned with hanging ropes and sacred symbols. The camera then focuses on the gate, highlighting its weathered wood and cultural significance, before panning back to show the expansive forest stretching out behind it. Throughout the sequence, the environment remains serene and untouched, with no other individuals present, emphasizing the solitude and natural beauty of the location. The overall atmosphere is tranquil, with muted colors and soft lighting enhancing the sense of peaceful isolation.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

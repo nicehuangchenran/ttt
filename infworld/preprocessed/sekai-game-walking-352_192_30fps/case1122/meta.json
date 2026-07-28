@@ -1,0 +1,20 @@
+{
+  "name": "case1122",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a narrow, rocky path winding through a misty mountain landscape. The camera smoothly advances, revealing lush green grass and scattered shrubs lining the trail, while the fog gently obscures distant details. As the viewer progresses, the path inclines slightly, leading towards a series of wooden utility poles that stretch into the distance, their cables cutting across the hazy sky. The camera pans slightly upward, capturing the towering poles and the faint outlines of snow-capped mountains in the background, their peaks shrouded in clouds. The light is soft and diffused, casting a pale yellow hue over the scene, enhancing the serene yet isolated atmosphere. The camera continues its steady ascent, passing by more vegetation and eventually approaching a small, solitary building nestled among the trees. The structure appears modest, with a dark roof and simple design, blending subtly into the natural surroundings. Throughout the journey, the camera maintains a consistent forward motion, occasionally adjusting its angle to emphasize the rugged terrain and the expansive, tranquil vista. The overall ambiance remains quiet and untouched, with no signs of human presence apart from the utility poles and the lone building.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

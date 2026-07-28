@@ -1,0 +1,20 @@
+{
+  "name": "case1008",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dirt path that winds through a serene, mountainous landscape. The camera smoothly advances, capturing the rugged terrain and scattered rocks underfoot. As the journey progresses, the path leads into a dense forest of tall evergreen trees, their dark green needles contrasting sharply with the muted earth tones of the ground. The surrounding environment is rich with natural details, from the lush grasses swaying gently in the breeze to the distant snow-capped peaks looming under a cloudy sky. The camera maintains a steady first-person perspective, offering an immersive experience as it navigates the winding trail. The lighting is soft and diffused, casting gentle shadows that enhance the texture of the forest floor. The scene remains tranquil and undisturbed, with no signs of human presence or wildlife, emphasizing the solitude and vastness of the wilderness. As the path continues deeper into the woods, the density of the trees increases, creating a canopy that filters the light and adds depth to the visual narrative. The overall atmosphere is one of peaceful exploration, inviting the viewer to immerse themselves in the natural beauty of Le Prarion, Chamonix-Mont-Blanc, France.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

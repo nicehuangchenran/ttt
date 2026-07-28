@@ -1,0 +1,468 @@
+2026-07-27 15:21:32 [rank3] INFO: Device: cuda:3 (rank 3)
+2026-07-27 15:21:33 [rank3] INFO: [LOAD] VAE...
+2026-07-27 15:21:33 [rank3] INFO: [LOAD] Text Encoder...
+2026-07-27 15:21:44 [rank3] INFO: [DISTRIBUTE] Rank 3 assigned 202/1618 cases
+2026-07-27 15:21:44 [rank3] INFO: [SKIP] case3: already preprocessed
+2026-07-27 15:21:44 [rank3] INFO: [PROCESS] case11
+2026-07-27 15:23:14 [rank3] INFO:   case11: 1797 frames, 192x352
+2026-07-27 15:23:39 [rank3] INFO:   ✓ case11: 22 chunks saved in 114.9s
+2026-07-27 15:23:39 [rank3] INFO: [PROCESS] case19
+2026-07-27 15:24:46 [rank3] INFO:   case19: 1797 frames, 192x352
+2026-07-27 15:25:11 [rank3] INFO:   ✓ case19: 22 chunks saved in 91.9s
+2026-07-27 15:25:11 [rank3] INFO: [PROCESS] case27
+2026-07-27 15:27:25 [rank3] INFO:   case27: 1797 frames, 192x352
+2026-07-27 15:27:49 [rank3] INFO:   ✓ case27: 22 chunks saved in 157.9s
+2026-07-27 15:27:49 [rank3] INFO: [PROCESS] case35
+2026-07-27 15:28:44 [rank3] INFO:   case35: 1797 frames, 192x352
+2026-07-27 15:29:10 [rank3] INFO:   ✓ case35: 22 chunks saved in 80.8s
+2026-07-27 15:29:10 [rank3] INFO: [PROCESS] case43
+2026-07-27 15:30:11 [rank3] INFO:   case43: 1797 frames, 192x352
+2026-07-27 15:30:36 [rank3] INFO:   ✓ case43: 22 chunks saved in 86.0s
+2026-07-27 15:30:36 [rank3] INFO: [PROCESS] case51
+2026-07-27 15:32:36 [rank3] INFO:   case51: 1797 frames, 192x352
+2026-07-27 15:33:01 [rank3] INFO:   ✓ case51: 22 chunks saved in 144.7s
+2026-07-27 15:33:01 [rank3] INFO: [PROCESS] case59
+2026-07-27 15:34:57 [rank3] INFO:   case59: 1797 frames, 192x352
+2026-07-27 15:35:22 [rank3] INFO:   ✓ case59: 22 chunks saved in 140.7s
+2026-07-27 15:35:22 [rank3] INFO: [PROCESS] case67
+2026-07-27 15:35:57 [rank3] INFO:   case67: 1797 frames, 192x352
+2026-07-27 15:36:23 [rank3] INFO:   ✓ case67: 22 chunks saved in 60.6s
+2026-07-27 15:36:23 [rank3] INFO: [PROCESS] case75
+2026-07-27 15:38:56 [rank3] INFO: Device: cuda:3 (rank 3)
+2026-07-27 15:38:57 [rank3] INFO: [LOAD] VAE...
+2026-07-27 15:38:57 [rank3] INFO: [LOAD] Text Encoder...
+2026-07-27 15:39:11 [rank3] INFO: [DISTRIBUTE] Rank 3 assigned 202/1618 cases
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case3: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case11: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case19: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case27: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case35: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case43: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case51: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case59: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [SKIP] case67: already preprocessed
+2026-07-27 15:39:11 [rank3] INFO: [PROCESS] case75
+2026-07-27 15:39:15 [rank3] INFO:   case75: 1797 frames, 192x352
+2026-07-27 15:39:45 [rank3] INFO:   ✓ case75: 22 chunks saved in 33.8s
+2026-07-27 15:39:45 [rank3] INFO: [PROCESS] case83
+2026-07-27 15:39:49 [rank3] INFO:   case83: 1797 frames, 192x352
+2026-07-27 15:40:17 [rank3] INFO:   ✓ case83: 22 chunks saved in 32.2s
+2026-07-27 15:40:17 [rank3] INFO: [PROCESS] case91
+2026-07-27 15:40:21 [rank3] INFO:   case91: 1797 frames, 192x352
+2026-07-27 15:40:50 [rank3] INFO:   ✓ case91: 22 chunks saved in 32.2s
+2026-07-27 15:40:50 [rank3] INFO: [PROCESS] case99
+2026-07-27 15:40:54 [rank3] INFO:   case99: 1797 frames, 192x352
+2026-07-27 15:41:22 [rank3] INFO:   ✓ case99: 22 chunks saved in 32.4s
+2026-07-27 15:41:22 [rank3] INFO: [PROCESS] case107
+2026-07-27 15:41:26 [rank3] INFO:   case107: 1797 frames, 192x352
+2026-07-27 15:41:54 [rank3] INFO:   ✓ case107: 22 chunks saved in 32.1s
+2026-07-27 15:41:54 [rank3] INFO: [PROCESS] case115
+2026-07-27 15:41:58 [rank3] INFO:   case115: 1797 frames, 192x352
+2026-07-27 15:42:27 [rank3] INFO:   ✓ case115: 22 chunks saved in 32.4s
+2026-07-27 15:42:27 [rank3] INFO: [PROCESS] case123
+2026-07-27 15:42:31 [rank3] INFO:   case123: 1797 frames, 192x352
+2026-07-27 15:42:59 [rank3] INFO:   ✓ case123: 22 chunks saved in 32.0s
+2026-07-27 15:42:59 [rank3] INFO: [PROCESS] case131
+2026-07-27 15:43:03 [rank3] INFO:   case131: 1797 frames, 192x352
+2026-07-27 15:43:31 [rank3] INFO:   ✓ case131: 22 chunks saved in 32.4s
+2026-07-27 15:43:32 [rank3] INFO: [PROCESS] case139
+2026-07-27 15:43:35 [rank3] INFO:   case139: 1797 frames, 192x352
+2026-07-27 15:44:04 [rank3] INFO:   ✓ case139: 22 chunks saved in 32.2s
+2026-07-27 15:44:04 [rank3] INFO: [PROCESS] case147
+2026-07-27 15:44:08 [rank3] INFO:   case147: 1797 frames, 192x352
+2026-07-27 15:44:36 [rank3] INFO:   ✓ case147: 22 chunks saved in 32.1s
+2026-07-27 15:44:36 [rank3] INFO: [PROCESS] case155
+2026-07-27 15:44:40 [rank3] INFO:   case155: 1797 frames, 192x352
+2026-07-27 15:45:08 [rank3] INFO:   ✓ case155: 22 chunks saved in 32.3s
+2026-07-27 15:45:08 [rank3] INFO: [PROCESS] case163
+2026-07-27 15:45:12 [rank3] INFO:   case163: 1797 frames, 192x352
+2026-07-27 15:45:41 [rank3] INFO:   ✓ case163: 22 chunks saved in 32.4s
+2026-07-27 15:45:41 [rank3] INFO: [PROCESS] case171
+2026-07-27 15:45:45 [rank3] INFO:   case171: 1797 frames, 192x352
+2026-07-27 15:46:13 [rank3] INFO:   ✓ case171: 22 chunks saved in 32.4s
+2026-07-27 15:46:13 [rank3] INFO: [PROCESS] case179
+2026-07-27 15:46:17 [rank3] INFO:   case179: 1797 frames, 192x352
+2026-07-27 15:46:46 [rank3] INFO:   ✓ case179: 22 chunks saved in 32.3s
+2026-07-27 15:46:46 [rank3] INFO: [PROCESS] case187
+2026-07-27 15:46:50 [rank3] INFO:   case187: 1797 frames, 192x352
+2026-07-27 15:47:18 [rank3] INFO:   ✓ case187: 22 chunks saved in 32.6s
+2026-07-27 15:47:19 [rank3] INFO: [PROCESS] case195
+2026-07-27 15:47:22 [rank3] INFO:   case195: 1797 frames, 192x352
+2026-07-27 15:47:50 [rank3] INFO:   ✓ case195: 22 chunks saved in 31.8s
+2026-07-27 15:47:50 [rank3] INFO: [PROCESS] case203
+2026-07-27 15:47:54 [rank3] INFO:   case203: 1797 frames, 192x352
+2026-07-27 15:48:23 [rank3] INFO:   ✓ case203: 22 chunks saved in 32.3s
+2026-07-27 15:48:23 [rank3] INFO: [PROCESS] case211
+2026-07-27 15:48:27 [rank3] INFO:   case211: 1797 frames, 192x352
+2026-07-27 15:48:55 [rank3] INFO:   ✓ case211: 22 chunks saved in 32.1s
+2026-07-27 15:48:55 [rank3] INFO: [PROCESS] case219
+2026-07-27 15:48:59 [rank3] INFO:   case219: 1797 frames, 192x352
+2026-07-27 15:49:27 [rank3] INFO:   ✓ case219: 22 chunks saved in 32.0s
+2026-07-27 15:49:27 [rank3] INFO: [PROCESS] case227
+2026-07-27 15:49:31 [rank3] INFO:   case227: 1797 frames, 192x352
+2026-07-27 15:49:59 [rank3] INFO:   ✓ case227: 22 chunks saved in 32.1s
+2026-07-27 15:49:59 [rank3] INFO: [PROCESS] case235
+2026-07-27 15:50:03 [rank3] INFO:   case235: 1797 frames, 192x352
+2026-07-27 15:50:32 [rank3] INFO:   ✓ case235: 22 chunks saved in 32.6s
+2026-07-27 15:50:32 [rank3] INFO: [PROCESS] case243
+2026-07-27 15:50:36 [rank3] INFO:   case243: 1797 frames, 192x352
+2026-07-27 15:51:04 [rank3] INFO:   ✓ case243: 22 chunks saved in 32.0s
+2026-07-27 15:51:04 [rank3] INFO: [PROCESS] case251
+2026-07-27 15:51:08 [rank3] INFO:   case251: 1797 frames, 192x352
+2026-07-27 15:51:36 [rank3] INFO:   ✓ case251: 22 chunks saved in 32.1s
+2026-07-27 15:51:36 [rank3] INFO: [PROCESS] case259
+2026-07-27 15:51:40 [rank3] INFO:   case259: 1797 frames, 192x352
+2026-07-27 15:52:08 [rank3] INFO:   ✓ case259: 22 chunks saved in 31.8s
+2026-07-27 15:52:08 [rank3] INFO: [PROCESS] case267
+2026-07-27 15:52:12 [rank3] INFO:   case267: 1797 frames, 192x352
+2026-07-27 15:52:40 [rank3] INFO:   ✓ case267: 22 chunks saved in 32.1s
+2026-07-27 15:52:40 [rank3] INFO: [PROCESS] case275
+2026-07-27 15:52:44 [rank3] INFO:   case275: 1797 frames, 192x352
+2026-07-27 15:53:12 [rank3] INFO:   ✓ case275: 22 chunks saved in 31.6s
+2026-07-27 15:53:12 [rank3] INFO: [PROCESS] case283
+2026-07-27 15:53:16 [rank3] INFO:   case283: 1797 frames, 192x352
+2026-07-27 15:53:44 [rank3] INFO:   ✓ case283: 22 chunks saved in 31.7s
+2026-07-27 15:53:44 [rank3] INFO: [PROCESS] case291
+2026-07-27 15:53:48 [rank3] INFO:   case291: 1797 frames, 192x352
+2026-07-27 15:54:16 [rank3] INFO:   ✓ case291: 22 chunks saved in 31.8s
+2026-07-27 15:54:16 [rank3] INFO: [PROCESS] case299
+2026-07-27 15:54:20 [rank3] INFO:   case299: 1797 frames, 192x352
+2026-07-27 15:54:48 [rank3] INFO:   ✓ case299: 22 chunks saved in 31.9s
+2026-07-27 15:54:48 [rank3] INFO: [PROCESS] case307
+2026-07-27 15:54:52 [rank3] INFO:   case307: 1797 frames, 192x352
+2026-07-27 15:55:20 [rank3] INFO:   ✓ case307: 22 chunks saved in 32.2s
+2026-07-27 15:55:20 [rank3] INFO: [PROCESS] case315
+2026-07-27 15:55:24 [rank3] INFO:   case315: 1797 frames, 192x352
+2026-07-27 15:55:52 [rank3] INFO:   ✓ case315: 22 chunks saved in 31.8s
+2026-07-27 15:55:52 [rank3] INFO: [PROCESS] case323
+2026-07-27 15:55:56 [rank3] INFO:   case323: 1797 frames, 192x352
+2026-07-27 15:56:24 [rank3] INFO:   ✓ case323: 22 chunks saved in 31.9s
+2026-07-27 15:56:24 [rank3] INFO: [PROCESS] case331
+2026-07-27 15:56:28 [rank3] INFO:   case331: 1797 frames, 192x352
+2026-07-27 15:56:56 [rank3] INFO:   ✓ case331: 22 chunks saved in 32.0s
+2026-07-27 15:56:56 [rank3] INFO: [PROCESS] case339
+2026-07-27 15:57:00 [rank3] INFO:   case339: 1797 frames, 192x352
+2026-07-27 15:57:28 [rank3] INFO:   ✓ case339: 22 chunks saved in 32.1s
+2026-07-27 15:57:28 [rank3] INFO: [PROCESS] case347
+2026-07-27 15:57:32 [rank3] INFO:   case347: 1797 frames, 192x352
+2026-07-27 15:58:00 [rank3] INFO:   ✓ case347: 22 chunks saved in 31.9s
+2026-07-27 15:58:00 [rank3] INFO: [PROCESS] case355
+2026-07-27 15:58:04 [rank3] INFO:   case355: 1797 frames, 192x352
+2026-07-27 15:58:33 [rank3] INFO:   ✓ case355: 22 chunks saved in 32.4s
+2026-07-27 15:58:33 [rank3] INFO: [PROCESS] case363
+2026-07-27 15:58:37 [rank3] INFO:   case363: 1797 frames, 192x352
+2026-07-27 15:59:05 [rank3] INFO:   ✓ case363: 22 chunks saved in 31.8s
+2026-07-27 15:59:05 [rank3] INFO: [PROCESS] case371
+2026-07-27 15:59:09 [rank3] INFO:   case371: 1797 frames, 192x352
+2026-07-27 15:59:37 [rank3] INFO:   ✓ case371: 22 chunks saved in 31.9s
+2026-07-27 15:59:37 [rank3] INFO: [PROCESS] case379
+2026-07-27 15:59:41 [rank3] INFO:   case379: 1797 frames, 192x352
+2026-07-27 16:00:09 [rank3] INFO:   ✓ case379: 22 chunks saved in 31.8s
+2026-07-27 16:00:09 [rank3] INFO: [PROCESS] case387
+2026-07-27 16:00:12 [rank3] INFO:   case387: 1797 frames, 192x352
+2026-07-27 16:00:40 [rank3] INFO:   ✓ case387: 22 chunks saved in 31.8s
+2026-07-27 16:00:41 [rank3] INFO: [PROCESS] case395
+2026-07-27 16:00:44 [rank3] INFO:   case395: 1797 frames, 192x352
+2026-07-27 16:01:12 [rank3] INFO:   ✓ case395: 22 chunks saved in 31.6s
+2026-07-27 16:01:12 [rank3] INFO: [PROCESS] case403
+2026-07-27 16:01:16 [rank3] INFO:   case403: 1797 frames, 192x352
+2026-07-27 16:01:44 [rank3] INFO:   ✓ case403: 22 chunks saved in 31.9s
+2026-07-27 16:01:44 [rank3] INFO: [PROCESS] case411
+2026-07-27 16:01:48 [rank3] INFO:   case411: 1797 frames, 192x352
+2026-07-27 16:02:16 [rank3] INFO:   ✓ case411: 22 chunks saved in 32.1s
+2026-07-27 16:02:17 [rank3] INFO: [PROCESS] case419
+2026-07-27 16:02:20 [rank3] INFO:   case419: 1797 frames, 192x352
+2026-07-27 16:02:48 [rank3] INFO:   ✓ case419: 22 chunks saved in 31.7s
+2026-07-27 16:02:48 [rank3] INFO: [PROCESS] case427
+2026-07-27 16:02:52 [rank3] INFO:   case427: 1797 frames, 192x352
+2026-07-27 16:03:20 [rank3] INFO:   ✓ case427: 22 chunks saved in 31.8s
+2026-07-27 16:03:20 [rank3] INFO: [PROCESS] case435
+2026-07-27 16:03:24 [rank3] INFO:   case435: 1797 frames, 192x352
+2026-07-27 16:03:52 [rank3] INFO:   ✓ case435: 22 chunks saved in 32.1s
+2026-07-27 16:03:52 [rank3] INFO: [PROCESS] case443
+2026-07-27 16:03:56 [rank3] INFO:   case443: 1797 frames, 192x352
+2026-07-27 16:04:24 [rank3] INFO:   ✓ case443: 22 chunks saved in 31.8s
+2026-07-27 16:04:24 [rank3] INFO: [PROCESS] case451
+2026-07-27 16:04:28 [rank3] INFO:   case451: 1797 frames, 192x352
+2026-07-27 16:04:56 [rank3] INFO:   ✓ case451: 22 chunks saved in 31.6s
+2026-07-27 16:04:56 [rank3] INFO: [PROCESS] case459
+2026-07-27 16:05:00 [rank3] INFO:   case459: 1797 frames, 192x352
+2026-07-27 16:05:28 [rank3] INFO:   ✓ case459: 22 chunks saved in 31.9s
+2026-07-27 16:05:28 [rank3] INFO: [PROCESS] case467
+2026-07-27 16:05:32 [rank3] INFO:   case467: 1797 frames, 192x352
+2026-07-27 16:06:00 [rank3] INFO:   ✓ case467: 22 chunks saved in 31.7s
+2026-07-27 16:06:00 [rank3] INFO: [PROCESS] case475
+2026-07-27 16:06:04 [rank3] INFO:   case475: 1797 frames, 192x352
+2026-07-27 16:06:32 [rank3] INFO:   ✓ case475: 22 chunks saved in 31.7s
+2026-07-27 16:06:32 [rank3] INFO: [PROCESS] case483
+2026-07-27 16:06:35 [rank3] INFO:   case483: 1797 frames, 192x352
+2026-07-27 16:07:03 [rank3] INFO:   ✓ case483: 22 chunks saved in 31.6s
+2026-07-27 16:07:03 [rank3] INFO: [PROCESS] case491
+2026-07-27 16:07:07 [rank3] INFO:   case491: 1797 frames, 192x352
+2026-07-27 16:07:35 [rank3] INFO:   ✓ case491: 22 chunks saved in 31.9s
+2026-07-27 16:07:35 [rank3] INFO: [PROCESS] case499
+2026-07-27 16:07:39 [rank3] INFO:   case499: 1797 frames, 192x352
+2026-07-27 16:08:07 [rank3] INFO:   ✓ case499: 22 chunks saved in 31.9s
+2026-07-27 16:08:07 [rank3] INFO: [PROCESS] case507
+2026-07-27 16:08:11 [rank3] INFO:   case507: 1797 frames, 192x352
+2026-07-27 16:08:39 [rank3] INFO:   ✓ case507: 22 chunks saved in 31.8s
+2026-07-27 16:08:39 [rank3] INFO: [PROCESS] case515
+2026-07-27 16:08:43 [rank3] INFO:   case515: 1797 frames, 192x352
+2026-07-27 16:09:11 [rank3] INFO:   ✓ case515: 22 chunks saved in 31.9s
+2026-07-27 16:09:11 [rank3] INFO: [PROCESS] case523
+2026-07-27 16:09:15 [rank3] INFO:   case523: 1797 frames, 192x352
+2026-07-27 16:09:43 [rank3] INFO:   ✓ case523: 22 chunks saved in 31.6s
+2026-07-27 16:09:43 [rank3] INFO: [PROCESS] case531
+2026-07-27 16:09:47 [rank3] INFO:   case531: 1797 frames, 192x352
+2026-07-27 16:10:15 [rank3] INFO:   ✓ case531: 22 chunks saved in 31.8s
+2026-07-27 16:10:15 [rank3] INFO: [PROCESS] case539
+2026-07-27 16:10:19 [rank3] INFO:   case539: 1797 frames, 192x352
+2026-07-27 16:10:47 [rank3] INFO:   ✓ case539: 22 chunks saved in 31.8s
+2026-07-27 16:10:47 [rank3] INFO: [PROCESS] case547
+2026-07-27 16:10:51 [rank3] INFO:   case547: 1797 frames, 192x352
+2026-07-27 16:11:19 [rank3] INFO:   ✓ case547: 22 chunks saved in 32.1s
+2026-07-27 16:11:19 [rank3] INFO: [PROCESS] case555
+2026-07-27 16:11:23 [rank3] INFO:   case555: 1797 frames, 192x352
+2026-07-27 16:11:51 [rank3] INFO:   ✓ case555: 22 chunks saved in 31.9s
+2026-07-27 16:11:51 [rank3] INFO: [PROCESS] case563
+2026-07-27 16:11:55 [rank3] INFO:   case563: 1797 frames, 192x352
+2026-07-27 16:12:23 [rank3] INFO:   ✓ case563: 22 chunks saved in 32.0s
+2026-07-27 16:12:23 [rank3] INFO: [PROCESS] case571
+2026-07-27 16:12:27 [rank3] INFO:   case571: 1797 frames, 192x352
+2026-07-27 16:12:55 [rank3] INFO:   ✓ case571: 22 chunks saved in 31.8s
+2026-07-27 16:12:55 [rank3] INFO: [PROCESS] case579
+2026-07-27 16:12:59 [rank3] INFO:   case579: 1797 frames, 192x352
+2026-07-27 16:13:27 [rank3] INFO:   ✓ case579: 22 chunks saved in 32.2s
+2026-07-27 16:13:27 [rank3] INFO: [PROCESS] case587
+2026-07-27 16:13:32 [rank3] INFO:   case587: 1797 frames, 192x352
+2026-07-27 16:14:00 [rank3] INFO:   ✓ case587: 22 chunks saved in 32.3s
+2026-07-27 16:14:00 [rank3] INFO: [PROCESS] case595
+2026-07-27 16:14:04 [rank3] INFO:   case595: 1797 frames, 192x352
+2026-07-27 16:14:32 [rank3] INFO:   ✓ case595: 22 chunks saved in 31.8s
+2026-07-27 16:14:32 [rank3] INFO: [PROCESS] case603
+2026-07-27 16:14:36 [rank3] INFO:   case603: 1797 frames, 192x352
+2026-07-27 16:15:04 [rank3] INFO:   ✓ case603: 22 chunks saved in 32.0s
+2026-07-27 16:15:04 [rank3] INFO: [PROCESS] case611
+2026-07-27 16:15:08 [rank3] INFO:   case611: 1797 frames, 192x352
+2026-07-27 16:15:36 [rank3] INFO:   ✓ case611: 22 chunks saved in 31.7s
+2026-07-27 16:15:36 [rank3] INFO: [PROCESS] case619
+2026-07-27 16:15:40 [rank3] INFO:   case619: 1797 frames, 192x352
+2026-07-27 16:16:08 [rank3] INFO:   ✓ case619: 22 chunks saved in 31.8s
+2026-07-27 16:16:08 [rank3] INFO: [PROCESS] case627
+2026-07-27 16:16:12 [rank3] INFO:   case627: 1797 frames, 192x352
+2026-07-27 16:16:40 [rank3] INFO:   ✓ case627: 22 chunks saved in 31.9s
+2026-07-27 16:16:40 [rank3] INFO: [PROCESS] case635
+2026-07-27 16:16:43 [rank3] INFO:   case635: 1797 frames, 192x352
+2026-07-27 16:17:11 [rank3] INFO:   ✓ case635: 22 chunks saved in 31.8s
+2026-07-27 16:17:12 [rank3] INFO: [PROCESS] case643
+2026-07-27 16:17:15 [rank3] INFO:   case643: 1797 frames, 192x352
+2026-07-27 16:17:43 [rank3] INFO:   ✓ case643: 22 chunks saved in 31.6s
+2026-07-27 16:17:43 [rank3] INFO: [PROCESS] case651
+2026-07-27 16:17:47 [rank3] INFO:   case651: 1797 frames, 192x352
+2026-07-27 16:18:16 [rank3] INFO:   ✓ case651: 22 chunks saved in 32.2s
+2026-07-27 16:18:16 [rank3] INFO: [PROCESS] case659
+2026-07-27 16:18:20 [rank3] INFO:   case659: 1797 frames, 192x352
+2026-07-27 16:18:48 [rank3] INFO:   ✓ case659: 22 chunks saved in 32.3s
+2026-07-27 16:18:48 [rank3] INFO: [PROCESS] case667
+2026-07-27 16:18:52 [rank3] INFO:   case667: 1797 frames, 192x352
+2026-07-27 16:19:20 [rank3] INFO:   ✓ case667: 22 chunks saved in 32.4s
+2026-07-27 16:19:21 [rank3] INFO: [PROCESS] case675
+2026-07-27 16:19:25 [rank3] INFO:   case675: 1797 frames, 192x352
+2026-07-27 16:19:52 [rank3] INFO:   ✓ case675: 22 chunks saved in 31.8s
+2026-07-27 16:19:53 [rank3] INFO: [PROCESS] case683
+2026-07-27 16:19:56 [rank3] INFO:   case683: 1797 frames, 192x352
+2026-07-27 16:20:24 [rank3] INFO:   ✓ case683: 22 chunks saved in 31.6s
+2026-07-27 16:20:24 [rank3] INFO: [PROCESS] case691
+2026-07-27 16:20:28 [rank3] INFO:   case691: 1797 frames, 192x352
+2026-07-27 16:20:56 [rank3] INFO:   ✓ case691: 22 chunks saved in 32.2s
+2026-07-27 16:20:56 [rank3] INFO: [PROCESS] case699
+2026-07-27 16:21:00 [rank3] INFO:   case699: 1797 frames, 192x352
+2026-07-27 16:21:28 [rank3] INFO:   ✓ case699: 22 chunks saved in 32.0s
+2026-07-27 16:21:29 [rank3] INFO: [PROCESS] case707
+2026-07-27 16:21:32 [rank3] INFO:   case707: 1797 frames, 192x352
+2026-07-27 16:22:01 [rank3] INFO:   ✓ case707: 22 chunks saved in 32.0s
+2026-07-27 16:22:01 [rank3] INFO: [PROCESS] case715
+2026-07-27 16:22:05 [rank3] INFO:   case715: 1797 frames, 192x352
+2026-07-27 16:22:33 [rank3] INFO:   ✓ case715: 22 chunks saved in 32.6s
+2026-07-27 16:22:33 [rank3] INFO: [PROCESS] case723
+2026-07-27 16:22:38 [rank3] INFO:   case723: 1797 frames, 192x352
+2026-07-27 16:23:06 [rank3] INFO:   ✓ case723: 22 chunks saved in 32.5s
+2026-07-27 16:23:06 [rank3] INFO: [PROCESS] case731
+2026-07-27 16:23:10 [rank3] INFO:   case731: 1797 frames, 192x352
+2026-07-27 16:23:38 [rank3] INFO:   ✓ case731: 22 chunks saved in 32.2s
+2026-07-27 16:23:38 [rank3] INFO: [PROCESS] case739
+2026-07-27 16:23:42 [rank3] INFO:   case739: 1797 frames, 192x352
+2026-07-27 16:24:10 [rank3] INFO:   ✓ case739: 22 chunks saved in 32.1s
+2026-07-27 16:24:11 [rank3] INFO: [PROCESS] case747
+2026-07-27 16:24:15 [rank3] INFO:   case747: 1797 frames, 192x352
+2026-07-27 16:24:43 [rank3] INFO:   ✓ case747: 22 chunks saved in 32.4s
+2026-07-27 16:24:43 [rank3] INFO: [PROCESS] case755
+2026-07-27 16:24:47 [rank3] INFO:   case755: 1797 frames, 192x352
+2026-07-27 16:25:15 [rank3] INFO:   ✓ case755: 22 chunks saved in 32.1s
+2026-07-27 16:25:15 [rank3] INFO: [PROCESS] case763
+2026-07-27 16:25:20 [rank3] INFO:   case763: 1797 frames, 192x352
+2026-07-27 16:25:48 [rank3] INFO:   ✓ case763: 22 chunks saved in 32.4s
+2026-07-27 16:25:48 [rank3] INFO: [PROCESS] case771
+2026-07-27 16:25:52 [rank3] INFO:   case771: 1797 frames, 192x352
+2026-07-27 16:26:20 [rank3] INFO:   ✓ case771: 22 chunks saved in 32.3s
+2026-07-27 16:26:20 [rank3] INFO: [PROCESS] case779
+2026-07-27 16:26:25 [rank3] INFO:   case779: 1797 frames, 192x352
+2026-07-27 16:26:53 [rank3] INFO:   ✓ case779: 22 chunks saved in 32.7s
+2026-07-27 16:26:53 [rank3] INFO: [PROCESS] case787
+2026-07-27 16:26:57 [rank3] INFO:   case787: 1797 frames, 192x352
+2026-07-27 16:27:25 [rank3] INFO:   ✓ case787: 22 chunks saved in 32.4s
+2026-07-27 16:27:26 [rank3] INFO: [PROCESS] case795
+2026-07-27 16:27:30 [rank3] INFO:   case795: 1797 frames, 192x352
+2026-07-27 16:28:00 [rank3] INFO:   ✓ case795: 22 chunks saved in 34.3s
+2026-07-27 16:28:00 [rank3] INFO: [PROCESS] case803
+2026-07-27 16:28:04 [rank3] INFO:   case803: 1797 frames, 192x352
+2026-07-27 16:28:32 [rank3] INFO:   ✓ case803: 22 chunks saved in 32.4s
+2026-07-27 16:28:33 [rank3] INFO: [PROCESS] case811
+2026-07-27 16:28:37 [rank3] INFO:   case811: 1797 frames, 192x352
+2026-07-27 16:29:06 [rank3] INFO:   ✓ case811: 22 chunks saved in 33.0s
+2026-07-27 16:29:06 [rank3] INFO: [PROCESS] case819
+2026-07-27 16:29:11 [rank3] INFO:   case819: 1797 frames, 192x352
+2026-07-27 16:29:39 [rank3] INFO:   ✓ case819: 22 chunks saved in 33.1s
+2026-07-27 16:29:39 [rank3] INFO: [PROCESS] case827
+2026-07-27 16:29:43 [rank3] INFO:   case827: 1797 frames, 192x352
+2026-07-27 16:30:11 [rank3] INFO:   ✓ case827: 22 chunks saved in 32.1s
+2026-07-27 16:30:11 [rank3] INFO: [PROCESS] case835
+2026-07-27 16:30:15 [rank3] INFO:   case835: 1797 frames, 192x352
+2026-07-27 16:30:43 [rank3] INFO:   ✓ case835: 22 chunks saved in 32.0s
+2026-07-27 16:30:43 [rank3] INFO: [PROCESS] case843
+2026-07-27 16:30:47 [rank3] INFO:   case843: 1797 frames, 192x352
+2026-07-27 16:31:15 [rank3] INFO:   ✓ case843: 22 chunks saved in 31.9s
+2026-07-27 16:31:15 [rank3] INFO: [PROCESS] case851
+2026-07-27 16:31:19 [rank3] INFO:   case851: 1797 frames, 192x352
+2026-07-27 16:31:48 [rank3] INFO:   ✓ case851: 22 chunks saved in 32.1s
+2026-07-27 16:31:48 [rank3] INFO: [PROCESS] case859
+2026-07-27 16:31:52 [rank3] INFO:   case859: 1797 frames, 192x352
+2026-07-27 16:32:20 [rank3] INFO:   ✓ case859: 22 chunks saved in 32.0s
+2026-07-27 16:32:20 [rank3] INFO: [PROCESS] case867
+2026-07-27 16:32:24 [rank3] INFO:   case867: 1797 frames, 192x352
+2026-07-27 16:32:52 [rank3] INFO:   ✓ case867: 22 chunks saved in 31.9s
+2026-07-27 16:32:52 [rank3] INFO: [PROCESS] case875
+2026-07-27 16:32:56 [rank3] INFO:   case875: 1797 frames, 192x352
+2026-07-27 16:33:24 [rank3] INFO:   ✓ case875: 22 chunks saved in 32.2s
+2026-07-27 16:33:24 [rank3] INFO: [PROCESS] case883
+2026-07-27 16:33:28 [rank3] INFO:   case883: 1797 frames, 192x352
+2026-07-27 16:33:56 [rank3] INFO:   ✓ case883: 22 chunks saved in 31.9s
+2026-07-27 16:33:56 [rank3] INFO: [PROCESS] case891
+2026-07-27 16:34:01 [rank3] INFO:   case891: 1797 frames, 192x352
+2026-07-27 16:34:29 [rank3] INFO:   ✓ case891: 22 chunks saved in 32.4s
+2026-07-27 16:34:29 [rank3] INFO: [PROCESS] case899
+2026-07-27 16:34:33 [rank3] INFO:   case899: 1797 frames, 192x352
+2026-07-27 16:35:01 [rank3] INFO:   ✓ case899: 22 chunks saved in 32.2s
+2026-07-27 16:35:01 [rank3] INFO: [PROCESS] case907
+2026-07-27 16:35:06 [rank3] INFO:   case907: 1797 frames, 192x352
+2026-07-27 16:35:34 [rank3] INFO:   ✓ case907: 22 chunks saved in 33.1s
+2026-07-27 16:35:34 [rank3] INFO: [PROCESS] case915
+2026-07-27 16:35:38 [rank3] INFO:   case915: 1797 frames, 192x352
+2026-07-27 16:36:06 [rank3] INFO:   ✓ case915: 22 chunks saved in 32.0s
+2026-07-27 16:36:06 [rank3] INFO: [PROCESS] case923
+2026-07-27 16:36:10 [rank3] INFO:   case923: 1797 frames, 192x352
+2026-07-27 16:36:39 [rank3] INFO:   ✓ case923: 22 chunks saved in 32.2s
+2026-07-27 16:36:39 [rank3] INFO: [PROCESS] case931
+2026-07-27 16:36:43 [rank3] INFO:   case931: 1797 frames, 192x352
+2026-07-27 16:37:11 [rank3] INFO:   ✓ case931: 22 chunks saved in 32.4s
+2026-07-27 16:37:11 [rank3] INFO: [PROCESS] case939
+2026-07-27 16:37:15 [rank3] INFO:   case939: 1797 frames, 192x352
+2026-07-27 16:37:43 [rank3] INFO:   ✓ case939: 22 chunks saved in 31.9s
+2026-07-27 16:37:43 [rank3] INFO: [PROCESS] case947
+2026-07-27 16:37:48 [rank3] INFO:   case947: 1797 frames, 192x352
+2026-07-27 16:38:16 [rank3] INFO:   ✓ case947: 22 chunks saved in 32.9s
+2026-07-27 16:38:16 [rank3] INFO: [PROCESS] case955
+2026-07-27 16:38:21 [rank3] INFO:   case955: 1797 frames, 192x352
+2026-07-27 16:38:49 [rank3] INFO:   ✓ case955: 22 chunks saved in 32.6s
+2026-07-27 16:38:49 [rank3] INFO: [PROCESS] case963
+2026-07-27 16:38:53 [rank3] INFO:   case963: 1797 frames, 192x352
+2026-07-27 16:39:21 [rank3] INFO:   ✓ case963: 22 chunks saved in 32.3s
+2026-07-27 16:39:22 [rank3] INFO: [PROCESS] case971
+2026-07-27 16:39:26 [rank3] INFO:   case971: 1797 frames, 192x352
+2026-07-27 16:39:54 [rank3] INFO:   ✓ case971: 22 chunks saved in 32.1s
+2026-07-27 16:39:54 [rank3] INFO: [PROCESS] case979
+2026-07-27 16:39:58 [rank3] INFO:   case979: 1797 frames, 192x352
+2026-07-27 16:40:26 [rank3] INFO:   ✓ case979: 22 chunks saved in 31.9s
+2026-07-27 16:40:26 [rank3] INFO: [PROCESS] case987
+2026-07-27 16:40:30 [rank3] INFO:   case987: 1797 frames, 192x352
+2026-07-27 16:40:58 [rank3] INFO:   ✓ case987: 22 chunks saved in 32.1s
+2026-07-27 16:40:58 [rank3] INFO: [PROCESS] case995
+2026-07-27 16:41:03 [rank3] INFO:   case995: 1797 frames, 192x352
+2026-07-27 16:41:31 [rank3] INFO:   ✓ case995: 22 chunks saved in 32.7s
+2026-07-27 16:41:31 [rank3] INFO: [PROCESS] case1003
+2026-07-27 16:41:35 [rank3] INFO:   case1003: 1797 frames, 192x352
+2026-07-27 16:42:03 [rank3] INFO:   ✓ case1003: 22 chunks saved in 32.3s
+2026-07-27 16:42:03 [rank3] INFO: [PROCESS] case1011
+2026-07-27 16:42:07 [rank3] INFO:   case1011: 1797 frames, 192x352
+2026-07-27 16:42:35 [rank3] INFO:   ✓ case1011: 22 chunks saved in 31.8s
+2026-07-27 16:42:35 [rank3] INFO: [PROCESS] case1019
+2026-07-27 16:42:39 [rank3] INFO:   case1019: 1797 frames, 192x352
+2026-07-27 16:43:07 [rank3] INFO:   ✓ case1019: 22 chunks saved in 32.0s
+2026-07-27 16:43:07 [rank3] INFO: [PROCESS] case1027
+2026-07-27 16:43:11 [rank3] INFO:   case1027: 1797 frames, 192x352
+2026-07-27 16:43:39 [rank3] INFO:   ✓ case1027: 22 chunks saved in 32.1s
+2026-07-27 16:43:40 [rank3] INFO: [PROCESS] case1035
+2026-07-27 16:43:44 [rank3] INFO:   case1035: 1797 frames, 192x352
+2026-07-27 16:44:12 [rank3] INFO:   ✓ case1035: 22 chunks saved in 32.3s
+2026-07-27 16:44:12 [rank3] INFO: [PROCESS] case1043
+2026-07-27 16:44:16 [rank3] INFO:   case1043: 1797 frames, 192x352
+2026-07-27 16:44:44 [rank3] INFO:   ✓ case1043: 22 chunks saved in 32.4s
+2026-07-27 16:44:45 [rank3] INFO: [PROCESS] case1051
+2026-07-27 16:44:49 [rank3] INFO:   case1051: 1797 frames, 192x352
+2026-07-27 16:45:17 [rank3] INFO:   ✓ case1051: 22 chunks saved in 32.3s
+2026-07-27 16:45:17 [rank3] INFO: [PROCESS] case1059
+2026-07-27 16:45:22 [rank3] INFO:   case1059: 1797 frames, 192x352
+2026-07-27 16:45:50 [rank3] INFO:   ✓ case1059: 22 chunks saved in 33.6s
+2026-07-27 16:45:51 [rank3] INFO: [PROCESS] case1067
+2026-07-27 16:45:55 [rank3] INFO:   case1067: 1797 frames, 192x352
+2026-07-27 16:46:22 [rank3] INFO:   ✓ case1067: 22 chunks saved in 31.9s
+2026-07-27 16:46:23 [rank3] INFO: [PROCESS] case1075
+2026-07-27 16:46:27 [rank3] INFO:   case1075: 1797 frames, 192x352
+2026-07-27 16:46:55 [rank3] INFO:   ✓ case1075: 22 chunks saved in 32.5s
+2026-07-27 16:46:55 [rank3] INFO: [PROCESS] case1083
+2026-07-27 16:46:59 [rank3] INFO:   case1083: 1797 frames, 192x352
+2026-07-27 16:47:28 [rank3] INFO:   ✓ case1083: 22 chunks saved in 32.5s
+2026-07-27 16:47:28 [rank3] INFO: [PROCESS] case1091
+2026-07-27 16:47:33 [rank3] INFO:   case1091: 1797 frames, 192x352
+2026-07-27 16:48:02 [rank3] INFO:   ✓ case1091: 22 chunks saved in 33.6s
+2026-07-27 16:48:02 [rank3] INFO: [PROCESS] case1099
+2026-07-27 16:48:06 [rank3] INFO:   case1099: 1797 frames, 192x352
+2026-07-27 16:48:34 [rank3] INFO:   ✓ case1099: 22 chunks saved in 32.1s
+2026-07-27 16:48:34 [rank3] INFO: [PROCESS] case1107
+2026-07-27 16:48:38 [rank3] INFO:   case1107: 1797 frames, 192x352
+2026-07-27 16:49:06 [rank3] INFO:   ✓ case1107: 22 chunks saved in 32.3s
+2026-07-27 16:49:06 [rank3] INFO: [PROCESS] case1115
+2026-07-27 16:49:10 [rank3] INFO:   case1115: 1797 frames, 192x352
+2026-07-27 16:49:38 [rank3] INFO:   ✓ case1115: 22 chunks saved in 31.7s
+2026-07-27 16:49:38 [rank3] INFO: [PROCESS] case1123
+2026-07-27 16:49:42 [rank3] INFO:   case1123: 1797 frames, 192x352
+2026-07-27 16:50:10 [rank3] INFO:   ✓ case1123: 22 chunks saved in 32.2s
+2026-07-27 16:50:10 [rank3] INFO: [PROCESS] case1131
+2026-07-27 16:50:15 [rank3] INFO:   case1131: 1797 frames, 192x352
+2026-07-27 16:50:43 [rank3] INFO:   ✓ case1131: 22 chunks saved in 32.4s
+2026-07-27 16:50:43 [rank3] INFO: [PROCESS] case1139
+2026-07-27 16:50:47 [rank3] INFO:   case1139: 1797 frames, 192x352
+2026-07-27 16:51:16 [rank3] INFO:   ✓ case1139: 22 chunks saved in 32.6s
+2026-07-27 16:51:16 [rank3] INFO: [PROCESS] case1147
+2026-07-27 16:51:20 [rank3] INFO:   case1147: 1797 frames, 192x352
+2026-07-27 16:51:48 [rank3] INFO:   ✓ case1147: 22 chunks saved in 32.7s
+2026-07-27 16:51:49 [rank3] INFO: [PROCESS] case1155
+2026-07-27 16:51:53 [rank3] INFO:   case1155: 1797 frames, 192x352
+2026-07-27 16:52:21 [rank3] INFO:   ✓ case1155: 22 chunks saved in 32.6s
+2026-07-27 16:52:21 [rank3] INFO: [PROCESS] case1163
+2026-07-27 16:52:26 [rank3] INFO:   case1163: 1797 frames, 192x352
+2026-07-27 16:52:54 [rank3] INFO:   ✓ case1163: 22 chunks saved in 32.8s
+2026-07-27 16:52:54 [rank3] INFO: [PROCESS] case1171
+2026-07-27 16:52:58 [rank3] INFO:   case1171: 1797 frames, 192x352
+2026-07-27 16:53:27 [rank3] INFO:   ✓ case1171: 22 chunks saved in 32.3s
+2026-07-27 16:53:27 [rank3] INFO: [PROCESS] case1179
+2026-07-27 16:53:31 [rank3] INFO:   case1179: 1797 frames, 192x352
+2026-07-27 16:54:00 [rank3] INFO:   ✓ case1179: 22 chunks saved in 32.8s
+2026-07-27 16:54:00 [rank3] INFO: [PROCESS] case1187
+2026-07-27 16:54:04 [rank3] INFO:   case1187: 1797 frames, 192x352
+2026-07-27 16:54:32 [rank3] INFO:   ✓ case1187: 22 chunks saved in 32.5s
+2026-07-27 16:54:32 [rank3] INFO: [PROCESS] case1195
+2026-07-27 16:54:37 [rank3] INFO:   case1195: 1797 frames, 192x352
+2026-07-27 16:55:06 [rank3] INFO:   ✓ case1195: 22 chunks saved in 33.4s
+2026-07-27 16:55:06 [rank3] INFO: [PROCESS] case1203
+2026-07-27 16:55:11 [rank3] INFO:   case1203: 1797 frames, 192x352

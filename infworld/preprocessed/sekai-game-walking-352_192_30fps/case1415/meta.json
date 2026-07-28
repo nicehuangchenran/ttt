@@ -1,0 +1,20 @@
+{
+  "name": "case1415",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dimly lit path surrounded by dense foliage under a cloudy, foggy night sky. As the camera advances, it reveals a traditional Japanese torii gate illuminated by soft red lanterns, leading into a serene shrine complex. The camera continues to move steadily, passing through the torii gates, each adorned with intricate wooden carvings and glowing lanterns that cast a warm, reddish hue on the surrounding stone pathways. The environment is enveloped in mist, creating an ethereal atmosphere as the camera pans slightly to capture the towering trees and the faint outlines of distant structures shrouded in fog. The viewer then approaches a series of closely spaced torii gates, their vermilion pillars standing out starkly against the dark, shadowy backdrop. The camera angle shifts subtly, offering a closer view of the lanterns, which flicker gently, adding a dynamic element to the otherwise still scene. As the journey progresses, the camera navigates through the winding paths, the ambient light fluctuating between the soft glow of the lanterns and the deep shadows cast by the dense forest, enhancing the mysterious and tranquil ambiance of Fushimi Inari Taisha at night.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

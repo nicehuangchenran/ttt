@@ -1,0 +1,20 @@
+{
+  "name": "case423",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins by moving forward along a narrow dirt path flanked by tall metal fences, leading deeper into a dense forest shrouded in fog. The camera steadily advances, capturing the misty atmosphere that envelops the scene, with visibility gradually diminishing as the path curves slightly to the right. The surrounding trees loom large, their silhouettes barely discernible through the thick haze. As the path continues, the camera angle shifts slightly upward, revealing more of the overhanging branches and the diffused light filtering through the canopy. The scene transitions to an open area where the path widens, bordered by wooden railings and scattered foliage. The camera pans to the left, showcasing a small wooden structure partially obscured by the fog, its details faintly visible. The environment remains quiet and empty, with no signs of human presence. The lighting is dim, casting a greenish hue over the entire landscape, enhancing the eerie and isolated ambiance. The camera then focuses on a distant building with a red roof, partially hidden by the trees, before returning to the path, continuing its steady forward movement through the foggy, enigmatic forest.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

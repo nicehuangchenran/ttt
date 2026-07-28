@@ -1,0 +1,20 @@
+{
+  "name": "case642",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow dirt path flanked by dense greenery under a bright, sunny sky. The camera smoothly advances, capturing the intricate details of the surrounding foliage, with sunlight filtering through the leaves, casting dappled shadows on the ground. As the path progresses, it leads to a rustic wooden bridge spanning a small stream, where the camera briefly pauses to showcase the natural water flow beneath. Crossing the bridge, the path opens up into a clearing that offers a breathtaking view of Castle Rock Beach, with its rocky shoreline and the vast expanse of the ocean stretching to the horizon. The camera then pans slightly to the right, revealing a wooden bench invitingly placed near the edge of the beach, before turning back into the forested area. The journey continues along a paved road winding through the trees, with the camera maintaining a steady forward motion, capturing the serene beauty of the natural surroundings. The road curves gently, bordered by lush vegetation and occasional patches of sunlight breaking through the canopy, creating a harmonious blend of light and shadow. The entire sequence is captured from a first-person perspective, providing an immersive experience of the tranquil outdoor setting at Castle Rock Beach, Meelup, Australia, during a clear, sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Castle Rock Beach, Meelup, Australia",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

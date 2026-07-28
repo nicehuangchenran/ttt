@@ -1,0 +1,20 @@
+{
+  "name": "case1044",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer begins their journey along a dimly lit pathway in East Maddon Park, London, under a heavy downpour at night. The camera moves steadily forward, capturing the rhythmic pattering of raindrops on the wet pavement and the soft glow of street lamps that intermittently illuminate the path. As the perspective advances, the surrounding trees loom large, their dark silhouettes barely discernible against the murky sky. The camera angle remains consistent, offering a first-person view that immerses the viewer in the solitary walk. On the right side of the path, benches appear sporadically, their surfaces glistening with rainwater, while the left side is bordered by dense foliage. The ambient light from the street lamps casts long shadows, creating a play of light and darkness that enhances the eerie atmosphere. The scene remains devoid of people, emphasizing the park's emptiness. The camera continues its steady progression, revealing more of the park's tranquil yet somber setting, with the rain persistently falling and the night enveloping everything in a serene, monochromatic palette of blues and grays.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

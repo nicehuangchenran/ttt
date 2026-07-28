@@ -1,0 +1,20 @@
+{
+  "name": "case939",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a sweeping panoramic view of M\u00fdrdalssandur's rugged landscape under a cloudy sky during sunset. The camera slowly pans across the terrain, capturing the jagged rocks and moss-covered surfaces that dominate the foreground. As the camera moves, it reveals the vast expanse of the valley, with distant mountains faintly visible through the haze. The sky is painted in warm hues of orange and yellow, with thick clouds drifting lazily overhead, casting dynamic shadows over the rocky terrain. The camera angle shifts slightly, offering different perspectives of the undulating landscape, emphasizing the isolation and emptiness of the area. The lighting gradually softens as the sun descends, bathing the scene in a golden glow that highlights the textures and contours of the rocks. Throughout the sequence, there are no signs of human presence, reinforcing the serene and untouched nature of this remote Icelandic location. The camera continues its steady movement, maintaining a consistent focus on the natural beauty and tranquility of the environment, until the final frames capture the last light of day fading into the horizon.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

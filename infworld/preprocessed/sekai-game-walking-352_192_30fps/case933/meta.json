@@ -1,0 +1,20 @@
+{
+  "name": "case933",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement through a dense, foggy forest in Le Prarion, Chamonix-Mont-Blanc, France. The camera glides smoothly over uneven terrain, capturing the intricate details of the forest floor covered with fallen leaves, small rocks, and patches of grass. As the viewer progresses, tall pine trees loom on either side, their trunks partially obscured by the thick mist that permeates the air, creating a hazy, ethereal atmosphere. The camera angle remains at eye level, providing an immersive experience as if the viewer is walking through the forest themselves. The light is diffused, casting a soft, muted glow that filters through the canopy above, enhancing the sense of depth and mystery. The path gradually leads to a set of railway tracks, which appear weathered and overgrown with vegetation, indicating they have been unused for some time. The camera continues along these tracks, the fog intensifying as it moves deeper into the forest, enveloping the surroundings in a serene yet isolated ambiance. The entire scene is devoid of any human presence, emphasizing the solitude and untouched nature of this outdoor setting. The consistent forward motion and subtle shifts in camera angle maintain a continuous flow, drawing the viewer further into the tranquil, fog-laden landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

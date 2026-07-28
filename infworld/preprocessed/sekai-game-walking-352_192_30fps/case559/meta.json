@@ -1,0 +1,20 @@
+{
+  "name": "case559",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a wooden walkway that stretches across a rugged, barren landscape. As the camera advances, it captures the intricate details of the weathered planks and the rocky terrain flanking the path. The surrounding environment is dominated by undulating hills and mountains shrouded in a dense layer of clouds, creating a moody and atmospheric setting. The sky above is painted in hues of orange and yellow, indicative of the approaching sunset, casting long shadows and bathing the scene in a warm, golden light. The camera pans slightly to the right, revealing a simple wooden fence that guides the path through the uneven terrain. As the viewer continues their journey, the camera angle shifts subtly, offering a broader view of the expansive landscape. The ground is covered with patches of moss and scattered rocks, adding texture and depth to the scene. The camera then focuses on a small, glowing object on the ground, which stands out against the darker surroundings. The overall ambiance is serene and isolated, with no signs of human presence, emphasizing the natural beauty and tranquility of M\u00fdrdalssandur in Southern Iceland during a cloudy, foggy sunset.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "sunset"
+}

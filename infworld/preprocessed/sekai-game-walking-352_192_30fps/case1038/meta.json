@@ -1,0 +1,20 @@
+{
+  "name": "case1038",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily through a snowy forest in Yamadera, Yamagata Prefecture, Japan. The camera pans smoothly from left to right, capturing the dense array of tall trees blanketed in snow, their bare branches reaching into the overcast sky. As the viewer progresses, the path winds gently uphill, revealing patches of exposed earth and scattered rocks partially covered by a thin layer of snow. The camera angle shifts slightly downward, focusing on the uneven terrain as the person navigates carefully. The surrounding environment is serene and untouched, with no other individuals in sight. The muted daylight filters through the trees, casting soft shadows that dance across the landscape. The camera continues to move forward, passing by a large rock formation on the left, its surface slick with moisture. The path narrows as it approaches a small wooden bridge spanning a shallow stream, the water glistening faintly under the diffused light. The camera then pans up, showcasing the towering trees that dominate the scene, their trunks thick and sturdy. The overall atmosphere is quiet and peaceful, with the gentle crunch of snow underfoot being the only sound breaking the stillness. The journey through this tranquil, wintry woodland unfolds seamlessly, offering a continuous and immersive experience of the natural beauty of Yamadera.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

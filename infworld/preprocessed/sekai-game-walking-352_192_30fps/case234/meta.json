@@ -1,0 +1,20 @@
+{
+  "name": "case234",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a rugged dirt path bordered by dense greenery and towering pine trees. As the viewer progresses, the camera pans slightly upward, revealing a breathtaking vista of snow-capped mountains under a clear blue sky. The sun casts a warm glow over the landscape, enhancing the vibrant greens of the grass and the deep blues of the distant peaks. The path continues to wind through the forest, with the camera occasionally tilting to capture the surrounding trees and underbrush. The environment remains serene and untouched, with no signs of human presence. The camera maintains a consistent eye-level angle, providing an immersive experience as it navigates the natural terrain. As the journey advances, the viewer encounters a small clearing where the path intersects with a cable car line stretching across the valley, adding a subtle element of modern infrastructure to the otherwise pristine wilderness. The overall scene is a harmonious blend of earthy tones and bright sunlight, capturing the essence of a tranquil day in Le Prarion, Chamonix-Mont-Blanc, France.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case443",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady ascent up a moss-covered stone staircase leading towards an old, weathered building amidst dense foliage. The camera moves forward, capturing the intricate textures of the wet stones and the surrounding greenery under a cloudy sky. As the viewer progresses, the path transitions from the staircase to a narrow, cobblestone walkway bordered by stone walls and lush vegetation. The camera continues along this path, revealing more of the overgrown environment, with trees and bushes partially obscuring the view ahead. The atmosphere is misty, with fog gently swirling through the trees, creating a sense of depth and mystery. The lighting is soft and diffused, casting subtle shadows that enhance the natural textures of the scene. The camera angle remains at eye level, providing a continuous and immersive experience as it navigates through the winding path. The environment gradually opens up into a wider trail, where the ground becomes uneven and covered with fallen leaves and twigs. The viewer's movement is smooth and deliberate, maintaining a steady pace as they explore the serene, untouched landscape of Shengshan Island, Zhoushan, China, during a quiet, foggy day. The scene remains empty, with no signs of human presence, emphasizing the solitude and tranquility of the natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

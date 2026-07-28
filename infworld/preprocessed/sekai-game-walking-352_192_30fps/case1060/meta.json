@@ -1,0 +1,20 @@
+{
+  "name": "case1060",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a moss-covered stone path winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly glides over the uneven terrain, revealing large rocks and patches of grass flanking the path, while the surrounding trees loom tall, their branches intertwining overhead. As the viewer progresses, the foggy atmosphere thickens, casting a soft, diffused light that mutes the colors of the environment into shades of green and gray. The camera angle remains at eye level, providing an immersive experience as it navigates slight turns and inclines in the path. The scene transitions to a set of metal railings on the right, indicating a change in elevation as the path ascends gently. The viewer continues along this new route, the camera panning slightly to capture the misty expanse ahead, where the forest appears to stretch endlessly. The overall ambiance is serene yet mysterious, with no other individuals present, emphasizing the solitude of the journey through this tranquil, natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

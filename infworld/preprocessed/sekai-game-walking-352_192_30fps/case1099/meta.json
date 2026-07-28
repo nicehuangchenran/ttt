@@ -1,0 +1,20 @@
+{
+  "name": "case1099",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily along a dimly lit road at night in East Maddon Park, London, United Kingdom. The camera advances forward, capturing the wet pavement reflecting faint streetlights as rain continues to fall, creating a consistent pattern of droplets visible against the dark backdrop. The road curves gently, bordered by trees whose silhouettes loom large under the sparse illumination, their leaves occasionally catching the light. As the camera progresses, it reveals more of the urban landscape, including lampposts that intermittently cast pools of light, enhancing the visibility of the surroundings. The camera angle remains steady, focusing straight ahead but subtly adjusting to follow the road's curvature. The environment is quiet and devoid of people, emphasizing the solitude of the scene. The overall atmosphere is characterized by muted colors, dominated by shades of blue and gray, with the occasional warm glow from the streetlights piercing through the darkness. The continuous rainfall adds a layer of texture to the visual experience, with each drop hitting the ground and creating small ripples on the wet surfaces. The scene maintains a consistent pace, with no abrupt changes or sudden events, offering a serene yet somber nocturnal journey through an empty park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

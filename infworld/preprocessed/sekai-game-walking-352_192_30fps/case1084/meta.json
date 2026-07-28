@@ -1,0 +1,20 @@
+{
+  "name": "case1084",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a smooth forward movement along a wide, empty road lined with lush green trees and neatly arranged street lamps, capturing the serene ambiance of East Maddon Park in London under a bright sunny sky. As the camera progresses, it maintains a steady eye-level angle, offering a clear view of the double yellow lines marking the center of the road and the well-maintained sidewalks flanking either side. The scene transitions smoothly as the path curves gently to the right, revealing a small park area with benches and more trees, bathed in soft sunlight that casts long shadows across the pavement. The camera continues its forward motion, passing by a stone wall on the right and a traffic light on the left, indicating an upcoming intersection. The environment remains consistently urban yet tranquil, with no visible crowds, enhancing the sense of solitude. The lighting remains consistent throughout, with warm golden hues accentuating the natural and architectural features, creating a harmonious blend of urban design and nature. As the journey progresses, the camera subtly shifts to capture the expansive view ahead, emphasizing the open space and the gentle curve of the road leading into the distance.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

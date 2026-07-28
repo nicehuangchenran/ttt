@@ -1,0 +1,20 @@
+{
+  "name": "case1089",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a rugged, moss-covered landscape in M\u00fdrdalssandur, Southern Region, Iceland, under a cloudy and foggy sky. The camera smoothly glides over uneven terrain, revealing patches of vibrant green moss interspersed with dark volcanic rocks. As the movement continues, the perspective shifts slightly to the right, showcasing a small stream flowing through the rocky path, its surface reflecting the muted light of the overcast day. The surrounding hills, shrouded in mist, create a sense of depth and isolation, with their slopes gradually fading into the fog. The camera then pans to the left, capturing a wooden fence partially obscured by the dense vegetation, hinting at human presence in this otherwise untouched natural setting. The lighting remains consistently soft and diffused, casting gentle shadows that accentuate the textures of the rocks and moss. As the journey progresses, the camera angle adjusts to provide a broader view of the expansive valley, emphasizing the vastness and solitude of the area. The scene remains empty of any human activity, reinforcing the serene and untouched atmosphere of this remote Icelandic location. The final moments of the video offer a sweeping panoramic view of the landscape, with the camera slowly panning across the horizon, capturing the interplay of light and shadow on the distant hills and the intricate details of the foreground terrain.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

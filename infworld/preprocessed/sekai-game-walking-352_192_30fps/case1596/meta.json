@@ -1,0 +1,20 @@
+{
+  "name": "case1596",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a paved path through East Maddon Park in London, United Kingdom, under sunny daytime conditions. The camera moves steadily forward, capturing the lush greenery and dense foliage that lines both sides of the path, with sunlight filtering through the leaves, casting dappled shadows on the ground. As the walk continues, the path curves gently, revealing a small wooden bench nestled among the trees, inviting a momentary pause. The camera then pans slightly to the right, showing an open area with a few scattered benches and a lamppost, before turning left towards a more open section of the park. The scene transitions smoothly as the path leads to a paved area with outdoor seating, featuring tables and chairs arranged neatly, suggesting a caf\u00e9 or rest area. The camera continues moving forward, passing by a large building with a patio area, its windows reflecting the bright sunlight. The path then veers to the right, leading into a more wooded area with tall trees and dense underbrush. The camera captures the serene beauty of the natural surroundings, with the sun casting long shadows across the path. As the walk progresses, the path opens up to a wider area with a playground in the distance, enclosed by a fence, and a few scattered trees providing shade. The camera maintains a steady forward movement, offering a continuous and immersive view of the tranquil and picturesque park setting. The overall lighting remains consistent, with vibrant greens and warm sunlight enhancing the natural beauty of the environment. The scene concludes with the camera approaching a gate, marking the end of the path and the transition to another part of the park. Throughout the video, the absence of people adds to the peaceful and serene atmosphere, allowing the viewer to fully appreciate the natural and architectural elements of East Maddon Park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

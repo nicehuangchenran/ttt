@@ -1,0 +1,20 @@
+{
+  "name": "case211",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer's perspective begins with a close-up view of snow-laden pine branches, their needles heavy with fresh white powder. As the camera slowly pans upward, it reveals more of the dense forest, with each tree similarly blanketed in snow, creating a serene and untouched winter landscape. The movement is smooth and deliberate, maintaining a steady focus on the intricate details of the snow-covered foliage. In the background, the expansive Lago di Braies stretches out, its surface calm and partially obscured by a light mist that adds a soft, ethereal quality to the scene. The surrounding mountains rise majestically in the distance, their peaks shrouded in a gentle haze, enhancing the sense of depth and vastness. The daylight is diffused through the overcast sky, casting an even, muted light across the entire scene, which emphasizes the pristine whiteness of the snow and the deep green of the evergreen trees. There are no other visible elements or movements within the frame, reinforcing the quiet solitude of this remote, natural setting. The camera remains static for a moment, allowing the viewer to fully absorb the tranquil beauty of the snowy forest and the lake beyond.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

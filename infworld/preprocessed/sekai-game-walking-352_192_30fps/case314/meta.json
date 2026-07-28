@@ -1,0 +1,20 @@
+{
+  "name": "case314",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow, rocky path surrounded by dense forest. The camera moves steadily forward, capturing the intricate details of the trail, which is covered with small stones and patches of dirt. Tall evergreen trees flank both sides of the path, their branches occasionally reaching out over the trail, casting dappled shadows on the ground. As the walk continues, the camera angle shifts slightly to reveal more of the surrounding environment, showcasing the lush green foliage and the bright sunlight filtering through the canopy. The path gradually curves to the right, leading towards a serene lake that comes into view, its calm blue waters reflecting the clear sky above. The camera then pans to show a wooden bridge spanning a small stream, its rustic structure blending seamlessly with the natural surroundings. The bridge leads further into the forest, where the path continues winding through the trees, maintaining a consistent pace and direction throughout the journey. The overall scene is bathed in warm, natural light, emphasizing the vibrant greens of the forest and the tranquil beauty of the lake, all captured from an immersive, first-person viewpoint.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

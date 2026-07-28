@@ -1,0 +1,16 @@
+{"step": 1, "loss": 0.025912226177752018, "grad_norm": 0.8346561193466187, "lr": 1e-05, "video": "case430", "num_chunks": 3, "step_second": 4.102129936218262}
+{"step": 2, "loss": 0.07792280428111553, "grad_norm": 0.5300809741020203, "lr": 1e-05, "video": "case9", "num_chunks": 3, "step_second": 2.743938684463501}
+{"step": 3, "loss": 0.11616248451173306, "grad_norm": 0.4314821660518646, "lr": 1e-05, "video": "case1365", "num_chunks": 3, "step_second": 2.7479984760284424}
+{"step": 4, "loss": 0.10625718906521797, "grad_norm": 0.6944399476051331, "lr": 1e-05, "video": "case478", "num_chunks": 3, "step_second": 2.7439820766448975}
+{"step": 5, "loss": 0.0846588034182787, "grad_norm": 0.45586395263671875, "lr": 1e-05, "video": "case1261", "num_chunks": 3, "step_second": 2.7023472785949707}
+{"step": 6, "loss": 0.06376834027469158, "grad_norm": 0.4040743112564087, "lr": 1e-05, "video": "case476", "num_chunks": 3, "step_second": 2.773808717727661}
+{"step": 7, "loss": 0.10310323908925056, "grad_norm": 0.6533734202384949, "lr": 1e-05, "video": "case1613", "num_chunks": 3, "step_second": 2.803773880004883}
+{"step": 8, "loss": 0.1085488460958004, "grad_norm": 0.7240549921989441, "lr": 1e-05, "video": "case567", "num_chunks": 3, "step_second": 2.755516767501831}
+{"step": 9, "loss": 0.22721201181411743, "grad_norm": 0.7675021886825562, "lr": 1e-05, "video": "case122", "num_chunks": 3, "step_second": 2.7472288608551025}
+{"step": 10, "loss": 0.11117370426654816, "grad_norm": 0.408692330121994, "lr": 1e-05, "video": "case944", "num_chunks": 3, "step_second": 2.844820022583008}
+{"step": 11, "loss": 0.09722397103905678, "grad_norm": 0.640265703201294, "lr": 1e-05, "video": "case880", "num_chunks": 3, "step_second": 2.8399789333343506}
+{"step": 12, "loss": 0.06701719388365746, "grad_norm": 0.29571518301963806, "lr": 1e-05, "video": "case41", "num_chunks": 3, "step_second": 2.826108932495117}
+{"step": 13, "loss": 0.1143997311592102, "grad_norm": 0.26458391547203064, "lr": 1e-05, "video": "case909", "num_chunks": 3, "step_second": 2.727647542953491}
+{"step": 14, "loss": 0.1212681271135807, "grad_norm": 0.5842092633247375, "lr": 1e-05, "video": "case18", "num_chunks": 3, "step_second": 2.8104004859924316}
+{"step": 15, "loss": 0.37260606326162815, "grad_norm": 0.30063050985336304, "lr": 1e-05, "video": "case679", "num_chunks": 3, "step_second": 2.8478291034698486}
+{"step": 16, "loss": 0.10719433799386024, "grad_norm": 0.39213523268699646, "lr": 1e-05, "video": "case270", "num_chunks": 3, "step_second": 2.8448219299316406}

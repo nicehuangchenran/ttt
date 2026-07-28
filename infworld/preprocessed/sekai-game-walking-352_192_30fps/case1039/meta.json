@@ -1,0 +1,20 @@
+{
+  "name": "case1039",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a snow-covered path winding through a dense forest of tall evergreen trees. The camera moves forward smoothly, capturing the intricate details of the snow-laden branches and the soft crunch of footsteps underfoot. As the path curves gently, the surrounding trees create a natural tunnel effect, their trunks standing tall and dark against the white landscape. The camera angle remains at eye level, providing an immersive view of the serene winter environment. The light is diffused, casting a soft glow that enhances the muted colors of the snowy scene. Gradually, the path leads to a wooden bridge spanning a calm, icy river. The camera continues its forward motion, crossing the bridge and revealing a vast, snow-covered lake surrounded by distant mountains shrouded in mist. The bridge's railing is simple yet sturdy, guiding the viewer's gaze towards the expansive, tranquil waters. The entire scene is devoid of any human presence, emphasizing the quiet solitude of the natural setting. The camera maintains a steady pace throughout, ensuring a continuous and cohesive visual narrative of this picturesque winter landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case794",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a paved path flanked by traditional wooden structures, leading into a dense forest. As the camera advances, it captures the ascent up a set of stone steps bordered by metal railings, surrounded by lush greenery that filters the bright sunlight, casting dappled shadows on the path. The camera continues through the forest, revealing a narrow dirt trail lined with small red lanterns that stand out vividly against the dark foliage. The movement is smooth, maintaining a steady pace as the viewer navigates through the serene woodland. The camera angle shifts slightly to highlight the intricate details of the surrounding trees and underbrush, emphasizing the natural beauty of the setting. As the journey progresses, the path opens up to reveal a large red torii gate, marking the entrance to a sacred area. The camera moves closer to the gate, capturing its imposing structure and the gravel path that leads through it. The scene is bathed in natural light, with the vibrant red of the torii contrasting sharply against the greenery and the clear blue sky above. The entire sequence is devoid of people, creating a tranquil and immersive experience within the Fushimi Inari Taisha shrine complex.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

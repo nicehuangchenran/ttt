@@ -629,9 +629,10 @@ def save_silent_video(gen_video_samples, save_path, fps=25, quality=10, high_qua
     # 统一保存为MP4格式
     final_save_path = f"{save_path}.mp4"
     
-    # 张量转视频帧
+    # 张量转视频帧（在 CPU 上做，避免 1000+ 帧长视频在 GPU 上 OOM）
+    gen_video_samples = gen_video_samples.cpu()
     video_frames = (gen_video_samples + 1) / 2  # [-1,1] -> [0,1]
-    video_frames = video_frames.permute(1, 2, 3, 0).cpu().numpy()  # T H W C
+    video_frames = video_frames.permute(1, 2, 3, 0).numpy()  # T H W C
     video_frames = np.clip(video_frames * 255, 0, 255).astype(np.uint8)
     
     # 处理已有视频
@@ -702,9 +703,10 @@ def save_silent_video_overwrite(gen_video_samples, save_path, fps=25, quality=5,
     # 统一保存为MP4格式
     final_save_path = f"{save_path}.mp4"
     
-    # 张量转视频帧
+    # 张量转视频帧（在 CPU 上做，避免 1000+ 帧长视频在 GPU 上 OOM）
+    gen_video_samples = gen_video_samples.cpu()
     video_frames = (gen_video_samples + 1) / 2  # [-1,1] -> [0,1]
-    video_frames = video_frames.permute(1, 2, 3, 0).cpu().numpy()  # T H W C
+    video_frames = video_frames.permute(1, 2, 3, 0).numpy()  # T H W C
     video_frames = np.clip(video_frames * 255, 0, 255).astype(np.uint8)
     
     # 处理已有视频

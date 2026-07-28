@@ -1,0 +1,20 @@
+{
+  "name": "case408",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path through a dense forest on Shengshan Island, Zhoushan, China. The camera smoothly advances, capturing the rugged terrain covered with moss and scattered stones, while the surrounding trees loom tall, their branches intertwining overhead. As the journey progresses, the path winds gently through the underbrush, with the camera maintaining a steady first-person perspective that immerses the viewer in the natural setting. The cloudy, foggy weather casts a soft, diffused light over the scene, muting the colors to shades of green and gray. The environment remains empty, with no signs of human presence, enhancing the sense of solitude. The camera occasionally pans slightly to the left and right, revealing more of the lush foliage and the intricate details of the forest floor. The atmosphere is serene yet mysterious, with the mist adding an ethereal quality to the landscape. As the path continues deeper into the woods, the density of the trees increases, creating a canopy that filters the light further, casting dappled shadows on the ground. The entire sequence captures the tranquil and untouched beauty of this outdoor natural scene, with the camera's smooth movement providing a continuous and immersive experience.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Shengshan Island, Zhoushan, China",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

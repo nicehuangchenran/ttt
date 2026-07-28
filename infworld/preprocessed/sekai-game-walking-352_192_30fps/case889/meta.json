@@ -1,0 +1,20 @@
+{
+  "name": "case889",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a sunlit road in East Maddon Park, London, United Kingdom, on a clear, sunny day. The camera moves steadily forward, capturing the smooth asphalt underfoot, marked by white pedestrian crossings and bordered by lush greenery and trees. As the walk progresses, the camera pans slightly to the right, revealing a sidewalk lined with tall, leafy trees casting dappled shadows on the pavement. The scene transitions from the paved path into a grassy area, where the camera continues its forward motion, navigating through dense vegetation and overgrown patches. The sunlight filters through the canopy above, creating a warm, golden hue that bathes the entire landscape. The camera then shifts focus to a concrete pathway winding through the park, flanked by more trees and a chain-link fence on one side. The movement remains fluid and continuous, offering a serene and immersive experience of the tranquil, empty park environment. Throughout the sequence, the camera maintains a steady eye-level angle, providing a natural and realistic view of the surroundings, emphasizing the peaceful ambiance of the outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

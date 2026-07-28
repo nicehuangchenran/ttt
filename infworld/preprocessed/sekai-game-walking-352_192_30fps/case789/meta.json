@@ -1,0 +1,20 @@
+{
+  "name": "case789",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk through a dense forest, the path winding gently between tall pine trees and lush undergrowth. The camera moves forward, capturing the rich greenery and the dappled sunlight filtering through the cloudy sky, casting soft shadows on the ground. As the path curves, it reveals a serene blue lake nestled among the trees, its calm waters reflecting the surrounding foliage. The camera pans slightly to the right, showcasing the rocky shoreline and the tranquil beauty of the lake. Continuing along the trail, the viewer approaches a small wooden bridge spanning a narrow stream, the camera tilting downward to highlight the gentle flow of water beneath. After crossing the bridge, the path becomes more rugged, with loose stones and patches of moss underfoot. The camera angle shifts subtly, emphasizing the uneven terrain as the person navigates through the forest. The atmosphere remains peaceful and isolated, with no other individuals in sight, and the muted colors of the cloudy day enhance the natural setting's quiet charm. The journey continues deeper into the woods, the path narrowing and the trees closing in, creating a sense of immersion in this untouched wilderness. The camera maintains a steady pace, capturing every detail of the forest floor and the towering trees that line the way, until the scene fades into the dense underbrush.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

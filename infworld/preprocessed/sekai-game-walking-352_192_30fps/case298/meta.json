@@ -1,0 +1,20 @@
+{
+  "name": "case298",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a dirt path that winds through a dense forest towards a serene lake. The camera smoothly glides over the uneven terrain, capturing the intricate details of the forest floor covered with patches of grass, fallen leaves, and scattered rocks. Tall trees with thick trunks and lush green foliage dominate the surroundings, their branches occasionally swaying gently in the breeze. As the path curves slightly, the camera pans to reveal glimpses of the tranquil blue lake on the right, its surface reflecting the cloudy sky above. The light is soft and diffused, casting subtle shadows and creating a calm, misty atmosphere. The camera continues to move steadily, passing by a small wooden signpost on the left, indicating a possible trail marker. The path then narrows and becomes more rocky, leading deeper into the forest where the trees grow closer together, forming a natural canopy overhead. The viewer's perspective remains at eye level throughout, providing an immersive experience of walking through this peaceful, untouched natural landscape. The overall scene is quiet and empty, with no signs of human presence, enhancing the sense of solitude and tranquility.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

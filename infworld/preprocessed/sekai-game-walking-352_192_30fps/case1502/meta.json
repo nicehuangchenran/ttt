@@ -1,0 +1,20 @@
+{
+  "name": "case1502",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a sweeping view of M\u00fdrdalssandur's rugged landscape under a cloudy sky. The camera pans slowly across the barren terrain, capturing the vast expanse of dark volcanic sand and scattered rocks. As the viewer moves forward, the camera angle shifts slightly, revealing more of the undulating hills and distant mountains shrouded in mist. The muted colors of the landscape, dominated by shades of brown and gray, are accentuated by the diffused light filtering through the thick clouds above. The camera continues its steady advance, maintaining a low perspective that emphasizes the rough texture of the ground. The surrounding environment remains empty, with no signs of human presence or wildlife, enhancing the sense of isolation. The overcast weather casts a soft, even light across the scene, creating subtle shadows that highlight the contours of the land. As the camera progresses, it captures the intricate details of the rocky outcrops and the gentle slopes of the hills, providing a comprehensive view of this remote and untouched natural setting. The overall atmosphere is serene and quiet, with the constant movement of the camera adding a dynamic element to the otherwise still landscape.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

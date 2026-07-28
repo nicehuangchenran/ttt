@@ -1,0 +1,20 @@
+{
+  "name": "case9",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a steady forward movement along a wide, empty road in East Maddon Park, London, United Kingdom, under a bright sunny sky. The camera maintains a first-person perspective, smoothly gliding over the asphalt surface marked by white dashed lines that guide the path ahead. On both sides of the road, tall black metal fences line the edges, separating the pavement from lush green trees that cast dappled shadows across the ground. As the camera progresses, the road gently curves to the right, revealing more of the serene park environment. The sunlight filters through the leaves, creating a warm, golden hue that bathes the entire scene. The camera angle remains consistent, offering a clear view of the road's horizon where a few scattered streetlights stand tall. The absence of people or vehicles emphasizes the tranquility of the setting, with only the subtle sounds of nature accompanying the smooth motion. The overall atmosphere is calm and inviting, capturing the essence of a peaceful day in an urban park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

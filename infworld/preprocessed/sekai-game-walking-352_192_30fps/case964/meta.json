@@ -1,0 +1,20 @@
+{
+  "name": "case964",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The viewer navigates through a snowy, nocturnal landscape along the Mardi Himal Trail in Kaski, Nepal, beginning with a steady forward movement over uneven, snow-covered terrain. The camera pans slightly to reveal a narrow path bordered by dark, leafless trees and rocky outcrops, their silhouettes stark against the dimly lit sky. As the journey progresses, the camera tilts upward, capturing the starry expanse above, punctuated by gentle snowfall that adds a serene, ethereal quality to the scene. The viewer's perspective shifts subtly, focusing on the intricate textures of the snow-laden ground and the rugged outlines of the surrounding rocks. The camera then moves laterally, offering a broader view of the trail as it winds through the dense forest, with the faint glow of distant peaks barely visible in the background. Throughout this tranquil exploration, the ambient light remains minimal, casting deep shadows and creating a monochromatic palette dominated by shades of blue and gray, enhancing the sense of isolation and quietude in this remote, wintry setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "night"
+}

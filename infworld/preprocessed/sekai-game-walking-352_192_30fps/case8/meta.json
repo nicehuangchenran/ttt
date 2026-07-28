@@ -1,0 +1,20 @@
+{
+  "name": "case8",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a smooth forward movement along a gently curving road in East Maddon Park, London, United Kingdom, under a bright sunny sky. The camera maintains a steady first-person perspective, capturing the road's white lane markings and the lush greenery flanking both sides. As the journey progresses, the road curves slightly to the right, leading towards an arched stone bridge covered in ivy. The camera glides seamlessly under the bridge, revealing more of the park's serene landscape. The surrounding trees cast dappled shadows on the asphalt, enhancing the play of light and shadow across the scene. The camera continues straight ahead, passing by a series of evenly spaced street lamps and dense foliage that lines the road. The environment remains tranquil and empty, with no visible pedestrians or vehicles, emphasizing the peaceful solitude of the park. The sky above is a brilliant blue, dotted with fluffy white clouds, casting a warm, golden hue over the entire scene. The camera angle remains consistent, providing a continuous and immersive view of the road as it stretches into the distance, inviting the viewer deeper into the natural beauty of East Maddon Park.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

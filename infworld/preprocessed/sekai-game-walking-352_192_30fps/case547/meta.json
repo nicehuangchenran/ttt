@@ -1,0 +1,20 @@
+{
+  "name": "case547",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a rocky path beside Lago di Braies, framed by towering evergreen trees and mist-covered mountains under a cloudy sky. The camera smoothly pans to the right, revealing a serene blue lake bordered by dense forest, with the path curving gently along its edge. As the movement continues, the perspective shifts slightly upward, showcasing the rugged terrain and the interplay of light filtering through the trees, casting soft shadows on the ground. The scene transitions into a denser part of the forest, where the path narrows and the camera angle lowers, focusing on the earthy trail covered with fallen leaves and twigs. The viewer then approaches a small wooden bridge over a narrow stream, the camera tilting down to capture the flowing water beneath. After crossing the bridge, the path winds deeper into the forest, the camera panning left to reveal more of the lush greenery and the faint outline of a distant building partially obscured by trees. The overall ambiance remains tranquil, with muted colors and diffused lighting enhancing the natural beauty of this remote, empty outdoor setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

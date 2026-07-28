@@ -1,0 +1,20 @@
+{
+  "name": "case1588",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a rugged, gravelly path winding through a misty mountain landscape. The camera moves forward, capturing the uneven terrain as it ascends a gentle slope, flanked by lush green grass and scattered wildflowers. As the viewer progresses, the path curves slightly to the right, revealing a dense forest of tall pine trees in the distance, partially obscured by a thick layer of fog that blankets the area. The camera angle remains at eye level, providing an immersive view of the natural surroundings. The light is soft and diffused, casting a pale yellow hue over the scene, indicative of a cloudy day. The path continues to rise, and the camera pans slightly to the left, showcasing more of the verdant hillside. Eventually, a small wooden cabin comes into view, nestled among the trees on a higher elevation. The camera approaches the cabin, offering a closer look at its rustic exterior before panning back to the forested backdrop, emphasizing the serene and untouched beauty of Le Prarion, Chamonix-Mont-Blanc, France. Throughout the journey, the environment remains empty, enhancing the sense of solitude and tranquility.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

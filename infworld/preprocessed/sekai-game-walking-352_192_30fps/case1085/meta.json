@@ -1,0 +1,20 @@
+{
+  "name": "case1085",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a lush, moss-covered landscape under a cloudy sky. The camera glides smoothly over the vibrant green moss, revealing a rugged terrain dotted with dark volcanic rocks and patches of water reflecting the overcast light. As the movement continues, the perspective shifts slightly upward, offering a broader view of the surrounding mountains shrouded in mist, enhancing the sense of depth and scale. The camera then transitions into a grayscale filter, maintaining its forward motion across the rocky ground, emphasizing the texture and contours of the terrain. The path leads towards a wooden bridge with railings, which appears weathered by the elements. The camera pans to the right, showcasing jagged rock formations and a distant waterfall cascading down the mountain, partially obscured by fog. The scene remains empty of people, with the natural sounds of wind and water likely providing an ambient backdrop. The lighting remains consistently diffused due to the cloud cover, casting soft shadows that accentuate the rugged features of the landscape. The camera's steady, continuous movement provides a seamless exploration of this remote, untouched Icelandic wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

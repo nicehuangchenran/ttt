@@ -1,0 +1,20 @@
+{
+  "name": "case466",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a rugged, snow-covered trail under the dim light of night. The camera smoothly glides over uneven terrain, capturing the fine texture of the snow and scattered rocks beneath. As the viewer progresses, the surrounding darkness is intermittently pierced by faint ambient light, revealing sparse trees and shrubs lining the path. Snowflakes continuously drift through the air, adding a dynamic layer of motion against the dark backdrop. The camera angle remains at eye level, providing an immersive experience of navigating the trail. The environment is quiet and isolated, with no other figures in sight, emphasizing the solitude of the journey. The muted colors of the night\u2014shades of deep blue and black\u2014are occasionally highlighted by the white of the falling snow, creating a serene yet challenging atmosphere. The path winds gently, with subtle shifts in elevation, and the camera's steady pace suggests a deliberate exploration of this remote, snowy landscape. Throughout the sequence, the focus remains on the immediate surroundings, with the camera subtly adjusting to maintain a clear view of the trail ahead, enhancing the sense of being enveloped by the vast, wintry expanse.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "night"
+}

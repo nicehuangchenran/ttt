@@ -1,0 +1,20 @@
+{
+  "name": "case728",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward through a dense, snow-covered forest in Lago di Braies, Braies, South Tyrol, Italy. The camera smoothly glides over the uneven terrain, capturing the intricate details of the snowy landscape. As the movement progresses, the viewer's perspective shifts slightly, revealing tall evergreen trees blanketed in white, their branches heavy with fresh snow. The ground is a mix of pristine snow and patches of exposed earth, indicating recent foot traffic or animal activity. The camera pans gently to the right, showcasing a small clearing where sunlight filters through the trees, casting soft shadows on the snow. The surrounding environment is serene and untouched, with no signs of human presence. The camera continues its steady advance, navigating around large rocks and fallen logs, providing a close-up view of the textured snow and the rugged forest floor. The lighting remains consistent throughout, with the daylight illuminating the scene in a soft, diffused manner, enhancing the natural beauty of the winter landscape. The overall atmosphere is peaceful and quiet, emphasizing the isolation and tranquility of this outdoor-natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

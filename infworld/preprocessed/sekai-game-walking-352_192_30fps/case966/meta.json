@@ -1,0 +1,20 @@
+{
+  "name": "case966",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving forward along a dimly lit path flanked by dense trees and mist, leading towards a large red torii gate at Fushimi Inari Taisha in Kyoto, Japan. As the camera advances steadily, it captures the intricate details of the torii's weathered wood and the subtle glow from lanterns that intermittently illuminate the path. The rainy night setting is evident through the wet surfaces reflecting faint light and the sound of raindrops, enhancing the serene yet somber atmosphere. The camera then pans slightly to reveal traditional Japanese architecture, including multi-tiered pagodas and wooden buildings with tiled roofs, all shrouded in fog. The viewer continues along the path, passing by more torii gates and lanterns, each casting a warm, amber light that contrasts with the cool, gray tones of the rain-soaked environment. The camera angle shifts subtly, offering glimpses of narrow alleyways lined with small shops and houses, their windows dark and unoccupied. The scene remains empty, emphasizing the quiet solitude of the location. As the journey progresses, the camera focuses on a stone bridge crossing over a small stream, its surface glistening under the rain. The final frames show the camera approaching a larger building with an open courtyard, where the rain continues to fall softly, creating a tranquil and immersive experience of a rainy night in this historic site.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Fushimi Inari Taisha, Kyoto, Japan",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "rainy",
+  "timeOfDay": "night"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case667",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving through a dense forest path in Yamadera, Yamagata Prefecture, Japan, under a cloudy, foggy sky during the day. The camera smoothly glides forward, capturing the intricate details of the bare trees and the moss-covered rocks lining the trail. As the movement continues, the path leads towards a traditional wooden torii gate, marking the entrance to a serene temple complex. The camera angle shifts slightly upward, revealing the expansive courtyard paved with stone tiles, surrounded by more traditional Japanese architecture with dark tiled roofs and wooden structures. The viewer then proceeds along a cobblestone pathway, passing by small wooden fences and quaint buildings, each with distinct architectural features such as sliding doors and wooden railings. The camera pans gently to the right, showcasing the intricate shadows cast by the leafless branches against the pale, overcast light. As the journey progresses, the viewer enters a dimly lit wooden corridor, where the camera focuses on the narrow passage leading deeper into the forest, framed by tall, shadowy trees. The entire scene remains empty, emphasizing the tranquil and untouched natural beauty of the location, with the muted colors of the environment enhancing the peaceful atmosphere.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

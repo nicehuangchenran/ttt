@@ -1,0 +1,20 @@
+{
+  "name": "case1172",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a narrow dirt path bordered by lush green grass and dense pine trees under a bright sunny sky. The camera moves steadily forward, capturing the texture of the uneven ground covered with small stones and patches of dirt. As the path progresses, it curves gently to the right, revealing more of the surrounding forest with tall evergreen trees casting dappled shadows on the trail. The camera angle remains at eye level, providing a clear view of the path ahead and the natural scenery on either side. The sunlight filters through the tree canopy, creating a play of light and shadow that enhances the vibrant greens of the foliage and the earthy tones of the path. The environment is serene and untouched, with no signs of human presence or activity. The path continues deeper into the forest, winding slightly as it ascends a gentle slope, offering glimpses of the expansive forest stretching out into the distance. The camera maintains its steady pace, capturing the tranquil beauty of the outdoor setting with each step taken along the peaceful, sunlit trail.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

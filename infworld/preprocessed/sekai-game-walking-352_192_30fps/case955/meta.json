@@ -1,0 +1,20 @@
+{
+  "name": "case955",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving forward along a narrow, rocky path flanked by dense evergreen trees, their trunks tall and slender, casting dappled shadows on the ground. As the camera advances steadily, the path curves gently to the right, revealing a serene lake bordered by rugged mountains in the distance. The sunlight filters through the foliage, creating a play of light and shadow across the landscape. The camera then pans slightly to the left, showcasing a wooden bridge with railings that spans a small stream flowing into the lake. Crossing the bridge, the viewer continues along another path that winds deeper into the forest. The surrounding vegetation becomes denser, with lush undergrowth and scattered rocks lining the trail. The camera maintains a consistent eye-level perspective, capturing the rich green hues of the trees and the earthy tones of the forest floor. As the journey progresses, the path narrows further, leading the viewer deeper into the tranquil wilderness, with the sounds of rustling leaves and distant waterfalls adding to the peaceful ambiance. The entire scene remains untouched by human presence, emphasizing the natural beauty and serenity of Lago di Braies on a sunny day.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

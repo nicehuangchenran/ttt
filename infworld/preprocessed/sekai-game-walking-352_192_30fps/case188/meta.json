@@ -1,0 +1,20 @@
+{
+  "name": "case188",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement through a snowy landscape at Lago di Braies in South Tyrol, Italy. The viewer's gaze is directed along a narrow, snow-covered path bordered by dense evergreen trees laden with fresh snow, their branches extending overhead. As the camera advances, it captures the subtle undulations of the terrain, revealing patches of exposed rocks and fallen logs partially buried under the white blanket. The surrounding forest is thick, with tall pines standing close together, creating a tunnel-like effect that frames the path. The camera occasionally pans slightly to the left and right, offering glimpses of the broader snowy expanse and distant mountain silhouettes shrouded in mist. The light is diffused, casting soft shadows and giving the scene a muted palette dominated by whites and grays. The atmosphere remains serene and untouched, with no signs of human presence, emphasizing the quiet isolation of this wintry wilderness. The camera continues its smooth progression, maintaining a consistent eye-level angle that immerses the viewer in the tranquil, frosty environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

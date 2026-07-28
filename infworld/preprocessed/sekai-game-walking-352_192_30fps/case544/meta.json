@@ -1,0 +1,20 @@
+{
+  "name": "case544",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective moving steadily forward across a rugged, rocky terrain under a night sky. The camera advances slowly, capturing the uneven ground covered with small stones and patches of moss, while the surrounding landscape features rolling hills shrouded in a dense fog that limits visibility. As the viewer progresses, the camera angle remains at eye level, providing a consistent view of the path ahead. The dim lighting casts everything in shades of deep blue and black, with occasional lighter patches where the moonlight faintly illuminates the scene through the clouds. The atmosphere is quiet and isolated, with no other figures or movement in sight. The camera continues its steady advance, occasionally panning slightly to the left or right to reveal more of the desolate landscape, emphasizing the vastness and emptiness of the area. The overall effect is one of serene solitude, as the viewer navigates this remote and untouched natural setting in the heart of M\u00fdrdalssandur, Southern Region, Iceland.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "M\u00fdrdalssandur, Southern Region, Iceland",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

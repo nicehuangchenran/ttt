@@ -1,0 +1,20 @@
+{
+  "name": "case504",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady forward movement along a snow-covered path bordered by a wooden railing, leading through a dense forest of tall evergreen trees. The camera smoothly transitions from the initial path onto a set of wooden steps that ascend gently into the snowy underbrush, capturing the intricate details of the snow-laden branches and the muted tones of the winter landscape. As the viewer progresses, the camera pans slightly to reveal more of the surrounding forest, emphasizing the serene and untouched nature of the environment. The light is soft and diffused, casting gentle shadows and creating a tranquil atmosphere. The path continues to wind through the forest, with the camera occasionally tilting to highlight the texture of the snow and the rugged terrain. Eventually, the viewer approaches a small clearing where a fallen tree trunk lies across the path, partially buried in snow. The camera then shifts focus to a distant view of a frozen lake surrounded by the forest, with the horizon barely visible through the misty air. Throughout the sequence, the environment remains empty and quiet, enhancing the sense of solitude and immersion in the natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

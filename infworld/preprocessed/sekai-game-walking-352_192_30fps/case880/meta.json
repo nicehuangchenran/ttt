@@ -1,0 +1,20 @@
+{
+  "name": "case880",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a paved path in East Maddon Park, London, United Kingdom, under sunny daytime conditions. The camera moves steadily forward, capturing the lush greenery of trees lining both sides of the path, their leaves casting dappled shadows on the ground. As the walk continues, the path curves gently to the right, leading towards a vibrant playground area. The camera pans slightly to reveal colorful play structures, including slides, climbing frames, and swings, all brightly painted in hues of yellow, blue, and pink. The surrounding area remains empty, emphasizing the serene atmosphere. The camera then shifts focus back to the path, moving past the playground and continuing through the park. The sunlight filters through the dense canopy above, creating a warm, golden glow that bathes the entire scene. The camera angle occasionally tilts upward, showcasing the towering trees and the clear blue sky. As the walk progresses, the path leads to a fenced area, where the camera briefly pauses to capture the intricate details of the metal fencing before turning left and heading back into the wooded section of the park. The final moments of the video show the camera moving along a straight path, flanked by more trees and lampposts, maintaining a consistent pace until the scene fades out.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "case839",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a first-person perspective walking along a paved path in East Maddon Park, London, United Kingdom, under sunny daytime conditions. The camera moves steadily forward, capturing the lush greenery of trees and bushes lining both sides of the path. As the walk progresses, the viewer passes by vintage-style street lamps and a small white building with a dark roof on the left side. The path curves gently, revealing more of the park's serene environment, with sunlight filtering through the leaves, casting dappled shadows on the ground. The camera continues its forward motion, approaching a set of stairs leading upwards. The viewer ascends the stairs, passing through a metal railing adorned with climbing plants. At the top, the path opens up into a wider area with more trees and a glimpse of a distant building. The camera then turns right, entering an open plaza with empty outdoor seating areas and a few scattered tables and chairs. The plaza is surrounded by more greenery and a few lampposts, with a clear blue sky overhead. The camera pans slightly to show a parking lot with marked spaces and a few parked cars, before continuing straight ahead towards a larger building at the end of the plaza. The entire scene remains empty, with no people visible, emphasizing the tranquil and peaceful atmosphere of the park. The lighting is bright and natural, highlighting the vibrant greens of the foliage and the warm tones of the paved paths and buildings.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "East Maddon Park, London, United Kingdom",
+  "scene": "outdoor-urban",
+  "crowdDensity": "empty",
+  "weather": "sunny",
+  "timeOfDay": "day"
+}

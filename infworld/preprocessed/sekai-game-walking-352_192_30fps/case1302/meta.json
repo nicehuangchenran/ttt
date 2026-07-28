@@ -1,0 +1,20 @@
+{
+  "name": "case1302",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady walk along a snow-covered path beside Lago di Braies in Braies, South Tyrol, Italy. The viewer's gaze moves forward, revealing a serene, snowy landscape under a diffused daylight that casts soft shadows across the terrain. As the person progresses, their steps leave faint imprints in the fresh snow, which glistens subtly under the overcast sky. The camera pans slightly to the right, showcasing a dense forest of tall evergreen trees blanketed in snow, their branches heavy and drooping. The path winds gently uphill, and the camera angle adjusts to capture the incline, emphasizing the texture of the snow-laden ground. The surrounding environment remains quiet and untouched, with no other individuals in sight. The camera continues to move forward, navigating through the narrow trail bordered by snow-laden shrubs and small rocks, occasionally tilting upward to reveal the towering trees and the misty horizon. The muted colors of the winter scene\u2014whites, grays, and dark greens\u2014are consistent throughout, creating a tranquil and isolated atmosphere. As the journey continues deeper into the forest, the path narrows further, and the camera captures the intricate details of the snow-covered foliage and the subtle interplay of light filtering through the dense canopy. The entire sequence maintains a smooth, continuous motion, immersing the viewer in the peaceful solitude of this snowy wilderness.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Lago di Braies, Braies, South Tyrol, Italy",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

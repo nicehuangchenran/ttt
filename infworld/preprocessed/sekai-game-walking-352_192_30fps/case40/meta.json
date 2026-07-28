@@ -1,0 +1,20 @@
+{
+  "name": "case40",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with a slow pan across a foggy landscape in Le Prarion, Chamonix-Mont-Blanc, France, where the viewer is introduced to an empty, outdoor natural scene under cloudy skies during the day. The camera initially focuses on a grassy field shrouded in thick mist, with faint outlines of power lines and poles barely visible through the haze. As the camera moves forward, it captures the subtle sway of the grass, emphasizing the stillness and quiet of the environment. The light is diffused by the fog, casting a soft, pale yellow hue over the entire scene. Gradually, the camera pans to the right, revealing more of the mist-covered terrain and a few scattered trees that emerge from the fog, their branches sparse and partially obscured. The camera continues its steady movement, maintaining a low angle that keeps the horizon line close to the viewer's perspective. The atmosphere remains serene and undisturbed, with no signs of human presence or activity, reinforcing the sense of isolation and tranquility in this remote, natural setting. The fog persists throughout, creating a consistent layer of white that blurs the boundaries between sky and land, enhancing the ethereal quality of the scene.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

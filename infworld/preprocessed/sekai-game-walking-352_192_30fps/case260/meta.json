@@ -1,0 +1,20 @@
+{
+  "name": "case260",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a narrow stone staircase bordered by a metal railing, winding through a dense forest in Yamadera, Yamagata Prefecture, Japan. The camera smoothly pans forward, capturing the ascent as the path curves gently amidst towering trees cloaked in misty fog under a cloudy sky. As the viewer progresses, the surrounding environment reveals a mix of evergreen and deciduous trees, their trunks thick and textured, casting dappled shadows on the forest floor. The camera angle shifts slightly to highlight a rustic wooden bench nestled among rocks, suggesting a resting spot. Continuing upward, the path transitions from the staircase to a dirt trail, flanked by lush greenery and scattered foliage. The natural light filters through the canopy, creating a serene ambiance with soft, muted colors. The viewer's journey remains uninterrupted, with no other individuals present, emphasizing the solitude and tranquility of this outdoor setting. The camera maintains a steady pace, offering a continuous and immersive perspective of the forested landscape, its intricate details, and the gentle interplay of light and shadow.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Yamadera, Yamagata Prefecture, Japan",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}

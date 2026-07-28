@@ -1,0 +1,20 @@
+{
+  "name": "case1524",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a slow, steady walk through a dense forest at night, the camera moving forward along a narrow, dimly lit path flanked by tall, dark coniferous trees. The viewer's gaze is directed straight ahead, capturing the subtle swaying of branches and the occasional glimpse of starlight piercing through the cloudy sky above. As the journey progresses, the camera angle remains consistent, maintaining a level horizon that emphasizes the depth and expanse of the forest. The surrounding environment is shrouded in darkness, with only faint ambient light revealing the rough texture of the ground and the silhouettes of the trees. Gradually, the path leads towards an old, weathered building partially obscured by the foliage, its outline becoming more distinct as the camera approaches. The structure appears abandoned, with no visible signs of life or activity. The camera continues to move forward, passing the building and emerging into a slightly more open area where distant mountains loom under the night sky, their peaks barely discernible against the backdrop of clouds. The scene remains devoid of any human presence, creating a sense of solitude and quietude. The camera then focuses briefly on a small, illuminated object on the ground before panning back up to capture the vast, star-studded sky, completing the immersive nocturnal exploration of Le Prarion, Chamonix-Mont-Blanc, France.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "night"
+}

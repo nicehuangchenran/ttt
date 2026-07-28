@@ -1,0 +1,20 @@
+{
+  "name": "case676",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The first-person perspective begins with a steady climb up a snow-covered slope along a metal railing, revealing a misty, snowy landscape. The camera moves forward, capturing the texture of the snow and the rugged terrain beneath. As the ascent continues, the railing disappears, and the path becomes more natural, winding through sparse, leafless trees shrouded in fog. The camera pans slightly to the right, showing a distant view of the trail ahead, marked by faint footprints in the snow. The movement is smooth, suggesting a cautious yet steady pace. The environment remains consistently snowy, with patches of exposed rock and earth peeking through. The sky is overcast, casting a soft, diffused light that enhances the muted colors of the winter scene. As the journey progresses, the fog gradually lifts, revealing a clearer view of the surrounding mountains. The camera angle shifts subtly, offering glimpses of the expansive, snow-laden peaks under a brighter, bluer sky. The transition from dense fog to clear visibility highlights the dramatic change in weather conditions, emphasizing the vastness and isolation of the Mardi Himal Trail. The scene remains empty, devoid of any human presence, enhancing the sense of solitude and tranquility in this remote, natural setting.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Mardi Himal Trail, Kaski, Nepal",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "snowy",
+  "timeOfDay": "day"
+}

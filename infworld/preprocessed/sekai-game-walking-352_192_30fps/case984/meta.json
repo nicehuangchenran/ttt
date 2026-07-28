@@ -1,0 +1,20 @@
+{
+  "name": "case984",
+  "num_chunks": 22,
+  "num_frames": 1797,
+  "height": 192,
+  "width": 352,
+  "prompt": "The video begins with the viewer moving along a rocky path bordered by a low stone wall, leading through a lush, green forested area under a cloudy sky. The camera smoothly pans forward, capturing the dense foliage and tall trees that line the path. As the movement continues, the scene transitions from the forest into an open grassy area, revealing a small cluster of red-roofed buildings nestled among the greenery. The camera angle shifts slightly upward, showcasing the expansive meadow dotted with wildflowers and a few scattered trees. The viewer then approaches a stone building with wooden shutters, passing by a fenced garden area filled with various plants. The camera moves closer to the building, focusing on its rustic architecture and weathered stone walls. The surrounding landscape remains serene and untouched, with no visible people or animals, creating a peaceful and tranquil atmosphere throughout the video. The lighting is soft and diffused due to the overcast sky, casting gentle shadows and enhancing the natural colors of the environment.",
+  "latent_shape": [
+    16,
+    450,
+    24,
+    44
+  ],
+  "save_dtype": "bfloat16",
+  "location": "Le Prarion, Chamonix-Mont-Blanc, France",
+  "scene": "outdoor-natural",
+  "crowdDensity": "empty",
+  "weather": "cloudy/foggy",
+  "timeOfDay": "day"
+}
