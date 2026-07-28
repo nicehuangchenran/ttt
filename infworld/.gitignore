@@ -2,3 +2,28 @@ outputs
 checkpoints
 dataset
 videos
+
+# 大文件 / 生成产物
+weights/
+logs/
+preprocessed/
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# 环境 / 编辑器
+.env
+.venv/
+*.egg
+.DS_Store
+.idea/
+.vscode/
+
+# wandb / tensorboard
+wandb/
+runs/
