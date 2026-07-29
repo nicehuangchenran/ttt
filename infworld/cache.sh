@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 \
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --nproc_per_node=4 \
     scripts/main.py \
     --dataset-dir dataset/sekai-game-walking-854_480_30fps --begin-idx 1 --num 8  \
     --output-dir videos/sekai-game-walking-256-steps30-chunk20 \
@@ -34,4 +34,4 @@ ossutil cp -r  --update  -j 32  /mnt/efs/chenran/ttt/infworld/dataset/sekai-game
 
 
 # 发通知
-/mnt/efs/chenran/claude_notify.sh 'aws' '视频生成了'
+/mnt/efs/chenran/claude_notify.sh 'aws上的实验' '1.yaml运行结束'

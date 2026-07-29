@@ -5,7 +5,7 @@ Infinite World - Flow-Matching Training Script
 
 Usage:
 ------
-CUDA_VISIBLE_DEVICES=4,5,6,7 nohup torchrun --nproc_per_node=8 --local-ranks-filter=0 --master_port=29501 \
+CUDA_VISIBLE_DEVICES=4,5,6,7 nohup torchrun --nproc_per_node=4 \
     scripts/train.py --config configs/runs/train/london_sunny.yaml \
     > logs/nohup_train_$(date +%m%d_%H%M%S).out 2>&1 &
 
@@ -45,7 +45,7 @@ import torch.nn as nn
 import torch.distributed as dist
 from torch.utils.data import Dataset, DataLoader, DistributedSampler
 from torch.utils.tensorboard import SummaryWriter
-from dataclasses import dataclass, asdict, fields, field
+from dataclasses import dataclass, asdict, fields
 from typing import Optional, Tuple
 from omegaconf import OmegaConf
 import numpy as np
@@ -105,29 +105,9 @@ class TrainConfig:
 
 @dataclass
 class TTTConfig:
-    """训练循环内的 test-time training，移植自 main.py::OnlineTrainConfig。
-
-    open=True 时：每个 chunk 的主损失 backward 之后（最后一个 chunk 除外），在该
-    chunk 的 GT latent 上用独立的 AdamW 对白名单参数做 n_train_steps 次 flow-matching
-    更新，让后续 chunk 的主训练在"TTT 适应过"的权重上进行，与推理时的在线 TTT 对齐。
-    推理时 x_start 是刚采样出的 latent；train.py 不做采样，GT 是最近的对应物。
-    """
     open: bool = False
     n_train_steps: int = 5
     lr: float = 1e-5
-    grad_clip_norm: Optional[float] = 1.0  # 只裁剪白名单参数的梯度；null 表示不裁剪
-    # 白名单：只有这些层参与 TTT 更新。条目省略 block 序号（"blocks.norm3" 匹配
-    # blocks.<i>.norm3.*）。默认与 main.py 的 Scheme A（~0.5M 参数）一致。
-    trainable_layers: tuple = (
-        "head",              # 输出头（head.head linear + head.modulation）
-        "blocks.modulation", # 每个 block 的 AdaLN shift/scale（裸 nn.Parameter）
-        "blocks.norm3",      # 每个 block 的 cross-attn LayerNorm affine
-    )
-    # 只训 blocks.<i>.*（i >= 该值）；TTT 反传在第一个可训 block 停住，省显存。
-    trainable_block_start: int = 18
-    # 每个视频结束后（optimizer.step() 之前）把白名单参数恢复到视频开始时的快照。
-    # 多卡下必须为 True：TTT 更新是各 rank 本地行为，不恢复会让 DDP 各副本权重发散。
-    reset_between_videos: bool = True
 
 
 def parse_cli():
@@ -327,8 +307,6 @@ class TrainLogger:
                         self.writer.add_scalar("train/grad_norm", value, step)
                     elif key == "lr":
                         self.writer.add_scalar("train/learning_rate", value, step)
-                    elif key.startswith("ttt_"):
-                        self.writer.add_scalar(f"ttt/{key}", value, step)
                     elif key == "step_second":
                         self.writer.add_scalar("performance/step_time_seconds", value, step)
                     elif key == "num_chunks":
@@ -505,8 +483,6 @@ class TrainModels:
     dit: nn.Module
     dit_raw: nn.Module
     trainable_params: list
-    # TTT 白名单参数（name -> Parameter），ttt.open=False 时为空 dict
-    ttt_params: dict = field(default_factory=dict)
 
 
 def _resolve_path(path):
@@ -515,7 +491,7 @@ def _resolve_path(path):
     return os.path.join(PROJECT_ROOT, path.strip())
 
 
-def build_dit(cfg: TrainConfig, ttt_cfg: TTTConfig, runtime: RuntimeContext) -> TrainModels:
+def build_dit(cfg: TrainConfig, runtime: RuntimeContext) -> TrainModels:
     config_path = _resolve_path(cfg.model_config_path)
     model_args = OmegaConf.load(config_path)
     from infworld.models.dit_model import WanModel
@@ -540,21 +516,13 @@ def build_dit(cfg: TrainConfig, ttt_cfg: TTTConfig, runtime: RuntimeContext) -> 
         set_grad_checkpoint(dit)
     dit.to(runtime.device)
     trainable_params = configure_trainable(dit, cfg.train_temporal_encoder, runtime.global_rank)
-
-    # TTT 白名单参数：只在 ttt.open=True 时选择（否则留空 dict，避免误用）
-    ttt_params = {}
-    if ttt_cfg.open:
-        ttt_params = select_ttt_params(dit, ttt_cfg.trainable_layers,
-                                       ttt_cfg.trainable_block_start, runtime.global_rank)
-
     if runtime.world_size > 1:
         dit = nn.parallel.DistributedDataParallel(
             dit, device_ids=[runtime.local_rank], output_device=runtime.local_rank,
             find_unused_parameters=False,
         )
     dit_raw = dit.module if isinstance(dit, nn.parallel.DistributedDataParallel) else dit
-    return TrainModels(dit=dit, dit_raw=dit_raw, trainable_params=trainable_params,
-                       ttt_params=ttt_params)
+    return TrainModels(dit=dit, dit_raw=dit_raw, trainable_params=trainable_params)
 
 
 def configure_trainable(dit, train_temporal_encoder: bool, rank: int = 0) -> list:
@@ -575,38 +543,6 @@ def configure_trainable(dit, train_temporal_encoder: bool, rank: int = 0) -> lis
     if rank == 0:
         print(f"[Model] Trainable: {trainable_count:,} params, Frozen: {frozen_count:,} params")
     return trainable
-
-
-def select_ttt_params(dit, trainable_layers: tuple, trainable_block_start: int, rank: int = 0) -> dict:
-    """选择 TTT 白名单参数（name -> Parameter dict），与 main.py 的逻辑完全一致。
-
-    白名单条目省略 block 序号（"blocks.norm3" 匹配 blocks.<i>.norm3.*）；blocks.<i>.*
-    额外要求 i >= trainable_block_start。与 main.py 不同：这里不改 requires_grad ——
-    主训练仍训练全部参数，TTT 期间的临时冻结在 ttt_adapt_on_chunk 内完成。
-    """
-    def canonical(name):
-        parts = name.split(".")
-        if parts[0] == "blocks":
-            parts = ["blocks"] + parts[2:]  # 去掉 block 序号
-        return ".".join(parts)
-
-    def block_idx(name):
-        parts = name.split(".")
-        return int(parts[1]) if parts[0] == "blocks" else None
-
-    ttt_params = {}
-    for n, p in dit.named_parameters():
-        key = canonical(n)
-        idx = block_idx(n)
-        whitelisted = any(key == layer or key.startswith(layer + ".") for layer in trainable_layers)
-        if whitelisted and (idx is None or idx >= trainable_block_start):
-            ttt_params[n] = p
-
-    if rank == 0:
-        count = sum(p.numel() for p in ttt_params.values())
-        print(f"[TTT] Selected {len(ttt_params)} params ({count:,} elements) from "
-              f"layers {trainable_layers}, blocks >= {trainable_block_start}")
-    return ttt_params
 
 
 @dataclass
@@ -644,9 +580,7 @@ def sample_timestep(batch_size: int, cfg: TrainConfig, device) -> torch.Tensor:
     return t
 
 
-def flow_matching_loss(dit: nn.Module, chunk: ChunkBatch, cfg: TrainConfig) -> torch.Tensor:
-    """一次 flow-matching 损失前向。dit 传 models.dit（主训练，走 DDP 同步）或
-    models.dit_raw（TTT，绕过 DDP —— TTT 是各 rank 本地行为，不做梯度同步）。"""
+def flow_matching_loss(models: TrainModels, chunk: ChunkBatch, cfg: TrainConfig) -> torch.Tensor:
     x_start = chunk.x_start
     B = x_start.shape[0]
     device = x_start.device
@@ -659,73 +593,13 @@ def flow_matching_loss(dit: nn.Module, chunk: ChunkBatch, cfg: TrainConfig) -> t
     if cfg.use_reversed_velocity:
         target = -target
     with torch.cuda.amp.autocast(dtype=torch.bfloat16, enabled=(cfg.master_dtype == "float32")):
-        pred = dit(
+        pred = models.dit(
             x_t, t, y=chunk.y, y_mask=chunk.y_mask, x_ignore_mask=None,
             image_cond=chunk.image_cond, move=chunk.move, view=chunk.view,
         )
     pred = pred[:, :, -21:]
     loss = ((pred.float() - target.float()) ** 2).mean()
     return loss
-
-
-def snapshot_ttt_params(ttt_params: dict) -> dict:
-    """快照白名单参数当前值（视频开始时各 rank 权重一致，视频结束后恢复到这里）。"""
-    return {n: p.detach().clone() for n, p in ttt_params.items()}
-
-
-def restore_ttt_params(ttt_params: dict, snapshot: dict):
-    with torch.no_grad():
-        for n, p in ttt_params.items():
-            p.data.copy_(snapshot[n])
-
-
-def ttt_adapt_on_chunk(models: TrainModels, chunk: ChunkBatch,
-                       cfg: TrainConfig, ttt_cfg: TTTConfig) -> list:
-    """在刚算完主损失的 chunk 上做 n_train_steps 次 TTT 更新，
-    对齐 main.py::online_train_on_chunk / _online_train_step。
-
-    x_start 用该 chunk 的 GT latent（chunk.x_start）：推理时是刚采样出的 latent，
-    离线训练不做采样，GT 是最近的对应物。
-
-    与主训练的梯度累积互不污染：
-      - 非白名单参数临时 requires_grad_(False)，TTT backward 不写它们的 .grad，
-        反传在第一个可训 block 就停住（省显存省算力）；
-      - 白名单参数上已累积的主梯度先摘下（保留张量引用），TTT 结束后原样放回；
-      - 前向走 dit_raw，绕过 DDP —— 各 rank 在自己的视频上本地适应，不同步。
-    每个 chunk 新建 AdamW，Adam 动量不跨 chunk 累积（与 main.py 一致）。
-    """
-    dit_raw = models.dit_raw
-    # 临时冻结非白名单参数（记录原 flag，latent_encoder 可能本来就是 False）
-    saved_flags = {}
-    for n, p in dit_raw.named_parameters():
-        if n not in models.ttt_params:
-            saved_flags[n] = p.requires_grad
-            p.requires_grad_(False)
-    # 摘下白名单参数已累积的主梯度，TTT 期间它们的 .grad 只属于 TTT
-    saved_grads = {n: p.grad for n, p in models.ttt_params.items()}
-    for p in models.ttt_params.values():
-        p.grad = None
-
-    params = list(models.ttt_params.values())
-    ttt_optimizer = torch.optim.AdamW(params, lr=ttt_cfg.lr)
-    losses = []
-    try:
-        for _ in range(ttt_cfg.n_train_steps):
-            ttt_optimizer.zero_grad(set_to_none=True)
-            loss = flow_matching_loss(dit_raw, chunk, cfg)
-            loss.backward()
-            if ttt_cfg.grad_clip_norm is not None:
-                torch.nn.utils.clip_grad_norm_(params, max_norm=ttt_cfg.grad_clip_norm)
-            ttt_optimizer.step()
-            losses.append(loss.item())
-            del loss
-    finally:
-        for n, p in dit_raw.named_parameters():
-            if n in saved_flags:
-                p.requires_grad_(saved_flags[n])
-        for n, p in models.ttt_params.items():
-            p.grad = saved_grads[n]
-    return losses
 
 
 @torch.no_grad()
@@ -796,14 +670,9 @@ def train_one_video(
 ) -> dict:
     K = video.num_chunks
     losses = []
-    ttt_losses = []
-    # TTT：视频开始时快照白名单参数（此时各 rank 权重一致），视频结束后恢复
-    ttt_snapshot = None
-    if ttt_cfg.open and ttt_cfg.reset_between_videos:
-        ttt_snapshot = snapshot_ttt_params(models.ttt_params)
     for k in range(K):
         chunk = make_chunk_batch(video, k, device)
-        loss = flow_matching_loss(models.dit, chunk, cfg) / K
+        loss = flow_matching_loss(models, chunk, cfg) / K
         losses.append(loss.item())
         if isinstance(models.dit, nn.parallel.DistributedDataParallel):
             if k < K - 1:
@@ -813,30 +682,15 @@ def train_one_video(
                 loss.backward()
         else:
             loss.backward()
-        del loss
-        # 对齐推理（main.py：chunk_idx < num_chunks - 1）：最后一个 chunk 后不做 TTT。
-        # 顺序也与推理一致：chunk k 的主损失（≈生成 chunk k）之后、chunk k+1 之前适应。
-        if ttt_cfg.open and k < K - 1:
-            ttt_losses.append(ttt_adapt_on_chunk(models, chunk, cfg, ttt_cfg))
-        del chunk
+        del chunk, loss
         torch.cuda.empty_cache()
-    # 必须在 optimizer.step() 之前恢复：主 step 要作用在各 rank 一致的原始权重上，
-    # TTT 的效果只体现在"主梯度是在适应过的权重上算出来的"这一点（一阶近似）。
-    if ttt_snapshot is not None:
-        restore_ttt_params(models.ttt_params, ttt_snapshot)
     grad_norm = 0.0
     if is_step_boundary:
         grad_norm = torch.nn.utils.clip_grad_norm_(
             models.trainable_params, cfg.max_grad_norm).item()
         optimizer.step()
         optimizer.zero_grad(set_to_none=True)
-    stats = {"loss": sum(losses), "per_chunk_loss": losses, "grad_norm": grad_norm}
-    if ttt_losses:
-        flat = [v for per_chunk in ttt_losses for v in per_chunk]
-        stats["ttt_loss"] = sum(flat) / len(flat)
-        stats["ttt_loss_first"] = ttt_losses[0][0]
-        stats["ttt_loss_last"] = ttt_losses[-1][-1]
-    return stats
+    return {"loss": sum(losses), "per_chunk_loss": losses, "grad_norm": grad_norm}
 
 
 def train_loop(
@@ -863,11 +717,10 @@ def train_loop(
             if is_step_boundary:
                 global_step += 1
                 if global_step % cfg.log_every_n_steps == 0:
-                    ttt_kv = {k: v for k, v in stats.items() if k.startswith("ttt_")}
                     logger.metrics(
                         step=global_step, loss=stats["loss"], grad_norm=stats["grad_norm"],
                         lr=optimizer.param_groups[0]["lr"], video=video.name,
-                        num_chunks=video.num_chunks, step_second=t_video, **ttt_kv,
+                        num_chunks=video.num_chunks, step_second=t_video,
                     )
                 if cfg.val_every_n_steps > 0 and global_step % cfg.val_every_n_steps == 0 \
                         and val_videos and runtime.global_rank == 0:
@@ -896,23 +749,9 @@ def main():
     logger.info(f"Data: {cfg.data_dir}")
     logger.info(f"Device: {runtime.device}, World Size: {runtime.world_size}")
     logger.info("=" * 70)
-    # TTT 前置校验：多卡下 TTT 更新是各 rank 本地行为，不恢复快照会让 DDP 各副本权重发散
-    if ttt_cfg.open:
-        if runtime.world_size > 1 and not ttt_cfg.reset_between_videos:
-            raise ValueError(
-                "ttt.reset_between_videos=false is unsupported with world_size > 1: "
-                "TTT updates are rank-local; without per-video restore the DDP "
-                "replicas' weights diverge.")
-        logger.info(f"TTT enabled: n_train_steps={ttt_cfg.n_train_steps}, lr={ttt_cfg.lr}, "
-                    f"layers={ttt_cfg.trainable_layers}, "
-                    f"block_start={ttt_cfg.trainable_block_start}, "
-                    f"reset_between_videos={ttt_cfg.reset_between_videos}")
     dataloader = build_dataloader(cfg, runtime)
     logger.dump_config(cfg, ttt_cfg, runtime, len(dataloader.dataset), cli.config)
-    models = build_dit(cfg, ttt_cfg, runtime)
-    if ttt_cfg.open and not models.ttt_params:
-        raise ValueError(f"ttt.trainable_layers={ttt_cfg.trainable_layers} matched no "
-                         f"parameters (block_start={ttt_cfg.trainable_block_start})")
+    models = build_dit(cfg, runtime)
     optimizer = torch.optim.AdamW(
         models.trainable_params, lr=cfg.lr, weight_decay=cfg.weight_decay, betas=cfg.betas,
     )

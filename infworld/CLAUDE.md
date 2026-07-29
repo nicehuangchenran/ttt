@@ -35,17 +35,18 @@ torchrun --nproc_per_node=8 preprocess/sekai_game_walking/2_preprocess_dataset.p
 
 离线 flow-matching 微调。**只**加载 DiT — VAE 和 T5 从不实例化（这正是预处理换来的收益）。一个数据集样本 = 一个完整视频；视频的 K 个 chunk 累积梯度后只做一次 `optimizer.step()`。
 
+运行参数全部来自 run yaml，命令行只指定用哪个 yaml：
+
 ```bash
 CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=29500 \
-  scripts/train.py \
-  --data-dir preprocessed/sekai-game-walking-352_192_30fps --shift 3 \
-  --filter-location "East Maddon Park, London, United Kingdom" --filter-weather sunny \
-  --epochs 20 --val-every-n-steps 16
+  scripts/train.py --config configs/runs/train/london_sunny.yaml
 ```
 
-恢复训练：`--resume weights/<run>/step100.ckpt`。筛选参数（`--filter-location/-scene/-crowd-density/-weather/-time-of-day`）按 `meta.json` 精确匹配，选出训练子集。
+配置分三层：`configs/infworld_config.yaml`（模型结构/VAE/T5/基础 ckpt）、`configs/train_default.yaml`（train.py 全部可配置项 + 默认值，作为字段全集文档）、`configs/runs/train/*.yaml`（单次实验，只写要改的字段，分 `train:`/`ttt:` 两段，对应 `TrainConfig`/`TTTConfig`）。写了不存在的 key 会报错而不是静默忽略；新增参数只需在 dataclass 加字段。临时覆盖用 `--set train.lr=2e-5`。
 
-产物写入 `weights/<run_name>/step{N}.ckpt` 和 `logs/train_log/<run_name>/`（`train.log`、逐 rank 日志、`metrics.jsonl`、`config.json`、tensorboard）。`<run_name>` 自动编码数据集/shift/筛选条件/chunk 数/时间戳。完整设计见 `TRAIN_ARCHITECTURE.md`，日志布局见 `MULTI_GPU_LOGGING.md`。
+恢复训练：yaml 里设 `train.resume_from: weights/<run>/step100.ckpt`。筛选字段（`filter_location/scene/crowd_density/weather/time_of_day`）按 `meta.json` 精确匹配，选出训练子集。
+
+一次运行的产物都在 `weights/<run_name>/` 下：`step{N}.ckpt` 和 `train_log/`（`train.log`、逐 rank 日志、`metrics.jsonl`、`config.json`、tensorboard）。`<run_name>` 默认取 yaml 文件名（去扩展名），也可在 yaml 里显式指定 `train.run_name` 或用 `--set train.run_name=my_exp` 临时覆盖。完整设计见 `TRAIN_ARCHITECTURE.md`，日志布局见 `MULTI_GPU_LOGGING.md`。
 
 ### 推理：`scripts/main.py`
 
@@ -74,6 +75,6 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4 torchrun --nnodes=1 --nproc_per_node=5 scripts/ma
 
 ## 硬性规则
 
-- `checkpoints/` 只读（预训练权重）。所有训练产物写 `weights/<run>/` 和 `logs/train_log/<run>/`。绝不写 `checkpoints/`。
+- `checkpoints/` 只读（预训练权重）。所有训练产物写 `weights/<run>/`（ckpt 与 `train_log/` 同目录）。绝不写 `checkpoints/`。
 - `dataset/`、`videos/`、`checkpoints/`、`outputs/` 已 gitignore（大文件/生成物）；`preprocessed/` 目前只跟踪 `meta.json`。
 - DiT 配置（`in_channels`、`dim=1536`、`num_layers=30` 等）在 `configs/infworld_config.yaml::model_cfg`；train.py 硬编码了少量常量（out_channels=16、caption_channels=4096、max_length=512），以免为了读两个常量而加载 10GB 文本编码器 — 若改模型形状，两处要保持一致。

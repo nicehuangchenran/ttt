@@ -9,17 +9,6 @@
 checkpoint_path: "checkpoints/infinite_world_model.ckpt"
 
 ##########################
-### text encoder config
-##########################
-
-text_encoder_target: infworld.models.umt5.T5EncoderModel
-
-text_encoder_cfg:
-  checkpoint_path: "checkpoints/models/models_t5_umt5-xxl-enc-bf16.pth"
-  tokenizer_path: "checkpoints/models/google/umt5-xxl"
-  model_max_length: 512
-
-##########################
 ### scheduler config
 ##########################
 
@@ -49,15 +38,6 @@ model_cfg:
   num_heads: 12
   num_layers: 30
 
-##########################
-### VAE config
-##########################
-
-vae_target: infworld.vae.WanVAEModelWrapper
-
-vae_cfg:
-  vae_pth: "checkpoints/models/Wan2.1_VAE.pth"
-
 
 ##########################
 ### validation config
@@ -71,3 +51,27 @@ validation_data:
 ##########################
 
 amp_dtype: "bfloat16"
+
+
+# ====================================train.py以下不读取===============================================
+
+##########################
+### text encoder config
+##########################
+
+text_encoder_target: infworld.models.umt5.T5EncoderModel
+
+text_encoder_cfg:
+  checkpoint_path: "checkpoints/models/models_t5_umt5-xxl-enc-bf16.pth"
+  tokenizer_path: "checkpoints/models/google/umt5-xxl"
+  model_max_length: 512
+
+
+##########################
+### VAE config
+##########################
+
+vae_target: infworld.vae.WanVAEModelWrapper
+
+vae_cfg:
+  vae_pth: "checkpoints/models/Wan2.1_VAE.pth"

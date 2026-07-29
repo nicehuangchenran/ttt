@@ -1,0 +1,78 @@
+# scripts/train.py 的全部可配置项及默认值。
+#
+# 这是 configs/runs/train/*.yaml 能写的字段全集：run yaml 里只写要改的字段，
+# 未写的字段用dataclass 的默认值(这里的值从 dataclass 中取出的),新增参数需在 TrainConfig 里加字段, run yaml 中出现本文件以外的 key 会直接报错。
+# 想临时改一项：--set train.lr=2e-5
+
+train:  # 对应TrainConfig
+  # 数据
+  data_dir: preprocessed/sekai-game-walking-854_480_30fps-256px
+  max_chunks_per_video: 3       # 每个视频最多取几个 chunk 参与训练
+  num_workers: 2
+
+  # 优化器
+  lr: 1.0e-5
+  weight_decay: 0.01
+  betas: [0.9, 0.95]
+  max_grad_norm: 1.0
+
+  # 训练调度
+  epochs: 1
+  videos_per_step: 1            # 累积几个视频做一次 optimizer.step()
+  lr_schedule: constant         # constant | cosine
+  warmup_steps: 0
+
+  # flow-matching / scheduler
+  num_timesteps: 1000
+  shift: 3.0                    # 与分辨率配套：PX256=3, PX627=7, PX960=11
+  use_reversed_velocity: true   # 预训练约定，改前先读 CLAUDE.md
+  timestep_sample: uniform
+
+  # 模型与权重
+  model_config_path: configs/infworld_config.yaml
+  init_checkpoint: checkpoints/infinite_world_model.ckpt
+  train_temporal_encoder: false
+  use_grad_checkpoint: true
+  master_dtype: float32
+
+  # 产物路径与日志
+  run_name: ""                  # 留空则取 yaml 文件名（去扩展名）作为 run 名
+                                # 例: london_sunny.yaml -> weights/london_sunny/step100.ckpt
+  weights_dir: weights
+  log_subdir: train_log         # 日志目录：weights/<run_name>/<log_subdir>/
+  save_every_n_steps: 100
+  log_every_n_steps: 1
+  resume_from: ""               # 恢复训练，如 weights/<run>/step100.ckpt
+  seed: 42
+
+  # timestep 分桶验证（0 表示关闭）
+  val_every_n_steps: 0
+  num_val_videos: 4
+  num_val_buckets: 10
+
+  # 数据筛选：按 meta.json 精确匹配，null 表示不筛选
+  filter_location: null
+  filter_scene: null
+  filter_crowd_density: null
+  filter_weather: null
+  filter_time_of_day: null
+
+# 训练循环内的 test-time training（open: false 时完全不生效），移植自 main.py 的
+# OnlineTrainConfig。每个 chunk 的主损失算完后（最后一个 chunk 除外），在该 chunk 的
+# GT latent 上用独立的 AdamW 对白名单参数做 n_train_steps 次 flow-matching 更新，
+# 让后续 chunk 的主训练在"TTT 适应过"的权重上进行，与推理时的在线 TTT 行为对齐。
+ttt: # 对应TTTConfig
+  open: false
+  n_train_steps: 5              # 每个 chunk 的 TTT 更新步数
+  lr: 1.0e-5                    # TTT 专用学习率（每个 chunk 新建 AdamW，动量不跨 chunk）
+  grad_clip_norm: 1.0           # 只裁剪白名单参数的梯度；null 表示不裁剪
+
+  # 白名单：只有这些层参与 TTT 更新（条目省略 block 序号，"blocks.norm3" 匹配所有
+  # block 的 norm3）。默认与 main.py 的 Scheme A（~0.5M 参数）一致：
+  # 输出头 + 每 block 的 AdaLN modulation + norm3 affine。
+  trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
+  trainable_block_start: 18     # 只训 blocks.<i>（i >= 该值）；TTT 反传到此为止，省显存
+
+  # 每个视频结束后（optimizer.step() 之前）把白名单参数恢复到视频开始时的快照。
+  # 多卡下必须为 true：TTT 更新是各 rank 本地行为，不恢复会让 DDP 各副本权重发散。
+  reset_between_videos: true
