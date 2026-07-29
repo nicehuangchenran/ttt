@@ -22,10 +22,11 @@ Infinite World - Dataset Preprocessing Script
 
 使用示例：
   # 8 GPUs 并行处理
-  torchrun --nproc_per_node=8 prepare/sekai_game_walking/2_preprocess_dataset.py \
-     --bucket-config ASPECT_RATIO_256 \
+nohup OMP_NUM_THREADS=8 DECORD_NUM_THREADS=8  torchrun  --nproc_per_node=8  --local-ranks-filter=0  preprocess/sekai_game_walking/2_preprocess_dataset.py \
+     --bucket-config ASPECT_RATIO_627_F64 \
      --dataset-dir dataset/sekai-game-walking-854_480_30fps \
-     --output-dir preprocessed/sekai-game-walking-256px
+     --output-dir preprocessed/sekai-game-walking-647px && /mnt/efs/chenran/claude_notify.sh 'aws' '480p 训练完了' \
+         > preprocessed/sekai-game-walking-256px/preprocess_main.log 2>&1 &
 
 nohup torchrun --nproc_per_node=8 prepare/sekai_game_walking/2_preprocess_dataset.py \
     --bucket-config ASPECT_RATIO_256 \

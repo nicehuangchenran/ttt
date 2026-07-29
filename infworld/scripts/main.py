@@ -23,7 +23,7 @@ Infinite World - Action-Conditioned Video Generation Inference Script
 使用示例:
 ---------
 # WBench 格式（原有用法，不变）
-CUDA_VISIBLE_DEVICES=5 python scripts/main.py  \
+CUDA_VISIBLE_DEVICES=5 nohup python scripts/main.py  \
   --dataset-dir dataset/wbench \
   --output-dir videos/wbench \
   --num 10 --max-chunks 3
@@ -32,10 +32,10 @@ CUDA_VISIBLE_DEVICES=5 python scripts/main.py  \
   CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nnodes=1 --nproc_per_node=4 --local-ranks-filter=0 \
     scripts/main.py \
     --dataset-dir preprocessed/sekai-game-walking-352_192_30fps --shift 3 \
-    --filter-location "East Maddon Park, London, United Kingdom" --filter-weather sunny \
-  --checkpoint weights/[sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks3-07_28-04:28:36/step320.ckpt \
-    --max-chunks 10 --num 4 \
-    --output-dir "videos/val/[sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks10-step320"
+    --filter-weather sunny \
+  --checkpoint weights/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45/step740.ckpt \
+    --max-chunks 20 --num 4 \
+    --output-dir "videos/val/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45_step740ckpt_chunks20"
 
     --checkpoint weights/[sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks3-07_28-04:28:36/step320.ckpt \
 输出文件:

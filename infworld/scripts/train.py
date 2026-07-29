@@ -5,14 +5,18 @@ Infinite World - Flow-Matching Training Script
 
 Usage:
 ------
-# 多 GPU 训练
-CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=29500 \
+# 多 GPU 训练, 每 100 个 step 存一个 ckpt
+CUDA_VISIBLE_DEVICES=4,5,6,7 nohup torchrun --nproc_per_node=8 \
     scripts/train.py \
     --data-dir preprocessed/sekai-game-walking-352_192_30fps --shift 3 \
-    --filter-location "East Maddon Park, London, United Kingdom" --filter-weather sunny \
-    --epochs 20 \
-    --val-every-n-steps 16   
+    --filter-weather sunny \
+    --epochs 20 --max-chunks 20\
+    --val-every-n-steps 100   \
+    > logs/nohup_train_$(date +%m%d_%H%M%S).out 2>&1 &
     
+        --resume weights/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45/step740.ckpt \
+    --filter-location "East Maddon Park, London, United Kingdom" 
+
 # 从 checkpoint 恢复训练
 /mnt/efs/chenran/miniconda3/envs/infworld/bin/python3 scripts/train.py \
     --resume weights/my-run/step100.ckpt
@@ -33,9 +37,10 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=29500 \
   --filter-time-of-day: 按 timeOfDay 筛选，如 day
 
 输出:
+    run-name 默认格式: [数据集名]-shift{shift}[-[filter]...]-chunks{max_chunks}-mm_dd-hh:mm:ss
+    例: weights/[sekai-352_192]-shift3-[Castle_Rock_Beach]-[sunny]-chunks3-07_28-15:30:45/step100.ckpt
+
   - Checkpoints: weights/<run-name>/step{step}.ckpt
-      run-name 默认格式: [数据集名]-shift{shift}[-[filter]...]-chunks{max_chunks}-mm_dd-hh:mm:ss
-      例: weights/[sekai-352_192]-shift3-[Castle_Rock_Beach]-[sunny]-chunks3-07_28-15:30:45/step100.ckpt
       ckpt 内容（5 个键）:
         state_dict  # DiT 权重，已剔除 pos_embed / pos_embed_temporal（加载时重算）
         optimizer   # AdamW 状态（动量等），用于 resume
@@ -52,7 +57,7 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=29500 \
       logs/train_log/<run-name>/config.json         # 训练配置（可复现）,记录全部参数（TrainConfig/TTTConfig）、world_size、实际训练样本数
 
   - 调试技巧:
-       tensorboard --logdir=logs/train_log/<run-name>/tensorboard  
+       tensorboard --logdir=logs/train_log/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45/tensorboard
       查看某个 rank 的日志: tail -f logs/train_log/<run-name>/train_rank3.log
       监控所有 rank 状态: grep -H "ERROR" logs/train_log/<run-name>/train_rank*.log
 
