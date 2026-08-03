@@ -1,0 +1,26 @@
+#  ttt 是teacher forcing训练, 这里的组合有 74 个 case,一个 epoch7 分钟
+train:
+  data_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 5
+  max_chunks_per_video: 15
+  filter_location: "East Maddon Park, London, United Kingdom"
+  filter_weather: sunny
+
+  cond_chunk_num: 2
+  log_chunk: true
+
+  epochs: 1
+  val_every_n_steps: 50
+  
+  
+ttt:
+  open: true
+  n_train_steps: 5              # 每个 chunk 的 TTT 更新步数
+  lr: 1.0e-5                    # TTT 专用学习率（每个 chunk 新建 AdamW，动量不跨 chunk）
+  grad_clip_norm: 1.0           # 只裁剪白名单参数的梯度；null 表示不裁剪
+
+  trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
+  trainable_block_start: 12     # 只训 blocks.<i>（i >= 该值）；TTT 反传到此为止，省显存
+
+  reset_between_videos: true
+#finished at 2026-07-30 12:09:57 UTC+8, gpu num:8

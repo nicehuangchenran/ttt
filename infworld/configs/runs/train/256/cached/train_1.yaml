@@ -1,0 +1,15 @@
+train:
+  data_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  max_chunks_per_video: 5
+  filter_location: "East Maddon Park, London, United Kingdom"
+  filter_weather: sunny
+
+  epochs: 20 #每100 个 step /最后一个 step, 保存 ckpt
+  # batch_size=gpu_num*1*max_chunks
+  # steps=cases/gpu_num*epochs
+  val_every_n_steps: 50
+
+ttt:
+  open: false
+# finished at <东八区时间>, gpu num:8

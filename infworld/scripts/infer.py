@@ -22,65 +22,38 @@ Infinite World - Action-Conditioned Video Generation Inference Script
 
 使用示例:
 ---------
-# WBench 格式（原有用法，不变）
-CUDA_VISIBLE_DEVICES=5 nohup python scripts/main.py  \
-  --dataset-dir dataset/wbench \
-  --output-dir videos/wbench \
-  --num 10 --max-chunks 3
+CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nnodes=1 --nproc_per_node=4 --local-ranks-filter=0 \
+  scripts/infer.py --config configs/runs/infer/256/test.yaml
 
-# 预处理格式 + filter（训练后验证）
-  CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nnodes=1 --nproc_per_node=4 --local-ranks-filter=0 \
-    scripts/main.py \
-    --dataset-dir preprocessed/sekai-game-walking-352_192_30fps --shift 3 \
-    --filter-weather sunny \
-  --checkpoint weights/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45/step740.ckpt \
-    --max-chunks 20 --num 4 \
-    --output-dir "videos/val/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45_step740ckpt_chunks20"
+  --set ExpConfig.max_chunks=1 ExpConfig.num=1
 
-    --checkpoint weights/[sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks3-07_28-04:28:36/step320.ckpt \
+输入(相关文件):
+  configs/infworld_config.yaml     模型自身配置（DiT 结构 / VAE / T5 / 基础 checkpoint）
+  configs/infer_default.yaml       本脚本所有可配置项 + 默认值（字段全集，作为文档）
+  configs/runs/infer/*.yaml        单次推理的输入，只写要改的字段，分 ExpConfig:/OnlineTrainConfig: 两段
+
 输出文件:
+  输出目录是<output_root>/<run_name>/ 
+    videos/test/
+      case_1_combined.mp4
+      case_7_combined.mp4
+      infer_config.json   # 本次运行的参数记录；只写文件，不打印到日志/控制台
+      infer_log/
+        infer.log         # rank0 日志（全部 log() 行，带时间戳）,同时输出在控制台
+        infer_rank{N}.log # 其他 rank 各自的日志
+  生成视频前如果目录中已存在同名 mp4，立刻停止整个程序，退出 torchrun。
+  全部 case 正常跑完后，在用到的 run yaml 末尾写入"#finished at <时间> UTC+8, gpu num:<world_size>,run name:<yaml>"（中途报错不会标记）。
+
+参数:
 ---------
-  <output-dir>视频, 生成视频前如果目录中遇到任何相同名称的 mp4,立刻停止整个程序, 退出 torchrun
-    videos/val/[sekai-game-walking-352_192_30fps]-shift3-[East_Maddon_Park]-[sunny]-chunks3-origin_ckpt/
-      video_001_combined.mp4
-      video_007_combined.mp4
-      run_config_<月日-时分秒>.json   # 本次运行的参数记录（CLI 覆盖项 / 最终生效的完整配置），每次运行新增一个文件，不覆盖历史；rank0 同时打印到控制台
+  可配置项的全集、含义与默认值见 configs/infer_default.yaml（yaml 里写了 dataclass
+  没声明的 key 会直接报错，而不是静默忽略）。两段分别对应本文件的 ExpConfig
+  （采样 / 路径 / case 子集 / meta.json 筛选 / 保存）与 OnlineTrainConfig
+  （chunk 之间的在线 test-time 训练）；新增参数只需在对应 dataclass 加字段。
 
-
-参数（未指定时使用 ExpConfig / OnlineTrainConfig 的默认值）:
-  # 采样
-  --steps               采样去噪步数 num_sampling_steps（默认 30）
-  --cfg-scale           文本 CFG 强度 text_cfg_scale（默认 5.0）
-  --seed                随机种子（默认 42）
-  --shift               Scheduler shift，与分辨率配套：PX256=3, PX627=7, PX960=11（默认 7）
-  --bucket-config-name  宽高比 bucket 表名，如 ASPECT_RATIO_627_F64；需与 --shift 同步（默认 ASPECT_RATIO_627_F64）
-  --max-chunks          每个视频最多生成的自回归 chunk 数（默认 20）
-
-  # 路径
-  --checkpoint          覆盖 DiT checkpoint 路径，如 weights/my-run/step500.ckpt
-                        （默认用 configs/infworld_config.yaml 里的 checkpoint_path:checkpoints/infinite_world_model.ckpt）
-  --dataset-dir         输入数据集目录（默认 dataset/wbench）
-  --output-dir          视频输出目录，每个视频保存为 case_{n}_combined.mp4（默认 ../WBench/work_dirs/test/videos）
-
-  # case 子集选择（按 case 编号）
-  --begin-idx           从编号 > begin_idx 的第一个 case 开始（-1 表示从头，默认 -1）
-  --num                 从 begin-idx 起运行的 case 数量（-1 表示全部剩余，默认 -1）
-
-  # 数据筛选（仅预处理格式，按 meta.json 精确匹配；筛选先于 begin-idx/num 生效）
-  --filter-location       按地点筛选
-  --filter-scene          按场景类型筛选（如 outdoor-urban）
-  --filter-crowd-density  按人群密度筛选（如 empty）
-  --filter-weather        按天气筛选（如 sunny）
-  --filter-time-of-day    按时段筛选（如 day）
-
-  # 在线（test-time）训练
-  --online-training     是否在 chunk 之间做在线训练: on/off（默认 off）
-  --train-steps         每个 chunk 的在线训练步数（默认 5）
-
-  
 代码结构（自上而下）:
   §1 Experiment parameters   - ExpConfig / OnlineTrainConfig dataclasses
-  §2 CLI                     - parse_cli / build_configs
+  §2 Config                  - parse_cli / apply_section / build_configs
   §3 Runtime environment     - RuntimeContext / setup_runtime
   §4 Model loading           - Models / load_models
   §5 Input loading           - Input / load_inputs (自动检测格式)
@@ -101,7 +74,7 @@ import json
 import datetime
 import argparse
 import numpy as np
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, asdict, fields
 from typing import Optional
 from omegaconf import OmegaConf
 import torch.distributed as dist
@@ -151,23 +124,92 @@ VIEW_ACTION_MAP = {
 # ============================================================================
 # Logging helper (rank-aware, flushed)
 # ============================================================================
-_GLOBAL_RANK = 0  # set once by setup_runtime; used to prefix and gate logs
+_GLOBAL_RANK = 0    # set once by setup_runtime; used to prefix and gate logs
+_LOG_FH = None      # this rank's log file handle, opened by setup_file_logging
+_LOG_BUFFER = []    # lines emitted before the log file is known (runtime setup)
+
+
+class _Tee:
+    """Mirror a stream to the log file so *everything* printed lands on disk.
+
+    Wrapping sys.stdout/sys.stderr (rather than only routing log()) is what makes
+    the log file self-sufficient: library prints, tqdm sampling bars, warnings and
+    uncaught tracebacks all go through these streams, and none of them know about
+    log(). The terminal still gets the original stream unchanged.
+    """
+
+    def __init__(self, stream, fh):
+        self.stream = stream
+        self.fh = fh
+
+    def write(self, data):
+        self.stream.write(data)
+        self.stream.flush()
+        self.fh.write(data)
+        self.fh.flush()
+        return len(data)
+
+    def flush(self):
+        self.stream.flush()
+        self.fh.flush()
+
+    def isatty(self):
+        # tqdm asks this to decide between a live bar and plain lines; answer for
+        # the real terminal so interactive behavior is unchanged.
+        return self.stream.isatty()
+
+    def __getattr__(self, name):
+        return getattr(self.stream, name)
+
+
+def setup_file_logging(output_dir, log_subdir):
+    """Open this rank's log file, replay the pre-open buffer, and tee the streams.
+
+    Every rank writes its own file (rank0 -> infer.log, rank N -> infer_rank{N}.log),
+    so per-rank progress is separable. Lines logged before this call (runtime /
+    distributed setup, which happens before the output dir is known) are buffered
+    and written here, so nothing is lost. After this returns, stdout and stderr
+    are mirrored into the file — including tracebacks from a crash.
+    """
+    global _LOG_FH
+    log_dir = os.path.join(output_dir, log_subdir)
+    os.makedirs(log_dir, exist_ok=True)
+    name = "infer.log" if _GLOBAL_RANK == 0 else f"infer_rank{_GLOBAL_RANK}.log"
+    path = os.path.join(log_dir, name)
+    _LOG_FH = open(path, "a", buffering=1)
+    if _LOG_BUFFER:
+        _LOG_FH.write("".join(_LOG_BUFFER))
+        _LOG_BUFFER.clear()
+    sys.stdout = _Tee(sys.stdout, _LOG_FH)
+    sys.stderr = _Tee(sys.stderr, _LOG_FH)
+    return log_dir
 
 
 def log(msg, *, tag="InfWorld", all_ranks=False):
-    """Print a rank-prefixed, flushed log line.
+    """Print a timestamped, rank-prefixed, flushed log line.
 
-    By default only rank 0 prints (global info identical on every rank, e.g.
-    model loading and dataset scan). Pass all_ranks=True for per-rank output
-    (each rank runs a different DP shard, so its progress differs). flush=True
-    so lines appear immediately when torchrun redirects stdout to a file.
+    By default only rank 0 prints (global info identical on every rank, e.g. model
+    loading and dataset scan). Pass all_ranks=True for per-rank output (each rank
+    runs a different DP shard, so its progress differs). flush=True so lines
+    appear immediately when torchrun redirects stdout to a file.
+
+    Printed lines reach the log file through the stdout tee; lines this rank does
+    not print are written to the file directly, so each rank's file stays complete.
+    Before the file is open, every line is buffered instead (no tee yet).
     """
-    if all_ranks or _GLOBAL_RANK == 0:
-        print(f"[{tag}][r{_GLOBAL_RANK}] {msg}", flush=True)
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{timestamp}] [{tag}][r{_GLOBAL_RANK}] {msg}"
+    printed = all_ranks or _GLOBAL_RANK == 0
+    if printed:
+        print(line, flush=True)
+    if _LOG_FH is None:
+        _LOG_BUFFER.append(line + "\n")
+    elif not printed:
+        _LOG_FH.write(line + "\n")
 
 
 # ============================================================================
-# §1  Experiment parameters (edit here or override via CLI)
+# §1  Experiment parameters (defaults; overridden by the run yaml)
 # ============================================================================
 @dataclass
 class ExpConfig:
@@ -184,6 +226,7 @@ class ExpConfig:
     max_chunks: int = 20                 # max autoregressive chunks allowed per video
     num_frames: Optional[int] = None     # None -> read model_args.validation_data.num_frames
     bucket_config_name: str = "ASPECT_RATIO_627_F64"
+    log_steps: bool = False              # show tqdm sampling progress bar in logs
     negative_prompt: str = (
         "many cars, crowds, Vivid hues, overexposed, static, blurry details, "
         "subtitles, style, work, artwork, image, still, overall grayish, worst quality, "
@@ -197,11 +240,16 @@ class ExpConfig:
     model_config_path: str = "configs/infworld_config.yaml"
     checkpoint_path: Optional[str] = None  # override checkpoint (e.g. weights/my-run/step500.ckpt)
     dataset_dir: str = "dataset/wbench"
-    output_dir: str = "../WBench/work_dirs/test/videos"  # parent dir of PROJECT_ROOT
+
+    # Outputs go to <output_root>/<run_name>/; run_name defaults to the run yaml's
+    # basename (test.yaml -> videos/test/test/).
+    output_root: str = "videos"
+    run_name: str = ""
+    log_subdir: str = "infer_log"  # <output_root>/<run_name>/<log_subdir>/infer[_rank{N}].log
 
     # Case subset selection (by case number, e.g. case5 -> 5)
     begin_idx: int = -1                  # start at first case with number > begin_idx (-1 -> first case)
-    n: int = -1                          # number of cases to run from that point (-1 -> all remaining)
+    num: int = -1                        # number of cases to run from that point (-1 -> all remaining)
 
     # Data filters (only for preprocessed format with meta.json)
     filter_location: Optional[str] = None
@@ -222,9 +270,9 @@ class OnlineTrainConfig:
     open: bool = False                   # master switch
     n_train_steps: int = 5
     lr: float = 1e-5
-    reset_between_videos: bool = True    # restore init weights per video (train affects only current video)
-    use_grad_checkpoint: bool = True     # use_reentrant=False set in infworld/models/checkpoint.py
     grad_clip_norm: Optional[float] = 1.0
+    use_grad_checkpoint: bool = True     # use_reentrant=False set in infworld/models/checkpoint.py
+    reset_between_videos: bool = True    # restore init weights per video (train affects only current video)
     # Whitelist of layers to train; everything else is frozen. Entries are
     # parameter-name paths with the per-block index omitted ("blocks.norm3"
     # covers blocks.<i>.norm3 for every whitelisted block). Scheme A (~0.5M
@@ -245,125 +293,124 @@ class OnlineTrainConfig:
 
 
 # ============================================================================
-# §2  CLI
+# §2  Config (run yaml -> dataclasses)
 # ============================================================================
 def parse_cli():
-    """Parse command-line overrides. Every flag defaults to None so build_configs
-    knows which ones to apply over the dataclass defaults."""
-    parser = argparse.ArgumentParser(description="Infinite World inference")
-    parser.add_argument(
-        "--online-training",
-        type=lambda s: s.strip().lower() in ("on", "true", "1", "yes"),
-        default=None,
-        help="Enable online (test-time) training between chunks: on/off",
+    """Only the run yaml and optional dotlist overrides; every run parameter
+    itself lives in the yaml (configs/runs/infer/*.yaml)."""
+    parser = argparse.ArgumentParser(
+        description="Infinite World inference. All run parameters come from a "
+                    "run yaml under configs/runs/infer/."
     )
-    parser.add_argument("--train-steps", type=int, default=None)
-    parser.add_argument("--max-chunks", type=int, default=None,
-                        help="Max autoregressive chunks allowed per video")
-    parser.add_argument("--steps", type=int, default=None, help="num_sampling_steps")
-    parser.add_argument("--cfg-scale", type=float, default=None, help="text_cfg_scale")
-    parser.add_argument("--seed", type=int, default=None)
-    parser.add_argument("--shift", type=int, default=None,
-                        help="Scheduler shift (PX256: 3, PX627: 7, PX960: 11); keep in sync with --bucket-config-name")
-    parser.add_argument("--bucket-config-name", type=str, default=None,
-                        help="Aspect-ratio bucket table in infworld/configs/bucket_config.py, "
-                             "e.g. ASPECT_RATIO_627_F64 (shift=7) or ASPECT_RATIO_960_F64 (shift=11)")
-    parser.add_argument("--checkpoint", type=str, default=None,
-                        help="Override checkpoint path (e.g. weights/my-run/step500.ckpt); "
-                             "default is checkpoint_path in configs/infworld_config.yaml "
-                             "(checkpoints/infinite_world_model.ckpt)")
-    parser.add_argument("--dataset-dir", type=str, default=None)
-    parser.add_argument("--output-dir", type=str, default=None)
-    parser.add_argument("--begin-idx", type=int, default=None,
-                        help="Start at first case whose number > begin_idx (-1 -> first case)")
-    parser.add_argument("--num", dest="n", type=int, default=None,
-                        help="Number of cases to run from begin_idx (-1 -> all remaining)")
-
-    # Data filters (only for preprocessed format)
-    parser.add_argument("--filter-location", type=str, default=None,
-                        help="Filter by location (preprocessed format only)")
-    parser.add_argument("--filter-scene", type=str, default=None,
-                        help="Filter by scene type (preprocessed format only)")
-    parser.add_argument("--filter-crowd-density", type=str, default=None,
-                        help="Filter by crowd density (preprocessed format only)")
-    parser.add_argument("--filter-weather", type=str, default=None,
-                        help="Filter by weather (preprocessed format only)")
-    parser.add_argument("--filter-time-of-day", type=str, default=None,
-                        help="Filter by time of day (preprocessed format only)")
-
+    parser.add_argument("--config", type=str, required=True,
+                        help="Run config yaml, e.g. configs/runs/infer/test.yaml")
+    parser.add_argument("--set", nargs="*", default=[], metavar="SECTION.KEY=VALUE",
+                        help="Temporary overrides on top of the yaml, "
+                             "e.g. --set ExpConfig.max_chunks=1")
     args, _ = parser.parse_known_args()
     return args
 
 
+def apply_section(cfg, values, where):
+    """Write one yaml section into a dataclass instance.
+
+    Only fields the dataclass declares are accepted, so a typo'd key raises
+    instead of being silently ignored. Values are cast to the default's type
+    (bool/int/float/str/tuple); None passes through unchanged.
+    """
+    defaults = {f.name: getattr(cfg, f.name) for f in fields(cfg)}
+    for key, value in (values or {}).items():
+        if key not in defaults:
+            raise ValueError(f"{where}: unknown option '{key}'. "
+                             f"Valid options: {', '.join(sorted(defaults))}")
+        default = defaults[key]
+        if value is not None and default is not None:
+            if isinstance(default, bool):
+                value = str(value).strip().lower() in ("1", "true", "yes", "on")
+            elif isinstance(default, tuple):
+                value = tuple(value)
+            elif isinstance(default, (int, float, str)):
+                value = type(default)(value)
+        setattr(cfg, key, value)
+    return cfg
+
+
 def build_configs(cli):
-    """Build (ExpConfig, OnlineTrainConfig) from dataclass defaults, overriding
-    with any CLI flag that was actually provided (non-None)."""
-    exp_config = ExpConfig()
-    online_train_config = OnlineTrainConfig()
+    """Build (ExpConfig, OnlineTrainConfig) from the run yaml.
 
-    if cli.max_chunks is not None:
-        exp_config.max_chunks = cli.max_chunks
-    if cli.steps is not None:
-        exp_config.num_sampling_steps = cli.steps
-    if cli.cfg_scale is not None:
-        exp_config.text_cfg_scale = cli.cfg_scale
-    if cli.seed is not None:
-        exp_config.seed = cli.seed
-    if cli.shift is not None:
-        exp_config.shift = cli.shift
-    if cli.bucket_config_name is not None:
-        exp_config.bucket_config_name = cli.bucket_config_name
-    if cli.checkpoint is not None:
-        exp_config.checkpoint_path = cli.checkpoint
-    if cli.dataset_dir is not None:
-        exp_config.dataset_dir = cli.dataset_dir
-    if cli.output_dir is not None:
-        exp_config.output_dir = cli.output_dir
-    if cli.begin_idx is not None:
-        exp_config.begin_idx = cli.begin_idx
-    if cli.n is not None:
-        exp_config.n = cli.n
+    The yaml has two sections named after the dataclasses: `ExpConfig:` and
+    `OnlineTrainConfig:`. Fields left out keep their dataclass default (the full
+    field set with defaults is documented in configs/infer_default.yaml).
+    `--set ExpConfig.max_chunks=1` overrides on top. run_name defaults to the
+    yaml's basename, which also names the output sub-directory.
+    """
+    path = _resolve_path(cli.config)
+    if not os.path.isfile(path):
+        raise FileNotFoundError(f"Run config not found: {path}")
+    raw = OmegaConf.load(path)
+    if cli.set:
+        raw = OmegaConf.merge(raw, OmegaConf.from_dotlist(list(cli.set)))
+    raw = OmegaConf.to_container(raw, resolve=True) or {}
 
-    # Data filters
-    if cli.filter_location is not None:
-        exp_config.filter_location = cli.filter_location
-    if cli.filter_scene is not None:
-        exp_config.filter_scene = cli.filter_scene
-    if cli.filter_crowd_density is not None:
-        exp_config.filter_crowd_density = cli.filter_crowd_density
-    if cli.filter_weather is not None:
-        exp_config.filter_weather = cli.filter_weather
-    if cli.filter_time_of_day is not None:
-        exp_config.filter_time_of_day = cli.filter_time_of_day
-
-    if cli.online_training is not None:
-        online_train_config.open = cli.online_training
-    if cli.train_steps is not None:
-        online_train_config.n_train_steps=cli.train_steps
-
+    sections = {"ExpConfig": ExpConfig(), "OnlineTrainConfig": OnlineTrainConfig()}
+    unknown = [k for k in raw if k not in sections]
+    if unknown:
+        raise ValueError(f"{path}: unknown section(s) {unknown}. "
+                         f"Valid sections: {', '.join(sections)}")
+    name = os.path.basename(path)
+    exp_config = apply_section(sections["ExpConfig"], raw.get("ExpConfig"),
+                               f"{name}:ExpConfig")
+    online_train_config = apply_section(sections["OnlineTrainConfig"],
+                                        raw.get("OnlineTrainConfig"),
+                                        f"{name}:OnlineTrainConfig")
+    if not exp_config.run_name:
+        exp_config.run_name = os.path.splitext(name)[0]
     return exp_config, online_train_config
 
 
 def dump_run_config(cli, exp_config, online_train_config, output_dir):
     """记录本次运行的全部参数，方便回顾:
-      - cli_overrides: 命令行实际传入的参数（非 None 的 flag）
-      - exp_config / online_train_config: 最终生效的完整配置（默认值 + 覆盖后）
-    rank0 打印到控制台，并写 <output_dir>/run_config_<时间戳>.json（带时间戳，
-    重复往同一 output_dir 跑不会覆盖历史记录）。
+      - config: 用的哪个 run yaml；overrides: --set 传入的临时覆盖
+      - ExpConfig / OnlineTrainConfig: 最终生效的完整配置（默认值 + yaml + --set）
+    只由 rank0 写 <output_dir>/infer_config.json，不打印到日志/控制台。
     """
     payload = {
-        "cli_overrides": {k: v for k, v in vars(cli).items() if v is not None},
-        "exp_config": asdict(exp_config),
-        "online_train_config": asdict(online_train_config),
+        "config": cli.config,
+        "overrides": list(cli.set),
+        "ExpConfig": asdict(exp_config),
+        "OnlineTrainConfig": asdict(online_train_config),
     }
-    text = json.dumps(payload, indent=2, ensure_ascii=False, default=str)
-    log(f"Run config:\n{text}", tag="Config")
+    text = json.dumps(payload, indent=2, ensure_ascii=False, default=str, sort_keys=True)
     if _GLOBAL_RANK == 0:
-        stamp = datetime.datetime.now().strftime("%m%d-%H%M%S")
-        path = os.path.join(output_dir, f"run_config_{stamp}.json")
+        path = os.path.join(output_dir, "infer_config.json")
         with open(path, "w") as f:
             f.write(text)
-        log(f"Run config saved: {path}", tag="Config")
+
+
+def mark_config_finished(config_path, world_size, run_name=""):
+    """在 run yaml 末尾追加一行完成标记，方便看出哪个配置已经跑完。
+
+    只有 rank0 在 run() 正常返回后调用，所以中途报错的配置不会被标记。时间用东八区
+    （机器时区不一定是 CST，所以显式指定 UTC+8，而不是用本地时间）。追加失败只警告
+    不抛异常——视频已经生成好了，不该因为标记写不进去而让整个任务算失败。
+    """
+    path = _resolve_path(config_path)
+    cst = datetime.timezone(datetime.timedelta(hours=8))
+    stamp = datetime.datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")
+    line = f"#finished at {stamp} UTC+8, gpu num:{world_size}, run_name:{run_name}\n"
+    try:
+        # yaml 末尾若没有换行，直接 append 会把标记粘到最后一个值上（num: 4 会变成
+        # 字符串 "4#finished ..."），所以先补一个换行。
+        with open(path) as f:
+            existing = f.read()
+        needs_newline = bool(existing) and not existing.endswith("\n")
+        with open(path, "a") as f:
+            if needs_newline:
+                f.write("\n")
+            f.write(line)
+        log(f"Marked finished in {config_path}: {line.strip()}", tag="Config")
+    except OSError as e:
+        log(f"WARNING: could not mark {config_path} as finished: {e}", tag="Config")
 
 
 # ============================================================================
@@ -569,22 +616,15 @@ def load_models(config_path, device, enable_context_parallel,
     checkpoint_path = _resolve_path(checkpoint_override or model_args.get(
         "checkpoint_path", "checkpoints/models/diffusion_pytorch_model.safetensors"))
 
-    log(f"Loading checkpoint: {checkpoint_path}")
-    log(f"Config: {config_path}")
-
-    log("Loading VAE...")
+    log("Loading models...")
     vae = get_obj_from_str(model_args.vae_target)(**model_args.vae_cfg).to(device)
-
-    log("Loading Text Encoder...")
     text_encoder = get_obj_from_str(model_args.text_encoder_target)(device=device, **model_args.text_encoder_cfg)
     text_encoder.t5.model.to(device)
 
-    log("Loading Scheduler...")
     scheduler = get_obj_from_str(model_args.scheduler_target)(**model_args.val_scheduler_cfg)
     scheduler.num_sampling_steps = num_sampling_steps
     scheduler.shift = shift
 
-    log("Loading DiT Model...")
     dtype = getattr(torch, model_args.amp_dtype)
     dit = get_obj_from_str(model_args.model_target)(
         out_channels=vae.out_channels,
@@ -599,7 +639,8 @@ def load_models(config_path, device, enable_context_parallel,
     state_dict.pop("pos_embed_temporal", None)   # recomputed at load time
     state_dict.pop("pos_embed", None)
     missing, unexpected = dit.load_state_dict(state_dict, strict=False)
-    log(f"Model loaded! Missing: {len(missing)}, Unexpected: {len(unexpected)}")
+    if missing or unexpected:
+        log(f"DiT state_dict: missing={len(missing)}, unexpected={len(unexpected)}")
     dit.to(device)
 
     trainable_params = []
@@ -752,7 +793,7 @@ def _is_preprocessed_dataset(dataset_dir):
 
 
 def _meta_matches_filters(meta, exp_config):
-    """Check one case's meta.json against the --filter-* conditions (same
+    """Check one case's meta.json against the filter_* conditions (same
     semantics as train.py's PreprocessedVideoDataset: exact match, None -> skip)."""
     checks = (
         ("location", exp_config.filter_location),
@@ -792,7 +833,7 @@ def _load_preprocessed_input(dp_idx, name, case_dir, meta, vae, device):
 
 def _load_inputs_preprocessed(dataset_dir, exp_config, dp_rank, dp_size, vae, device):
     """Load this rank's shard from a preprocessed dataset dir, applying the
-    --filter-* conditions on meta.json before subset selection and DP sharding
+    filter_* conditions on meta.json before subset selection and DP sharding
     (so filters shrink the candidate pool exactly like train.py)."""
     all_names = sorted(
         (d for d in os.listdir(dataset_dir)
@@ -824,10 +865,10 @@ def _load_inputs_preprocessed(dataset_dir, exp_config, dp_rank, dp_size, vae, de
         log(f"Filters {dict(active)} -> {len(case_names)} cases")
 
     case_names = [name for name in case_names if _case_sort_key(name) > exp_config.begin_idx]
-    if exp_config.n >= 0:
-        case_names = case_names[:exp_config.n]
+    if exp_config.num >= 0:
+        case_names = case_names[:exp_config.num]
     log(f"Selected {len(case_names)} cases "
-        f"(begin_idx={exp_config.begin_idx}, n={exp_config.n})")
+        f"(begin_idx={exp_config.begin_idx}, num={exp_config.num})")
 
     inputs = []
     for dp_idx, name in enumerate(case_names):
@@ -866,7 +907,7 @@ def _load_inputs_wbench(dataset_dir, bucket_config_name, dp_rank, dp_size, begin
 def load_inputs(exp_config, dp_rank, dp_size, vae, device):
     """Detect the dataset format and dispatch to the matching loader.
 
-    Preprocessed format (meta.json present) supports --filter-*; WBench format
+    Preprocessed format (meta.json present) supports filter_*; WBench format
     (image.jpg present) keeps the original behavior. Filters on a WBench dir
     are a usage error, so fail fast instead of silently ignoring them.
     """
@@ -881,22 +922,25 @@ def load_inputs(exp_config, dp_rank, dp_size, vae, device):
         exp_config.filter_time_of_day))
     if has_filters:
         raise ValueError(
-            f"--filter-* options require a preprocessed dataset (with meta.json), "
+            f"filter_* options require a preprocessed dataset (with meta.json), "
             f"but {dataset_dir} looks like a WBench dir")
     log("Dataset format: WBench (raw image + action json)")
     return _load_inputs_wbench(
         dataset_dir, exp_config.bucket_config_name, dp_rank, dp_size,
-        exp_config.begin_idx, exp_config.n)
+        exp_config.begin_idx, exp_config.num)
 
 
 # ============================================================================
 # §6  Output paths
 # ============================================================================
-def prepare_output_dir(output_dir):
-    """Resolve the output dir (default lives in PROJECT_ROOT's parent) and mkdir it."""
-    output_dir = _resolve_path(output_dir)
+def prepare_output_dir(output_root, run_name):
+    """Resolve <output_root>/<run_name> (relative -> PROJECT_ROOT) and mkdir it.
+
+    run_name defaults to the run yaml's basename, so configs/runs/infer/test.yaml
+    writes to videos/test/test/.
+    """
+    output_dir = os.path.join(_resolve_path(output_root), run_name)
     os.makedirs(output_dir, exist_ok=True)
-    log(f"Output directory: {output_dir}")
     return output_dir
 
 
@@ -938,7 +982,7 @@ def _slice_move_view(move, view, start, num_frames, device):
 
 
 def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
-                    video_buffer, latent_size, move, view, num_frames):
+                    video_buffer, latent_size, move, view, num_frames, log_steps):
     """Generate one chunk: encode buffer tail -> slice actions -> sample -> decode.
 
     Returns a ChunkResult holding the sampled latent, the decoded pixels (CPU),
@@ -968,6 +1012,7 @@ def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
             negative_prompts=[negative_prompt],
             device=device,
             additional_args=additional_args,
+            progress=log_steps,  # tqdm progress bar controlled by log_steps param
         )
         decoded = models.vae.decode(samples).cpu()
 
@@ -1014,7 +1059,7 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
         result = _generate_chunk(
             models, device, input.prompt, exp_config.negative_prompt,
             exp_config.text_cfg_scale, video_buffer, latent_size,
-            input.move, input.view, num_frames,
+            input.move, input.view, num_frames, exp_config.log_steps,
         )
         video_buffer = torch.cat([video_buffer, result.decoded[:, :, 1:]], dim=2)
         log(f"{input.name}: chunk {chunk_idx + 1}/{num_chunks} done, "
@@ -1149,8 +1194,9 @@ def main():
 
     runtime = setup_runtime(exp_config.seed)
 
-    # 先建输出目录并记录参数（模型加载前落盘，崩溃也留有记录）。
-    output_dir = prepare_output_dir(exp_config.output_dir)
+    # 先建输出目录、接上文件日志并记录参数（模型加载前落盘，崩溃也留有记录）。
+    output_dir = prepare_output_dir(exp_config.output_root, exp_config.run_name)
+    setup_file_logging(output_dir, exp_config.log_subdir)
     dump_run_config(cli, exp_config, online_train_config, output_dir)
 
     models = load_models(
@@ -1172,6 +1218,12 @@ def main():
     )
 
     run(models, runtime.device, exp_config, online_train_config, inputs, output_dir)
+
+    # 全部 rank 跑完后才在 run yaml 上盖完成标记（任何 rank 报错都不会走到这里）。
+    if runtime.use_dist:
+        dist.barrier()
+    if runtime.global_rank == 0:
+        mark_config_finished(cli.config, runtime.world_size, exp_config.run_name)
 
 
 if __name__ == "__main__":

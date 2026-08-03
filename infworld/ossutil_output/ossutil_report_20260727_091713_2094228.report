@@ -1,1 +1,0 @@
-# ossutil cp -r --update /mnt/efs/chenran/ttt/infworld/dataset/sekai-game-walking-854_480_30fps/ oss://wbench/ttt/infworld/dataset/sekai-game-walking-854_480_30fps/ --dry-run

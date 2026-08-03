@@ -1,0 +1,13 @@
+# gpu_num=4
+# 验证 weights/[...]-chunks20-07_28-14:07:45 的 step740 checkpoint
+# 产物: videos/test/test/{case_*_combined.mp4, infer_config.json}
+ExpConfig:
+  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  filter_weather: sunny
+  checkpoint_path: "weights/[sekai-game-walking-352_192_30fps]-shift3-[sunny]-chunks20-07_28-14:07:45/step740.ckpt"
+  max_chunks: 20
+  num: 4
+
+OnlineTrainConfig:
+  open: false

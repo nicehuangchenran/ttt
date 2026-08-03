@@ -1,0 +1,62 @@
+# scripts/main.py 的全部可配置项及默认值。
+#
+# 这是 configs/runs/infer/*.yaml 能写的字段全集：run yaml 里只写要改的字段，
+# 未写的字段用 dataclass 的默认值（这里的值就是从 ExpConfig / OnlineTrainConfig 取出的），
+# 新增参数需在对应 dataclass 里加字段；run yaml 中出现本文件以外的 key 会直接报错。
+# 段名就是 main.py 里的 dataclass 名。想临时改一项：--set ExpConfig.max_chunks=1
+
+ExpConfig:
+  # 采样
+  seed: 42
+  text_cfg_scale: 5.0            # 文本 CFG 强度
+  num_sampling_steps: 30         # 采样去噪步数
+  shift: 7                       # 与分辨率配套：PX256=3, PX627=7, PX960=11
+  max_chunks: 20                 # 每个视频最多生成的自回归 chunk 数
+  num_frames: null               # null 则取 infworld_config.yaml 的 validation_data.num_frames
+  bucket_config_name: ASPECT_RATIO_627_F64   # 宽高比 bucket 表名，需与 shift 同步
+  log_steps: false               # true 则在日志中显示 tqdm 采样进度条（每步一行）；false 则禁用
+  negative_prompt: "many cars, crowds, Vivid hues, overexposed, static, blurry details, subtitles, style, work, artwork, image, still, overall grayish, worst quality, low quality, JPEG compression artifacts, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn face, deformed, disfigured, deformed limbs, fused fingers, motionless image, cluttered background, three legs, crowded background, walking backwards."
+
+  # 模型与数据路径（相对路径按项目根目录解析）
+  model_config_path: configs/infworld_config.yaml
+  checkpoint_path: null          # null 则用 infworld_config.yaml 里的 checkpoint_path
+                                 # 例: weights/<run>/step740.ckpt
+  dataset_dir: dataset/wbench    # WBench 原始格式或 preprocessed/ 格式，自动检测
+
+  # 产物路径：视频与 infer_config.json 都写在 <output_root>/<run_name>/
+  output_root: videos/
+  run_name: ""                   # 留空则取 yaml 文件名（去扩展名）
+                                 # 例: test.yaml -> videos/test/test/
+  log_subdir: infer_log          # 日志写到 <output_root>/<run_name>/<log_subdir>/：
+                                 # rank0 -> infer.log，其他 rank -> infer_rank{N}.log
+
+  # case 子集选择（按 case 编号，先筛选再选子集，最后才按 rank 分片）
+  begin_idx: -1                  # 从编号 > begin_idx 的第一个 case 开始（-1 表示从头）
+  num: -1                        # 从 begin_idx 起运行的 case 数（-1 表示全部剩余）
+
+  # 数据筛选（仅 preprocessed 格式，按 meta.json 精确匹配，null 表示不筛选）
+  filter_location: null
+  filter_scene: null
+  filter_crowd_density: null
+  filter_weather: null
+  filter_time_of_day: null
+
+  # 保存
+  high_quality_save: true        # true -> quality 10, false -> quality 5
+  fps: 30
+
+# OnlineTrainConfig: chunk 之间的在线（test-time）训练，open: false 时完全不生效。
+# 只更新白名单参数，权重只影响当前视频（reset_between_videos: true 时逐视频复原）。
+OnlineTrainConfig:
+  open: false
+  n_train_steps: 5               # 每个 chunk 的在线训练步数
+  lr: 1.0e-5                     # 每个 chunk 新建 AdamW，动量不跨 chunk
+  grad_clip_norm: 1.0            # null 表示不裁剪
+  use_grad_checkpoint: true
+  reset_between_videos: true     # 每个视频开始前恢复初始权重
+
+  # 白名单：只有这些层参与更新（条目省略 block 序号，"blocks.norm3" 匹配所有 block
+  # 的 norm3）。默认为 Scheme A（~0.5M 参数）：输出头 + 每 block 的 AdaLN modulation
+  # + norm3 affine。
+  trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
+  trainable_block_start: 18      # 只训 blocks.<i>（i >= 该值）；反传到此为止，省显存

@@ -1,0 +1,14 @@
+ExpConfig:
+  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  filter_weather: sunny
+  num: 4
+
+  checkpoint_path: "weights/train-5.7-add/steps900.ckpt"
+  
+  max_chunks: 15
+
+
+OnlineTrainConfig:
+  open: false
+

@@ -23,7 +23,3 @@ build/
 .DS_Store
 .idea/
 .vscode/
-
-# wandb / tensorboard
-wandb/
-runs/

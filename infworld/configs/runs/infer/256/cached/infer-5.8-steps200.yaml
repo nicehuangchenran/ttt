@@ -1,0 +1,22 @@
+ExpConfig:
+  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  filter_weather: sunny
+  num: 4
+
+  checkpoint_path: "weights/train-5.8/step200.ckpt"
+  
+  max_chunks: 15
+
+
+OnlineTrainConfig:
+  open: true
+  n_train_steps: 5              # 每个 chunk 的 TTT 更新步数
+  lr: 1.0e-5                    # TTT 专用学习率（每个 chunk 新建 AdamW，动量不跨 chunk）
+  grad_clip_norm: 1.0           # 只裁剪白名单参数的梯度；null 表示不裁剪
+
+  trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
+  trainable_block_start: 12     # 只训 blocks.<i>（i >= 该值）；TTT 反传到此为止，省显存
+
+  reset_between_videos: true
+#finished at 2026-07-31 17:07:11 UTC+8, gpu num:4, run_name:infer-5.8-steps200

@@ -1,37 +1,43 @@
 """
-Infinite World - Flow-Matching 离线训练
-========================================
-训练 1.3B DiT 模型（rectified-flow），数据来自预处理输出，所有参数写在 run yaml。
+Infinite World - Flow-Matching Training Script
+==============================================
+训练 1.3B DiT 模型（rectified-flow），数据来自 preprocess_dataset.py 的输出,所有运行参数写在 run yaml 里（configs/runs/train/*.yaml）
 
-用法:
-----
-torchrun --nproc_per_node=8 --master_port=29501 scripts/train.py --config configs/runs/infer/256/train-.yaml
+Usage:
+------
+CUDA_VISIBLE_DEVICES=4,5,6,7 nohup \
+    torchrun --nproc_per_node=8 --local-ranks-filter=0 --master_port=29501 \
+    scripts/train.py --config configs/runs/train/london_sunny.yaml \
+    > logs/nohup_train_$(date +%m%d_%H%M%S).out 2>&1 &
 
-临时覆盖参数：
---set train.lr=2e-5 train.epochs=2
+--set train.epochs=1 train.resume_from=weights/my-run/step100.ckpt
 
-配置文件:
-  configs/infworld_config.yaml     模型结构、预训练权重路径
-  configs/train_default.yaml       所有可配置项 + 默认值（字段全集）
-  configs/runs/train/*.yaml        单次实验配置（只写要改的字段）
+输入(相关文件):
+  configs/infworld_config.yaml     模型自身配置（DiT 结构 / VAE / T5 / 基础 checkpoint）
+  configs/train_default.yaml       本脚本所有可配置项 + 默认值（字段全集，作为文档）
+  configs/runs/train/*.yaml        单次训练实验的输入，只写要改的字段
 
-输出:
+输出目录结构:
   weights/<run-name>/
-    ├── steps{N}.ckpt              训练快照
+    ├── step{N}.ckpt           # 训练快照（state_dict + optimizer + lr_sched + global_step + config）
     └── train_log/
-        ├── train.log              rank0 主日志（**包含所有错误堆栈**）
-        ├── train_rank{N}.log      其他 rank 日志
-        ├── metrics.jsonl          训练指标（loss/lr/grad_norm）
-        ├── config.json            完整配置快照
-        └── tensorboard/           TensorBoard 事件
+        ├── train.log          # rank0 主日志
+        ├── train_rank{N}.log  # 其他 rank 日志
+        ├── metrics.jsonl      # 训练指标（loss/lr/grad_norm）
+        ├── config.json        # 完整配置（供溯源）
+        └── tensorboard/       # TensorBoard 事件文件
 
-  目录已存在时报错退出，不覆盖旧结果。
-  训练正常结束后在 run yaml 末尾追加 "#finished at <时间> UTC+8, gpu num:<world_size>,run_name:<yaml>" 标记。
+  <run-name> 默认取 yaml 文件名（去扩展名），可在 yaml 里设 train.run_name 或 --set 覆盖。
+  如果目录已经存在,报错并且不产生任何文件
 
-查看日志:
-  tail -f weights/<run-name>/train_log/train.log              # 实时查看
-  grep "FATAL ERROR" weights/<run-name>/train_log/train*.log  # 查找错误
-  tensorboard --logdir=weights/train-5.6/train_log/tensorboard
+  训练正常跑完后，会在用到的 run yaml 末尾追加一行
+  "#finished at <时间> UTC+8, gpu num:<world_size>"，标记该配置已经跑完（中途报错不会标记）。
+
+常用调试命令:
+  tensorboard --logdir=weights/<run-name>/train_log/tensorboard
+  tail -f weights/<run-name>/train_log/train_rank3.log
+  grep -H "ERROR" weights/<run-name>/train_log/train_rank*.log
+
 """
 
 import sys
@@ -86,10 +92,6 @@ class TrainConfig:
     # 日志与 ckpt 同放在 weights/<run_name>/ 下：日志进 <run_name>/<log_subdir>/
     log_subdir: str = "train_log"
     save_every_n_steps: int = 100
-    # 按 epoch 间隔存 ckpt，可为小数（如 0.5 表示每半个 epoch 存一次）。设 >0 时
-    # 覆盖 save_every_n_steps：按本 rank 每 epoch 的 step 数换算成 step 间隔
-    # （steps_per_epoch = len(dataloader) // videos_per_step），至少 1 步。0 表示关闭。
-    ckpt_every_n_epoch: float = 0.0
     log_every_n_steps: int = 1
     # 是否输出 chunk 级日志（每个 chunk 生成后打一行 epoch/step/video/chunk/loss）。
     # 默认关闭，只在 rank0 输出，避免刷屏。
@@ -99,10 +101,6 @@ class TrainConfig:
     # timestep 分桶验证：每隔 N 步，在固定视频/固定 t/固定噪声上算 loss，
     # 剥离随机性以观察真实训练趋势。val_every_n_steps=0 表示关闭。
     val_every_n_steps: int = 0
-    # 按 epoch 间隔验证，可为小数（如 0.5 表示每半个 epoch 验证一次）。设 >0 时
-    # 覆盖 val_every_n_steps：按本 rank 每 epoch 的 step 数换算成 step 间隔
-    # （steps_per_epoch = len(dataloader) // videos_per_step），至少 1 步。0 表示关闭。
-    val_every_n_epoch: float = 0.0
     num_val_videos: int = 4
     num_val_buckets: int = 10
     # 数据筛选：根据 meta.json 的属性过滤样本，默认 None 表示不筛选
@@ -145,10 +143,6 @@ class TTTConfig:
     # 每个视频结束后（optimizer.step() 之前）把白名单参数恢复到视频开始时的快照。
     # 多卡下必须为 True：TTT 更新是各 rank 本地行为，不恢复会让 DDP 各副本权重发散。
     reset_between_videos: bool = True
-    # TTT optimizer 类型：'adamw' 或 'sgd'。SGD 无状态，可节省 ~20% TTT 显存。
-    optimizer_type: str = "adamw"
-    # SGD 动量（仅当 optimizer_type='sgd' 时生效）
-    sgd_momentum: float = 0.9
 
 
 def parse_cli():
@@ -214,7 +208,7 @@ def build_train_config(cli) -> Tuple[TrainConfig, TTTConfig]:
     return cfg, ttt_cfg
 
 
-def mark_config_finished(config_path: str, world_size: int, run_name: str = "", logger=None):
+def mark_config_finished(config_path: str, world_size: int, logger=None):
     """在 run yaml 末尾追加一行完成标记，方便看出哪个配置已经跑完。
 
     只有 rank0 在 train_loop 正常返回后调用，所以中途报错的配置不会被标记。时间用
@@ -224,7 +218,7 @@ def mark_config_finished(config_path: str, world_size: int, run_name: str = "", 
     path = _resolve_path(config_path)
     cst = datetime.timezone(datetime.timedelta(hours=8))
     stamp = datetime.datetime.now(cst).strftime("%Y-%m-%d %H:%M:%S")
-    line = f"#finished at {stamp} UTC+8, gpu num:{world_size}, run_name:{run_name}\n"
+    line = f"#finished at {stamp} UTC+8, gpu num:{world_size}\n"
     say = logger.info if logger else print
     try:
         # yaml 末尾若没有换行，直接 append 会把标记粘到最后一个值上
@@ -283,30 +277,6 @@ def setup_runtime(seed: int) -> RuntimeContext:
     return RuntimeContext(local_rank, global_rank, world_size, device)
 
 
-class StderrTee:
-    """将 stderr 同时输出到原 stderr 和文件。
-
-    用于捕获 NCCL/PyTorch C++ 层的错误（这些错误不经过 Python logging）。
-    """
-    def __init__(self, file_path: str, original_stderr):
-        self.file = open(file_path, 'a', buffering=1)  # 行缓冲
-        self.original_stderr = original_stderr
-        self.file_path = file_path
-
-    def write(self, message):
-        self.original_stderr.write(message)
-        self.file.write(message)
-        self.file.flush()  # 立即刷新到磁盘
-
-    def flush(self):
-        self.original_stderr.flush()
-        self.file.flush()
-
-    def close(self):
-        if self.file and not self.file.closed:
-            self.file.close()
-
-
 class TrainLogger:
     def __init__(self, log_dir: str, rank: int, world_size: int):
         """log_dir: 本次运行的日志目录，即 weights/<run_name>/<log_subdir>/。"""
@@ -320,16 +290,6 @@ class TrainLogger:
         # 多卡时，非 rank0 的日志写到单独文件
         if self.rank != 0:
             self.log_file = os.path.join(self.log_dir, f"train_rank{self.rank}.log")
-
-        # ⭐ 重定向 stderr 到日志文件（捕获 NCCL/C++ 错误）
-        # stderr 文件与 Python 日志同名，这样所有输出都在一个文件里
-        self.stderr_tee = None
-        self.original_stderr = sys.stderr
-        try:
-            self.stderr_tee = StderrTee(self.log_file, sys.stderr)
-            sys.stderr = self.stderr_tee
-        except Exception as e:
-            print(f"WARNING: Failed to redirect stderr: {e}", file=sys.stderr)
 
         # TensorBoard writer: 只有 rank0 创建
         self.writer = None
@@ -360,7 +320,7 @@ class TrainLogger:
             "ttt_config": asdict(ttt_cfg),
         }
         with open(self.config_file, 'w') as f:
-            json.dump(record, f, indent=2, ensure_ascii=False, sort_keys=True)
+            json.dump(record, f, indent=2, ensure_ascii=False)
         self.info(f"Config saved: {self.config_file}")
 
     def info(self, msg: str, force_print: bool = False):
@@ -451,7 +411,7 @@ class Checkpointer:
             "global_step": global_step,
             "config": asdict(config),
         }
-        path = os.path.join(self.weights_dir, f"steps{global_step}.ckpt")
+        path = os.path.join(self.weights_dir, f"step{global_step}.ckpt")
         torch.save(ckpt, path)
         print(f"[SAVE] Checkpoint saved: {path}")
     
@@ -558,11 +518,10 @@ class PreprocessedVideoDataset(Dataset):
     def __getitem__(self, idx: int) -> VideoSample:
         case_name = self.cases[idx]
         case_dir = os.path.join(self.data_dir, case_name)
-        # 所有张量保持在 CPU，在 make_chunk_batch 中按需移到 GPU
-        latent_full = torch.load(os.path.join(case_dir, "latent_full.pt"), map_location='cpu')
-        target_latent = torch.load(os.path.join(case_dir, "target_latent.pt"), map_location='cpu')
-        text_emb = torch.load(os.path.join(case_dir, "text_emb.pt"), map_location='cpu')
-        actions = torch.load(os.path.join(case_dir, "actions.pt"), map_location='cpu')
+        latent_full = torch.load(os.path.join(case_dir, "latent_full.pt"))
+        target_latent = torch.load(os.path.join(case_dir, "target_latent.pt"))
+        text_emb = torch.load(os.path.join(case_dir, "text_emb.pt"))
+        actions = torch.load(os.path.join(case_dir, "actions.pt"))
         K = target_latent.shape[0]
         if self.max_chunks > 0 and K > self.max_chunks:
             K = self.max_chunks
@@ -616,19 +575,17 @@ def build_dit(cfg: TrainConfig, ttt_cfg: TTTConfig, runtime: RuntimeContext) -> 
         out_channels=16, caption_channels=4096, model_max_length=512,
         enable_context_parallel=False, **model_args.model_cfg
     ).to(master_dtype)
-    # 如果设置了 resume_from，跳过预训练权重加载（稍后会被 resume checkpoint 覆盖）
-    if not cfg.resume_from:
-        checkpoint_path = _resolve_path(cfg.init_checkpoint)
-        if runtime.global_rank == 0:
-            print(f"[LOAD] DiT checkpoint: {checkpoint_path}")
-        state_dict = torch.load(checkpoint_path, map_location="cpu")
-        if "state_dict" in state_dict:
-            state_dict = state_dict["state_dict"]
-        state_dict.pop("pos_embed_temporal", None)
-        state_dict.pop("pos_embed", None)
-        missing, unexpected = dit.load_state_dict(state_dict, strict=False)
-        if runtime.global_rank == 0:
-            print(f"  Missing: {len(missing)}, Unexpected: {len(unexpected)}")
+    checkpoint_path = _resolve_path(cfg.init_checkpoint)
+    if runtime.global_rank == 0:
+        print(f"[LOAD] DiT checkpoint: {checkpoint_path}")
+    state_dict = torch.load(checkpoint_path, map_location="cpu")
+    if "state_dict" in state_dict:
+        state_dict = state_dict["state_dict"]
+    state_dict.pop("pos_embed_temporal", None)
+    state_dict.pop("pos_embed", None)
+    missing, unexpected = dit.load_state_dict(state_dict, strict=False)
+    if runtime.global_rank == 0:
+        print(f"  Missing: {len(missing)}, Unexpected: {len(unexpected)}")
     dit.train()
     if cfg.use_grad_checkpoint:
         set_grad_checkpoint(dit)
@@ -715,17 +672,15 @@ class ChunkBatch:
 
 def make_chunk_batch(video: VideoSample, k: int, device,
                      cond_chunk_num: int = -1) -> ChunkBatch:
-    """从 CPU 上的 VideoSample 切片并移到 GPU，按需加载以节省显存。"""
-    # video 的所有张量都在 CPU 上，这里按需切片并移到 GPU
-    x_start = video.target_latent[k].unsqueeze(0).to(device)
+    x_start = video.target_latent[k].unsqueeze(0)
     T_in = 20 * k + 1
     # cond_chunk_num=N 时条件区只保留最近 N 个 chunk（20N+1 latent 帧，含窗口首帧），
     # 取 latent_full[:, :T_in] 的尾部窗口；-1 表示不限制，条件区为完整前缀。
     if cond_chunk_num > 0:
         T_cond = min(T_in, 20 * cond_chunk_num + 1)
-        image_cond = video.latent_full[:, T_in - T_cond:T_in].unsqueeze(0).to(device)
+        image_cond = video.latent_full[:, T_in - T_cond:T_in].unsqueeze(0)
     else:
-        image_cond = video.latent_full[:, :T_in].unsqueeze(0).to(device)
+        image_cond = video.latent_full[:, :T_in].unsqueeze(0)
     start_frame = 80 * k
     end_frame = start_frame + 81
     move_seg = video.move[start_frame:end_frame]
@@ -735,7 +690,7 @@ def make_chunk_batch(video: VideoSample, k: int, device,
         move_seg = torch.cat([move_seg, torch.zeros(pad_len, dtype=torch.long)])
         view_seg = torch.cat([view_seg, torch.zeros(pad_len, dtype=torch.long)])
     return ChunkBatch(
-        x_start=x_start, image_cond=image_cond,
+        x_start=x_start.to(device), image_cond=image_cond.to(device),
         move=move_seg.unsqueeze(0).to(device), view=view_seg.unsqueeze(0).to(device),
         y=video.y.to(device), y_mask=video.y_mask.to(device),
     )
@@ -795,7 +750,7 @@ def ttt_adapt_on_chunk(models: TrainModels, chunk: ChunkBatch,
         反传在第一个可训 block 就停住（省显存省算力）；
       - 白名单参数上已累积的主梯度先摘下（保留张量引用），TTT 结束后原样放回；
       - 前向走 dit_raw，绕过 DDP —— 各 rank 在自己的视频上本地适应，不同步。
-    每个 chunk 新建 optimizer，Adam/SGD 动量不跨 chunk 累积（与 main.py 一致）。
+    每个 chunk 新建 AdamW，Adam 动量不跨 chunk 累积（与 main.py 一致）。
     """
     dit_raw = models.dit_raw
     # 临时冻结非白名单参数（记录原 flag，latent_encoder 可能本来就是 False）
@@ -810,11 +765,7 @@ def ttt_adapt_on_chunk(models: TrainModels, chunk: ChunkBatch,
         p.grad = None
 
     params = list(models.ttt_params.values())
-    # 根据配置选择 optimizer：SGD 无状态，节省显存
-    if ttt_cfg.optimizer_type == "sgd":
-        ttt_optimizer = torch.optim.SGD(params, lr=ttt_cfg.lr, momentum=ttt_cfg.sgd_momentum)
-    else:
-        ttt_optimizer = torch.optim.AdamW(params, lr=ttt_cfg.lr)
+    ttt_optimizer = torch.optim.AdamW(params, lr=ttt_cfg.lr)
     losses = []
     try:
         for _ in range(ttt_cfg.n_train_steps):
@@ -827,11 +778,9 @@ def ttt_adapt_on_chunk(models: TrainModels, chunk: ChunkBatch,
             losses.append(loss.item())
             del loss
     finally:
-        # 恢复所有参数的原始 requires_grad 状态
         for n, p in dit_raw.named_parameters():
             if n in saved_flags:
                 p.requires_grad_(saved_flags[n])
-        # 恢复白名单参数的主梯度
         for n, p in models.ttt_params.items():
             p.grad = saved_grads[n]
     return losses
@@ -930,12 +879,7 @@ def train_one_video(
         # 顺序也与推理一致：chunk k 的主损失（≈生成 chunk k）之后、chunk k+1 之前适应。
         if ttt_cfg.open and k < K - 1:
             ttt_losses.append(ttt_adapt_on_chunk(models, chunk, cfg, ttt_cfg))
-            # TTT 后立即清理显存
-            torch.cuda.synchronize()
-            torch.cuda.empty_cache()
         del chunk
-        # 每个 chunk 处理完立即清理显存（backward 后的中间激活已不需要）
-        torch.cuda.synchronize()
         torch.cuda.empty_cache()
         if cfg.log_chunk and logger is not None:
             # is_step_boundary 时本视频结束后 global_step 才 +1，所以此处显示的 step
@@ -952,16 +896,10 @@ def train_one_video(
         restore_ttt_params(models.ttt_params, ttt_snapshot)
     grad_norm = 0.0
     if is_step_boundary:
-        # optimizer.step() 前清理显存，降低峰值（AdamW 会分配动量缓冲）
-        torch.cuda.synchronize()
-        torch.cuda.empty_cache()
         grad_norm = torch.nn.utils.clip_grad_norm_(
             models.trainable_params, cfg.max_grad_norm).item()
         optimizer.step()
         optimizer.zero_grad(set_to_none=True)
-        # optimizer.step() 后也清理，释放动量更新产生的临时张量
-        torch.cuda.synchronize()
-        torch.cuda.empty_cache()
     stats = {"loss": sum(losses), "per_chunk_loss": losses, "grad_norm": grad_norm}
     if ttt_losses:
         flat = [v for per_chunk in ttt_losses for v in per_chunk]
@@ -980,22 +918,6 @@ def train_loop(
 ):
     global_step = start_step
     video_count = 0
-    # ckpt 间隔：ckpt_every_n_epoch>0 时按 epoch 换算成 step 间隔（可为小数 epoch），
-    # 覆盖 save_every_n_steps；否则沿用 save_every_n_steps。
-    save_interval = cfg.save_every_n_steps
-    if cfg.ckpt_every_n_epoch > 0:
-        steps_per_epoch = max(1, len(dataloader) // cfg.videos_per_step)
-        save_interval = max(1, round(steps_per_epoch * cfg.ckpt_every_n_epoch))
-        logger.info(f"Checkpoint interval: every {cfg.ckpt_every_n_epoch} epoch(s) = "
-                    f"{save_interval} step(s) (steps_per_epoch={steps_per_epoch})")
-    # 验证间隔：val_every_n_epoch>0 时按 epoch 换算成 step 间隔（可为小数 epoch），
-    # 覆盖 val_every_n_steps；否则沿用 val_every_n_steps。
-    val_interval = cfg.val_every_n_steps
-    if cfg.val_every_n_epoch > 0:
-        steps_per_epoch = max(1, len(dataloader) // cfg.videos_per_step)
-        val_interval = max(1, round(steps_per_epoch * cfg.val_every_n_epoch))
-        logger.info(f"Validation interval: every {cfg.val_every_n_epoch} epoch(s) = "
-                    f"{val_interval} step(s) (steps_per_epoch={steps_per_epoch})")
     for epoch in range(cfg.epochs):
         logger.info(f"=== Epoch {epoch + 1}/{cfg.epochs} ===")
         if hasattr(dataloader.sampler, 'set_epoch'):
@@ -1018,11 +940,11 @@ def train_loop(
                         lr=optimizer.param_groups[0]["lr"], video=video.name,
                         num_chunks=video.num_chunks, step_second=t_video, **ttt_kv,
                     )
-                if val_interval > 0 and global_step % val_interval == 0 \
+                if cfg.val_every_n_steps > 0 and global_step % cfg.val_every_n_steps == 0 \
                         and val_videos and runtime.global_rank == 0:
                     val_stats = validate_by_timestep(models, val_videos, cfg, runtime.device)
                     logger.metrics(step=global_step, **val_stats)
-                if global_step % save_interval == 0:
+                if global_step % cfg.save_every_n_steps == 0:
                     checkpointer.save(models.dit, optimizer, lr_sched, global_step, cfg)
                 if lr_sched:
                     lr_sched.step()
@@ -1031,114 +953,93 @@ def train_loop(
 
 
 def main():
-    import traceback
-
     cli = parse_cli()
     cfg, ttt_cfg = build_train_config(cli)
     runtime = setup_runtime(cfg.seed)
-
-    # 早期错误（logger 创建前）需要降级到 print + 抛出
-    logger = None
-    try:
-        # ckpt 和日志同放一处：weights/<run_name>/{step*.ckpt, <log_subdir>/}
-        # 目标目录已存在就报错退出，绝不覆盖/追加到旧结果里（对齐 main.py 的防覆盖行为）。
-        # 例外：设了 resume_from 是恢复训练，目录本就该存在，放行。
-        # 只让 rank0 判定目录是否已存在，再广播给所有 rank，大家基于同一结果一起退出或一起继续。
-        # 若各 rank 自己判定，rank0 会领先跑到 Checkpointer 把目录 makedirs 出来，其余 rank 随后
-        # 命中 FileExistsError —— 即便启动前目录不存在，也会因这个竞态而误报"目录已存在"。
-        run_dir = os.path.join(_resolve_path(cfg.weights_dir), cfg.run_name)
-        exists = (os.path.exists(run_dir) and not cfg.resume_from) if runtime.global_rank == 0 else False
-        if runtime.world_size > 1:
-            flag = [exists]
-            dist.broadcast_object_list(flag, src=0)
-            exists = flag[0]
-        if exists:
-            raise FileExistsError(
-                f"Output directory already exists: {run_dir}\n"
-                f"重复运行会覆盖 checkpoint、把日志追加到旧文件里，造成混乱。请改用新的 "
-                f"run_name（--set train.run_name=xxx），或删除该目录后重试；"
-                f"若是要恢复训练，请设置 train.resume_from。"
-            )
-        checkpointer = Checkpointer(cfg.weights_dir, cfg.run_name, runtime.global_rank)
-        logger = TrainLogger(os.path.join(checkpointer.weights_dir, cfg.log_subdir),
-                             runtime.global_rank, runtime.world_size)
-        logger.info("=" * 70)
-        logger.info(f"Infinite World - Training - {cfg.run_name}")
-        logger.info("=" * 70)
-        logger.info(f"Run config: {cli.config}")
-        logger.info(f"Data: {cfg.data_dir}")
-        logger.info(f"Device: {runtime.device}, World Size: {runtime.world_size}")
-        logger.info("=" * 70)
-        # TTT 前置校验：多卡下 TTT 更新是各 rank 本地行为，不恢复快照会让 DDP 各副本权重发散
-        if ttt_cfg.open:
-            if runtime.world_size > 1 and not ttt_cfg.reset_between_videos:
-                raise ValueError(
-                    "ttt.reset_between_videos=false is unsupported with world_size > 1: "
-                    "TTT updates are rank-local; without per-video restore the DDP "
-                    "replicas' weights diverge.")
-            logger.info(f"TTT enabled: n_train_steps={ttt_cfg.n_train_steps}, lr={ttt_cfg.lr}, "
-                        f"layers={ttt_cfg.trainable_layers}, "
-                        f"block_start={ttt_cfg.trainable_block_start}, "
-                        f"reset_between_videos={ttt_cfg.reset_between_videos}")
-        dataloader = build_dataloader(cfg, runtime)
-        logger.dump_config(cfg, ttt_cfg, runtime, len(dataloader.dataset), cli.config)
-        models = build_dit(cfg, ttt_cfg, runtime)
-        if ttt_cfg.open and not models.ttt_params:
-            raise ValueError(f"ttt.trainable_layers={ttt_cfg.trainable_layers} matched no "
-                             f"parameters (block_start={ttt_cfg.trainable_block_start})")
-        # fused=True: 逐参数原地更新，避免默认 foreach 路径在 step 内部分配
-        # 全尺寸临时张量（~一份 fp32 参数大小的瞬时峰值，1.4B 全参训练时会 OOM）
-        optimizer = torch.optim.AdamW(
-            models.trainable_params, lr=cfg.lr, weight_decay=cfg.weight_decay, betas=cfg.betas,
-            fused=True,
+    # ckpt 和日志同放一处：weights/<run_name>/{step*.ckpt, <log_subdir>/}
+    # 目标目录已存在就报错退出，绝不覆盖/追加到旧结果里（对齐 main.py 的防覆盖行为）。
+    # 例外：设了 resume_from 是恢复训练，目录本就该存在，放行。
+    # 只让 rank0 判定目录是否已存在，再广播给所有 rank，大家基于同一结果一起退出或一起继续。
+    # 若各 rank 自己判定，rank0 会领先跑到 Checkpointer 把目录 makedirs 出来，其余 rank 随后
+    # 命中 FileExistsError —— 即便启动前目录不存在，也会因这个竞态而误报“目录已存在”。
+    run_dir = os.path.join(_resolve_path(cfg.weights_dir), cfg.run_name)
+    exists = (os.path.exists(run_dir) and not cfg.resume_from) if runtime.global_rank == 0 else False
+    if runtime.world_size > 1:
+        flag = [exists]
+        dist.broadcast_object_list(flag, src=0)
+        exists = flag[0]
+    if exists:
+        raise FileExistsError(
+            f"Output directory already exists: {run_dir}\n"
+            f"重复运行会覆盖 checkpoint、把日志追加到旧文件里，造成混乱。请改用新的 "
+            f"run_name（--set train.run_name=xxx），或删除该目录后重试；"
+            f"若是要恢复训练，请设置 train.resume_from。"
         )
-        lr_sched = None
-        if cfg.lr_schedule == "cosine":
-            total_steps = len(dataloader) * cfg.epochs // cfg.videos_per_step
-            lr_sched = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, total_steps)
-        start_step = 0
-        if cfg.resume_from:
-            start_step = checkpointer.load_for_resume(cfg.resume_from, models.dit, optimizer, lr_sched)
-        # 只有 rank0 做验证，取数据集前 num_val_videos 个作为固定验证集
-        val_videos = None
-        if (cfg.val_every_n_steps > 0 or cfg.val_every_n_epoch > 0) and runtime.global_rank == 0:
-            val_dataset = PreprocessedVideoDataset(
-                cfg.data_dir, cfg.max_chunks_per_video,
-                filter_location=cfg.filter_location,
-                filter_scene=cfg.filter_scene,
-                filter_crowd_density=cfg.filter_crowd_density,
-                filter_weather=cfg.filter_weather,
-                filter_time_of_day=cfg.filter_time_of_day,
-                max_train_cases_num=cfg.max_train_cases_num,
-            )
-            n_val = min(cfg.num_val_videos, len(val_dataset))
-            val_videos = [val_dataset[i] for i in range(n_val)]
-            logger.info(f"Validation: {n_val} videos x {cfg.num_val_buckets} timestep buckets")
-        logger.info("Starting training loop...")
-        train_loop(models, dataloader, optimizer, lr_sched, logger, checkpointer,
-                  cfg, ttt_cfg, runtime, start_step, val_videos)
-        logger.info("Training finished!")
-        # 全部 rank 跑完后才在 run yaml 上盖完成标记（任何 rank 报错都不会走到这里）。
-        if runtime.world_size > 1:
-            dist.barrier()
-        if runtime.global_rank == 0:
-            mark_config_finished(cli.config, runtime.world_size, cfg.run_name, logger)
-        logger.close()
-
-    except Exception as e:
-        # 捕获所有异常，写入日志文件（如果 logger 已创建）并重新抛出
-        error_msg = f"FATAL ERROR in rank {runtime.global_rank}:\n{traceback.format_exc()}"
-        if logger is not None:
-            # info_all_ranks 会强制所有 rank 打印并写入各自的日志文件
-            logger.info_all_ranks("=" * 70)
-            logger.info_all_ranks(error_msg)
-            logger.info_all_ranks("=" * 70)
-            logger.close()
-        else:
-            # logger 还没创建（极早期错误），降级到 print
-            print(error_msg, file=sys.stderr)
-        # 重新抛出，让进程以非零状态退出（nohup/torchrun 能检测到失败）
-        raise
+    checkpointer = Checkpointer(cfg.weights_dir, cfg.run_name, runtime.global_rank)
+    logger = TrainLogger(os.path.join(checkpointer.weights_dir, cfg.log_subdir),
+                         runtime.global_rank, runtime.world_size)
+    logger.info("=" * 70)
+    logger.info(f"Infinite World - Training - {cfg.run_name}")
+    logger.info("=" * 70)
+    logger.info(f"Run config: {cli.config}")
+    logger.info(f"Data: {cfg.data_dir}")
+    logger.info(f"Device: {runtime.device}, World Size: {runtime.world_size}")
+    logger.info("=" * 70)
+    # TTT 前置校验：多卡下 TTT 更新是各 rank 本地行为，不恢复快照会让 DDP 各副本权重发散
+    if ttt_cfg.open:
+        if runtime.world_size > 1 and not ttt_cfg.reset_between_videos:
+            raise ValueError(
+                "ttt.reset_between_videos=false is unsupported with world_size > 1: "
+                "TTT updates are rank-local; without per-video restore the DDP "
+                "replicas' weights diverge.")
+        logger.info(f"TTT enabled: n_train_steps={ttt_cfg.n_train_steps}, lr={ttt_cfg.lr}, "
+                    f"layers={ttt_cfg.trainable_layers}, "
+                    f"block_start={ttt_cfg.trainable_block_start}, "
+                    f"reset_between_videos={ttt_cfg.reset_between_videos}")
+    dataloader = build_dataloader(cfg, runtime)
+    logger.dump_config(cfg, ttt_cfg, runtime, len(dataloader.dataset), cli.config)
+    models = build_dit(cfg, ttt_cfg, runtime)
+    if ttt_cfg.open and not models.ttt_params:
+        raise ValueError(f"ttt.trainable_layers={ttt_cfg.trainable_layers} matched no "
+                         f"parameters (block_start={ttt_cfg.trainable_block_start})")
+    # fused=True: 逐参数原地更新，避免默认 foreach 路径在 step 内部分配
+    # 全尺寸临时张量（~一份 fp32 参数大小的瞬时峰值，1.4B 全参训练时会 OOM）
+    optimizer = torch.optim.AdamW(
+        models.trainable_params, lr=cfg.lr, weight_decay=cfg.weight_decay, betas=cfg.betas,
+        fused=True,
+    )
+    lr_sched = None
+    if cfg.lr_schedule == "cosine":
+        total_steps = len(dataloader) * cfg.epochs // cfg.videos_per_step
+        lr_sched = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, total_steps)
+    start_step = 0
+    if cfg.resume_from:
+        start_step = checkpointer.load_for_resume(cfg.resume_from, models.dit, optimizer, lr_sched)
+    # 只有 rank0 做验证，取数据集前 num_val_videos 个作为固定验证集
+    val_videos = None
+    if cfg.val_every_n_steps > 0 and runtime.global_rank == 0:
+        val_dataset = PreprocessedVideoDataset(
+            cfg.data_dir, cfg.max_chunks_per_video,
+            filter_location=cfg.filter_location,
+            filter_scene=cfg.filter_scene,
+            filter_crowd_density=cfg.filter_crowd_density,
+            filter_weather=cfg.filter_weather,
+            filter_time_of_day=cfg.filter_time_of_day,
+            max_train_cases_num=cfg.max_train_cases_num,
+        )
+        n_val = min(cfg.num_val_videos, len(val_dataset))
+        val_videos = [val_dataset[i] for i in range(n_val)]
+        logger.info(f"Validation: {n_val} videos x {cfg.num_val_buckets} timestep buckets")
+    logger.info("Starting training loop...")
+    train_loop(models, dataloader, optimizer, lr_sched, logger, checkpointer,
+              cfg, ttt_cfg, runtime, start_step, val_videos)
+    logger.info("Training finished!")
+    # 全部 rank 跑完后才在 run yaml 上盖完成标记（任何 rank 报错都不会走到这里）。
+    if runtime.world_size > 1:
+        dist.barrier()
+    if runtime.global_rank == 0:
+        mark_config_finished(cli.config, runtime.world_size, logger)
+    logger.close()
 
 
 if __name__ == "__main__":

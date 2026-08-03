@@ -1,5 +1,4 @@
 #!/bin/bash
-# 项目原本的运行脚本
 # Infinite World - Local Inference Script (Single/Multi GPU)
 # Usage: bash infer_local.sh [num_gpus]
 # Example: bash infer_local.sh 1   (single GPU, no torchrun, avoids port conflict)
@@ -9,9 +8,9 @@
 # Multi GPU: runs torchrun. If EADDRINUSE, set: export MASTER_PORT=29500
 
 NUM_GPUS=${1:-1}
-# WORK_DIR="/mnt/dolphinfs/ssd_pool/docker/user/hadoop-videogen-hl/hadoop-camera3d/wuruiqi/infinite-world"
+WORK_DIR="/mnt/dolphinfs/ssd_pool/docker/user/hadoop-videogen-hl/hadoop-camera3d/wuruiqi/infinite-world"
 
-# cd $WORK_DIR
+cd $WORK_DIR
 
 echo "=============================================="
 echo "Infinite World - Local Inference"
@@ -21,16 +20,12 @@ echo "Working directory: $WORK_DIR"
 
 if [ "$NUM_GPUS" -eq 1 ]; then
     # Single GPU: run directly to avoid torchrun port (EADDRINUSE)
-    # python scripts/infworld_inference_input_oom.py --online-training=on
     python scripts/infworld_inference_origin.py
 else
     MASTER_PORT=${MASTER_PORT:-29400}
     echo "MASTER_PORT: $MASTER_PORT"
-    CUDA_VISIBLE_DEVICES=4,5 torchrun --nnodes=1 --nproc_per_node=$NUM_GPUS \
+    torchrun --nnodes=1 --nproc_per_node=$NUM_GPUS \
         --rdzv_id=100 --rdzv_backend=c10d \
         --rdzv_endpoint=localhost:$MASTER_PORT \
-        scripts/main.py \
-        --dataset-dir dataset/sekai-game-walking-854_480_30fps \
-        --output-dir video/sekai-game-walking-256 --num 2 \
-        --bucket-config-name ASPECT_RATIO_256 --shift 3 --steps 20
+        scripts/infworld_inference_origin.py
 fi

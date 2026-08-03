@@ -8,7 +8,19 @@ train:  # 对应TrainConfig
   # 数据
   data_dir: preprocessed/sekai-game-walking-854_480_30fps-256px
   max_chunks_per_video: 3       # 每个视频最多取几个 chunk 参与训练
+  filter_location: null   # 数据筛选：按 meta.json 精确匹配，null 表示不筛选
+  filter_scene: null
+  filter_crowd_density: null
+  filter_weather: null
+  filter_time_of_day: null
+  max_train_cases_num: -1       # 筛选后最多使用几个 case 训练（按名称排序取前 N），-1 表示用全部
   num_workers: 2
+
+  # image_cond 最多包含最近几个 chunk（1 个 chunk = 20 latent 帧 + 首帧共 21 帧）。
+  # -1 表示不限制（条件区随 chunk 线性增长直至整段视频，显存也随之增长）；
+  # 设为 N 后条件区固定为最近 20N+1 latent 帧，显存不再随 chunk 序号增长。
+  # 截断后的窗口的 latent不等于 latent_full 的切片，因果 VAE 的前缀等价性不再严格成立（窗口内容与"独立编码对应像素段"有细微差别）
+  cond_chunk_num: -1
 
   # 优化器
   lr: 1.0e-5
@@ -41,21 +53,21 @@ train:  # 对应TrainConfig
   weights_dir: weights
   log_subdir: train_log         # 日志目录：weights/<run_name>/<log_subdir>/
   save_every_n_steps: 100
+  ckpt_every_n_epoch: -1       # 按 epoch 间隔存 ckpt，可为小数（0.5 = 每半个 epoch）；
+                                # >0 时覆盖 save_every_n_steps（按 steps_per_epoch 换算成 step 间隔），-1 表示关闭
   log_every_n_steps: 1
+  log_chunk: false              # 是否输出 chunk 级日志（每个 chunk 生成后打一行 epoch/step/video/chunk/loss），默认关闭
   resume_from: ""               # 恢复训练，如 weights/<run>/step100.ckpt
   seed: 42
 
   # timestep 分桶验证（0 表示关闭）
   val_every_n_steps: 0
+  val_every_n_epoch: 0.0        # 按 epoch 间隔验证，可为小数（0.5 = 每半个 epoch）；
+                                # >0 时覆盖 val_every_n_steps（按 steps_per_epoch 换算成 step 间隔），0 表示关闭
   num_val_videos: 4
   num_val_buckets: 10
 
-  # 数据筛选：按 meta.json 精确匹配，null 表示不筛选
-  filter_location: null
-  filter_scene: null
-  filter_crowd_density: null
-  filter_weather: null
-  filter_time_of_day: null
+
 
 # 训练循环内的 test-time training（open: false 时完全不生效），移植自 main.py 的
 # OnlineTrainConfig。每个 chunk 的主损失算完后（最后一个 chunk 除外），在该 chunk 的
@@ -76,3 +88,7 @@ ttt: # 对应TTTConfig
   # 每个视频结束后（optimizer.step() 之前）把白名单参数恢复到视频开始时的快照。
   # 多卡下必须为 true：TTT 更新是各 rank 本地行为，不恢复会让 DDP 各副本权重发散。
   reset_between_videos: true
+
+  # TTT optimizer 类型：adamw | sgd。SGD 无动量状态张量，显存更省。
+  optimizer_type: adamw
+  sgd_momentum: 0.9             # 仅当 optimizer_type=sgd 时生效

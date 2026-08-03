@@ -1,0 +1,18 @@
+#  ttt 是teacher forcing训练, 这里的组合有 74 个 case,一个 epoch7 分钟
+train:
+  data_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  max_chunks_per_video: 20
+  filter_location: "East Maddon Park, London, United Kingdom"
+  filter_weather: sunny
+
+  cond_chunk_num: -1
+  log_chunk: true
+
+  epochs: 6
+  ckpt_every_n_epoch: 1
+  val_every_n_steps: 50
+  
+  
+ttt:
+  open: false

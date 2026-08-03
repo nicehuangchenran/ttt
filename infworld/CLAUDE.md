@@ -8,15 +8,11 @@ Infinite-World（infworld）：交互式世界模型，从条件图像 + 文本 
 
 ## 环境
 
-- Python：`/mnt/efs/chenran/miniconda3/envs/infworld/bin/python3`（conda 环境 `infworld`，Python 3.10，CUDA 12.4，torch 2.6.0）。默认 shell 是 `longlive` 环境，所以必须显式使用该解释器路径，不要直接用裸 `python`。
-- 共享的 8×A100-80G 机器。启动任务前先 `nvidia-smi` 挑空闲卡，用 `CUDA_VISIBLE_DEVICES` 指定，并先用最小配置试跑（小 `--max-chunks`、少量 case）。
-- 所有模型路径通过 `configs/infworld_config.yaml` 解析；预训练权重放在 `checkpoints/`（从 HuggingFace `MeiGen-AI/Infinite-World` 下载，见 README）。
+Python：`/mnt/efs/chenran/miniconda3/envs/infworld/bin/python3`（conda 环境 `infworld`，Python 3.10，CUDA 12.4，torch 2.6.0）。不要直接用裸 `python`。
 
-## 三个核心脚本（`scripts/` 目录）
+## 运行流程
 
-`scripts/` 下只有 `main.py`（推理 + 在线/test-time 训练）和 `train.py`（离线训练）是当前入口。`infworld_inference_origin.py`、`infworld_inference_with_ttt.py`、`train_old.py` 是遗留代码，不要在其基础上扩展。
-
-端到端流水线：**预处理**（视频/文本 → 缓存张量）→ **训练**（离线微调 DiT）→ **main.py**（自回归推理，可选在线 TTT）。预处理与训练共享同一套磁盘数据契约，推理做验证时也读同一 `preprocessed/` 格式。
+端到端流水线：**预处理**（视频/文本 → 缓存张量）→ **训练**（离线微调 DiT）→ **main.py**（自回归推理，可选在线 TTT）。
 
 ### 预处理：`preprocess/sekai_game_walking/2_preprocess_dataset.py`
 
@@ -29,17 +25,16 @@ torchrun --nproc_per_node=8 preprocess/sekai_game_walking/2_preprocess_dataset.p
   --output-dir preprocessed/sekai-game-walking-256px
 ```
 
-每个 case 输出：`latent_full.pt` `[16, T_lat, h, w]`、`target_latent.pt` `[K, 16, 21, h, w]`、`text_emb.pt`、`actions.pt`、`meta.json`。`--verify-prefix` 参数可抽查下文的因果 VAE 前缀假设。
+每个 case 输出：`latent_full.pt` `[16, T_lat, h, w]`、`target_latent.pt` `[K, 16, 21, h, w]`、`text_emb.pt`、`actions.pt`、`meta.json`,上述文件放在 `<output-dir>/case{n}/`
 
 ### 训练：`scripts/train.py`
 
-离线 flow-matching 微调。**只**加载 DiT — VAE 和 T5 从不实例化（这正是预处理换来的收益）。一个数据集样本 = 一个完整视频；视频的 K 个 chunk 累积梯度后只做一次 `optimizer.step()`。
+离线 flow-matching 微调。一次前向生成一个flow match 速度 v, 30 个 time steps 后生成一个视频 chunk, 一个视频的 K 个 chunk 累积梯度后只做一次 `optimizer.step()`。
 
-运行参数全部来自 run yaml，命令行只指定用哪个 yaml：
+运行参数全部来自 runs/train/[id}.yaml，命令行只指定用哪个 yaml：
 
-```bash
-CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=29500 \
-  scripts/train.py --config configs/runs/train/london_sunny.yaml
+```
+torchrun --nproc_per_node=8 scripts/train.py --config configs/runs/train/london_sunny.yaml
 ```
 
 配置分三层：`configs/infworld_config.yaml`（模型结构/VAE/T5/基础 ckpt）、`configs/train_default.yaml`（train.py 全部可配置项 + 默认值，作为字段全集文档）、`configs/runs/train/*.yaml`（单次实验，只写要改的字段，分 `train:`/`ttt:` 两段，对应 `TrainConfig`/`TTTConfig`）。写了不存在的 key 会报错而不是静默忽略；新增参数只需在 dataclass 加字段。临时覆盖用 `--set train.lr=2e-5`。
@@ -48,20 +43,23 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=29500 \
 
 一次运行的产物都在 `weights/<run_name>/` 下：`step{N}.ckpt` 和 `train_log/`（`train.log`、逐 rank 日志、`metrics.jsonl`、`config.json`、tensorboard）。`<run_name>` 默认取 yaml 文件名（去扩展名），也可在 yaml 里显式指定 `train.run_name` 或用 `--set train.run_name=my_exp` 临时覆盖。完整设计见 `TRAIN_ARCHITECTURE.md`，日志布局见 `MULTI_GPU_LOGGING.md`。
 
-### 推理：`scripts/main.py`
+### 推理：`scripts/infer.py`
 
-分 chunk 自回归生成。自动检测两种输入格式：原始 WBench（`image.jpg` + JSON，现场 VAE 编码）和 `preprocessed/`（读缓存 latent，支持 `--filter-*`）。单卡运行完全绕过 `torch.distributed`；多卡用 torchrun 按 case 分片（数据并行）。
+分 chunk 自回归生成。自动检测两种输入格式：原始 WBench（`image.jpg` + JSON，现场 VAE 编码）和 `preprocessed/`（读缓存 latent）。
+
+与 train.py 一样，运行参数全部来自 run/infer/{id}.yaml，命令行只指定用哪个 yaml：
 
 ```bash
 # 用 preprocessed 格式验证训练出的 checkpoint
-CUDA_VISIBLE_DEVICES=0,1,2,3,4 torchrun --nnodes=1 --nproc_per_node=5 scripts/main.py \
-  --dataset-dir preprocessed/sekai-game-walking-352_192_30fps --shift 3 \
-  --filter-location "East Maddon Park, London, United Kingdom" --filter-weather sunny \
-  --checkpoint weights/<run>/step500.ckpt --max-chunks 3 --num 4 \
-  --output-dir videos/val/<run>
+CUDA_VISIBLE_DEVICES=0,1,2,3,4 torchrun --nnodes=1 --nproc_per_node=5 \
+  scripts/main.py --config configs/runs/infer/test.yaml
 ```
 
-用 `--online-training on --train-steps 5` 可在 chunk 之间启用 test-time training。`cache.sh` 和 `infer_local.sh` 里有更多现成的调用命令（含 OSS 上传命令）。
+配置同样分三层：`configs/infworld_config.yaml`、`configs/infer_default.yaml`（main.py 全部可配置项 + 默认值，字段全集文档）、`configs/runs/infer/*.yaml`（单次推理，只写要改的字段，分 `ExpConfig:`/`OnlineTrainConfig:` 两段，段名就是 dataclass 名）。写了不存在的 key 会报错；临时覆盖用 `--set ExpConfig.max_chunks=1`。
+
+一次运行的产物都在 `videos/test/<run_name>/` 下：`case_{n}_combined.mp4` 和 `infer_config.json`（本次生效的完整配置）。`<run_name>` 默认取 yaml 文件名（去扩展名），可用 `ExpConfig.run_name` / `ExpConfig.output_root` 改。目录里已存在同名 mp4 时立刻报错退出，不覆盖旧结果。
+
+在 yaml 里设 `OnlineTrainConfig.open: true` 可在 chunk 之间启用 test-time training。`cache.sh` 和 `infer_local.sh` 里有更多现成的调用命令（含 OSS 上传命令）。
 
 ## 架构要点（改动数据或 checkpoint 前必读）
 
@@ -75,6 +73,13 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4 torchrun --nnodes=1 --nproc_per_node=5 scripts/ma
 
 ## 硬性规则
 
+- `scripts/` 下只有 `infer.py`（推理 + 在线/test-time 训练）和 `train.py`（离线训练）是当前入口。`infworld_inference_origin.py`、`infworld_inference_with_ttt.py`、`train_old.py` 是遗留代码，不要在其基础上扩展。
 - `checkpoints/` 只读（预训练权重）。所有训练产物写 `weights/<run>/`（ckpt 与 `train_log/` 同目录）。绝不写 `checkpoints/`。
 - `dataset/`、`videos/`、`checkpoints/`、`outputs/` 已 gitignore（大文件/生成物）；`preprocessed/` 目前只跟踪 `meta.json`。
 - DiT 配置（`in_channels`、`dim=1536`、`num_layers=30` 等）在 `configs/infworld_config.yaml::model_cfg`；train.py 硬编码了少量常量（out_channels=16、caption_channels=4096、max_length=512），以免为了读两个常量而加载 10GB 文本编码器 — 若改模型形状，两处要保持一致。
+- 使用中文输出
+
+## 代码生成原则
+
+- 不要创建没有实际复用需求的辅助层、封装或配置。
+- 保持实现简洁、清晰，避免不必要的抽象和过度设计。

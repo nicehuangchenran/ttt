@@ -1,4 +1,4 @@
-Validation Loss 的数据视角
+# 训练逻辑
 
 1. 使用的数据
 

@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # 统一设置模型名称（只需修改这里）
-MODEL="infworld-online-cut21"
+MODEL="infer-2.2"
 
-cd /root/autodl-tmp/ttt/WBench
-source /root/miniconda3/etc/profile.d/conda.sh
+cd /mnt/efs/chenran/ttt/WBench
+source /mnt/efs/chenran/miniconda3/etc/profile.d/conda.sh
 conda activate wbench-main
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
 # 创建日志目录
 mkdir -p log

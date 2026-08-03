@@ -1,0 +1,17 @@
+#  ttt 是teacher forcing训练,
+train:
+  data_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  max_chunks_per_video: 15
+  filter_weather: sunny
+
+  cond_chunk_num: -1
+  log_chunk: true
+
+  epochs: 10
+  save_every_n_steps: 50
+  val_every_n_steps: 50
+  
+  
+ttt:
+  open: false
