@@ -194,16 +194,21 @@ class RFlowScheduler:
         negative_prompts=None,
         additional_args=None,
         progress=True,
+        initial_noise=None,
     ):
         """
         null_embedder: 用于CFG中的uncond embedding
+        initial_noise: optional pre-generated noise tensor (for reproducibility)
         """
         # if no specific guidance scale is provided, use the default scale when initializing the scheduler
         if guidance_scale is None:
             guidance_scale = self.cfg_scale
 
         n = len(prompts)
-        z = torch.randn(*z_size, device=device)
+        if initial_noise is not None:
+            z = initial_noise.to(device)
+        else:
+            z = torch.randn(*z_size, device=device)
 
         if context_parallel_util.get_cp_size() > 1:
             context_parallel_util.cp_broadcast(z) # 多卡时把同一份噪声广播到组内所有 rank

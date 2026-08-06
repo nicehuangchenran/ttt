@@ -83,3 +83,4 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4 torchrun --nnodes=1 --nproc_per_node=5 \
 
 - 不要创建没有实际复用需求的辅助层、封装或配置。
 - 保持实现简洁、清晰，避免不必要的抽象和过度设计。
+- 简单的代码修改不要单独生成 md 文档说明

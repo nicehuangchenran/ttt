@@ -4,8 +4,8 @@ export OMP_NUM_THREADS=16
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True # 用可扩展显存段，回收每个 chunk 调 empty_cache 造成的碎片（OOM 报错里的 8.34GBreserved-but-unallocated
 
 # 训练配置
-TRAIN_CONFIG_1="configs/runs/train/256/train-5.8.yaml"
-TRAIN_CONFIG_2="configs/runs/train/256/train-5.7.yaml"
+TRAIN_CONFIG_1="configs/runs/train/256/train-6-base.yaml"
+TRAIN_CONFIG_2="configs/runs/train/256/train-6.2.yaml"
 
 echo "===== 开始顺序训练 $(date) ====="
 

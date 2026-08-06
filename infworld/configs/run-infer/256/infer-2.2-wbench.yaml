@@ -1,11 +1,9 @@
 ExpConfig:
-  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  dataset_dir: dataset/wbench
   shift: 3
   bucket_config_name: ASPECT_RATIO_256 
-  filter_location: "East Maddon Park, London, United Kingdom"
-  filter_weather: sunny
 
-  num: 20
+  num: 8
   max_chunks: 5
 
   checkpoint_path: "weights/train_2/step160.ckpt"
@@ -21,4 +19,4 @@ OnlineTrainConfig:
 
   reset_between_videos: true     # 每个视频开始前恢复初始权重
   use_grad_checkpoint: true
-#finished at 2026-08-03 12:20:11 UTC+8, gpu num:8, run_name:infer-2.2
+#finished at 2026-08-03 15:15:27 UTC+8, gpu num:4, run_name:infer-2.2-wbench

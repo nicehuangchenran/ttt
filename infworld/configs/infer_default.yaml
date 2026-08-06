@@ -17,11 +17,12 @@ ExpConfig:
   log_steps: false               # true 则在日志中显示 tqdm 采样进度条（每步一行）；false 则禁用
   negative_prompt: "many cars, crowds, Vivid hues, overexposed, static, blurry details, subtitles, style, work, artwork, image, still, overall grayish, worst quality, low quality, JPEG compression artifacts, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn face, deformed, disfigured, deformed limbs, fused fingers, motionless image, cluttered background, three legs, crowded background, walking backwards."
 
-  # 模型与数据路径（相对路径按项目根目录解析）
+  # 模型与数据,噪声路径（相对路径按项目根目录解析）
   model_config_path: configs/infworld_config.yaml
-  checkpoint_path: null          # null 则用 infworld_config.yaml 里的 checkpoint_path
-                                 # 例: weights/<run>/step740.ckpt
+  checkpoint_path: null          # weights/<run>/step740.ckpt, null 则用 infworld_config.yaml 里的 checkpoint_path
   dataset_dir: dataset/wbench    # WBench 原始格式或 preprocessed/ 格式，自动检测
+  use_fixed_noise: false         # 启用固定噪声：从 noise_cache_dir 加载预生成的噪声
+  noise_cache_dir: configs/noise/352_192/noise0  # 噪声目录
 
   # 产物路径：视频与 infer_config.json 都写在 <output_root>/<run_name>/
   output_root: videos/
@@ -45,6 +46,9 @@ ExpConfig:
   high_quality_save: true        # true -> quality 10, false -> quality 5
   fps: 30
 
+
+
+
 # OnlineTrainConfig: chunk 之间的在线（test-time）训练，open: false 时完全不生效。
 # 只更新白名单参数，权重只影响当前视频（reset_between_videos: true 时逐视频复原）。
 OnlineTrainConfig:
@@ -60,3 +64,4 @@ OnlineTrainConfig:
   # + norm3 affine。
   trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
   trainable_block_start: 18      # 只训 blocks.<i>（i >= 该值）；反传到此为止，省显存
+  trainable_block_end: -1        # 可训 block 上界（i <= 该值），-1 表示不设上界

@@ -12,3 +12,4 @@ ExpConfig:
 OnlineTrainConfig:
   open: false
 
+#finished at 2026-08-03 14:50:38 UTC+8, gpu num:4, run_name:infer-5.7-steps900

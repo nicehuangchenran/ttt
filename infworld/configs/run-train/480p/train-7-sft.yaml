@@ -1,0 +1,19 @@
+train:
+  data_dir: preprocessed/sekai-game-walking-647px
+  shift: 5
+  max_chunks_per_video: 10
+  filter_location: "East Maddon Park, London, United Kingdom"
+  filter_weather: sunny
+
+  log_chunk: true
+
+  cond_chunk_num: 16
+
+  epochs: 5 
+  # batch_size=gpu_num*1*max_chunks
+  # steps_per_epoch=cases/gpu_num
+  val_every_n_steps: 10
+
+ttt:
+  open: false
+#finished at 2026-08-04 21:05:41 UTC+8, gpu num:1, run_name:tmp_histfix_verify

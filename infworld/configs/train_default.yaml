@@ -84,6 +84,8 @@ ttt: # 对应TTTConfig
   # 输出头 + 每 block 的 AdaLN modulation + norm3 affine。
   trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
   trainable_block_start: 18     # 只训 blocks.<i>（i >= 该值）；TTT 反传到此为止，省显存
+  trainable_block_end: -1       # 可训 block 上界（i <= 该值），-1 表示不设上界。
+                                # 只训中层（如 14..26）可避开浅层纹理层与末层细化层
 
   # 每个视频结束后（optimizer.step() 之前）把白名单参数恢复到视频开始时的快照。
   # 多卡下必须为 true：TTT 更新是各 rank 本地行为，不恢复会让 DDP 各副本权重发散。

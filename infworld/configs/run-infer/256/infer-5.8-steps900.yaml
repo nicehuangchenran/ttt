@@ -1,22 +1,15 @@
-#  一个 case 对应一个 step, 
-train:
-  data_dir: preprocessed/sekai-game-walking-352_192_30fps
+ExpConfig:
+  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
   shift: 3
-  max_chunks_per_video: 15
   filter_weather: sunny
+  num: 4
 
-  cond_chunk_num: -1
-  log_chunk: true
+  checkpoint_path: "weights/train-5.8-add/steps900.ckpt"
+  
+  max_chunks: 15
 
-  # num_train_cases:291
-  # gpu:8
-  # steps_per_epoch: 37
-  epochs: 50
-  save_every_n_steps: 50
-  val_every_n_steps: 50
 
-  resume_from: weights/train-5.8-add/steps600.ckpt
-ttt:
+OnlineTrainConfig:
   open: true
   n_train_steps: 5              # 每个 chunk 的 TTT 更新步数
   lr: 1.0e-5                    # TTT 专用学习率（每个 chunk 新建 AdamW，动量不跨 chunk）
@@ -26,3 +19,4 @@ ttt:
   trainable_block_start: 12     # 只训 blocks.<i>（i >= 该值）；TTT 反传到此为止，省显存
 
   reset_between_videos: true
+#finished at 2026-08-03 14:51:30 UTC+8, gpu num:4, run_name:infer-5.8-steps900

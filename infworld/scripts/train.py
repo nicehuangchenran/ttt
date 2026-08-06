@@ -142,6 +142,10 @@ class TTTConfig:
     )
     # 只训 blocks.<i>.*（i >= 该值）；TTT 反传在第一个可训 block 停住，省显存。
     trainable_block_start: int = 18
+    # 可训 block 的上界（i <= 该值），-1 表示不设上界。用于只训中层 block：
+    # 浅层管局部纹理（改动引入闪烁），中层管空间结构与物体身份（一致性所在），
+    # 最后几层偏输出细化（只影响画质）。
+    trainable_block_end: int = -1
     # 每个视频结束后（optimizer.step() 之前）把白名单参数恢复到视频开始时的快照。
     # 多卡下必须为 True：TTT 更新是各 rank 本地行为，不恢复会让 DDP 各副本权重发散。
     reset_between_videos: bool = True
@@ -639,7 +643,8 @@ def build_dit(cfg: TrainConfig, ttt_cfg: TTTConfig, runtime: RuntimeContext) -> 
     ttt_params = {}
     if ttt_cfg.open:
         ttt_params = select_ttt_params(dit, ttt_cfg.trainable_layers,
-                                       ttt_cfg.trainable_block_start, runtime.global_rank)
+                                       ttt_cfg.trainable_block_start,
+                                       ttt_cfg.trainable_block_end, runtime.global_rank)
 
     if runtime.world_size > 1:
         dit = nn.parallel.DistributedDataParallel(
@@ -671,12 +676,14 @@ def configure_trainable(dit, train_temporal_encoder: bool, rank: int = 0) -> lis
     return trainable
 
 
-def select_ttt_params(dit, trainable_layers: tuple, trainable_block_start: int, rank: int = 0) -> dict:
+def select_ttt_params(dit, trainable_layers: tuple, trainable_block_start: int,
+                      trainable_block_end: int = -1, rank: int = 0) -> dict:
     """选择 TTT 白名单参数（name -> Parameter dict），与 main.py 的逻辑完全一致。
 
     白名单条目省略 block 序号（"blocks.norm3" 匹配 blocks.<i>.norm3.*）；blocks.<i>.*
-    额外要求 i >= trainable_block_start。与 main.py 不同：这里不改 requires_grad ——
-    主训练仍训练全部参数，TTT 期间的临时冻结在 ttt_adapt_on_chunk 内完成。
+    额外要求 trainable_block_start <= i <= trainable_block_end（后者为 -1 时不设上界）。
+    与 main.py 不同：这里不改 requires_grad —— 主训练仍训练全部参数，TTT 期间的临时
+    冻结在 ttt_adapt_on_chunk 内完成。
     """
     def canonical(name):
         parts = name.split(".")
@@ -693,13 +700,17 @@ def select_ttt_params(dit, trainable_layers: tuple, trainable_block_start: int, 
         key = canonical(n)
         idx = block_idx(n)
         whitelisted = any(key == layer or key.startswith(layer + ".") for layer in trainable_layers)
-        if whitelisted and (idx is None or idx >= trainable_block_start):
+        in_range = idx is None or (
+            idx >= trainable_block_start
+            and (trainable_block_end < 0 or idx <= trainable_block_end))
+        if whitelisted and in_range:
             ttt_params[n] = p
 
     if rank == 0:
         count = sum(p.numel() for p in ttt_params.values())
+        upper = "inf" if trainable_block_end < 0 else str(trainable_block_end)
         print(f"[TTT] Selected {len(ttt_params)} params ({count:,} elements) from "
-              f"layers {trainable_layers}, blocks >= {trainable_block_start}")
+              f"layers {trainable_layers}, blocks {trainable_block_start}..{upper}")
     return ttt_params
 
 
@@ -1078,14 +1089,16 @@ def main():
                     "replicas' weights diverge.")
             logger.info(f"TTT enabled: n_train_steps={ttt_cfg.n_train_steps}, lr={ttt_cfg.lr}, "
                         f"layers={ttt_cfg.trainable_layers}, "
-                        f"block_start={ttt_cfg.trainable_block_start}, "
+                        f"blocks={ttt_cfg.trainable_block_start}.."
+                        f"{'inf' if ttt_cfg.trainable_block_end < 0 else ttt_cfg.trainable_block_end}, "
                         f"reset_between_videos={ttt_cfg.reset_between_videos}")
         dataloader = build_dataloader(cfg, runtime)
         logger.dump_config(cfg, ttt_cfg, runtime, len(dataloader.dataset), cli.config)
         models = build_dit(cfg, ttt_cfg, runtime)
         if ttt_cfg.open and not models.ttt_params:
             raise ValueError(f"ttt.trainable_layers={ttt_cfg.trainable_layers} matched no "
-                             f"parameters (block_start={ttt_cfg.trainable_block_start})")
+                             f"parameters (blocks {ttt_cfg.trainable_block_start}.."
+                             f"{ttt_cfg.trainable_block_end})")
         # fused=True: 逐参数原地更新，避免默认 foreach 路径在 step 内部分配
         # 全尺寸临时张量（~一份 fp32 参数大小的瞬时峰值，1.4B 全参训练时会 OOM）
         optimizer = torch.optim.AdamW(

@@ -73,6 +73,7 @@ import random
 import json
 import datetime
 import argparse
+import time
 import numpy as np
 from dataclasses import dataclass, asdict, fields
 from typing import Optional
@@ -262,6 +263,10 @@ class ExpConfig:
     high_quality_save: bool = True
     fps: int = 30
 
+    # Fixed noise for reproducibility
+    use_fixed_noise: bool = False        # enable noise caching/loading
+    noise_cache_dir: str = "noise_cache" # where to save/load noise tensors
+
 
 @dataclass
 class OnlineTrainConfig:
@@ -290,6 +295,8 @@ class OnlineTrainConfig:
     # the last 12. Backprop then stops at the first trainable block, so the
     # earlier blocks retain no activations and are skipped during backward.
     trainable_block_start: int = 18
+    # 可训 block 上界（i <= 该值），-1 表示不设上界。
+    trainable_block_end: int = -1
 
 
 # ============================================================================
@@ -564,11 +571,13 @@ def _load_model_config(config_path):
     return args
 
 
-def _select_trainable_params(dit, trainable_layers, trainable_block_start):
+def _select_trainable_params(dit, trainable_layers, trainable_block_start,
+                             trainable_block_end=-1):
     """Whitelist selection: params under the listed layers train, everything
     else is frozen. Layer entries omit the per-block index ("blocks.norm3"
-    matches blocks.<i>.norm3.*); block params additionally require their block
-    index >= trainable_block_start. Returns the trainable params."""
+    matches blocks.<i>.norm3.*); block params additionally require
+    trainable_block_start <= index <= trainable_block_end (the latter -1 means
+    no upper bound). Returns the trainable params."""
     def canonical(name):
         parts = name.split(".")
         if parts[0] == "blocks":
@@ -585,14 +594,18 @@ def _select_trainable_params(dit, trainable_layers, trainable_block_start):
         key = canonical(n)
         idx = block_idx(n)
         whitelisted = any(key == l or key.startswith(l + ".") for l in trainable_layers)
-        if whitelisted and (idx is None or idx >= trainable_block_start):
+        in_range = idx is None or (
+            idx >= trainable_block_start
+            and (trainable_block_end < 0 or idx <= trainable_block_end))
+        if whitelisted and in_range:
             p.requires_grad_(True)
             trainable_params.append(p)
         else:
             p.requires_grad_(False)
             frozen_n += p.numel()
+    upper = "inf" if trainable_block_end < 0 else str(trainable_block_end)
     log(f"frozen params: {frozen_n:,}; "
-        f"trainable {trainable_layers} (blocks >= {trainable_block_start}): "
+        f"trainable {trainable_layers} (blocks {trainable_block_start}..{upper}): "
         f"{sum(p.numel() for p in trainable_params):,}", tag="OnlineTrain")
     return trainable_params
 
@@ -600,7 +613,8 @@ def _select_trainable_params(dit, trainable_layers, trainable_block_start):
 def load_models(config_path, device, enable_context_parallel,
                 num_sampling_steps, shift,
                 online_train_open, use_grad_checkpoint,
-                trainable_layers, trainable_block_start, reset_between_videos,
+                trainable_layers, trainable_block_start, trainable_block_end,
+                reset_between_videos,
                 checkpoint_override=None):
     """Load VAE, text encoder, scheduler, and DiT, then apply online-training setup.
 
@@ -649,7 +663,8 @@ def load_models(config_path, device, enable_context_parallel,
         if use_grad_checkpoint:
             set_grad_checkpoint(dit)
         trainable_params = _select_trainable_params(dit, trainable_layers,
-                                                    trainable_block_start)
+                                                    trainable_block_start,
+                                                    trainable_block_end)
         if reset_between_videos:
             # Only trainable params can drift, so only they need snapshotting.
             init_params = {n: p.detach().clone()
@@ -957,6 +972,48 @@ def _prepare_output_file(output_dir, name):
 
 
 # ============================================================================
+# §6.5  Fixed noise loading
+# ============================================================================
+def _load_fixed_noise(noise_cache_dir, case_name, chunk_idx, z_size, device):
+    """Load pre-generated noise from configs/noise/ directory.
+
+    Args:
+        noise_cache_dir: directory containing pre-generated noise (e.g. configs/noise/noise0)
+        case_name: case name (ignored, noise_cache_dir already specifies which noise set)
+        chunk_idx: chunk index
+        z_size: expected noise shape
+        device: torch device
+
+    Returns:
+        noise tensor of shape z_size
+
+    固定噪声一旦开启就必须真的生效：缺文件或形状不符时直接报错，
+    而不是退回随机噪声，否则实验结果不可复现却无从察觉。
+    """
+    noise_path = os.path.join(
+        _resolve_path(noise_cache_dir),
+        f"chunk_{chunk_idx}.pt"
+    )
+
+    if not os.path.exists(noise_path):
+        raise FileNotFoundError(
+            f"固定噪声文件不存在: {noise_path}（chunk {chunk_idx}）。"
+            f"请用 configs/noise/generate_noise.py 生成足够数量的 chunk，"
+            f"或关闭 ExpConfig.use_fixed_noise。"
+        )
+
+    noise = torch.load(noise_path, map_location=device)
+
+    if noise.shape != torch.Size(z_size):
+        raise ValueError(
+            f"固定噪声形状不匹配: {noise_path} 是 {tuple(noise.shape)}，"
+            f"当前需要 {tuple(z_size)}。请按当前分辨率重新生成噪声。"
+        )
+
+    return noise
+
+
+# ============================================================================
 # §7  Single-video generation (chunked autoregressive core)
 # ============================================================================
 @dataclass
@@ -982,11 +1039,18 @@ def _slice_move_view(move, view, start, num_frames, device):
 
 
 def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
-                    video_buffer, latent_size, move, view, num_frames, log_steps):
+                    video_buffer, latent_size, move, view, num_frames, log_steps,
+                    use_fixed_noise=False, noise_cache_dir=None, case_name=None, chunk_idx=None):
     """Generate one chunk: encode buffer tail -> slice actions -> sample -> decode.
 
     Returns a ChunkResult holding the sampled latent, the decoded pixels (CPU),
     and the condition latent / action tensors that online training reuses.
+
+    Args:
+        use_fixed_noise: if True, load pre-generated noise
+        noise_cache_dir: directory with pre-generated noise files
+        case_name: case name for noise lookup
+        chunk_idx: chunk index for noise lookup
     """
     with torch.no_grad():
         current_cond = video_buffer.to(device)
@@ -994,6 +1058,11 @@ def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
 
     curr_start = video_buffer.shape[2] - 1  # tail frame overlaps into the next chunk
     seg_move, seg_view = _slice_move_view(move, view, curr_start, num_frames, device)
+
+    # Load fixed noise if enabled
+    initial_noise = None
+    if use_fixed_noise and noise_cache_dir:
+        initial_noise = _load_fixed_noise(noise_cache_dir, case_name, chunk_idx, latent_size, device)
 
     additional_args = {
         "image_cond": cond_latent,       # DiT forward's formal arg name (kept as-is)
@@ -1013,6 +1082,7 @@ def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
             device=device,
             additional_args=additional_args,
             progress=log_steps,  # tqdm progress bar controlled by log_steps param
+            initial_noise=initial_noise,
         )
         decoded = models.vae.decode(samples).cpu()
 
@@ -1056,21 +1126,30 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
         cached_y, cached_y_mask = text_kwargs["y"], text_kwargs["y_mask"]
 
     for chunk_idx in range(num_chunks):
+        chunk_start_time = time.time()
         result = _generate_chunk(
             models, device, input.prompt, exp_config.negative_prompt,
             exp_config.text_cfg_scale, video_buffer, latent_size,
             input.move, input.view, num_frames, exp_config.log_steps,
+            use_fixed_noise=exp_config.use_fixed_noise,
+            noise_cache_dir=exp_config.noise_cache_dir,
+            case_name=input.name,
+            chunk_idx=chunk_idx,
         )
+        chunk_elapsed = time.time() - chunk_start_time
         video_buffer = torch.cat([video_buffer, result.decoded[:, :, 1:]], dim=2)
         log(f"{input.name}: chunk {chunk_idx + 1}/{num_chunks} done, "
-            f"total frames {video_buffer.shape[2]}", all_ranks=True)
+            f"total frames {video_buffer.shape[2]}, time {chunk_elapsed:.1f}s", all_ranks=True)
         _torch_gc()
 
         if online_train_config.open and chunk_idx < num_chunks - 1:
+            train_start_time = time.time()
             losses = online_train_on_chunk(
                 models, online_train_config, result, cached_y, cached_y_mask)
+            train_elapsed = time.time() - train_start_time
             log(f"{input.name} chunk {chunk_idx}: losses "
-                + " ".join(f"{v:.5f}" for v in losses), tag="OnlineTrain", all_ranks=True)
+                + " ".join(f"{v:.5f}" for v in losses)
+                + f", time {train_elapsed:.1f}s", tag="OnlineTrain", all_ranks=True)
             _torch_gc()
 
     return video_buffer
@@ -1204,6 +1283,7 @@ def main():
         exp_config.num_sampling_steps, exp_config.shift,
         online_train_config.open, online_train_config.use_grad_checkpoint,
         online_train_config.trainable_layers, online_train_config.trainable_block_start,
+        online_train_config.trainable_block_end,
         online_train_config.reset_between_videos,
         checkpoint_override=exp_config.checkpoint_path,
     )

@@ -1,0 +1,14 @@
+# 控制公平, 必须使用相同的 GPU 数量，因为每个 rank 的种子是 seed + rank
+ExpConfig:
+  dataset_dir: dataset/wbench
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256  
+
+  num: 8
+  max_chunks: 5
+
+  checkpoint_path: "weights/train_1/step160.ckpt"
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-03 15:07:40 UTC+8, gpu num:4, run_name:infer-1.2-wbench

@@ -1,0 +1,15 @@
+ExpConfig:
+  dataset_dir: dataset/wbench
+  shift: 5
+  bucket_config_name: ASPECT_RATIO_627_F64 
+
+  max_chunks: 20
+  num: 24
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/896_448/noise0 
+  checkpoint_path: checkpoints/infinite_world_model.ckpt
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-04 15:03:33 UTC+8, gpu num:8, run_name:infer-480-1-base-w
