@@ -33,7 +33,7 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nnodes=1 --nproc_per_node=4 --local-rank
   configs/runs/infer/*.yaml        单次推理的输入，只写要改的字段，分 ExpConfig:/OnlineTrainConfig: 两段
 
 输出文件:
-  输出目录是<output_root>/<run_name>/ 
+  输出目录是<output_root>/<run_name>/
     videos/test/
       case_1_combined.mp4
       case_7_combined.mp4
@@ -91,6 +91,7 @@ from infworld.utils.data_utils import get_first_clip_from_video, save_silent_vid
 from infworld.utils.dataset_utils import is_vid, is_img
 from infworld.models.checkpoint import set_grad_checkpoint
 from infworld.models.scheduler import timestep_transform
+from infworld.utils import storage
 
 # ============================================================================
 # Action Mapping Dictionaries
@@ -184,6 +185,7 @@ def setup_file_logging(output_dir, log_subdir):
     sys.stdout = _Tee(sys.stdout, _LOG_FH)
     sys.stderr = _Tee(sys.stderr, _LOG_FH)
     return log_dir
+    return log_dir
 
 
 def log(msg, *, tag="InfWorld", all_ranks=False):
@@ -251,6 +253,10 @@ class ExpConfig:
     # Case subset selection (by case number, e.g. case5 -> 5)
     begin_idx: int = -1                  # start at first case with number > begin_idx (-1 -> first case)
     num: int = -1                        # number of cases to run from that point (-1 -> all remaining)
+
+    # Teacher forcing: condition每个 chunk 时用数据集真值 latent 前缀，而不是模型自己
+    # 生成的历史帧（仅 preprocessed 格式可用）。
+    real_hist: bool = False
 
     # Data filters (only for preprocessed format with meta.json)
     filter_location: Optional[str] = None
@@ -392,6 +398,7 @@ def dump_run_config(cli, exp_config, online_train_config, output_dir):
         path = os.path.join(output_dir, "infer_config.json")
         with open(path, "w") as f:
             f.write(text)
+        storage.upload_async(path, is_dir=False)
 
 
 def mark_config_finished(config_path, world_size, run_name=""):
@@ -451,14 +458,35 @@ def _torch_gc():
     torch.cuda.ipc_collect()
 
 
-def _resolve_path(path, root=PROJECT_ROOT):
-    """Resolve path: if relative, join with project root."""
+def _cap_gpu_memory(local_rank):
+    """按 INFWORLD_GPU_MEM_FRACTION 限制本进程可用显存（占整卡总量的比例）。
+
+    与别人的任务共卡时用：撞到上限时本进程自己 OOM，而不是把对方挤爆。
+    未设置该环境变量则不做限制（默认行为不变）。
+    """
+    frac = os.environ.get('INFWORLD_GPU_MEM_FRACTION')
+    if not frac:
+        return
+    frac = float(frac)
+    torch.cuda.set_per_process_memory_fraction(frac, local_rank)
+    total_gb = torch.cuda.get_device_properties(local_rank).total_memory / 1024 ** 3
+    log(f"GPU 显存上限: fraction={frac} -> {frac * total_gb:.1f} GiB / {total_gb:.1f} GiB",
+        all_ranks=True)
+
+
+def _resolve_path(path, root=None):
+    """Resolve a relative path.
+
+    数据/产物目录（dataset/ preprocessed/ checkpoints/ weights/ videos/ ...）落到
+    storage.LOCAL_ROOT 并与 S3 同步；代码与 yaml 仍按 PROJECT_ROOT 解析。
+    显式传 root 时按该 root 解析（保留旧行为）。
+    """
     if path is None:
         return path
     path = str(path).strip()
-    if not os.path.isabs(path):
-        path = os.path.join(root, path)
-    return path
+    if os.path.isabs(path):
+        return path
+    return os.path.join(root, path) if root is not None else storage.resolve(path)
 
 
 def setup_runtime(seed, context_parallel_size=1):
@@ -474,6 +502,7 @@ def setup_runtime(seed, context_parallel_size=1):
         world_size = int(os.environ.get('WORLD_SIZE', 1))
         local_rank = int(os.environ.get('LOCAL_RANK', rank % torch.cuda.device_count()))
         torch.cuda.set_device(local_rank)
+        _cap_gpu_memory(local_rank)
         dist.init_process_group(backend="nccl", timeout=datetime.timedelta(seconds=3600 * 24))
         global_rank = dist.get_rank()
         num_processes = dist.get_world_size()
@@ -483,6 +512,7 @@ def setup_runtime(seed, context_parallel_size=1):
         global_rank = 0
         num_processes = 1
         torch.cuda.set_device(local_rank)
+        _cap_gpu_memory(local_rank)
         use_dist = False
 
     global _GLOBAL_RANK
@@ -547,7 +577,8 @@ def _extract_ckpt_step(path):
 
 def _load_dit_state_dict(checkpoint_path):
     """Load DiT state dict from .ckpt (torch) or .safetensors."""
-    checkpoint_path = _resolve_path(checkpoint_path)
+    # 本地缺失则从 S3 拉（每个 rank 都要读，靠 storage 的临时文件+原子改名防竞态）
+    checkpoint_path = storage.ensure_local(checkpoint_path, is_dir=False)
     if checkpoint_path.endswith(".safetensors"):
         from safetensors.torch import load_file
         state_dict = load_file(checkpoint_path)
@@ -561,13 +592,16 @@ def _load_dit_state_dict(checkpoint_path):
 def _load_model_config(config_path):
     """Load the model YAML and resolve relative checkpoint/VAE/text-encoder paths."""
     args = OmegaConf.load(config_path)
+    # VAE/T5 权重也在 checkpoints/ 下，本地缺失则从 S3 拉（tokenizer 是目录）
     if hasattr(args, "vae_cfg") and "vae_pth" in args.vae_cfg:
-        args.vae_cfg.vae_pth = _resolve_path(args.vae_cfg.vae_pth)
+        args.vae_cfg.vae_pth = storage.ensure_local(args.vae_cfg.vae_pth, is_dir=False)
     if hasattr(args, "text_encoder_cfg"):
         if "checkpoint_path" in args.text_encoder_cfg:
-            args.text_encoder_cfg.checkpoint_path = _resolve_path(args.text_encoder_cfg.checkpoint_path)
+            args.text_encoder_cfg.checkpoint_path = storage.ensure_local(
+                args.text_encoder_cfg.checkpoint_path, is_dir=False)
         if "tokenizer_path" in args.text_encoder_cfg:
-            args.text_encoder_cfg.tokenizer_path = _resolve_path(args.text_encoder_cfg.tokenizer_path)
+            args.text_encoder_cfg.tokenizer_path = storage.ensure_local(
+                args.text_encoder_cfg.tokenizer_path, is_dir=True)
     return args
 
 
@@ -694,6 +728,7 @@ class Input:
     input_image: torch.Tensor      # [1, C, 1, H, W], normalized to [-1, 1], on CPU
     move: torch.Tensor             # LongTensor [N], full action sequence, on CPU
     view: torch.Tensor             # LongTensor [N], on CPU
+    case_dir: Optional[str] = None # preprocessed case dir; real_hist 按需读真值 latent
 
 
 def _get_bucket_config(name):
@@ -759,6 +794,8 @@ def _case_sort_key(name):
 
 def _load_input(dp_idx, name, case_dir, bucket_config):
     """Materialize one case directory into an Input (CPU tensors)."""
+    case_dir = storage.ensure_files(
+        case_dir, ("image.jpg", "move_view.json", "prompts.json"))
     image_path = os.path.join(case_dir, "image.jpg")
     action_path = os.path.join(case_dir, "move_view.json")
     prompts_path = os.path.join(case_dir, "prompts.json")
@@ -784,8 +821,7 @@ def _scan_case_names(dataset_dir, begin_idx, n):
     n=-1 -> all remaining). Selection happens before DP sharding, so n counts
     global cases, not per-rank."""
     case_names = sorted(
-        (d for d in os.listdir(dataset_dir)
-         if d.startswith("case") and os.path.isdir(os.path.join(dataset_dir, d))),
+        (d for d in storage.list_dir(dataset_dir) if d.startswith("case")),
         key=_case_sort_key,
     )
     log(f"Found {len(case_names)} case dirs under {dataset_dir}")
@@ -798,12 +834,20 @@ def _scan_case_names(dataset_dir, begin_idx, n):
 
 def _is_preprocessed_dataset(dataset_dir):
     """Preprocessed format iff some case dir contains meta.json (WBench cases have
-    image.jpg instead)."""
-    for d in os.listdir(dataset_dir):
-        case_dir = os.path.join(dataset_dir, d)
-        if d.startswith("case") and os.path.isdir(case_dir):
-            if os.path.exists(os.path.join(case_dir, "meta.json")):
-                return True
+    image.jpg instead).
+
+    本地 nvme 可能还没缓存任何 case，所以清单取「本地 ∪ S3」，
+    并按需把 meta.json（几 KB）拉下来判定格式。
+    """
+    for d in storage.list_dir(dataset_dir):
+        if not d.startswith("case"):
+            continue
+        meta_path = os.path.join(dataset_dir, d, "meta.json")
+        if os.path.exists(meta_path):
+            return True
+        storage.ensure_local(meta_path, is_dir=False, check=False)
+        if os.path.exists(meta_path):
+            return True
     return False
 
 
@@ -829,6 +873,8 @@ def _load_preprocessed_input(dp_idx, name, case_dir, meta, vae, device):
     meta.json and is re-encoded by the text encoder during sampling (text_emb.pt
     is not used here because CFG also needs the negative prompt embedding).
     """
+    # 只拉真正要读的两个张量：推理不需要 target_latent / text_emb
+    case_dir = storage.ensure_files(case_dir, ("latent_full.pt", "actions.pt"))
     latent_full = torch.load(os.path.join(case_dir, "latent_full.pt"))  # [C, T_lat, h, w]
     actions = torch.load(os.path.join(case_dir, "actions.pt"))
 
@@ -843,6 +889,7 @@ def _load_preprocessed_input(dp_idx, name, case_dir, meta, vae, device):
         input_image=input_image,
         move=actions["move"].long(),
         view=actions["view"].long(),
+        case_dir=case_dir,
     )
 
 
@@ -851,8 +898,7 @@ def _load_inputs_preprocessed(dataset_dir, exp_config, dp_rank, dp_size, vae, de
     filter_* conditions on meta.json before subset selection and DP sharding
     (so filters shrink the candidate pool exactly like train.py)."""
     all_names = sorted(
-        (d for d in os.listdir(dataset_dir)
-         if d.startswith("case") and os.path.isdir(os.path.join(dataset_dir, d))),
+        (d for d in storage.list_dir(dataset_dir) if d.startswith("case")),
         key=_case_sort_key,
     )
     log(f"Found {len(all_names)} case dirs under {dataset_dir}")
@@ -862,6 +908,8 @@ def _load_inputs_preprocessed(dataset_dir, exp_config, dp_rank, dp_size, vae, de
     case_names = []
     for name in all_names:
         meta_path = os.path.join(dataset_dir, name, "meta.json")
+        if not os.path.exists(meta_path):
+            storage.ensure_local(meta_path, is_dir=False, check=False)
         if not os.path.exists(meta_path):
             log(f"Skipping {name}: missing meta.json")
             continue
@@ -907,11 +955,15 @@ def _load_inputs_wbench(dataset_dir, bucket_config_name, dp_rank, dp_size, begin
 
     inputs = []
     for dp_idx, name in enumerate(case_names):
-        case_dir = os.path.join(dataset_dir, name)
-        if any(not os.path.exists(os.path.join(case_dir, f)) for f in required):
-            log(f"Skipping {name}: missing one of {required}")
-            continue
+        # 先按 rank 分片再检查文件：本地 nvme 未缓存的 case 要先从 S3 拉下来才能
+        # 判断"缺文件"，而每个 rank 只该为自己的分片付下载开销。
+        # dp_idx 来自 enumerate(case_names)，跳过某个 case 不会让后面的编号错位。
         if dp_idx % dp_size != dp_rank:
+            continue
+        case_dir = storage.ensure_files(
+            os.path.join(dataset_dir, name), required, check=False)
+        if any(not os.path.exists(os.path.join(case_dir, f)) for f in required):
+            log(f"Skipping {name}: missing one of {required}", all_ranks=True)
             continue
         inputs.append(_load_input(dp_idx, name, case_dir, bucket_config))
 
@@ -931,6 +983,11 @@ def load_inputs(exp_config, dp_rank, dp_size, vae, device):
         log("Dataset format: preprocessed (meta.json found)")
         return _load_inputs_preprocessed(dataset_dir, exp_config, dp_rank, dp_size, vae, device)
 
+    if exp_config.real_hist:
+        raise ValueError(
+            f"real_hist=true 需要 preprocessed 数据集（含 meta.json / latent_full.pt），"
+            f"但 {dataset_dir} 看起来是 WBench 目录")
+
     has_filters = any(v is not None for v in (
         exp_config.filter_location, exp_config.filter_scene,
         exp_config.filter_crowd_density, exp_config.filter_weather,
@@ -949,10 +1006,10 @@ def load_inputs(exp_config, dp_rank, dp_size, vae, device):
 # §6  Output paths
 # ============================================================================
 def prepare_output_dir(output_root, run_name):
-    """Resolve <output_root>/<run_name> (relative -> PROJECT_ROOT) and mkdir it.
+    """Resolve <output_root>/<run_name> (videos/ -> storage.LOCAL_ROOT) and mkdir it.
 
     run_name defaults to the run yaml's basename, so configs/runs/infer/test.yaml
-    writes to videos/test/test/.
+    writes to videos/test/test/。
     """
     output_dir = os.path.join(_resolve_path(output_root), run_name)
     os.makedirs(output_dir, exist_ok=True)
@@ -1024,6 +1081,25 @@ class ChunkResult:
     cond_latent: torch.Tensor   # this chunk's condition latent (reused by online training)
     move: torch.Tensor          # [1, num_frames]
     view: torch.Tensor          # [1, num_frames]
+    gt_target: Optional[torch.Tensor] = None  # real_hist: 该 chunk 的真值 latent
+                                              # [1, C, 21, h, w]，在线训练用它当 x_start
+
+
+def _load_real_hist(case_dir, need_target):
+    """读入 real_hist 需要的真值张量（CPU），逐视频加载、用完即弃。
+
+    latent_full[:, :20k+1] 就是 train.py::make_chunk_batch 给 chunk k 的 image_cond：
+    WanVAE 是因果的，前缀切片等价于单独编码像素帧 [0, 80k+1)，所以这里不需要解码成
+    像素再 encode 一遍。need_target（在线训练开着）时再额外拉 target_latent.pt。
+    """
+    files = ("latent_full.pt", "target_latent.pt") if need_target else ("latent_full.pt",)
+    case_dir = storage.ensure_files(case_dir, files)
+    latent_full = torch.load(os.path.join(case_dir, "latent_full.pt"), map_location="cpu")
+    target_latent = None
+    if need_target:
+        target_latent = torch.load(
+            os.path.join(case_dir, "target_latent.pt"), map_location="cpu")
+    return latent_full, target_latent
 
 
 def _slice_move_view(move, view, start, num_frames, device):
@@ -1040,7 +1116,8 @@ def _slice_move_view(move, view, start, num_frames, device):
 
 def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
                     video_buffer, latent_size, move, view, num_frames, log_steps,
-                    use_fixed_noise=False, noise_cache_dir=None, case_name=None, chunk_idx=None):
+                    use_fixed_noise=False, noise_cache_dir=None, case_name=None, chunk_idx=None,
+                    cond_latent_override=None):
     """Generate one chunk: encode buffer tail -> slice actions -> sample -> decode.
 
     Returns a ChunkResult holding the sampled latent, the decoded pixels (CPU),
@@ -1051,10 +1128,15 @@ def _generate_chunk(models, device, prompt, negative_prompt, text_cfg_scale,
         noise_cache_dir: directory with pre-generated noise files
         case_name: case name for noise lookup
         chunk_idx: chunk index for noise lookup
+        cond_latent_override: real_hist 模式下由调用方给出的真值条件 latent；
+            给了就跳过对 video_buffer 的 VAE encode（那份 buffer 只用于存盘）。
     """
-    with torch.no_grad():
-        current_cond = video_buffer.to(device)
-        cond_latent = models.vae.encode(current_cond)
+    if cond_latent_override is not None:
+        cond_latent = cond_latent_override
+    else:
+        with torch.no_grad():
+            current_cond = video_buffer.to(device)
+            cond_latent = models.vae.encode(current_cond)
 
     curr_start = video_buffer.shape[2] - 1  # tail frame overlaps into the next chunk
     seg_move, seg_view = _slice_move_view(move, view, curr_start, num_frames, device)
@@ -1102,6 +1184,9 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
     on the previously generated tail. When online training is on, the prompt is
     encoded once up front (see §8) and each chunk (except the last) fine-tunes
     the DiT before the next chunk is produced. Returns the full buffer on CPU.
+
+    real_hist=True 时条件区换成数据集的真值 latent 前缀（teacher forcing）：生成帧
+    不再回流进下一个 chunk 的条件，video_buffer 退化为纯粹的存盘缓冲。
     """
     num_frames = exp_config.num_frames
     video_buffer = input.input_image.clone().cpu()
@@ -1110,6 +1195,24 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
     num_chunks = min(input.move.shape[0] // 80, exp_config.max_chunks)
     log(f"{input.name}: {input.move.shape[0]} action frames -> "
         f"num_chunks={num_chunks} (max_chunks={exp_config.max_chunks})", all_ranks=True)
+
+    # real_hist：真值条件 latent（以及在线训练要的真值目标）。
+    latent_full = target_latent = None
+    if exp_config.real_hist:
+        latent_full, target_latent = _load_real_hist(
+            input.case_dir, need_target=online_train_config.open)
+        # chunk k 需要 latent_full[:, :20k+1]，因此 k <= (T_lat-1)//20。
+        cap = (latent_full.shape[1] - 1) // 20 + 1
+        if target_latent is not None:
+            cap = min(cap, target_latent.shape[0])
+        log(f"{input.name}: real_hist 生效，条件区用真值 latent_full{list(latent_full.shape)}"
+            + ("，在线训练目标用真值 target_latent" if target_latent is not None else ""),
+            all_ranks=True)
+        if cap < num_chunks:
+            log(f"{input.name}: real_hist 真值只够 {cap} 个 chunk "
+                f"(latent T={latent_full.shape[1]})，num_chunks {num_chunks} -> {cap}",
+                all_ranks=True)
+            num_chunks = cap
 
     with torch.no_grad():
         cond_latent = models.vae.encode(input.input_image.to(device))
@@ -1127,6 +1230,12 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
 
     for chunk_idx in range(num_chunks):
         chunk_start_time = time.time()
+        # real_hist：条件区取真值前缀（与 train.py 的 image_cond 完全一致），
+        # dtype 对齐现场 encode 的结果，避免 bf16 缓存与 fp32 VAE 输出混用。
+        cond_override = None
+        if latent_full is not None:
+            cond_override = latent_full[:, :20 * chunk_idx + 1].unsqueeze(0).to(
+                device=device, dtype=cond_latent.dtype)
         result = _generate_chunk(
             models, device, input.prompt, exp_config.negative_prompt,
             exp_config.text_cfg_scale, video_buffer, latent_size,
@@ -1135,7 +1244,11 @@ def generate_one_video(models, device, exp_config, online_train_config, input):
             noise_cache_dir=exp_config.noise_cache_dir,
             case_name=input.name,
             chunk_idx=chunk_idx,
+            cond_latent_override=cond_override,
         )
+        if target_latent is not None:
+            result.gt_target = target_latent[chunk_idx].unsqueeze(0).to(
+                device=device, dtype=cond_latent.dtype)
         chunk_elapsed = time.time() - chunk_start_time
         video_buffer = torch.cat([video_buffer, result.decoded[:, :, 1:]], dim=2)
         log(f"{input.name}: chunk {chunk_idx + 1}/{num_chunks} done, "
@@ -1201,9 +1314,12 @@ def online_train_on_chunk(models, online_train_config, chunk, cached_y, cached_y
 
     A fresh AdamW is built per chunk so Adam moments do NOT accumulate across
     chunks. Returns the per-step loss values (floats).
+
+    x_start 默认是刚采样出来的 latent（自蒸馏）；real_hist 模式下 chunk.gt_target
+    非空，改用数据集真值 chunk，等价于在推理循环里做真监督的 flow-matching 微调。
     """
     optimizer = torch.optim.AdamW(models.trainable_params, lr=online_train_config.lr)
-    x_start = chunk.samples.detach()
+    x_start = (chunk.gt_target if chunk.gt_target is not None else chunk.samples).detach()
     train_kwargs = {
         "y": cached_y,
         "y_mask": cached_y_mask,
@@ -1238,11 +1354,14 @@ def run(models, device, exp_config, online_train_config, inputs, output_dir):
     When online training resets between videos, the initial weights are restored
     before every video after the first, so training only affects the current one.
     """
-    # Pre-check: verify no output files exist before starting generation
+    # Pre-check: verify no output files exist before starting generation.
+    # 本地 nvme 是新机器时也要防覆盖：S3 上已有同名结果同样算已存在。
+    # 输出目录只列一次（几百个 case 逐个 s3 ls 会很慢）。
+    existing = set(storage.list_dir(output_dir))
     for inp in inputs:
         save_path = _prepare_output_file(output_dir, inp.name)
         final_path = f"{save_path}.mp4"
-        if os.path.exists(final_path):
+        if os.path.exists(final_path) or os.path.basename(final_path) in existing:
             log(f"ERROR: Output file already exists: {final_path}", all_ranks=True)
             log(f"Stopping execution to avoid overwriting existing files.", all_ranks=True)
             log(f"Please remove existing files or use a different output directory.", all_ranks=True)
@@ -1261,6 +1380,8 @@ def run(models, device, exp_config, online_train_config, inputs, output_dir):
         quality = 10 if exp_config.high_quality_save else 5
         save_silent_video(video.cpu(), save_path, fps=exp_config.fps, quality=quality)
         log(f"Saved: {save_path}.mp4", all_ranks=True)
+        # 视频后台上传，下一个 case 的生成不等它
+        storage.upload_async(f"{save_path}.mp4", is_dir=False)
 
 
 # ============================================================================
@@ -1275,8 +1396,12 @@ def main():
 
     # 先建输出目录、接上文件日志并记录参数（模型加载前落盘，崩溃也留有记录）。
     output_dir = prepare_output_dir(exp_config.output_root, exp_config.run_name)
-    setup_file_logging(output_dir, exp_config.log_subdir)
+    log_dir = setup_file_logging(output_dir, exp_config.log_subdir)
+    log(storage.describe())
     dump_run_config(cli, exp_config, online_train_config, output_dir)
+    # 推理日志每 5 分钟同步一次，长跑时也能在 S3 上看进度
+    if runtime.global_rank == 0:
+        storage.start_periodic_sync(log_dir, interval=300)
 
     models = load_models(
         exp_config.model_config_path, runtime.device, runtime.enable_context_parallel,
@@ -1300,10 +1425,13 @@ def main():
     run(models, runtime.device, exp_config, online_train_config, inputs, output_dir)
 
     # 全部 rank 跑完后才在 run yaml 上盖完成标记（任何 rank 报错都不会走到这里）。
+    # 各 rank 先等自己的视频传完，再 barrier，保证盖完成标记时 S3 上结果是齐的
+    storage.wait_uploads()
     if runtime.use_dist:
         dist.barrier()
     if runtime.global_rank == 0:
         mark_config_finished(cli.config, runtime.world_size, exp_config.run_name)
+        storage.stop_periodic_sync(log_dir)
 
 
 if __name__ == "__main__":

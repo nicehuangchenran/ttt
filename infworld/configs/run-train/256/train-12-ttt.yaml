@@ -1,0 +1,43 @@
+#  一个 case 对应一个 step,一个 step 1 分钟+ 
+train:
+  data_dir: preprocessed/dl3dv-merge-256px
+  shift: 3
+  max_chunks_per_video: 10
+
+  cond_chunk_num: -1
+  log_chunk: true
+
+  # num_train_cases:
+  # gpu:8
+  # steps_per_epoch: 
+  epochs: 25
+  save_every_n_steps: 100
+  val_every_n_steps: 25
+  
+  
+# TTT Scheme B：FFN 的 W_down（ffn.2，写入 residual 的 value）+ self-attn 的 K/V
+# （历史 token 的检索表征），只在中层 block 14..26 上更新。
+#   - ffn.2 决定"往 residual 写什么内容"，对应记住本场景的具体外观；不动 ffn.0
+#     （特征检测器），避免破坏预训练的识别能力，参数量也减半。
+#   - self_attn.k/v 决定历史以什么形式被检索——只训 FFN 会"记得更多但找不回来"。
+#     q 不训：q 只作用在 noisy token 上，改动会让去噪步之间的检索行为漂移。
+#   - self_attn.o 不训：与 ffn.2 功能重叠（都往 residual 写），同训会互相抵消梯度。
+#   - block 14..26：浅层管局部纹理（改动引入闪烁），末层偏输出细化（不影响记忆）。
+# 可训参数约 (ffn.2 13.8M + k/v 4.7M) × 13 ≈ 240M，配 use_grad_checkpoint: true。
+ttt:
+  open: true
+  n_train_steps: 3              # 参数量放大到 240M，步数从 5 降到 3，避免单 chunk 过拟合
+  lr: 3.0e-6                    # TTT 专用学习率（每个 chunk 新建优化器，动量不跨 chunk）
+  grad_clip_norm: 0.5           # 只裁剪白名单参数的梯度；null 表示不裁剪
+
+  trainable_layers:
+    - "blocks.ffn.2"            # FFN W_down 8960->1536：写入 residual 的 value
+    - "blocks.self_attn.k"      # 历史 token 的 key：决定检索命中什么
+    - "blocks.self_attn.v"      # 历史 token 的 value：决定检索回什么内容
+    - "blocks.modulation"       # AdaLN shift/scale
+    - "blocks.norm3"            # cross-attn LayerNorm affine
+  trainable_block_start: 14     # 只训 blocks.<i>（i >= 该值）；TTT 反传到此为止，省显存
+  trainable_block_end: 26       # 可训 block 上界（i <= 该值），-1 表示不设上界
+
+  reset_between_videos: true
+  optimizer_type: adamw         # 若显存吃紧改 sgd（无动量状态，省约 1.9GB）

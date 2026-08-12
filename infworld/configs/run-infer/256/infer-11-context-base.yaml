@@ -1,0 +1,17 @@
+ExpConfig:
+  dataset_dir: preprocessed/context-dataset-256px
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256
+
+  max_chunks: 20
+  num: 24
+
+  real_hist: false
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0
+  checkpoint_path: checkpoints/infinite_world_model.ckpt
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-08 13:03:11 UTC+8, gpu num:2, run_name:infer-11-context-base

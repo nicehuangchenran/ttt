@@ -35,6 +35,13 @@ ExpConfig:
   begin_idx: -1                  # 从编号 > begin_idx 的第一个 case 开始（-1 表示从头）
   num: -1                        # 从 begin_idx 起运行的 case 数（-1 表示全部剩余）
 
+  # Teacher forcing（仅 preprocessed 格式；WBench 目录下设 true 直接报错）
+  real_hist: false               # true 则每个 chunk 的历史条件不用模型自己生成的帧，
+                                 # 改用数据集真值 latent 前缀 latent_full[:, :20k+1]
+                                 # （与 train.py 的 image_cond 一致），产出「在真值历史
+                                 # 上生成」的视频。OnlineTrainConfig.open 同时为 true 时，
+                                 # 在线训练的监督目标也换成真值 target_latent.pt[k]。
+
   # 数据筛选（仅 preprocessed 格式，按 meta.json 精确匹配，null 表示不筛选）
   filter_location: null
   filter_scene: null

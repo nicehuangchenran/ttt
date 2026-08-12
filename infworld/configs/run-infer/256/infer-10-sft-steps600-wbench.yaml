@@ -1,0 +1,15 @@
+ExpConfig:
+  dataset_dir: dataset/wbench
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256
+
+  max_chunks: 20
+  num: 24
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0 
+  checkpoint_path: weights/train-10-sft/steps600.ckpt
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-07 12:26:34 UTC+8, gpu num:8, run_name:infer-10-sft-steps600-wbench

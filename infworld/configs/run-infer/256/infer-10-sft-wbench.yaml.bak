@@ -1,0 +1,14 @@
+ExpConfig:
+  dataset_dir: dataset/wbench
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256
+
+  max_chunks: 20
+  num: 24
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0 
+  checkpoint_path: weights/train-10-sft/
+
+OnlineTrainConfig:
+  open: false

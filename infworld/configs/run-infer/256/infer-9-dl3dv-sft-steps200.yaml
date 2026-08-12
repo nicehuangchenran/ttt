@@ -1,0 +1,15 @@
+ExpConfig:
+  dataset_dir: preprocessed/dl3dv-256px
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256
+
+  max_chunks: 10
+  num: 8
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0
+  checkpoint_path: weights/train-9-sft/steps200.ckpt
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-10 22:28:41 UTC+8, gpu num:8, run_name:infer-9-dl3dv-sft-steps200

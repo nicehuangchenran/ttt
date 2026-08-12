@@ -67,6 +67,7 @@ sys.path.insert(0, PROJECT_ROOT)
 from omegaconf import OmegaConf
 from decord import VideoReader
 from infworld.utils.prepare_dataloader import get_obj_from_str
+from infworld.utils import storage
 import torchvision.transforms as transforms
 
 # decord 每个 VideoReader 的解码线程数。多进程并行时设小值避免 CPU 争抢。
@@ -88,6 +89,7 @@ class PreprocessConfig:
     skip_existing: bool = True
     verify_prefix: bool = False  # 验证因果性假设
     max_cases: int = -1  # -1 = 全部；调试时可设小
+    empty_prompt: bool = False  # 不读 prompts.json，prompt 置为空字符串
 
 
 # ============================================================================
@@ -160,11 +162,15 @@ def setup_logging(output_dir: str, rank: int) -> logging.Logger:
     return logger
 
 
-def _resolve_path(path, root=PROJECT_ROOT):
-    """解析路径：相对路径拼接项目根目录。"""
-    if path is None or os.path.isabs(path):
+def _resolve_path(path, root=None):
+    """解析路径：数据/产物目录（dataset/ preprocessed/ checkpoints/ ...）落到
+    storage.LOCAL_ROOT 并与 S3 同步；代码与 yaml 仍按 PROJECT_ROOT 解析。"""
+    if path is None:
         return path
-    return os.path.join(root, path.strip())
+    path = str(path).strip()
+    if os.path.isabs(path):
+        return path
+    return os.path.join(root, path) if root is not None else storage.resolve(path)
 
 
 def _get_bucket_config(name: str) -> dict:
@@ -182,15 +188,16 @@ def _case_sort_key(name: str) -> int:
 def _load_model_config(config_path: str):
     """加载模型 YAML 并解析相对路径。"""
     args = OmegaConf.load(config_path)
+    # VAE/T5 权重在 checkpoints/ 下，本地缺失则从 S3 拉（tokenizer 是目录）
     if hasattr(args, "vae_cfg") and "vae_pth" in args.vae_cfg:
-        args.vae_cfg.vae_pth = _resolve_path(args.vae_cfg.vae_pth)
+        args.vae_cfg.vae_pth = storage.ensure_local(args.vae_cfg.vae_pth, is_dir=False)
     if hasattr(args, "text_encoder_cfg"):
         if "checkpoint_path" in args.text_encoder_cfg:
-            args.text_encoder_cfg.checkpoint_path = _resolve_path(
-                args.text_encoder_cfg.checkpoint_path)
+            args.text_encoder_cfg.checkpoint_path = storage.ensure_local(
+                args.text_encoder_cfg.checkpoint_path, is_dir=False)
         if "tokenizer_path" in args.text_encoder_cfg:
-            args.text_encoder_cfg.tokenizer_path = _resolve_path(
-                args.text_encoder_cfg.tokenizer_path)
+            args.text_encoder_cfg.tokenizer_path = storage.ensure_local(
+                args.text_encoder_cfg.tokenizer_path, is_dir=True)
     return args
 
 
@@ -315,17 +322,24 @@ def preprocess_case(case_name: str, case_dir: str, out_dir: str,
     """
     t_start = time.time()
 
-    required_files = ["video.mp4", "move_view.json", "prompts.json"]
+    # 检查输出目录。skip_existing 也要看 S3：本地 nvme 是新机器时 meta.json 不在本地，
+    # 但 S3 上可能已经有处理好的结果，重复处理纯属浪费。
+    os.makedirs(out_dir, exist_ok=True)
+    if cfg.skip_existing:
+        out_meta = os.path.join(out_dir, "meta.json")
+        if os.path.exists(out_meta) or storage.s3_exists(out_meta):
+            logger.info(f"[SKIP] {case_name}: already preprocessed")
+            return None
+
+    # 原始视频/动作按需从 S3 拉到本地（video.mp4 较大，只拉要处理的 case）
+    required_files = ["video.mp4", "move_view.json"]
+    if not cfg.empty_prompt:
+        required_files.append("prompts.json")
+    storage.ensure_files(case_dir, required_files, check=False)
     for fname in required_files:
         if not os.path.exists(os.path.join(case_dir, fname)):
             logger.warning(f"[SKIP] {case_name}: missing {fname}")
             return None
-
-    # 检查输出目录
-    os.makedirs(out_dir, exist_ok=True)
-    if cfg.skip_existing and os.path.exists(os.path.join(out_dir, "meta.json")):
-        logger.info(f"[SKIP] {case_name}: already preprocessed")
-        return None
 
     logger.info(f"[PROCESS] {case_name}")
 
@@ -349,10 +363,14 @@ def preprocess_case(case_name: str, case_dir: str, out_dir: str,
                                          cfg.chunk_stride, device)  # [K, C, 21, h, w]
 
     # 4. 文本编码
-    prompts_path = os.path.join(case_dir, "prompts.json")
-    with open(prompts_path, 'r') as f:
-        prompts_data = json.load(f)
-        prompt = prompts_data["prompt"]
+    if cfg.empty_prompt:
+        prompts_data = {}
+        prompt = ""
+    else:
+        prompts_path = os.path.join(case_dir, "prompts.json")
+        with open(prompts_path, 'r') as f:
+            prompts_data = json.load(f)
+            prompt = prompts_data["prompt"]
 
     with torch.no_grad():
         text_kwargs = text_encoder.encode([prompt])
@@ -394,6 +412,13 @@ def preprocess_case(case_name: str, case_dir: str, out_dir: str,
             meta[field] = prompts_data[field]
     with open(os.path.join(out_dir, "meta.json"), 'w') as f:
         json.dump(meta, f, indent=2)
+
+    # meta.json 最后写、最后传：S3 上出现 meta.json 就意味着这个 case 的 4 个 .pt
+    # 都已上传，skip_existing 的 S3 判定才不会把只传了一半的 case 当成已完成。
+    for fname in ("latent_full.pt", "target_latent.pt", "text_emb.pt", "actions.pt"):
+        storage.upload_async(os.path.join(out_dir, fname), is_dir=False)
+    storage.wait_uploads()
+    storage.upload_async(os.path.join(out_dir, "meta.json"), is_dir=False)
 
     elapsed = time.time() - t_start
     logger.info(f"  ✓ {case_name}: {K} chunks saved in {elapsed:.1f}s")
@@ -445,6 +470,8 @@ def main():
     parser.add_argument("--max-cases", type=int, default=-1)
     parser.add_argument("--verify", action="store_true", help="验证因果性")
     parser.add_argument("--skip-existing", action="store_true", default=True)
+    parser.add_argument("--empty-prompt", action="store_true",
+                       help="不读 prompts.json，prompt 置为空字符串")
     args = parser.parse_args()
 
     # 初始化分布式环境
@@ -457,6 +484,7 @@ def main():
         max_cases=args.max_cases,
         verify_prefix=args.verify,
         skip_existing=args.skip_existing,
+        empty_prompt=args.empty_prompt,
     )
 
     # 解析路径
@@ -499,9 +527,9 @@ def main():
     text_encoder.t5.model.eval()
 
     # 扫描 case 目录（所有 rank 都扫描以保持一致）
+    # 清单取「本地 ∪ S3」，本地 nvme 未缓存原始视频时也能看到全量 case
     case_names = sorted(
-        [d for d in os.listdir(cfg.dataset_dir)
-         if d.startswith("case") and os.path.isdir(os.path.join(cfg.dataset_dir, d))],
+        [d for d in storage.list_dir(cfg.dataset_dir) if d.startswith("case")],
         key=_case_sort_key
     )
 
@@ -539,6 +567,9 @@ def main():
     logger.info(f"[DONE] Rank {rank}: {success_count} success, {fail_count} failed "
                 f"in {elapsed_loop/60:.1f} min")
 
+    # 等本 rank 最后一个 meta.json 传完，再和其他 rank 汇合
+    storage.wait_uploads()
+
     # 同步所有进程
     if world_size > 1:
         dist.barrier()
@@ -561,10 +592,15 @@ def main():
     if cfg.verify_prefix and rank == 0 and len(case_names) > 0:
         logger.info("=" * 70)
         test_case = case_names[0]
-        test_video = os.path.join(cfg.dataset_dir, test_case, "video.mp4")
+        test_video = storage.ensure_local(
+            os.path.join(cfg.dataset_dir, test_case, "video.mp4"), is_dir=False)
         test_frames = load_video_frames(test_video, bucket_config)
         verify_prefix_consistency(vae, test_frames, device)
         logger.info("=" * 70)
+
+    # 各 rank 的日志目录一并同步到 S3
+    storage.upload_async(os.path.join(cfg.output_dir, "logs"), is_dir=True)
+    storage.wait_uploads()
 
     # 清理分布式环境
     if world_size > 1:

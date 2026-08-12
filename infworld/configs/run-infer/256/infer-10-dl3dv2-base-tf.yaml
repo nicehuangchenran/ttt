@@ -1,0 +1,17 @@
+ExpConfig:
+  dataset_dir: preprocessed/dl3dv-2-256px
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256
+
+  max_chunks: 20
+  num: 24
+
+  real_hist: true #同时正常生成和 tf 生成
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0 
+  checkpoint_path: checkpoints/infinite_world_model.ckpt
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-07 16:18:28 UTC+8, gpu num:8, run_name:infer-10-dl3dv2-base-tf

@@ -1,0 +1,15 @@
+ExpConfig:
+  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256
+
+  num: 16
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0
+  checkpoint_path: "weights/train-6-sft/steps370.ckpt"
+
+  max_chunks: 20
+
+OnlineTrainConfig:
+  open: false

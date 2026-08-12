@@ -1,10 +1,10 @@
 ExpConfig:
-  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  dataset_dir: preprocessed/dl3dv-2-256px
   shift: 3
-  bucket_config_name: ASPECT_RATIO_256  
+  bucket_config_name: ASPECT_RATIO_256
 
   max_chunks: 20
-  num: 8
+  num: 24
 
   use_fixed_noise: true
   noise_cache_dir: configs/noise/352_192/noise0 
@@ -12,4 +12,4 @@ ExpConfig:
 
 OnlineTrainConfig:
   open: false
-#finished at 2026-08-05 15:53:26 UTC+8, gpu num:4, run_name:infer-8-base-sekai
+#finished at 2026-08-07 08:52:39 UTC+8, gpu num:8, run_name:infer-10-base-dl3dv-2

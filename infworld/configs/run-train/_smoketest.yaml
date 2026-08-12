@@ -1,0 +1,29 @@
+# 临时冒烟配置：最小规模验证 train.py 能跑通（含 nvme + S3 读写）。
+# 不是实验配置，验证完可直接删。
+#
+#   torchrun --nproc_per_node=1 scripts/train.py --config configs/run-train/_smoketest.yaml
+#
+# 产物：weights/_smoketest_train/{steps1.ckpt, train_log/}
+#       -> 本地 /mnt/nvme/chenran/ttt/infworld/ 下，并自动同步到 S3
+# 重跑前需先删除该目录（本地和 S3 都要删），否则防覆盖检查会拒绝启动。
+
+train:
+  # _smoke-256px 只有 1 个 case（352x192，39 chunks），是现成的最小数据集
+  data_dir: preprocessed/_smoke-256px
+  max_chunks_per_video: 1       # 只取 1 个 chunk -> 1 个 step 就走完一个视频
+  max_train_cases_num: 1
+  num_workers: 0                # 冒烟不需要预取，少一层 worker 便于看报错
+
+  shift: 3.0                    # 与 256px 配套（PX256=3）
+
+  epochs: 1
+  save_every_n_steps: 1         # 立刻存一次，用来验证 ckpt 上传
+  log_every_n_steps: 1
+  log_chunk: true               # 打 chunk 级日志，便于确认真的前向过了
+  val_every_n_steps: 0          # 冒烟不做验证
+
+  run_name: _smoketest_train
+
+ttt:
+  open: false
+#finished at 2026-08-06 15:20:38 UTC+8, gpu num:1, run_name:_smoketest_train

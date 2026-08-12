@@ -1,0 +1,21 @@
+ExpConfig:
+  dataset_dir: dataset/wbench-view
+  shift: 3
+  bucket_config_name: ASPECT_RATIO_256 
+
+  # max_chunks: 5
+
+  checkpoint_path: "weights/train_2/step160.ckpt"
+  
+OnlineTrainConfig:
+  open: true
+  n_train_steps: 5               # 每个 chunk 的在线训练步数
+  lr: 1.0e-5                     # 每个 chunk 新建 AdamW，动量不跨 chunk
+  grad_clip_norm: 1.0            # null 表示不裁剪
+
+  trainable_layers: ["head", "blocks.modulation", "blocks.norm3"]
+  trainable_block_start: 18      # 只训 blocks.<i>（i >= 该值）；反传到此为止，省显存
+
+  reset_between_videos: true     # 每个视频开始前恢复初始权重
+  use_grad_checkpoint: true
+#finished at 2026-08-11 15:48:02 UTC+8, gpu num:4, run_name:infer-2-wbench-view

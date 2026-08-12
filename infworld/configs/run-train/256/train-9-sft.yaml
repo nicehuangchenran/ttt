@@ -1,0 +1,8 @@
+train:
+  data_dir: preprocessed/dl3dv-256px
+  shift: 3
+  
+
+ttt:
+  open: false
+# 已经完成

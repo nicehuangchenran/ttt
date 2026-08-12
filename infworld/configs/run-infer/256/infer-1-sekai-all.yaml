@@ -1,0 +1,15 @@
+ExpConfig:
+  dataset_dir: preprocessed/sekai-game-walking-352_192_30fps
+  shift: 3
+  filter_location: "East Maddon Park, London, United Kingdom"
+  filter_weather: sunny
+
+  checkpoint_path: "weights/train_1/step160.ckpt"
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/352_192/noise0 
+
+  max_chunks: 5
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-11 01:44:24 UTC+8, gpu num:4, run_name:infer-1-wbench-all

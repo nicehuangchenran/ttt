@@ -1,0 +1,11 @@
+ExpConfig:
+  dataset_dir: dataset/wbench-view
+  shift: 5
+  bucket_config_name: ASPECT_RATIO_627_F64
+
+  use_fixed_noise: true
+  noise_cache_dir: configs/noise/896_448/noise0 
+  checkpoint_path: checkpoints/infinite_world_model.ckpt
+  
+OnlineTrainConfig:
+  open: false

@@ -1,0 +1,78 @@
+S3 目录结构如下：(项目根目录是s3://s3-us-west2-default/archives/chenran/ttt/infworld/)
+（更新于 2026-08-11）
+
+preprocessed/                              # 每个 caseN/ 内均为：actions.pt / latent_full.pt / meta.json / target_latent.pt / text_emb.pt
+_smoke-256px/                              # 1 case: case000000
+dl3dv-256px/                               # 150 cases: case000000–case000149
+dl3dv-2-256px/                             # 360 cases: case000000–case000359（另有 logs/）
+dl3dv-256px-val/                           # 16 cases: case000000–case000015（另有 logs/）
+context-dataset-256px/                     # 900 cases: case000000–case000899（另有 logs/）
+sekai-game-walking-352_192_30fps/          # 1414 cases，编号不连续：case0–case1615（另有 a_logs/）
+sekai-game-walking-647px-wrong-move/       # 1618 cases: case0–case1617（另有 logs/）
+
+
+dataset/
+demo/                                      # 2 cases: case0–case1
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    └── prompts.json
+
+long_case/                                 # 2 cases: case0–case1
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    └── prompts.json
+
+context-dataset/                           # 900 cases: case000000–case000899
+├── README.md
+├── resample_meta.json
+└── caseN/
+    ├── move_view.json
+    └── video.mp4                          # 无 image.jpg / prompts.json
+
+dl3dv-2/                                   # 360 cases: case000000–case000359
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    ├── prompts.json
+    └── video.mp4
+
+dl3dv-256px-val/                           # 16 cases: case000000–case000015
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    ├── prompts.json
+    └── video.mp4
+
+sekai-game-walking-352_192_30fps/          # 1618 cases: case0–case1617
+└── caseN/
+    ├── move_view.json
+    ├── prompts.json
+    ├── video.mp4
+    └── video_path
+
+sekai-game-walking-854_480_30fps/          # 1618 cases: case0–case1617
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    ├── prompts.json
+    ├── video.mp4
+    └── video_path
+
+sekai-game-walking-raw/                    # 无 case 目录，6 组：case0–case5
+├── caseN.mp4
+└── caseN.npz
+
+wbench/                                    # 78 cases，编号不连续：case5–case179
+├── move_view_stats.md
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    └── prompts.json
+
+wbench-view/                               # 11 cases: case5, 49, 53, 57, 73, 78, 84, 88, 90, 98, 167
+└── caseN/
+    ├── image.jpg
+    ├── move_view.json
+    └── prompts.json

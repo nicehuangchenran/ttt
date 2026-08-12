@@ -1,0 +1,30 @@
+# 临时冒烟配置：最小规模验证 infer.py 能跑通（含 nvme + S3 读写）。
+# 不是实验配置，验证完可直接删。
+#
+#   torchrun --nproc_per_node=1 scripts/infer.py --config configs/run-infer/_smoketest.yaml
+#
+# 产物：videos/_smoketest_infer/{case_000000_combined.mp4, infer_config.json, infer_log/}
+#       -> 本地 /mnt/nvme/chenran/ttt/infworld/ 下，并自动同步到 S3
+# 重跑前需先删除该目录（本地和 S3 都要删），否则防覆盖检查会拒绝启动。
+
+ExpConfig:
+  # 与 train 冒烟用同一个最小数据集（preprocessed 格式，自动检测）
+  dataset_dir: preprocessed/_smoke-256px
+  num: 1                        # 只跑 1 个 case
+  max_chunks: 1                 # 每个 case 只生成 1 个 chunk（81 帧）
+  num_sampling_steps: 2         # 去噪步数压到 2，只验证流程不看画质
+
+  shift: 3                      # 与 256px 配套（PX256=3）
+  bucket_config_name: ASPECT_RATIO_256   # 含 '1.83': [352, 192]，与数据分辨率匹配
+
+  # 留 null 则用 infworld_config.yaml 里的基础 ckpt，这样本配置不依赖 train 冒烟先跑完。
+  # 要验证训练产出的权重，改成 weights/_smoketest_train/steps1.ckpt
+  checkpoint_path: null
+
+  use_fixed_noise: false        # 冒烟不需要可复现噪声，避免噪声形状不匹配报错
+
+  run_name: _smoketest_infer
+
+OnlineTrainConfig:
+  open: false
+#finished at 2026-08-06 15:22:06 UTC+8, gpu num:1, run_name:_smoketest_infer

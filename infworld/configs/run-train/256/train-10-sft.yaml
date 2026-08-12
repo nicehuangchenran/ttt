@@ -1,0 +1,30 @@
+#  一个 case 对应一个 step,一个 step 1 分钟+ 
+train:
+  data_dir: preprocessed/dl3dv-2-256px
+  shift: 3
+  max_chunks_per_video: 20
+
+  cond_chunk_num: -1
+  log_chunk: true
+
+  # num_train_cases:300
+  # gpu:8
+  # steps_per_epoch: 38
+  # 5小时:5*60*60=18000s
+  epochs: 25
+  save_every_n_steps: 100
+  val_every_n_steps: 25
+  
+  
+# TTT Scheme B：FFN 的 W_down（ffn.2，写入 residual 的 value）+ self-attn 的 K/V
+# （历史 token 的检索表征），只在中层 block 14..26 上更新。
+#   - ffn.2 决定"往 residual 写什么内容"，对应记住本场景的具体外观；不动 ffn.0
+#     （特征检测器），避免破坏预训练的识别能力，参数量也减半。
+#   - self_attn.k/v 决定历史以什么形式被检索——只训 FFN 会"记得更多但找不回来"。
+#     q 不训：q 只作用在 noisy token 上，改动会让去噪步之间的检索行为漂移。
+#   - self_attn.o 不训：与 ffn.2 功能重叠（都往 residual 写），同训会互相抵消梯度。
+#   - block 14..26：浅层管局部纹理（改动引入闪烁），末层偏输出细化（不影响记忆）。
+# 可训参数约 (ffn.2 13.8M + k/v 4.7M) × 13 ≈ 240M，配 use_grad_checkpoint: true。
+ttt:
+  open: false
+#finished at 2026-08-07 07:45:13 UTC+8, gpu num:8, run_name:train-10-sft

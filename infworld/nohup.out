@@ -1,135 +1,0 @@
-sending incremental file list
-rsync_archive.log
-         32,768   0%    0.00kB/s    0:00:00           68,087   0%   33.68MB/s    0:00:00 (xfr#1, ir-chk=1021/1025)
-LTX-Video/models/Llama-3.2-3B-Instruct/
-LTX-Video/models/Llama-3.2-3B-Instruct/model-00001-of-00002.safetensors
-        100,855   0%   27.24kB/s  877:58:03    2,190,576,119   2%  607.29MB/s    0:02:14    4,404,054,519   5%  946.16MB/s    0:01:24    4,965,867,183   5% 1008.90MB/s    0:00:04 (xfr#2, ir-chk=1006/1665)
-LTX-Video/models/Llama-3.2-3B-Instruct/model-00002-of-00002.safetensors
-  4,965,998,255   5%  414.78MB/s    0:03:11    5,536,325,295   6%  529.09MB/s    0:02:28    6,088,629,935   7%  372.53MB/s    0:03:29    6,425,597,135   7%  438.74MB/s    0:00:13 (xfr#3, ir-chk=1005/1665)
-LTX-Video/models/Llama-3.2-3B-Instruct/model.safetensors.index.json
-  6,425,618,054   7%  438.15MB/s    0:00:13 (xfr#4, ir-chk=1004/1665)
-LTX-Video/models/Llama-3.2-3B-Instruct/special_tokens_map.json
-  6,425,618,508   7%  437.77MB/s    0:00:13 (xfr#5, ir-chk=1003/1665)
-LTX-Video/models/Llama-3.2-3B-Instruct/tokenizer.json
-  6,425,716,812   7%  165.45MB/s    0:07:50    6,442,828,428   7%  380.50MB/s    0:00:16 (xfr#6, ir-chk=1002/1665)
-LTX-Video/models/Llama-3.2-3B-Instruct/tokenizer_config.json
-  6,442,883,097   7%  380.32MB/s    0:00:16 (xfr#7, ir-chk=1001/1665)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/.gitignore
-  6,442,883,098   7%  379.87MB/s    0:00:16 (xfr#8, ir-chk=1001/1668)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/.gitattributes.lock
-  6,442,883,098   7%  378.63MB/s    0:00:16 (xfr#9, ir-chk=1021/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/.gitattributes.metadata
-  6,442,883,199   7%  378.42MB/s    0:00:16 (xfr#10, ir-chk=1020/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/README.md.lock
-  6,442,883,199   7%  378.33MB/s    0:00:16 (xfr#11, ir-chk=1019/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/README.md.metadata
-  6,442,883,300   7%  378.14MB/s    0:00:16 (xfr#12, ir-chk=1018/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/chat_template.jinja.lock
-  6,442,883,300   7%  378.00MB/s    0:00:16 (xfr#13, ir-chk=1017/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/chat_template.jinja.metadata
-  6,442,883,401   7%  377.79MB/s    0:00:16 (xfr#14, ir-chk=1016/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/config.json.lock
-  6,442,883,401   7%  377.70MB/s    0:00:16 (xfr#15, ir-chk=1015/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/config.json.metadata
-  6,442,883,502   7%  377.49MB/s    0:00:16 (xfr#16, ir-chk=1014/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/generation_config.json.lock
-  6,442,883,502   7%  377.40MB/s    0:00:16 (xfr#17, ir-chk=1013/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/generation_config.json.metadata
-  6,442,883,602   7%  377.05MB/s    0:00:16 (xfr#18, ir-chk=1012/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/model-00001-of-00002.safetensors.lock
-  6,442,883,602   7%  376.93MB/s    0:00:16 (xfr#19, ir-chk=1011/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/model-00001-of-00002.safetensors.metadata
-  6,442,883,727   7%  376.72MB/s    0:00:16 (xfr#20, ir-chk=1010/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/model-00002-of-00002.safetensors.lock
-  6,442,883,727   7%  376.63MB/s    0:00:16 (xfr#21, ir-chk=1009/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/model-00002-of-00002.safetensors.metadata
-  6,442,883,852   7%  376.45MB/s    0:00:16 (xfr#22, ir-chk=1008/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/model.safetensors.index.json.lock
-  6,442,883,852   7%  376.33MB/s    0:00:16 (xfr#23, ir-chk=1007/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/model.safetensors.index.json.metadata
-  6,442,883,953   7%  376.19MB/s    0:00:16 (xfr#24, ir-chk=1006/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/special_tokens_map.json.lock
-  6,442,883,953   7%  375.96MB/s    0:00:16 (xfr#25, ir-chk=1005/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/special_tokens_map.json.metadata
-  6,442,884,054   7%  375.78MB/s    0:00:16 (xfr#26, ir-chk=1004/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/tokenizer.json.lock
-  6,442,884,054   7%  375.67MB/s    0:00:16 (xfr#27, ir-chk=1003/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/tokenizer.json.metadata
-  6,442,884,179   7%  375.30MB/s    0:00:16 (xfr#28, ir-chk=1002/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/tokenizer_config.json.lock
-  6,442,884,179   7%  375.16MB/s    0:00:16 (xfr#29, ir-chk=1001/1690)
-LTX-Video/models/Llama-3.2-3B-Instruct/.cache/huggingface/download/tokenizer_config.json.metadata
-  6,442,884,279   7%  374.95MB/s    0:00:16 (xfr#30, ir-chk=1000/1690)
-LTX-Video/models/PixArt-XL-2-1024-MS/
-LTX-Video/models/PixArt-XL-2-1024-MS/.gitattributes
-  6,442,885,991   7%  373.70MB/s    0:00:16 (xfr#31, ir-chk=1018/1709)
-LTX-Video/models/PixArt-XL-2-1024-MS/README.md
-  6,442,892,837   7%  373.50MB/s    0:00:16 (xfr#32, ir-chk=1017/1709)
-LTX-Video/models/PixArt-XL-2-1024-MS/model_index.json
-  6,442,893,237   7%  373.25MB/s    0:00:16 (xfr#33, ir-chk=1016/1709)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/.gitignore
-  6,442,893,238   7%  372.95MB/s    0:00:16 (xfr#34, ir-chk=1007/1709)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/.gitattributes.lock
-  6,442,893,238   7%  372.46MB/s    0:00:16 (xfr#35, ir-chk=1012/1716)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/.gitattributes.metadata
-  6,442,893,338   7%  372.27MB/s    0:00:16 (xfr#36, ir-chk=1011/1716)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/README.md.lock
-  6,442,893,338   7%  372.16MB/s    0:00:16 (xfr#37, ir-chk=1010/1716)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/README.md.metadata
-  6,442,893,439   7%  371.98MB/s    0:00:16 (xfr#38, ir-chk=1009/1716)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/model_index.json.lock
-  6,442,893,439   7%  371.73MB/s    0:00:16 (xfr#39, ir-chk=1008/1716)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/model_index.json.metadata
-  6,442,893,539   7%  371.55MB/s    0:00:16 (xfr#40, ir-chk=1007/1716)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/PixArt.svg.lock
-  6,442,893,539   7%  370.59MB/s    0:00:16 (xfr#41, ir-chk=1038/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/PixArt.svg.metadata
-  6,442,893,640   7%  370.41MB/s    0:00:16 (xfr#42, ir-chk=1037/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/examples.py.lock
-  6,442,893,640   7%  370.30MB/s    0:00:16 (xfr#43, ir-chk=1036/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/examples.py.metadata
-  6,442,893,740   7%  370.08MB/s    0:00:16 (xfr#44, ir-chk=1035/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/logo.png.lock
-  6,442,893,740   7%  369.97MB/s    0:00:16 (xfr#45, ir-chk=1034/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/logo.png.metadata
-  6,442,893,840   7%  369.79MB/s    0:00:16 (xfr#46, ir-chk=1033/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/samples.txt.lock
-  6,442,893,840   7%  369.70MB/s    0:00:16 (xfr#47, ir-chk=1032/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/samples.txt.metadata
-  6,442,893,941   7%  369.52MB/s    0:00:16 (xfr#48, ir-chk=1031/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/efficiency.svg.lock
-  6,442,893,941   7%  369.25MB/s    0:00:16 (xfr#49, ir-chk=1029/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/efficiency.svg.metadata
-  6,442,894,041   7%  369.08MB/s    0:00:16 (xfr#50, ir-chk=1028/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/model.png.lock
-  6,442,894,041   7%  369.01MB/s    0:00:16 (xfr#51, ir-chk=1027/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/model.png.metadata
-  6,442,894,142   7%  368.83MB/s    0:00:16 (xfr#52, ir-chk=1026/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/more-samples.png.lock
-  6,442,894,142   7%  368.72MB/s    0:00:16 (xfr#53, ir-chk=1025/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/more-samples.png.metadata
-  6,442,894,267   7%  368.52MB/s    0:00:16 (xfr#54, ir-chk=1024/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/more-samples1.png.lock
-  6,442,894,267   7%  368.41MB/s    0:00:16 (xfr#55, ir-chk=1023/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/more-samples1.png.metadata
-  6,442,894,391   7%  368.21MB/s    0:00:16 (xfr#56, ir-chk=1022/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/sample.png.lock
-  6,442,894,391   7%  368.13MB/s    0:00:16 (xfr#57, ir-chk=1021/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/sample.png.metadata
-  6,442,894,492   7%  367.95MB/s    0:00:16 (xfr#58, ir-chk=1020/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/teaser.png.lock
-  6,442,894,492   7%  367.77MB/s    0:00:16 (xfr#59, ir-chk=1019/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/teaser.png.metadata
-  6,442,894,617   7%  367.60MB/s    0:00:16 (xfr#60, ir-chk=1018/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/user-study.png.lock
-  6,442,894,617   7%  367.51MB/s    0:00:16 (xfr#61, ir-chk=1017/1754)
-LTX-Video/models/PixArt-XL-2-1024-MS/.cache/huggingface/download/asset/images/user-study.png.metadata
-rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at io.c(519) [generator=3.4.0]
-rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at rsync.c(716) [sender=3.4.0]

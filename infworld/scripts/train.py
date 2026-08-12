@@ -57,6 +57,7 @@ sys.path.insert(0, PROJECT_ROOT)
 from infworld.utils.prepare_dataloader import get_obj_from_str
 from infworld.models.checkpoint import set_grad_checkpoint
 from infworld.models.scheduler import timestep_transform
+from infworld.utils import storage
 
 
 @dataclass
@@ -438,7 +439,7 @@ class TrainLogger:
 class Checkpointer:
     def __init__(self, weights_dir: str, run_name: str, rank: int):
         self.rank = rank
-        self.weights_dir = os.path.join(weights_dir, run_name)
+        self.weights_dir = os.path.join(_resolve_path(weights_dir), run_name)
         os.makedirs(self.weights_dir, exist_ok=True)
 
     def save(self, dit, optimizer, lr_sched, global_step: int, config):
@@ -458,8 +459,11 @@ class Checkpointer:
         path = os.path.join(self.weights_dir, f"steps{global_step}.ckpt")
         torch.save(ckpt, path)
         print(f"[SAVE] Checkpoint saved: {path}")
-    
+        # 3.5G 的 ckpt 交给后台进程传 S3，训练不等它；退出前 wait_uploads 兜底
+        storage.upload_async(path, is_dir=False)
+
     def load_for_resume(self, path: str, dit, optimizer, lr_sched) -> int:
+        path = storage.ensure_local(path, is_dir=False)
         ckpt = torch.load(path, map_location="cpu")
         if isinstance(dit, nn.parallel.DistributedDataParallel):
             dit.module.load_state_dict(ckpt["state_dict"], strict=False)
@@ -494,7 +498,8 @@ class PreprocessedVideoDataset(Dataset):
                  filter_time_of_day: Optional[str] = None,
                  max_train_cases_num: int = -1,
                  rank: int = 0):
-        self.data_dir = data_dir
+        self.data_dir = _resolve_path(data_dir)
+        data_dir = self.data_dir
         self.max_chunks = max_chunks_per_video
         self.cases = []
 
@@ -502,10 +507,20 @@ class PreprocessedVideoDataset(Dataset):
         total_cases = 0
         filtered_out = 0
 
-        for case_name in sorted(os.listdir(data_dir)):
+        # 目录清单取「本地 ∪ S3」，本地只缓存了部分 case 时也能看到全量。
+        # 筛选只需要 meta.json（几 KB），所以扫描阶段只按需拉 meta.json，
+        # 真正的 .pt（几百 MB/case）留到 __getitem__ 里再拉。
+        for case_name in storage.list_dir(data_dir):
             case_path = os.path.join(data_dir, case_name)
+            # list_dir 返回目录 ∪ 文件，数据目录里还混着 preprocess.log、logs/ 这类
+            # 预处理产物。只认 case 前缀：否则会对着普通文件拼出 <file>/meta.json，
+            # ensure_local 再 makedirs 就撞 FileExistsError。
+            if not case_name.startswith("case"):
+                continue
             meta_path = os.path.join(case_path, "meta.json")
-            if os.path.isdir(case_path) and os.path.exists(meta_path):
+            if not os.path.exists(meta_path):
+                storage.ensure_local(meta_path, is_dir=False, check=False)
+            if os.path.exists(meta_path):
                 total_cases += 1
 
                 # 读取 meta.json 并检查筛选条件
@@ -561,7 +576,11 @@ class PreprocessedVideoDataset(Dataset):
     
     def __getitem__(self, idx: int) -> VideoSample:
         case_name = self.cases[idx]
-        case_dir = os.path.join(self.data_dir, case_name)
+        # 本地缺哪个 .pt 就从 S3 拉哪个（dataloader worker 里同步下载，随后即读）
+        case_dir = storage.ensure_files(
+            os.path.join(self.data_dir, case_name),
+            ("latent_full.pt", "target_latent.pt", "text_emb.pt", "actions.pt"),
+        )
         # 所有张量保持在 CPU，在 make_chunk_batch 中按需移到 GPU
         latent_full = torch.load(os.path.join(case_dir, "latent_full.pt"), map_location='cpu')
         target_latent = torch.load(os.path.join(case_dir, "target_latent.pt"), map_location='cpu')
@@ -606,9 +625,9 @@ class TrainModels:
 
 
 def _resolve_path(path):
-    if path is None or os.path.isabs(path):
-        return path
-    return os.path.join(PROJECT_ROOT, path.strip())
+    """相对路径解析：数据/产物目录（dataset/ preprocessed/ checkpoints/ weights/ ...）
+    落到 storage.LOCAL_ROOT 并与 S3 同步，代码与 yaml 仍按 PROJECT_ROOT 解析。"""
+    return storage.resolve(path)
 
 
 def build_dit(cfg: TrainConfig, ttt_cfg: TTTConfig, runtime: RuntimeContext) -> TrainModels:
@@ -622,9 +641,14 @@ def build_dit(cfg: TrainConfig, ttt_cfg: TTTConfig, runtime: RuntimeContext) -> 
     ).to(master_dtype)
     # 如果设置了 resume_from，跳过预训练权重加载（稍后会被 resume checkpoint 覆盖）
     if not cfg.resume_from:
+        # 只让 rank0 下载：8 个 rank 同时 aws s3 cp 到同一路径会互相覆盖到半截文件。
+        # 其余 rank 在 barrier 处等下载完成后再读本地文件。
         checkpoint_path = _resolve_path(cfg.init_checkpoint)
         if runtime.global_rank == 0:
+            storage.ensure_local(checkpoint_path, is_dir=False)
             print(f"[LOAD] DiT checkpoint: {checkpoint_path}")
+        if runtime.world_size > 1:
+            dist.barrier()
         state_dict = torch.load(checkpoint_path, map_location="cpu")
         if "state_dict" in state_dict:
             state_dict = state_dict["state_dict"]
@@ -1050,6 +1074,7 @@ def main():
 
     # 早期错误（logger 创建前）需要降级到 print + 抛出
     logger = None
+    log_dir = None
     try:
         # ckpt 和日志同放一处：weights/<run_name>/{step*.ckpt, <log_subdir>/}
         # 目标目录已存在就报错退出，绝不覆盖/追加到旧结果里（对齐 main.py 的防覆盖行为）。
@@ -1057,8 +1082,13 @@ def main():
         # 只让 rank0 判定目录是否已存在，再广播给所有 rank，大家基于同一结果一起退出或一起继续。
         # 若各 rank 自己判定，rank0 会领先跑到 Checkpointer 把目录 makedirs 出来，其余 rank 随后
         # 命中 FileExistsError —— 即便启动前目录不存在，也会因这个竞态而误报"目录已存在"。
+        # 本地 nvme 可能是新机器（空目录），所以 S3 上已有同名 run 也算"已存在"，
+        # 否则两台机器用同一 run_name 会在 S3 上互相覆盖 ckpt。
         run_dir = os.path.join(_resolve_path(cfg.weights_dir), cfg.run_name)
-        exists = (os.path.exists(run_dir) and not cfg.resume_from) if runtime.global_rank == 0 else False
+        if runtime.global_rank == 0:
+            exists = (os.path.exists(run_dir) or storage.s3_exists(run_dir)) and not cfg.resume_from
+        else:
+            exists = False
         if runtime.world_size > 1:
             flag = [exists]
             dist.broadcast_object_list(flag, src=0)
@@ -1071,8 +1101,12 @@ def main():
                 f"若是要恢复训练，请设置 train.resume_from。"
             )
         checkpointer = Checkpointer(cfg.weights_dir, cfg.run_name, runtime.global_rank)
-        logger = TrainLogger(os.path.join(checkpointer.weights_dir, cfg.log_subdir),
-                             runtime.global_rank, runtime.world_size)
+        log_dir = os.path.join(checkpointer.weights_dir, cfg.log_subdir)
+        logger = TrainLogger(log_dir, runtime.global_rank, runtime.world_size)
+        # 日志/metrics/tensorboard 每 5 分钟同步一次，训练中途也能在 S3 上看进度
+        if runtime.global_rank == 0:
+            storage.start_periodic_sync(log_dir, interval=300)
+        logger.info(storage.describe())
         logger.info("=" * 70)
         logger.info(f"Infinite World - Training - {cfg.run_name}")
         logger.info("=" * 70)
@@ -1137,6 +1171,10 @@ def main():
         if runtime.global_rank == 0:
             mark_config_finished(cli.config, runtime.world_size, cfg.run_name, logger)
         logger.close()
+        # 等最后一个 ckpt 传完再退出，并把日志目录做最终同步
+        if runtime.global_rank == 0:
+            storage.stop_periodic_sync(log_dir)
+        storage.wait_uploads()
 
     except Exception as e:
         # 捕获所有异常，写入日志文件（如果 logger 已创建）并重新抛出
@@ -1147,6 +1185,12 @@ def main():
             logger.info_all_ranks(error_msg)
             logger.info_all_ranks("=" * 70)
             logger.close()
+            # 崩溃时也把日志推上 S3，否则报错原因只留在本机 nvme 上
+            try:
+                if log_dir is not None and runtime.global_rank == 0:
+                    storage.stop_periodic_sync(log_dir)
+            except Exception:
+                pass
         else:
             # logger 还没创建（极早期错误），降级到 print
             print(error_msg, file=sys.stderr)
