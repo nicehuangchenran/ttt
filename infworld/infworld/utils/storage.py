@@ -20,7 +20,18 @@ import time
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-LOCAL_ROOT = os.environ.get("INFWORLD_LOCAL_ROOT", "/mnt/nvme/chenran/ttt/infworld").rstrip("/")
+
+def _default_local_root():
+    """按机器自动选本地大文件根：优先已挂载的 nvme（老机器），
+    两个挂载点都不存在时退回项目根（新机器把大文件直接放在项目目录下）。
+    仍可用 INFWORLD_LOCAL_ROOT 覆盖。"""
+    for mount in ("/mnt/nvme", "/mnt/local_nvme"):
+        if os.path.isdir(mount):
+            return f"{mount}/chenran/ttt/infworld"
+    return PROJECT_ROOT
+
+
+LOCAL_ROOT = os.environ.get("INFWORLD_LOCAL_ROOT", _default_local_root()).rstrip("/")
 S3_ROOT = os.environ.get(
     "INFWORLD_S3_ROOT", "s3://s3-us-west2-default/archives/chenran/ttt/infworld"
 ).rstrip("/")

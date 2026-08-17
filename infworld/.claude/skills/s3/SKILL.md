@@ -15,25 +15,22 @@ description: infworld 项目的大文件路径映射（本地 nvme 与 S3 一一
 走这套映射的顶层目录（`storage.py::DATA_PREFIXES`）：
 `dataset` `preprocessed` `checkpoints` `weights` `videos` `outputs`
 
-其余相对路径按项目根 `/mnt/efs/chenran/project/ttt/infworld/` 解析。
+其余相对路径按项目根（`storage.py::PROJECT_ROOT`，即仓库所在目录，因机器而异）解析。
 
-### 本地根：nvme 挂载点因机器而异
+### 本地根：因机器而异，storage.py 会自动探测
 
-**动手之前先确认 `/mnt/nvme` 存在。** 有的机器上这块盘挂在 `/mnt/local_nvme`，此时把所有 nvme 路径里的 `nvme` 换成 `local_nvme` 即可，后面的 `chenran/ttt/infworld/...` 和相对路径都不变：
+`storage.py` 的 `LOCAL_ROOT` 默认值按机器自动选（`INFWORLD_LOCAL_ROOT` 优先）：`/mnt/nvme` 挂载存在 → `/mnt/nvme/chenran/ttt/infworld`；否则 `/mnt/local_nvme` 存在 → `/mnt/local_nvme/chenran/ttt/infworld`；两个 nvme 都没有 → 退回项目根 `PROJECT_ROOT`（仓库所在目录，如新机器的 `/data/chenran/project/ttt/infworld`）。所以代码侧一般不用管，也别改默认值；要放到别的盘再 `export INFWORLD_LOCAL_ROOT=...` 覆盖。
+
+**手写 aws 命令时同样先确认本地根**（下面惯用命令里的 `$L`）：
 
 ```bash
-if [ -d /mnt/nvme ]; then
-  L=/mnt/nvme/chenran/ttt/infworld
-elif [ -d /mnt/local_nvme ]; then
-  L=/mnt/local_nvme/chenran/ttt/infworld
-else
-  echo "两个 nvme 挂载点都不存在，先问用户本地根放哪" >&2; exit 1
+if [ -d /mnt/nvme ]; then       L=/mnt/nvme/chenran/ttt/infworld
+elif [ -d /mnt/local_nvme ]; then L=/mnt/local_nvme/chenran/ttt/infworld
+else                            L=<仓库根>   # 项目就在本地盘上（如 /data/.../infworld）时用它
 fi
 ```
 
-两个都不存在就停下来问，不要自己随便找个目录当本地根 — 尤其别写进项目目录（`/mnt/efs/.../infworld/`），那是 EFS，慢且不是这套映射的位置。
-
-代码里走 `storage.py` 的话，用 `INFWORLD_LOCAL_ROOT=/mnt/local_nvme/chenran/ttt/infworld` 覆盖，别改 `storage.py` 的默认值。
+⚠️ 退回项目根只在**仓库位于本地盘**时才合理。老机器上仓库在 EFS（`/mnt/efs/.../infworld/`，慢），别把大文件放那；此时应有 nvme 挂载或显式设 `INFWORLD_LOCAL_ROOT`。当 `LOCAL_ROOT == PROJECT_ROOT` 时大文件落在仓库工作树内，但六个 data 目录（`dataset/preprocessed/checkpoints/weights/videos/outputs`）都已 gitignore，`git status` 不受影响。
 
 ## 换算
 
@@ -45,11 +42,16 @@ videos/gt-dl3dv-2/case_000000_combined.mp4
   S3    s3://s3-us-west2-default/archives/chenran/ttt/infworld/videos/gt-dl3dv-2/case_000000_combined.mp4
 ```
 
+## 凭证：default 失败就加 `--profile chenran`
+
+裸 `aws s3 ...`（default profile）在有些机器上没权限，报 `AccessDenied`（`ListObjectsV2`/`GetObject` 等）。先试 default，一旦 AccessDenied 就给命令加 `--profile chenran`（`~/.aws/config` 里已配好该 profile，region us-west-2）。代码侧走 storage.py 时用 `export AWS_PROFILE=chenran` 让整条链路都带上（别用 `INFWORLD_AWS_CLI="aws --profile chenran"`——storage.py 把 `_AWS` 当作 argv 单个元素，带空格会被当成一个可执行名报 FileNotFoundError）。
+
 ## 惯用命令
 
 ```bash
 L=/mnt/nvme/chenran/ttt/infworld        # /mnt/nvme 不存在时换成 /mnt/local_nvme，见上一节
 B=s3://s3-us-west2-default/archives/chenran/ttt/infworld
+# 下面命令 AccessDenied 时统一追加 --profile chenran
 
 # 下载（只传有差异的文件，可反复重跑）
 aws s3 sync "$B/videos/gt-dl3dv-2/" "$L/videos/gt-dl3dv-2/" --only-show-errors

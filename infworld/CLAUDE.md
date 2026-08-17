@@ -8,7 +8,7 @@ Infinite-World（infworld）：交互式世界模型，从条件图像 + 文本 
 
 ## 环境
 
-Python：`/mnt/efs/chenran/miniconda3/envs/infworld/bin/python3`（conda 环境 `infworld`，Python 3.10，CUDA 12.4，torch 2.6.0）。不要直接用裸 `python`。
+conda 环境 `infworld`（Python 3.10，CUDA 12.4，torch 2.6.0），不要直接用裸 `python`。环境前缀因机器而异，取 `conda env list` 里 `infworld` 那行的路径再拼 `/bin/python3`（或 `/bin/torchrun`）：老机器在 `/mnt/efs/chenran/miniconda3/envs/infworld/`，新机器在 `/data/chenran/miniconda3/envs/infworld/`。
 
 ## 运行流程
 
@@ -75,6 +75,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4 torchrun --nnodes=1 --nproc_per_node=5 \
 
 - `scripts/` 下只有 `infer.py`（推理 + 在线/test-time 训练）和 `train.py`（离线训练）是当前入口。`infworld_inference_origin.py`、`infworld_inference_with_ttt.py`、`train_old.py` 是遗留代码，不要在其基础上扩展。
 - `checkpoints/` 只读（预训练权重）。所有训练产物写 `weights/<run>/`（ckpt 与 `train_log/` 同目录）。绝不写 `checkpoints/`。
+- **大文件不放项目目录，走 `infworld/utils/storage.py` 的本地 ↔ S3 同名相对路径映射**（顶层目录 `dataset/preprocessed/checkpoints/weights/videos/outputs`）。本地根自动探测：有 nvme 挂载走 `/mnt/(local_)nvme/chenran/ttt/infworld`，都没有则退回项目根；S3 权威副本在 `s3://s3-us-west2-default/archives/chenran/ttt/infworld/`。可用 `INFWORLD_LOCAL_ROOT` 覆盖本地根，`INFWORLD_S3_DISABLE=1` 退化为纯本地。别在业务代码里手写路径拼接。
 - `dataset/`、`videos/`、`checkpoints/`、`outputs/` 已 gitignore（大文件/生成物）；`preprocessed/` 目前只跟踪 `meta.json`。
 - DiT 配置（`in_channels`、`dim=1536`、`num_layers=30` 等）在 `configs/infworld_config.yaml::model_cfg`；train.py 硬编码了少量常量（out_channels=16、caption_channels=4096、max_length=512），以免为了读两个常量而加载 10GB 文本编码器 — 若改模型形状，两处要保持一致。
 - 使用中文输出
