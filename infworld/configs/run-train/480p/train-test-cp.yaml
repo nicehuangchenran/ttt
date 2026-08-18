@@ -1,0 +1,22 @@
+train:
+  data_dir: preprocessed/sekai-game-walking-647px-wrong-move
+  shift: 5
+  max_chunks_per_video: 10
+  filter_location: "East Maddon Park, London, United Kingdom"
+  filter_weather: sunny
+
+  log_chunk: true
+
+  # context parallel：沿每帧空间 token 把序列切到 cp_size 张卡上，摊薄激活显存解决 OOM。
+  # world_size 须被整除；每帧空间 token 数 N_h*N_w 须被 cp_size 整除。
+  context_parallel_size: 2
+
+  cond_chunk_num: 16
+
+  epochs: 1 
+  # batch_size=gpu_num*1*max_chunks
+  # steps_per_epoch=cases/gpu_num
+  val_every_n_steps: 10
+
+ttt:
+  open: false

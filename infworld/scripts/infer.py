@@ -832,23 +832,17 @@ def _scan_case_names(dataset_dir, begin_idx, n):
     return case_names
 
 
-def _is_preprocessed_dataset(dataset_dir):
-    """Preprocessed format iff some case dir contains meta.json (WBench cases have
-    image.jpg instead).
-
-    本地 nvme 可能还没缓存任何 case，所以清单取「本地 ∪ S3」，
-    并按需把 meta.json（几 KB）拉下来判定格式。
-    """
-    for d in storage.list_dir(dataset_dir):
-        if not d.startswith("case"):
-            continue
-        meta_path = os.path.join(dataset_dir, d, "meta.json")
-        if os.path.exists(meta_path):
-            return True
-        storage.ensure_local(meta_path, is_dir=False, check=False)
-        if os.path.exists(meta_path):
-            return True
-    return False
+def _is_preprocessed_dataset(raw_dataset_dir):
+    """Dataset format is determined by the configured path, not by probing S3:
+    `dataset/...` is always WBench (raw image + action json), `preprocessed/...`
+    is always the preprocessed cache (latent + meta.json)."""
+    top = raw_dataset_dir.replace(os.sep, "/").strip("/").split("/", 1)[0]
+    if top == "preprocessed":
+        return True
+    if top == "dataset":
+        return False
+    raise ValueError(
+        f"ExpConfig.dataset_dir 必须以 dataset/ 或 preprocessed/ 开头，得到: {raw_dataset_dir}")
 
 
 def _meta_matches_filters(meta, exp_config):
@@ -972,15 +966,16 @@ def _load_inputs_wbench(dataset_dir, bucket_config_name, dp_rank, dp_size, begin
 
 
 def load_inputs(exp_config, dp_rank, dp_size, vae, device):
-    """Detect the dataset format and dispatch to the matching loader.
+    """Dispatch to the matching loader based on exp_config.dataset_dir's top-level
+    directory (dataset/ -> WBench, preprocessed/ -> preprocessed).
 
-    Preprocessed format (meta.json present) supports filter_*; WBench format
-    (image.jpg present) keeps the original behavior. Filters on a WBench dir
-    are a usage error, so fail fast instead of silently ignoring them.
+    Preprocessed format supports filter_*; WBench format keeps the original
+    behavior. Filters on a WBench dir are a usage error, so fail fast instead
+    of silently ignoring them.
     """
     dataset_dir = _resolve_path(exp_config.dataset_dir)
-    if _is_preprocessed_dataset(dataset_dir):
-        log("Dataset format: preprocessed (meta.json found)")
+    if _is_preprocessed_dataset(exp_config.dataset_dir):
+        log("Dataset format: preprocessed (path under preprocessed/)")
         return _load_inputs_preprocessed(dataset_dir, exp_config, dp_rank, dp_size, vae, device)
 
     if exp_config.real_hist:

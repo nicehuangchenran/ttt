@@ -31,12 +31,16 @@ context-dataset/                           # 900 cases: case000000–case000899
     ├── move_view.json
     └── video.mp4                          # 无 image.jpg / prompts.json
 
-dl3dv-2/                                   # 360 cases: case000000–case000359
+dl3dv-2/                                   # 360 cases: case000000–case000359(move 中 forward backward 反了)
 └── caseN/
     ├── image.jpg
     ├── move_view.json
     ├── prompts.json
     └── video.mp4
+
+dl3dv-2-right/    # 将move中的 forward backward 交换
+
+dl3dv2-480  # 使用 480p, 带图片
 
 dl3dv-256px-val/                           # 16 cases: case000000–case000015
 └── caseN/

@@ -1,5 +1,5 @@
 train:
-  data_dir: preprocessed/sekai-game-walking-647px
+  data_dir: preprocessed/sekai-game-walking-647px-wrong-move
   shift: 5
   max_chunks_per_video: 10
   filter_location: "East Maddon Park, London, United Kingdom"
@@ -9,7 +9,7 @@ train:
 
   cond_chunk_num: 16
 
-  epochs: 5 
+  epochs: 1 
   # batch_size=gpu_num*1*max_chunks
   # steps_per_epoch=cases/gpu_num
   val_every_n_steps: 10

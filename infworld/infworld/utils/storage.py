@@ -43,6 +43,28 @@ S3_DISABLED = os.environ.get("INFWORLD_S3_DISABLE", "") == "1"
 
 _AWS = os.environ.get("INFWORLD_AWS_CLI", "aws")
 
+
+def _detect_aws_profile():
+    """选用哪个 aws profile：INFWORLD_AWS_PROFILE 显式指定优先；
+    否则若 `aws configure list-profiles` 里存在 chenran 就用它（本机默认凭证
+    无 S3 权限，下载全失败，chenran profile 才有权访问 bucket）；都没有则用默认凭证。"""
+    prof = os.environ.get("INFWORLD_AWS_PROFILE")
+    if prof is not None:
+        return prof.strip() or None
+    try:
+        out = subprocess.run(
+            [_AWS, "configure", "list-profiles"],
+            stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True,
+        ).stdout
+    except FileNotFoundError:
+        return None
+    return "chenran" if "chenran" in out.split() else None
+
+
+_AWS_PROFILE = _detect_aws_profile()
+# 所有 aws 调用的基础命令（含 --profile），各处用 [*_AWS_CMD, "s3", ...] 展开
+_AWS_CMD = [_AWS, "--profile", _AWS_PROFILE] if _AWS_PROFILE else [_AWS]
+
 # 已 ensure_local 过的路径，避免同一进程内反复调 aws
 _ensured = set()
 _ensured_lock = threading.Lock()
@@ -126,7 +148,7 @@ def s3_exists(local_path) -> bool:
     uri = s3_uri(local_path)
     if S3_DISABLED or uri is None:
         return False
-    ok, out = _run([_AWS, "s3", "ls", uri], check=False, what="s3 ls", quiet=True)
+    ok, out = _run([*_AWS_CMD, "s3", "ls", uri], check=False, what="s3 ls", quiet=True)
     return ok and bool(out.strip())
 
 
@@ -157,7 +179,7 @@ def ensure_local(path, is_dir=None, check=True):
         if need:
             os.makedirs(local, exist_ok=True)
             _log(f"下载目录 {uri} -> {local}")
-            _run([_AWS, "s3", "sync", uri + "/", local], check=check, what="s3 sync")
+            _run([*_AWS_CMD, "s3", "sync", uri + "/", local], check=check, what="s3 sync")
     else:
         if not os.path.exists(local):
             os.makedirs(os.path.dirname(local), exist_ok=True)
@@ -165,7 +187,7 @@ def ensure_local(path, is_dir=None, check=True):
             # 先下到进程私有的临时文件再原子改名：多 rank / 多 dataloader worker
             # 同时拉同一个文件时，读到的永远是完整文件而不是别人写了一半的内容。
             tmp = f"{local}.part.{os.getpid()}.{threading.get_ident()}"
-            ok, _ = _run([_AWS, "s3", "cp", uri, tmp], check=check, what="s3 cp")
+            ok, _ = _run([*_AWS_CMD, "s3", "cp", uri, tmp], check=check, what="s3 cp")
             if ok:
                 os.replace(tmp, local)
             elif os.path.exists(tmp):
@@ -197,7 +219,7 @@ def list_dir(dir_path, check=True):
     names = set(os.listdir(local_dir)) if os.path.isdir(local_dir) else set()
     uri = s3_uri(local_dir)
     if not S3_DISABLED and uri is not None:
-        ok, out = _run([_AWS, "s3", "ls", uri + "/"], check=False, what="s3 ls", quiet=True)
+        ok, out = _run([*_AWS_CMD, "s3", "ls", uri + "/"], check=False, what="s3 ls", quiet=True)
         if ok:
             for line in out.splitlines():
                 line = line.strip()
@@ -246,8 +268,8 @@ def upload_async(path, is_dir=None):
         return
     if is_dir is None:
         is_dir = os.path.isdir(local)
-    cmd = ([_AWS, "s3", "sync", local, uri + "/"] if is_dir
-           else [_AWS, "s3", "cp", local, uri])
+    cmd = ([*_AWS_CMD, "s3", "sync", local, uri + "/"] if is_dir
+           else [*_AWS_CMD, "s3", "cp", local, uri])
     with _upload_lock:
         if _upload_q is None:
             _upload_q = queue.Queue()
@@ -317,4 +339,5 @@ def stop_periodic_sync(dir_path=None):
 def describe() -> str:
     if S3_DISABLED:
         return f"storage: 本地模式（S3 已禁用），data root={LOCAL_ROOT}"
-    return f"storage: local={LOCAL_ROOT}  s3={S3_ROOT}  data dirs={', '.join(DATA_PREFIXES)}"
+    prof = f"  profile={_AWS_PROFILE}" if _AWS_PROFILE else ""
+    return f"storage: local={LOCAL_ROOT}  s3={S3_ROOT}{prof}  data dirs={', '.join(DATA_PREFIXES)}"

@@ -1,11 +1,11 @@
 ExpConfig:
-  dataset_dir: dataset/wbench
+  dataset_dir: dataset/dl3dv2-480
   shift: 5
   bucket_config_name: ASPECT_RATIO_627_F64 
 
   max_chunks: 20
   begin_idx: 5
-  num: 1
+  num: 16
 
   use_fixed_noise: true
   noise_cache_dir: configs/noise/896_448/noise0 
@@ -13,3 +13,4 @@ ExpConfig:
 
 OnlineTrainConfig:
   open: false
+#finished at 2026-08-18 12:59:37 UTC+8, gpu num:8, run_name:infer-12-base-dl3dv2
